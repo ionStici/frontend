@@ -61,22 +61,18 @@ Percentages are relative to the entire grid's height in rows, and to the grid's 
 
 <br>
 
-### Fraction `fr` relative unit
+### **Fraction Unit `fr`**
 
-<br><br><br><br>
+The `fr` relative unit (specifically for CSS Grids) defines the size of columns or rows as a fraction of the grid's width or height, by expanding to all the space that it can occupy.
 
-The fr unit
-The new CSS fractional unit.
+```CSS
+.container {
+    width: 1150px;
+    display: grid;
+    grid-template-columns: 3fr 7fr 150px;   /* 300px 700px 150px */
+}
+```
 
-`{ grid-template-rows: 150px 150px 300px; }   // instead of this`
-`{ grid-template-rows: repeat(2, 150px) 300px; }  // we can do this`
+If `fr` is used with other units, then each `fr` represents a fraction of the remaining available space. Useful when we need to occupy the remaining space of the grid and not overflowing its borders.
 
-Remember, this creates tracks. Note we can use all kinds of units here.
-
-If we need to occupy the remaining space, we can use the fractional unit
-
-`grid-template-rows: 1fr 2fr 1fr;`
-
-This fractional unit expands to all the space that it can occupy. In this example, we have 3 row tracks. One fractional unit represents a fraction of the available space. Here, we basically have 4/4 units, spread like this: 1/4 2/4 1/4.
-
-We can use fr units as percentages - 60fr 40fr
+### **Repeat Function**
