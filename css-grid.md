@@ -1,19 +1,16 @@
 # CSS Grid
 
-## Table of Content
-
-- [Grid Container Properties](#)
-  - [Grid Gap](#grid-gap)
-- [Grid Items Properties]()
+- [Grid Container]()
+  - [Grid Gap]()
+- [Grid Items]()
+- [Grid Concepts]()
+  - [Fraction Unit `fr`]()
+  - [repeat() function]()
+  - [minmax() function]()
 
 <br>
 
-- [Grid Concepts](#grid-concepts)
-  - [Fraction Unit `fr`](#fraction-unit-fr)
-  - [repeat() Function](#repeat-function)
-  - [minmax() Function](#minmax-function)
-
-## Grid Container Properties
+## Grid Container
 
 To set ap a grid, declare the next property to the parent element:
 
@@ -42,6 +39,8 @@ These properties defines the number of columns and rows in the grid. So each uni
 
 Percentages are relative to the entire grid's height in rows, and to the grid's width in columns.
 
+<br>
+
 ### Grid Gap
 
 `row-gap` and `column-gap` will insert space between every row and column in the grid (not on the outer edges).
@@ -60,6 +59,8 @@ Percentages are relative to the entire grid's height in rows, and to the grid's 
 If only one value is given, it will set the column gap and the row gap to that value.
 
 Note: You might have seen grid-row-gap, grid-column-gap, and grid-gap in other code, but these properties are now deprecated.
+
+<br>
 
 ## Grid Items
 
@@ -89,7 +90,11 @@ Grid lines are automatically numbered from 1 to the number of rows or columns pl
 
 The code example above translates to: the grid item starts from row 3 to row 4 and from column 1 to the last column.
 
+<br>
+
 ## Grid Concepts
+
+<br>
 
 ### Fraction Unit `fr`
 
@@ -105,7 +110,9 @@ The `fr` relative unit (specifically for CSS Grids) defines the size of columns 
 
 If `fr` is used with other units, then each `fr` represents a fraction of the remaining available space. Useful when we need to occupy the remaining space of the grid and not overflowing its borders.
 
-### repeat() Function
+<br>
+
+### repeat() function
 
 The repeat function (created specifically for CSS Grids) duplicates the specified units inside the grid template properties a given number of times.
 
@@ -119,6 +126,8 @@ The repeat function (created specifically for CSS Grids) duplicates the specifie
 This will split the grid into three equal columns.
 
 _p.s._ We can specify multiple units in the repeat() function and then each group of units will be duplicated the given number of times.
+
+<br>
 
 ### minmax() function
 
