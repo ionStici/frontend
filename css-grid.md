@@ -1,12 +1,34 @@
 # CSS Grid
 
-- [Grid Container]()
+- [<font size="4">Grid Container</font>]()
   - [Grid Gap]()
 - [Grid Items]()
 - [Grid Concepts]()
   - [Fraction Unit `fr`]()
   - [repeat() function]()
   - [minmax() function]()
+
+<br>
+
+## CSS Grid Introduction and Terminology
+
+**CSS Grid Layout** is a two-dimensional grid system.
+
+_When working with CSS Grids, use Mozilla Firefox, as it has the best developer tools to visualize the CSS Grid layouts._
+
+- First, create a **Grid Container** with `{ display: grid; }`. Then, all the direct children of the grid container are called **Grid Items**.
+
+- **Row Axis** in the _X direction_ and **Column Axis** in the _Y direction_. Axes are unchangeable in CSS Grids.
+
+- **Grid Line:** the vertical and horizontal lines that divide up the grid items, and separate the columns and the rows.
+
+- **Grid Cell:** the area between 2 adjacent vertical and 2 adjacent horizontal grid lines.
+
+- **Grid Track:** the space between two adjacent grid lines. Think of them as the columns or rows of the grid.
+
+- **Grid Area:** the area surrounded by four or more grid lines.
+
+- **Gutter:** the space between the rows and columns.
 
 <br>
 
@@ -43,7 +65,7 @@ Percentages are relative to the entire grid's height in rows, and to the grid's 
 
 ### Grid Gap
 
-`row-gap` and `column-gap` will insert space between every row and column in the grid (not on the outer edges).
+`row-gap` and `column-gap` will insert blank space between every row and column in the grid (but not on the outer edges).
 
 ```CSS
 .grid {
@@ -54,41 +76,47 @@ Percentages are relative to the entire grid's height in rows, and to the grid's 
 }
 ```
 
-`gap` is a shorthand property, first rows gap and then columns gap.
+`gap` is a shorthand property, first rows gap and then columns gap, or we can specify just one value.
 
-If only one value is given, it will set the column gap and the row gap to that value.
-
-Note: You might have seen grid-row-gap, grid-column-gap, and grid-gap in other code, but these properties are now deprecated.
+This properties: `grid-row-gap grid-column-gap grid-gap` are deprecated.
 
 <br>
 
 ## Grid Items
 
-We can expands grid items on multiple rows or columns by using the properties below:
+We can expand grid items on multiple rows or columns by using the properties below:
 
 ```CSS
 .item {
     grid-row-start: 3;
-    grid-row-end: 4;
-    /* grid-row: 3 / 4; */
+    grid-row-end: span 2;
+    /* grid-row: 3 / span 2; */
 
     grid-column-start: 1;
     grid-column-end: -1;
     /* grid-column: 1 / -1; */
 
-    /* grid-area: 3 / 1 / 4 / -1; */
+    /* grid-area: 3 / 1 / span 2 / -1; */
 }
 ```
 
 We manually define how many rows or column the grid item should take by specifying the grid lines.
 
+We can explicitly tell how many rows or columns to span by using the `span` keyword.
+
+When spanning explicitly, we can have multiple grid items in the same cell. To set different elements on top of each other, use the `z-index` property to create stacking contexts.
+
+In case the grid item spans multiple rows or columns, it will also include the gap if any exists.
+
 `-1` means all the way until the end of the explicit grid.
 
 Grid lines are automatically numbered from 1 to the number of rows or columns plus 1.
 
-`grid-rea` is a shorthand property. ..
+`grid-row` and `grid-column` are shorthand properties. The starting row or column goes before the slash and the ending row or column goes after it.
 
-The code example above translates to: the grid item starts from row 3 to row 4 and from column 1 to the last column.
+`grid-area` this shorthand property set the starting and ending positions for both the rows and columns of an item in the following order: `row start / column start / row end / column end`.
+
+The code example above translates to: the grid item starts on row 3 and spans 2 rows, then starts on column 1 until the last column line.
 
 <br>
 

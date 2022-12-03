@@ -1,28 +1,35 @@
 # Frontend
 
-- [CSS Grid](css-grid.md)
+- [CSS Grid](css-grid)
+
+<br>
 
 ## Frontend Roadmap
 
-Introduction
+- Introductory Knowledge about Web Development and Internet Overview
 
-- General Knowledge about Web Development and Internet Overview
+- HTML
 
-Category
+- CSS
 
-- HTML + CSS + Web Design
+- CSS Preprocessor: Sass
 
-Category
+- CSS Architecture: BEM
 
-- JavaScript
-- TypeScript
+- User Interface Web Design
 
-Category
+- JavaScript and TypeScript
 
-1. Command Line Interface Usage
-2. Version Control System: Git
-3. Repository Hosting Service: GitHub
+- Command Line Interface Usage
 
-Category
+- Version Control System: Git
 
-- ...
+- Repository Hosting Service: GitHub
+
+- NPM Package Manager
+
+- Task Runner: npm scripts
+
+- Module Bundler: Parcel
+
+...
