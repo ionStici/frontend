@@ -2,40 +2,23 @@
 
 ## Table of Content
 
-- [CSS Grid Guide by CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- [CSS Grid Introduction and Terminology](#css-grid-introduction-and-terminology)
-- [CSS Grid Properties](#css-grid-properties)
+- [Grid Container Properties](#)
+  - [Grid Gap](#grid-gap)
+- [Grid Items Properties]()
 
-<br><br>
+<br>
 
-## CSS Grid Introduction and Terminology
+- [Grid Concepts](#grid-concepts)
+  - [Fraction Unit `fr`](#fraction-unit-fr)
+  - [repeat() Function](#repeat-function)
+  - [minmax() Function](#minmax-function)
 
-**CSS Grid Layout** is a two-dimensional grid system.
-
-_When working with CSS Grids, use Mozilla Firefox, as it has the best developer tools to visualize the CSS Grid layouts._
-
-- First, create a **Grid Container** with `{ display: grid; }`. Then, all the direct children of the grid container are called **Grid Items**.
-
-- **Row Axis** in the _X direction_ and **Column Axis** in the _Y direction_. Axes are unchangeable in CSS Grids.
-
-- **Grid Line:** the vertical and horizontal lines that divide up the grid items, and separate the columns and the rows. Grid lines are automatically numbered from 1, all the way to the number of rows or columns plus 1.
-
-- **Grid Cell:** the area between 2 adjacent vertical and 2 adjacent horizontal grid lines.
-
-- **Grid Track:** the space between two adjacent grid lines. Think of them as the columns or rows of the grid.
-
-- **Grid Area:** the area surrounded by four or more grid lines.
-
-- **Gutter:** the space between the rows and columns.
-
-<br><br>
-
-## CSS Grid Properties
+## Grid Container Properties
 
 To set ap a grid, declare the next property to the parent element:
 
 ```CSS
-.container {
+.grid {
     display: grid;
 }
 ```
@@ -45,7 +28,7 @@ By default, grids contain only one column and then each item would be put on a n
 To manually set the grid columns and rows, and also their sizes, use:
 
 ```CSS
-.container {
+.grid {
     grid-template-columns: 100px 50%;
     grid-template-rows: 200px 75%;
 
@@ -59,14 +42,61 @@ These properties defines the number of columns and rows in the grid. So each uni
 
 Percentages are relative to the entire grid's height in rows, and to the grid's width in columns.
 
-<br>
+### Grid Gap
 
-### **Fraction Unit `fr`**
+`row-gap` and `column-gap` will insert space between every row and column in the grid (not on the outer edges).
+
+```CSS
+.grid {
+    row-gap: 50px;
+    column-gap: 100px;
+
+    /* gap: 100px 50px; */
+}
+```
+
+`gap` is a shorthand property, first rows gap and then columns gap.
+
+If only one value is given, it will set the column gap and the row gap to that value.
+
+Note: You might have seen grid-row-gap, grid-column-gap, and grid-gap in other code, but these properties are now deprecated.
+
+## Grid Items
+
+We can expands grid items on multiple rows or columns by using the properties below:
+
+```CSS
+.item {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    /* grid-row: 3 / 4; */
+
+    grid-column-start: 1;
+    grid-column-end: -1;
+    /* grid-column: 1 / -1; */
+
+    /* grid-area: 3 / 1 / 4 / -1; */
+}
+```
+
+We manually define how many rows or column the grid item should take by specifying the grid lines.
+
+`-1` means all the way until the end of the explicit grid.
+
+Grid lines are automatically numbered from 1 to the number of rows or columns plus 1.
+
+`grid-rea` is a shorthand property. ..
+
+The code example above translates to: the grid item starts from row 3 to row 4 and from column 1 to the last column.
+
+## Grid Concepts
+
+### Fraction Unit `fr`
 
 The `fr` relative unit (specifically for CSS Grids) defines the size of columns or rows as a fraction of the grid's width or height, by expanding to all the space that it can occupy.
 
 ```CSS
-.container {
+.grid {
     width: 1150px;
     display: grid;
     grid-template-columns: 3fr 7fr 150px;   /* 300px 700px 150px */
@@ -75,4 +105,29 @@ The `fr` relative unit (specifically for CSS Grids) defines the size of columns 
 
 If `fr` is used with other units, then each `fr` represents a fraction of the remaining available space. Useful when we need to occupy the remaining space of the grid and not overflowing its borders.
 
-### **Repeat Function**
+### repeat() Function
+
+The repeat function (created specifically for CSS Grids) duplicates the specified units inside the grid template properties a given number of times.
+
+```CSS
+.grid {
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: 1fr 1fr 1fr; */
+}
+```
+
+This will split the grid into three equal columns.
+
+_p.s._ We can specify multiple units in the repeat() function and then each group of units will be duplicated the given number of times.
+
+### minmax() function
+
+Preventing a track from getting too big or too small.
+
+```CSS
+.grid {
+    grid-template-columns: 100px minmax(100px, 200px) 100px;
+}
+```
+
+The minmax() function requires 2 values and enables the track to vary between these 2 values as the overall grid resizes. In the code example above, the second column width will always be between 100px and 200px wide.
