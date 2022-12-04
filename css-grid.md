@@ -1,22 +1,26 @@
 # CSS Grid
 
-- [<font size="4">Grid Container</font>]()
-  - [Grid Gap]()
-- [Grid Items]()
-- [Grid Concepts]()
-  - [Fraction Unit `fr`]()
-  - [repeat() function]()
-  - [minmax() function]()
+- [<font size="4">Item</font>]()
+- [<font size="4">Item</font>]()
+- [<font size="4">Item</font>]()
+
+- CSS Grid Introduction and Terminology
+- Grid Container
+  - Grid Gap
+- Grid Items
+- Grid Template Areas
+- Grid Concepts
+  - Fraction Unit `fr`
+  - repeat() function
+  - minmax() function
 
 <br>
 
 ## CSS Grid Introduction and Terminology
 
-**CSS Grid Layout** is a two-dimensional grid system.
+- **CSS Grid Layout** is a two-dimensional grid system.
 
-_When working with CSS Grids, use Mozilla Firefox, as it has the best developer tools to visualize the CSS Grid layouts._
-
-- First, create a **Grid Container** with `{ display: grid; }`. Then, all the direct children of the grid container are called **Grid Items**.
+- Create a **Grid Container** with `{ display: grid; }` and then all the direct children are called **Grid Items**.
 
 - **Row Axis** in the _X direction_ and **Column Axis** in the _Y direction_. Axes are unchangeable in CSS Grids.
 
@@ -32,7 +36,13 @@ _When working with CSS Grids, use Mozilla Firefox, as it has the best developer 
 
 <br>
 
+## CSS Grid Properties Overview
+
+<br>
+
 ## Grid Container
+
+_Use Mozilla Firefox when working with CSS Grids, as it has the best developer tools to visualize the CSS Grid layouts._
 
 To set ap a grid, declare the next property to the parent element:
 
@@ -104,7 +114,7 @@ We manually define how many rows or column the grid item should take by specifyi
 
 We can explicitly tell how many rows or columns to span by using the `span` keyword.
 
-When spanning explicitly, we can have multiple grid items in the same cell. To set different elements on top of each other, use the `z-index` property to create stacking contexts.
+_When spanning explicitly, we can have multiple grid items in the same cell iverlapping each other. To set different elements on top of each other, use the `z-index` property to create stacking contexts._
 
 In case the grid item spans multiple rows or columns, it will also include the gap if any exists.
 
@@ -117,6 +127,42 @@ Grid lines are automatically numbered from 1 to the number of rows or columns pl
 `grid-area` this shorthand property set the starting and ending positions for both the rows and columns of an item in the following order: `row start / column start / row end / column end`.
 
 The code example above translates to: the grid item starts on row 3 and spans 2 rows, then starts on column 1 until the last column line.
+
+<br>
+
+## Grid Template Areas
+
+The `grid-template-areas` and `grid-area` properties distribute the grid items to specific named grid cells.
+
+```HTML
+<div class="grid">
+    <header class="header"></header>
+    <section class="box-1"></section>
+    <section class="box-2"></section>
+</div>
+```
+
+```CSS
+.grid {
+    display: grid;
+    max-width: 1000px;
+    margin: 50px auto;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas: 'head head head'
+                         'box1 box2  .  ';
+}
+
+header { grid-area: head; }
+.box-1 { grid-area: box1; }
+.box-2 { grid-area: box2; }
+```
+
+We can leave a cell empty by putting a dot `'.'` instead of a name.
+
+After creating the rows and columns, we can name each grid cell with `grid-template-areas` and then place each grid item with `grid-area` by providing the cell name.
 
 <br>
 
@@ -168,3 +214,26 @@ Preventing a track from getting too big or too small.
 ```
 
 The minmax() function requires 2 values and enables the track to vary between these 2 values as the overall grid resizes. In the code example above, the second column width will always be between 100px and 200px wide.
+
+<br>
+
+## Aligning Grid Items
+
+<br>
+
+### Justify Items
+
+Must be declared on the grid container.
+
+```CSS
+.grid {
+    justify-items: start; end; center; stretch;
+}
+```
+
+`justify-items` positions grid items vertically from left to right inside the grid cell. Most important values:
+
+- `stretch` (by default) stretches all items to fill the grid cell. If an item has the width declared, then it will not be stretched.
+- `start`, `end` and `center` will position the items inside their columns. The items will be as wide as their current width.
+
+<br>
