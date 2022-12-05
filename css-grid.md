@@ -4,23 +4,23 @@
 
 ## Table of Content
 
-- [<font size="4">CSS Grid Introduction and Terminology</font>]()
-- [<font size="4">CSS Grid Properties Overview</font>]()
-- [<font size="4">Grid Container</font>]()
-  - [<font size="4">Grid Gap</font>]()
-- [<font size="4">Grid Items</font>]()
-- [<font size="4">Grid Template Areas</font>]()
-- [<font size="4">Grid Concepts</font>]()
-  - [<font size="4">Fraction Unit</font>]()
-  - [<font size="4">repeat() function</font>]()
-  - [<font size="4">minmax() function</font>]()
-- [<font size="4">Aligning</font>]()
-  - [<font size="4">Justify Items and Align Items</font>]()
-  - [<font size="4">Justify Self and Align Self</font>]()
-  - [<font size="4">Justify Content and Align Content</font>]()
-- [<font size="4">Explicit Grids vs. Implicit Grids</font>]()
-  - [<font size="4">Grid Auto Properties</font>]()
-  - [<font size="4">Grid Auto Flow</font>]()
+- [<font size="4">CSS Grid Introduction and Terminology</font>](#css-grid-introduction-and-terminology)
+- [<font size="4">CSS Grid Properties Overview</font>](#css-grid-properties-overview)
+- [<font size="4">Grid Container</font>](#grid-container)
+  - [<font size="4">Grid Gap</font>](#grid-gap)
+- [<font size="4">Grid Items</font>](#grid-items)
+- [<font size="4">Grid Template Areas</font>](#grid-template-areas)
+- [<font size="4">Grid Concepts</font>](#grid-concepts)
+  - [<font size="4">Fraction Unit</font>](#fraction-unit)
+  - [<font size="4">repeat() function</font>](#repeat-function)
+  - [<font size="4">minmax() function</font>](#minmax-function)
+- [<font size="4">Aligning</font>](#aligning)
+  - [<font size="4">Justify Items and Align Items</font>](#justify-items-and-align-items)
+  - [<font size="4">Justify Self and Align Self</font>](#justify-self-and-align-self)
+  - [<font size="4">Justify Content and Align Content</font>](#justify-content-and-align-content)
+- [<font size="4">Explicit Grids vs. Implicit Grids</font>](#explicit-grids-vs-implicit-grids)
+  - [<font size="4">Grid Auto Properties</font>](#grid-auto-properties)
+  - [<font size="4">Grid Auto Flow</font>](#grid-auto-flow)
 
 <br>
 
@@ -46,12 +46,18 @@
 
 ## **CSS Grid Properties Overview**
 
+<br>
+
+<center>
+
 | Container Properties  | Aligning (Container) |  Grid Gap  |  Implicit Grids   |
 | :-------------------: | :------------------: | :--------: | :---------------: |
 |  grid-template-rows   |    justify-items     |    gap     |  grid-auto-rows   |
 | grid-template-columns |     align-items      |  row-gap   | grid-auto-columns |
 |  grid-template-areas  |   justify-content    | column-gap |  grid-auto-flows  |
 |     grid-template     |    align-content     |     -      |         -         |
+
+<br>
 
 | Items Properties  | Aligning (Items) |
 | :---------------: | :--------------: |
@@ -62,6 +68,8 @@
 |     grid-row      |        -         |
 |    grid-column    |        -         |
 |     grid-area     |        -         |
+
+</center>
 
 <br>
 
@@ -211,7 +219,7 @@ If `fr` is used with other units, then each `fr` represents a fraction of the re
 
 <br>
 
-### **repeat() function**
+### **repeat function**
 
 The repeat function (created specifically for CSS Grids) duplicates the specified units inside the grid template properties a given number of times.
 
@@ -228,7 +236,7 @@ _p.s._ We can specify multiple units in the repeat() function and then each grou
 
 <br>
 
-### **minmax() function**
+### **minmax function**
 
 Preventing a track from getting too big or too small.
 
