@@ -48,8 +48,6 @@
 
 <br>
 
-<center>
-
 | Container Properties  | Aligning (Container) |  Grid Gap  |  Implicit Grids   |
 | :-------------------: | :------------------: | :--------: | :---------------: |
 |  grid-template-rows   |    justify-items     |    gap     |  grid-auto-rows   |
@@ -68,8 +66,6 @@
 |     grid-row      |        -         |
 |    grid-column    |        -         |
 |     grid-area     |        -         |
-
-</center>
 
 <br>
 
