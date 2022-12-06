@@ -9,9 +9,12 @@
 - [<font size="4">Grid Container</font>](#grid-container)
   - [<font size="4">Grid Gap</font>](#grid-gap)
 - [<font size="4">Grid Items</font>](#grid-items)
+  - [<font size="4">order property</font>](#order-property)
 - [<font size="4">Grid Template Areas</font>](#grid-template-areas)
 - [<font size="4">Grid Concepts</font>](#grid-concepts)
   - [<font size="4">Fraction Unit</font>](#fraction-unit)
+  - [<font size="4">min-content / max-content</font>](#min-content--max-content)
+  - [<font size="4">auto-fit / auto-fill</font>](#auto-fit--auto-fill)
   - [<font size="4">repeat() function</font>](#repeat-function)
   - [<font size="4">minmax() function</font>](#minmax-function)
 - [<font size="4">Aligning</font>](#aligning)
@@ -159,6 +162,14 @@ The code example above translates to: the grid item starts on row 3 and spans 2 
 
 <br>
 
+### **order property**
+
+Similarly to flexbox, CSS Grid can place grid items in any order.
+
+...
+
+<br>
+
 ## **Grid Template Areas**
 
 The `grid-template-areas` and `grid-area` properties distribute the grid items to specific named grid cells.
@@ -212,6 +223,44 @@ The `fr` relative unit (specifically for CSS Grids) defines the size of columns 
 ```
 
 If `fr` is used with other units, then each `fr` represents a fraction of the remaining available space. Useful when we need to occupy the remaining space of the grid and not overflowing its borders.
+
+<br>
+
+### **min-content / max-content**
+
+```CSS
+.grid {
+    grid-template-rows: max-content min-content 100px;
+}
+```
+
+- `min-content` sizing keyword represents the intrinsic minimum width or height of the content. For text content this means that the content will take all soft-wrapping opportunities, becoming as small as the longest word.
+
+- `max-content` sizing keyword represents the intrinsic maximum width or height of the content. For text content this means that the content will not wrap at all even if it causes overflows.
+
+<br>
+
+### **auto-fit / auto-fill**
+
+```CSS
+.grid {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+}
+```
+
+- `auto-fill` creates automatically as many tracks with the indicated width as it fits in the container. Above it created 10 tracks with 100px each item (1000 / 100).
+
+```CSS
+.grid {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+}
+```
+
+- `auto-fit` same as auto-fill, except that empty tracks are collapsed, giving them a width of zero.
 
 <br>
 

@@ -8,15 +8,29 @@
 
 ## Frontend Roadmap
 
-- Introductory Knowledge about Web Development and Internet Overview
-- **HTML**
-- **CSS**
-- CSS Preprocessor: **Sass**
-- CSS Architecture: **BEM**
-- User Interface Web Design Basic Rules
-- Programming language: **JavaScript**
-- Strongly typed programming language: **TypeScript**
-- Framework: **React**
+<ul>
+    <li>Introductory Knowledge about Web Development and Internet Overview</li>
+</ul>
+
+<ul>
+    <li><b>HTML</b></li>
+    <li><b>CSS</b></li>
+</ul>
+
+<ul>
+    <li>CSS Preprocessor: <b>Sass</b></li>
+    <li>CSS Architecture: <b>BEM</b></li>
+</ul>
+
+<ul>
+    <li>User Interface Web Design Basic Rules</li>
+</ul>
+
+<ul>
+    <li>Programming language: <b>JavaScript</b></li>
+    <li>Strongly typed programming language: <b>TypeScript</b></li>
+    <li>Framework: <b>React</b></li>
+</ul>
 
 <ul>
     <li>Command Line Interface Usage</li>
@@ -24,10 +38,25 @@
     <li>Repository Hosting Service: <b>GitHub</b></li>
 </ul>
 
-- NPM Package Manager
-- Task Runner: npm scripts
-- Module Bundler: Parcel
+<ul>
+    <li><b>npm</b> Package Manager</li>
+    <li>Task Runner: <b>npm</b> scripts</li>
+    <li>Module Bundler: <b>Parcel</b></li>
+</ul>
+
+<ul>
+    <li>Web Security Knowledge</li>
+    <li>Linters and Formatters: Prettier and ESLint</li>
+</ul>
 
 <br>
 
 - The list is not completed
+
+<br>
+
+<!-- <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul> -->
