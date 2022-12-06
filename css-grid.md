@@ -7,6 +7,7 @@
 - [<font size="4">CSS Grid Introduction and Terminology</font>](#css-grid-introduction-and-terminology)
 - [<font size="4">CSS Grid Properties Overview</font>](#css-grid-properties-overview)
 - [<font size="4">Grid Container</font>](#grid-container)
+- [<font size="4">Named Grid Lines</font>](#named-grid-lines)
   - [<font size="4">Grid Gap</font>](#grid-gap)
 - [<font size="4">Grid Items</font>](#grid-items)
   - [<font size="4">order property</font>](#order-property)
@@ -102,6 +103,14 @@ These properties defines the number of columns and rows in the grid. So each uni
 `grid-template` is a shorthand property. First the values of each row, then after the slash the size of each column.
 
 Percentages are relative to the entire grid's height in rows, and to the grid's width in columns.
+
+<br>
+
+### **Named Grid Lines**
+
+Giving names to grid lines.
+
+...
 
 <br>
 
