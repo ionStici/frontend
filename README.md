@@ -1,12 +1,17 @@
-# Frontend
+# **Frontend**
 
-## Table of Content
+Documenting frontend knowledge for later reference.
 
+<br>
+
+## **Table of Content**
+
+- [Flexbox](flexbox.md)
 - [CSS Grid](css-grid.md)
 
 <br>
 
-## Frontend Roadmap
+## **Frontend Roadmap**
 
 <ul>
     <li>Introductory Knowledge about Web Development and Internet Overview</li>
@@ -23,7 +28,7 @@
 </ul>
 
 <ul>
-    <li>User Interface Web Design Basic Rules</li>
+    <li>User Interface Web Design Fundamentals</li>
 </ul>
 
 <ul>
