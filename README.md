@@ -8,6 +8,7 @@ Documenting frontend knowledge for later reference.
 
 - [Flexbox](flexbox.md)
 - [CSS Grid](css-grid.md)
+- [JavaScript Destructuring](js-destructuring.md)
 
 <br>
 
