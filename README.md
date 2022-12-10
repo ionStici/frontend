@@ -6,9 +6,10 @@ Documenting frontend knowledge for later reference.
 
 ## **Table of Content**
 
-- [Flexbox](flexbox.md)
-- [CSS Grid](css-grid.md)
-- [JavaScript Destructuring](js-destructuring.md)
+- [Flexbox](./flexbox.md)
+- [CSS Grid](./css-grid.md)
+- [Responsive Images](./responsive-images.md)
+- [JavaScript Destructuring](./js-destructuring.md)
 
 <br>
 

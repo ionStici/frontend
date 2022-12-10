@@ -110,7 +110,7 @@ Percentages are relative to the entire grid's height in rows, and to the grid's 
 
 Giving names to grid lines.
 
-...
+_❗️ Chapter not completed_
 
 <br>
 
@@ -175,7 +175,7 @@ The code example above translates to: the grid item starts on row 3 and spans 2 
 
 Similarly to flexbox, CSS Grid can place grid items in any order.
 
-...
+_❗️ Chapter not completed_
 
 <br>
 
