@@ -8,7 +8,10 @@
   - [Flexbox Terminology]()
   - [Flexbox Properties]()
 - [Flex Container]()
+
   - [justify-content and align-items]()
+
+- [Flex Items]()
 
 <br>
 
@@ -103,10 +106,16 @@ By default, flex items shrink proportionally when the flex container is too smal
 `flex-grow` property (declared on flex items) controls how much individual flex items should grow to fill the flex container.
 
 ```CSS
-.item-one { flex-frow: 1; }
-.item-two { flex-frow: 2; }
+.item-one { flex-grow: 1; }
+.item-two { flex-grow: 2; }
 ```
+
+The default value of `flex-grow` is `0`. As values we use integers that are related to the value of each flex item.
 
 <br>
 
-<!-- ### **flex-shrink** -->
+### **flex-shrink**
+
+`flex-shrink` property can be used to specify which elements will shrink and in what proportions.
+
+`1` is the initial value of flex-shrink which means that the element is basically allowed to shrink. If we set to `0`, then the element is no longer allowed to shrink.
