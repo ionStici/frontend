@@ -4,15 +4,6 @@ Documenting frontend knowledge for later reference.
 
 <br>
 
-## **Table of Content**
-
-- [Flexbox](./flexbox.md)
-- [CSS Grid](./css-grid.md)
-- [Responsive Images](./responsive-images.md)
-- [JavaScript Destructuring](./js-destructuring.md)
-
-<br>
-
 ## **Frontend Roadmap**
 
 <ul>
@@ -55,15 +46,3 @@ Documenting frontend knowledge for later reference.
     <li>Web Security Knowledge</li>
     <li>Linters and Formatters: Prettier and ESLint</li>
 </ul>
-
-<br>
-
-- The list is not completed
-
-<br>
-
-<!-- <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-</ul> -->

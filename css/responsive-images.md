@@ -102,4 +102,4 @@ There are low resolution screens and high resolution screens. If we want our ima
 
 <br>
 
-## ** Resolution Switching**
+## **Resolution Switching**
