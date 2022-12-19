@@ -12,6 +12,12 @@
 
 <br>
 
+## **Table of Content**
+
+- Hello
+
+<br>
+
 ## **Intro to JSX**
 
 **JSX** is a syntax extension for JavaScript written to be used with React (looks like HTML).
@@ -22,7 +28,7 @@ JS files that contains JSX code, before reaching a web browser, must first be co
 
 A JSX compiler translates JSX code into regular JavaScript.
 
-<hr>
+<br>
 
 ### **JSX Elements**
 
@@ -113,3 +119,163 @@ To set a `class` attribute in JSX, we use `className` keyword instead:
 ```JSX
 <h1 className="heading-1">Hello</h1>
 ```
+
+<br>
+
+### **Self-Closing Tags**
+
+In JSX, for self-closing tags it is mandatory to include a forward-slash immediately before the final angle-bracket:
+
+```JSX
+<img src="" />
+```
+
+<br>
+
+### **Curly Braces in JSX**
+
+By wrapping code in curly braces inside a JSX expression, we can convert text to JS code:
+
+```JSX
+<p>{10 + 5}</p>  // 15
+```
+
+The curly braces themselves won't be treated as JSX nor as JS. They are markers that signal the beginning and end of a JS injection into JSX.
+
+<br>
+
+### **Variables in JSX**
+
+We can access JS variables while inside of a JSX expression:
+
+```JSX
+const yourName = 'Joe';
+const hello = <p>Hello, {yourName}</p>;
+
+const imgData = {
+    source: './img.jpg',
+    description: 'Someone',
+    imgClass: 'img',
+    length: '250px',
+}
+
+const me = (
+    <img
+        src={imgData.source}
+        alt={imgData.description}
+        className={imgData.imgClass}
+        width={imgData.length}
+    />
+);
+```
+
+When writing JSX, it's a common practice to use variables to set attributes.
+
+<br>
+
+### **Event Listeners in JSX**
+
+Add event listeners by giving JSX elements special attributes:
+
+```JSX
+const myFunc = function() {...};
+<button onClick={myFunc}>Click</button>
+```
+
+The event listener attribute's name should contain the word `on` plus the type of the event. [Supported Events](https://reactjs.org/docs/events.html#supported-events).
+
+Then the event listener attribute's value would be a predefined function.
+
+In JSX, event listener names are written in camelCase.
+
+<br>
+
+### **JSX Conditionals: `if` statement**
+
+You can not inject an `if` statement into a JSX expression.
+
+But we can create an `if` statement and then based on conditions, define a JSX expression.
+
+```JSX
+let myName;
+
+if (true) {
+    myName = <p>Mike</p>;
+}
+```
+
+<br>
+
+### **JSX Conditionals: The Ternary Operator**
+
+```JSX
+const p = (
+    <p> { true ? 'First' : 'Second' } </p>
+);
+```
+
+<br>
+
+### **JSX Conditionals: `&&`**
+
+```JSX
+const p = {true && <p>Hello</p>};
+```
+
+<br>
+
+### **`.map` in JSX**
+
+Creating a list in JSX with `.map` array method:
+
+```JSX
+const arr = ['Dog', 'Note', 'Cactus'];
+
+const list = arr.map(i => <li>{i}</li>);
+<ul>{list}</ul>
+```
+
+After `map` is executed, `list` will be an array.
+
+In JSX, it is acceptable to insert an array of tags into another tag.
+
+<br>
+
+### **Key**
+
+A `key` is a JSX attribute. The attribute's value should be something unique, similar to an `id` attribute.
+
+React uses them internally to keep track of lists.
+
+You should always use `key` if: **1.** The list-items have memory from one render to the next. **2.** A list’s order might be shuffled.
+
+Each `key` must be q unique string that Reac can use to correctly pair each rendered element with its corresponding item in the array.
+
+```JSX
+<li key="item_1">Example 1</li>
+<li key="item_2">Example 2</li>
+```
+
+<br>
+
+### **React.createElement**
+
+We can write React code without using JSX at all.
+
+The following JSX expression:
+
+```JSX
+const h1 = <h1>Hello world</h1>;
+```
+
+can be rewritten without JSX:
+
+```JSX
+const h1 = React.createElement(
+    'h1',
+    null,
+    'Hello world'
+);
+```
+
+When a JSX element is compiled, the compiler transforms the JSX element into `React.createElement()` method by calling it.
