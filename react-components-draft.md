@@ -32,8 +32,24 @@ The body of the component class will act as a set of instructions, explaining to
 
 ```JSX
 class ComponentClass extends React.Component {
+
+    get h1HtmlClass() {
+        return 'heading-1';
+    }
+
+    myFunc() {
+        alert("Don't hover me!");
+    }
+
     render() {
-        return <h1>Hello world</h1>
+        const nothing = 'A random variable';
+
+        return (
+            <h1 className={this.h1HtmlClass}>
+                <span onHover={this.myFunc}>Hello</span>
+                <span>world</span>
+            </h1>
+        );
     }
 }
 
@@ -43,7 +59,11 @@ ReactDOM.render(
 );
 ```
 
-In the body of the component class we have a `render` method which usually returns a JSX expression.
+In the body of the component class we have a `render` method which usually returns a JSX expression. Use parentheses for multiline JSX expressions.
+
+The component class acts as regular JS classes, so you can use the `this` keyword, conditionals, event listeners, everything generally.
+
+In React, event handlers are defined as methods of the component class.
 
 JSX elements can be either HTML-like or component instances.
 
