@@ -17,7 +17,9 @@ Extra resources
 - Resource: [Awesome React](https://github.com/enaqx/awesome-react)
 - Resource: [Create React App](https://github.com/facebook/create-react-app)
 
-<br><br>
+<br>
+
+## **Installation**
 
 Terminal command (Unix, OSX, Linux) to upgrade npm to the latest version:
 
