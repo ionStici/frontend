@@ -8,5 +8,5 @@ Documenting React.js while learning for later reference.
 
 - [Virtual DOM](./virtual-dom.md)
 - [Create React App](./create-react-app.md)
-- [⚠️ React Fundamentals]()
+- [React Basics](/react-basics.md)
 - [⚠️ React Components]()

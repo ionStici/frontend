@@ -1,20 +1,20 @@
 # **React**
 
-<br>
+**React.js** is a JavaScript library (developed by engineers at Facebook).
 
-**React.js** is a JavaScript library. It was developed by engineers at Facebook.
-
-- React is fast. Apps made in React can handle complex updates and still feel quick and responsive.
-- React is modular. Instead of writing large, dense files of code, you can write many smaller, reusable files. React’s modularity can be a beautiful solution to JavaScript’s maintainability problems.
-- React is scalable. Large programs that display a lot of changing data are where React performs best.
-- React is flexible. You can use React for interesting projects that have nothing to do with making a web app. People are still figuring out React’s potential. There’s room to explore.
-- React is popular. While this reason has admittedly little to do with React’s quality, the truth is that understanding React will make you more employable.
+Why React: fast, modular, scalable, flexible, popular.
 
 <br>
 
 ## **Table of Content**
 
-- Hello
+- [Intro to JSX](#intro-to-jsx)
+- [JSX Elements](#jsx-elements)
+- [Nested JSX and Outer Elements](#nested-jsx-and-outer-elements)
+- [Rendering JSX](#rendering-jsx)
+- [Virtual DOM](#virtual-dom)
+- [class vs className](#class-vs-classname)
+- [Self-Closing Tags](#self-closing-tags)
 
 <br>
 
@@ -30,46 +30,36 @@ A JSX compiler translates JSX code into regular JavaScript.
 
 <br>
 
-### **JSX Elements**
-
-A JSX element:
+## **JSX Elements**
 
 ```JSX
-<h1>Hello</h1>
+<h1>Hello</h1>  // a JSX element
 ```
 
 A basic unit of JSX is called a JSX element. The difference between HTML and JSX here, is that this code is found in a JS file, instead of an HTML file.
 
-JSX elements are treated as JavaScript expressions.
-
-That means taht a JSX element can be saved in a variable, passed to a function, stored in an object or array.
+JSX elements are treated as JavaScript expressions. That means that a JSX element can be saved in a variable, passed to a function, stored in an object or array.
 
 ```JSX
-const h1 = <h1>Hello</h1>
+const h1 = <h1 className="heading-1" id="h1">Hello</h1>
 
 const obj = {
     myName: <p>Ion</p>,
 }
 ```
 
-<br>
-
-### **Attributes in JSX**
-
-```JSX
-const h1 = <h1 className="heading-1" id="h1">Hello</h1>;
-```
+We specify the html attributes as usual.
 
 <br>
 
-### **Nested JSX and Outer Elements**
+## **Nested JSX and Outer Elements**
 
 If a JSX expression takes up more than one line, then you must wrap it in parentheses.
 
 But, consider that any JSX expression must have exactly one outer (parent) element.
 
 ```JSX
-const btn = (
+const list = (
     <ul>
         <li>Hello</li>
         <li>Hey</li>
@@ -79,9 +69,9 @@ const btn = (
 
 <br>
 
-### **Rendering JSX**
+## **Rendering JSX**
 
-To render a JSX expression means to make it appear on screen.
+Render a JSX expression on screen.
 
 ```JSX
 import React from 'react';
@@ -93,26 +83,26 @@ ReactDOM.render(
 );
 ```
 
-`ReactDOM` is the name of a JS library which contains several React-specific methods which deals with the DOM, first we import these methods.
+`ReactDOM` is a JS library that contains React-specific methods which deals with the DOM.
 
 `ReactDOM.render()` is a method for rendering JSX. It takes a JSX expression, creates a corresponding tree of DOM nodes, and adds that tree to the DOM.
 
-- The **first argument** of `render()` method, is a JSX expression which will be rendered on the screen.
-- The **second argument** is the element to which the first argument is appended.
+- The **first argument** of `render()` method, is the JSX expression which we want to render.
+- The **second argument** is the element to which the JSX expression is appended.
 
 _p.s. The first argument could also be a variable, so long as that variable evaluates to a JSX expression._
 
 <br>
 
-### **Virtual DOM**
+## **Virtual DOM**
 
-`ReactDOM.render()` only updates DOM elements that have changed.
+`ReactDOM.render()` only updates DOM elements that have been changed.
 
 If you render the exact same thing twice in a row, the second render will do nothing.
 
 <br>
 
-### **class vs className**
+## **class vs className**
 
 To set a `class` attribute in JSX, we use `className` keyword instead:
 
@@ -122,17 +112,31 @@ To set a `class` attribute in JSX, we use `className` keyword instead:
 
 <br>
 
-### **Self-Closing Tags**
+## **Self-Closing Tags**
 
 In JSX, for self-closing tags it is mandatory to include a forward-slash immediately before the final angle-bracket:
 
 ```JSX
-<img src="" />
+<img src="./img.jpg" />
 ```
 
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-### **Curly Braces in JSX**
+## **Curly Braces in JSX**
 
 By wrapping code in curly braces inside a JSX expression, we can convert text to JS code:
 
@@ -144,7 +148,7 @@ The curly braces themselves won't be treated as JSX nor as JS. They are markers 
 
 <br>
 
-### **Variables in JSX**
+## **Variables in JSX**
 
 We can access JS variables while inside of a JSX expression:
 
@@ -173,7 +177,7 @@ When writing JSX, it's a common practice to use variables to set attributes.
 
 <br>
 
-### **Event Listeners in JSX**
+## **Event Listeners in JSX**
 
 Add event listeners by giving JSX elements special attributes:
 
@@ -190,7 +194,7 @@ In JSX, event listener names are written in camelCase.
 
 <br>
 
-### **JSX Conditionals: `if` statement**
+## **JSX Conditionals: `if` statement**
 
 You can not inject an `if` statement into a JSX expression.
 
@@ -206,7 +210,7 @@ if (true) {
 
 <br>
 
-### **JSX Conditionals: The Ternary Operator**
+## **JSX Conditionals: The Ternary Operator**
 
 ```JSX
 const p = (
@@ -216,7 +220,7 @@ const p = (
 
 <br>
 
-### **JSX Conditionals: `&&`**
+## **JSX Conditionals: `&&`**
 
 ```JSX
 const p = {true && <p>Hello</p>};
@@ -224,7 +228,7 @@ const p = {true && <p>Hello</p>};
 
 <br>
 
-### **`.map` in JSX**
+## **`.map` in JSX**
 
 Creating a list in JSX with `.map` array method:
 
@@ -241,7 +245,7 @@ In JSX, it is acceptable to insert an array of tags into another tag.
 
 <br>
 
-### **Key**
+## **Key**
 
 A `key` is a JSX attribute. The attribute's value should be something unique, similar to an `id` attribute.
 
@@ -258,7 +262,7 @@ Each `key` must be q unique string that Reac can use to correctly pair each rend
 
 <br>
 
-### **React.createElement**
+## **React.createElement**
 
 We can write React code without using JSX at all.
 
