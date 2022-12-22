@@ -4,7 +4,9 @@
 
 <br><hr>
 
-Responsive Design
+## **Three pillars to write good html and css**
+
+**Responsive Design**
 
 - Fluid layouts
 - Media queries
@@ -14,8 +16,25 @@ Responsive Design
 
 <hr>
 
-Maintainable and scalable code
+**Maintainable and scalable code**
 
 - Clean
+- Easy to understand
+- Growth
+- Reusable
+- How to organize files
+- How to name classes
+- How to structure HTML
 
-<br>
+<hr>
+
+**Web performance**
+
+- Less HTTP requests
+- Less code
+- Compress code
+- Use a CSS preprocessor
+- Less images
+- Compress images
+
+<hr>
