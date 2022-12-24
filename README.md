@@ -4,47 +4,7 @@ Documenting frontend knowledge for later reference.
 
 <br>
 
-## **Table of Content**
-
-<details>
-<summary>HTML</summary>
-
-- [HTML]()
-- [head]()
-- [Attributes]()
-
-</details>
-
-<!--  -->
-
-<details>
-<summary>CSS</summary>
-
-- [CSS](https://ionstici.github.io/frontend/css/1-css)
-- [Selectors](https://ionstici.github.io/frontend/css/2-selectors)
-
-</details>
-
-<!--  -->
-
-<details>
-<summary>JavaScript</summary>
-
-- [JavaScript Destructuring](./js/js-destructuring.md)
-
-</details>
-
-<details>
-<summary>React</summary>
-
-- [React]()
-
-</details>
-
-<br>
-
-<details>
-<summary>Frontend Roadmap</summary>
+## **Frontend Roadmap**
 
 <ul>
     <li>Introductory Knowledge about Web Development and Internet Overview</li>
@@ -87,4 +47,11 @@ Documenting frontend knowledge for later reference.
     <li>Linters and Formatters: Prettier and ESLint</li>
 </ul>
 
-</details>
+<br>
+
+## **Resources**
+
+- [MDN](https://developer.mozilla.org/en-US/)
+- [roadmap.sh](https://roadmap.sh/)
+
+- [Jonas' Resources](https://codingheroes.io/resources/)

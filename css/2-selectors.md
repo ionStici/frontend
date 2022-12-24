@@ -1,3 +1,5 @@
+[&larr; Back](./0-table-of-content.md)
+
 # **Selectors**
 
 A selector is used to target specific HTML elements to be styled by the declaration.
@@ -14,6 +16,13 @@ A selector is used to target specific HTML elements to be styled by the declarat
 - [6. Selector list](#6-selector-list)
 - [7. Chaining](#7-chaining)
 - [8. Descendant Combinator](#8-descendant-combinator)
+
+<br>
+
+### **External Subjects**
+
+- [Combinators](./3-selectors-combinators.md)
+- [Pseudo Selectors](./4-selectors-pseudo.md)
 
 <br>
 
