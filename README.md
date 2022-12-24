@@ -20,8 +20,8 @@ Documenting frontend knowledge for later reference.
 <details>
 <summary>CSS</summary>
 
-- [CSS](./css/1-css.md)
-- [Selectors](./css/2-selectors.md)
+- [CSS](https://ionstici.github.io/frontend/css/1-css)
+- [Selectors](https://ionstici.github.io/frontend/css/2-selectors)
 
 </details>
 

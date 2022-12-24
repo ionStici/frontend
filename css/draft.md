@@ -38,3 +38,25 @@
 - Compress images
 
 <hr>
+
+# **Text Properties**
+
+font-family
+
+font-size
+
+font-weight
+
+text-align
+
+color
+
+opacity
+
+background-color
+
+background-image
+
+!important
+
+https://www.cssfontstack.com/

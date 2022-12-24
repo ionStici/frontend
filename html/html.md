@@ -8,3 +8,5 @@
 <br>
 
 ## **HTML Anatomy**
+
+HTML is composed of elements.

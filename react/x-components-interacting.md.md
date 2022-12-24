@@ -2,11 +2,9 @@
 
 <br>
 
-## **A Component in a Render Function**
+## **A Component Render another Component**
 
 Render methods can return component instances.
-
-A component can render another component.
 
 ```JSX
 import { NavBar } from './NavBar.js';

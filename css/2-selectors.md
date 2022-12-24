@@ -10,9 +10,10 @@ A selector is used to target specific HTML elements to be styled by the declarat
 - [2. Type Selector](#2-type-selector)
 - [3. Class Selector](#3-class-selector)
 - [4. ID Selector](#4-id-selector)
-- [5. Selector list](#5-selector-list)
-- [6. Attribute Selector](#6-attribute-selector)
-- [7. Specificity](#7-specificity)
+- [5. Attribute Selector](#5-attribute-selector)
+- [6. Selector list](#6-selector-list)
+- [7. Chaining](#7-chaining)
+- [8. Descendant Combinator](#8-descendant-combinator)
 
 <br>
 
@@ -61,14 +62,6 @@ Then we can use all of them in CSS separately as selectors. We can't do the same
 
 The last class takes precedence over the previous class, so we can override declarations.
 
-In the code example below, we chain 2 classes:
-
-```
-.btn.big { }
-```
-
-This translates to: the `.big` class is applied only when the `.btn` class is already applied.
-
 <br>
 
 ## **4. ID Selector**
@@ -83,17 +76,7 @@ There should be only one ID value in a document. We use IDs to uniquely select e
 
 <br>
 
-## **5. Selector list**
-
-```
-p, .class, #id, { }
-```
-
-The comma acts as a grouping method, it selects all the matching nodes.
-
-<br>
-
-## **6. Attribute Selector**
+## **5. Attribute Selector**
 
 ```
 [href] { }  /* the most basic syntax */
@@ -105,4 +88,36 @@ Additional resources: [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Att
 
 <br>
 
-## **7. Specificity**
+## **6. Selector list**
+
+```
+p, .class, #id, { }
+```
+
+The ruleset is applied to all above selectors.
+
+The comma acts as a grouping method, it selects all the matching nodes.
+
+<br>
+
+## **7. Chaining**
+
+Chaining - combining multiple selectors of the same element.
+
+```
+h1.heading-1 { }
+```
+
+This translates to: the element is selected only when it have both the type `h1` and the class `.heading-1`.
+
+<br>
+
+## **8. Descendant Combinator**
+
+```
+ul li { }
+```
+
+This will select all `li` elements within a `ul` element.
+
+Node: adding more than one tag, class or ID to a CSS selector, it will increase the specificity of that selector.
