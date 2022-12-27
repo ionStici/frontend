@@ -2,7 +2,17 @@
 
 ## **Table of Content**
 
-- []()
+- [A Component Render another Component](#a-component-render-another-component)
+- [this.props](#thisprops)
+  - [Access a Component's props](#access-a-components-props)
+  - [Pass `props` to a Component](#pass-props-to-a-component)
+  - [Render a Component's props](#render-a-components-props)
+  - [Make decision with props](#make-decision-with-props)
+  - [Event Handler in a Component Class](#event-handler-in-a-component-class)
+  - [Pass and Receive an Event Handler as a prop](#pass-and-receive-an-event-handler-as-a-prop)
+  - [Naming convention: handleEvent and onEvent](#naming-convention-handleevent-and-onevent)
+  - [this.props.children](#thispropschildren)
+  - [defaultProps](#defaultprops)
 
 <br>
 
@@ -105,7 +115,7 @@ First, we define our event handler function, then we asign it as value in the `o
 ```JSX
 export class Button extends React.Component {
     render() {
-        return <button onClick={this.props.click}>Click</button>;
+        return <button onClick={this.props.onClick}>Click</button>;
     }
 }
 ```
@@ -114,12 +124,12 @@ export class Button extends React.Component {
 import { Button } from 'btn.js';
 
 class Example extends React.Component {
-    click() {
+    handleClick() {
         console.log('Click');
     }
 
     render() {
-        return <Button click={this.click} />;
+        return <Button onClick={this.handleClick} />;
     }
 }
 
@@ -131,6 +141,51 @@ ReactDOM.render(
 
 First we define the event function in our importing component class.
 
-Then we attach the event handler in the Button component, like: `onClick={this.props.click}`.
+Then we attach the event handler in the exporting Button component, like: `onClick={this.props.onClick}`.
 
-Finally, we render our Button component and also provide the event function so that Button could access it.
+Finally, we render our Button component and also provide the event function so that Button could access it from props.
+
+### **Naming convention: handleEvent and onEvent**
+
+- Event functions: keyword `handle` plus the type of the event `Click`
+- Props: keyword `on` and the type of the event `Click`
+
+Keywords like `onClick` only create event listeners if they're used on HTML-like JSX elements, like in the Button component above. Otherwise, they're just ordinary prop names.
+
+### **this.props.children**
+
+Components can have a closing tag, not only self-closing:
+
+```JSX
+console.log(this.props.children); // Hello World
+
+<MyComponentClass>
+    Hello World
+</MyComponentClass>
+```
+
+`props` object has a property named `children` which will return everything in between a component's opening and closing JSX tags.
+
+If a component has more than one child between its JSX tags, then `children` will return those children in an array.
+
+If the component is an self-closing tag, then `children` will be undefined.
+
+### **defaultProps**
+
+We can set default properties for situation when we property was not defined:
+
+```JSX
+class Example extends React.Component {
+    render() {
+        return <p>{this.props.text}</p>;
+    }
+}
+
+Example.defaultProps = {
+    text: 'Hello'
+}
+```
+
+First the name of the component and then `.defaultProps`, and equal to an object.
+
+In this object, we can write properties for any default props.
