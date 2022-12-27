@@ -15,6 +15,15 @@ Why React: fast, modular, scalable, flexible, popular.
 - [Virtual DOM](#virtual-dom)
 - [class vs className](#class-vs-classname)
 - [Self-Closing Tags](#self-closing-tags)
+- [Curly Braces in JSX](#curly-braces-in-jsx)
+- [Variables in JSX](#variables-in-jsx)
+- [Event Listeners in JSX](#event-listeners-in-jsx)
+- [JSX Conditionals: `if` statement](#jsx-conditionals-if-statement)
+- [JSX Conditionals: The Ternary Operator](#jsx-conditionals-the-ternary-operator)
+- [JSX Conditionals: `&&`](#jsx-conditionals)
+- [`.map` in JSX](#map-in-jsx)
+- [Key](#key)
+- [React.createElement](#reactcreateelement)
 
 <br>
 
@@ -120,20 +129,6 @@ In JSX, for self-closing tags it is mandatory to include a forward-slash immedia
 <img src="./img.jpg" />
 ```
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 
 ## **Curly Braces in JSX**
