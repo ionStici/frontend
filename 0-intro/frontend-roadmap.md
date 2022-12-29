@@ -1,13 +1,8 @@
-# **Frontend**
-
-Documenting frontend knowledge for later reference.
-
-<br>
-
-## **Frontend Roadmap**
+# **Frontend Roadmap**
 
 <ul>
-    <li>Introductory Knowledge about Web Development and Internet Overview</li>
+    <li>Introductory Knowledge about Web Development and Internet</li>
+    <li>Figma, Sketch, Adobe XD, Photo and video editing</li>
 </ul>
 
 <ul>
@@ -47,11 +42,17 @@ Documenting frontend knowledge for later reference.
     <li>Linters and Formatters: Prettier and ESLint</li>
 </ul>
 
-<br>
-
 ## **Resources**
 
 - [MDN](https://developer.mozilla.org/en-US/)
 - [roadmap.sh](https://roadmap.sh/)
 
 - [Jonas' Resources](https://codingheroes.io/resources/)
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

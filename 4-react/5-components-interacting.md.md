@@ -239,6 +239,6 @@ By calling this function like above with an object, it merges that object with t
 
 You can’t call this.setState() from inside of the render function.
 
-Note: Any time that you call this.setState(), this function will automatically call .render() as soon as the state has changed. This is also why we can not place setState inside the render function.
+Note: Any time that you call this.setState(), this function will automatically call .render() as soon as the state has changed. This is also why we can not place setState inside the render function, it will create an infinite loop.
 
 A React app is basically just a lot of components, setting state and passing props to one another.
