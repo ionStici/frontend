@@ -1,29 +1,26 @@
 # **Frontend Roadmap**
 
-<ul>
-    <li>Introductory Knowledge about Web Development and Internet</li>
-    <li>Figma, Sketch, Adobe XD, Photo and video editing</li>
-</ul>
+- Introductory Knowledge about Web Development and Internet Overview
+- Familiarize yourself: Figma, Sketch, Adobe XD, Photo and Video editing
+- User Interface Web Design Fundamentals
 
-<ul>
-    <li><b>HTML</b></li>
-    <li><b>CSS</b></li>
-</ul>
+<br>
 
-<ul>
-    <li>CSS Preprocessor: <b>Sass</b></li>
-    <li>CSS Architecture: <b>BEM</b></li>
-</ul>
+- Markup Language: **HTML**
+- Style Sheet Language: **CSS**
 
-<ul>
-    <li>User Interface Web Design Fundamentals</li>
-</ul>
+<br>
 
-<ul>
-    <li>Programming language: <b>JavaScript</b></li>
-    <li>Strongly typed programming language: <b>TypeScript</b></li>
-    <li>Framework: <b>React</b></li>
-</ul>
+- CSS Preprocessor: **Sass**
+- CSS Architecture: **BEM**
+
+<br>
+
+- The Programming language of the Web: **JavaScript**
+- Strongly typed programming language: **TypeScript**
+- Framework: **React**
+
+<br>
 
 <ul>
     <li>Command Line Interface Usage</li>
@@ -37,22 +34,7 @@
     <li>Module Bundler: <b>Parcel</b></li>
 </ul>
 
-<ul>
+<ul></ul>
     <li>Web Security Knowledge</li>
     <li>Linters and Formatters: Prettier and ESLint</li>
 </ul>
-
-## **Resources**
-
-- [MDN](https://developer.mozilla.org/en-US/)
-- [roadmap.sh](https://roadmap.sh/)
-
-- [Jonas' Resources](https://codingheroes.io/resources/)
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>

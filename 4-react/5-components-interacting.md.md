@@ -242,3 +242,6 @@ You can’t call this.setState() from inside of the render function.
 Note: Any time that you call this.setState(), this function will automatically call .render() as soon as the state has changed. This is also why we can not place setState inside the render function, it will create an infinite loop.
 
 A React app is basically just a lot of components, setting state and passing props to one another.
+
+- A React component should use `props` to store information that can be changed only by another component.
+- On the other hand, `state` is used to store information that the component itself can change.
