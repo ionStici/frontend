@@ -1,18 +1,16 @@
-# **Display and Positioning**
-
-<br>
+# **Positioning**
 
 ## **Table of Content**
 
-- [Flow of HTML]()
-- [Positioning in CSS]()
-- [Position]()
-  - [static]()
-  - [relative]()
-  - [absolute]()
-  - [fixed]()
-  - [sticky]()
-- [Stacking Contexts and z-index]()
+- [Flow of HTML](#flow-of-html)
+- [Positioning in CSS](#positioning-in-css)
+- [Position](#position)
+  - [static](#static)
+  - [relative](#relative)
+  - [absolute](#absolute)
+  - [fixed](#fixed)
+  - [sticky](#sticky)
+- [Stacking Contexts and z-index](#stacking-contexts-and-z-index)
 
 <br>
 
@@ -120,9 +118,17 @@ div {
 
 ## **Stacking Contexts and z-index**
 
-Multiple boxes of different positions overlap with each other..
+Stacking Contexts are like layers that form a stack.
 
-`z-index` property controls h
+The **Stacking Contexts** is a three-dimensional conceptualization of HTML elements along an imaginary z-axis relative to the user, who is assumed to be facing the viewport or the webpage.
+
+Stacking Context can be created by different CSS properties, not only from `position` and `z-index`.
+
+MDN documentation about stacking context [here](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+
+_Point of View:_ Multiple boxes of different positions overlap with each other..
+
+`z-index` property controls how far back or how far forward an element should appear on the web page when elements overlap.
 
 ```css
 .div-1 {
@@ -134,4 +140,6 @@ Multiple boxes of different positions overlap with each other..
 }
 ```
 
-`z-index` accepts integer values
+`z-index` accepts integer values. Depending on their values, the integers instruct the browser on the order in which elements should be layered on the web page.
+
+`z-index` does not work with static `elements`. Use `relative` instead to create stacking context with `z-index`.
