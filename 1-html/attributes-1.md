@@ -72,7 +72,3 @@ Checks the spelling.
 ```
 
 The field is read-only and can not be edited.
-
-```
-
-```

@@ -79,6 +79,8 @@ div {
 }
 ```
 
+Position in relation to the nearest non-static element.
+
 ### **fixed**
 
 The element is removed from the normal document flow, no space is created for the element in the page layout.
