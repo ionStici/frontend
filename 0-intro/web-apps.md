@@ -2,9 +2,12 @@
 
 ## **Table of Content**
 
-- [Web Applications]()
-- [The Difference between Website and Web application]()
-- [Web Application Architecture]()
+- [Web Applications](#web-applications)
+- [The Difference between Website and Web application](#the-difference-between-website-and-web-application)
+- [Web Application Architecture](#web-application-architecture)
+- [Single Page Application SPA Intro](#single-page-application-spa-intro)
+  - [Multi-Page Applications](#multi-page-applications)
+  - [Single-Page Applications](#single-page-applications)
 
 <br>
 
@@ -34,6 +37,20 @@ Many times, web applications can grow to be very complex. In these cases, a thre
 
 <br>
 
-## **Single Page Application SPA**
+## **Single Page Application SPA Intro**
 
 SPA combine the content of traditional websites with the smooth user experience of mobile applications.
+
+### **Multi-Page Applications**
+
+Website with multi-page file structure which lives on a server - each time new data is needed for the browser view, a request is sent to the server, which returns a new set of page files. This approach struggle to keep up with web apps.
+
+The solution: Single-Page Applications.
+
+### **Single-Page Applications**
+
+A web application that interacts with the web browser by dynamically rewriting the current web page with new data from a web server, instead of the default method of the browser loading entire new pages.
+
+The name single-page application generally refers to the application consisting of one page that is constantly updated by JavaScript.
+
+Requests to the server are now quicker since they contain just the data needed to update the view. SPAs are full applications, running in the browser yet still connected to a server to update any application data.
