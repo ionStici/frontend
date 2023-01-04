@@ -1,10 +1,10 @@
 # **Colors**
 
-Four types of colors in CSS: Named / Hex / RGB / HSL
+Four types of colors in CSS: Named / Hex / RGB / HSL.
 
-The color system you choose, is a matter of personal taste.
+The color system we choose, is a matter of personal taste.
 
-But, you should choose one and be consistent throughout your CSS.
+Advice: We should choose one and be consistent throughout our CSS.
 
 <br>
 
