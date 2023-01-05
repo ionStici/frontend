@@ -8,6 +8,8 @@
 - [Single Page Application SPA Intro](#single-page-application-spa-intro)
   - [Multi-Page Applications](#multi-page-applications)
   - [Single-Page Applications](#single-page-applications)
+  - [SPA Frameworks](#spa-frameworks)
+  - [SPA Pros and Cons](#spa-pros-and-cons)
 
 <br>
 
@@ -43,7 +45,7 @@ SPA combine the content of traditional websites with the smooth user experience 
 
 ### **Multi-Page Applications**
 
-Website with multi-page file structure which lives on a server - each time new data is needed for the browser view, a request is sent to the server, which returns a new set of page files. This approach struggle to keep up with web apps.
+Website with multi-page file structure which lives on a server - each time new data is needed for the browser view, a request is sent to the server, which returns a new set of page files. This approach struggle to keep up with modern web apps.
 
 The solution: Single-Page Applications.
 
@@ -53,4 +55,44 @@ A web application that interacts with the web browser by dynamically rewriting t
 
 The name single-page application generally refers to the application consisting of one page that is constantly updated by JavaScript.
 
-Requests to the server are now quicker since they contain just the data needed to update the view. SPAs are full applications, running in the browser yet still connected to a server to update any application data.
+Requests to the server are quicker since they contain just the data needed to update the view. SPAs are full applications, running in the browser yet still connected to a server to update any application data.
+
+Each interaction with the web app changes only parts of the HTML file, instead of the whole page. The file stays constant while the logic from the client-side changes only what is needed to update.
+
+Requests for data are a lot quicker than requests for whole files.
+
+SPAs focus on speed when it comes to user interaction and browser rendering times.
+
+### **SPA Frameworks**
+
+Frameworks are recommended for creating SPAs instead of only vanilla JavaScript.
+
+- [React](https://reactjs.org/)
+- [Vue.js](https://vuejs.org/)
+- [AngularJS](https://angular.io/)
+- [Ember.js](https://emberjs.com/)
+- [ExtJS](https://www.sencha.com/products/extjs/)
+- [Knockout.js](https://knockoutjs.com/)
+- [Meteor.js](https://www.meteor.com/)
+
+While all of these share similar goals, they each take different approaches to building SPAs.
+
+### **SPA Pros and Cons**
+
+Single-page applications provide a better user experience while running within a web browser. They are the right choice for applications that need to provide real-time or complex interaction with their users. Creating a SPA involves more than just a handful of HTML, CSS, and JavaScript files, but their complexity continues to be minimized by frameworks such as React and Vue.js.
+
+#### **Pros**
+
+- SPAs are fast, it feels like a desktop of mobile app, no requests for new files, only small amounts of data sent from the server.
+
+- Reuse of code, saves time.
+
+- SPAs provide an easier path to migrate code to a mobile application.
+
+#### **Cons**
+
+- SPAs require more files to run at startup so the load time of the application can be longer.
+
+- Search Engine Optimization (SEO) has some pitfalls when it comes to SPAs. Search engines, like Google or DuckDuckGo, index pages of a website to rank the content. This can be difficult with only one page that may not have content until it is loaded by JavaScript. SEO is an ever-changing world so strategies already exist to mitigate these downsides.
+
+- SPAs may not function as expected within the browser. For example, the back button or browsing history can act differently while using a single-page application. This can be frustrating for users who are expecting certain functionality within their browsers.
