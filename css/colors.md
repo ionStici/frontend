@@ -1,4 +1,6 @@
-# **Colors**
+[&larr; Back](./README.md)
+
+# Colors
 
 Four types of colors in CSS: Named / Hex / RGB / HSL.
 
@@ -8,7 +10,7 @@ Advice: We should choose one and be consistent throughout our CSS.
 
 <br>
 
-## **Table of Content**
+## Table of Content
 
 - [Foreground and Background in CSS](#foreground-and-background-in-css)
 - [Hexadecimal](#hexadecimal)
@@ -22,7 +24,7 @@ Advice: We should choose one and be consistent throughout our CSS.
 
 <br>
 
-## **Foreground and Background in CSS**
+## Foreground and Background in CSS
 
 ```css
 h1 {
@@ -33,7 +35,7 @@ h1 {
 
 <br>
 
-## **Hexadecimal**
+## Hexadecimal
 
 Hexadecimal color system - **hex colors**.
 
@@ -45,7 +47,7 @@ We can represent hex colors with 3 characters in case that it contains pairs. Fo
 
 <br>
 
-## **RGB Colors**
+## RGB Colors
 
 RGB color system. RGB uses decimal numbers.
 
@@ -65,7 +67,7 @@ RGB color system is convenient because it's very close to how computers represen
 
 <br>
 
-## **Hex and RGB**
+## Hex and RGB
 
 Hex and RGB syntaxes, each have 3 values, one for each color. Each can be one of 256 values.
 
@@ -73,7 +75,7 @@ Specifically, `256 * 256 * 256 = 16.777.216` this is the amount of colors we can
 
 <br>
 
-## **Hue, Saturation, Lightness**
+## Hue, Saturation, Lightness
 
 Another color system: _hue-saturation-lightness_ abbreviated as **HSL**
 
@@ -94,7 +96,7 @@ _Lightness_ refers to how light or dark the color is. `50%` is normal lightness.
 
 <br>
 
-## **Opacity and Alpha**
+## Opacity and Alpha
 
 ```
 h1 { color: transparent; }
@@ -102,7 +104,7 @@ h1 { color: transparent; }
 
 CSS keyword for transparent color.
 
-### **Opacity in HSL**
+### Opacity in HSL
 
 ```css
 h1 {
@@ -114,7 +116,7 @@ The fourth value is the _alpha_, called opacity.
 
 Alpha is a decimal number from `0` to `1`, so from transparent to opaque.
 
-### **Opacity in RGB**
+### Opacity in RGB
 
 ```css
 h1 {
@@ -124,7 +126,7 @@ h1 {
 
 RGB color system and alpha `rgba()`.
 
-### **Hex and alpha**
+### Hex and alpha
 
 ```css
 h1 {

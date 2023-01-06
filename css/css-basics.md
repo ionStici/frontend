@@ -77,7 +77,7 @@ Link the css file with the html document via the tag above.
 
 ## Aspects to keep in mind
 
-<hr>
+<br>
 
 ### Responsive Design
 
@@ -87,7 +87,7 @@ Link the css file with the html document via the tag above.
 - Correct units
 - Desktop-first vs Mobile-first
 
-<hr>
+<br>
 
 ### Maintainable and scalable code
 
@@ -99,7 +99,7 @@ Link the css file with the html document via the tag above.
 - How to name classes
 - How to structure HTML
 
-<hr>
+<br>
 
 ### Web performance
 
@@ -110,4 +110,4 @@ Link the css file with the html document via the tag above.
 - Less images
 - Compress images
 
-<hr>
+<br>

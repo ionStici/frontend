@@ -1,13 +1,15 @@
-# **Float and Clear**
+[&larr; Back](./README.md)
 
-## **Table of Content**
+# Float and Clear
+
+## Table of Content
 
 - [Float](#float)
 - [Clear](#clear)
 
 <br>
 
-## **Float**
+## Float
 
 The `float` property is commonly used for wrapping text around an image.
 
@@ -24,7 +26,7 @@ Floated elements must have a width specified, otherwise, the element will assume
 
 <br>
 
-## **Clear**
+## Clear
 
 When multiple floated elements have different heights, it can affect their layout on the page.
 

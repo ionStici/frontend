@@ -1,10 +1,12 @@
-# **Box Types**
+[&larr; Back](./README.md)
+
+# Box Types
 
 Every HTML element has a default `display` value that dictates how the box behaves. If it share horizontal space with other elements, if it fill the entire browser area from left to right, etc.
 
 We can change this default with the `display` property.
 
-## **Table of Content**
+## Table of Content
 
 - [Inline Elements](#inline-elements)
 - [Block-level Elements](#block-level-elements)
@@ -13,7 +15,7 @@ We can change this default with the `display` property.
 
 <br>
 
-## **Inline Elements**
+## Inline Elements
 
 ```css
 div {
@@ -33,7 +35,7 @@ We can only specify horizontal padding and margins for inline elements.
 
 <br>
 
-## **Block-level Elements**
+## Block-level Elements
 
 ```css
 div {
@@ -49,7 +51,7 @@ Vertically, one after another.
 
 <br>
 
-## **Inline-Block Elements**
+## Inline-Block Elements
 
 ```css
 div {
@@ -65,7 +67,7 @@ But since they work as a block-level box in the inside, we can use `width` and `
 
 <br>
 
-## **Display: none**
+## Display: none
 
 ```css
 div {

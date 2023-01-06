@@ -1,4 +1,6 @@
-# **The Visual Formatting Model**
+[&larr; Back](./README.md)
+
+# The Visual Formatting Model
 
 **The Visual Formatting Model** is an algorithm that determines the overall layout by calculating the dimensions of each element in the render tree.
 

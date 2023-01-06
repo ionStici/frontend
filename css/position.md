@@ -1,6 +1,8 @@
-# **Positioning**
+[&larr; Back](./README.md)
 
-## **Table of Content**
+# Positioning
+
+## Table of Content
 
 - [Flow of HTML](#flow-of-html)
 - [Positioning in CSS](#positioning-in-css)
@@ -14,7 +16,7 @@
 
 <br>
 
-## **Flow of HTML**
+## Flow of HTML
 
 A browser will render the elements of an HTML document that has no CSS from left to right, top to bottom, in the same order as they exist in the document. This is called the _flow of elements in HTML_.
 
@@ -25,7 +27,7 @@ CSS provides properties that change how a browser _positions_ elements.
 
 <br>
 
-## **Positioning in CSS**
+## Positioning in CSS
 
 Three positioning chemes:
 
@@ -37,19 +39,25 @@ Three positioning chemes:
 
 <br>
 
-## **Position**
+## Position
 
 `position` property can change the default position behaviour of elements.
 
-### **static**
+<br>
+
+### static
 
 `static` (default value) normal flow.
 
-### **relative**
+<br>
 
-The element is positioned according to the normal flow of the document, and then **offset relative to itself** based on the values of `top` `right` `bottom` `left`.
+### relative
 
-The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were static.
+Normal flow. With coordination properties we can move the element relative to itself.
+
+Offset (coordinates) properties: `top` `right` `bottom` `left`
+
+The offset does not affect the position of any other elements. It is as if the old position was kept and everything else just flow around it as it was never moved.
 
 This will create new stacking context when the value of `z-index` is not `auto`.
 
@@ -61,11 +69,13 @@ div {
 }
 ```
 
-### **absolute**
+<br>
+
+### absolute
 
 The element is removed from the normal flow of the document, no space is created for the element in the page layout.
 
-It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial containing block.
+It is positioned relative to the closest parent which has the position set to relative, if any; otherwise, it is placed relative to the initial containing block.
 
 Its final position is determined by the values of `top` `right` `bottom` `left`.
 
@@ -81,7 +91,9 @@ div {
 
 Position in relation to the nearest non-static element.
 
-### **fixed**
+<br>
+
+### fixed
 
 The element is removed from the normal document flow, no space is created for the element in the page layout.
 
@@ -101,7 +113,9 @@ div {
 }
 ```
 
-### **sticky**
+<br>
+
+### sticky
 
 The element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor).
 
@@ -118,7 +132,9 @@ div {
 }
 ```
 
-## **Stacking Contexts and z-index**
+<br>
+
+## Stacking Contexts and z-index
 
 Stacking Contexts are like layers that form a stack.
 

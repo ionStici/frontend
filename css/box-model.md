@@ -1,4 +1,6 @@
-# **The Box Model**
+[&larr; Back](./README.md)
+
+# The Box Model
 
 All elements on a web page are interpreted by the browser as "living" inside of a box. Each box can have (optional):
 
@@ -11,7 +13,7 @@ By default, the total dimensions of an element, are the sum of the content size,
 
 <br>
 
-## **Table of Content**
+## Table of Content
 
 - [Height and Width](#height-and-width)
 - [Border](#border)
@@ -26,7 +28,7 @@ By default, the total dimensions of an element, are the sum of the content size,
 
 <br>
 
-## **Height and Width**
+## Height and Width
 
 By default, the dimensions of an HTML box are set to hold the content of the box. We can change that with:
 
@@ -39,7 +41,7 @@ div {
 
 <br>
 
-## **Border**
+## Border
 
 Border is a line that surrounds an element. It can be set with a specific width, style and color:
 
@@ -54,7 +56,7 @@ div {
 
 <br>
 
-## **Padding**
+## Padding
 
 The space between the content and the border of a box.
 
@@ -70,7 +72,7 @@ Padding is often used to expand the background color of the box.
 
 <br>
 
-## **Margin**
+## Margin
 
 The space outside of the box.
 
@@ -84,7 +86,7 @@ Using `margin: 0 auto;` we can center elements. `auto` on left and right instruc
 
 <br>
 
-## **Vertical Margin Collapse**
+## Vertical Margin Collapse
 
 Concept not applied to horizontal margin or to padding in general.
 
@@ -106,7 +108,7 @@ In the example above, as this two margins meet, only the 20px padding of div-2 i
 
 <br>
 
-## **Minimum and Maximum Height and Width**
+## Minimum and Maximum Height and Width
 
 CSS properties that can limit how narrow or how wide an element's box can be sized to.
 
@@ -122,7 +124,7 @@ div {
 
 <br>
 
-## **Overflow**
+## Overflow
 
 `overflow` property is set on a parent element to instruct the browser how to render child elements. It controls what happens to content that spills or overflows outside its box.
 
@@ -140,7 +142,7 @@ For vertical or horizontal solutions: `overflow-x` and `overflow-y`.
 
 <br>
 
-## **Resetting Defaults**
+## Resetting Defaults
 
 Browsers have a default stylesheet, known as _user agent stylesheets_.
 
@@ -163,7 +165,7 @@ When properties are set to `0`, they do not require a unit of measurement.
 
 <br>
 
-## **Visibility**
+## Visibility
 
 ```css
 div {
@@ -182,7 +184,7 @@ _Difference between display and visibility:_
 
 <br>
 
-## **box-sizing**
+## box-sizing
 
 `box-sizing` property controls the box model type. Its default value is `content-box`. This means that the actual size of elements is calculated by adding padding, border and width or height of the element. This can lead to unexpected results.
 

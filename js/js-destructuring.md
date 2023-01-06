@@ -1,10 +1,12 @@
-# **Destructuring**
+[&larr; Back](./README.md)
+
+# Destructuring
 
 **Destructuring** (ES6) is a JS feature - to extract data from arrays or objects.
 
 <br>
 
-## **Table of Content**
+## Table of Content
 
 - [Destructuring Arrays](#destructuring-arrays)
 - [Destructuring Objects](#destructuring-objects)
@@ -12,7 +14,7 @@
 
 <br>
 
-## **Destructuring Arrays**
+## Destructuring Arrays
 
 Retrieve elements from an array and store them into variables.
 
@@ -40,7 +42,7 @@ const  [ a=1, b=2] = arr;
 
 <br>
 
-## **Destructuring Objects**
+## Destructuring Objects
 
 Using Object Destructuring, we can create new variables directly from object's properties.
 
@@ -69,7 +71,7 @@ let a = 5;  let b = 7;
 
 <br>
 
-## **Destructuring Function Parameters**
+## Destructuring Function Parameters
 
 Destructuring - Function returning an array
 

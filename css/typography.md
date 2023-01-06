@@ -1,19 +1,29 @@
-# **Typography**
+[&larr; Back](./README.md)
+
+# Typography
 
 Properties related to font are usually inherited. We use the font properties on the parent or root element (like `body` or `html`) and in the end all the siblings inherit them.
 
-## **Table of Content**
+<br>
 
-- [font-family]()
-- [font-weight]()
-- [font-style]()
-- [text-transform]()
-- [Text Layout]()
-- [Web Fonts]()
+## Table of Content
+
+- [font-family](#font-family)
+- [Font Size](#font-size)
+- [font-weight](#font-weight)
+- [font-style](#font-style)
+- [font](#font)
+- [text-transform](#text-transform)
+- [Text Layout Properties](#text-layout-properties)
+- [Text Decoration](#text-decoration)
+- [Vertical Align](#vertical-align)
+- [Web Fonts](#web-fonts)
+  - [Web Fonts using `<link>`](#web-fonts-using-link)
+  - [Web Fonts using `@font-face`](#web-fonts-using-font-face)
 
 <br>
 
-## **font-family**
+## font-family
 
 ```css
 h1 {
@@ -27,7 +37,17 @@ h1 {
 
 <br>
 
-## **font-weight**
+## Font Size
+
+```css
+p {
+  font-size: 16px;
+}
+```
+
+<br>
+
+## font-weight
 
 How bold or think the text appears. Accepts keywords or numerical values.
 
@@ -48,7 +68,7 @@ _Note:_ not all font weights work for all fonts. Look up the font you are using 
 
 <br>
 
-## **font-style**
+## font-style
 
 ```css
 h1 {
@@ -60,7 +80,23 @@ Values: `normal`, `italic`, `oblique`
 
 <br>
 
-## **text-transform**
+## Font
+
+```css
+p {
+  font: 400 16px / 1.5 italic serif;
+}
+```
+
+`font` is a shorthand property.
+
+`font-family` and `font-size` and mandatory to add, the rest are all optional.
+
+`line-height` must come after font-size separated by slash ( / ).
+
+<br>
+
+## text-transform
 
 ```css
 h1 {
@@ -68,11 +104,11 @@ h1 {
 }
 ```
 
-Transform the text to `uppercase`, `lowercase` or `capitalize`.
+Transform text to `uppercase`, `lowercase` or `capitalize`.
 
 <br>
 
-## **Text Layout**
+## Text Layout Properties
 
 ```css
 h1 {
@@ -92,7 +128,33 @@ h1 {
 
 <br>
 
-## **Web Fonts**
+## Text Decoration
+
+```css
+p {
+  text-decoration: none; /* no styles */
+}
+```
+
+[text-decoration](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration) shorthand property sets the appearance of decorative lines on text.
+
+<br>
+
+## Vertical Align
+
+```css
+span {
+  vertical-align: top;
+}
+```
+
+Sets vertical alignment of an inline, inline-block or table-cell text.
+
+Check [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) for more options.
+
+<br>
+
+## Web Fonts
 
 Web Fonts - a lot of different fonts found on the web.
 
@@ -100,7 +162,9 @@ Free font services: [Google Fonts](https://fonts.google.com/) and [Adobe Fonts](
 
 Paid font distributor: [fonts.com](https://www.fonts.com/) - download the font and include it in our website directory and then link to it using `@font-face` ruleset.
 
-### **Web Fonts using `<link>`**
+<br>
+
+### Web Fonts using `<link>`
 
 1. Select the font in Google Fonts
 2. Choose the styles available for your font
@@ -108,7 +172,9 @@ Paid font distributor: [fonts.com](https://www.fonts.com/) - download the font a
 4. Paste it in the `<head>` tag (before our CSS `<link>`).
 5. Use the font
 
-### **Web Fonts using `@font-face`**
+<br>
+
+### Web Fonts using `@font-face`
 
 Fonts can be downloaded just like any other file on the web.
 
