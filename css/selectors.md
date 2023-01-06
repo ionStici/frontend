@@ -1,12 +1,10 @@
 [&larr; Back](./README.md)
 
-# **Selectors**
+# Selectors
 
 A selector is used to target specific HTML elements to be styled by the declaration.
 
-<br>
-
-## **Table of Content**
+## Table of Content
 
 - [1. Universal Selector](#1-universal-selector)
 - [2. Type Selector](#2-type-selector)
@@ -17,16 +15,14 @@ A selector is used to target specific HTML elements to be styled by the declarat
 - [7. Chaining](#7-chaining)
 - [8. Descendant Combinator](#8-descendant-combinator)
 
-<br>
-
-### **External Subjects**
+### External Subjects
 
 - [Combinators](./selectors-combinators.md)
 - [Pseudo Selectors](./selectors-pseudo.md)
 
 <br>
 
-## **1. Universal Selector**
+## 1. Universal Selector
 
 ```
 * { }
@@ -41,7 +37,7 @@ Besides this, avoid using the universal selector as it adds too much weight to t
 
 <br>
 
-## **2. Type Selector**
+## 2. Type Selector
 
 Element / Tag / Type
 
@@ -53,7 +49,7 @@ Selects all elements that have the given tag element.
 
 <br>
 
-## **3. Class Selector**
+## 3. Class Selector
 
 ```
 .class { }
@@ -73,7 +69,7 @@ The last class takes precedence over the previous class, so we can override decl
 
 <br>
 
-## **4. ID Selector**
+## 4. ID Selector
 
 ```
 #id { }
@@ -85,7 +81,7 @@ There should be only one ID value in a document. We use IDs to uniquely select e
 
 <br>
 
-## **5. Attribute Selector**
+## 5. Attribute Selector
 
 ```
 [href] { }  /* the most basic syntax */
@@ -97,7 +93,7 @@ Additional resources: [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Att
 
 <br>
 
-## **6. Selector list**
+## 6. Selector list
 
 ```
 p, .class, #id, { }
@@ -109,7 +105,7 @@ The comma acts as a grouping method, it selects all the matching nodes.
 
 <br>
 
-## **7. Chaining**
+## 7. Chaining
 
 Chaining - combining multiple selectors of the same element.
 
@@ -121,7 +117,7 @@ This translates to: the element is selected only when it have both the type `h1`
 
 <br>
 
-## **8. Descendant Combinator**
+## 8. Descendant Combinator
 
 ```
 ul li { }

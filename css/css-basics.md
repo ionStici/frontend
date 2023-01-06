@@ -1,6 +1,6 @@
 [&larr; Back](./README.md)
 
-# **CSS**
+# CSS
 
 **CSS** stands for Cascading Style Sheets. Definition:
 
@@ -10,14 +10,15 @@
 
 <br>
 
-## **Table of Content**
+## Table of Content
 
 - [Anatomy of a CSS syntax](#anatomy-of-a-css-syntax)
 - [CSS Types](#css-types)
+- [Aspects to keep in mind](#aspects-to-keep-in-mind)
 
 <br>
 
-## **Anatomy of a CSS syntax**
+## Anatomy of a CSS syntax
 
 ```CSS
 span {
@@ -36,9 +37,9 @@ The whole syntax is called a **CSS ruleset**.
 
 <br>
 
-## **CSS Types**
+## CSS Types
 
-### **Inline CSS**
+### Inline CSS
 
 ```html
 <h1 style="color: red;">Hello</h1>
@@ -46,7 +47,7 @@ The whole syntax is called a **CSS ruleset**.
 
 CSS declarations in the `style` attribute of HTML elements.
 
-### **Internal / Embedded CSS**
+### Internal / Embedded CSS
 
 ```html
 <style>
@@ -58,7 +59,7 @@ CSS declarations in the `style` attribute of HTML elements.
 
 CSS ruelsets inside `<style>` and `<head>` tags.
 
-### **External CSS**
+### External CSS
 
 ```html
 <link rel="stylesheet" href="style.css" />
@@ -68,17 +69,17 @@ CSS code inside an external `style.css` file.
 
 Link the css file with the html document via the tag above.
 
-### **CSS Types Priority**
+### CSS Types Priority
 
 (1) Inline CSS -> (2) -> Internal CSS -> (3) External CSS
 
 <br>
 
-## **Aspects to keep in mind**
+## Aspects to keep in mind
 
 <hr>
 
-**Responsive Design**
+### Responsive Design
 
 - Fluid layouts
 - Media queries
@@ -88,7 +89,7 @@ Link the css file with the html document via the tag above.
 
 <hr>
 
-**Maintainable and scalable code**
+### Maintainable and scalable code
 
 - Clean
 - Easy to understand
@@ -100,7 +101,7 @@ Link the css file with the html document via the tag above.
 
 <hr>
 
-**Web performance**
+### Web performance
 
 - Less HTTP requests
 - Less code
