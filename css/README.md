@@ -1,8 +1,8 @@
 # **CSS**
 
-[&larr; To the Main Page](./../README.md)
+[&larr; Back to the Main Page](./../README.md)
 
 ## **Table of Content**
 
-- [CSS](./1-css.md)
-- [CSS Selectors](./2-selectors.md)
+- [CSS Basics](./css-basics.md)
+- [CSS Selectors](./selectors.md)

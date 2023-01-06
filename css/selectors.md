@@ -1,4 +1,4 @@
-[&larr; Back](./0-table-of-content.md)
+[&larr; Back](./README.md)
 
 # **Selectors**
 
@@ -21,8 +21,8 @@ A selector is used to target specific HTML elements to be styled by the declarat
 
 ### **External Subjects**
 
-- [Combinators](./3-selectors-combinators.md)
-- [Pseudo Selectors](./4-selectors-pseudo.md)
+- [Combinators](./selectors-combinators.md)
+- [Pseudo Selectors](./selectors-pseudo.md)
 
 <br>
 
