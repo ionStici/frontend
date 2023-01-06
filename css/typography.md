@@ -1,11 +1,150 @@
 # **Typography**
 
+Properties related to font are usually inherited. We use the font properties on the parent or root element (like `body` or `html`) and in the end all the siblings inherit them.
+
 ## **Table of Content**
 
-- []()
-- []()
-- []()
+- [font-family]()
+- [font-weight]()
+- [font-style]()
+- [text-transform]()
+- [Text Layout]()
+- [Web Fonts]()
 
 <br>
 
-## **H**
+## **font-family**
+
+```css
+h1 {
+  font-family: "Times New Roman", serif;
+}
+```
+
+- For multiple words typefaces, use quotation marks `""`;
+- Use _[Web safe fonts](https://www.cssfontstack.com/)_ for fallbacks in case the font is not available.
+- Above, `serif` is the fallback. A group of similar looking fonts: _a font stack_.
+
+<br>
+
+## **font-weight**
+
+How bold or think the text appears. Accepts keywords or numerical values.
+
+```css
+h1 {
+  font-weight: 400;
+}
+```
+
+Keywords: `bold`, `normal`, `lighter`, `bolder`
+
+Numerical values can range from `1` (lightest) to `1000` (boldest).
+
+- `400` is equal to the keyword value `normal`
+- `700` equal to `bold`. There is also `lighter` and `bolder`
+
+_Note:_ not all font weights work for all fonts. Look up the font you are using to see which font-weight values are available.
+
+<br>
+
+## **font-style**
+
+```css
+h1 {
+  font-style: italic;
+}
+```
+
+Values: `normal`, `italic`, `oblique`
+
+<br>
+
+## **text-transform**
+
+```css
+h1 {
+  text-transform: uppercase;
+}
+```
+
+Transform the text to `uppercase`, `lowercase` or `capitalize`.
+
+<br>
+
+## **Text Layout**
+
+```css
+h1 {
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 1.5;
+  text-align: center; /* left right center justify */
+  text-indent: 25px;
+}
+```
+
+- `letter-spacing: units` horizontal space between letters.
+- `word-spacing: units` space between words.
+- `line-height` space between text lines. Unitless values are recommended as they will respond to the current font size.
+- `text-align` align text to its parent element.
+- `text-indent` indentation
+
+<br>
+
+## **Web Fonts**
+
+Web Fonts - a lot of different fonts found on the web.
+
+Free font services: [Google Fonts](https://fonts.google.com/) and [Adobe Fonts](https://fonts.adobe.com/) - they host fonts which we can link to from our HTML.
+
+Paid font distributor: [fonts.com](https://www.fonts.com/) - download the font and include it in our website directory and then link to it using `@font-face` ruleset.
+
+### **Web Fonts using `<link>`**
+
+1. Select the font in Google Fonts
+2. Choose the styles available for your font
+3. Copy the automatically generated `<link>` element
+4. Paste it in the `<head>` tag (before our CSS `<link>`).
+5. Use the font
+
+### **Web Fonts using `@font-face`**
+
+Fonts can be downloaded just like any other file on the web.
+
+They come in a few different file formats, such as:
+
+- OTF (OpenType Font)
+- TTF (TrueType Font)
+- WOFF (Web Open Font Format)
+- WOFF2 (Web Open Font Format 2)
+
+The different formats are a progression of standards for how fonts will work with different browsers, with WOFF2 being the most progressive. It’s a good idea to include TTF, WOFF, and WOFF2 formats with your `@font-face` rule to ensure compatibility on all browsers.
+
+How to use `@font-face`:
+
+1. On the same page from Google Fonts, click Download to download the font files to our computer. The file will be downloaded as a single format `TTF`. We can use a tool [google-webfonts-helper](https://gwfh.mranftl.com/fonts) to generate additional file types for `WOFF` and `WOFF2`.
+2. Add the downloaded files to our website's directory.
+3. Use the font using `@font-face` at the top of our CSS file:
+
+```
+@font-face {
+  font-family: 'Roboto Font';
+  src:
+    url("fonts/Roboto.woff2") format("woff2"),
+    url("fonts/Roboto.woff") format("woff"),
+    url("fonts/Roboto.ttf") format("truetype");
+}
+```
+
+4. Within `@font-face`, with `font-family` we set a custom name for the downloaded font, surrounded by quotation marks.
+5. The `src` property contains three values, each specifying the relative path to the font file and its format.
+6. Note that the ordering for the different formats is important because our browser will start from the top of the list and search until it finds a font format that it supports.
+
+Once the `@font-face` is defined, you can use the font in your stylesheet with the given custom name.
+
+```css
+h1 {
+  font-family: "Roboto Font";
+}
+```

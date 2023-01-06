@@ -71,3 +71,42 @@ Link the css file with the html document via the tag above.
 ### **CSS Types Priority**
 
 (1) Inline CSS -> (2) -> Internal CSS -> (3) External CSS
+
+<br>
+
+## **Aspects to keep in mind**
+
+<hr>
+
+**Responsive Design**
+
+- Fluid layouts
+- Media queries
+- Responsive images
+- Correct units
+- Desktop-first vs Mobile-first
+
+<hr>
+
+**Maintainable and scalable code**
+
+- Clean
+- Easy to understand
+- Growth
+- Reusable
+- How to organize files
+- How to name classes
+- How to structure HTML
+
+<hr>
+
+**Web performance**
+
+- Less HTTP requests
+- Less code
+- Compress code
+- Use a CSS preprocessor
+- Less images
+- Compress images
+
+<hr>

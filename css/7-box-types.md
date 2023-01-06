@@ -9,6 +9,7 @@ We can change this default with the `display` property.
 - [Inline Elements](#inline-elements)
 - [Block-level Elements](#block-level-elements)
 - [Inline-Block Elements](#inline-block-elements)
+- [Display: none](#display-none)
 
 <br>
 
@@ -61,3 +62,15 @@ Inline-block elements are technically also inline elements, but which works as a
 So since they're technically inline elements, they use only the content's space, cause no line breaks, and can appear next to each other.
 
 But since they work as a block-level box in the inside, we can use `width` and `height` properties on them, and also vertical padding and margin.
+
+<br>
+
+## **Display: none**
+
+```css
+div {
+  display: none;
+}
+```
+
+It will completely remove the element from the document, the accessibility tree, and will no longer be announced by screen readers.
