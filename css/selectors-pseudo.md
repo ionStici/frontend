@@ -9,10 +9,12 @@
   - [hover and active](#hover-and-active)
   - [before and after](#before-and-after)
   - [not()](#not)
+  - [focus](#focus)
   - [checked](#checked)
 - [Pseudo-Selectors](#pseudo-elements)
   - [first-line and first-letter](#first-line-and-first-letter)
   - [first-child and last-child](#first-child-and-last-child)
+  - [selection](#selection)
   - [nth-child](#nth-child)
 
 <br>
@@ -53,6 +55,30 @@ div::before, div::after { }
 
 - `before` and `after` pseudo classes will generate like a virtual element around its parent which we can style.
 
+<!-- <details open> -->
+<details>
+<summary>More about before and after</summary>
+<br>
+Pseudo-classes are treated like child of the original element.
+
+<br>
+
+For before or after to appear on the page, we need to define the content property, we can set it to empty string `""`, otherwise it will not appear.
+
+```
+a::before { content: ""; }
+```
+
+<br>
+
+Target after or before when hover the original element:
+
+```
+a:hover::after { }
+```
+
+</details>
+
 <br>
 
 ### not()
@@ -62,6 +88,16 @@ div:not(:last-child) { }
 ```
 
 The negation pseudo class, selects all elements expect the specified one in parenthesis.
+
+<br>
+
+### focus
+
+```
+input:focus { }
+```
+
+Selects an element that has received focus.
 
 <br>
 
@@ -102,6 +138,19 @@ div:last-child { }
 ```
 
 Will select the first child of the last child of the parent element.
+
+<br>
+
+### selection
+
+```css
+::selection {
+  background-color: #333;
+  color: #fff;
+}
+```
+
+Applies styles to the part of a document that has been highlighted by the user (such as selected text).
 
 <br>
 

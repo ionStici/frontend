@@ -1,1 +1,0 @@
-In the media query, we can put a comma after the first condition, which acts like an or (apply the code if the first condition is true or if the second condition is true).
