@@ -2,7 +2,7 @@
 
 # Semantic HTML
 
-**Semantic** means _relating to meaning_.
+<!-- **Semantic** means _relating to meaning_.
 
 **Semantic elements** provide information about the content between the opening and closing tags.
 
@@ -10,4 +10,4 @@
 
 - **Accessibility:**
 - **SEO:** improves the website Search ENgine Optimization.
-- **Easy to Understand** and read the source code for us and for other web developers.
+- **Easy to Understand** and read the source code for us and for other web developers. -->
