@@ -7,3 +7,4 @@
 <div></div>
 
 - [HTML Basics](./html-basics.md)
+- [Anatomy of an HTML document](./html-document-anatomy.md)

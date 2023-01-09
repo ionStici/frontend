@@ -16,6 +16,7 @@
 - [Videos](#videos)
 - [Entity References](#entity-references)
 - [Attributes](#attributes)
+- [Anchor Element](#anchor-element)
 - [Lists](#lists)
 
 <br>
@@ -133,6 +134,25 @@ Attributes contain extra information about the element. It will not appear on th
 _Boolean attributes_ can only have one value which is generally the same as the attribute name.
 
 We can set boolean attribute equal to itself, or leave just the name - both acceptable.
+
+<br>
+
+## Anchor Element
+
+Linking to other web pages.
+
+```html
+<a target="_blank" href="https://www.google.com/">Google</a>
+```
+
+- `href` attribute stands for _hyperlink reference_. Creates a hyperlink to the indicated destination as value.
+- `target` attribute specifies how a link should open. `_blank` value will open the link in a new tab.
+
+We can link to a web page, a relative path, a file, email address, anything else a URL can address.
+
+`href="#footer"` using IDs as href value we can jump to certain sections when clicking on links.
+
+We can turn nearly any element (like img) into a link by wrapping that element with an anchor element.
 
 <br>
 
