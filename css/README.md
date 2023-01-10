@@ -21,9 +21,15 @@
 
 - [Colors](./colors.md)
 - [Typography](./typography.md)
+- [Styling Links](./styling-links.md)
 
 <div></div>
 
-- [Navigation / Links and Buttons](./links-buttons.md)
+- [Flexbox](./flexbox.md)
+- [CSS Grid](./css-grid.md)
+- [Media Queries](./media-queries.md)
+- [Responsive Images](./responsive-images.md)
 
 <div></div>
+
+<br>

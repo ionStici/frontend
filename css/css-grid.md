@@ -28,7 +28,7 @@
 
 <br>
 
-## **CSS Grid Introduction and Terminology**
+## CSS Grid Introduction and Terminology
 
 - **CSS Grid Layout** is a two-dimensional grid system.
 
@@ -48,7 +48,7 @@
 
 <br>
 
-## **CSS Grid Properties Overview**
+## CSS Grid Properties Overview
 
 <br>
 
@@ -73,7 +73,7 @@
 
 <br>
 
-## **Grid Container**
+## Grid Container
 
 _Use Mozilla Firefox when working with CSS Grids, as it has the best developer tools to visualize the CSS Grid layouts._
 
@@ -106,7 +106,7 @@ Percentages are relative to the entire grid's height in rows, and to the grid's 
 
 <br>
 
-### **Named Grid Lines**
+### Named Grid Lines
 
 Giving names to grid lines.
 
@@ -114,7 +114,7 @@ _❗️ Chapter not completed_
 
 <br>
 
-### **Grid Gap**
+### Grid Gap
 
 `row-gap` and `column-gap` will insert blank space between every row and column in the grid (but not on the outer edges).
 
@@ -133,7 +133,7 @@ This properties: `grid-row-gap grid-column-gap grid-gap` are deprecated.
 
 <br>
 
-## **Grid Items**
+## Grid Items
 
 We can expand grid items on multiple rows or columns by using the properties below:
 
@@ -171,7 +171,7 @@ The code example above translates to: the grid item starts on row 3 and spans 2 
 
 <br>
 
-### **order property**
+### order property
 
 Similarly to flexbox, CSS Grid can place grid items in any order.
 
@@ -179,7 +179,7 @@ _❗️ Chapter not completed_
 
 <br>
 
-## **Grid Template Areas**
+## Grid Template Areas
 
 The `grid-template-areas` and `grid-area` properties distribute the grid items to specific named grid cells.
 
@@ -215,11 +215,11 @@ After creating the rows and columns, we can name each grid cell with `grid-templ
 
 <br>
 
-## **Grid Concepts**
+## Grid Concepts
 
 <br>
 
-### **Fraction Unit**
+### Fraction Unit
 
 The `fr` relative unit (specifically for CSS Grids) defines the size of columns or rows as a fraction of the grid's width or height, by expanding to all the space that it can occupy.
 
@@ -235,7 +235,7 @@ If `fr` is used with other units, then each `fr` represents a fraction of the re
 
 <br>
 
-### **min-content / max-content**
+### min-content / max-content
 
 ```CSS
 .grid {
@@ -249,7 +249,7 @@ If `fr` is used with other units, then each `fr` represents a fraction of the re
 
 <br>
 
-### **auto-fit / auto-fill**
+### auto-fit / auto-fill
 
 ```CSS
 .grid {
@@ -273,7 +273,7 @@ If `fr` is used with other units, then each `fr` represents a fraction of the re
 
 <br>
 
-### **repeat function**
+### repeat function
 
 The repeat function (created specifically for CSS Grids) duplicates the specified units inside the grid template properties a given number of times.
 
@@ -290,7 +290,7 @@ _p.s._ We can specify multiple units in the repeat() function and then each grou
 
 <br>
 
-### **minmax function**
+### minmax function
 
 Preventing a track from getting too big or too small.
 
@@ -304,11 +304,11 @@ The minmax() function requires 2 values and enables the track to vary between th
 
 <br>
 
-## **Aligning**
+## Aligning
 
 <br>
 
-### **Justify Items and Align Items**
+### Justify Items and Align Items
 
 ```CSS
 .grid {
@@ -328,7 +328,7 @@ _Most important values for both properties:_
 
 <br>
 
-### **Justify Self and Align Self**
+### Justify Self and Align Self
 
 ```CSS
 .item {
@@ -345,7 +345,7 @@ Note that these two will override the `justify-items` and `align-items` properti
 
 <br>
 
-### **Justify Content and Align Content**
+### Justify Content and Align Content
 
 ```CSS
 .grid {
@@ -367,7 +367,7 @@ _Most important values for both properties:_
 
 <br>
 
-## **Explicit Grids vs. Implicit Grids**
+## Explicit Grids vs. Implicit Grids
 
 **Explicit Grid** - the grid that we define.
 **Implicit Grid** - the grid that CSS algorithm automatically builds when there are more elements than fit in the grid that we explicitly specified.
@@ -378,7 +378,7 @@ The default behavior of implicit grids: new rows will be added for new grid item
 
 <br>
 
-### **Grid Auto Properties**
+### Grid Auto Properties
 
 ```CSS
 .grid {
@@ -399,7 +399,7 @@ If we do not specify `grid-auto-rows`, then the rows will be auto-adjusted to th
 
 <br>
 
-### **Grid Auto Flow**
+### Grid Auto Flow
 
 We can specify the order in which rows and columns are rendered.
 
