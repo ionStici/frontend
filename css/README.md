@@ -8,6 +8,7 @@
 
 - [CSS Basics](./css-basics.md)
 - [CSS Selectors](./selectors.md)
+- [Units in CSS](./units-in-css.md)
 
 <div></div>
 
@@ -31,5 +32,3 @@
 - [Responsive Images](./responsive-images.md)
 
 <div></div>
-
-<br>
