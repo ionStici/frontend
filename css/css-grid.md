@@ -1,4 +1,4 @@
-[&larr; back](./../README.md)
+[&larr; back](./README.md)
 
 # **CSS Grid**
 

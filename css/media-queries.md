@@ -1,24 +1,25 @@
-[&larr; back](./../README.md)
+[&larr; back](./README.md)
 
 # Responsive Design - Media Queries
 
 ## Table of Content
 
-- [Responsive Design Overview]()
-  - [Resposnive Design Practical Principles]()
-- [Viewport Meta Tag]()
-- [How to Select Breakpoints]()
-- [Desktop-First vs. Mobile-First]()
-  - [Desktop-First]()
-  - [Mobile-First]()
-  - [Mobile-First: Pros and Cons]()
-- [How Media Queries Work]()
-  - [Clarification]()
-- [`and` Operator and Comma Separated List]()
-- [Range]()
-- [Units in Media Queries]()
-  - [Pixels as root font-size]()
-- [Dots Per Inch (DPI)]()
+- [Responsive Design Overview](#responsive-design-overview)
+  - [Resposnive Design Practical Principles](#resposnive-design-practical-principles)
+- [Viewport Meta Tag](#viewport-meta-tag)
+- [How to Select Breakpoints](#how-to-select-breakpoints)
+- [Desktop-First vs. Mobile-First](#mobile-first-vs-desktop-first)
+  - [Desktop-First](#desktop-first)
+  - [Mobile-First](#mobile-first)
+  - [Mobile-First: Pros and Cons](#mobile-first-pros-and-cons)
+- [How Media Queries Work](#how-media-queries-work)
+  - [Clarification](#clarification)
+- [`and` Operator and Comma Separated List](#and-operator-and-comma-separated-list)
+- [Range](#range)
+- [Units in Media Queries](#units-in-media-queries)
+  - [Pixels as root font-size](#pixels-as-root-font-size)
+- [Dots Per Inch (DPI)](#dots-per-inch-dpi)
+- [hover media feature](#hover-media-feature)
 
 <br>
 
@@ -108,7 +109,7 @@ Two fundamental aspects of modern responsive design are: deciding about doing mo
 
 **Desktop-First Approach** - we start by writing our general CSS for large screens. Then, when we implement responsive design for our website, we write media queries for `max-width` in order to shrink the design to fit smaller screens.
 
-### Mogile-First
+### Mobile-First
 
 **Mobile-First Approch** - we start by writing our general CSS for smaller screens, optimizing for mobile. Then, move up to larger screens using media queries and `min-width`.
 
@@ -219,12 +220,14 @@ In the example above, CSS rules would apply when the screen size is between 320p
 
 In the media query rule, `rem` do not respond to the root font-size setting. Instead, `1rem` here will always be the default browser font-size. Besides this, `rem` has some bugs in some browsers when used in media queries.
 
-Also, don't use pixels in media queries because it will not adjust with the user's font-size in the browser (zoom level).
+Also, don't use pixels in media queries because it will not adjust with the user's font-size in the browser in case he will change it (zoom level).
 
 Instead, use `em` (safer). To convert pixels to em, divide pixels by 16px:
 
 - `1200 / 16 = 75em`
 - `@media (max-width: 75em) {}`
+
+`1em` in media queries rule will always be equal to the font-size coming from the browser, which is the default 16px. And if the user changes it to 20px, therefore our units will correspond.
 
 <br>
 
@@ -260,3 +263,17 @@ To target by resolution, we can use the `min-resolution` and `max-resolution` me
 ```
 
 The media query in the example above targets high resolution screens by making sure the screen resolution is at least 300 dots per inch. If the screen resolution query is met, then we can use CSS to display high resolution images and other media.
+
+<br>
+
+## hover media feature
+
+```css
+@media (hover: none) {
+}
+/* @media (hover: hover) {} */
+```
+
+`hover` media features can identify if the user can hover over elements or not, we kind of identify touch devices or mouse.
+
+<br>
