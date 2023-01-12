@@ -1,19 +1,21 @@
 [&larr; back](./README.md)
 
-# **Responsive Images**
+# Responsive Images
 
 <br>
 
-## **Table of Content**
+## Table of Content
 
-- [Responsive Images Overview]()
-- [Responsive Images in CSS]()
-- [Art Direction]()
-- [Density Switching]()
+- [Responsive Images Overview](#responsive-images-overview)
+- [Image Optimizations](#image-optimizations)
+- [Responsive Images in CSS](#responsive-images-in-css)
+- [Art Direction](#art-direction)
+- [Density Switching](#art-direction)
+<!-- - [Density and Resolution Switching](#density-and-resolution-switching) -->
 
 <br>
 
-## **Responsive Images Overview**
+## Responsive Images Overview
 
 Responsive images is a concept about providing the right image to the right screen size, resolution, pixel ratio.
 
@@ -29,7 +31,45 @@ Responsive images is also an aspect of web performance (not downloading unnecess
 
 <br>
 
-## **Responsive Images in CSS**
+## Image Optimizations
+
+Image Optimizations in terms of dimensions and of file size.
+
+**Rule:** The image size should be double of the size that it is displayed on the screen.
+
+High density screens needs 2px of the image to display 1px in the design.
+
+**Step 1:** Start with a big image, and when we finish the design, check the largest width that the image would have on the page. Example: largest 200px, so double to 400px. Now resize the image width to 400px.
+
+**Step 2:** Compress the images
+
+- Compress the images in order to reduce the file size. Tool for compressing images [squoosh](https://squoosh.app/)
+- Recommended file format: _WebP_. Better alternative, which increases the quality and reduces image size.
+- Because not all browsers support WebP, check for browser support.
+
+**Deliver WebP and PNG based on browser support**
+
+```html
+<picture>
+  <source srcset="./img.webp" type="image/webp" />
+  <source srcset="./img.png" type="image/png" />
+  <img src="./img.png" class="img" alt="" />
+</picture>
+```
+
+Inside the `<picture>` element, we define possible alternatives for the `<img>` with the `<soruce>` element.
+
+In the `type` attribute we define the image format.
+
+The browser will select which of these 2 images can display better based on browsers support.
+
+We still have to include `<img>` tag with its `class` and `alt` attributes, because these are the ones that will be used. The browser will replace the `src` of `<img>` with one of the alternatives from `<source>`.
+
+Also, the `src` from `<img>` will act as a fallback in case the browser doesn't understand the `<source` element.
+
+<br>
+
+## Responsive Images in CSS
 
 In HTML, images are embedded using the `<img>` tag, and then in CSS we use the `background-image` property.
 
@@ -63,7 +103,7 @@ Safari doesn't support (min-resolution: 192dpi). For safari we use device-pixel-
 
 <br>
 
-## **Art Direction**
+## Art Direction
 
 Art Direction is like using media queries but in HTML. We make images depend on the screen width, so that different images will be used on different screen widths in the same place.
 
@@ -81,9 +121,11 @@ We can have multiple `<source>` elements for different breakpoints.
 
 `<img>` will act like a fallback in case the browser doesn't support the feature.
 
+_Note:_ you have to include the `<img>` element with its `src` attribute in order for `<source>` tags to work properly.
+
 <br>
 
-## **Density Switching**
+## Density Switching
 
 Serve a larger version of the same image for high resolution screens, and serve a smaller version of the same image for a low desnity screen.
 
@@ -104,4 +146,31 @@ There are low resolution screens and high resolution screens. If we want our ima
 
 <br>
 
-## **Resolution Switching**
+<!-- ## Density and Resolution Switching
+
+Let the browser choose the best image for the current viewport and for the pixel density:
+
+```html
+<img
+  srcset="nat-1.jpg 300w, nat-1-large.jpg 1000w"
+  sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+  src="nat-1-large.jpg"
+/>
+```
+
+`srcset` - 2 images, 300px and 1000px width. Instead of density descriptors, we specify the **width descriptors**. We inform the browser of the width for each image, without the browser having to download them to get access to that information. Knowing the image width is not enough for the browser to choose the right image, we still need the sizes attribute.
+
+`sizes` - inform the browser about the approximate width of the image at different viewport width. As values - breakpoints approximately that the width of the image will be.
+
+- _900px_ - then the image width 20vw (20% of the screen width viewport).
+- _600px_ - here the image width is 30% of the screen width, 30vw.
+- At the end, specify the default size, approximately 300px, if none of the before conditions apply.
+- Don’t forget about the alt attribute.
+
+With both srcset and sizes - the browser can figure out which is the perfect image to use for the current viewport width and the current display resolution.
+
+`src` - we should include this too, in case the user is using an older browser which doesn’t support srcset or sizes. If the browser cant understand any of those, he can still use the src attribute.
+
+This example will take care for both, resolution and density switching. We gave the browser enough information to figure out exactly what to do depending on both the viewport and the pixel density (screen resolution).
+
+<br> -->

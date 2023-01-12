@@ -4,10 +4,10 @@
 
 ## Table of Content
 
-- [Descendent Combinator]()
-- [Child Combinator]()
-- [General Sibling Combinator]()
-- [Adjacent Sibling Combinator]()
+- [Descendent Combinator](#descendent-combinator)
+- [Child Combinator](#child-combinator)
+- [General Sibling Combinator](#general-sibling-combinator)
+- [Adjacent Sibling Combinator](#adjacent-sibling-combinator)
 
 <br>
 
