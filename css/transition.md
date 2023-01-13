@@ -2,7 +2,7 @@
 
 # CSS Transition
 
-**CSS transition** can the following four aspects of an element's transition:
+**CSS transition** can control the following four aspects of an element's transition:
 
 1. The property
 2. Duration
@@ -19,12 +19,13 @@
 - [Shorthand](#shorthand)
 - [Combinations](#combinations)
 - [all](#all)
-- [More](#more)
+- [Notes](#notes)
 
 **Resources:**
 
 - [MDN Using CSS transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
 - [MDN Using CSS transforms](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [CSS Transitions and Transforms for Beginners](https://thoughtbot.com/blog/transitions-and-transforms)
 
 <br>
 
@@ -133,7 +134,7 @@ This will enable the transition for all properties, and every value that changes
 
 <br>
 
-## More
+## Notes
 
 - The trick for fading out is using `opacity: 0`
 - The transform property on hover or active will be in relation to the initial state.
