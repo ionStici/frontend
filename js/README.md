@@ -6,4 +6,9 @@
 
 <div></div>
 
+- [JavaScript Overview](./js-overview.md)
+- [JavaScript Introduction](./js-intro.md)
+
+<div></div>
+
 - [JS Destructuring](./js-destructuring.md)
