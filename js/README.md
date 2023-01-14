@@ -8,8 +8,9 @@
 
 - [JavaScript Overview](./js-overview.md)
 - [Introductory Aspects](./introductory-aspects.md)
-- [Variables](./js-variables.md)
+- [Variables](./variables.md)
+- [JavaScript Basics](./js-basics.md)
 
 <div></div>
 
-- [JS Destructuring](./js-destructuring.md)
+- [Destructuring](./destructuring.md)

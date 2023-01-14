@@ -81,6 +81,15 @@ The first 7 data types can be referred as **primitive data types** or just **pri
 
 **Objects** or **Reference types** are more complex.
 
+We can check the type of a value using the `typeof` operator:
+
+```js
+typeof true; // boolean
+typeof null; // object
+```
+
+JS says that the type of `null` is an object, which is not correct, `typeof null` should return `null`. This is regarded as an error in js, but it is never corrected for legacy reasons.
+
 <br>
 
 ## Arithmetic Operators
@@ -111,6 +120,7 @@ We can use the plus operator to join (**concatenate**) strings:
 
 ```js
 "hello" + " " + "world"; // hello world
+greeting + " " + myName; // Hello John | String Concatenation with Variables
 ```
 
 This appends the right string to the left string.

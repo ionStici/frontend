@@ -7,7 +7,7 @@
 - [Values and Variables](#values-and-variables)
 - [let, const, var](#let-const-var)
 - [Mathematical Assignment Operators](#mathematical-assignment-operators)
-- [The Increment and Decrement Operator](#the-increment-and-decrement-operator)
+- [The Increment and Decrement Assignment Operator](#the-increment-and-decrement-assignment-operators)
 
 <br>
 

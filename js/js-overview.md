@@ -1,6 +1,6 @@
 [&larr; Back](./README.md)
 
-# headig 1
+<!-- # headig 1
 
 ## Table of Content
 
@@ -77,4 +77,4 @@ In addition, JavaScript has the potential of expanding into other innovative tec
 
 - **2016 - present** Releases of ES2016, ES2017, ES2018, ES2019, etc.
 
-legacy code, i.e. older versions of JavaScript
+legacy code, i.e. older versions of JavaScript -->
