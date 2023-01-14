@@ -1,6 +1,6 @@
 [&larr; Back](./README.md)
 
-# JavaScript Basics
+# Introductory Aspects
 
 ## Table of Content
 
@@ -50,7 +50,7 @@ Multi-line:  /* code */
 
 ## Data Types
 
-Data types are the classifications we give to the different kinds of data that we use in programming.
+Data types are the classifications JavaScript gives to the different kinds of data that we use in programming.
 
 In JS, there are eight fundamental data types:
 
@@ -73,7 +73,7 @@ In JS, there are eight fundamental data types:
 
 6. **Symbol:** introduced in ES2015. Symbols are unique identifiers, useful in more complex coding.
 
-7. **BigInt:** (ES2020) is for integers that are too large to be represented bu the `number` tyoe.
+7. **BigInt:** (ES2020) is for integers that are too large to be represented by the `number` tyoe.
 
 8. **Object:** Collections of related data.
 
@@ -133,7 +133,7 @@ Here, the value saved to the `length` property was retrieved from the instance o
 
 The program prints `5`, because the string above have 5 characters.
 
-The `.` is anothe roperator called the `dot operator`.
+The dot `.` is anothe operator called the `dot operator`.
 
 <br>
 
@@ -161,7 +161,7 @@ Example: `'string'.methodName()`
 
 ## Built-in Objects
 
-Built-in object, like `Math`, are collections of methods and properties that JS provides.
+Built-in object, like `Math`, contains are collections of methods and properties that JS provides.
 
 For complex mathematical operations, JS has the built-in `Math` object.
 
@@ -169,6 +169,6 @@ For complex mathematical operations, JS has the built-in `Math` object.
 Math.random(); // returns a random number between 0 and 1
 ```
 
-Here, we called `.random()` method by appending the object name with the dot operator.
+Here, we called `.random()` method on the `Math` built-in object.
 
 <br>

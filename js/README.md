@@ -7,7 +7,8 @@
 <div></div>
 
 - [JavaScript Overview](./js-overview.md)
-- [JavaScript Introduction](./js-intro.md)
+- [Introductory Aspects](./introductory-aspects.md)
+- [Variables](./js-variables.md)
 
 <div></div>
 
