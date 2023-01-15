@@ -7,6 +7,7 @@
 - [Console](#console)
 - [Comments in JavaScript](#comments-in-javascript)
 - [Data Types](#data-types)
+- [typeof operator](#typeof-operator)
 - [Arithmetic Operators](#arithmetic-operators)
 - [String Concatenation](#string-concatenation)
 - [Properties](#properties)
@@ -73,13 +74,17 @@ In JS, there are eight fundamental data types:
 
 6. **Symbol:** introduced in ES2015. Symbols are unique identifiers, useful in more complex coding.
 
-7. **BigInt:** (ES2020) is for integers that are too large to be represented by the `number` tyoe.
+7. **BigInt:** (ES2020) is for integers that are too large to be represented by the `number` type.
 
 8. **Object:** Collections of related data.
 
 The first 7 data types can be referred as **primitive data types** or just **primitives**.
 
 **Objects** or **Reference types** are more complex.
+
+<br>
+
+## typeof operator
 
 We can check the type of a value using the `typeof` operator:
 
@@ -105,12 +110,9 @@ An operator is a character that performs a task and transforms values or combine
 4 / 1; // 4 | divide /
 3 ** 3; // 27 | exponentiation **
 7 % 3; // 1 | remainder (modulo) %
-console.log(3 + 2 * 2); // 7
 ```
 
-Inside `console.log`, first the expression is evaluated, and then the result is printed.
-
-The remainder operator returns the number that _remains_ after the right-hand number divides into the left-hand number as many times as it evenly can.
+The remainder operator `%` returns the number that _remains_ after the right-hand number divides into the left-hand number as many times as it **evenly** can.
 
 <br>
 
@@ -143,7 +145,7 @@ Here, the value saved to the `length` property was retrieved from the instance o
 
 The program prints `5`, because the string above have 5 characters.
 
-The dot `.` is anothe operator called the `dot operator`.
+The dot `.` is another operator called the `dot operator`.
 
 <br>
 
@@ -171,7 +173,7 @@ Example: `'string'.methodName()`
 
 ## Built-in Objects
 
-Built-in object, like `Math`, contains are collections of methods and properties that JS provides.
+Built-in object, like `Math`, contains a collections of methods and properties that JS provides.
 
 For complex mathematical operations, JS has the built-in `Math` object.
 
