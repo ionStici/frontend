@@ -21,6 +21,10 @@
 
 <div></div>
 
+- [Scope](./scope.md)
+
+<div></div>
+
 - [Destructuring](./destructuring.md)
 - [JavaScript Runtime Environments Overview](.)
 
