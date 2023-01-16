@@ -1,13 +1,3 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>JavaScript Functions</title>
-        <meta property="og:title" content="JavaScript Functions" />
-        <meta property="og:description" content="JavaScript Functions" />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1550063873-ab792950096b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" />
-    </head>
-    <body>
-
 [&larr; Back](./README.md)
 
 # Functions
@@ -292,6 +282,3 @@ const greet = str => 'Hello ' + str;
 7.  When calling the function, the function name will be replaced with the returned value. We can use a variable to store the returned value that was outputted from the function.
 
     The variable storing the function are calling the functiona at the same time.
-
-</body>
-</html>
