@@ -1,3 +1,13 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Functions</title>
+        <meta property="og:title" content="JavaScript Functions" />
+        <meta property="og:description" content="JavaScript Functions" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1550063873-ab792950096b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" />
+    </head>
+    <body>
+
 [&larr; Back](./README.md)
 
 # Functions
@@ -259,26 +269,29 @@ const greet = str => 'Hello ' + str;
 
 ### The structure of a function
 
-1. The function **name**
+1.  The function **name**
 
-2. A function can have **parameters**
+2.  A function can have **parameters**
 
-   Parameters are essentially placeholders that receive input values. These are like local variables of a function that are defined only inside of this function.
+    Parameters are essentially placeholders that receive input values. These are like local variables of a function that are defined only inside of this function.
 
-3. **Function Body**
+3.  **Function Body**
 
-   The block of code enclosed in curly braces that we can reuse and process input data.
+    The block of code enclosed in curly braces that we can reuse and process input data.
 
-4. The **`return`** statement
+4.  The **`return`** statement
 
-   At the end of the function, we can have a **`return`** statement, which will output a value from the function.
+    At the end of the function, we can have a **`return`** statement, which will output a value from the function.
 
-5. Calling, running, or invoking a function, using the function and and parentheses `()`
+5.  Calling, running, or invoking a function, using the function and and parentheses `()`
 
-6. **Arguments**
+6.  **Arguments**
 
-   Inside parentheses when calling the function, we pass in **arguments**, which are the actual values of the parameters.
+    Inside parentheses when calling the function, we pass in **arguments**, which are the actual values of the parameters.
 
-7. When calling the function, the function name will be replaced with the returned value. We can use a variable to store the returned value that was outputted from the function.
+7.  When calling the function, the function name will be replaced with the returned value. We can use a variable to store the returned value that was outputted from the function.
 
-   The variable storing the function are calling the functiona at the same time.
+    The variable storing the function are calling the functiona at the same time.
+
+</body>
+</html>
