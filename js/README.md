@@ -11,16 +11,17 @@
 
 <div></div>
 
-- [Variables](./variables.md)
+- [Values and Variables](./variables.md)
 - [JavaScript Basics](./js-basics.md)
 
 <div></div>
 
 - [Conditionals](./conditionals.md)
+- [Functions](./functions.md)
 
 <div></div>
 
 - [Destructuring](./destructuring.md)
-- [JavaScript Runtime Environments](.)
+- [JavaScript Runtime Environments Overview](.)
 
 <div></div>
