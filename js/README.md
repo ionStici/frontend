@@ -18,10 +18,12 @@
 
 - [Conditionals](./conditionals.md)
 - [Functions](./functions.md)
+- [Scope](./scope.md)
 
 <div></div>
 
-- [Scope](./scope.md)
+- [Arrays](./arrays.md)
+- [Objects](.)
 
 <div></div>
 
