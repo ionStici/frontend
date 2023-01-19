@@ -23,7 +23,7 @@
 <div></div>
 
 - [Arrays](./arrays.md)
-- [Objects](.)
+- [Loops](./loops.md)
 
 <div></div>
 

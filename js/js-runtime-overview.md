@@ -27,10 +27,14 @@ In 2009, the Node runtime environment was created for the purpose of executing J
 
 Node runtime environment gives backend applications access to a variety of features unavailable in a browser, such as access to the server's file system, database, and network. At the same time, JavaScript in Node no longer has the features that were provided by the browser, such as APIs, the window object, etc.
 
+<br>
+
 ## Recap
 
 - Front-end JavaScript applications are executed in a browser’s runtime environment and have access to the window object.
 - Back-end JavaScript applications are executed in the Node runtime environment and have access to the file system, databases, and networks attached to the server.
+
+<br>
 
 ## Node
 
@@ -43,6 +47,8 @@ Node was created with the goal of building web servers and web applications in J
 Install Node bersion labeled "LTS" [nodejs.org](https://nodejs.org/en/)
 
 In the terminal, `which node` will print the file path to Node. And `node -v` will print the version of Node.
+
+<br>
 
 ## Use Node to Run Your Program
 
