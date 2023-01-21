@@ -57,7 +57,7 @@ High density screens needs 2px of the image to display 1px in the design.
 </picture>
 ```
 
-Inside the `<picture>` element, we define possible alternatives for the `<img>` with the `<soruce>` element.
+Inside the `<picture>` element, we define possible alternatives for the `<img>` with the `<source>` element.
 
 In the `type` attribute we define the image format.
 
@@ -127,7 +127,7 @@ _Note:_ you have to include the `<img>` element with its `src` attribute in orde
 
 ## Density Switching
 
-Serve a larger version of the same image for high resolution screens, and serve a smaller version of the same image for a low desnity screen.
+Serve a larger version of the same image for high resolution screens, and serve a smaller version of the same image for a low density screen.
 
 In the `srcset` attribute we specify 2 images and the **density descriptor** `1x 2x` for each.
 
