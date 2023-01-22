@@ -2,6 +2,8 @@
 
 # Responsive Images
 
+https://imagekit.io/responsive-images/#chapter-6---using-picture-element
+
 <br>
 
 ## Table of Content

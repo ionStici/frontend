@@ -27,7 +27,8 @@
 
 <div></div>
 
-- [Objects](.)
+- [Objects](./objects.md)
+- [Advanced Objects](.)
 
 <div></div>
 
