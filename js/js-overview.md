@@ -12,36 +12,38 @@
 
 ## JavaScript Introduction
 
-**JavaScript** is the programming language of the web.
+**JavaScript** is the programming language of the web. With JavaScript we can:
 
 - Build web apps in the browser, load data from remote servers.
 - Add dynamic and interactive effects to any webpage, manipulate content or CSS styles.
-- JavaScript be used in both the frontend and backend of web development.
+- JavaScript can be used for animating, rendering and scaling.
+- JavaScript offers a wide range of frameworks and libraries for building complex applications.
 
-- It is frequently updated with new versions.
-- JS integrates easily with HTML and CSS. - manipulate content or the CSS styles.
-- JS allow websites to have interactivity
-- JS offers a wide range of frameworks and libraries for complex applications with low overhead.
+_JavaScript libraries_ - consists of functions that an application can call to perform a task.
 
-JavaScript used for servers (server-side JavaScript)
-
-JS can be integrated with other languages to communicate with databases.
-
-Node.JS, or Node, is one of the most popular versions of server-side JavaScript. Node has been used to write large platforms for NASA, eBay and many others. Since Javascript can execute programs out of sequential order, Node can be used to create scalable web applications, messaging platforms, and multiplayer games. This is why Google Cloud and Amazon Web Service depend on Node for some of their services.
-
-Beyond the web, JavaScript has a large presence amongst cross-platform applications. We use some popular standalone desktop apps like Slack, GitHub, Skype, and Tidal. These applications are developed with the JavaScript framework called Electron.js. Electron is excellent for making desktop applications that need to work across different devices regardless of operating system.
-
-In addition, JavaScript has the potential of expanding into other innovative technologies such as virtual reality and gaming. JavaScript can be used for animating, rendering and scaling. JavaScript even has contributed to the internet of things, the technology that makes simple objects, like your fridge, smarter. Everyday devices can become interactive and collect data using JavaScript libraries.
-
-JS libraries - consists of functions that an application can call to perform a task.
-
-JS frameworks - defines how a developer design an application.
+_JS frameworks_ - defines how a developer design an application.
 
 All these frameworks and libraries are 100% based on JavaScript, so you have to become really good at JS before learning and using any of these tools.
 
-The JavaScript language and the web browsers are 2 separate things. JS can also run outside of web browsers, for example on a web server, using node.js technology. This allows us to create back-end applications, which run on a web server and interact with databases. When we use JS in the browser, we create front-end applications.
+<br>
 
-We also can use JS to build native mobile and desktop applications, for any phone and computer system. This is due to modern tools like React Native, Ionic frameworks, Electron tool.
+### Server-side JavaScript
+
+JavaScript can be used in both the frontend and backend of web development.
+
+It can be integrated with other languages to communicate and interact with databases.
+
+Using Node.js we can build Server-side JavaScript. With node we can execute JavaScript outside the browser, for example on a web server, this enables us to create backend scalable web apps, messaging platforms, multiplayer games,
+
+<br>
+
+### Beyond the web
+
+With Electron.js framework we can develop desktop applications for different devices regardless of the operating system.
+
+With modern tools like React Native, we can develop native mobile apps with JS, for any operating system.
+
+In addition, JavaScript has the potential of expanding into other innovative technologies such as virtual reality and gaming.
 
 <br>
 
@@ -99,6 +101,8 @@ JavaScript is a programming language with the following characteristics:
 
   The object-oriented nature of JavaScript is a prototype-based object-oriented approach.
 
+<br>
+
 - **First-class functions**
 
   In a language with _first-class_ functions, functions are treated as variables. We can pass them into other functions and return them from functions.
@@ -141,7 +145,7 @@ JavaScript is a programming language with the following characteristics:
 
 - **1996:** Mocha changes to LiveScript and then to JavaScript, in order to attract Java developers. However, JavaScript has almost nothing to do with Java. Opera web browser was launched.
 
-- **1996:** Microsoft copied JavaScript from Netscape and called it JScript. Netscape submitted JavaScript to a standards developing organization called Ecma International.
+  Microsoft copied JavaScript from Netscape and called it JScript. Netscape submitted JavaScript to a standards developing organization called Ecma International.
 
 - **1997:** Ecma International released ECMA-262 which sets standards for the first version of the scripting language called ECMAScript 1, shortened ES1. This is the first official standard for JavsScript (ECMAScript is the standard, JavaScript is the language in practice).
 
@@ -168,3 +172,33 @@ JavaScript is a programming language with the following characteristics:
   let and const, arrow functions, classes, parameters with default values, promises for asynchronous actions, array methods, and more.
 
 - **2016 - present** Releases of ES2016, ES2017, ES2018, ES2019, etc.
+
+<br>
+
+### JavaScript is backward compatible up to ES1
+
+- JavaScript engine that is in out browsers today is able to understand old code written 25 years ago, without having to repy on version numbers.
+- It works this way because of the fundamental principle that is baked into the JavaScript language and its development, which is: **to not break the web**.
+- This means that there is almost never anything removed from the language, but only added in new releases, so websites keep working.
+- This comes with old bugs and weird things in the language, because as we know the very first version of JavaScript was made in just 10 days, and no one back then could even imagine what JavaScript would be used for one day. The initial goal of JS was just to add some simple dynamics to pages, not to write whole web applications in browsers like we do today.
+- Anyway, we can go around many of this weird stuff by simply using the modern JavaScript that matters today and just ignore most of the old weird stuff.
+- JavaScript is not forward compatible, current browsers do not understand code from the future.
+
+<br>
+
+### How we use modern JavaScript today
+
+Considering that browsers that users are using might be old, and there's no forward compatibility, we need to consider 2 distinct scenarios: _development_ and _production_:
+
+- The _development phase_ is when we're building the website on our computer. To ensure that we use the latest JavaScript features, we should use the most up to date version of Google Chrome browser.
+- _Production_ is when our web app is finished, you deploy it on internet, and it's then running in your users' browser. The problem here is that the users could use old browsers which doesn't support the latest JS features. The solution to this problem is to convert the modern JS version back to ES5 using a process called transpiling and also polyfilling - with a tool called Babel, which transpile the code. We do transpiling back to ES5 only when the app is developed and ready to be deployed on internet.
+
+ES5 is safe to be used as a target for transpiling, as it is supported in all browsers today.
+
+Generally, newer releases are well supported in all modern browsers. Information about what features are currently supported and in which browsers: [ES6 Compatibility Table](https://kangax.github.io/compat-table/es6/). Future releases, all together are called ESNext.
+
+Most browsers start implementing new features even before they enter the official ECMAScript specification. As new features are proposed, they have to go through four stages. Starting with stage one where the feature first is admitted, all the way to stage four at which point the feature enter the language officially. But when a feature is at stage three, browsers can be pretty sure it will eventually pass to stage four, and so they're gonna start implementing that feature while still in stage three.
+
+<br>
+<br>
+<br>

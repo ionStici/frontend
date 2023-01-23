@@ -23,6 +23,10 @@
 <div></div>
 
 - [Arrays](./arrays.md)
+- [Array Methods](.)
+
+<div></div>
+
 - [Loops](./loops.md)
 
 <div></div>
