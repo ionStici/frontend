@@ -135,8 +135,6 @@ false || true; // true
 
 How non-boolean data types are evaluated when checked inside a condition.
 
-<br>
-
 ### Falsy Values
 
 All of this five falsy values will be evaluated to `false` when we attempt to convert them to a boolean.
@@ -147,15 +145,11 @@ All of this five falsy values will be evaluated to `false` when we attempt to co
 - `null`
 - `NaN`
 
-<br>
-
 ### Truthy Values
 
 Everything else are **truthy values**. They evaluate to `true` when we attempt to convert them to a boolean.
 
 Any number that is not zero or any string that is no an empty string will be converted to `true` in logical operations.
-
-<br>
 
 ### When values are converted to boolean
 
@@ -199,9 +193,7 @@ let greet = `Hello ${true ? "world" : "friend"}`;
 
 <br>
 
-<!-- ## The switch statement
-
-The `switch` statement
+## The switch statement
 
 ```js
 let day = "monday";
@@ -231,24 +223,13 @@ switch (day) {
 }
 ```
 
-- The switch keyword initiates the statement and is followed by ( ... ), which contains the value that each case will compare. In the example, the value or expression of the switch statement is groceryItem.
-- Inside the block, { ... }, there are multiple cases. The case keyword checks if the expression matches the specified value that comes after it. The value following the first case is 'tomato'. If the value of groceryItem equalled 'tomato', that case‘s console.log() would run.
-- The value of groceryItem is 'papaya', so the third case runs— Papayas are $1.29 is logged to the console.
-- The break keyword tells the computer to exit the block and not execute any more code or check any other cases inside the code block. Note: Without break keywords, the first matching case will run, but so will every subsequent case regardless of whether or not it matches—including the default. This behavior is different from if/else conditional statements that execute only one block of code.
-- At the end of each switch statement, there is a default statement. If none of the cases are true, then the code in the default statement will run.
+- The `switch` keyword initiates the statement.
+- Then inside parentheses we insert the value that will be compared in each case.
+- Inside curly braces block `{}`, we define multiple cases with options.
+- The `case` keyword will compare the case option with the initial value.
+- If the case returns true, then the code after the colon will run until the first `break` keyword.
+- The `break` keyword will exit the current block and not execute any more code.
+- The values are compared in a strict equality way.
+- The `default` statement will run if none of the cases are true.
 
 <br>
-
-The switch statement
-
-Based on a condition variable, and depending on the value of that variable, if the value coincides with the case, then that case block of code will run. Comparing one value to multiple different options.
-
-The variable value will be compared in a strict equality way, like:
-day === "monday";
-If true, then the code after colon will be executed.
-
-1. Inside curly braces block we define cases with options for the day variable.
-2. Inside the case we introduce the code to run if true, we can execute multiple lines of code.
-3. Then we need the "break" statement, which interrupt the case.Without "break", the code simply continues executing and it stops only to the next "break". Then the next case.
-4. We can define multiple cases for the same code block.
-5. We can set a default, in case if all the other cases fail. -->

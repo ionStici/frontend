@@ -24,7 +24,7 @@ A **function** is a reusable block of code that groups together a sequence of st
 We bind a function to an identifier name.
 
 ```js
-greet('World'); // calling the function before it is defined
+greet("World"); // calling the function before it is defined
 
 function greet() {
   console.log(`Hello`);
@@ -62,7 +62,7 @@ We use parameters as placeholders for information that will be passed as argumen
 function greet(str, num) {
   console.log(`Hello ` + str);
 }
-greet('World');
+greet("World");
 ```
 
 Parameters:
@@ -89,8 +89,8 @@ Arguments:
 **Default Parameters** (ES6) allow parameters to have a predetermined value in case there is no argument passed into the function or if the argument is undefined when called.
 
 ```js
-function greet(str = 'World') {
-  console.log('Hello ' + str);
+function greet(str = "World") {
+  console.log("Hello " + str);
 }
 greet(undefined);
 ```
@@ -108,7 +108,7 @@ To assign a default parameter:
 
 ```js
 function greet(str) {
-  str = str || 'World';
+  str = str || "World";
 }
 ```
 
@@ -126,7 +126,7 @@ By default the resulting value is `undefined`.
 
 ```js
 function greet() {
-  console.log('Hello');
+  console.log("Hello");
 }
 console.log(greet()); // undefined
 ```
@@ -139,8 +139,8 @@ For a function to produce a resulting value, we can use the `return` statement:
 
 ```js
 function hello() {
-  return 'Hello';
-  return 'Hey';
+  return "Hello";
+  return "Hey";
 }
 console.log(hello()); // Hello
 ```
@@ -173,9 +173,9 @@ Another type of function.
 
 ```js
 const greet = function (str) {
-  return 'Hello ' + str;
+  return "Hello " + str;
 };
-greet('World');
+greet("World");
 ```
 
 - In a function expression, the function name is omitted.
@@ -202,6 +202,7 @@ We can refactor the arrow function syntax in different ways depending on their c
 ```js
 // Arrow function complexity Depending on parameters
 const greet = (str, num) => {}; // two or more parameters
+// prettier-ignore
 const greet = str => {}; // One parameter
 const greet = () => {}; // zero parameters
 ```
@@ -209,12 +210,12 @@ const greet = () => {}; // zero parameters
 Single-line arrow functions (_implicit return_):
 
 ```js
-const greet = str => {
+const greet = (str) => {
   return `Hello ` + str;
 };
 
 // refactoring to a single-line arrow function
-const greet = str => 'Hello ' + str;
+const greet = (str) => "Hello " + str;
 ```
 
 A function body composed of a single-line block does not need curly braces or the return statement.
@@ -235,7 +236,7 @@ Function that can be called before it's declared.
 
 ```js
 function greet(str) {
-  return 'Hello ' + str;
+  return "Hello " + str;
 }
 ```
 
@@ -245,7 +246,7 @@ A function value stored in a variable.
 
 ```js
 const greet = function (str) {
-  return 'Hello ' + str;
+  return "Hello " + str;
 };
 ```
 
@@ -254,7 +255,7 @@ const greet = function (str) {
 Great for quick one-line functions.
 
 ```js
-const greet = str => 'Hello ' + str;
+const greet = (str) => "Hello " + str;
 ```
 
 ### The structure of a function

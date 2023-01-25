@@ -35,9 +35,15 @@ let firstName = "John"; // declaring a variable
 
 - Cannot start with a number.
 
+<div></div>
+
 - Can only contain: letters, numbers, dollar sign, underscore.
 
+<div></div>
+
 - Variable names are case sensitive.
+
+<div></div>
 
 - Don't use reserved JS keywords.
 

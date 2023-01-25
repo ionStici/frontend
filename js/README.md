@@ -1,29 +1,10 @@
-# Frontend Web Development
+# JavaScript
 
-Summarizing frontend knowledge while studying for future reference.
+The programming language of the Web.
 
 <br>
 
 ## Table of Content
-
-- [JavaScript Overview](./js-overview)
-- [Introductory Aspects](./introductory-aspects)
-
-<div></div>
-
-- [Values and Variables](./variables)
-- [JavaScript Basics](./js-basics)
-
-<div></div>
-
-- [The `<script>` Element](./script-tag)
-- [How the DOM works](./dom)
-
-<div></div>
-
-<br>
-
-## Table of Content (.md)
 
 - [JavaScript Overview](./js-overview.md)
 - [Introductory Aspects](./introductory-aspects.md)
@@ -32,6 +13,11 @@ Summarizing frontend knowledge while studying for future reference.
 
 - [Values and Variables](./variables.md)
 - [JavaScript Basics](./js-basics.md)
+
+<div></div>
+
+- [Conditionals](./conditionals.md)
+- [Functions](./functions.md)
 
 <div></div>
 
