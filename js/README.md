@@ -31,6 +31,7 @@ The programming language of the Web.
 
 - [The `<script>` Element](./script-tag.md)
 - [How the DOM works](./dom.md)
+- [JavaScript and the DOM](.)
 
 <div></div>
 
