@@ -33,3 +33,33 @@ DOM is automatically created by the browser as soon as the html page loads, and 
 DOM is not part of the JavaScript language. DOM and DOM methods are part of web APIs.
 
 <br>
+
+## How the DOM works
+
+DOM is the connection between JS code and HTML documents.
+
+With the DOM API we can: Create, modily, delete html elements & Set styles, classes, attributes & Listen and respond to events.
+
+DOM is a complex API that contains lots of methods and properties for interacting with the DOM tree.
+
+The DOM tree is a tree-like structure made out of nodes and is generated from a HTML document.
+
+### Nodes
+
+Each **Node** is of type node and is represented in JavaScript by an object.
+
+**Node Types:** element type, text type, comment type, document type.
+
+For example, if an element contains text, the text gets its own node of type text.
+
+The same is true for comments, because the rule is that everything inside HTML has to be in the DOM as well.
+
+In JavaScript, each node, or each object, gets access to methods and properties based on its type (element, text, etc.). For example, text nodes will get access to `textContent` property.
+
+The **element type** has internally an HTMLElement child type. This HTMLElement type has one child type for each HTML element that exists in HTML. So we have a HTMLElement type for buttons, images, links, and so on. Each of these HTML elements can have different unique properties. For example, an `img` element has a `src` attribute in HTML which no other element has, or the anchor element with the `href` attribute.
+
+**Inheritance** means that node types will inherit the methods and properties of their parent node types.
+
+The **Document Node Type** contains methods such as `querySelector`, `createElement`, etc.
+
+**EventTarget** node type contains the `addEventListener` method, and this node type also is the parent for the **node type** and for the **window node type**. Therefore, thanks to inheritance, we can call `addEventListener` on every single type of node in the DOM API as if it was their own mehod, because all elements as well as document and window, and even text and comments, will inherit this method. EventTarget object is created automatically behind the scenes to make all the functionality work as expected.

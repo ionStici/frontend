@@ -1,3 +1,5 @@
+[&larr; Back](./README.md)
+
 # JavaScript Engine
 
 **JavaScript Engine** is a computer program that executes JavaScript code.
@@ -13,9 +15,9 @@ JavaScript engine components:
 
 ## Table of Content
 
-- [How JavaScript Code is Compiled to Machine Code?]()
-- [The Modern Just-In-Time Compilation of JavaScript]()
-- [Browsers and Node.js as the JavaScript Runtime]()
+- [How JavaScript Code is Compiled to Machine Code?](#how-javascript-code-is-compiled-to-machine-code)
+- [The Modern Just-In-Time Compilation of JavaScript](#the-modern-just-in-time-compilation-of-javascript)
+- [Browsers and Node.js as the JavaScript Runtime](#browsers-and-nodejs-as-the-javascript-runtime)
 
 <br>
 
@@ -60,7 +62,7 @@ It also contains all the JS related stuff. The heart of the JS runtime is the JS
 
 In the **browser runtime**, we get access to web APIs (DOM, Timers, etc.). Web APIs are provided to the engine, but are not part of the JS language itself, it simply gets access to these APIs through the global window object.
 
-Next, a JS runtime also includes a **callback queue**, which is a data structure that contains all the callback functions that are ready to be executed. For example, a **callback function** ready to run, is placed first into the callback queue, and only when the call stack is empty the callback function is passed to the stack to be executed. This is doen through the **event loop**, which takes the callback functions from the callback queue and puts them in the call stack so that they can be executed.
+Next, a JS runtime also includes a **callback queue**, which is a data structure that contains all the callback functions that are ready to be executed. For example, a **callback function** ready to run, is placed first into the callback queue, and only when the call stack is empty the callback function is passed to the stack to be executed. This is done through the **event loop**, which takes the callback functions from the callback queue and puts them in the call stack so that they can be executed.
 
 ### Node.js Runtime Environment
 
