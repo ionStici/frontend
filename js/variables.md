@@ -13,7 +13,7 @@
 
 ## Values and Variables
 
-In programming, a value is the fundamental unit of data, like `23`, `true`, or `Hello`.
+In programming, a value is the fundamental unit of data, like `23`, `true`, or `'Hello'`.
 
 Variables are used to label and store data (values) in the computer's memory.
 
@@ -25,15 +25,20 @@ let firstName = "John"; // declaring a variable
 
 1. To create or declare a new variable, we use one of the keywords: `let` `const` `var`
 2. `firstName` is the variable's name that we gave.
-3. `=` is the _assignment operator_. In this case, it assign a value to a variable.
+3. `=` is the _assignment operator_. In this case, it assigns a value to a variable.
 4. `"John"` is the value assigned to the variable `firstName`.
 
 <details>
 <summary>Rules for naming variables</summary>
 
+<br>
+
 - Cannot start with a number.
+
 - Can only contain: letters, numbers, dollar sign, underscore.
+
 - Variable names are case sensitive.
+
 - Don't use reserved JS keywords.
 
 </details>

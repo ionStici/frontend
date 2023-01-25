@@ -249,6 +249,6 @@ If true, then the code after colon will be executed.
 
 1. Inside curly braces block we define cases with options for the day variable.
 2. Inside the case we introduce the code to run if true, we can execute multiple lines of code.
-3. Then we need the "break" statement, which interrupt the case. Without "break", the code simply continues executing and it stops only to the next "break". Then the next case.
+3. Then we need the "break" statement, which interrupt the case.Without "break", the code simply continues executing and it stops only to the next "break". Then the next case.
 4. We can define multiple cases for the same code block.
 5. We can set a default, in case if all the other cases fail. -->

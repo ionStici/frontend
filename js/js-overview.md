@@ -21,7 +21,7 @@
 
 _JavaScript libraries_ - consists of functions that an application can call to perform a task.
 
-_JS frameworks_ - defines how a developer design an application.
+_JavaScript frameworks_ - defines how a developer design an application.
 
 All these frameworks and libraries are 100% based on JavaScript, so you have to become really good at JS before learning and using any of these tools.
 
@@ -149,7 +149,7 @@ JavaScript is a programming language with the following characteristics:
 
 - **1997:** Ecma International released ECMA-262 which sets standards for the first version of the scripting language called ECMAScript 1, shortened ES1. This is the first official standard for JavsScript (ECMAScript is the standard, JavaScript is the language in practice).
 
-  The new ECMAScript standards provided rules for the architecture of JavaScript new features, creating consistency between new and old JS versions.
+  The new ECMAScript standard provided rules for the architecture of JavaScript new features, creating consistency between new and old JS versions.
 
 - **1998** ES2 released. Mozilla Firefox was launched.
 
@@ -177,7 +177,7 @@ JavaScript is a programming language with the following characteristics:
 
 ### JavaScript is backward compatible up to ES1
 
-- JavaScript engine that is in out browsers today is able to understand old code written 25 years ago, without having to repy on version numbers.
+- JavaScript engine that is in our browsers today is able to understand old code written 25 years ago, without having to repy on version numbers.
 - It works this way because of the fundamental principle that is baked into the JavaScript language and its development, which is: **to not break the web**.
 - This means that there is almost never anything removed from the language, but only added in new releases, so websites keep working.
 - This comes with old bugs and weird things in the language, because as we know the very first version of JavaScript was made in just 10 days, and no one back then could even imagine what JavaScript would be used for one day. The initial goal of JS was just to add some simple dynamics to pages, not to write whole web applications in browsers like we do today.

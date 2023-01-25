@@ -1,3 +1,5 @@
+[&larr; Back](./README.md)
+
 # Connecting HTML with JavaScript
 
 ## Table of Content
@@ -48,7 +50,7 @@ _HTML parsers_ render the html elements accordingly. Elements are by default par
 </head>
 ```
 
-In the html parsing phase, when the script tag is reached, the html parsing will stop and wait for the script to get fetched and executed, and only after that, the rest of the html can be parsed. Note that the script will be executed before the DOM is ready.
+In the html parsing phase, when the script tag is reached, the html parsing will stop and wait for the script to get fetched and executed, and only after that the rest of the html can be parsed. Note: that the script will be executed before the DOM is ready.
 
 **Regular `<body>`**
 

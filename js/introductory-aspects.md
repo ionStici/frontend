@@ -66,7 +66,7 @@ In JS, there are eight fundamental data types:
 
    For an empty value, `undefined` is also the value and the data type.
 
-5. **Null:** is represented by the keyword `null`,
+5. **Null** is represented by the keyword `null`.
 
    Represents the intentional absence of a value (empty value).
 
@@ -143,7 +143,7 @@ We can retrieve property information by appending the string with a period and t
 
 Here, the value saved to the `length` property was retrieved from the instance of its string.
 
-The program prints `5`, because the string above have 5 characters.
+The program prints `5`, because the string above has 5 characters.
 
 The dot `.` is another operator called the `dot operator`.
 
@@ -173,7 +173,7 @@ Example: `'string'.methodName()`
 
 ## Built-in Objects
 
-Built-in object, like `Math`, contains a collections of methods and properties that JS provides.
+Built-in object, like `Math`, contains a collection of methods and properties that JS provides.
 
 For complex mathematical operations, JS has the built-in `Math` object.
 

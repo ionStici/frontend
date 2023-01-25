@@ -1,10 +1,29 @@
-# JavaScript
+# Frontend Web Development
+
+Summarizing frontend knowledge while studying for future reference.
+
+<br>
 
 ## Table of Content
 
-[&larr; Back to the Main Page](./../README.md)
+- [JavaScript Overview](./js-overview)
+- [Introductory Aspects](./introductory-aspects)
 
 <div></div>
+
+- [Values and Variables](./variables)
+- [JavaScript Basics](./js-basics)
+
+<div></div>
+
+- [The `<script>` Element](./script-tag)
+- [How the DOM works](./dom)
+
+<div></div>
+
+<br>
+
+## Table of Content (.md)
 
 - [JavaScript Overview](./js-overview.md)
 - [Introductory Aspects](./introductory-aspects.md)
@@ -16,27 +35,9 @@
 
 <div></div>
 
-- [Conditionals](./conditionals.md)
-- [Functions](./functions.md)
-- [Scope](./scope.md)
+- [The `<script>` Element](./script-tag.md)
+- [How the DOM works](./dom.md)
 
 <div></div>
 
-- [Arrays](./arrays.md)
-- [Array Methods](.)
-
-<div></div>
-
-- [Loops](./loops.md)
-
-<div></div>
-
-- [Objects](./objects.md)
-- [Advanced Objects](.)
-
-<div></div>
-
-- [Destructuring](./destructuring.md)
-- [JavaScript Runtime Environments Overview](.)
-
-<div></div>
+<br>

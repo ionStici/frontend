@@ -1,5 +1,17 @@
 # Array Methods
 
+<!--  -->
+
+# Iterators
+
+The built-in JavaScript array methods that help us iterate are called iteration methods, referred to as iterators.
+
+Iterators are methods called on arrays to manipulate elements and return values.
+
+[Array iterator methods MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods)
+
+<!--  -->
+
 Because Arrays are technically objects, they get access to special built-in methods.
 
 <br>
