@@ -2,7 +2,7 @@
 
 # Scope
 
-**Scope** defines where variables can be accessed.
+**Scope** defines from where variables can be accessed.
 
 <br>
 
