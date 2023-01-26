@@ -9,6 +9,10 @@
 - [on-event properties](#on-event-properties)
 - [Removing Event Handlers](#removing-event-handlers)
 - [The Event Object](#the-event-object)
+- [Event Types](#event-types)
+  - [Mouse Events](#mouse-events)
+  - [Keyboard Events](#keyboard-events)
+- [Handling a Keypress Event](#handling-a-keypress-event)
 
 <br>
 
@@ -139,5 +143,70 @@ We can use pre-determined properties associated with the event to see informatio
 - `event.target` - reference te element that the event is registered to.
 - `event.type` - to access the name of the event.
 - `event.timeStamp` - the number of milliseconds that passed since the document loaded and the event was triggered.
+
+<br>
+
+## Event Types
+
+[MDN Events Reference](https://developer.mozilla.org/en-US/docs/Web/Events)
+
+Usually, the most important events are the ones related to mouse and keyboard.
+
+Other events: Clipboard, full screen, page resizing , page scroll, etc.
+
+<br>
+
+### Mouse Events
+
+- `click` press and release the mouse button
+- `mousedown` press the mouse button down
+- `mouseup` release the mouse button
+- `mouseover` the mouse enters an element
+- `mouseout` the mouse leaves an element
+- `wheel` the mouse wheel is rotated
+
+<div></div>
+
+- `mouseenter` the mouse enters an element
+- `mouseleave` the mouse leaves an element
+
+`mouseenter` and `mouseleave` do not react to event bubbling, while `mouseover` and `mouseout` do.
+
+<br>
+
+### Keyboard Events
+
+Keyboard Events are triggered by the user interaction with keyboard keys.
+
+- `keypress` event is fired when the user presses a key down and releases it.
+- `keydown` event is fired when the user presses a key down.
+- `keyup` event is fired when the user releases a key.
+
+Keyboard events have unique properties assigned to their event object.
+
+- `event.key` - they key property stores the values of the key pressed by the user.
+- By using the `key` property, we can program the event handler to react to a specific key.
+
+<br>
+
+## Handling a Keypress Event
+
+Keyboard events are called **global events**, because they do not happen on one specific element.
+
+We listen for events everywhere, no matter where they happen on the page, they will always trigger the event handler.
+
+For global events like keyboards event we listen on the whole `document` using `addEventListener()` method.
+
+```js
+document.addEventListener("keypress", function (event) {
+  if (e.key === "Escape") console.log("esc was pressed");
+});
+```
+
+The `keypress` event will fire when we press any key on the keyboard.
+
+The information about which key was pressed will be stored in the `key` property of the event object.
+
+Then inside the event handler we can create some logic using the event object and check for the keys we need.
 
 <br>

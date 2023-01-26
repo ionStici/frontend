@@ -2,8 +2,6 @@
 
 The programming language of the Web.
 
-_p.s._ Use <kbd>Command + F</kbd> or <kbd>Control + F</kbd> for quick search.
-
 <br>
 
 ## Table of Content
@@ -37,11 +35,12 @@ _p.s._ Use <kbd>Command + F</kbd> or <kbd>Control + F</kbd> for quick search.
 <div></div>
 
 - [DOM: Select, Create, Delete](./dom-scd.md)
-- [DOM: Styles, Attributes, Classes](.)
+<!-- - [DOM: Styles, Attributes, Classes](.) -->
 
 <div></div>
 
 - [DOM Events with JavsScript](./dom-events.md)
+<!-- - [MDN Guide to Client-side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) -->
 
 <div></div>
 
