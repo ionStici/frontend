@@ -2,6 +2,8 @@
 
 The programming language of the Web.
 
+_p.s._ Use <kbd>Command + F</kbd> or <kbd>Control + F</kbd> for quick search.
+
 <br>
 
 ## Table of Content

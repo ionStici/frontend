@@ -6,6 +6,9 @@
 
 - [addEventListener](#addeventlistener)
   - [Named function as Event Handler](#named-function-as-event-handler)
+- [on-event properties](#on-event-properties)
+- [Removing Event Handlers](#removing-event-handlers)
+- [The Event Object](#the-event-object)
 
 <br>
 
@@ -79,5 +82,62 @@ Anyway, both `.onclick` property and `.addEventListener()` method will register 
 With the `.addEventListener()` method we can attach multiple event handler functions. But the `.on-event` property allows for only one event handler function to be attached to the event target, so the last event will override the others.
 
 Additionally, we can remove an event handler attached with `.addEventListener()` method, which is not possible with `.on-event` properties.
+
+### on-event HTML attributes
+
+We can use `on-event` directly in HTML as attributes.
+
+```html
+<button onclick="alert('wrong')">Click</button>
+```
+
+This is kind of old school JS from the early days and should not be used.
+
+<br>
+
+## Removing Event Handlers
+
+The `.removeEventListener()` method is used to reverse (remove) the `.addEventListener()` method.
+
+We can't remove an event handler declared as an anonymous function.
+
+So, we need to use a named function as the event handler.
+
+`.removeEventListener()` takes 2 arguments:
+
+1. Arg 1: The event type as a string
+2. Arg 2: The event handler function
+
+```js
+btn.removeEventListener("click", sayHello);
+```
+
+`.removeEventListener()` needs the exact event type name and the name of the event handler that we want to remove, because DOM elements can have multiple event handler functions associated with particular events.
+
+<br>
+
+## The Event Object
+
+[The Event Object](https://developer.mozilla.org/en-US/docs/Web/API/Event)
+
+```js
+const sayHello = function (event) {
+  console.log(event, event.target, event.type, event.timeStamp);
+};
+
+btn.addEventListener("click", sayHello); // Event Object
+```
+
+When an event happened, the event object is generated and is passed as an argument to the event handler function.
+
+We get access to the event object through the parameter we specify.
+
+This object will contains related data and functionality about the event as properties and methods.
+
+We can use pre-determined properties associated with the event to see information about the event:
+
+- `event.target` - reference te element that the event is registered to.
+- `event.type` - to access the name of the event.
+- `event.timeStamp` - the number of milliseconds that passed since the document loaded and the event was triggered.
 
 <br>

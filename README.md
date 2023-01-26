@@ -38,3 +38,4 @@ _The list is not complete_
 ## Resources
 
 - [MDN Web Docs](https://developer.mozilla.org/en-US/)
+- [Frontend Roadmap](https://roadmap.sh/frontend)
