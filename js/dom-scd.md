@@ -1,4 +1,6 @@
-# JavaScript and the DOM
+[&larr; Back](./README.md)
+
+# DOM: Select, Create, Delete
 
 ## Table of Content
 

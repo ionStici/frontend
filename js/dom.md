@@ -16,7 +16,7 @@ A **Node** - is an intersecting point in a tree.
 
 So, for each HTML element, there is one node element in the DOM tree, and we can access and interact with each of the nodes using JavaScript.
 
-A DOM tree has more than just element nodes. It also has nodes for all the text itself, attributes, comments and other stuff, because the rule is that whatever is in the HTML document, also has to be in the DOM as a node. So, DOM is a complete representation of of the HTML document, so that we can manipulate it in complex ways.
+A DOM tree has more than just element nodes. It also has nodes for all the text itself, attributes, comments and other stuff, because the rule is that whatever is in the HTML document, also has to be in the DOM as a node. DOM is a complete representation of the HTML document, so that we can manipulate it in complex ways.
 
 DOM is automatically created by the browser as soon as the html page loads, and it is stored in a tree structure, where in this tree, each html element is one object.
 
@@ -38,7 +38,11 @@ DOM is not part of the JavaScript language. DOM and DOM methods are part of web 
 
 DOM is the connection between JS code and HTML documents.
 
-With the DOM API we can: Create, modily, delete html elements & Set styles, classes, attributes & Listen and respond to events.
+With the DOM API we can:
+
+- Create, modily, delete html elements.
+- Set styles, classes, attributes.
+- Listen and respond to events.
 
 DOM is a complex API that contains lots of methods and properties for interacting with the DOM tree.
 
