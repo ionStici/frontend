@@ -35,12 +35,12 @@ The programming language of the Web.
 <div></div>
 
 - [DOM: Select, Create, Delete](./dom-scd.md)
-<!-- - [DOM: Styles, Attributes, Classes](.) -->
+- [DOM: Styles, Attributes, Classes](.)
 
 <div></div>
 
 - [DOM Events with JavsScript](./dom-events.md)
-<!-- - [MDN Guide to Client-side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) -->
+- [Event Propagation](.)
 
 <div></div>
 
