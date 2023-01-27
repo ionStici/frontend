@@ -5,6 +5,9 @@
 ## Table of Content
 
 - [The document object](#the-document-object)
+
+<div></div>
+
 - [Selecting DOM elements](#selecting-dom-elements)
   - [Selecting the entire HTML document](#selecting-the-entire-html-document)
   - [Selecting the `head` and `body` elements](#selecting-the-head-and-body-elements)
@@ -14,7 +17,17 @@
   - [getElementsByTagName and getElementsByClassName](#getelementsbytagname-and-getelementsbyclassname)
   - [Selecting and updating the text content of an element](#selecting-and-updating-the-text-content-of-an-element)
   - [Selecting and updating the value of an input element](#selecting-and-updating-the-value-of-an-input-element)
+
+<div></div>
+
 - [Creating and Inserting elements](#creating-and-inserting-elements)
+  - [createElement and appendChild methods](#createelement-and-appendchild-methods)
+  - [insertAdjacentHTML method](#insertadjacenthtml-method)
+  - [innerHTML property](#innerhtml-property)
+  - [prepend and append methods](#prepend-and-append-methods)
+  - [before and after methods](#before-and-after-methods)
+
+<div></div>
 
 <br>
 
@@ -109,3 +122,99 @@ For `input` elements, we use the `.value` property.
 <br>
 
 ## Creating and Inserting elements
+
+### createElement and appendChild methods
+
+```js
+const newImg = document.createElement("img");
+
+newImg.setAttribute("src", "./img.jpg");
+newImg.classList.add("big-img");
+newImg.id = "unique-img";
+// setAttribute can also set IDs
+```
+
+`createElement()` method returns a new DOM element based on the specified tag name passed into it as an argument. Here, we then store that new element into a variable. Then we attach the necessary attributes to the newly created `<img>`.
+
+This new element is not yet anywhere in the DOM, we have to manually insert it into the page.
+
+So, we append our newly created element to the DOM with `appendChild()` method:
+
+```js
+document.body.appendChild(newImg);
+```
+
+The `appendChild()` method will append the element passed in as an argument as the LAST child node of the element on which the method is called.
+
+### insertAdjacentHTML method
+
+```js
+containerEl.insertAdjacentHTML("afterBegin", `<p>Hello World</p>`);
+```
+
+- Arg 1: A string representing the position relative to the element.
+- Arg 2: A string representing the HTML code that will be inserted into the tree.
+
+Possible positions for the inserted content
+
+```html
+<!-- beforebegin -->
+<p>
+  <!-- afterbegin -->
+
+  <!-- beforeend -->
+</p>
+<!-- afterend -->
+```
+
+### innerHTML property
+
+```js
+div.innerHTML = "";
+```
+
+The `innerHTML` property overrides the HTML code of the element to which it is assigned.
+
+If we set equal to empty string, it will make the element empty.
+
+It can add any valid HTML elements (written as a string).
+
+### prepend and append methods
+
+```js
+element.prepend(paragraph);
+element.append(paragraph);
+```
+
+- `prepend` inserts its argument as the first child of the element.
+- `append` inserts its argument as the last child of the element.
+
+If we insert an element twice with prepend and append, in practice the element will be inserted only once, because the `paragraph` element is now a live element living in the DOM. Therefore, it cannot be in multiple places at the same time.
+
+First we preprended the element, then we appended it, so append moved the element from being the first child to being the last child. It moved the element, and didn't really insert it, because it was already inserted by prepend.
+
+What this means is that we can use the prepend and append methods not only to insert elements, but also to move them, that is because a DOM element is unique, it can always only exist at one place at a time.
+
+If we want to insert multiple copies of the same element, we can duplicate the element with `cloneNode()`:
+
+```js
+element.append(paragraph.cloneNode(true));
+```
+
+First the paragraph is cloned, then the clone is appended.
+
+As argument to `cloneNode()` we type `true`, which means that all the child elements will also be copied.
+
+### before and after methods
+
+```js
+element.before(paragraph);
+element.after(paragraph);
+```
+
+- `before` will insert the `paragraph` before the element.
+- `after` will insert the `paragraph` after the element.
+
+<br>
+
+<!-- ## Deleting an element -->
