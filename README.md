@@ -39,3 +39,15 @@ _The list is not complete_
 
 - [MDN Web Docs](https://developer.mozilla.org/en-US/)
 - [Frontend Roadmap](https://roadmap.sh/frontend)
+
+<div></div>
+
+- [caniuse.com](https://caniuse.com/)
+
+<br>
+
+## Online Learning Platforms
+
+- [Udemy](https://www.udemy.com/)
+- [freeCodeCamp](https://www.freecodecamp.org/)
+- [Codecademy](https://www.codecademy.com/)

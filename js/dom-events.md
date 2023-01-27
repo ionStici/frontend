@@ -13,6 +13,7 @@
   - [Mouse Events](#mouse-events)
   - [Keyboard Events](#keyboard-events)
 - [Handling a Keypress Event](#handling-a-keypress-event)
+- [Passing Arguments to Events Handlers](#passing-arguments-to-events-handlers)
 
 <br>
 
@@ -208,5 +209,33 @@ The `keypress` event will fire when we press any key on the keyboard.
 The information about which key was pressed will be stored in the `key` property of the event object.
 
 Then inside the event handler we can create some logic using the event object and check for the keys we need.
+
+<br>
+
+## Passing Arguments to Events Handlers
+
+We can't pass argument to event handlers like usual because by using parentheses that will result in a function call. The `addEventListener()` method expects as second argument a callback function, and not a value resulted from a function call.
+
+### Old solution
+
+```js
+btn.addEventListener("click", function () {
+  callback(5, 10);
+});
+```
+
+### Using the bind() method
+
+```js
+btn.addEventListener("click", callback.bind(5));
+```
+
+_Reminder:_ `bind()` creates a copy of the function that it's called on, and it will set the `this` keyword in this function call to whatever value that we pass into bind.
+
+This will work because `bind()` returns a new function without calling it.
+
+But.. this is not really an argument, because inside the function body we have to operate with the `this` keyword instead of a real argument.
+
+Besides this, we can pass only one value to `bind`, the one which will become the `this` keyword. If we want to pass additional values into the handler function, we can pass into bind an array with values.
 
 <br>
