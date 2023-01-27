@@ -29,6 +29,11 @@
 
 <div></div>
 
+- [Deleting an element](#deleting-an-element)
+  - [remove() method](#remove-method)
+  - [removeChild() method](#removechild-method)
+  - [hidden property](#hidden-property)
+
 <br>
 
 ## The document object
@@ -217,4 +222,28 @@ element.after(paragraph);
 
 <br>
 
-<!-- ## Deleting an element -->
+## Deleting an element
+
+### remove() method
+
+```js
+newImg.remove();
+```
+
+The `remove()` method (new) removes the element from the DOM.
+
+### removeChild() method
+
+Before the `remove()` method was introduced, we had to select the parent element first and then remove the child from there:
+
+```js
+paragraph.parentElement.removeChild(message);
+```
+
+### hidden property
+
+```js
+paragraph.hidden = true;
+```
+
+The `hidden` property set to `true` will hide the element from the DOM and not delete it completely.
