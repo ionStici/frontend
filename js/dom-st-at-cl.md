@@ -9,6 +9,8 @@
 
 <div></div>
 
+- [DOM elements and Attributes](#dom-elements-and-attributes)
+
 <br>
 
 ## The style property in JavaScript
@@ -92,3 +94,7 @@ The `cssText` property will set multiple inline CSS declarations.
 Note: `cssText` will override the previous inline styles (only the inline styles).
 
 <br>
+
+## DOM elements and Attributes
+
+We can access and edit HTML attributes of DOM elements from JavaScript.

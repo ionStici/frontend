@@ -14,6 +14,7 @@
   - [Keyboard Events](#keyboard-events)
 - [Handling a Keypress Event](#handling-a-keypress-event)
 - [Passing Arguments to Events Handlers](#passing-arguments-to-events-handlers)
+- [Lifecycle DOM events](#lifecycle-dom-events)
 
 <br>
 
@@ -237,5 +238,61 @@ This will work because `bind()` returns a new function without calling it.
 But.. this is not really an argument, because inside the function body we have to operate with the `this` keyword instead of a real argument.
 
 Besides this, we can pass only one value to `bind`, the one which will become the `this` keyword. If we want to pass additional values into the handler function, we can pass into bind an array with elements.
+
+<br>
+
+## Lifecycle DOM events
+
+Events that occur in the DOM during lifecycle of a webpage - from the moment the page is accessed until the user closes it. The lifecycle of an HTML page has three important events:
+
+### DOMContentLoaded event
+
+```js
+document.addEventListener("DOMContentLoaded", callback);
+```
+
+`DOMContentLoaded` event is fired by the `document` when:
+
+- The browser completely parsed and fully loaded the HTML and the DOM tree is built.
+- Also, all scripts must be downloaded and executed first.
+- This event does not wait for images and other external resources like stylesheets to load, so just HTML and JS need to be loaded.
+
+In devTools at Network tab, we can check the time it takes for the event to fire.
+
+With this event, we can execute code that should only be executed after the DOM is available.
+
+### load event
+
+```js
+window.addEventListener("load", callback);
+```
+
+The `load` event is fired by the `window` object, not only when the HTML is parsed, but also when all the external resources (like images, CSS, etc.) are loaded, so when the complete page has finished loading.
+
+### beforeunload / unload events
+
+```js
+window.addEventListener("beforeunload", function (e) {
+  e.preventDefault();
+  console.log(e);
+  e.returnValue = "";
+});
+
+window.addEventListener("unload", callback);
+```
+
+The `beforeunload` and `unload` events are fired when the user is leaving the page (clicking the close button).
+
+- `unload` event - the user almost left, but we still can initiate some operations, such as sending out statistics.
+
+- `beforeunload` to check if the user has saved their changes and ask them if they really want to leave (shows a browser popup).
+
+  Use cases: when the user is leaving in the middle of filling out a form, or writing a blog post, in situations where data could be lost by accident. Don't abuse this feature.
+
+  Note: in some browsers for this work, we need to call `event.preventDefault()`.
+
+  In order for the popup to be displayed, we need to set the `event.returnValue` value to an empty string (historical reasons).
+
+  The popup is shown with a generic message, we can't customize the message. We used to be able to customize, but the feature was removed because developers started abusing it.
 
 <br>
