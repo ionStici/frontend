@@ -236,6 +236,6 @@ This will work because `bind()` returns a new function without calling it.
 
 But.. this is not really an argument, because inside the function body we have to operate with the `this` keyword instead of a real argument.
 
-Besides this, we can pass only one value to `bind`, the one which will become the `this` keyword. If we want to pass additional values into the handler function, we can pass into bind an array with values.
+Besides this, we can pass only one value to `bind`, the one which will become the `this` keyword. If we want to pass additional values into the handler function, we can pass into bind an array with elements.
 
 <br>
