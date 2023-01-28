@@ -243,7 +243,13 @@ Besides this, we can pass only one value to `bind`, the one which will become th
 
 ## Lifecycle DOM events
 
-Events that occur in the DOM during lifecycle of a webpage - from the moment the page is accessed until the user closes it. The lifecycle of an HTML page has three important events:
+Events that occur in the DOM during lifecycle of a webpage - from the moment the page is accessed until the user closes it.
+
+The lifecycle of an HTML page has three important events:
+
+- `DOMContentLoaded`
+- `load`
+- `beforeunload` / `unload`
 
 ### DOMContentLoaded event
 

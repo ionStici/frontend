@@ -46,7 +46,7 @@ The programming language of the Web.
 
 <div></div>
 
-- [DOM: Styles, Attributes, Classes](./dom-st-at-cl.md)
+- [DOM: Styles, Attributes, Classes](./dom-sty-attr-cla.md)
 
 <div></div>
 

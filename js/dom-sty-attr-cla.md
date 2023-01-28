@@ -10,6 +10,11 @@
 <div></div>
 
 - [DOM elements and Attributes](#dom-elements-and-attributes)
+  - [getAttribute() method](#getattribute-method)
+  - [setAttribute() method](#setattribute-method)
+  - [data attributes](#data-attributes)
+
+<div></div>
 
 <br>
 
@@ -98,3 +103,73 @@ Note: `cssText` will override the previous inline styles (only the inline styles
 ## DOM elements and Attributes
 
 We can access and edit HTML attributes of DOM elements from JavaScript.
+
+We can read attributes from DOM elements like properties:
+
+```html
+<img class="logo" src="./img/logo.png" designer="John" />
+```
+
+```js
+logo.src; // http://127.0.0.1:8080/img/logo.png | absolute URL
+logo.className; // logo | className is for class attributes, because of historical reasons
+
+logo.alt = "Logo"; // setting an attribute
+logo.alt; // Logo
+
+logo.designer; // undefined
+```
+
+By setting the attribute property equal to a value, we define an attribute from the DOM.
+
+For standard attributes (attributes which are expected to be in elements), JavaScript will create for them properties on the element object. But if we add an attribute that is not a standard, we will not find it in the element object.
+
+### getAttribute() method
+
+The `getAttribute()` method returns the value of a specified attribute on the element.
+
+```js
+logo.getAttribute("src"); // img/logo.png | relative URL
+logo.getAttribute("designer"); // John
+```
+
+- We can read values of non-standard attributes with `getAttribute`
+- `getAttribute` will return the relative path of assets (images, href).
+
+### setAttribute() method
+
+The `setAttribute()` method sets the value of an attribute of the specified element.
+
+If the attribute already exists, the value is updated.
+
+Otherwise a new attribute is added with the specified name and value.
+
+Also, it works for non-standard attributes.
+
+```js
+logo.setAttribute("alt", "The company logo");
+```
+
+### data attributes
+
+[About the data attribute MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*)
+
+The `data-*` attribute allow proprietary information to be exchanged between HTML and its DOM representation by scripts.
+
+It starts with the keyword `data-` plus a hyphen and then out own text.
+
+```html
+<p data-about="it says hello" data-meta-info="5">Hello World</p>
+```
+
+```js
+p.dataset.about; // it says hello
+p.dataset.metaInfo; // 5
+```
+
+- In JavaScript, `dataset` is an object on a DOM element with all the `data-*` attributes specified.
+- To read its value, pn the DOM element we chain the `dataset` property, and then a `data-*` property.
+- In JS we use camelCase when reading multi-word `data-*` properties , while in html we used hyphens.
+- We use `data-*` attributes to build a bridge between HTML elements and JavaScript code (building UI).
+
+<br>
