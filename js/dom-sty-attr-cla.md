@@ -1,3 +1,5 @@
+[&larr; Back](./README.md)
+
 # DOM: Styles, Attributes, Classes
 
 ## Table of Content
@@ -13,6 +15,15 @@
   - [getAttribute() method](#getattribute-method)
   - [setAttribute() method](#setattribute-method)
   - [data attributes](#data-attributes)
+
+<div></div>
+
+- [Classes and DOM elements](#classes-and-dom-elements)
+  - [Adding a class](#adding-a-class)
+  - [Removing a class](#removing-a-class)
+  - [Check if an element has a certain class](#check-if-an-element-has-a-certain-class)
+  - [Replace a class](#replace-a-class)
+  - [toggle a class](#toggle-a-class)
 
 <div></div>
 
@@ -171,5 +182,53 @@ p.dataset.metaInfo; // 5
 - To read its value, pn the DOM element we chain the `dataset` property, and then a `data-*` property.
 - In JS we use camelCase when reading multi-word `data-*` properties , while in html we used hyphens.
 - We use `data-*` attributes to build a bridge between HTML elements and JavaScript code (building UI).
+
+<br>
+
+## Classes and DOM elements
+
+Manipulating classes with JavaScript.
+
+In practice, adding and removing classes is the main way how we update the user interface.
+
+Example: Exporting the styles into a class and then adding and removing the class with JavaScript.
+
+With the `classList` property we can manipulate the classes of a DOM element.
+
+### Adding a class
+
+```js
+logo.classList.add("logo");
+logo.classList.add("logo", "logo--big"); // adding multiple classes
+// logo.classList = "logo"; // this will override all the existing classes
+```
+
+### Removing a class
+
+```js
+logo.classList.remove("logo--big");
+```
+
+### Check if an element has a certain class
+
+```js
+logo.classList.contains("logo"); // true or false
+```
+
+### Replace a class
+
+```js
+logo.classList.replace("logo", "header__logo");
+```
+
+If the class we want to replace doesn't exist, then `replace` will return false without adding the new class.
+
+### toggle a class
+
+```js
+logo.classList.toggle("logo");
+```
+
+`toggle` will add the class if the element doesn't have it, or remove it if the element contains the class.
 
 <br>
