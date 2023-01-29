@@ -14,7 +14,7 @@
 - [Methods](#methods)
 - [Nested Objects](#nested-objects)
 - [Pass By Reference](#pass-by-reference)
-- [Looping Through Objects](#looping-through-objects)
+- [Looping Through Objects with for...in](#looping-through-objects-with-forin)
 
 <br>
 

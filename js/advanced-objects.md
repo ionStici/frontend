@@ -7,6 +7,7 @@
 - [The `this` keyword](#the-this-keyword)
 - [Privacy](#privacy)
 - [Getters and Setters](#getters-and-setters)
+- [Factory Functions](#factory-functions)
 
 <br>
 
@@ -54,45 +55,42 @@ One common convention is to place an underscore `_` before the name of a propert
 
 ## Getters and Setters
 
-Getters are methods that return properties of an object.
+Objects can have [getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set) properties.
+
+- Getters are methods that return properties of an object.
+- Setters are methods that reassign values of existing properties within an object.
+
+<div></div>
+
+- We call these special properties: _assessor properties_.
+- While the more normal properties are called: _data properties_.
 
 ```js
 const obj = {
+  _fullName: "Mike",
   _birthYear: 1995,
   currentYear: 2025,
 
   get age() {
     return 2025 - this._birthYear;
   },
-};
-
-obj.age; // 30
-```
-
-- `get` keyword followed by a function.
-- Getter methods do not need to be called with parentheses. Syntactically, it looks like we're accessing a property.
-
-Don't name the getters / setters methods with the same name as properties. If we do so, then calling the method will result in an infinite call stack error. Workaround: when an underscore when calling properties.
-
-<br>
-
-Setter methods reassign values of existing properties within an object.
-
-```js
-const obj = {
-  _fullName: "Mike",
 
   set fullName(name) {
     this._fullName = name;
   },
 };
 
+obj.age; // 30
 obj.fullName = "Mike Raven";
 ```
 
-Setters do not need to be called with parentheses.
+To add a getter or setter to an object, we prepend the keyword `get` or `set` to a method.
 
-It looks like we're reassigning a value of a property.
+- Getter methods do not need to be called with parentheses. Syntactically, it looks like we're accessing a property. Useful when we want to read something as a property, but still need to do some calculations before.
+
+- Setter methods do not need to be called with parentheses. It looks like we're reassigning a value of a property. Any setter method needs to have exactly one parameter, which we need to pass in.
+
+Don't name the getters / setters methods with the same name as properties. If we do so, then calling the method will result in an infinite call stack error. Workaround convention: use an underscore when calling properties.
 
 <br>
 
@@ -124,7 +122,7 @@ We call the factory faction with the necessary arguments and assign the return v
 
 <br>
 
-## Enhanced Object Literals
+<!-- ## Enhanced Object Literals
 
 We can use a destructuring technique, called _property value shorthand_ (ES6), so all we have to do
 
@@ -134,4 +132,4 @@ How we write functions
 
 ## Built-in Object Methods
 
-Check out the documentation: [Object MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+Check out the documentation: [Object MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) -->

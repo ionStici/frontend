@@ -112,10 +112,12 @@ We define and call methods for classes just like in regular objects.
 
 The only difference is that in classes we omit the comma between methods.
 
+Node: **Setters** and **Getters** in classes work exactly the same way as in regular objects.
+
 Prototypal inheritance: All methods of a instace, will be on the prototype of that instance, and not on the instances themselves.
 
 ```js
-john__proto__ === PersonCl.prototype; // true
+john.__proto__ === PersonCl.prototype; // true
 ```
 
 In practice, the `sayHello` method is in the `__proto__` of `john`.
@@ -129,5 +131,3 @@ PersonCl.prototype.sayGoodbye = function () {
 ```
 
 <br>
-
-## Setters and Getters
