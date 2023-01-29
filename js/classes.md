@@ -37,7 +37,6 @@ A class acts like any other regular constructor function, the only difference is
   - [Defining a Class](#defining-a-class)
   - [Creating a Class Instance](#creating-a-class-instance)
   - [Methods](#methods)
-- [Setters and Getters](#setters-and-getters)
 
 <br>
 

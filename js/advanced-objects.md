@@ -8,6 +8,8 @@
 - [Privacy](#privacy)
 - [Getters and Setters](#getters-and-setters)
 - [Factory Functions](#factory-functions)
+- [Built-in Object Methods](#built-in-object-methods)
+- [Enhanced Object Literals](#enhanced-object-literals)
 
 <br>
 
@@ -122,14 +124,61 @@ We call the factory faction with the necessary arguments and assign the return v
 
 <br>
 
-<!-- ## Enhanced Object Literals
+## Built-in Object Methods
 
-We can use a destructuring technique, called _property value shorthand_ (ES6), so all we have to do
-
-How we write functions
+Check out the documentation: [Object MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
 <br>
 
-## Built-in Object Methods
+## Enhanced Object Literals
 
-Check out the documentation: [Object MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) -->
+ES6 introduced three new ways which makes easier to write object literals.
+
+### Passing an object into another object
+
+```js
+const obj = {
+  // ...
+};
+
+const complexObj = {
+  // before ES6
+  obj: obj,
+
+  // ES6 enhanced object literals
+  obj,
+};
+```
+
+Enhanced object literals creates a property name with exactly the variable name we pass in.
+
+### We can compute property names
+
+```js
+const obj = {
+  [player[0]]: "",
+  [`player-${2 + 3}`]: "",
+};
+```
+
+In square brackets we can put any expression.
+
+### Simpler methods syntax
+
+```js
+const obj = {
+  // before ES6
+  oldSyntax: function () {
+    // ...
+  },
+
+  // ES6
+  newSyntax() {
+    // ...
+  },
+};
+```
+
+With the new method syntax introduced in ES6 we can omit the colon and the `function` keyword.
+
+<br>
