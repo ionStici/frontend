@@ -10,6 +10,7 @@
 - [Factory Functions](#factory-functions)
 - [Built-in Object Methods](#built-in-object-methods)
 - [Enhanced Object Literals](#enhanced-object-literals)
+- [Looping Objects: Keys, Values, Entries](#looping-objects-keys-values-entries)
 
 <br>
 
@@ -182,3 +183,44 @@ const obj = {
 With the new method syntax introduced in ES6 we can omit the colon and the `function` keyword.
 
 <br>
+
+## Looping Objects: Keys, Values, Entries
+
+Objects are not iterables, but we can loop over them in an indirect way.
+
+Depending on what exactly we want to loop over, we have different options:
+
+1. Property names: `Object.keys()`
+2. Property values: `Object.values()`
+3. The entire object: `Object.entries()`
+
+### Object.keys()
+
+```js
+const obj = {};
+const properties = Object.keys(obj);
+```
+
+Due to `Object.keys()` method, `properties` variable is now an array which contains only the property names of the `obj` object. Now we can loop over `properties` like a simple array.
+
+### Object.values()
+
+```js
+const values = Object.values(obj);
+for (const item of values)
+```
+
+It works exactly the same, but now with `Object.values()` we have an array with only the object values.
+
+### Object.entries()
+
+```js
+const entries = Object.entries(obj);
+console.log(entries); // 0: (2) ['key', 'value'] for each key / value pair
+```
+
+With `Object.entries()` we get an array with arrays for each key / value pair.
+
+```js
+for (const [key, value] of entries)
+```

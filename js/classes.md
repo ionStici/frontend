@@ -42,6 +42,8 @@ A class acts like any other regular constructor function, the only difference is
 
 ## ES6 Classes
 
+[MDN Documentation: JavaScript Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
 JavaScript is an _object-oriented programming_ (OOP) language.
 
 ### Defining a Class
