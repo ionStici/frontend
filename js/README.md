@@ -29,6 +29,16 @@ The programming language of the Web.
 
 <div></div>
 
+- [Objects](./objects.md)
+- [Advanced Objects](./advanced-objects.md)
+- [Classes](./classes.md)
+
+<div></div>
+
+- [Destructuring](./destructuring.md)
+
+<div></div>
+
 <details>
 <summary>DOM</summary>
 

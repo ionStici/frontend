@@ -32,9 +32,9 @@ The key's value can be of any data type, even other objects, or any expression, 
 
 ```js
 const myObj = {
-  firstName: 'John',
+  firstName: "John",
   age: 2030 - 1995,
-  friends: ['Irina', 'You'],
+  friends: ["Irina", "You"],
 };
 ```
 
@@ -70,7 +70,7 @@ If we try to access a property that does not exist, `undefined` will be returned
 ### Bracket Notation
 
 ```js
-myObj['firstName']; // ohn
+myObj["firstName"]; // ohn
 ```
 
 Inside bracket, we pass in the property name (key) as a string.
@@ -87,12 +87,12 @@ Without bracket notation in these situations, our code would throw an error.
 
 ```js
 const obj = {
-  'key 1': 'Hello',
-  data: 'empty',
+  "key 1": "Hello",
+  data: "empty",
 };
 
-obj['key 1'];
-obj['da' + 'ta'];
+obj["key 1"];
+obj["da" + "ta"];
 ```
 
 _Recommendation:_ Use dot notation by default, and bracket notation when you need to compute the property name.
@@ -107,8 +107,8 @@ Add and change object properties (with both dot and bracket notation):
 - If there was no property with that name: a new property will be added to the object.
 
 ```js
-myObj.job = 'Software Engineer';
-myObj['hobby'] = 'Reading';
+myObj.job = "Software Engineer";
+myObj["hobby"] = "Reading";
 ```
 
 _Note:_ Like arrays, even if we can't completely reassign an object declared with const, we can still add or change properties.
@@ -129,21 +129,21 @@ Any function attached to an object is called a **method**.
 
 Example: `console` is a global object, and `.log()` is a method on that object.
 
-We can use only function expressions in objects.
+In objects we can use only function expressions.
 
 ```js
 const myObj = {
   funcName: function () {
-    console.log('I am a method');
+    console.log("I am a method");
   },
 
   newFunction() {
-    console.log('New method syntax');
+    console.log("New method syntax");
   },
 };
 
 myObj.funcName();
-myObj['newFunction']();
+myObj["newFunction"]();
 ```
 
 When writing methods, the key serves as the method's name, and the value is an anonymous function expression.
@@ -163,11 +163,11 @@ To access nested properties, we chain operators.
 ```js
 const myObj = {
   nestedObj: {
-    'third-object': { chooseMe: ':P' },
+    "third-object": { chooseMe: ":P" },
   },
 };
 
-myObj.nestedObj['third-object'].chooseMe; // :P
+myObj.nestedObj["third-object"].chooseMe; // :P
 ```
 
 The chain is evaluated from left to right.
@@ -178,9 +178,7 @@ So, first `myObj.nestedObj` returns the value it contains and only then the next
 
 ## Pass By Reference
 
-Objects are _passed by reference_. This means when we pass a variable assigned to an object into a function as an argument, the computer interprets the parameter name as pointing to the space in memory holding that object. As a result, functions which change object properties actually mutate the object permanently.
-
----
+Objects are _passed by reference_. This means: when we pass an object into a function as an argument, the JavaScript interprets the parameter name as pointing to the space in memory holding that object. As a result, functions which change object properties actually mutate the object permanently.
 
 However, reassigning an object inside a function body passed as an argument would not work. Even though the object was declared with let and even though we can reassign the object outside of the function body. The reassignment kind of worked inside the function, because if we log the object right after reassignment, we see the new object, but if we log the object outside the function then the object still contains the previous properties.
 
@@ -190,7 +188,7 @@ And when we did the reassignment in the body of the function, the variable from 
 
 <br>
 
-## Looping Through Objects
+## Looping Through Objects with for...in
 
 Iterating through objects using the [`for...in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop.
 
@@ -199,11 +197,11 @@ Iterating through objects using the [`for...in`](https://developer.mozilla.org/e
 ```js
 let friends = {
   iri: {
-    name: 'Irina',
+    name: "Irina",
   },
 
   andr: {
-    name: 'andrew',
+    name: "andrew",
   },
 };
 
@@ -213,6 +211,6 @@ for (let friend in friends) {
 }
 ```
 
-In each iteration, the variable `friend` is set to one of the keys of the `friends` object (but not to its object).
+In each iteration, the variable `friend` is set to one of the keys of the `friends` object.
 
 <br>

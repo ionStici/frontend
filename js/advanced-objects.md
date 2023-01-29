@@ -1,11 +1,12 @@
+[&larr; Back](./README.md)
+
 # Advanced Objects
 
 ## Table of Content
 
 - [The `this` keyword](#the-this-keyword)
 - [Privacy](#privacy)
-- [Getters]()
-- [Setters]()
+- [Getters and Setters](#getters-and-setters)
 
 <br>
 
@@ -15,7 +16,7 @@ Objects are collections of related data and functionality. We store that functio
 
 ```js
 const obj = {
-  name: 'Mike',
+  name: "Mike",
 
   sayHello() {
     console.log(`Hello ${this.name}`); // Hello Mike
@@ -79,14 +80,14 @@ Setter methods reassign values of existing properties within an object.
 
 ```js
 const obj = {
-  _fullName: 'Mike',
+  _fullName: "Mike",
 
   set fullName(name) {
     this._fullName = name;
   },
 };
 
-obj.fullName = 'Mike Raven';
+obj.fullName = "Mike Raven";
 ```
 
 Setters do not need to be called with parentheses.
@@ -115,7 +116,7 @@ const person = (name, birthYear, job) => {
   };
 };
 
-const mike = person('Mike', 1995, 'Dev');
+const mike = person("Mike", 1995, "Dev");
 mike.age = 2025;
 ```
 
