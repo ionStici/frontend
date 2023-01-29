@@ -224,3 +224,5 @@ With `Object.entries()` we get an array with arrays for each key / value pair.
 ```js
 for (const [key, value] of entries)
 ```
+
+<br>
