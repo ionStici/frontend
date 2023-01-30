@@ -11,6 +11,7 @@ Learn how JavaScript prototypes work before learning [ES6 Classes](./classes.md)
 - [Constructor Functions and the `new` operator](#constructor-functions-and-the-new-operator)
 - [Prototypes](#prototypes)
 - [Prototypal Inheritance and The Prototype Chain](#prototypal-inheritance-and-the-prototype-chain)
+- [Prototypal Inheritance on Built-In Objects](#prototypal-inheritance-on-built-in-objects)
 
 <br>
 
@@ -163,5 +164,58 @@ This entire series of links between objects, is called the: **prototype chain**.
 As the Scope Chain, in the prototype chain whenever JavaScript can't find a property or a method in a certain object, it's gonna loop up into the next prototype in the prototype chain, and see if it can find it there, and if the property is not found then it continues to look up until the last prototype.
 
 Example: simulate `john` calling `hasOwnProperty('name')` method - first JS starts trying to find the called method on the object itself where it was called, and because it was not found there, it is gonna look in its prototype which is `Person.prototype`. The required method isn't here too, therefore it will move up even further in the prototype chain, now looking into `Object.prototype`. `Object.prototype` does contain a bunch of built-in methods, including `hasOwnProperty()`. JavaScript then takes this one and run it on the `john` object as this method was defined directly on `john`. Important: the method was not copied into the `john` object, instead it was inherited from `Object.prototype` through the prototype chain.
+
+<br>
+
+## Prototypal Inheritance on Built-In Objects
+
+We can use the `__proto__` property to look in the prototype chain even further.
+
+```js
+john.__proto__.__proto__.__proto__; // null
+// Person.prototype -> Object.prototype -> null
+```
+
+**The prototype of a function:** any function is also an object, therefore it also has a prototype, which contains methods on functions like: `apply`, `bind`, `call`. This is the reason why we can call methods on functions, because they are objects and objects have prototypes.
+
+**The prototype of arrays:**
+
+```js
+const arr = [1, 2, 3, 2];
+Array.prototype === arr.__proto__; // true
+```
+
+The prototype of `arr` or of any other regular array is `Array.prototype`. In this prototype we have all the methods that arrays have. This is the reason why all the arrays get access to all of these methods, the inherit them from tis prototype `Array.prototype`.
+
+`Array` is the constructor function, so the prototype property of the constructor is gonna be the prototype of all the objects created by that constructor. Just like in objects, this `[1, 2, 3]` is the shortcut of `new Array(1, 2, 3)`.
+
+The prototype of `Array` is `Object.prototype`.
+
+```js
+arr.__proto__.__proto__ === Array.prototype.__proto__; // true
+```
+
+If we search for a method on MDN, we see its name like `Array.prototype.filter()`. The `filter` method lives in the prototype property of the `Array` constructor.
+
+The prototypal inheritance is a mechanism for reusing code. All these built-in methods have to exists only once somewhere in the JavaScript engine, and then all the arrays in our code get access to them through prototype chain and prototypal inheritance.
+
+We even can created methods on the `Array.prototype`, then all arrays inherit them:
+
+```js
+Array.prototype.unique = function () {
+  return [...new set(this)];
+}; // return all the unique elements of an array
+arr.unique(); // (3) [1, 2, 3]
+```
+
+The `this` keyword is going to be the array on which the method will be called.
+
+However this is not a good idea. The next version of JavaScript might add a method with the same name that we are adding. And if you work on a team of developers, this might create bugs, because developers implement the same method with a different name. If you're working on a small project on your own then i guess you could do it.
+
+**All the DOM elements are behind the scenes objects:** in these DOM element objects we have a lot of different properties and methods, and a huge prototype chain.
+
+```js
+h1.__proto__.__proto__.__proto__.__proto__.__proto__.__proto__.__proto__; // null
+```
 
 <br>
