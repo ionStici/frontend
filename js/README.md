@@ -36,7 +36,11 @@ The programming language of the Web.
 
 - [OOP](./oop.md)
 - [Prototypes](./prototypes.md)
-- [Classes](./classes.md)
+
+<div></div>
+
+- [ES6 Classes](./classes.md)
+- [ES6 Classes Inheritance](./inheritance-classes.md)
 
 <div></div>
 

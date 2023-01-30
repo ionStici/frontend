@@ -66,6 +66,7 @@ class PersonCl {
 - We pass in this `constructor()` method arguments for the properties we want the object to have.
 - In the context of a class, `this` refers to the instance of the newly created empty class.
 - We use `this` within the `constructor()` method and define each property by setting it to the class arguments.
+- The `constructor` method is not mandatory. We even can execute any code in the `constructor()` method.
 
 **Particularities:**
 
@@ -139,6 +140,8 @@ PersonCl.prototype.sayGoodbye = function () {
   console.log("Goodbye");
 };
 ```
+
+Note: It is a bad practice to interact with instance properties directly, it's a lot better to create methods that interact with the properties. These methods that we build for interacting with the instance properties are the **public interface** to our objects (API).
 
 <br>
 
