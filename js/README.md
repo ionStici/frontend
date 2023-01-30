@@ -34,7 +34,8 @@ The programming language of the Web.
 
 <div></div>
 
-- [Object-Oriented Programming (OOP)](.)
+- [OOP](./oop.md)
+- [Prototypes](./prototypes.md)
 - [Classes](./classes.md)
 
 <div></div>
@@ -46,9 +47,9 @@ The programming language of the Web.
 <details>
 <summary>DOM</summary>
 
-<br>
+<div></div>
 
-- [The `<script>` Element](./script-tag.md)
+- [The script element](./script-tag.md)
 
 <div></div>
 
