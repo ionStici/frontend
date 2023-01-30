@@ -12,6 +12,7 @@ Learn how JavaScript prototypes work before learning [ES6 Classes](./classes.md)
 - [Prototypes](#prototypes)
 - [Prototypal Inheritance and The Prototype Chain](#prototypal-inheritance-and-the-prototype-chain)
 - [Prototypal Inheritance on Built-In Objects](#prototypal-inheritance-on-built-in-objects)
+- [Object.create()](#objectcreate)
 
 <br>
 
@@ -217,5 +218,37 @@ However this is not a good idea. The next version of JavaScript might add a meth
 ```js
 h1.__proto__.__proto__.__proto__.__proto__.__proto__.__proto__.__proto__; // null
 ```
+
+<br>
+
+## Object.create()
+
+Implementing prototypal inheritance using `Object.create()`.
+
+We use `Object.create()` to manually set the prototype of an object to any other object that we want.
+
+```js
+const PersonProto = {
+  init(name, age) {
+    this.name = name;
+    this.age = age;
+  },
+
+  sayHello() {
+    console.log(`Hello, I'm ${this.name}`);
+  },
+};
+
+const john = Object.create(PersonProto);
+john.init("John", 25);
+```
+
+With `Object.create(PersonProto)` we say explicitly that `PersonProto` is the prototype of `john`. So this will link `john` to `PersonProto.prototype`.
+
+We use `Object.create` to create objects with `PersonProto` as the prototype, which in turn will return a new object that is linked to the prototype that we pass in to `Object.create()`.
+
+- To add properties to object instances, we will use a `init()` method defined in `PersonProto`.
+- Then, we just call the `init()` method on each object with the required proeprties as arguments.
+- The `this` keyword will points to the object that is calling the method, nothing new.
 
 <br>

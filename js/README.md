@@ -44,37 +44,17 @@ The programming language of the Web.
 
 <div></div>
 
-<details>
-<summary>DOM</summary>
-
-<div></div>
-
-- [The script element](./script-tag.md)
-
-<div></div>
-
-- [How the DOM works](./dom.md)
+- [DOM: The script element](./script-tag.md)
+- [DOM: How the DOM works](./dom.md)
 
 <div></div>
 
 - [DOM: Select, Create, Delete](./dom-sel-cre-del.md)
-
-<div></div>
-
 - [DOM: Styles, Attributes, Classes](./dom-sty-attr-cla.md)
 
 <div></div>
 
 - [DOM Events with JavsScript](./dom-events.md)
+- [DOM: Event Propagation](./event-propagation.md)
 
 <div></div>
-
-- [Event Propagation](./event-propagation.md)
-
-<div></div>
-
-</details>
-
-<div></div>
-
-<br>
