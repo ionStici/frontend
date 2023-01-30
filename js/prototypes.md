@@ -10,6 +10,7 @@ Learn how JavaScript prototypes work before learning [ES6 Classes](./classes.md)
 
 - [Constructor Functions and the `new` operator](#constructor-functions-and-the-new-operator)
 - [Prototypes](#prototypes)
+- [Prototypal Inheritance and The Prototype Chain](#prototypal-inheritance-and-the-prototype-chain)
 
 <br>
 
@@ -129,5 +130,38 @@ Now, all instances will have access to this `hobby` property from the prototype.
 john.hasOwnProperty("name"); // true
 john.hasOwnProperty("hobby"); // false
 ```
+
+<br>
+
+## Prototypal Inheritance and The Prototype Chain
+
+Constructor functions have a `prototype` object.
+
+This `prototype` object is the prototype of all object instances created through this constructor function.
+
+How an object is created through a constructor function using the `new` operator:
+
+1. A new empty object is created.
+2. The `this` keyword in the function call is set to the newly created object.
+3. The new object is linked to the `prototype` property of the constructor function. This happens internally by adding the `__proto__` property to the new object. `__proto__` always points to the `prototype` of an object, this is true for all objects in JavaScript.
+4. The new object is automatically returned from the function (unless we explicitly return something else, but in constructor functions we never do that). With this, the result of the `new` operator and the `Person` constructor function is a new object created programmatically, which we then store it in a variable.
+
+This process is valid for constructor functions and ES6 classes, but not for `Object.create`.
+
+When we attempt to call the `sayHello` method on the `john` object, JavaScript can't find it directly on the object, it is not there. If a property or a method can't be found in a certain object, JS will look into its prototype, and if it's there then JS will use it. That's how the `sayHello` method can run correctly and return a result. **This behavior is called prototypal inheritance and delegation**. The `john` object inherited (delegated) the `sayHello` method from its `prototype`. We can use this ONE COPY `sayHello` method on all the objects created through `Person` constructor function. All of them will inherit the `sayHello` method, without the method being directly attached to all the objects themselves, this is essential for JS code performance.
+
+The fact that `john` object is connected to a prototype, and the ability of looking up methods and properties in a prototype, is what we call the: **prototype chain**.
+
+All objects in JS have a prototype, the prototype of `john` is `Person.prototype`, and because `Person.prototype` is an object, it also has a prototype which is `Object.prototype`.
+
+`Person.prototype` is a regular object, which means that it has been built by the built-in `Object` constructor function. This is the function that is called behind the scenes whenever we create an object literal. Essentially, the curly braces `{}` are like a shortcut or writing `new Object`. Since `Person.prototype` has been created by the `Object` constructor function, its `prototype` is gonna be `Object.prototype`. It's the same logic as with the `john` object and its `Person` constructor.
+
+This entire series of links between objects, is called the: **prototype chain**.
+
+`Object.prototype` is the top of the prototype chain, this means that its prototype is `null`, marking the end of the prototype chain.
+
+As the Scope Chain, in the prototype chain whenever JavaScript can't find a property or a method in a certain object, it's gonna loop up into the next prototype in the prototype chain, and see if it can find it there, and if the property is not found then it continues to look up until the last prototype.
+
+Example: simulate `john` calling `hasOwnProperty('name')` method - first JS starts trying to find the called method on the object itself where it was called, and because it was not found there, it is gonna look in its prototype which is `Person.prototype`. The required method isn't here too, therefore it will move up even further in the prototype chain, now looking into `Object.prototype`. `Object.prototype` does contain a bunch of built-in methods, including `hasOwnProperty()`. JavaScript then takes this one and run it on the `john` object as this method was defined directly on `john`. Important: the method was not copied into the `john` object, instead it was inherited from `Object.prototype` through the prototype chain.
 
 <br>
