@@ -29,7 +29,7 @@ Summarizing frontend knowledge while studying for future reference.
 
 <div></div>
 
-_The list is not complete_
+_The list is not exhaustive_
 
 <div></div>
 

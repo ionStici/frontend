@@ -58,6 +58,12 @@ The programming language of the Web.
 
 <hr>
 
+- [Modules](./modules.md)
+
+<div></div>
+
+<hr>
+
 - [DOM: The script element](./script-tag.md)
 - [DOM: How the DOM works](./dom.md)
 

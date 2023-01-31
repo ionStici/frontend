@@ -110,3 +110,13 @@ _Differences between ES6 modules and JavaScript scripts:_
 <br>
 
 ## How modules import other modules behind the scenes
+
+Example: the main module named `index.js` is importing a value from other module.
+
+When a peace of code is executed, first the code parsed (the code is read without executing it).
+
+In this step imports are hoisted.
+
+The whole process of importing modules happens before the code in the main module is executed.
+
+The main importing module `index.js` imports other modules in a synchronous way, this means that only after all imported modules have been downloaded and executed, the main module `index.js` will finally be executed as well.
