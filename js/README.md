@@ -34,6 +34,8 @@ The programming language of the Web.
 
 <div></div>
 
+<hr>
+
 - [OOP](./oop.md)
 - [Prototypes](./prototypes.md)
 - [Inheritance](./inheritance-prototypes.md)
@@ -42,12 +44,17 @@ The programming language of the Web.
 
 - [ES6 Classes](./classes.md)
 - [ES6 Classes Inheritance](./inheritance-classes.md)
+- [Encapsulation](./encapsulation.md)
+
+<hr>
 
 <div></div>
 
 - [Destructuring](./destructuring.md)
 
 <div></div>
+
+<hr>
 
 - [DOM: The script element](./script-tag.md)
 - [DOM: How the DOM works](./dom.md)
@@ -61,5 +68,7 @@ The programming language of the Web.
 
 - [DOM Events with JavsScript](./dom-events.md)
 - [DOM: Event Propagation](./event-propagation.md)
+
+<hr>
 
 <div></div>
