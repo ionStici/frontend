@@ -5,6 +5,7 @@
 ## Table of Content
 
 - [Inheritance: Constructor Functions](#inheritance-constructor-functions)
+- [Inheritance: Object.create()](#inheritance-objectcreate)
 
 <br>
 
@@ -79,5 +80,52 @@ This points back to Person, JavaScript thinks that the constructor of `Student.p
 ```js
 Student.prototype.constructor = Student; // Student object
 ```
+
+<br>
+
+## Inheritance: Object.create()
+
+```js
+const PersonProto = {
+  init(name, age) {
+    this.name = name;
+    this.age = age;
+  },
+
+  sayHello() {
+    console.log(`Hello, I'm ${this.name}`);
+  },
+};
+
+const StudentProto = Object.create(PersonProto);
+
+StudentProto.init = function (name, age, course) {
+  PersonProto.init.call(this, name, age);
+  this.course = course;
+};
+
+StudentProto.myCourse = function () {
+  console.log(`I'm Studying ${this.course}`);
+};
+
+const john = Object.create(StudentProto);
+john.init("John", 25, "Computer Science");
+// john.sayHello; john.myCourse;
+```
+
+<br>
+
+- First, using `Object.create()` we create an object `StudentProto` linked to `PersonProto.prototype`.
+- So `PersonProto.prototype` is the parent prototype of `Student.prototype`.
+- `StudentProto` inherits from `PersonProto`, establishing the parent-child relationship.
+- Then, using the `call` method on `PersonProto.init`, we define the `init` method for `StudentProto`.
+
+<div></div>
+
+- Then, we create other object instances from `StudentProto` using `Object.create()`.
+- `john` is an instance of `StudentProto`.
+- `StudentProto` is the prototype of `john`, and `PersonProto` in turn is the prototype of `StudentProto`.
+- `john` instance inherits from `StudentProto`, which in turn inherits from `PersonProto`.
+- `john` will be able to use all the methods from `StudentProto` and `PersonProto`.
 
 <br>
