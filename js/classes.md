@@ -38,6 +38,7 @@ A class acts like any other regular constructor function, the only difference is
 - [Creating a Class Instance](#creating-a-class-instance)
 - [Methods](#methods)
 - [Static Methods](#static-methods)
+- [Chaining Methods](#chaining-methods)
 
 <br>
 
@@ -183,5 +184,34 @@ Person.hey = function () {
   console.log("Hey there!");
 };
 ```
+
+<br>
+
+## Chaining Methods
+
+```js
+class Number {
+  // ..
+
+  plus(val) {
+    this.numbers.push(val);
+    return this;
+  }
+
+  minus(val) {
+    this.numbers.push(-val);
+    return this;
+  }
+}
+
+const num = new Number();
+num.plus(25).minus(15).plus(5).plus(6); // 21
+```
+
+We can chain our own methods:
+
+- Return explicitly the instance (object) itself at the end of each method that we want to be chain-able.
+- Otherwise, it will return `undefined` and the next method will be chained on `undefined`.
+- `this` is the current object / returning `this` will essentially make the methods chain-able.
 
 <br>
