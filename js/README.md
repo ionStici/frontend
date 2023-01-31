@@ -36,6 +36,7 @@ The programming language of the Web.
 
 - [OOP](./oop.md)
 - [Prototypes](./prototypes.md)
+- [Inheritance](./inheritance-prototypes.md)
 
 <div></div>
 
