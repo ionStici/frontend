@@ -8,6 +8,8 @@ The programming language of the Web.
 
 [&larr; Back to the Main Page](./../README.md)
 
+<hr>
+
 <div></div>
 
 - [JavaScript Overview](./js-overview.md)

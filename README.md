@@ -38,16 +38,19 @@ _The list is not complete_
 ## Resources
 
 - [MDN Web Docs](https://developer.mozilla.org/en-US/)
-- [Frontend Roadmap](https://roadmap.sh/frontend)
-
-<div></div>
-
 - [caniuse.com](https://caniuse.com/)
 
 <br>
 
 ## Online Learning Platforms
 
-- [Udemy](https://www.udemy.com/)
-- [freeCodeCamp](https://www.freecodecamp.org/)
-- [Codecademy](https://www.codecademy.com/)
+|                                                       |
+| ----------------------------------------------------- |
+| [Udemy](https://www.udemy.com/)                       |
+| [freeCodeCamp](https://www.freecodecamp.org/)         |
+| [Codecademy](https://www.codecademy.com/)             |
+| [Frontend Mentor](https://www.frontendmentor.io/home) |
+| [web.dev Learn](https://web.dev/learn/)               |
+| [Frontend Roadmap](https://roadmap.sh/frontend)       |
+
+<br>
