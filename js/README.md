@@ -58,8 +58,7 @@ The programming language of the Web.
 
 <hr>
 
-- [Modules Theory](./modules-theory.md)
-- [Modules in Practice](.)
+- [Modules](./modules.md)
 
 <div></div>
 

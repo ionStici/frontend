@@ -2,10 +2,6 @@
 
 # Modules Theory
 
-[MDN JavaScript Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
-
-<br>
-
 ## Table of Content
 
 - [What are Modules?](#what-are-modules)
