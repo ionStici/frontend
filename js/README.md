@@ -59,6 +59,7 @@ The programming language of the Web.
 <hr>
 
 - [Modules](./modules.md)
+- [Error Handling](./error-handling.md)
 
 <div></div>
 
