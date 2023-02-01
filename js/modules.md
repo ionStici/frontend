@@ -15,6 +15,14 @@
 
 <br>
 
+## Introduction
+
+<br>
+
+## Importing a Module
+
+<br>
+
 ## ES6 Named Exports and Imports
 
 - **Exporting multiple values as named exports:** pass the values you want to export in the curly braces of the `export` syntax separated by commas.
@@ -71,5 +79,60 @@ NewData.data; // "DATA"
 - This will create an object containing everything that is exporting from the module we specified.
 - Then, we access the exported variables or functions of the object that was created as usual: `NewData.data`.
 - This exporting module is like a public API (like a class). Everything else stays private inside the module.
+
+<br>
+
+## Default Exports and Imports
+
+**Default exports** are used for exporting a single value per module to represent the entire module.
+
+In practice, often, but not always, the default export value is an object containing the entire set of functions and data values of a module.
+
+For default exports we use the `default` keyword, and it works only for one value per module.
+
+```
+project-directory/
+| -- import.js
+| -- export.js
+```
+
+Syntax 1:
+
+```js
+// export.js | EXPORTING MODULE
+export default () => console.log("Hello");
+```
+
+Or:
+
+```js
+const data = "DATA";
+export default data;
+```
+
+Syntax 2:
+
+```js
+// export-second.js | EXPORTING MODULE
+const data = "DATA";
+export { data as default };
+```
+
+Importing default exports:
+
+```js
+import sayHello from "./export.js";
+import data from "./export-second.js";
+```
+
+Notice that the curly braces are gone from the import statement. This syntax is actually shorthand for:
+
+```js
+import { default as sayHello } from "./export.js";
+```
+
+- The imported **default** value may be given any name the programmer chooses.
+- Note that in `export.js` module we simply export a value produced by a function, besides this the exported function is not named, we simply export the function's value. And then when we import the function as default export we give it a name that we want.
+- The preferred style of using modules is to just use one default export per module and then import it.
 
 <br>
