@@ -46,13 +46,14 @@ A **runtime** converts code written in a high-level programming language and com
 
 Node was created with the goal of building web servers and web applications in JavaScript, but it’s a powerful and flexible environment that can be used for building all sorts of applications.
 
-Install Node bersion labeled "LTS" [nodejs.org](https://nodejs.org/en/)
+Install Node version labeled as "LTS" [nodejs.org](https://nodejs.org/en/)
 
-In the terminal, `which node` will print the file path to Node. And `node -v` will print the version of Node.
+- In the terminal, `which node` will print the file path to Node.
+- And `node -v` will print the version of Node.
 
 <br>
 
-## Use Node to Run Your Program
+## Use Node to run your own Scripts
 
 Navigate to your JavaScript file through the terminal, and run:
 

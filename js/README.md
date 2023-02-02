@@ -32,7 +32,8 @@ The programming language of the Web.
 
 - [JavaScript Engine](./js-engine.md)
 - [Execution Contexts and the Call Stack](./call-stack.md)
-- [Scope](./scope.md)
+- [Scope and the Scope Chain](./scope.md)
+- [JavaScript Runtime Overview](./js-runtime-overview.md)
 
 <div></div>
 
