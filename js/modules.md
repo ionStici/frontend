@@ -9,17 +9,69 @@
 
 ## Table of Content
 
+- [Introduction](#introduction)
+- [Importing a Module](#importing-a-module)
 - [ES6 Named Exports and Imports](#es6-named-exports-and-imports)
   - [Renaming Imports to Avoid Naming Collisions](#renaming-imports-to-avoid-naming-collisions)
   - [Import all the exports of a module](#import-all-the-exports-of-a-module)
+- [Imports are a live connection to exports](#imports-are-a-live-connection-to-exports)
 
 <br>
 
 ## Introduction
 
+- Modules are JavaScript files.
+- The camelCase for naming your module files.
+- To start using modules, in the `script` tag of the main importing module, define the `type` attribute set to `module`.
+- No need to specify strict mode when using modules, all modules are executed in strict mode by default.
+
 <br>
 
 ## Importing a Module
+
+```
+project-directory/
+| -- import.js
+| -- export.js
+```
+
+```js
+// export.js | EXPORTING MODULE
+console.log("Exporting module");
+const data = "sensitive data";
+```
+
+```js
+// import.js | IMPORTING MODULE
+import "./export.js";
+console.log("Importing module");
+console.log(data);
+```
+
+```
+// Console
+Exporting module
+Importing module
+Uncaught ReferenceError: data is not defined
+```
+
+To import the whole module: `import` keyword + a string with the location of the module.
+
+This technique is used when we just want the exported module to be executed, without its data to interact with the importing module.
+
+The code from the exported module is executed before any code from the importing module.
+
+The code in `import.js` is parsed and before it is executed, all the code from import modules is executed first.
+
+The same is true when we place the `import` statement at the end of our code in the main module. All the `import` statements are hoisted to the top.
+
+Variables declared inside a module, are scoped to its module. The module itself is like the top-level scope, this means that all top-level variables are private inside the module. In traditional scripts, top-level variables are global scoped.
+
+This is why by default, inside the importing module, we can't use variables from the exporting module, we will get a reference error. Again, the variables are scoped to the current module.
+
+If we want to use any variable in the importing module from other modules, we have to export them first.
+
+In ES6 mdoules, there are 2 types of exports and imports: **Named** and **Default**.
 
 <br>
 
@@ -134,5 +186,44 @@ import { default as sayHello } from "./export.js";
 - The imported **default** value may be given any name the programmer chooses.
 - Note that in `export.js` module we simply export a value produced by a function, besides this the exported function is not named, we simply export the function's value. And then when we import the function as default export we give it a name that we want.
 - The preferred style of using modules is to just use one default export per module and then import it.
+
+### Mix named and default imports in one single import statement
+
+```js
+// import.js | IMPORTING MODULE
+import data, { sayHello as greet } from "./export.js";
+```
+
+Where `data` is the default export, and `sayHello` is the named export.
+
+In practice, don't do this, avoid complexity.
+
+<br>
+
+## Imports are a live connection to exports
+
+```
+project-directory/
+| -- import.js
+| -- export.js
+```
+
+```js
+// export.js | EXPORTING MODULE
+export const arr = [];
+export const addData = (el = arr.push(el));
+```
+
+```js
+// import.js | IMPORTING MODULE
+import { arr, addData } from "./export.js";
+
+addData(25);
+console.log(arr); // (1) [25]
+```
+
+We mutate an array using a function, both imported from the exported module.
+
+This example proves that imports are not simply a copy of the value exported, instead it is a live connection, they point to the same place in memory.
 
 <br>
