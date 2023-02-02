@@ -12,6 +12,7 @@
 - [Constructing an Error](#constructing-an-error)
 - [The throw keyword](#the-throw-keyword)
 - [The try...catch statement](#the-trycatch-statement)
+- [Handling with try...catch](#handling-with-trycatch)
 
 <br>
 
@@ -70,6 +71,12 @@ When we use the `throw` keyword, the error is thrown and code after the `throw` 
 
 ## The try...catch statement
 
+Thrown errrs causes our program to stop running.
+
+We can anticipate and handle errors by writing code to address the error and allow our program to continue running.
+
+Using the `try...catch` statement, we can anticipate and handle errors by writing code to address the error and allow our program to continue running.
+
 ```js
 try {
   throw Error("Oh no, you caught me");
@@ -79,5 +86,35 @@ try {
 
 console.log("Huh, thanks god you caught the error");
 ```
+
+- Inside the `try` block we insert code that we anticipate might throw an error.
+- The `catch` statement accepts the thrown error from the `try` block.
+- The parameter `error` represents the thrown error.
+- The _catch block_ of the `catch` statement, contains code that executes to handle the error.
+- Since the error is caught, the program will keep running.
+
+In a `try..catch` statement, we evaluate code in the `try` block and if the code throws an error, the code inside the `catch` block will handle the error for us.
+
+<br>
+
+## Handling with try...catch
+
+With `try...catch` statement we can handle built-in errors thrown by JavaScript engine.
+
+```js
+const age = 24;
+
+try {
+  age = 25;
+} catch (error) {
+  console.log(error);
+}
+
+// TypeError: Assignment to constant variable.
+```
+
+- Reassignment of a `const` variable - a `TypeError` was thrown.
+- Then, in the `catch` block we logged the error.
+- `try...catch` for built-in JavaScript errors is useful when working with external data.
 
 <br>
