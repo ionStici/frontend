@@ -42,9 +42,17 @@ _The list is not exhaustive_
 
 <br>
 
+## Good to know Websites
+
+| Website                       |
+| ----------------------------- |
+| [GitHub](https://github.com/) |
+
+<br>
+
 ## Online Learning Platforms
 
-|                                                       |
+| Website                                               |
 | ----------------------------------------------------- |
 | [Udemy](https://www.udemy.com/)                       |
 | [freeCodeCamp](https://www.freecodecamp.org/)         |
@@ -52,5 +60,14 @@ _The list is not exhaustive_
 | [Frontend Mentor](https://www.frontendmentor.io/home) |
 | [web.dev Learn](https://web.dev/learn/)               |
 | [Frontend Roadmap](https://roadmap.sh/frontend)       |
+
+<br>
+
+## Coding Challenge Platforms
+
+| Website                               |
+| ------------------------------------- |
+| [Codewars](https://www.codewars.com/) |
+| [LeetCode](https://leetcode.com/)     |
 
 <br>

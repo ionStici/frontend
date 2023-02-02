@@ -27,12 +27,12 @@ The programming language of the Web.
 
 <div></div>
 
-- [JavaScript Engine](./js-engine.md)
+- [Objects](./objects.md)
+- [Advanced Objects](./advanced-objects.md)
 
 <div></div>
 
-- [Objects](./objects.md)
-- [Advanced Objects](./advanced-objects.md)
+- [JavaScript Engine](./js-engine.md)
 
 <div></div>
 
@@ -60,6 +60,7 @@ The programming language of the Web.
 
 - [Modules](./modules.md)
 - [Error Handling](./error-handling.md)
+- [JavaScript Testing](./js-testing.md)
 
 <div></div>
 
