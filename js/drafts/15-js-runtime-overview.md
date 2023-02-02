@@ -11,6 +11,8 @@ JavaScript code may be executed in one of two runtime environments:
 
 In each of these environments, different data values and functions are available, and these differences help distinguish front-end applications from back-end applications.
 
+<br>
+
 ## The Browser Runtime Environment
 
 Applications executed in the browser are known as fronend applications.
