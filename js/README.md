@@ -6,7 +6,7 @@ The programming language of the Web.
 
 ## Table of Content
 
-[&larr; Back to the Main Page](./../README.md)
+[**&larr; Back to the Main Page**](./../README.md)
 
 <div></div>
 
@@ -30,46 +30,27 @@ The programming language of the Web.
 
 <div></div>
 
-- [JavaScript Engine](./js-engine.md)
-- [Execution Contexts and the Call Stack](./call-stack.md)
-- [Scope and the Scope Chain](./scope.md)
-- [JavaScript Runtime Overview](./js-runtime-overview.md)
-
-<div></div>
-
-- [OOP](./oop.md)
-- [Prototypes](./prototypes.md)
-- [Inheritance](./inheritance-prototypes.md)
-
-<div></div>
-
-- [ES6 Classes](./classes.md)
-- [ES6 Classes Inheritance](./inheritance-classes.md)
-- [Encapsulation](./encapsulation.md)
-
-<div></div>
-
 - [Destructuring](./destructuring.md)
+- [Error Handling](./error-handling.md)
 
 <div></div>
 
 - [Modules](./modules.md)
-- [Error Handling](./error-handling.md)
-- [JavaScript Testing](./js-testing.md)
 
 <div></div>
 
-- [DOM: The script element](./script-tag.md)
-- [DOM: How the DOM works](./dom.md)
+- [**How JavaScript Works**](./how-js-works/README.md)
 
 <div></div>
 
-- [DOM: Select, Create, Delete](./dom-sel-cre-del.md)
-- [DOM: Styles, Attributes, Classes](./dom-sty-attr-cla.md)
+- [**Object-Oriented Programming (OOP)**](./oop/README.md)
 
 <div></div>
 
-- [DOM Events with JavsScript](./dom-events.md)
-- [DOM: Event Propagation](./event-propagation.md)
+- [**Asynchronous JavaScript**](./async/README.md)
+
+<div></div>
+
+- [**Document Object Model (DOM)**](./dom/README.md)
 
 <div></div>
