@@ -1,22 +1,31 @@
+[&larr; Back](./README.md)
+
 # Concurrency Model and the Event Loop in JavaScript
 
 ## Table of Content
 
-- [Why do we need and Event Loop?](#why-do-we-need-and-event-loop)
+- [Why do we need an Event Loop?](#why-do-we-need-an-event-loop)
+- [Concurrency in JavaScript](#concurrency-in-javascript)
+- [What is the Event Loop?](#what-is-the-event-loop)
+- [The Components of the Event Loop](#the-components-of-the-event-loop)
+  - [The Heap](#the-heap)
+  - [The Call Stack](#the-call-stack)
+  - [The Event Queue](#the-event-queue)
+  - [The Event Loop](#the-event-loop)
 
 <br>
 
-## Why do we need and Event Loop?
+## Why do we need an Event Loop?
 
-JavaScript is a **single-threaded** languages, this means that two statements can't be executed simultaneously.
+JavaScript is a **single-threaded** language. This means that two statements can't be executed simultaneously.
 
-For example, a heavy loaded `for` loop will block the code for some seconds, blocking the next line of code.
+For example, a heavy loaded `for` loop will stop the code execution for some seconds, blocking the next line of code.
 
 But, we can run _non-blocking_ code in JavaScript using the **Event Loop**.
 
 For example, the `setTimeout` function runs asynchronously thanks to the Event Loop.
 
-Even so, JavaScript is still single-threaded, but the event loop is enabling something called **concurrency**.
+Even so JavaScript is still single-threaded, the event loop is enabling something called **concurrency**.
 
 <br>
 
@@ -28,7 +37,7 @@ Since JS is single-threaded, it isn't using the traditional way of concurrency.
 
 However, we can emulate concurrency using the event loop.
 
-At a hign level, asynchronous code can be pushed to web APIs and directed back into the stack via the event queue and event loop.
+At a hign level, asynchronous code can be pushed to web APIs and then directed back into the stack via the event queue and event loop.
 
 <br>
 
@@ -36,25 +45,13 @@ At a hign level, asynchronous code can be pushed to web APIs and directed back i
 
 At a high level, the **event loop** is a system for managing code execution.
 
-Data structures that are part of the JS engine: the _heap_ and the _call stack_.
-
-The heap and the call stack interact with Node and Web APIs, which pass messages back to the stack via an event queue.
-
-The event queue's interaction with the call stack is managed by an event loop.
+Data structures that are part of the JS engine: the _heap_ and the _call stack_. The heap and the call stack interact with Node and Web APIs, which pass messages back to the stack via an event queue. The event queue's interaction with the call stack is managed by an event loop.
 
 All together, those parts maintain the order of code execution when we run asynchronous functions.
 
 <br>
 
 ## The Components of the Event Loop
-
-The **event loop** is made up of these parts:
-
-- Memory Heap
-- Call Stack
-- Event Queue
-- Event Loop
-- Node or Web APIs
 
 <br>
 
@@ -68,7 +65,7 @@ JavaScript variables and objects that are currently in use are stored in the hea
 
 ### The Call Stack
 
-The stack, or call stack, tracks what function is currently being run in the code.
+The stack tracks what function is currently being run in the code.
 
 When you invoke a function, a _frame_ for that function is added to the stack.
 
@@ -105,9 +102,9 @@ When the function finishes executing, its frame is removed from the stack.
 
 With `global()` we mean:
 
-At the bottom of the call stack is added the **global execution context** which contains the global variable and lexical environment. Each subsequent frame for a called function has a function execution context that includes the function’s lexical and variable environment.
+At the bottom of the call stack is added the **global execution context** which contains the global variables and lexical environment. Each subsequent frame for a called function has a function execution context that includes the function’s lexical and variable environment.
 
-Again, the call stack tracks what function is currently being run in our code (the current execution context). When a function runs to completion, it is popped off of the call stack. The
+Again, the call stack tracks what function is currently being run in our code (the current execution context). When a function runs to completion, it is popped off of the call stack.
 
 <br>
 
