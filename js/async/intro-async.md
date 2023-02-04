@@ -6,7 +6,6 @@
 
 - [General Asynchronous Programming Concepts](#general-asynchronous-programming-concepts)
 - [Introduction to Asynchronous JavaScript](#introduction-to-asynchronous-javascript)
-- [Concurrency Model and Event Loop in JavaScript](#concurrency-model-and-event-loop-in-javascript)
 
 <br>
 
@@ -14,11 +13,7 @@
 
 - **Synchronous code** executes in sequential order, line by line from top to bottom of the file. This type of behavior is known as _blocking code_ since each line of code cannot execute until the previous line finishes.
 
-<br>
-
 - **Asynchronous code** can be executed in parallel to other code that is already running, saving time and boosting efciency. This type of behavior is considered _non-blocking_.
-
-<br>
 
 - **Asynchronous Code Under the Hood**
 
@@ -29,8 +24,6 @@
   The more threads we have, the more tasks we can run concurrently.
 
   In most modern-day computers, multithreading is achieved by having a CPU that has multiple cores or by some other technology.
-
-<br>
 
 - **Asynchronous Code in Web Development:** loading only the code that is necessary for user interactions and then load up bits of code in the background.
 
@@ -66,5 +59,3 @@
   Both built-in functons perform tasks asynchronously.
 
 <br>
-
-## Concurrency Model and Event Loop in JavaScript
