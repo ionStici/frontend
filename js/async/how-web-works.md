@@ -13,6 +13,7 @@ This process is called: **Request-Response Model** or **Client-Server Architectu
 - [Accessing an URL for data](#accessing-an-url-for-data)
 - [HTTP Request](#http-request)
 - [HTTP Response](#http-response)
+- [TCP / IP](#tcp--ip)
 
 <br>
 
@@ -55,3 +56,23 @@ Once we have the real IP address, a TCP socket connection is established between
 <br>
 
 ## HTTP Response
+
+The request hits the server, which will then prepare the data or webpage to be ready to send back. Once it's ready, it will send it back using a **HTTP response**. A HTTP response message is composed of:
+
+1. **Start Line:** HTTP version + status code + status message. These are used to let the client know whether the request has been successful or failed. For example: 200 means "Ok", 404 means "Page not found".
+
+2. **HTTP response headers** are information about the response itself.
+
+3. **Response Body** contains the JSON data coming back from the API, or the HTML of the web page that we requested.
+
+<br>
+
+## TCP / IP
+
+**TCP** and **IP** are communication protocols that define how data travel across the web.
+
+First, TCP breaks down the requests and responses into thousands of small chunks called packets before they are sent. Once the small packets arrive at their destination, TCP will reassemble all the packets into the original request or response. This step is necessary so that each packet can take a different route through the internet, because this way the messages arrive at the destination as quick as possible, which would not be possible if we sent the entire data as a big chunk, that would be like trying to go through dense traffic with the biggest bus that you can imagine.
+
+The job of the IP protocol is to send and route these packets through the internet using the IP addess that these packets contain, so it ensures that the packets arrive at the correct destination.
+
+<br>
