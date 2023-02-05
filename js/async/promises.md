@@ -74,11 +74,8 @@ Promises are objects. We can create new promises using the `Promise` constructor
 const condition = Math.random() >= 0.5;
 
 const execute = (resolve, reject) => {
-  if (condition) {
-    resolve("✅");
-  } else {
-    reject("🚫");
-  }
+  if (condition) resolve("✅");
+  if (!condition) reject("🚫");
 };
 
 const newPromise = new Promise(execute);

@@ -7,6 +7,7 @@
 - [General Asynchronous Programming Concepts](#general-asynchronous-programming-concepts)
 - [Introduction to Asynchronous JavaScript](#introduction-to-asynchronous-javascript)
 - [Synchronous vs Asynchronous Code](#synchronous-vs-asynchronous-code)
+- [Ajax and APIs](#ajax-and-apis)
 
 <br>
 
@@ -14,7 +15,7 @@
 
 - **Synchronous code** executes in sequential order, line by line from top to bottom of the file. This type of behavior is known as _blocking code_ since each line of code cannot execute until the previous line finishes.
 
-- **Asynchronous code** can be executed in parallel to other code that is already running, saving time and boosting efficiency. This type of behavior is considered _non-blocking_.
+- **Asynchronous code** can be executed in parallel to other code that is already running, saving time and boosting efficiency. This type of behavior is considered as _non-blocking_.
 
 - **Asynchronous Code Under the Hood**
 
@@ -59,23 +60,9 @@
 
   Both built-in functons perform tasks asynchronously.
 
-<br><br>
-
-<hr>
-
-<br><br>
-
-[&larr; Back](./README.md)
+<br>
 
 ## Synchronous vs Asynchronous Code
-
-### Table of Content
-
-- [Synchronous Code](#synchronous-code)
-- [Asynchronous Code](#asynchronous-code)
-- [Ajax and APIs](#ajax-and-apis)
-
-<br>
 
 ## Synchronous Code
 
@@ -87,87 +74,53 @@ Synchronous code can create problems when one line of code takes too much time t
 
 **Example:** the alert statement will create an alert window which will block the code execution until we click the 'ok' button.
 
-<br>
-
 ## Asynchronous Code
 
 ```js
+// EXAMPLE 1
 console.log("Hello");
 SetTimeout(() => console.log("Async"), 1000);
 console.log("World");
 // Output: "Hello" -> "World" -> "Async"
-```
 
-The `setTimeout` function will start a timer in a asynchronous way. The timer will run in the background without blocking the code execution.
-
-A callback function is registered and will execute only after the timer has finished running. _This callback function is asynchronous JavaScript_, because it will execute after a task that is running in the background (the timer).
-
-So, the callback is registered and then we immediately move on to the next line. The code execution is not blocked. This is called **non-blocking** behavior.
-
-When the timer finishes, the callback is executed as well. The callback will run after all the other code even though in the code it doesn't appear at the end.
-
-_Asynchronous programming_ is all about coordianting the behavior of our program over a certain period of time (not occurring at the same time).
-
-Callbacks has nothing to do with asynchronous code, only certain functions like `setTimeout` work in an asynchronous way.
-
-### Loading an image
-
-```js
+// EXAMPLE 2
 const img = document.querySelector("img");
 img.src = "img.jpg";
 img.addEventListener("load", () => img.classList.add("fadeIn"));
 ```
 
-Setting the `src` attribute of an image in JS happens asynchronously - loading an image in the background while the rest of the code can keep running.
+- _Example 1 -_ The **`setTimeout`** function will start a timer in the background in an asynchronous way, without blocking the code execution (non-blocking behavior). The callback is registered and will execute only after the timer has finished running in the background, meanwhile the code moves on to the next line.
 
-Why this works like this? Imagine that it is a huge image, the entire code would wait for the image to load.
+  This callback is _asynchronous JavaScript_ because it executes based on a task running asynchronously in the background (the timer). When the timer finishes, the callback will be placed in the call stack to execute. It will run after all other code, even though it doesn't appear at the end of code.
 
-Once the image finished loading, the `load` event will automatically be emitted by JavaScript.
+- _Example 2 -_ **Loading an Image:** Setting the `src` attribute of an image in JavaScript happens asynchronously. The image is loaded in the background whole the rest of the code can keep running. It was implemented this way because images can be large in terms of kilobytes, which can then block the code execution.
 
-All this happens asynchronously in a non-blocking behavior.
+  Once the image finished loading, the `load` event will automatically be emitted by JavaScript. All this happens asynchronously and in a non-blocking behavior.
 
-What makes our code example asynchronous is the fact that the image is loading asynchronously in the background, and not the fact that we are listening for the load event.
-
-Other examples of asynchronous code in JavaScript: the Geolocation API, Ajax calls.
-
-Ajax calls are the most important use case of asynchronous code.
+Callbacks and events have nothing to do asynchronous code, what makes our code examples asynchronous are the `setTimeout` function and the `src` attribute that loads images in the background.
 
 <br>
 
 ## Ajax and APIs
 
-### Ajax
+- **Ajax** stands for **Asynchronous JavaScript And XML**.
 
-**Ajax** stands for **Asynchronous JavaScript And XML**.
+  With **Ajax Calls** we can "communicate" and **request data** from remote servers asynchronously and dynamically (without reloading the page).
 
-It allow us to communicate with remote web servers in an asynchronous way.
+  Using Ajax, we can do HTTP requests to the server which will send back a response containing the data we requested. This request between the **Client** (browser) and the **Server** happens asynchronously.
 
-With **Ajax calls** we can **request data** from web servers dynamically (without reloading the page).
+  The server usually contains a **web API** that receives the request, retrieves the data, and sends it back.
 
-Using Ajax, we can do an HTTP request to the server which will send back a response, containing the data we requested.
-
-This request between **Client** and **Server** happens asynchronously in the background. There can be different types of requests, like GET or POST.
-
-When we ask the server to give us data, the server usually contains a web API that takes the data and sends it back.
-
-**API data format:** XML is a data format that was once used to transmit data on the web, nowadays no API uses XML data anymore. The term Ajax is just an old name that got very popular and so it's still in use today. Instead, most APIs use the **JSON** data format. JSON is basically just a JS object, but converted to a string. This makes it easy to send across the web and to use it in JavaScript once the data arrives.
+  **API data format:** XML is a data format that was once used to transmit data on the web, nowadays no API uses XML data anymore. The term Ajax is just an old name that got very popular and so it's still in use today. Instead, most APIs use the **JSON** data format. JSON is a JavaScript object converted to a string.
 
 <br>
 
-### API
+- **API (Application Programming Interface):** a piece of software that can be used by another piece of software, in order to allow applications to talk to each other and exchange information.
 
-**API (Application Programming Interface):** a piece of software that can be used by another piece of software, in order to allow applications to talt to each other and exchange information.
+  In web development there are countless APIs: DOM, Geolocation, our own Class APIs, etc. They are called APIs, because they are self contained pieces of software that allow other pieces of software to interact with them.
 
-This is true not only for web development, but for programming in general. In JavaScript and web development, there are countless APIs, examples: DOM API, Geolocation API, Own Class APIs, etc. They are called APIs, because they are self contained pieces of software that allow other pieces of software to interact with them.
+  We can implement a simple API in a Class, where we make some methods available as public interface. Objects created from a Class can be seen as self-contained and encapsulated pieces of software that other pieces of software can interact with - this fits the definition of API.
 
-We can implement a small and simple API in a Class, where we make some methods available as a public interface. Objects created from a class can be seen as self-contained, encapsulated pieces of software, that other pieces of software can interact with. This fits the definition of API.
-
-An API is essentially an application running on a web server which receives requests for data, then it retrieves this data from some database and sends it back to the client.
-
-Building APIs envolves backend development, so working with servers and databases.
-
-As frontend developers, we are focusing in using third-party APIs that other developers have made available to us, most of the time for free.
-
-Imagine we are building a traveling application. We have a database with different destinations and tours that we're offering. So we build our API on our server which receives requests from the frontend (client) and send back the results. This alone would probably not be enough to build a complete application. We can make our job easier using third-party APIs. THere are APIs for everything: to get wheather data for our destinations, data about countries, flights data, currency conversion data, APis for sending email or SMS, google maps, etc. APIs is what made the modern web.
+  An API is essentially an application running on a web server which receives requests for data, then it retrieves this data from some database and sends it back to the client. Building APIs envolves backend development (working with servers and databases). As frontend developers, we are focusing in using third-party APIs that other developers have made available to us, most of the time for free.
 
 <br>

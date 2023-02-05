@@ -11,3 +11,17 @@ Summarizing frontend knowledge while studying for future reference.
 - [JavaScript](./js/README.md)
 
 <br>
+
+## Frontend Stack
+
+- HTML
+- CSS
+- JavaScript
+
+<div></div>
+
+- Git and GitHub
+- Sass and BEM
+- React.js
+
+<div></div>
