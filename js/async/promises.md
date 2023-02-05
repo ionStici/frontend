@@ -101,4 +101,17 @@ In practice, promises settle based on the results of asynchronous operations.
 
 We can consume our `Promise` using the `then()` method. `then()` will handle the `resolve` state, and `catch()` will handle the `reject` state.
 
+### Simulate Asynchronous Behavior using a timer
+
+`setTimeout()` is a Node API that schedule callbacks to be executed after a delay.
+
+```js
+const newPromise = function () {
+  return new Promise((resolve, reject) =>
+    setTimeout(() => resolve("Resolved"), 1000)
+  );
+};
+const settle = newPromise();
+```
+
 <br>

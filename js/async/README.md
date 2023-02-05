@@ -10,14 +10,11 @@
 
 - [Introduction to Asynchronous JavaScript](./intro-async.md)
 - [Concurrency Model and the Event Loop in JavaScript](./concurrency.md)
+- [How the Web Works](how-web-works.md)
 - [Promises](./promises.md)
 
 <div></div>
 
-- [How the Web Works](how-web-works.md)
-
-<div></div>
-
-- [Legacy: XMLHttpRequest](.)
+- [Legacy: XMLHttpRequest](./xmlhttprequest.md)
 
 <div></div>
