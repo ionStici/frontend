@@ -5,6 +5,7 @@
 ## Table of Content
 
 - [Promises Introduction](#promises-introduction)
+- [Constructing a Promise Object](#constructing-a-promise-object)
 
 <br>
 
@@ -43,8 +44,6 @@ _Advantages of using promises:_
 
 </details>
 
-<br>
-
 Since promises work with asynchronous operations, they are time-sensitive, meaning that promises change over time. We call this the _life cycle of a promise_. A `Promise` object can be in one of 3 states:
 
 1. **Pending:** The initial state - the operation has not completed yet. This is before any value resulting from the asynchronous task is available. During this time, the asynchronous task is still doing its work in the background.
@@ -59,10 +58,50 @@ Since promises work with asynchronous operations, they are time-sensitive, meani
 
 All promises eventually settle, enabling us to write logic for what to do if the promise fulfills or if it rejects.
 
-_Note:_ A promise is only settled once, and from there the state will remain unchanged. The promise will be either fulfilled or rejected. It's impossible to change the settled state.
+_Note:_ A promise is settled only once, and from there the state will remain unchanged. The promise will be either fulfilled or rejected. It's impossible to change the settled state.
 
 These different states are relevant once we use the promise to get a result: **to consume a Promise**. For example we consume a promise that was returned from the fetch function.
 
 Generally, a `Promise` first must be build. In the case of the Fecth API, it's the fetch function that builds the promise and returns it for us to consume. So in this case we don't have to build it ourselves. Most of the times we just consume returned promises from the Fetch function, but sometimes we also need to build a `Promise`.
+
+<br>
+
+## Constructing a Promise Object
+
+Promises are objects. We can create new promises using the `Promise` constructor just like many other built-in objects.
+
+```js
+const condition = Math.random() >= 0.5;
+
+const execute = (resolve, reject) => {
+  if (condition) {
+    resolve("✅");
+  } else {
+    reject("🚫");
+  }
+};
+
+const newPromise = new Promise(execute);
+newPromise.then((res) => err).catch((err) => err); // ✅ or 🚫
+// const newPromise = new Promise(function (resolve, reject) { ... });
+```
+
+The `Promise` constructor method takes exactly 1 argument - a function parameter called the _executor function_ which runs automatically when the constructor is called.
+
+The executor function starts an asynchronous operation and dictates how the promise should be settled.
+
+We store the constructor Promise in a variable, which in turn will be our new created promise, just like the `fetch` function.
+
+The executor function is executed with 2 other parameters - 2 function parameters, referred to as the `resolve()` and `reject()` functions. When the `Promise` constructor runs, JavaScript will pass these `resolve()` and `reject()` functions into the executor function as parameters.
+
+Based on some logic, we call `resolve()` or `reject()` to settle the `Promise`.
+
+- `resolve` is a function with one argument that we pass. If this `resolve()` function is invoked then it will change the promise's status from `pending` to `fulfilled`, and the promise's resolved value will be set to the argument passed into `resolve()`.
+
+- `reject` is a function that takes a reason or error as an argument. If `reject()` is invoked, it will change the promise's status from `pending` to `rejected`, and the promise's rejection reason will be set to the argument passed into `reject()`.
+
+In practice, promises settle based on the results of asynchronous operations.
+
+We can consume our `Promise` using the `then()` method. `then()` will handle the `resolve` state, and `catch()` will handle the `reject` state.
 
 <br>
