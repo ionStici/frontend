@@ -117,7 +117,7 @@ Callbacks and events have nothing to do with asynchronous code, what makes our c
 
 - **API (Application Programming Interface):** a piece of software that can be used by another piece of software, in order to allow applications to talk to each other and exchange information.
 
-  In web development there are countless APIs: DOM, Geolocation, our own Class APIs, etc. They are called APIs, because they are self contained pieces of software that allow other pieces of software to interact with them.
+  In web development there are countless APIs: DOM, Geolocation, our own Class APIs, etc. They are called APIs, because they are self contained pieces of software that allow other pieces of software to interact with them. API Call - data coming from third party web APIs.
 
   We can implement a simple API in a Class, where we make some methods available as public interface. Objects created from a Class can be seen as self-contained and encapsulated pieces of software that other pieces of software can interact with - this fits the definition of API.
 
