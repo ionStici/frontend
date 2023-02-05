@@ -93,11 +93,11 @@ img.addEventListener("load", () => img.classList.add("fadeIn"));
 
   This callback is _asynchronous JavaScript_ because it executes based on a task running asynchronously in the background (the timer). When the timer finishes, the callback will be placed in the call stack to execute. It will run after all other code, even though it doesn't appear at the end of code.
 
-- _Example 2 -_ **Loading an Image:** Setting the `src` attribute of an image in JavaScript happens asynchronously. The image is loaded in the background whole the rest of the code can keep running. It was implemented this way because images can be large in terms of kilobytes, which can then block the code execution.
+- _Example 2 -_ **Loading an Image:** Setting the `src` attribute of an image in JavaScript happens asynchronously. The image is loaded in the background while the rest of the code can keep running. It was implemented this way because images can be large in terms of kilobytes, which can then block the code execution.
 
   Once the image finished loading, the `load` event will automatically be emitted by JavaScript. All this happens asynchronously and in a non-blocking behavior.
 
-Callbacks and events have nothing to do asynchronous code, what makes our code examples asynchronous are the `setTimeout` function and the `src` attribute that loads images in the background.
+Callbacks and events have nothing to do with asynchronous code, what makes our code examples asynchronous are the `setTimeout` function and the `src` attribute that loads images in the background.
 
 <br>
 

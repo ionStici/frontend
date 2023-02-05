@@ -60,9 +60,9 @@ All promises eventually settle, enabling us to write logic for what to do if the
 
 _Note:_ A promise is settled only once, and from there the state will remain unchanged. The promise will be either fulfilled or rejected. It's impossible to change the settled state.
 
-These different states are relevant once we use the promise to get a result: **to consume a Promise**. For example we consume a promise that was returned from the fetch function.
+These different states are relevant once we use the promise to get a result: **to consume the Promise**. For example we consume a promise that was returned from the fetch function.
 
-Generally, a `Promise` first must be build. In the case of the Fecth API, it's the fetch function that builds the promise and returns it for us to consume. So in this case we don't have to build it ourselves. Most of the times we just consume returned promises from the Fetch function, but sometimes we also need to build a `Promise`.
+Generally, a `Promise` first must be build. In the case of the Fecth API, it's the fetch function that builds the promise and returns it for us to consume. So in this case we don't have to build it ourselves. Most of the times we just consume returned promises from the Fetch function, but sometimes we also need to _build_ a `Promise`.
 
 <br>
 
