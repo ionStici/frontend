@@ -14,6 +14,7 @@ This process is called: **Request-Response Model** or **Client-Server Architectu
 - [HTTP Request](#http-request)
 - [HTTP Response](#http-response)
 - [TCP / IP](#tcp--ip)
+- [Accessing a Web Page](#accessing-a-web-page)
 
 <br>
 
@@ -74,5 +75,11 @@ The request hits the server, which will then prepare the data or webpage to be r
 First, TCP breaks down the requests and responses into thousands of small chunks called packets before they are sent. Once the small packets arrive at their destination, TCP will reassemble all the packets into the original request or response. This step is necessary so that each packet can take a different route through the internet, because this way the messages arrive at the destination as quick as possible, which would not be possible if we sent the entire data as a big chunk, that would be like trying to go through dense traffic with the biggest bus that you can imagine.
 
 The job of the IP protocol is to send and route these packets through the internet using the IP addess that these packets contain, so it ensures that the packets arrive at the correct destination.
+
+<br>
+
+## Accessing a Web Page
+
+When we access a web page, there will be multiple requests and responses. From the first request all we get back is just the initial HTML file. Then this HTML file will get scanned by the browser for all the assets it needs in order to build the page, like CSS files, images, or other assets. For each different file there will be a new HTTP request made to the server. There can be multiple requests and responses at the same time. But the amount is limited, because otherwise the connection would start to slow down. When all the files have finally arrived, the web page can be rendered in the browser according to the HTML, CSS and JS specifications. But for API calls, it is more like a response per request strategy.
 
 <br>
