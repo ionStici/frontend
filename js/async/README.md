@@ -7,7 +7,7 @@
 <div></div>
 
 - [Introduction to Asynchronous JavaScript](./intro-async.md)
-- [Synchronous vs Asynchronous Code](./async-vs-sync.md)
 - [Concurrency Model and the Event Loop in JavaScript](./concurrency.md)
+- [Promises](./promises.md)
 
 <div></div>
