@@ -8,7 +8,10 @@
 - [Success and Failure Callback Functions](#success-and-failure-callback-functions)
 - [Consuming a Promise returned by the fetch function](#consuming-a-promise-returned-by-the-fetch-function)
 - [Using catch() with Promises](#using-catch-with-promises)
+- [Handling Rejected Promises](#handling-rejected-promises)
 - [Chaining Multiple Promises](#chaining-multiple-promises)
+- [finally() method](#finally-method)
+- [Throwing Errors Manually](#throwing-errors-manually)
 
 <br>
 
@@ -42,6 +45,8 @@ prom.then(handleSuccess, handleFailure); // Success
 
 - Argument **1**: the success handler callback.
 - Argument **2**: the failure handler callback.
+
+_Explication:_ The data that we receive as a parameter to the first callback of the `then()` function is the fulfilled value of the `Promise` we're handling.
 
 _Terminology:_ the success callback is sometimes called the "success handler function" or the `onFulfilled` function. The failure callback is sometimes called the "failure handler function" or the `onRejected" function.
 
@@ -82,6 +87,10 @@ The `catch()` function takes one argument, which is the **failure handler**, and
 
 <br>
 
+## Handling Rejected Promises
+
+<br>
+
 ## Chaining Multiple Promises
 
 Chaining Promises _(composition)_
@@ -93,9 +102,37 @@ prom
   })
   .then((secondRes) => data)
   .then((thirdRes) => data);
+
+// Fetch example
+fetch("https://restcountries.com/v2/name/italy")
+  .then((response) => response.json())
+  .then((data) => {
+    data[0];
+
+    return fetch("https://restcountries.com/v2/name/germany");
+  })
+  .then((response) => response.json())
+  .then((data) => data[0]);
 ```
 
-To chain a second `then()`, we have to `return` the promise from the previous `then()`.
+- The chained Promise depends on the first Promise, being done in sequence.
+- To chain a second `then()`, we have to `return` the promise from the previous `then()`.
+- The chained `then()` method will handle whatever promise was returned from the previous `then()`.
+- The `then()` method always returns a `Promise`, no matter if we return explicitly anything or not.
+
+<div></div>
+
+**Example:** We return a simple value inside the `then()` method. That value will become the fulfilled value of the promise that the current `then()` returns. The next chained `then()` will receive that value as a parameter to the fulfilled handler function.
+
+<div></div>
+
+- **Fetch Example**
+
+  The second Ajax call occurs in the `then()` method of the first Ajax call. As soon as the first Ajax call is made, only then the second Ajax call occur.
+
+  By returning a promise with the `fetch()` function inside the `then()` method, the next `then()` method will receive the fulfilled value of the promise created by `fetch()` in the previous `then()`.
+
+<br>
 
 ### Chaining Promises Mistakes
 
@@ -108,5 +145,21 @@ To chain a second `then()`, we have to `return` the promise from the previous `t
 2. Be sure to `return` the promise for the next `then()` method.
 
    If we do not, the next `then()` will handle the same settled value as the original promise.
+
+<br>
+
+## finally() method
+
+```js
+prom.then((res) => res).finally(() => console.log("Finally"));
+```
+
+The `finally()` method and its callback will always be called whatever the promise is fulfilled or rejected.
+
+_Note:_ `finally` and `catch` also return the promise, we can chain methods on them.
+
+<br>
+
+## Throwing Errors Manually
 
 <br>
