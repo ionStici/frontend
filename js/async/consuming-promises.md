@@ -194,4 +194,63 @@ _Note:_ `finally` and `catch` also return the promise, we can chain methods on t
 
 ## Throwing Errors Manually
 
+In case we search for a country that doesn't exist, we get the following error:
+
+`Cannot read property “flag” of undefined.`
+
+This error doesn't reflect the true meaning that the API can't find a country with the wrong name.
+
+Besides this, the promise will still be fulfilled. The `fetch` function only rejects when there is no internet connection.
+
+In our situation we have a 404 error comming from the server which is not a real error. So there is no rejection and our `catch()` method cannot pick up this error.
+
+We have to manually fix the `404` request error that happens when APIs doesn't find what we requested and tell the user that no result was found with this name. The `fetch` function doesn't reject in a case like this and we have to do it manually.
+
+```js
+fetch(`https://restcountries.com/v2/name/italy`)
+  .then((response) => {
+    if (!response.ok) throw new Error(`Error: ${res.status}`);
+    return res.json();
+  })
+  .then((data) => data[0])
+  .catch((error) => error.message);
+```
+
+We find information about the request in the `response` object. In case the API does not find any result, the property `ok` from the `response` object is set to `false`, and the `status` property is set to `404`.
+
+If `status` were `200`, then `ok` would be `true`, this happens when the request was succesfully.
+
+We can use the fact the `ok` is false and reject the promise manually by creating a real error.
+
+- **_if ( response.ok is false ) then throw error_**
+
+We create a new error using the `Error` constructor and pass in the error message.
+
+Then, the `throw` keyword will immediately terminate the current function, just like `return` does.
+
+The effect of creating and throwing an error like in our code example, is that the promise from the current `then()` method will reject, and this rejected promise will propagate down to the `catch` method.
+
+The error message that we created using the `Error` constructor will be used for the rejection error object. We can find the message in the `error.message` property.
+
+If we get a rejection in the second `fetch` then we get a `400` error.
+
+_Advice:_ Create error messages that make sense and inform the user by displaying UI messages.
+
+<br>
+
+### Helper function
+
+```js
+const getJSON = function (url, errorMessage) {
+  return fetch(url).then((res) => {
+    if (!res.ok) throw new Error(`${errorMessage}: ${res.status}`);
+    return res.json();
+  });
+};
+
+getJSON(`https://restcountries.com/v2/name/italy`, "Error")
+  .then((data) => data[0])
+  .cathc((error) => error.message);
+```
+
 <br>

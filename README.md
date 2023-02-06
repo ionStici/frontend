@@ -20,7 +20,7 @@ Summarizing frontend knowledge while studying for future reference.
 
 <div></div>
 
-- Git & GitHub
+- Git and GitHub
 - React
 
 <div></div>
