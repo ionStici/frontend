@@ -15,6 +15,7 @@
 <div></div>
 
 - [Promises](./promises.md)
+- [Promises and the then() method](./promises-then.md)
 
 <div></div>
 
