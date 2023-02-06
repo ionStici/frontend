@@ -106,10 +106,6 @@ We can consume our `Promise` using the `then()` method. `then()` will handle the
 `setTimeout()` is a Node API that schedule callbacks to be executed after a delay.
 
 ```js
-const settle = new Promise((resolve, reject) =>
-  setTimeout(() => resolve("Resolved"), 1000)
-);
-
 const newPromise = function () {
   return new Promise((resolve, reject) =>
     setTimeout(() => resolve("Resolved"), 1000)
@@ -118,6 +114,11 @@ const newPromise = function () {
 const settle = newPromise();
 
 settle.then((res) => console.log(res)); // print "Resolved" after 1 second
+
+// Promise using an anonymous function
+const settle = new Promise((resolve, reject) =>
+  setTimeout(() => resolve("Resolved"), 1000)
+);
 ```
 
 <br>

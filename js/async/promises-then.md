@@ -1,6 +1,6 @@
 [&larr; Back](./README.md)
 
-# then()
+# Consuming Promises
 
 ## Table of Content
 
@@ -51,6 +51,22 @@ _Terminology:_ the success callback is sometimes called the "success handler fun
 
 **Fetch API** - the modern way of doing Ajax calls.
 
+```js
+fetch("https://restcountries.com/v2/name/italy")
+  .then((response) => response.json())
+  .then((data) => data[0]);
+```
+
+The `fetch()` function will build and return a `Promise`.
+
+At first the `Promise` will be in `pending` state, then at a certain point it will be settled in a fulfilled or rejected state.
+
+To handle the fulfilled state we call `then()` on the `Promise`. Into `then()` we pass a callback which will be executed as soon as the promise is fulfilled. This callback will receive 1 argument which is the value of the fulfilled promise (we name it **response**).
+
+`response` will be an object with data about the response itself, like status, headers, etc. The data itself that we requested is in the body property `response.body`. But, `body` is represented as `ReadableStream` and in order to be able to read the data from the `body` we need to call the `json()` method on `response` which in fact _will return a new Promise._
+
+To further handle the promise, we return `response.json()` from the callback function, and chain another `then()` method to handle the previous returned `response.json()`. The parameter of our second `then()` will be the data itself returned from `response.json()`.
+
 <br>
 
 ## Using catch() with Promises
@@ -71,7 +87,26 @@ The `catch()` function takes one argument, which is the **failure handler**, and
 Chaining Promises _(composition)_
 
 ```js
-prom.then((res) => data).then((secondRes) => data);
+prom
+  .then((res) => {
+    return data;
+  })
+  .then((secondRes) => data)
+  .then((thirdRes) => data);
 ```
+
+To chain a second `then()`, we have to `return` the promise from the previous `then()`.
+
+### Chaining Promises Mistakes
+
+1. Nesting promises instead of chaining them.
+
+   Be sure to chain the next `then()` method and NOT just nest it.
+
+   This way we are back to callback hell.
+
+2. Be sure to `return` the promise for the next `then()` method.
+
+   If we do not, the next `then()` will handle the same settled value as the original promise.
 
 <br>
