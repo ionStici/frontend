@@ -14,8 +14,8 @@
 
 <div></div>
 
-- [Promises](./promises.md)
-- [Promises and the then() method](./promises-then.md)
+- [Constructing Promises](./creating-promises.md)
+- [Consuming Promises](./consuming-promises.md)
 
 <div></div>
 

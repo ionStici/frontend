@@ -20,8 +20,20 @@ Summarizing frontend knowledge while studying for future reference.
 
 <div></div>
 
-- Git and GitHub
+- Git & GitHub
+- React
+
+<div></div>
+
+<details>
+<summary>Additionally</summary>
+
+<br>
+
 - Sass and BEM
-- React.js
+
+<br>
+
+</details>
 
 <div></div>

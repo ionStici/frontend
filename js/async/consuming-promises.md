@@ -89,6 +89,38 @@ The `catch()` function takes one argument, which is the **failure handler**, and
 
 ## Handling Rejected Promises
 
+```js
+fetch("https://restcountries.com/v2/name/italy")
+  .then(
+    (response) => response.json(),
+    (error) => console.log(err.message)
+  )
+  .then((data) => data[0])
+  .catch((error) => console.log(err.message));
+```
+
+A Promise in which an error happens is a rejected promise. The only way in which `fetch` rejects in when the user loses his internet connection. To simulate no internet connection we can use chrome devTools (Network -> offline).
+
+Using `fetch` while offline error: `Uncaught (in promise) Type Error: Failed to fetch.`
+
+**2 ways of handling promise rejection:**
+
+1. _Using a second callback into the `then() method._
+
+   This callback will be called with an error argument when the promise will reject.
+
+   By handling errors like this we actually catch the default error (similar to `try...catch`).
+
+2. **Using the `catch()` method**, technically works like the second callback of `then()`
+
+   The `catch()` method will catch all the errors no matter where they appeared in the promise chain.
+
+   Errors basically propagate down the chain until they are caught, and only if they're not caught anywhere then we get that `Uncaught` error.
+
+   `catch` also receives the error object. We place `catch` at the end of the chain.
+
+The error object that we receive as a parameter in `catch`, contains a `message` property that we can use.
+
 <br>
 
 ## Chaining Multiple Promises
