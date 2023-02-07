@@ -6,6 +6,9 @@
 
 - [Promises Introduction](#promises-introduction)
 - [Constructing a Promise Object](#constructing-a-promise-object)
+- [Promisifying](#promisifying)
+- [resolve and reject](#resolve-and-reject)
+- [Promisifying the Geolocation API](#promisifying-the-geolocation-api)
 
 <br>
 
@@ -120,5 +123,62 @@ const settle = new Promise((resolve, reject) =>
   setTimeout(() => resolve("Resolved"), 1000)
 );
 ```
+
+<br>
+
+## Promisifying
+
+**Promisifying** means to convert callback based asynchronous behavior to promise based.
+
+We can promisify the image load, Geolocation API, XMLHttpRequest, etc.
+
+```js
+const wait = (seconds) =>
+  new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+
+wait(2)
+  .then(() => wait(1))
+  .then(() => wait(1))
+  .then(() => console.log("4 seconds"));
+```
+
+1. _Promisifying:_ Creating a function -> Returning a Promise.
+2. Inside `then()` we run the code supposed for promisifying.
+
+<br>
+
+## resolve and reject
+
+`Promise.resolve` and `Promise.reject` are static methods on the `Promise` constructor, these two will create a promise that is immediately resolved or rejected.
+
+The argument we pass will be the fulfilled or reject value which we then handle it with `then()` or `catch()`.
+
+```js
+Promise.resolve("Resolved").then((x) => x); // handle with then()
+Promise.reject("Rejected").catch((x) => x); // handle with catch()
+```
+
+<br>
+
+## Promisifying the Geolocation API
+
+The Geolocation API is executed asynchronously in the web APIs environment.
+
+Promisifying the Geolocation API from callback based to Promise based API:
+
+```js
+const getPosition = function () {
+  return new Promise((resolve, reject) =>
+    navigator.geolocation.getCurrentPosition(resolve, reject)
+  );
+  // (position => resolve(position), err => reject(err))
+};
+
+getPosition
+  .then((position) => [position.coords.latitude, position.coords.longitude])
+  .catch((error) => error);
+```
+
+We pass `resolve` and `reject` functions directly into `getCurrentPosition()`, they will be automatically called with the position object or failure reason as parameter.
 
 <br>
