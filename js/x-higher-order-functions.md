@@ -1,3 +1,5 @@
+[&larr; Back](./README.md)
+
 # Higher Order Functions
 
 How to use _abstractions_ by writing functions.
@@ -13,8 +15,6 @@ Using abstraction allows us to write more modular code, which is easier to read 
 ## Table of Content
 
 - []()
-- []()
-- []()
 
 <br>
 
@@ -24,7 +24,7 @@ JavaScript functions behave like any other data type in the language. We can ass
 
 ```js
 const sayHello = function () {
-  console.log('Hello');
+  console.log("Hello");
 };
 
 const hello = sayHello;
@@ -64,10 +64,10 @@ Callback functions get invoked during the execution of the higher-order function
 When we invoke a higher-order function, and pass another function in as an argument, we don't invoke the argument function. Invoking it would evaluated to passing in the return value of that function call. With callback functions, we pass in the function itself by typing the function name without the parentheses.
 
 ```js
-const higherOrderFunction = callback => callback();
-const hello = () => console.log('Hello');
+const higherOrderFunction = (callback) => callback();
+const hello = () => console.log("Hello");
 higherOrderFunction(hello);
-higherOrderFunction(() => 'hello'); // passing in an anonymous function
+higherOrderFunction(() => "hello"); // passing in an anonymous function
 ```
 
 We can even pass in as argument anonymous functions.

@@ -21,6 +21,10 @@
 
 <div></div>
 
+- [Async / Await](./async-await.md)
+
+<div></div>
+
 - [Legacy: XMLHttpRequest](./xmlhttprequest.md)
 
 <div></div>
