@@ -5,6 +5,7 @@
 [**&larr; Back to the Main Page**](./../README.md)
 
 - [GitHub: public-apis](https://github.com/public-apis/public-apis)
+- [Timers](./timers.md)
 
 <div></div>
 
