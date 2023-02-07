@@ -11,6 +11,7 @@
 
 - [Introduction to Asynchronous JavaScript](./intro-async.md)
 - [Concurrency Model and the Event Loop in JavaScript](./concurrency.md)
+- [Asynchronous Behind the Scenes: The Event Loop](./event-loop.md)
 - [How the Web Works](how-web-works.md)
 
 <div></div>
