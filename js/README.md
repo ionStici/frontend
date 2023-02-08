@@ -18,7 +18,11 @@ The programming language of the Web.
 
 <div></div>
 
-- [**JavaScript Native Modules**](./modules.md)
+- [**JavaScript In-depth Concepts**](./intro-2/README.md)
+
+<div></div>
+
+- [**JavaScript Native Modules**](./folder/modules.md)
 
 <div></div>
 
@@ -33,8 +37,3 @@ The programming language of the Web.
 - [**Document Object Model (DOM)**](./dom/README.md)
 
 <div></div>
-
-<!-- - [Destructuring](./destructuring.md)
-- [Error Handling](./error-handling.md)
-
-<div></div> -->

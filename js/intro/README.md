@@ -18,16 +18,8 @@
 
 - [Conditionals](./conditionals.md)
 - [Functions](./functions.md)
-
-<div></div>
-
 - [Arrays](./arrays.md)
 - [Loops](./loops.md)
-- [Array Methods](./array-methods.md)
-
-<div></div>
-
 - [Objects](./objects.md)
-- [Advanced Objects](./advanced-objects.md)
 
 <div></div>
