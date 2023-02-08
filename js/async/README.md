@@ -26,6 +26,8 @@
 <div></div>
 
 - [APIs and HTTP Requests](./apis-http.md)
+- [Working with JSON](./json.md)
+- [RESTful](./rest.md)
 
 <div></div>
 

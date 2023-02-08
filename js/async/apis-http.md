@@ -5,18 +5,19 @@
 ## Table of Content
 
 - [HTTP Requests](#http-requests)
+- [Web APIs](#web-apis)
 
 <br>
 
 ## HTTP Requests
 
-**HTTP (HyperText Transfer Protocol)** is used to structure requests and response over the internet. It is a protocol for sending data from one point to another over the network.
-
 **URL (Uniform Resource Locator)** is like a home address or a phone number, it describes how to reach you.
+
+**HTTP (HyperText Transfer Protocol)** is used to structure requests and response over the internet. It is a protocol for sending data from one point to another over the network.
 
 This transfer of resources (HTML files, stylesheets, scripts, images, videos) happens using _TCP (Transmission Control Protocol)._
 
-### HTTP & TCP
+**HTTP & TCP**
 
 When we type an address URL into the browser, it will open a TCP channel to the server that responds to that URL.
 
@@ -88,9 +89,39 @@ Here, the server identifies that it understands the HTTP protocol, then `404 NOT
 
 About the [404 error](https://www.codecademy.com/article/http-errors-404).
 
-### HTTPS
+**HTTPS**
 
 - HTTPS (HTTP Secure) allows you to encrypt data that you send and receive.
 - HTTPS is important to use when passing sensitive information to and from websites.
+
+<br>
+
+## Web APIs
+
+An **Application Programming Interface (API)** is a software tool that makes it easier for developers to interact with another application to use some of that application's functionality.
+
+### Types of APIs
+
+_Two main categories of web APIs: (1) browser APIs and (2) 3rd party APIs._
+
+**Browser APIs** are specific to writing code related to browsers and give developers access to information that the browser can also access. [MDN's documentation of web APIs](https://developer.mozilla.org/en-US/docs/Web/API)
+
+**Third-party APIs** are apps that provide functionality or information from a third-party.
+
+### Third-party APIs
+
+Each API has a specific structure and protocol that we have to follow in order to gain access to its functionality.
+
+Organizations that maintain third-party APIs often set rules and requirements for how develoeprs can interact with their APIs.
+
+For OpenWeather, we need to sign up for an account and generate a special token called an _API key_ that grants our account the ability to make API requests. API keys are unique to individual accounts and should be kept secret.
+
+There are free and paid APIs. Check out the API documentation for additional information.
+
+Most of the times we use 3rd-party APIs for making requests for data.
+
+After we make a successful API request, the API sends back data. Usually, APIs data comes in a [JSON](https://www.codecademy.com/article/what-is-json) format (JavaScript Object Notation) which looks like a JavaScript object but converted into a string.
+
+Then, it's up to us how we use this data.
 
 <br>
