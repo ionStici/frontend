@@ -25,6 +25,10 @@
 
 <div></div>
 
+- [APIs and HTTP Requests](./apis-http.md)
+
+<div></div>
+
 - [Legacy: XMLHttpRequest](./xmlhttprequest.md)
 
 <div></div>
