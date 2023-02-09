@@ -4,8 +4,8 @@
 
 [**&larr; Back to the Main Page**](./../README.md)
 
-- [GitHub: public-apis](https://github.com/public-apis/public-apis)
-- [Timers](./timers.md)
+- [GitHub Repository: public-apis](https://github.com/public-apis/public-apis)
+- [Timers: setTimeout and setInterval](./timers.md)
 
 <div></div>
 
@@ -29,6 +29,10 @@
 - [APIs and HTTP Requests](./apis-http.md)
 - [Working with JSON](./json.md)
 - [REST](./rest.md)
+
+<div></div>
+
+- [Web Security](./web-security.md)
 
 <div></div>
 
