@@ -27,7 +27,7 @@
 
 - [APIs and HTTP Requests](./apis-http.md)
 - [Working with JSON](./json.md)
-- [RESTful](./rest.md)
+- [REST](./rest.md)
 
 <div></div>
 
