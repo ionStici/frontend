@@ -6,21 +6,23 @@
 
 [Penetration testing](https://csrc.nist.gov/glossary/term/penetration_testing) (pen testing & ethical hacking) is a growing practice where a cyberattack is simulated in order to identify security vulnerabilities so that they can be discoverted and remediated.
 
+<br>
+
 ## Security Principles
 
-_CIA stands for Confidentiality, Integrity, and Availability._
+**CIA** stands for _Confidentiality_, _Integrity_, and _Availability_.
 
-**Confidentiality** refers to protecting private information from eyes that shouldn’t have access to it. It’s the need to enforce access - who can see this, and who shouldn’t? Examples of enforcing confidentiality include implementing robust user authentication and encryption of important user data.
+**Confidentiality:** protecting private information. Examples of enforcing confidentiality: robust user authentication, encryption of important user data.
 
-**Integrity** refers to data integrity here. We need security controls that protect data from being changed or deleted, and that the damage can be reversed if done accidentally. Some techniques related to integrity are database security, keeping backups and using cryptography to check for changes.
+Data **Integrity:** security controls that protect data from being changed or deleted, and that the damage can be reversed if done accidentally. _Entegrity techniques:_ database security, keeping backups, using cryptography to check for changes.
 
-**Availability** refers to data being consistently, reliably available to those authorized. For example, social media websites ensure that even with high traffic or when a server is compromised, information gets to a user’s screen. This is accomplished through constant maintenance of hardware and software, monitoring servers and networks, and having a plan for any disasters.
+**Availability** refers to data being consistently, reliably available to those authorized. Even with high traffic or when a server is compromised, information gets to the user’s screen. Practices: constant maintenance of hardware and software, monitoring servers and networks, having a plan for any disasters.
+
+<br>
 
 ## 2017 OWASP Top 10
 
-[OWASP (Open Web Application Security Project)](https://owasp.org/) is a great resource for developers, effering tools, security education and manuals.
-
-**OWASP** is a respected authority in the field of web security.
+[**OWASP** (Open Web Application Security Project)](https://owasp.org/) is a respected authority in the field of web security. And also a great resource for developers, offering tools, security education and manuals.
 
 The [OWASP Top Ten](https://owasp.org/www-project-top-ten/) is a project maintained by the OWASP. Top Ten is a collection of the ten most serious vulnerabilities for web applications.
 
@@ -32,7 +34,7 @@ The [OWASP Top Ten](https://owasp.org/www-project-top-ten/) is a project maintai
 
    The stolen information from Sensitive Data Exposure gets sold and resold on the dark web, often ending up in sets of personal information known as _fullz_. Fullz contain information someone could use to commit the kinds of fraud that can ruin a victim’s life for years, and most of this information is on sale for $25 or less.
 
-4. **XML External Entities (XXE)** is a type of vulnerability that allows maliciously crafted data to produce unintended behavior on the baclend of a website. XXE involves an attacker to unload a maliciously crafted XML file. Simplest solution: don't use XML.
+4. **XML External Entities (XXE)** is a type of vulnerability that allows maliciously crafted data to produce unintended behavior on the backend of a website. XXE involves an attacker to unload a maliciously crafted XML file. Simplest solution: don't use XML.
 
 5. **Broken Access Control** is when authorization is improperly enforced, allowing users access to privileges they should not have. Mitigations: rate limits for logins, ensuring server-side validation of requests, implementing default-deny for permissions.
 

@@ -12,7 +12,7 @@
 - [Introduction to Asynchronous JavaScript](./intro-async.md)
 - [Concurrency Model and the Event Loop in JavaScript](./concurrency.md)
 - [Asynchronous Behind the Scenes: The Event Loop](./event-loop.md)
-- [How the Web Works](how-web-works.md)
+- [How the Web Works: Requests and Responses](how-web-works.md)
 
 <div></div>
 
@@ -21,21 +21,20 @@
 
 <div></div>
 
-- [Async / Await](./async-await.md)
-- [Requests with Fetch API]()
+- [Async / Await Syntax](./async-await.md)
+- [Requests with Fetch API](./requests.md)
+- [Working with Async / Await](./async-await-fetch.md)
+- [Promise Combinators](./promise-combinators.md)
 
 <div></div>
 
 - [APIs and HTTP Requests](./apis-http.md)
-- [Working with JSON](./json.md)
-- [REST](./rest.md)
+- [Working with JSON data](./json.md)
+- [What is REST Pattern](./rest.md)
 
 <div></div>
 
 - [Web Security](./web-security.md)
-
-<div></div>
-
 - [Legacy: XMLHttpRequest](./xmlhttprequest.md)
 
 <div></div>

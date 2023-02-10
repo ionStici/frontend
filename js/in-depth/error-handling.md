@@ -93,7 +93,7 @@ console.log("Huh, thanks god you caught the error");
 - The _catch block_ of the `catch` statement, contains code that executes to handle the error.
 - Since the error is caught, the program will keep running.
 
-In a `try..catch` statement, we evaluate code in the `try` block and if the code throws an error, the code inside the `catch` block will handle the error for us.
+In a `try..catch` statement, we evaluate code in the `try` block and if the code throws an error, the code inside the `catch` block will handle the error for us. The `catch` block will have access to whatever error occurs in the `try` block.
 
 <br>
 
