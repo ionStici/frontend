@@ -12,9 +12,7 @@
 
 ## setTimeout
 
-Timer that runs once after a defined time.
-
-`setTimeout` runs in a non-blocking behavior.
+`setTimeout` runs once after a defined time in a non-blocking behavior.
 
 ```js
 setTimeout(() => console.log("Hello"), 3 * 1000);
@@ -38,16 +36,16 @@ const timer = setTimeout(() => console.log("Nope"), 1000);
 clearTimeout(timer);
 ```
 
-To clear a `setTimeout` timer:
+_To clear a `setTimeout` timer:_
 
-1. First we store it in a variable
+1. First we store the timer in a variable.
 2. Then we pass that variable in the `clearTimeout()` function.
 
 <br>
 
 ## setInterval
 
-`setInterval` will call its callback every time in a time interval that we define.
+`setInterval` repeatedly calls its callback with a fixed time delay between each call.
 
 ```js
 const intervals = setInterval(() => console.log("Hello"), 1000);

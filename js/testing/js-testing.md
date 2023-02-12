@@ -2,12 +2,12 @@
 
 # JavaScript Testing
 
-## Table of Content
+<!-- ## Table of Content
 
 - [Introduction](#introduction)
 - [Tests with Mocha](#tests-with-mocha)
 
-<br>
+<br> -->
 
 ## Introduction
 
@@ -22,7 +22,7 @@
 
 <br>
 
-## Tests with Mocha
+<!-- ## Tests with Mocha
 
 **Test frameworks:** organize and automate tests that provide useful feedback when errors occur.
 
@@ -54,6 +54,4 @@ npm test
 
 This will run the full test suite automatically.
 
-<br>
-
-To be continued..
+<br> -->

@@ -2,9 +2,7 @@
 
 # XMLHttpRequest
 
-_Note:_ These days we have better ways to make Ajax calls.
-
-_Note:_ The JavaScript Fetch API is an alternative to the XMLHttpRequest and they are not used simultaneously.
+_Note:_ The JavaScript Fetch API is an better alternative to the XMLHttpRequest.
 
 The old way of doing Ajax calls: `XMLHttpRequest` function.
 

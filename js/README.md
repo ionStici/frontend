@@ -18,7 +18,7 @@ The programming language of the Web.
 
 <div></div>
 
-- [**JavaScript In-depth Concepts**](./intro-2/README.md)
+- [**JavaScript In-depth Concepts**](./in-depth/README.md)
 
 <div></div>
 

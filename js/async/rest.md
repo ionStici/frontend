@@ -21,7 +21,7 @@ In the REST architecture, clients send requests to retrieve or modify resources,
 REST requires that a client make a request to the server in order to retrieve of modify data on the server. A request generally consists of:
 
 - an HTTP verb (defines what kind of operation to perform)
-- a header (allows the clien to pass along information about the request)
+- a header (allows the client to pass along information about the request)
 - a path to a resource
 - an optional message body containing data
 
@@ -35,5 +35,7 @@ There are 4 basic HTTP verbs we use in requests to interact with resources in a 
 - `DELETE` - remove a specific resource (by id)
 
 [Codecademy: What is CRUD?](https://www.codecademy.com/article/what-is-crud)
+
+### ...
 
 <!-- ### Headers and Accept parameters -->
