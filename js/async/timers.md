@@ -2,6 +2,8 @@
 
 # Timers
 
+<!-- `setTimeout()` is a Node API that schedule callbacks to be executed after a delay. -->
+
 ## Table of Content
 
 - [setTimeout](#settimeout)

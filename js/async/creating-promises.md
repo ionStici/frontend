@@ -5,153 +5,62 @@
 ## Table of Content
 
 - [Promises Introduction](#promises-introduction)
-- [Constructing a Promise Object](#constructing-a-promise-object)
+- [Constructing a Promise](#constructing-a-promise)
+- [resolve and reject methods](#resolve-and-reject-methods)
 - [Promisifying](#promisifying)
-- [resolve and reject](#resolve-and-reject)
-- [Promisifying the Geolocation API](#promisifying-the-geolocation-api)
 
 <br>
 
 ## Promises Introduction
 
-**Promises** are objects that represent the eventual outcome of an asynchronous operation.
-
-<details>
-<summary>Other Definitions</summary>
-
-<div></div>
-
-- Promise: an object that is used as a placeholder for the future result of an asynchronous operation.
-
-<div></div>
-
-- Promise: a container for an asynchronous delivered value.
-
-<div></div>
-
-- Promise: a container for a future value. Example of future value: the response from an Ajax call.
-
-<div></div>
-
-_Advantages of using promises:_
-
-<div></div>
-
-- We no longer rely on events and callbacks to handle asynchronous results.
-
-<div></div>
-
-- We chain promises as a sequence and escape callback hell.
-
-<div></div>
+A `Promise` is an object that represent the eventual outcome of an asynchronous operation.
 
 </details>
 
-Since promises work with asynchronous operations, they are time-sensitive, meaning that promises change over time. We call this the _life cycle of a promise_. A `Promise` object can be in one of 3 states:
+Since promises work with asynchronous operations, they are time-sensitive, meaning that promises change over time. A `Promise` object can be in one of 3 states:
 
-1. **Pending:** The initial state - the operation has not completed yet. This is before any value resulting from the asynchronous task is available. During this time, the asynchronous task is still doing its work in the background.
+1. **Pending** is the initial state of the promise, the asynchronous operation has not completed yet, the promise still awaits a response.
 
-   Then, when the task finishes, the Promise is **Settled**. There are 2 different types of settled promises: _Fulfilled_ and _Rejected_ promises.
+   When the asynchronous operation has finished, the `Promise` is **Settled**. Two different types of settled promises: _Fulfilled_ and _Rejected_ promises.
 
-2. **Fulfilled:** The operation has completed successfully and the promise now has a _resolved value_
+2. **Fulfilled:** The asynchronous operation has completed successfully and the promise now has a _resolved value_.
 
-   A fulfilled promise successfully resulted in a value, for example a request's promise might resolve a JSON object as its value after fetching data from an API. The promise received the data and is now available for use.
+3. **Rejected:** The asynchronous operation has failed and the promise received a reason for the failure (error).
 
-3. **Rejected:** The operation has failed and the promise has a reason for the failure. The reason is usually an `Error` of some kind during the asynchronous task, for example in case the user is offline.
-
-All promises eventually settle, enabling us to write logic for what to do if the promise fulfills or if it rejects.
-
-_Note:_ A promise is settled only once, and from there the state will remain unchanged. The promise will be either fulfilled or rejected. It's impossible to change the settled state.
-
-These different states are relevant once we use the promise to get a result: **to consume the Promise**. For example we consume a promise that was returned from the fetch function.
-
-Generally, a `Promise` first must be build. In the case of the Fecth API, it's the fetch function that builds the promise and returns it for us to consume. So in this case we don't have to build it ourselves. Most of the times we just consume returned promises from the Fetch function, but sometimes we also need to _build_ a `Promise`.
+After the `Promise` is constructed and then settled, we **consume the Promise**.
 
 <br>
 
-## Constructing a Promise Object
+## Constructing a Promise
 
-Promises are objects. We can create new promises using the `Promise` constructor just like many other built-in objects.
-
-```js
-const condition = Math.random() >= 0.5;
-
-const execute = (resolve, reject) => {
-  if (condition) resolve("✅");
-  if (!condition) reject("🚫");
-};
-
-const newPromise = new Promise(execute);
-newPromise.then((res) => err).catch((err) => err); // ✅ or 🚫
-// const newPromise = new Promise(function (resolve, reject) { ... });
-```
-
-The `Promise` constructor method takes exactly 1 argument - a function parameter called the _executor function_ which runs automatically when the constructor is called.
-
-The executor function starts an asynchronous operation and dictates how the promise should be settled.
-
-We store the constructor Promise in a variable, which in turn will be our new created promise, just like the `fetch` function.
-
-The executor function is executed with 2 other parameters - 2 function parameters, referred to as the `resolve()` and `reject()` functions. When the `Promise` constructor runs, JavaScript will pass these `resolve()` and `reject()` functions into the executor function as parameters.
-
-Based on some logic, we call `resolve()` or `reject()` to settle the `Promise`.
-
-- `resolve` is a function with one argument that we pass. If this `resolve()` function is invoked then it will change the promise's status from `pending` to `fulfilled`, and the promise's resolved value will be set to the argument passed into `resolve()`.
-
-- `reject` is a function that takes a reason or error as an argument. If `reject()` is invoked, it will change the promise's status from `pending` to `rejected`, and the promise's rejection reason will be set to the argument passed into `reject()`.
-
-In practice, promises settle based on the results of asynchronous operations.
-
-We can consume our `Promise` using the `then()` method. `then()` will handle the `resolve` state, and `catch()` will handle the `reject` state.
-
-### Simulate Asynchronous Behavior using a timer
-
-`setTimeout()` is a Node API that schedule callbacks to be executed after a delay.
+We create new promises using the `Promise` constructor.
 
 ```js
-const newPromise = function () {
-  return new Promise((resolve, reject) =>
-    setTimeout(() => resolve("Resolved"), 1000)
-  );
-};
-const settle = newPromise();
+const condition = Math.random() > 0.5;
 
-settle.then((res) => console.log(res)); // print "Resolved" after 1 second
+const executorFunction = (resolve, reject) =>
+  setTimeout(() => (condition ? resolve("YES") : reject("NO")), 1500);
 
-// Promise using an anonymous function
-const settle = new Promise((resolve, reject) =>
-  setTimeout(() => resolve("Resolved"), 1000)
-);
+const prom = new Promise(executorFunction);
 ```
+
+The `Promise` constructor takes a function as argument (_executor function_). The executor function starts an asynchronous operation and dictates how the promise should be settled.
+
+The executor function receives 2 function parameters: `resolve()` and `reject()`. Depending on which of these 2 functions is called, the promise will resolve or reject.
+
+- If `resolve` is invoked, the state of the promise will change from pending to fulfilled. The resolved value will be set to the argument passed into `resolve()`.
+
+- If `reject` is invoked, the state of the promise will change fro pending to rejected. The rejection reason will be set to the argument passed into `reject()`.
+
+_p.s._ By using the `setTimeout` function we simulate an asynchronous behavior.
 
 <br>
 
-## Promisifying
+## resolve and reject methods
 
-**Promisifying** means to convert callback based asynchronous behavior to promise based.
+`Promise.resolve()` and `Promise.reject()` are static methods on the `Promise` constructor. These two will create a promise that is immediately resolved or rejected.
 
-We can promisify the image load, Geolocation API, XMLHttpRequest, etc.
-
-```js
-const wait = (seconds) =>
-  new Promise((resolve) => setTimeout(resolve, seconds * 1000));
-
-wait(2)
-  .then(() => wait(1))
-  .then(() => wait(1))
-  .then(() => console.log("4 seconds"));
-```
-
-1. _Promisifying:_ Creating a function -> Returning a Promise.
-2. Inside `then()` we run the code supposed for promisifying.
-
-<br>
-
-## resolve and reject
-
-`Promise.resolve` and `Promise.reject` are static methods on the `Promise` constructor, these two will create a promise that is immediately resolved or rejected.
-
-The argument we pass will be the fulfilled or reject value which we then handle it with `then()` or `catch()`.
+The argument we pass in will be the fulfilled or rejected value which we then handle with `then()` or `catch()`.
 
 ```js
 Promise.resolve("Resolved").then((x) => x); // handle with then()
@@ -160,25 +69,22 @@ Promise.reject("Rejected").catch((x) => x); // handle with catch()
 
 <br>
 
-## Promisifying the Geolocation API
+## Promisifying
 
-The Geolocation API is executed asynchronously in the web APIs environment.
+**Promisifying** means to convert a callback based asynchronous behavior to promise based.
 
-Promisifying the Geolocation API from callback based to Promise based API:
+1. Promisifying: Creating a function -> Returning a Promise.
+2. Inside `then()` we run the code supposed for promisifying.
 
 ```js
-const getPosition = function () {
-  return new Promise((resolve, reject) =>
-    navigator.geolocation.getCurrentPosition(resolve, reject)
-  );
-  // (position => resolve(position), err => reject(err))
-};
+const getPosition = () =>
+  new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
 
-getPosition
+getPosition()
   .then((position) => [position.coords.latitude, position.coords.longitude])
-  .catch((error) => error);
+  .catch((error) => error.message);
 ```
-
-We pass `resolve` and `reject` functions directly into `getCurrentPosition()`, they will be automatically called with the position object or failure reason as parameter.
 
 <br>

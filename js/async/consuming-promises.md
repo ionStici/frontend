@@ -52,6 +52,33 @@ _Terminology:_ the success callback is sometimes called the "success handler fun
 
 <br>
 
+<!-- Generally, a `Promise` first must be build. In the case of the Fecth API, it's the fetch function that builds the promise and returns it for us to consume. So in this case we don't have to build it ourselves. Most of the times we just consume returned promises from the Fetch function, but sometimes we also need to _build_ a `Promise`. -->
+
+<!-- We can consume our `Promise` using the `then()` method. `then()` will handle the `resolve` state, and `catch()` will handle the `reject` state. -->
+
+<!-- In practice, promises settle based on the results of asynchronous operations. -->
+
+<!-- ## Promisifying
+
+**Promisifying** means to convert a callback based asynchronous behavior to promise based.
+
+
+
+```js
+const wait = (seconds) =>
+  new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+
+wait(2)
+  .then(() => wait(1))
+  .then(() => wait(1))
+  .then(() => console.log("4 seconds"));
+```
+
+1. _Promisifying:_ Creating a function -> Returning a Promise.
+2. Inside `then()` we run the code supposed for promisifying.
+
+<br> -->
+
 ## Consuming a Promise returned by the fetch function
 
 **Fetch API** - the modern way of doing Ajax calls.
