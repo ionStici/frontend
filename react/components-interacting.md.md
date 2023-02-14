@@ -138,9 +138,9 @@ class Example extends React.Component {
     }
 }
 
-ReactDOM.render(
-    <Example />,
-    document.querySelector('main')
+const root = ReactDOM.createRoot(document.querySelector('.main'));
+root.render(
+    <Example />
 );
 ```
 
@@ -177,7 +177,7 @@ If the component is an self-closing tag, then `children` will be undefined.
 
 ### **defaultProps**
 
-We can set default properties for situation when we property was not defined:
+We can set default properties for the situation when the property was not defined:
 
 ```JSX
 class Example extends React.Component {
@@ -195,15 +195,17 @@ First the name of the component and then `.defaultProps`, and equal to an object
 
 In this object, we can write properties for any default props.
 
+`defaultProps` must be define before the component is rendered. It will not override existing props.
+
 <br>
 
 ## **this.state**
 
 React components will often need dynamic information (information that can change) in order to render.
 
-There are two ways for a React Component to access dynamic information: `props` and `states`.
+There are two ways for a React Component to access dynamic information: `props` and `state`.
 
-Besides `props` and `states`, every value in a component should always stay exactly the same.
+Besides `props` and `state`, every value in a component should always stay exactly the same.
 
 ### **Setting initial state**
 

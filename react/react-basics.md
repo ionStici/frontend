@@ -86,20 +86,18 @@ Render a JSX expression on screen.
 
 ```JSX
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
-ReactDOM.render(
-    <h1>Hello World</h1>,
-    document.querySelector('div')
-);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<h1>Hello World</h1>);
 ```
 
 `ReactDOM` is a JS library that contains React-specific methods which deals with the DOM.
 
-`ReactDOM.render()` is a method for rendering JSX. It takes a JSX expression, creates a corresponding tree of DOM nodes, and adds that tree to the DOM.
+`render()` is a method for rendering JSX. It takes a JSX expression, creates a corresponding tree of DOM nodes, and adds that tree to the DOM.
 
-- The **first argument** of `render()` method, is the JSX expression which we want to render.
-- The **second argument** is the element to which the JSX expression is appended.
+- `render` is appended to the element for which the HTML is inserted.
+- The argument of `render()`, is the JSX expression which we want to render.
 
 _p.s. The first argument could also be a variable, so long as that variable evaluates to a JSX expression._
 
@@ -107,7 +105,7 @@ _p.s. The first argument could also be a variable, so long as that variable eval
 
 ## **Virtual DOM**
 
-`ReactDOM.render()` only updates DOM elements that have been changed.
+`render` only updates DOM elements that have been changed.
 
 If you render the exact same thing twice in a row, the second render will do nothing.
 
@@ -115,7 +113,7 @@ If you render the exact same thing twice in a row, the second render will do not
 
 ## **class vs className**
 
-To set a `class` attribute in JSX, we use `className` keyword instead:
+To set a `class` attribute in JSX, we use the `className` keyword instead:
 
 ```JSX
 <h1 className="heading-1">Hello</h1>
@@ -250,7 +248,7 @@ React uses them internally to keep track of lists.
 
 You should always use `key` if: **1.** The list-items have memory from one render to the next. **2.** A list’s order might be shuffled.
 
-Each `key` must be q unique string that Reac can use to correctly pair each rendered element with its corresponding item in the array.
+Each `key` must be a unique string that React can use to correctly pair each rendered element with its corresponding item in the array.
 
 ```JSX
 <li key="item_1">Example 1</li>

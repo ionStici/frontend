@@ -12,7 +12,7 @@ A component is a small, reusable chunk of code that is responsible for one speci
 
 ```JSX
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 ```
 
 This imports two objects named `React` and `ReactDOM`, which contains React-related methods:
@@ -73,8 +73,8 @@ To create a Component Instance, we write a JSX element with the name of the comp
 
 ### **Render a Component**
 
-Now, to render the component instance, we call the component's `render` method by passing the component instance to `ReactDOM.render()` as first argument.
+Now, to render the component instance, we pass in the component instance to `render()` method.
 
-So, `ReactDOM.render()` will call the component instance's `render` method, which in turn will return the JSX element.
+`render()` will call the component instance's `render` method, which in turn will return the JSX element.
 
 Then, the result will be added to the virtual DOM.
