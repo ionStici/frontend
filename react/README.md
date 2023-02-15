@@ -24,6 +24,7 @@
 
 <div></div>
 
-- [State and Props interacting between Components](./stateless-stateful.md)
+- [State and Props](./stateless-stateful.md)
+- [Lifecycle Methods](./lifecycle.md)
 
 <div></div>
