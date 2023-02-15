@@ -1,8 +1,6 @@
 # React
 
-# **React**
-
-## **Table of Content**
+## Table of Content
 
 [**&larr; Back to the Main Page**](./../README.md)
 
@@ -26,5 +24,6 @@
 
 - [State and Props](./stateless-stateful.md)
 - [Lifecycle Methods](./lifecycle.md)
+- [Function Components and Hooks](./function-components.md)
 
 <div></div>
