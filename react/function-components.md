@@ -127,3 +127,68 @@ const Comp = () => {
 It is best practice to update state with a callback function.
 
 <br>
+
+### Arrays in State
+
+JavaScript arrays are the best data model for managing and rendering JSX lists.
+
+```js
+const arr = [1, 3, 5, 7];
+
+function Comp() {
+  const [num, setNum] = useState([9, 12]);
+  const handleClick = () => useState((prev) => [...arr, ...prev]);
+}
+```
+
+We define an `arr` _static data model_ outside of our function component since it doesn't need to be recreated each time our component re-render.
+
+Then, the `num` array contains _dynamic data_, meaning that it changes.
+
+When updating an array in state, we do not just add new data to the previous array. We replace the previous array with a brand new array. This means that any information that we want to save from the previous array needs to be explicitly copied over to our new array.
+
+Array methods are very useful when working with data.
+
+```js
+// Destructuring the event object directly
+const event = ({ target }) => target;
+```
+
+<br>
+
+### Objects in State
+
+```js
+function Comp() {
+  const [pair, setPair] = useState({});
+
+  const handleEvent = (name, value) =>
+    setPair((prev) => ({ ...prev, name: value }));
+}
+```
+
+We define the initial state as an empty object.
+
+The spread syntax is the same for objects as for arrays.
+
+When updating the object with new data, we first copy the values from the previous object and then set the next value of state, the same technique as when working with arrays.
+
+Inside of our state setter callback function, we wrap our curly brackets in parentheses like so: `setPair((prev) => ({ ...prev }))`. This tells JavaScript that our curly brackets refer to a new object to be returned. We use `...`, the spread operator, to fill in the corresponding fields from our previous state. Finally, we overwrite the appropriate key with its updated value.
+
+<br>
+
+### Separate Hooks for Separate States
+
+We can make as many calls to `useState()` as we want.
+
+It’s best to split state into multiple state variables based on which values tend to change together.
+
+```js
+function Comp() {
+  const [num, setNum] = useState();
+  const [name, setName] = useState();
+  const [list, setList] = useState();
+}
+```
+
+<br>
