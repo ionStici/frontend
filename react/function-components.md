@@ -191,4 +191,16 @@ function Comp() {
 }
 ```
 
+When using Hooks, follow the pattern for naming the state and setter like: `toggle` & `setToggle`.
+
+<br>
+
+## The Effect Hook
+
+Importing the Effect Hook from the `react` library:
+
+```js
+import { useEffect } from "react";
+```
+
 <br>
