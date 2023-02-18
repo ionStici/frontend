@@ -33,5 +33,6 @@
 <div></div>
 
 - [Styles](./style.md)
+- [Separating Components](./separating-components.md)
 
 <div></div>
