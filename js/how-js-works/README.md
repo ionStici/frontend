@@ -10,5 +10,6 @@
 - [Execution Contexts and the Call Stack](./call-stack.md)
 - [Scope and the Scope Chain](./scope.md)
 - [JavaScript Runtime Overview](./js-runtime-overview.md)
+- [Variable Environment](./var-environment.md)
 
 <div></div>

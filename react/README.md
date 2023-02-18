@@ -7,7 +7,6 @@
 <div></div>
 
 - [Virtual DOM](./virtual-dom.md)
-- [Web Applications](./web-apps.md)
 - [create-react-app](./create-react-app.md)
 
 <div></div>
@@ -24,6 +23,15 @@
 
 - [State and Props](./stateless-stateful.md)
 - [Lifecycle Methods](./lifecycle.md)
-- [Function Components and Hooks](./function-components.md)
+
+<div></div>
+
+- [Function Components](./function-components.md)
+- [useState Hook](./use-state.md)
+- [useEffect Hook](./use-effect.md)
+
+<div></div>
+
+- [Styles](./style.md)
 
 <div></div>
