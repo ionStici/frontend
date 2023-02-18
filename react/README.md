@@ -35,5 +35,6 @@
 - [Styles](./style.md)
 - [Separating Components](./separating-components.md)
 - [propTypes](./prop-types.md)
+- [React Forms](./react-forms.md)
 
 <div></div>
