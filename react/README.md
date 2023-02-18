@@ -34,5 +34,6 @@
 
 - [Styles](./style.md)
 - [Separating Components](./separating-components.md)
+- [propTypes](./prop-types.md)
 
 <div></div>
