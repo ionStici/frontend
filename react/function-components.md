@@ -15,6 +15,10 @@
 
 In practice: We remove the `render` method and return the same JSX as a class component.
 
+To create a component with a function, we simply write a JavaScript function that returns either JSX or `null`.
+
+One important thing to note is that React requires your function name to begin with a capital letter.
+
 ```js
 // CLASS COMPONENT
 class Comp extends React.Component {
