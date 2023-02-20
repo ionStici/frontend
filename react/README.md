@@ -6,16 +6,18 @@
 
 <div></div>
 
-- [React Basics](./react-basics.md)
+1. [Virtual DOM](./virtual-dom.md)
+2. [create-react-app](./create-react-app.md)
+
+<div></div>
+
+3. [React Basics](./react-basics.md)
 
 <div></div>
 
 <br>
 <br>
 <br>
-
-- [Virtual DOM](./virtual-dom.md)
-- [create-react-app](./create-react-app.md)
 
 <div></div>
 
