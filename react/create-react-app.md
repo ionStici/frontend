@@ -13,12 +13,16 @@ npx create-react-app your-project-name --use-npm
 - `--use-npm` to avoid the default use of _Yarn_ in case you have it installed.
 - Use lowecase letters for your project directory name.
 
+<br>
+
 ## Predefined commands
 
 - `npm start` - Starts the development server
 - `npm run build` - Bundles the app into static files for production
 - `npm test` - Starts the test runner
 - `npm run eject` - Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can't go back.
+
+<br>
 
 ## React App Structure
 

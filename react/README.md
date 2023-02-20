@@ -12,6 +12,7 @@
 <div></div>
 
 3. [React Basics](./react-basics.md)
+4. [React devTools](./react-dev-tools.md)
 
 <div></div>
 
@@ -25,8 +26,6 @@
 - [Components Interacting](./components-interacting.md.md)
 
 <div></div>
-
-- [React devTools](./react-dev-tools.md)
 
 <div></div>
 
@@ -52,6 +51,7 @@
 
 <div></div>
 
+- [CSS Modules](.)
 - [CSS-in-JS using Emotion](./emotion.md)
 
 <div></div>
