@@ -53,13 +53,17 @@ Component classes act as regular JS classes, we ca use everything generally.
 
 Event handlers should be defined as methods of the component class
 
-Using the class name inside angle brackets will **create a component instance**: `<ComponentClass />`
+To **create a component instance**, we write the component class name as a custom HTML tag:
+
+`<ComponentClass />`
 
 To **render** the component instance, we call `render` on the root element and pass in the class component. This outer `render` function will call the component's `render` method, which in turn will return the JSX element.
 
 <br>
 
-## A Component Render another Component (Composition)
+## Component Composition
+
+**Component Composition:** a component render other components.
 
 Within the `render` method we can return other component instances as well.
 
@@ -79,5 +83,25 @@ class Header extends React.Component {
 ```
 
 Nesting components within other components is the fundamental relationship of React.
+
+A parent component which renders other child component instances. When React encounters a custom HTML tag that references another component, it renders the markup for that component in the location of the tag.
+
+<br>
+
+## Event Handlers in a Component Class
+
+```JSX
+class Example extends React.Component {
+    clickEvent() {
+        console.log('Ow, you clicked me 👋');
+    }
+
+    render() {
+        return <button onClick={this.clickEvent}>Click</button>;
+    }
+}
+```
+
+We define the event handler function within the component body, then we asign it as value for the `onClick` attribute.
 
 <br>

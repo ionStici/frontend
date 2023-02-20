@@ -17,7 +17,8 @@
 <div></div>
 
 5.  [React Components](./react-components.md)
-6.  [Props and State](./props-state.md)
+6.  [Props](./props.md)
+7.  [State](./state.md)
 
 <div></div>
 
