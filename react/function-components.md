@@ -1,6 +1,6 @@
 [&larr; Back](./README.md)
 
-# Function Components and Hooks
+# Function Components
 
 ## Table of Content
 
@@ -11,23 +11,13 @@
 
 ## Function Components
 
-**Function Components:** We can define components as JavaScript functions.
+**Function Components:** React components as JavaScript functions.
 
-In practice: We remove the `render` method and return the same JSX as a class component.
-
-To create a component with a function, we simply write a JavaScript function that returns either JSX or `null`.
+To create a function component, we simply write a JS function that returns either JSX or `null`.
 
 One important thing to note is that React requires your function name to begin with a capital letter.
 
 ```js
-// CLASS COMPONENT
-class Comp extends React.Component {
-  render() {
-    return <h1>Hello World</h1>;
-  }
-}
-
-// FUNCTION COMPONENT
 const Comp = () => {
   return <h1>Hello World</h1>;
 };
@@ -35,11 +25,9 @@ const Comp = () => {
 
 ## Function Components and Props
 
-Function components also can receive information via `props`.
-
 To access `props`, we give the function a `props` parameter.
 
-Within the function body, we access props using this pattern: `props.propertyName` (no this keyword).
+Within the function body, we access props using this pattern: `props.propertyName`.
 
 ```jsx
 const Comp = (props) => {
@@ -48,3 +36,11 @@ const Comp = (props) => {
 ```
 
 <br>
+
+## Array method in React Components
+
+```js
+const Comp = (props) => <p>{props.arr.join(" ")}</p>;
+```
+
+Array methods such as `join()` can be used directly when accessing a prop array.

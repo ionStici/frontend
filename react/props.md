@@ -100,4 +100,6 @@ Inside this object, we write properties for any default prop.
 
 `defaultProps` must be defined before the component is rendered so that it will not override existing props.
 
+If we pass `null` as the value for a prop, it will remain `null` and not use the default property.
+
 <br>

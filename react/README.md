@@ -16,9 +16,13 @@
 
 <div></div>
 
-5.  [React Components](./react-components.md)
+5.  [React Class Components](./react-components.md)
 6.  [Props](./props.md)
 7.  [State](./state.md)
+
+<div></div>
+
+8. [Function Components](./function-components.md)
 
 <div></div>
 
@@ -30,14 +34,11 @@
 
 <div></div>
 
-<div></div>
-
 - [State and Props](./stateless-stateful.md)
 - [Lifecycle Methods](./lifecycle.md)
 
 <div></div>
 
-- [Function Components](./function-components.md)
 - [useState Hook](./use-state.md)
 - [useEffect Hook](./use-effect.md)
 
