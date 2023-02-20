@@ -1,80 +1,83 @@
 [&larr; Back](./README.md)
 
-# **React Components**
+# React Components
 
 React applications are made out of components.
 
-A component is a small, reusable chunk of code that is responsible for one specific job (usually rendering some HTML).
+A component is a reusable chunk of code that is responsible for one specific job.
 
 <br>
 
-## **Import React**
+## Import React
 
 ```JSX
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 ```
 
-This imports two objects named `React` and `ReactDOM`, which contains React-related methods:
+This imports two objects named `React` and `ReactDOM`, which contains React-related methods.
 
 - `React` contains methods only for pure React purposes.
 - `ReactDOM` contains methods meant for interacting with the DOM.
 
 <br>
 
-## **Create a Component Class**
+## Create a Component Class
 
-We can create React components with JavaScript classes and functions.
+- We create a React component using JavaScript classes or functions.
+- We use React class components to render as many instances of that component as we want.
+- We declare a new React class component by extending the `Component` subclass from the `React` library.
+- This will give the class component access to many useful React features.
+- The body of the component class will act as a set of instructions on how to build the component.
 
-A component class is like a factory that builds components. We use React class components to render as many instances of that component as we want.
-
-With JS classes, to declare a new component class, first we extend the `Component` subclass from the `React` library.
-
-The body of the component class will act as a set of instructions, explaining to the component class how it should build a React component.
-
-```JSX
+```JS
 class ComponentClass extends React.Component {
-
-    get h1HtmlClass() {
-        return 'heading-1';
-    }
-
-    myFunc() {
-        alert("Don't hover me!");
+    constructor(props) {
+        super(props);
     }
 
     render() {
-        const nothing = 'A random variable';
-
-        return (
-            <h1 className={this.h1HtmlClass}>
-                <span onHover={this.myFunc}>Hello</span>
-                <span>world</span>
-            </h1>
-        );
+        return (<div><h1>Hello</h1></div>);
     }
 }
 
-ReactDOM.render(
-    <ComponentClass />,
-    document.querySelector('.box')
-);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<ComponentClass />);
 ```
 
-In the body of the component class we have a `render` method which usually returns a JSX expression. Use parentheses for multiline JSX expressions.
+To make sure that the component is initialized properly, inside the `constructor` method we must call the `super(props)` method which will in turn call the `constructor` of the parent class `React.Component`.
 
-The component class acts as regular JS classes, so you can use the `this` keyword, conditionals, event listeners, everything generally.
+The `render` method inside the component class should return a JSX expression.
 
-In React, event handlers are defined as methods of the component class.
+Component classes act as regular JS classes, we ca use everything generally.
 
-JSX elements can be either HTML-like or component instances.
+Event handlers should be defined as methods of the component class
 
-To create a Component Instance, we write a JSX element with the name of the component class: `<ComponentClass />`
+Using the class name inside angle brackets will **create a component instance**: `<ComponentClass />`
 
-### **Render a Component**
+To **render** the component instance, we call `render` on the root element and pass in the class component. This outer `render` function will call the component's `render` method, which in turn will return the JSX element.
 
-Now, to render the component instance, we pass in the component instance to `render()` method.
+<br>
 
-`render()` will call the component instance's `render` method, which in turn will return the JSX element.
+## A Component Render another Component (Composition)
 
-Then, the result will be added to the virtual DOM.
+Within the `render` method we can return other component instances as well.
+
+```JSX
+import { NavBar, CtaComp } from './Comps.js';
+
+class Header extends React.Component {
+    render() {
+        return (
+            <header>
+                <NavBar />
+                <CtaComp />
+            </header>
+        );
+    };
+};
+```
+
+Nesting components within other components is the fundamental relationship of React.
+
+<br>

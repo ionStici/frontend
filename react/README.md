@@ -16,14 +16,16 @@
 
 <div></div>
 
-<br>
-<br>
-<br>
+5.  [React Components](./react-components.md)
+6.  [Props and State](./props-state.md)
 
 <div></div>
 
-- [React Components](./react-components.md)
-- [Components Interacting](./components-interacting.md.md)
+<br>
+<br>
+<hr>
+<br>
+<br>
 
 <div></div>
 

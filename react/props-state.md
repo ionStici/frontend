@@ -4,7 +4,6 @@
 
 ## **Table of Content**
 
-- [A Component Render another Component](#a-component-render-another-component)
 - [this.props](#thisprops)
   - [Access a Component's props](#access-a-components-props)
   - [Pass `props` to a Component](#pass-props-to-a-component)
@@ -15,34 +14,12 @@
   - [Naming convention: handleEvent and onEvent](#naming-convention-handleevent-and-onevent)
   - [this.props.children](#thispropschildren)
   - [defaultProps](#defaultprops)
+
+<div></div>
+
 - [this.state](#thisstate)
   - [Setting initial state](#setting-initial-state)
   - [Update state with `this.setState`](#update-state-with-thissetstate)
-
-<br>
-
-## **A Component Render another Component**
-
-Render methods can return component instances as well.
-
-```JSX
-import { NavBar } from './NavBar.js';
-import { CtaComp } from './CtaComp.js';
-
-class Header extends React.Component {
-    render() {
-        return (
-            <header>
-                <NavBar />
-                <h1>Hello World</h1>
-                <CtaComp />
-            </header>
-        );
-    };
-};
-```
-
-Nesting components inside of other components - complex architectures - the fundamental relationship of React.js.
 
 <br>
 
