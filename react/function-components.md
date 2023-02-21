@@ -6,6 +6,7 @@
 
 - [Function Components](#function-components)
 - [Function Components and Props](#function-components-and-props)
+- [Array methods in React Components](#array-methods-in-react-components)
 
 <br>
 
@@ -37,7 +38,7 @@ const Comp = (props) => {
 
 <br>
 
-## Array method in React Components
+## Array methods in React Components
 
 ```js
 const Comp = (props) => <p>{props.arr.join(" ")}</p>;

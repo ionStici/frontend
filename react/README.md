@@ -26,11 +26,7 @@
 
 <div></div>
 
-<br>
-<br>
-<hr>
-<br>
-<br>
+<!-- <br>
 
 <div></div>
 
@@ -46,7 +42,6 @@
 
 - [Styles](./style.md)
 - [Separating Components](./separating-components.md)
-- [propTypes](./prop-types.md)
 - [React Forms](./react-forms.md)
 
 <div></div>
@@ -58,4 +53,4 @@
 - [CSS Modules](.)
 - [CSS-in-JS using Emotion](./emotion.md)
 
-<div></div>
+<div></div> -->

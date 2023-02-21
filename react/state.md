@@ -2,6 +2,8 @@
 
 # State
 
+## Table of Content
+
 - [this.state](#thisstate)
 - [Setting initial state](#setting-initial-state)
 - [Update state with `this.setState`](#update-state-with-thissetstate)

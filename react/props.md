@@ -5,9 +5,10 @@
 ## Table of Content
 
 - [this.props](#thisprops)
-- [Pass and Receive an Event Handler as a prop](#pass-and-receive-an-event-handler-as-a-prop)
+- [Event Handler as a prop](#event-handler-as-a-prop)
 - [this.props.children](#thispropschildren)
 - [defaultProps](#defaultprops)
+- [propTypes](#proptypes)
 
 <br>
 
@@ -33,7 +34,7 @@ render() { return <h1>{this.props.message}</h1>; }
 
 <br>
 
-## Pass and Receive an Event Handler as a prop
+## Event Handler as a prop
 
 ```js
 export class Button extends React.Component {
@@ -101,5 +102,39 @@ Inside this object, we write properties for any default prop.
 `defaultProps` must be defined before the component is rendered so that it will not override existing props.
 
 If we pass `null` as the value for a prop, it will remain `null` and not use the default property.
+
+<br>
+
+# propTypes
+
+`propTypes` is a type-checking feature. Import the `prop-types` library
+
+```js
+import PropTypes from "prop-types";
+```
+
+We declare `propTypes` as a static property for our component (after the component has been defined).
+
+```js
+Comp.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
+  status: PropTypes.bool.isRequired,
+  data: PropTypes.object.isRequired,
+  setJob: PropTypes.func.isRequired,
+  friends: PropTypes.array.isRequired,
+};
+```
+
+For each `prop` that the component expects to receive, there can be one property on the `propTypes` object.
+
+- The _name_ of each property in `propTypes` should be the name of an expected `prop`
+- The _value_ of each property in `propTypes` should fit this pattern: `PropTypes.expected_data_type`
+
+Each property on the `propTypes` object is called a `propType`.
+
+- `bool` and `func` are abbreviated, but all other data types are spelled normally.
+- If we add `isRequired` to a `propType`, we will get a console warning _if that prop isn’t sent._
+- In case for function components, propTypes works the same way.
 
 <br>
