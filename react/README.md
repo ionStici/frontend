@@ -22,16 +22,21 @@
 
 <div></div>
 
-8. [Function Components](./function-components.md)
+8. [Stateless / Stateful](./stateless-stateful.md)
+9. [Lifecycle Methods](./lifecycle.md)
 
 <div></div>
 
-<!-- <br>
+10. [Function Components](./function-components.md)
 
 <div></div>
 
-- [State and Props](./stateless-stateful.md)
-- [Lifecycle Methods](./lifecycle.md)
+<!--
+<br>
+
+<div></div>
+
+
 
 <div></div>
 
