@@ -27,37 +27,31 @@
 
 <div></div>
 
-- [React Forms](./react-forms.md)
+10. [React Forms](./react-forms.md)
 
 <div></div>
 
-- [Styles](./style.md)
+11. [Styles](./style.md)
 
-<dvi></dvi>
+<div></div>
 
-10. [Function Components](./function-components.md)
+20. [Function Components](./function-components.md)
 
 <div></div>
 
 <!--
 <div></div>
 
-<div></div>
-
 - [useState Hook](./use-state.md)
 - [useEffect Hook](./use-effect.md)
 
-<div></div>
 
 - [Separating Components](./separating-components.md)
 
-<div></div>
 
 - [React Router](./react-router.md)
 
-<div></div>
 
-- [CSS Modules](.)
 - [CSS-in-JS using Emotion](./emotion.md)
 
 <div></div>
