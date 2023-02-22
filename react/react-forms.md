@@ -2,11 +2,7 @@
 
 # React Forms
 
-In a React form, you want the server to know about every new character or deletion, as soon as it happens. That way, your screen will always be in sync with the rest of your application.
-
-In a React form, the server should know about every new character or deletion as soon as it happens.
-
-We want to update the server any time a user enters or deletes any character.
+In a React form, the server should know about every new character or deletion, as soon as it happens. That way, your screen will always be in sync with the rest of your application. We want to update the server any time a user enters or deletes any character.
 
 Unlike in the traditional form paradigm, in React we re-send the form on every single character change. This removes the need to ever “submit” anything.
 
@@ -15,33 +11,42 @@ Unlike in the traditional form paradigm, in React we re-send the form on every s
 ## Input onChange
 
 ```jsx
-class Comp extends React.Component {
+class ControlledInput extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { userInput: "" };
+    this.state = { userInput: "", submit: "" };
+
     this.handleUserInput = this.handleUserInput.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleUserInput({ target }) {
-    this.setState({
-      userInput: target.value,
-    });
+    this.setState({ userInput: target.value });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    this.setState({ submit: this.state.userInput });
   }
 
   render() {
     return (
-      <div>
+      <form onSubmit={this.handleSubmit}>
         <input
-          value={this.state.userInput}
           type="text"
+          value={this.state.userInput}
           onChange={this.handleUserInput}
         />
-        <h1>{this.state.userInput}</h1>
-      </div>
+
+        <h2>{this.state.userInput}</h2>
+        <h2>{this.state.submit}</h2>
+      </form>
     );
   }
 }
 ```
+
+Input fields maintain their own state in the DOM as the user types. With React, you can move this mutable state into a React component's `state`. The user's input becomes part of the application `state`, so React controls the value of that input field. Typically, if you have React components with input fields the user can type into, it will be a controlled input form.
 
 <br>
 
@@ -50,11 +55,7 @@ class Comp extends React.Component {
 - An **uncontrolled component** is a component that maintains its own internal state.
 - A **controlled component** is a component that does not maintain any internal state.
 
-Since a controlled component has no state, it must be controlled by someone else.
-
-`<input />` keeps track of its own text. We can ask it what its text is at any time using `value` property, and it will be able to tell us.
-
-The fact that `<input />` keeps track of information makes it an uncontrolled component. It maintains its own internal state, by remembering data about itself.
+The fact that `<input />` keeps track of its own information makes it an uncontrolled component. It maintains its own internal state, by remembering data about itself.
 
 A controlled component, on the other hand, has no memory. If you ask it for information about itself, then it will have to get that information through props. Most React components are controlled.
 

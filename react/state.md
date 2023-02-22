@@ -7,6 +7,7 @@
 - [this.state](#thisstate)
 - [Update state with `this.setState`](#update-state-with-thissetstate)
 - [Access state in the render method](#access-state-in-the-render-method)
+- [Access the previous state](#access-the-previous-state)
 
 <br>
 
@@ -83,5 +84,21 @@ class Comp extends React.Component {
   }
 }
 ```
+
+<br>
+
+## Access the previous state
+
+We should not rely on the previous value of `this.state` or `this.props` when calculating the next value.
+
+Instead, we should pass to `setState` a function which can access `state` and `props`.
+
+Using a function with `setState` guarantees we are working with the most current values of state and props.
+
+```js
+this.setState((state, props) => ({ counter: state.counter + 1 }));
+```
+
+Note: we wrap the object literal in parentheses.
 
 <br>

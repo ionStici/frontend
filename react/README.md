@@ -27,16 +27,20 @@
 
 <div></div>
 
+- [React Forms](./react-forms.md)
+
+<div></div>
+
+- [Styles](./style.md)
+
+<dvi></dvi>
+
 10. [Function Components](./function-components.md)
 
 <div></div>
 
 <!--
-<br>
-
 <div></div>
-
-
 
 <div></div>
 
@@ -45,9 +49,7 @@
 
 <div></div>
 
-- [Styles](./style.md)
 - [Separating Components](./separating-components.md)
-- [React Forms](./react-forms.md)
 
 <div></div>
 
@@ -58,4 +60,5 @@
 - [CSS Modules](.)
 - [CSS-in-JS using Emotion](./emotion.md)
 
-<div></div> -->
+<div></div>
+-->
