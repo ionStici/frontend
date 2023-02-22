@@ -24,14 +24,13 @@
 
 8. [Stateless / Stateful](./stateless-stateful.md)
 9. [Lifecycle Methods](./lifecycle.md)
-
-<div></div>
-
 10. [React Forms](./react-forms.md)
 
 <div></div>
 
-11. [Styles](./style.md)
+11. [Styles in React](./style.md)
+    <!-- 12. [CSS Modules](.) -->
+    <!-- 13. [CSS-in-JS Emotion](./emotion.md) -->
 
 <div></div>
 
@@ -40,19 +39,10 @@
 <div></div>
 
 <!--
-<div></div>
-
 - [useState Hook](./use-state.md)
 - [useEffect Hook](./use-effect.md)
 
-
 - [Separating Components](./separating-components.md)
 
-
 - [React Router](./react-router.md)
-
-
-- [CSS-in-JS using Emotion](./emotion.md)
-
-<div></div>
 -->
