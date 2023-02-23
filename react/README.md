@@ -29,7 +29,7 @@
 
 10. [Styles in React](./style.md)
 11. [CSS Modules in React](./css-modules.md)
-12. [Styled Components](./styled-components.md)
+<!-- 12. [Styled Components](./styled-components.md) -->
 
 <div></div>
 
