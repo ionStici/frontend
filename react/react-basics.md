@@ -156,7 +156,7 @@ const myFunc = function() { ... };
   if (true) { myName = <p>Mike</p>; }
   ```
 
-- **Ternary Operator**
+- **Ternary Operator** (inside JSX)
 
   ```JSX
   const p = (<p> { true ? 'First' : 'Second' } </p>);

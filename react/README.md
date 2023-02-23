@@ -27,26 +27,26 @@
 
 <div></div>
 
-10. [React Forms](./react-forms.md)
-11. [Practical aspects in React](./practical-aspects.md)
+10. [Styles in React](./style.md)
+11. [CSS Modules in React](./css-modules.md)
+12. [Styled Components](./styled-components.md)
 
 <div></div>
 
-12. [Styles in React](./style.md)
-13. [CSS Modules in React](./css-modules.md)
-14. [Styled Components](./styled-components.md)
+13. [React Forms](./react-forms.md)
+14. [Practical aspects in React](./practical-aspects.md)
+
+<!-- 15. [Separating Components](./separating-components.md) -->
 
 <div></div>
 
-20. [Function Components](./function-components.md)
+16. [Function Components](./function-components.md)
+
+<!-- 17. [useState Hook](./use-state.md) -->
+<!-- 18. [useEffect Hook](./use-effect.md) -->
 
 <div></div>
 
-<!--
-- [useState Hook](./use-state.md)
-- [useEffect Hook](./use-effect.md)
+<!-- 19. [React Router](./react-router.md) -->
 
-- [Separating Components](./separating-components.md)
-
-- [React Router](./react-router.md)
--->
+<div></div>
