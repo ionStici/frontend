@@ -24,13 +24,17 @@
 
 8. [Stateless / Stateful](./stateless-stateful.md)
 9. [Lifecycle Methods](./lifecycle.md)
-10. [React Forms](./react-forms.md)
 
 <div></div>
 
-11. [Styles in React](./style.md)
-    <!-- 12. [CSS Modules](.) -->
-    <!-- 13. [CSS-in-JS Emotion](./emotion.md) -->
+10. [React Forms](./react-forms.md)
+11. [Practical aspects in React](./practical-aspects.md)
+
+<div></div>
+
+12. [Styles in React](./style.md)
+13. [CSS Modules in React](./css-modules.md)
+14. [Styled Components](./styled-components.md)
 
 <div></div>
 
