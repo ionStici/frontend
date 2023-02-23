@@ -35,8 +35,7 @@
 
 13. [React Forms](./react-forms.md)
 14. [Practical aspects in React](./practical-aspects.md)
-
-<!-- 15. [Separating Components](./separating-components.md) -->
+15. [Separating Components](./separating-components.md)
 
 <div></div>
 
