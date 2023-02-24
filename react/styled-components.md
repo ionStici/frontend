@@ -2,7 +2,8 @@
 
 # Styled Components
 
-[Styled Components](https://styled-components.com/)
+- [Styled Components](https://styled-components.com/)
+- [Styled Components Crash Course by Traversy Media](https://www.youtube.com/watch?v=02zO0hZmwnw)
 
 <br>
 
