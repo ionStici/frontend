@@ -27,26 +27,43 @@
 
 <div></div>
 
-10. [Styles in React](./style.md)
-11. [CSS Modules in React](./css-modules.md)
-<!-- 12. [Styled Components](./styled-components.md) -->
+<div></div>
+
+10. [React Forms](./react-forms.md)
+11. [Practical aspects in React](./practical-aspects.md)
+12. [Separating Components](./separating-components.md)
 
 <div></div>
 
-13. [React Forms](./react-forms.md)
-14. [Practical aspects in React](./practical-aspects.md)
-15. [Separating Components](./separating-components.md)
+13. [Function Components](./function-components.md)
+14. [useState Hook](./use-state.md) <!-- review  -->
+15. [useEffect Hook](./use-effect.md) <!-- review  -->
 
 <div></div>
 
-16. [Function Components](./function-components.md)
-
-<!-- 17. [useState Hook](./use-state.md) -->
-<!-- 18. [useEffect Hook](./use-effect.md) -->
+<hr>
 
 <div></div>
 
-<!-- 19. [React Router](./react-router.md) -->
+- [React Router](./router/react-router.md) <!-- study  -->
+
+<div></div>
+
+<hr>
+
+<div></div>
+
+- [Styles in React](./styles/style.md)
+- [CSS Modules in React](./styles/css-modules.md)
+- [Styled Components](./styles/styled-components.md) <!-- study  -->
+
+<div></div>
+
+<hr>
+
+<div></div>
+
+- [Redux](./redux/redux.md) <!-- study  -->
 
 <div></div>
 
