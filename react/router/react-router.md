@@ -2,14 +2,9 @@
 
 # React Router
 
-- [React Router Home Page](https://reactrouter.com/en/main)
-- External Resource: [What is Routing?](./routing.md)
-- Install React Router version 6 `npm install --save react-router-dom@6`
-
-<br>
-
 ## Table of Content
 
+- [What is Routing?](./routing.md)
 - [Providing a Router](#providing-a-router)
 - [Linking to Routes](#linking-to-routes)
 - [Dynamic Routes](#dynamic-routes)
@@ -19,15 +14,32 @@
 
 ## Providing a Router
 
-In the React Router paradigm, the different views of the application (called routes) are just React components. To include them in the application, we just need to render them.
+- Install React Router v6 `npm install --save react-router-dom@6`
+
+In the React Router paradigm, the different views of the application (called routes) are just React components that we render.
 
 ```js
 import {
+  Outlet,
   Route,
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+```
+
+```js
+function Root() {
+  return (
+    <>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </>
+  );
+}
 ```
 
 ```js
@@ -46,24 +58,19 @@ function App() {
 }
 ```
 
-`createBrowserRouter` will define a router that prevents URL changes from causing the page to reload. Instead, URL changes will allow the `router` to determine which of its defined routes to render while passing along information about the current URL's path as props.
+- `createBrowserRouter` will define a router that prevents URL changes from causing the page to reload. Instead, URL changes will allow the `router` to determine which of its defined routes to render while passing along information about the current URL's path as props.
 
-We make our router available application-wide by providing it using `RouterProvider` the root of our application.
+- We then store that in a `router` variable and make it available application-wide by providing it to the root of our application using `RouterProvider`.
 
-With our `router` in place, we can begin defining the different views, or routes, that our application will render for various URL paths.
+- Here `createBrowserRouter()` we define the routes using JSX or objects. This method accepts an array of `<Route />` objects. To configure the routes with JSX, we need the `createRoutesFromElements` method.
 
-React Router gives us two options to define routes: JSX or objects.
+- Each route (view) various URL paths is defined using the `<Route />` component. The `<Route>` component is designed to render (or not render) a component based on the current URL path. Each `<Route>` component should include:
+  - **`path` prop** - indicates the exact URL path that will cause the route to render.
+  - **`element` prop** - indicates the component that will be rendered.
 
-The `createBrowserRouter` method accepts an array of `<Route>` objects, so we’ll need to use React Router’s `createRoutesFromElement` method to configure our routes with JSX. We also need to use React Router’s `<Route>` component to define our routes.
+<div></div>
 
-The `<Route>` component is designed to render (or not render) a component based on the current URL path. Each `<Route>` component should include:
-
-- A `path` prop indicating the exact URL path that will cause the route to render.
-- An `element` prop describing the component to be rendered.
-
-In many cases, there may be certain components, like sidebars, navigation bars, and footers, that we want to render with every page view. We can achieve this by defining a root-level component that contains layout elements we want to render consistently. We can then nest the rest of our routes within this root-level component.
-
-With this route configuration, whenever a user navigates to one of the nested routes, that view will render, along with any elements we’ve defined in our `<Root/>` component.
+- _Render Components with every page view:_ define a root-level component **`<Root/>`** that contains layout elements we want to render consistently and nest the rest of the routes within this root-level component.
 
 <br>
 
@@ -71,35 +78,36 @@ With this route configuration, whenever a user navigates to one of the nested ro
 
 ```js
 import { Link, NavLink } from "react-router-dom";
-
 <Link to="/about">About</Link>
 <NavLink to="/about">About</NavLink>
 ```
 
-`Link` and `NavLink` components work much like anchor tags:
-
-- They have a `to` prop that indicates the location to redirect the user to, similar to the anchor tag's `href` attribute.
-- They wrap some HTML to use as the display for the link.
+- `Link` and `NavLink` components work like anchor tags.
+- The `to` prop indicates the location to redirect the user to.
 
 Both links will generate anchor tags displaying the given text and will take the user to the given path indicated within `to` prop when clicked.
 
-The default behavior of an anchor tag - refreshing when the page loads - will be disabled.
+The default behavior of an anchor tag (refreshing when the page loads) will be disabled.
 
 If we provide a `/` forward slash, the path will be treated as an absolute path. React Router will assume this path is navigating from the root directory.
 
-The difference between `Link` and `NavLink`: `NavLink`s will automatically have an `'active'` class applied to it. We can also pass a function to `className` or `style` to further customize the styling of an active (or inactive) `NavLink`, like so:
+Unlike the `Link` component, `NavLink` will automatically get an `'active'` class applied to it. We can pass a function to `className` or `style` to further customize the styling of an active or inactive `NavLink`:
 
 ```js
 <NavLink
   to="about"
-  className={({ isActive }) => (isActive ? "activeNavLink" : "inactiveNavLink")}
+  className={({ isActive }) => (isActive ? "activeLink" : "inactiveLink")}
 >
   About
 </NavLink>
 ```
 
-In the example above we pass a function to the `className` prop which applies the `activeNavLink` class if the `NavLink` is active and `inactiveNavLink` otherwise.
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
 ## Dynamic Routes
@@ -126,6 +134,12 @@ const route = createBrowserRouter(createRoutesFromElement(
 - This means that when the user navigates to pages such as `'/articles/what-is-react'` or `'/articles/html-and-css'`, the `<Article />` component will render.
 - When the `Article` component is rendered in this way, it can access the actual value of that `:title` URL parameter (`what-is-react` or `html-and-css`) to determine which article to display. A single route can even have multiple parameters (eg. `'articles/:title/comments/:commentId'`) or none (eg. `'articles'`).
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
 ## useParams Hook
