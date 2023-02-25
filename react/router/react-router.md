@@ -12,6 +12,8 @@
 
 - [Providing a Router](#providing-a-router)
 - [Linking to Routes](#linking-to-routes)
+- [Dynamic Routes](#dynamic-routes)
+- [useParams Hook](#useparams-hook)
 
 <br>
 
@@ -97,5 +99,52 @@ The difference between `Link` and `NavLink`: `NavLink`s will automatically have 
 ```
 
 In the example above we pass a function to the `className` prop which applies the `activeNavLink` class if the `NavLink` is active and `inactiveNavLink` otherwise.
+
+<br>
+
+## Dynamic Routes
+
+**Static Routes** - they match a distinct and unique path.
+
+**Dynamic Routes** - a single route that match any path with the pattern: `/articles/ + title` - and know exactly which component to render.
+
+We can accomplish dynamic routes using React Router URL parameters.
+
+URL parameters are dynamic segments of a URL that act as placeholders for more specific resources.
+
+They appear in a dynamic route as a colon `:` followed by a variable name.
+
+```js
+const route = createBrowserRouter(createRoutesFromElement(
+    <Route path="articles" element={<Articles />} />
+    <Route path="articles/:title" element={<Article />} />
+    <Route path="authors/:name" element={<Author />} />
+));
+```
+
+- the `path` prop `'articles/:title'` contains the URL parameter `:title`.
+- This means that when the user navigates to pages such as `'/articles/what-is-react'` or `'/articles/html-and-css'`, the `<Article />` component will render.
+- When the `Article` component is rendered in this way, it can access the actual value of that `:title` URL parameter (`what-is-react` or `html-and-css`) to determine which article to display. A single route can even have multiple parameters (eg. `'articles/:title/comments/:commentId'`) or none (eg. `'articles'`).
+
+<br>
+
+## useParams Hook
+
+Use case: Use the value of URL parameters to determine what is displayed in the component that a dynamic route renders.
+
+React Router provides a hook `useParams()` for accessing the value of URL parameters. When called, `useParams()` returns an object that maps the names of URL parameters to their value in the current URL.
+
+```js
+import { Link, useParams } from "react-router-dom";
+
+function Article() {
+  let { title } = useParams();
+  return <h1>{title}</h1>;
+}
+```
+
+- Inside the `Article` component, `useParams` is called which returns an object.
+- We destructure the object to extract the value of the URL parameter from that object, storing it in a variable named `title`.
+- We then can use the `title` value for rendering based on some logic.
 
 <br>

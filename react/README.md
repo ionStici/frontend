@@ -45,7 +45,9 @@
 
 <div></div>
 
-- [React Router](./router/react-router.md) <!-- study  -->
+- [Styles in React](./styles/style.md)
+- [CSS Modules in React](./styles/css-modules.md)
+- [Styled Components](./styles/styled-components.md) <!-- study  -->
 
 <div></div>
 
@@ -53,9 +55,7 @@
 
 <div></div>
 
-- [Styles in React](./styles/style.md)
-- [CSS Modules in React](./styles/css-modules.md)
-- [Styled Components](./styles/styled-components.md) <!-- study  -->
+- [React Router](./router/react-router.md) <!-- study  -->
 
 <div></div>
 
