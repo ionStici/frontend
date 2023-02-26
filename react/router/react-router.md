@@ -9,6 +9,9 @@
 - [Linking to Routes](#linking-to-routes)
 - [Dynamic Routes](#dynamic-routes)
 - [useParams Hook](#useparams-hook)
+- [Nested Routes](#nested-routes)
+- [Navigate Component](#navigate-component)
+- [useNavigate](#usenavigate)
 
 <br>
 
@@ -151,4 +154,76 @@ function Article() {
 
 <br>
 
-<!-- Nested Routes 8/12 -->
+## Nested Routes
+
+A **nested route** is a `Route` within a `Route`. When nesting routes, the child route `path` is relative to the parent route `path`. So there is no need to include the parent `path` in the child `path` prop.
+
+```js
+<Route path="/about" element={<About />}>
+  <Route path="me" element={<Me />} />
+</Route>
+```
+
+Using this nested route, the `About` component will render when the path starts with `/about`. If the path matches `/about/me`, the `Me` component will render in addition to the `About` component.
+
+We have to indicate explicitly where to render the `Me` child component within `About` parent component. For this, we need the React Router `Outlet` component inside the parent `About` component.
+
+```js
+import { Outlet } from "react-router-dom";
+
+function About() {
+  return (
+    <>
+      <h1>About</h1>
+      <Outlet />
+    </>
+  );
+}
+```
+
+Now when we visit `/about/me`, the router will render `About` and its child route component `Me` wherever the `Outlet` component is defined. The router will replace `Outlet` with our defined child route.
+
+### Index Routes
+
+An index route will render on its parent's `path`. It uses the `index` prop instead of a `path` prop.
+
+```js
+<Route path="/about" element={<About />}>
+  <Route index element={<Index />} />
+  <Route path="me" element={<Me />} />
+</Route>
+```
+
+An index route is like a **default** `Route` that will render in its parent's `Outlet` when the path matches the parent `path` exactly.
+
+<br>
+
+## Navigate Component
+
+React Router treats everything as a component.
+
+`<Navigate>` component is used for redirecting.
+
+A common case for redirecting a user: a user wants to access a `/profile` page that requires authentication but is not currently signed in.
+
+```js
+import { Navigate } from "react-router-dom";
+
+const UserProfile = ({ loggedIn }) => {
+  if (!loggedIn) {
+    return <Navigate to="/" />;
+  }
+
+  return (
+    // user profile content
+  )
+};
+```
+
+If the `Navigate` component is rendered, the user will automatically be taken to the location specified by the `to` prop.
+
+<br>
+
+## useNavigate
+
+<br>
