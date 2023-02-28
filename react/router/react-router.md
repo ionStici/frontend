@@ -67,7 +67,7 @@ function App() {
 
 - Here `createBrowserRouter()` we define the routes using JSX or objects. This method accepts an array of `<Route />` objects. To configure the routes with JSX, we need the `createRoutesFromElements` method.
 
-- Each route (view) various URL paths is defined using the `<Route />` component. The `<Route>` component is designed to render (or not render) a component based on the current URL path. Each `<Route>` component should include:
+- For each route (view), various URL paths is defined using the `<Route />` component. The `<Route>` component is designed to render (or not render) a component based on the current URL path. Each `<Route>` component should include:
   - **`path` prop** - indicates the exact URL path that will cause the route to render.
   - **`element` prop** - indicates the component that will be rendered.
 
