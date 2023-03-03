@@ -63,7 +63,7 @@
 
 <div></div>
 
-- [Redux](./redux/redux.md) <!-- study  -->
+- [Redux](./redux/README.md) <!-- study  -->
 
 <div></div>
 
