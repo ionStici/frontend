@@ -7,11 +7,18 @@
 - [State Management Introduction](#state-management-introduction)
 - [Overview](#overview)
 - [createStore](#createstore)
+- [Action Objects and Action Creators](#action-objects-and-action-creators)
 - [Dispatch Actions to the Store](#dispatch-actions-to-the-store)
 - [getState](#getstate)
-- [Action Creators](#action-creators)
+- [The Reducer Function](#the-reducer-function)
+
+<div></div>
+
 - [Respond to State Changes](#respond-to-state-changes)
 - [Connect the Redux Store to a UI (Steps)](#connect-the-redux-store-to-a-ui-steps)
+
+<div></div>
+
 - [React and Redux](#react-and-redux)
 - [Redux without React](#redux-without-react)
 
@@ -33,7 +40,9 @@
 
 - In a Redux application, _data flows in one direction_: from **state** to **view** to **action**, back to state and so on.
 
-- A **Reducer** is a function that determines how the current state and an action are used in combination to create the application’s next state. [**Rules of Reducer Functions**](https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers#rules-of-reducers).
+- A **Reducer** is a function that determines how the current state and an action are used in combination to create the application’s next state.
+
+  [**Rules of Reducer Functions**](https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers#rules-of-reducers).
 
 - **Store** is a special object in Redux, it is like a container for state. It provides a way to dispatch actions. It calls the reducer when actions are dispatched. Only one _store_ per app.
 
@@ -87,16 +96,37 @@ After creating the `store` object, it provides useful methods for interacting wi
 
 <br>
 
-## Dispatch Actions to the Store
+## Action Objects and Action Creators
 
-State updates are triggered by dispatching actions. An action is a JS object that contains information about an action event that has occurred. The Redux store receives these action objects, then updates its state accordingly. Actions must carry the `type` property that specifies the type of action that occurred, and also optionally some data.
+State updates are triggered by _dispatching actions_. An **action** is a JavaScript object that contains information about a desired action event.
 
-- `store.dispatch()` method is used to dispatch an action to the store, to update the state.
-- As argument we pass in an action object which must have a `type` property describing the desired state change.
+Action objects must contain a `type` property equal to a string that reflects the type of the action (event). And optionally some data `payload`.
 
 ```js
-const action = { type: "actionDescriptor" };
-store.dispatch(action);
+const action = { type: "addTodo", payload: "do that" };
+```
+
+**Action Creators** are functions that create and return action objects.
+
+Action Creators are called and passed directly to the `store.dispatch()` method.
+
+```js
+const toggle = () => ({ type: "toggle" });
+store.dispatch(toggle());
+```
+
+Before the reducer of an application is even written, we should write action creators as a way of planning out which actions will be available to dispatch to the store.
+
+<br>
+
+## Dispatch Actions to the Store
+
+`store.dispatch()` method is used to dispatch an action to the store and then to update the state.
+
+As argument we pass in an action creator which will return an action object with a `type` property describing the desired state change.
+
+```js
+store.dispatch(toggle());
 ```
 
 Each time `store.dispatch()` is called with an `action` object, the store's reducer function will be executed with the same `action` object. Assuming that the `action.type` is recognized by the reducer, the state will be updated and returned.
@@ -105,10 +135,9 @@ Each time `store.dispatch()` is called with an `action` object, the store's redu
 
 ## getState
 
-- `store.getState()` returns the current value of the store's state.
-- Internally, when the store executes its reducer, it uses `store.getState()` as the state argument.
+`store.getState()` returns the current value of the store's state.
 
-The store calls the reducer like this:
+Internally, when the store executes its reducer, it uses `store.getState()` as the state argument.
 
 ```js
 toggleReducer(store.getState(), { type: "toggle" });
@@ -116,21 +145,38 @@ toggleReducer(store.getState(), { type: "toggle" });
 
 <br>
 
-## Action Creators
+## The Reducer Function
 
-- **Action Creators** are functions that create and return action objects (`type` property).
-- They are responsible for sending action objects to the Redux store (to update the state).
-- Action Creators are called and passed directly to the `store.dispatch()` method.
+<!-- After an action is created and dispatched, the Redux store needs to know how to respond to that action. This is the job of a reducer function. Reducers in Redux are responsible for the state modifications that take place in response to actions. A reducer takes state and action as arguments, and it always returns a new state. It is important to see that this is the only role of the reducer. It has no side effects — it never calls an API endpoint and it never has any hidden surprises. The reducer is simply a pure function that takes state and action, then returns new state.
+
+Another key principle in Redux is that state is read-only. In other words, the reducer function must always return a new copy of state and never modify state directly. Redux does not enforce state immutability, however, you are responsible for enforcing it in the code of your reducer functions. You'll practice this in later challenges. -->
 
 ```js
-const toggle = () => ({ type: "toggle" });
+const initialState = { filter: false, items: [] };
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "filterOn":
+      return { ...state, filter: true };
 
-store.dispatch(toggle());
-store.dispatch({ type: "toggle" });
+    case "filterOff":
+      return { ...state, filter: false };
+
+    default:
+      return state;
+  }
+};
 ```
 
-Before the reducer of an application is even written, we should write action creators as a way of planning out which actions will be available to dispatch to the store.
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
 ## Respond to State Changes
@@ -156,6 +202,16 @@ unsubscribe();
 After `unsubscribe()` is called, it causes `reactToChange()` to no longer be executed in response to further dispatches made to store.
 
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Connect the Redux Store to a UI (Steps)
 
@@ -167,6 +223,16 @@ After `unsubscribe()` is called, it causes `reactToChange()` to no longer be exe
   - Update the UI with the data
 - Respond to UI events by dispatching Redux actions
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
 ## React and Redux
