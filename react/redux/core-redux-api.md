@@ -1,4 +1,4 @@
-[&larr; Back](./../README.md)
+[&larr; Back](./README.md)
 
 # Core Redux API
 
@@ -11,14 +11,9 @@
 - [Dispatch Actions to the Store](#dispatch-actions-to-the-store)
 - [getState](#getstate)
 - [The Reducer Function](#the-reducer-function)
-
-<div></div>
-
-- [Respond to State Changes](#respond-to-state-changes)
+- [subscribe](#subscribe)
+- [unsubscribe](#unsubscribe)
 - [Connect the Redux Store to a UI (Steps)](#connect-the-redux-store-to-a-ui-steps)
-
-<div></div>
-
 - [React and Redux](#react-and-redux)
 - [Redux without React](#redux-without-react)
 
@@ -83,7 +78,7 @@
 import { createStore } from "redux";
 
 const initialState = true;
-const reducer = (state = initialState) => state;
+const reducer = (state = initialState, action) => state;
 
 const store = createStore(reducer);
 ```
@@ -111,11 +106,14 @@ const action = { type: "addTodo", payload: "do that" };
 Action Creators are called and passed directly to the `store.dispatch()` method.
 
 ```js
-const toggle = () => ({ type: "toggle" });
+const TOGGLE = "toggle";
+const toggle = () => ({ type: TOGGLE });
 store.dispatch(toggle());
 ```
 
 Before the reducer of an application is even written, we should write action creators as a way of planning out which actions will be available to dispatch to the store.
+
+Redux common practice: to assign action types as read-only constants, then reference these constants wherever they are used. Convention: write constants in all uppercase.
 
 <br>
 
@@ -147,9 +145,9 @@ toggleReducer(store.getState(), { type: "toggle" });
 
 ## The Reducer Function
 
-<!-- After an action is created and dispatched, the Redux store needs to know how to respond to that action. This is the job of a reducer function. Reducers in Redux are responsible for the state modifications that take place in response to actions. A reducer takes state and action as arguments, and it always returns a new state. It is important to see that this is the only role of the reducer. It has no side effects — it never calls an API endpoint and it never has any hidden surprises. The reducer is simply a pure function that takes state and action, then returns new state.
+The **Reducer** function is responsible for the state modifications that take place in response to actions.
 
-Another key principle in Redux is that state is read-only. In other words, the reducer function must always return a new copy of state and never modify state directly. Redux does not enforce state immutability, however, you are responsible for enforcing it in the code of your reducer functions. You'll practice this in later challenges. -->
+The reducer takes the `state` and an action as arguments, and it always returns a new state. It must return a new copy of state and never modify state directly.
 
 ```js
 const initialState = { filter: false, items: [] };
@@ -167,21 +165,15 @@ const reducer = (state = initialState, action) => {
 };
 ```
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+In the `switch` statement, the reducer will check for the `type` of the desired state change. After matching the `type` action, it will produce and return the state change.
+
+If nothing macthes, it will just return the current state.
+
 <br>
 
-## Respond to State Changes
+## subscribe
 
-Actions dispatched to the `store` can be listened for and responded to using the `store.subscribe()` method. This method accepts a function as argument, called a _listener_, that is executed in response to changes to the `store`‘s state.
+Actions dispatched to the `store` can be listened for and responded to using the `store.subscribe()` method. This method accepts a function as argument, called a _listener_, that is executed in response to changes made to the `store`‘s state.
 
 ```js
 const reactToChange = () => console.log(store.getState());
@@ -190,7 +182,11 @@ store.subscribe(reactToChange);
 
 Each time an action is dispatched to the `store`, and a change to the state occurs, the subscribed listener `reactToChange()` will be executed.
 
-### unsubscribe
+The `subscribe` method is used to render on the UI changes made to the state.
+
+<br>
+
+## unsubscribe
 
 Sometimes it is useful to stop the listener from responding to changes to the `store`, so `store.subscribe()` returns an `unsubscribe` function.
 
@@ -201,16 +197,6 @@ unsubscribe();
 
 After `unsubscribe()` is called, it causes `reactToChange()` to no longer be executed in response to further dispatches made to store.
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 
 ## Connect the Redux Store to a UI (Steps)
@@ -224,20 +210,8 @@ After `unsubscribe()` is called, it causes `reactToChange()` to no longer be exe
 - Respond to UI events by dispatching Redux actions
 
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 ## React and Redux
-
-Common steps involved in connecting Redux to a React UI:
 
 - A `render()` function will be subscribed to the `store` to re-render the top-level React Component.
 - The top-level React component will receive the current value of `store.getState()` as a `prop` and use that data to render the UI.
