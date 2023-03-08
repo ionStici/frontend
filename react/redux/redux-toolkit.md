@@ -143,4 +143,30 @@ export default todosSlice.reducer;
 
 ## Converting the Store to Use `configureStore()`
 
-`configureStore()` accepts a single configuration object parameter.
+[`configureStore()`](https://redux-toolkit.js.org/api/configureStore) accepts a single configuration object parameter.
+
+The input object should have a reducer property that defines either a function to be used as the root reducer, or an object of slice reducers which will be combined to create a root reducer.
+
+```js
+import { configureStore } from "@reduxjs/toolkit";
+
+import todosReducer from "./features/todos/todosSlice";
+import filtersReducer from "./features/filters/filtersSlice";
+
+const store = configureStore({
+  reducer: {
+    todos: todosReducer,
+    filters: filtersReducer,
+  },
+});
+
+export default store;
+```
+
+- It combines todosReducer and filtersReducer into the root reducer function, which will handle a root state that looks like {todos, filters}, removing the need to call combineReducers()
+- It creates a Redux store using that root reducer, removing the need to call createStore()
+- It automatically adds the thunk middleware (which you will learn about in the next lesson!)
+- It automatically adds more middleware to check for common mistakes like accidentally mutating the state
+- It automatically sets up the Redux DevTools Extension connection
+
+We can just import the individual slice reducers straight into this file instead of creating a separate file for the root reducer and having to export/import it.
