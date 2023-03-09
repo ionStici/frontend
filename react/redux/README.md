@@ -7,4 +7,4 @@
 <div></div>
 
 - [Core Redux API](./core-redux-api.md)
-<!-- - [Strategies for Complex State](./) -->
+- [Strategies for Complex State](./strategies.md)
