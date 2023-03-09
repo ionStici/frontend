@@ -55,7 +55,7 @@
 
 <div></div>
 
-- [React Router](./router/react-router.md) <!-- study  -->
+- [**React Router**](./router/react-router.md) <!-- study  -->
 
 <div></div>
 
@@ -63,7 +63,7 @@
 
 <div></div>
 
-- [Redux](./redux/README.md) <!-- study  -->
+- [**Redux**](./redux/README.md) <!-- study  -->
 
 <div></div>
 

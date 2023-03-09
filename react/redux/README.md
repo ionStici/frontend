@@ -7,4 +7,3 @@
 <div></div>
 
 - [Core Redux API](./core-redux-api.md)
-- [Strategies for Complex State](./strategies-complex-state.md)
