@@ -41,12 +41,14 @@
 
 <div></div>
 
+- [**React**](./react/README.md)
+
 <hr>
 
 <div></div>
 
 - [Styles in React](./styles/style.md)
-- [CSS Modules in React](./styles/css-modules.md)
+- [CSS Modules](./styles/css-modules.md)
 - [Styled Components](./styles/styled-components.md) <!-- study  -->
 
 <div></div>

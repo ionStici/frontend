@@ -63,6 +63,7 @@ return {
 
 **Rule of Reducers:** when the reducer is updating the state, it must make a copy and return the copy rather than directly mutating the incoming state. When the state is a mutable data type, like an array of object, this is done using the spread operator.
 
+- Immutable state means that you never modify state directly, instead, you return a new copy of state.
 - When a change is made to the state, we spread the old state's content into a new object before producing the change.
 - The same is true for the inner array, first we spread the entire array items into a new array, and then add a new item.
 - The `map()` method is a great tool for achieving the same results as the spread operator, since it returns a new array.
