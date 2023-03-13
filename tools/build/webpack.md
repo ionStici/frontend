@@ -260,3 +260,78 @@ h1 {
   font-family: "Roboto-Black";
 }
 ```
+
+## Steps
+
+### Part 1 - Configuring the Node Project
+
+```
+npm init -y
+```
+
+```json
+// package.json
+"scripts": {
+    "build": "webpack --watch",
+    "start": "webpack serve --open"
+}
+```
+
+```
+npm install --save-dev webpack webpack-cli webpack-dev-server style-loader css-loader
+```
+
+### Part 2 - Configuring Webpack
+
+`webpack.config.js`
+
+```js
+module.exports = {
+  mode: "development",
+  entry: "./src/index.js",
+  rules: [
+    {
+      test: /\.css$/i,
+      use: ["style-loader", "css-loader"],
+    },
+    {
+      test: /\.(png|svg|jpg|jpeg|gif)$/i,
+      type: "asset/resource",
+    },
+    {
+      test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      type: "asset/resource",
+    },
+  ],
+};
+```
+
+### Part 3 - Bundling the CSS
+
+Delete the ref link in the `head` tag of the HTML, and import the CSS within `index.js`
+
+### Part 4 - Bundling the JavaScript
+
+With Webpack, we need only one `script` tag in out HTML.
+
+Add a `script` tag that embeds the JS code that will be at the exit point.
+
+```js
+<script src="dist/main.js"></script>
+```
+
+We link our JavaScript content using `import` and `export` statements.
+
+### Part 5 - Bundling Images
+
+```js
+import img from "./asset/img.png";
+```
+
+### Part 6 - Building and Viewing Our App
+
+Two terminal windows in the project directory:
+
+Run the `build` command on one terminal window, and the `start` command in the other.
+
+<br>
