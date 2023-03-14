@@ -2,19 +2,7 @@
 
 # CSS
 
-**CSS** stands for Cascading Style Sheets. Definition:
-
-- is a style sheet language;
-- the code that styles web content;
-- selectively style HTML elements.
-
-<br>
-
-## Table of Content
-
-- [Anatomy of a CSS syntax](#anatomy-of-a-css-syntax)
-- [CSS Types](#css-types)
-- [Aspects to keep in mind](#aspects-to-keep-in-mind)
+**CSS** stands for Cascading Style Sheets. It is a style sheet language used to selectively style web content.
 
 <br>
 
@@ -75,39 +63,15 @@ Link the css file with the html document via the tag above.
 
 <br>
 
-## Aspects to keep in mind
+## How CSS works behind the scenes
 
-<br>
+As the browser parses the HTML, it finds / loads, and starts parsing the stylesheet included in the HTML head.
 
-### Responsive Design
+_Two main steps during the CSS parsing phase:_
 
-- Fluid layouts
-- Media queries
-- Responsive images
-- Correct units
-- Desktop-first vs Mobile-first
+1. Conflicing CSS declarations are resolved through a process knows as **cascade**.
+2. Processing final CSS values (converting relative units to pixels).
 
-<br>
+The final CSS is stored in a tree-like structure, called: **CSS Object Model**. Now, the parsed HTML and CSS files form the so-called **Render Tree**.
 
-### Maintainable and scalable code
-
-- Clean
-- Easy to understand
-- Growth
-- Reusable
-- How to organize files
-- How to name classes
-- How to structure HTML
-
-<br>
-
-### Web performance
-
-- Less HTTP requests
-- Less code
-- Compress code
-- Use a CSS preprocessor
-- Less images
-- Compress images
-
-<br>
+Now, the parsed and stored HTML document and CSS file, these together form the so-called Render tree - with that, we finally have everything we need to render the page.

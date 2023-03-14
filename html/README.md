@@ -2,7 +2,7 @@
 
 ## Table of Content
 
-[&larr; Back to the Main Page](./../README.md)
+[**&larr; Back to the Main Page**](./../README.md)
 
 <div></div>
 
@@ -13,3 +13,5 @@
 - [Attributes](./x-attributes.md)
 
 Continue learning html from [MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+
+https://web.dev/learn/

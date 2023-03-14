@@ -25,16 +25,10 @@
 HTML consists of elements. They define the content and structure of the webpage.
 
 ```HTML
-<p> Hello </p>  <!-- a html element -->
+<p> hi </p>  <!-- a html element -->
 ```
 
-<details>
-<summary>HTML element Anatomy</summary>
-
-- An opening tag `<p>`
-- The content `Hello`
-- A closing tag `<p>`
-</details>
+HTML element: `<p>` opening tag + `hi` content + `</p>` closing tag
 
 <br>
 
