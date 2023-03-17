@@ -2,14 +2,71 @@
 
 # Metadata
 
-<!-- ## Custom Link Preview
+_Two types of meta tags:_
+
+- praga directives (`http-equiv` attribute)
+- named meta types (`name` attribute)
+
+Both must include the `content` attribute which defines the content for the type of metadata listed.
+
+<br>
+
+## Description
+
+`description` is what search engines display under the page's title in seach results (Important for SEO).
+
+```html
+<meta name="description" content="Quality web development services" />
+```
+
+The description should be a short and accurate summary of the page's content.
+
+<br>
+
+## Author
+
+Define the author of the page (who wrote the page).
+
+```html
+<meta name="author" content="John" />
+```
+
+<br>
+
+## Robots
+
+```html
+<meta name="robots" content="index, follow" />
+```
+
+This meta tag tells the seach engine bots to not index the site and not to follow any links.
+
+<br>
+
+## Theme color
+
+`theme-color` define a color to customize the browser interface. This will provide a suggested color for the user agents that support coloring the title bar, tab bar, or other chrome components.
+
+```html
+<meta name="robots" content="noindex, nofollow" />
+```
+
+<br>
+
+## Open Graph
+
+Open graph meta tags: Generate a link preview card for the document.
 
 ```HTML
+<!-- Facebook media card: -->
 <meta property="og:title" content="Page title" />
 <meta property="og:description" content="Page description" />
 <meta property="og:image" content="./image.jpg" />
+<meta property="og:image:alt" content="Alt description for the img above" />
 ```
 
-Generate link preview for your webpage with this meta tags.
+Twitter has its own [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup) syntax.
 
-<br> -->
+If not included, social media sites will correctly grab the title of your page and the description from the description meta tag, the same information as search engines will present, but you can intentionally set what you want users to see when a link is posted to your site.
+
+<br>
