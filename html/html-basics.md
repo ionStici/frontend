@@ -9,17 +9,6 @@
 
 <br>
 
-## Table of Content
-
-- [HTML Elements Anatomy](#html-elements-anatomy)
-- [HTML Concepts](#html-concepts)
-- [Entity References](#entity-references)
-- [Attributes](#attributes)
-- [Anchor Element](#anchor-element)
-- [Lists](#lists)
-
-<br>
-
 ## HTML Elements Anatomy
 
 HTML consists of elements. They define the content and structure of the webpage.
@@ -34,6 +23,8 @@ HTML element: `<p>` opening tag + `hi` content + `</p>` closing tag
 
 ## HTML Concepts
 
+- HTML is not case-sensitive, but for consistency use only lowercase letters.
+
 - _Nesting Elements_: Elements placed within other elements.
 
 - _Hierarchy_: _Child_ elements are nested inside _Parent_ elements (the relationship between elements).
@@ -44,11 +35,15 @@ HTML element: `<p>` opening tag + `hi` content + `</p>` closing tag
 
 - `<!-- a html comment -->` Comment syntax in HTML. The browser will ingnore this syntax.
 
-- _Self Closing Tags_: Elements composed of a single tag, usually used to embed something.
+- _Self Closing Tags_: (Void) Elements composed of a single tag, usually used to embed something.
+
+- _Non-replaced_ elements: are common elements that usually embed text into the document.
+
+- _Replaced_ elements are replaced by objects, e.g. input elements embed graphical user interface widgets.
 
 - Only the content inside the `body` tags will be displayed on the page.
 
-- _Headings_: There are six heading levels in HTML `<h1></h1>`.
+- _Headings_: There are six heading levels in HTML `<h1>` - `<h6>`.
 
 - `<div>` (division): the most popular html element used to divide the page into sections.
 
@@ -58,7 +53,7 @@ HTML element: `<p>` opening tag + `hi` content + `</p>` closing tag
 
 - `<em>` emphasizes text (style as _italic_). `<strong>` highlights important text (style as **bold**) - semantic.
 
-- `<br />` tag creates line breaks.
+- `<br />` tag creates line breaks. `<hr />` tag creates a thematic break.
 
 - Embed images with `<img src="img.jpg" />` tag. Inside `src` attribute we indicate the img path.
 
@@ -68,30 +63,13 @@ HTML element: `<p>` opening tag + `hi` content + `</p>` closing tag
 
 ## Entity References
 
-HTML special characters: `<` `>` `"` `'` `&`
+HTML special characters (part of the HTML syntax): `<` `>` `"` `'` `&`
 
-They are parts of the HTML syntax.
-
-To include a special character in our text we use a character reference.
+To include a special character in our text we use a [character reference](https://html.spec.whatwg.org/multipage/named-characters.html).
 
 These are special codes that represent characters, example: `<` equal to `&lt;`
 
 Each character reference starts with an ampersand `&` and ends with a semicolon `;`
-
-[Character References List](https://html.spec.whatwg.org/multipage/named-characters.html)
-
-<details>
-<summary>Entity Examples</summary>
-
-| Literal character | Character reference equivalent |
-| :---------------: | :----------------------------: |
-|         <         |             `&lt;`             |
-|         >         |             `&gt;`             |
-|         "         |            `&quot;`            |
-|         '         |            `&apos;`            |
-|         &         |            `&amp;`             |
-
-</details>
 
 <br>
 

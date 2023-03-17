@@ -1,36 +1,26 @@
 # Digital Accessibility
 
-## Table of Content
+https://web.dev/learn/accessibility/focus/
 
-- [Accessibility Overview](#accessibility-overview)
-- [Accessible Design](#accessible-design)
-- [Accessibility in practice](#accessibility-in-practice)
-  - [Semantic HTML Elements](#semantic-html-elements)
-  - [Alt Attribute](#alt-attribute)
-  - [ARIA Role](#aria-role)
-  - [ARIA Properties](#aria-properties)
+SEMANTIC ELEMENTS
 
-External Resoruces:
+`<title></title>`
+
+`<html lang="en" />`
+
+Section language `<div lang="ro"></div>`
 
 - [CSS and JavaScript accessibility best practices by MDN](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
 - [The a11y Project Checklist](https://www.a11yproject.com/checklist/)
 
 <br>
 
-## Accessibility Overview
-
-**Accessibility** refers to designing devices. products, environments - so that individuals with disabilities or sensory impairments can successfully use the device or product.
-
-**Digital Accessibility** refers specifically to digital media (not much different from the general idea of accessibility).
-
-**Digital Accessibility Requirements:**
+## Digital Accessibility Requirements
 
 - Screen readers that parse a website for a user with visual impairments
 - Videos on websites are closed-captioned for individuals with hearing impairments
 - Images include “alt text” for individuals with visual impairments
 - Websites must be navigable by keyboard for users who may not be able to operate a mouse (i.e., navigating using the “Tab” on a keyboard)
-
-Recommendations for making Web content more accessible [Web Content Accessibility Guidelines 2.1](https://www.w3.org/TR/WCAG21/)
 
 <br>
 
@@ -38,7 +28,7 @@ Recommendations for making Web content more accessible [Web Content Accessibilit
 
 - [Toptal](https://www.toptal.com/designers/colorfilter) - design testing tool (colorblind web page filter).
 - Use the right contrast so that text and colors provide good visual cues.
-- Use correct text hierarchy (`<h1><h6>`) and the right font size so our content is legible.
+- Use correct text hierarchy (`<h1>` - `<h6>`) and the right font size so our content is legible.
 - Consider: Easy to distinguish links / input with labels / text with background overlaid on images.
 
 <br>
