@@ -2,26 +2,41 @@
 
 # Attributes
 
-HTML Elements can have attributes.
+**Attributes** provide extra information about and functionality for the element.
 
 ```html
-<p class="text" open="open" open>Paragraph</p>
+<p class="text" open id="unique_id">Hello</p>
 ```
-
-Attributes anatomy:
-
-1. The attribute name, followed by an equal sign.
-2. The attribute value, wrapped in single or double quote marks.
-
-Attributes contain extra information about the element. It will not appear on the page.
-
-_Boolean attributes_ can only have one value which is generally the same as the attribute name.
-
-We can set boolean attribute equal to itself, or leave just the name - both acceptable.
 
 <br>
 
-## `download`
+- **Attributes anatomy**
+
+  1. The attribute name, followed by an equal sign.
+  2. The attribute value, wrapped in single or double quote marks.
+
+<br>
+
+- **Global attributes** are attributes that can be set on any HTML element.
+- Examples: `id` , `class` , `style` , [mdn list](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
+
+<br>
+
+- **Boolean attributes** can only have one value which is generally the same as the attribute name.
+- We can set a boolean attribute equal to itself or to `true`, or leave just the name, both acceptable.
+
+<br>
+
+- Attribute values that are part of the HTML specification are _case-insensitive_.
+- Attribute values that we define, such as classes, are _case-sensitive_.
+
+<br>
+
+## Attributes aektvlhjndg
+
+- **`tabindex`**
+
+<!-- ## `download`
 
 ```HTML
 <a href="/file.jpg" download>Download File</a>
@@ -67,4 +82,4 @@ Checks the spelling.
 <input type="text" readonly />
 ```
 
-The field is read-only and can not be edited.
+The field is read-only and can not be edited. -->
