@@ -10,3 +10,4 @@
 - [Anatomy of an HTML document](./html-document-anatomy.md)
 - [Metadata](./metadata.md)
 - [Semantic HTML](./semantic-html.md)
+- [Attributes](./attributes.md)

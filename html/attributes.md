@@ -2,6 +2,23 @@
 
 # Attributes
 
+HTML Elements can have attributes.
+
+```html
+<p class="text" open="open" open>Paragraph</p>
+```
+
+Attributes anatomy:
+
+1. The attribute name, followed by an equal sign.
+2. The attribute value, wrapped in single or double quote marks.
+
+Attributes contain extra information about the element. It will not appear on the page.
+
+_Boolean attributes_ can only have one value which is generally the same as the attribute name.
+
+We can set boolean attribute equal to itself, or leave just the name - both acceptable.
+
 <br>
 
 ## `download`

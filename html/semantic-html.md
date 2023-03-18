@@ -2,82 +2,69 @@
 
 # Semantic HTML
 
-**Semantic** _relating to meaning_.
+**Semantic elements** provide additional meaning about the content it renders.
 
-**Semantic elements** provide information about the content between the opening and closing tags.
-
-### Why use Semantic HTML?
-
-- **Accessibility:** With Semantic html Screen readers and browsers interpret the code better, making the page accessible for mobile devices and for people with disabilities.
-- **SEO:** Semantic html improves website's Search Engine Optimization.
-- **Easy to Understand** and read the source code for us and for other web developers.
-
-<br>
-
-## Header and Nav
-
-- `<header>` is an introductory container for navigational links within `<nav>` or introductory content containing `<h1>` to `<h6>` headings.
-
-  When the `header` is top level, it is the site `banner` (landmark role).
-
-  Whne a `header` is nested in `main article section`, it identifies it as the header for that section and isn't a landmark.
-
-- `<nav>` identifies content as navigation.
-
-  If `nav` is nested in the site heading, it is the main navigation.
-
-  if `nav` is nested in an `<article>` or `<section>`, it would be internal navigation for that section only.
+_Why Semantic elements?_ Accessibility + SEO + Easy to read the source code.
 
 <br>
 
 ## Key Semantic Elements
 
-- The `<main>` element identifies the main content of the document.
+- **`<header>`** is an introductory container.
 
-  There should be only one `<main>` per page.
-
-- `<aside>` is for content that is indirectly or tangentially related to the document's main content.
-
-  Usecases: Bibliographies, Endnotes, Comments, Pull quotes, Editorial sidebars, Additional information.
-
-  `<aside>` is a landmark with the implicit role of `complementary`
-
-- `<article>` (nested in main) represents a complete section of content.
-
-  Usecases: articles, blogs, comments, magazines.
-
-- The `<section>` element is used to define generaic standalone sections of a document (no landmark).
-
-  Sections usually should have a heading. `<article>` elements can be separated in sections.
-
-- `<h1>` to `<h6>` six headings, each represents one of the six levels of section headings.
-
-  When a heading is nested in a document banner `<header>`, it is the heading for the whole site.
-
-  When it is nested in the `<main>`, it is the header for that page, not the whole site.
-
-  Headings when nested in an `<article>` or `<section>`, it is the header for that subsection of the page.
-
-  `<h1>` the main heading / `<h2>` as headings for sub-sections / `<h3>` for sections of sub-sections.
-
-- `<figure>` is used to mark up a photo `<img />` and then `<figcaption` to define a caption for the photo.
+  - It should contain introductory content `<h1>`, or navigational links `<nav>`.
+  - If `header` is top level, it is the site `banner` (landmark role).
+  - If `header` is nested within another section, it is identified as the header for that section (no landmark).
 
 <br>
 
-## Footer and address
+- **`<nav>`** identifies content as navigation.
 
-`<footer>` placed at the bottom of the page (landmark), contains information such as: contact info, copyright info, terms of use, site map.
+  - If `nav` is nested in the site heading, it is the main navigation.
+  - If `nav` is nested within an `<article>` or `<section>`, it will be the internal navigation for that section only.
 
-```html
-<footer>
-  <p>Copyright</p>
-  <address>contact information</address>
-</footer>
-```
+<br>
 
-Footers are often where you will find contact information, wrapped in an `<address>` element (for contact information).
+- **`<main>`** for the main content of the document.
 
-If `footer` is placed within sections, it will be considered the footer of that section (not landmark).
+  - There should be only one `<main>` per page.
+
+<br>
+
+- **`<aside>`** is for content that is indirectly related to the document's main content.
+
+  - `aside` is a landmark with the implicit role of `complementary`. Used for additional information.
+
+<br>
+
+- **`<article>`** (nested in main) represents a complete section of content.
+
+  - _Usecases:_ articles, blogs, comments, magazines.
+
+<br>
+
+- **`<section>`** is used to define a standalone section of the document (no landmark).
+
+  - Sections usually should have a heading. `article` elements can be separated in sections.
+
+<br>
+
+- **`<h1>`** to **`<h6>`** six heading levels.
+
+  - When a heading is nested in a document banner `header`, it is the heading for the whole website.
+  - When it is nested in the `main` container, it is the heading for that page, not the whole site.
+  - When nested in an `article` or `section`, it is the heading for that sub-section of the page.
+  - `h1` the main heading / `h2` as headings for sub-sections / `h3` for sections of sub-sections.
+
+<br>
+
+- **`<figure>`** is used to mark up an image `<img/>`, and then **`<figcaption`** to define a caption for the image.
+
+<br>
+
+- **`<footer>`** placed at the bottom of the page (landmark), contains information such as: contact info wrapped in an `<address>` element, copyright info, terms of use, site map.
+
+  - If `footer` is placed within another section, it will be considered the footer of that section (not landmark).
 
 <br>
 
@@ -95,7 +82,7 @@ We should not use the `role` attribute on semantic elements such as `<button>`. 
 
 Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
 
-### Role img
+### Role Img
 
 ```html
 <div role="img" aria-label="Img description"></div>
