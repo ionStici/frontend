@@ -70,7 +70,7 @@ _Why Semantic elements?_ Accessibility + SEO + Easy to read the source code.
 
 ## The role attribute
 
-The `role` attribute describes the role an element has in the context of the document.
+The **`role`** attribute provide semantic meaning to elements and their content.
 
 The role informs the screen reader user how to interact with an interactive element once it has focus.
 

@@ -5,7 +5,7 @@
 **Attributes** provide extra information about and functionality for the element.
 
 ```html
-<p class="text" open id="unique_id">Hello</p>
+<p class="text" id="unique" open>Hello</p>
 ```
 
 <br>
@@ -17,13 +17,18 @@
 
 <br>
 
-- **Global attributes** are attributes that can be set on any HTML element.
-- Examples: `id` , `class` , `style` , [mdn list](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
+- **Global attributes** can be set on any HTML element.
+- Examples: `id` , `class` , `style` - [mdn list](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
 
 <br>
 
-- **Boolean attributes** can only have one value which is generally the same as the attribute name.
-- We can set a boolean attribute equal to itself or to `true`, or leave just the name, both acceptable.
+- If a **Boolean attribute** is present, it is always true, otherwise it's not.
+- Boolean values can either be omitted, empty string, or equal to the name of the attribute.
+
+<br>
+
+- **Enumerated attributes** have a default value if the attribute is present but the value is missing.
+- The default value depends on the attribute. Attributes aren't automatically "true" if present.
 
 <br>
 
@@ -31,55 +36,38 @@
 - Attribute values that we define, such as classes, are _case-sensitive_.
 
 <br>
+<hr>
+<br>
 
-## Attributes aektvlhjndg
+- **`tabindex`** enable an element to receive focus.
 
-- **`tabindex`**
-
-<!-- ## `download`
-
-```HTML
-<a href="/file.jpg" download>Download File</a>
-```
-
-Specifies that the target file (specified in href) will be downloaded when user clicks on the hyperlink.
+  - `-1` will make the element capable of receiving focus via JS, but not through tab.
+  - `0` will make the element focusable and reachable via tabbing (default tab order, recommended).
+  - A value of `1` or more puts the element into a prioritized focus sequence (not recommended).
+  - If a document includes elements with a `tabindex` of `1` and more, tabbing begins in a separate sequence, in order of lowest value to highest value, before going through those in the regular sequence in source order.
 
 <br>
 
-## `contenteditable`
-
-```HTML
-<p contenteditable="true">Editable</p>
-```
-
-Specifies whether the content of an element is editable or not.
+- **`contenteditable`** enumerated attribute will make an element editable, focusable, with `tabindex` set to `0`.
 
 <br>
 
-## `autocomplete`
+- **`data-*="12"`** custom attributes.
 
-```HTML
-<input type="text" autocomplete="off" />
-```
-
-`autocomplete` allows the browser to predict the value.
+  - Custom properties are an excellent way of communicating application-specific information via JavaScript.
 
 <br>
 
-## `spellcheck`
-
-```HTML
-<input type="text" spellcheck="true" />
-```
-
-Checks the spelling.
+- **`readonly`** will make a field input unavailable for editing.
 
 <br>
 
-## `readonly`
+- **`download`** specifies that the target file from `href` will be downloaded when the user clicks on the hyperlink.
 
-```HTML
-<input type="text" readonly />
-```
+  ```HTML
+  <a href="/file.jpg" download>Download File</a>
+  ```
 
-The field is read-only and can not be edited. -->
+<br>
+<hr>
+<br>
