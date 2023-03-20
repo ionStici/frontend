@@ -33,7 +33,7 @@ HTML element: `<p>` opening tag + `hi` content + `</p>` closing tag
 
 - White space in HTML is reduced to a single space when the code is rendered.
 
-- `<!-- a html comment -->` Comment syntax in HTML. The browser will ingnore this syntax.
+- `<!-- a html comment -->` Comment syntax in HTML. The browser will ignore this syntax.
 
 - _Self Closing Tags_: (Void) Elements composed of a single tag, usually used to embed something.
 
@@ -43,19 +43,19 @@ HTML element: `<p>` opening tag + `hi` content + `</p>` closing tag
 
 - Only the content inside the `body` tags will be displayed on the page.
 
-- _Headings_: There are six heading levels in HTML `<h1>` - `<h6>`.
+- `<h1>` - `<h6>` (Headings) There are six heading levels
+
+- `<p>` (Paragraph) contain a block of plain text
 
 - `<div>` (division): the most popular html element used to divide the page into sections.
-
-- `<p>` (Paragraph) contain a block of plain text.
 
 - `<span>` contain short pieces of content, used to separate small pieces of content.
 
 - `<em>` emphasizes text (style as _italic_). `<strong>` highlights important text (style as **bold**) - semantic.
 
-- `<br />` tag creates line breaks. `<hr />` tag creates a thematic break.
+- `<br/>` tag creates line breaks. `<hr/>` tag creates a thematic break.
 
-- Embed images with `<img src="img.jpg" />` tag. Inside `src` attribute we indicate the img path.
+- Embed images with `<img src="img.jpg" alt="" />` tag. Inside `src` attribute we indicate the img path.
 
 - `alt` attribute (alternative text) brings meaning to images - define a short description of the image.
 
@@ -75,13 +75,13 @@ Each character reference starts with an ampersand `&` and ends with a semicolon 
 
 ## Anchor Element
 
-Linking to other web pages.
+Links represent a connection between two resources, one of which is the current document.
 
 ```html
-<a target="_blank" href="https://www.google.com/">Google</a>
+<a href="/" target="_blank" href="/file.jpg" download>Google</a>
 ```
 
-- `href` attribute stands for _hyperlink reference_. Creates a hyperlink to the indicated destination as value.
+- `href` attribute stands for _hyperlink reference_. It creates a hyperlink to the indicated destination as value.
 - `target` attribute specifies how a link should open. `_blank` value will open the link in a new tab.
 
 We can link to a web page, a relative path, a file, email address, anything else a URL can address.
@@ -89,6 +89,8 @@ We can link to a web page, a relative path, a file, email address, anything else
 `href="#footer"` using IDs as href value we can jump to certain sections when clicking on links.
 
 We can turn nearly any element (like img) into a link by wrapping that element with an anchor element.
+
+The `download` attribute specifies that the target file from `href` will be downloaded.
 
 <br>
 
@@ -98,8 +100,8 @@ Creating a list of items:
 
 ```html
 <ul>
-  <li>Hello</li>
-  <li>World</li>
+  <li>1</li>
+  <li>2</li>
 </ul>
 ```
 

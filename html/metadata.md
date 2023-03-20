@@ -4,8 +4,8 @@
 
 _Two types of meta tags:_
 
-- praga directives (`http-equiv` attribute)
-- named meta types (`name` attribute)
+- `http-equiv` praga directives
+- `name` named meta types
 
 Both must include the `content` attribute which defines the content for the type of metadata listed.
 

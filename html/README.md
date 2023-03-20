@@ -7,7 +7,7 @@
 <div></div>
 
 - [HTML Basics](./html-basics.md)
-- [Anatomy of an HTML document](./html-document-anatomy.md)
+- [HTML document](./html-document.md)
 - [Metadata](./metadata.md)
 - [Semantic HTML](./semantic-html.md)
 - [Attributes](./attributes.md)

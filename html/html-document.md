@@ -21,7 +21,7 @@
 
 2. `<html>` tags, the root element, wrapps all the content, anything between these tags will be interpreted as HTML code.
 
-3. `<html lang="en-US" >` the `lang` attribute defines the main language of the document. The value of the `lang` attribute is a two or three-letter ISO language code followed by the region. The region is optional. The `lang` attribute can be use in other HTML tags that differ from the main document language.
+3. `<html lang="en-US" >` the `lang` attribute defines the main language of the document. The value of the `lang` attribute is a two or three-letter ISO language code followed by the region. The region is optional. The `lang` attribute can be used in other HTML tags that differ from the main document language.
 
 4. `<head>` tag contains the metadata (information) about the web page. It isn't displayed directly on the web page, it can appear in search results, other roles.
 

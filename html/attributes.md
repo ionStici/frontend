@@ -61,13 +61,5 @@
 - **`readonly`** will make a field input unavailable for editing.
 
 <br>
-
-- **`download`** specifies that the target file from `href` will be downloaded when the user clicks on the hyperlink.
-
-  ```HTML
-  <a href="/file.jpg" download>Download File</a>
-  ```
-
-<br>
 <hr>
 <br>
