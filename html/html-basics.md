@@ -55,10 +55,6 @@ HTML element: `<p>` opening tag + `hi` content + `</p>` closing tag
 
 - `<br/>` tag creates line breaks. `<hr/>` tag creates a thematic break.
 
-- Embed images with `<img src="img.jpg" alt="" />` tag. Inside `src` attribute we indicate the img path.
-
-- `alt` attribute (alternative text) brings meaning to images - define a short description of the image.
-
 <br>
 
 ## Entity References

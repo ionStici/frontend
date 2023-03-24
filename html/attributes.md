@@ -48,7 +48,7 @@
 
 <br>
 
-- **`contenteditable`** enumerated attribute will make an element editable, focusable, with `tabindex` set to `0`.
+- **`contenteditable`** attribute (enumerated) will make an element editable, focusable, with `tabindex` set to `0`.
 
 <br>
 

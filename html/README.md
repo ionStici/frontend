@@ -11,3 +11,5 @@
 - [Metadata](./metadata.md)
 - [Semantic HTML](./semantic-html.md)
 - [Attributes](./attributes.md)
+
+<br>
