@@ -78,9 +78,39 @@
 ## Accessing the microphone and camera
 
 ```html
-<label><input type="file" />Photo</label>
+<input type="file" capture="user" accept="image/*" />
 ```
 
-- The file input type `<input type="file">` enables uploading files via forms.
+- The `file` input type enables uploading files via forms.
+- [`accept`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept) describes which file types to aloow. It takes as its value a comma-separated list of one or more file types.
+- `capture` enumerated attribute: a new media file created using the user's camera or microphone.
 
-[https://web.dev/learn/html/forms/#accessing-the-microphone-and-camera](https://web.dev/learn/html/forms/#accessing-the-microphone-and-camera)
+<br>
+
+## Additionally
+
+`required`
+
+`optional`
+
+`default`
+
+`enabled`
+
+`disabled`
+
+`read-write`
+
+`read-only`
+
+`valid`
+
+`invalid`
+
+`in-range`
+
+`out-of-range`
+
+`user-invalid`
+
+`user-valid`
