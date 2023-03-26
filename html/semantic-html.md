@@ -58,10 +58,6 @@ _Why Semantic elements?_ Accessibility + SEO + Easy to read the source code.
 
 <br>
 
-- **`<figure>`** is used to mark up an image `<img/>`, and then **`<figcaption`** to define a caption for the image.
-
-<br>
-
 - **`<footer>`** placed at the bottom of the page (landmark), contains information such as: contact info wrapped in an `<address>` element, copyright info, terms of use, site map.
 
   - If `footer` is placed within another section, it will be considered the footer of that section (not landmark).
