@@ -11,5 +11,8 @@
 - [Metadata](./metadata.md)
 - [Semantic HTML](./semantic-html.md)
 - [Attributes](./attributes.md)
+- [Forms](./forms.md)
+- [Images](./images.md)
+- [Audio and Video](./audio-video.md)
 
 <br>
