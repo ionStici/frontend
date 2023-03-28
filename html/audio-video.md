@@ -1,5 +1,3 @@
-# Multimedia and embedding
-
 ## Audio and Video
 
 - `<video>` and `<audio>` elements, along with the `src` attribute, are used to embed media players.
@@ -34,4 +32,8 @@ Within the `type` attribute, we can include a [codecs](https://developer.mozilla
 
 Make sure to define the aspect ratio of your video, because when the video loads, a size difference between the poster and the video will cause a reflow and repaint.
 
-<br>
+If you want a background video, consider the following: purely decorative, ARIA role of none, omit any fallback content, no tracks, include `autoplay` `loop` `muted` attributes.
+
+About [tracks](https://web.dev/learn/html/audio-video/#tracks)
+
+About [Custom media controls](https://web.dev/learn/html/audio-video/#custom-media-controls)

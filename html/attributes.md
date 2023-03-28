@@ -39,19 +39,6 @@
 <hr>
 <br>
 
-- **`tabindex`** enable an element to receive focus.
-
-  - `-1` will make the element capable of receiving focus via JS, but not through tab.
-  - `0` will make the element focusable and reachable via tabbing (default tab order, recommended).
-  - A value of `1` or more puts the element into a prioritized focus sequence (not recommended).
-  - If a document includes elements with a `tabindex` of `1` and more, tabbing begins in a separate sequence, in order of lowest value to highest value, before going through those in the regular sequence in source order.
-
-<br>
-
-- **`contenteditable`** attribute (enumerated) will make an element editable, focusable, with `tabindex` set to `0`.
-
-<br>
-
 - **`data-*="12"`** custom attributes.
 
   - Custom properties are an excellent way of communicating application-specific information via JavaScript.
