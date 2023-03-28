@@ -112,3 +112,16 @@ Description list -> description term -> description definition.
 ```
 
 <br>
+
+## Details and Summary
+
+[web.dev article](https://web.dev/learn/html/details/)
+
+```html
+<details open>
+  <summary>accordion</summary>
+  <p>lorem</p>
+</details>
+```
+
+<br>
