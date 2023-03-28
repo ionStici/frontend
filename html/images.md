@@ -69,3 +69,29 @@ The browser will consider each child `<source>` element and choose the best matc
 By setting `loading="lazy"`, the image loading is deferred until it is likely to come into the viewport, based on the distance the image is from the viewport. This is updated as the user scrolls.
 
 <br>
+
+## Aspect Ratio
+
+```html
+<img width="70" height="112" />
+```
+
+```css
+img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+}
+```
+
+The included unitless `height` and `width` values will be overridden with CSS.
+
+The purpose of including these attributes is to reserve the space at the right aspect ratio, improving performance by reducing layout shift.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/attr
+
+https://web.dev/learn/html/images/#aspect-ratio
+
+https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/
+
+<br>
