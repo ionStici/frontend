@@ -32,8 +32,10 @@
 
 <br>
 
-## JavaScript
+## JavaScript focus related notes
 
 - `element.focus()` JavaScript method sets focus on the specified element (if it can be focused).
 
 - `document.activeElement` read-only property returns the element within the DOM that currently has focus.
+
+<br>

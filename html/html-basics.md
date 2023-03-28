@@ -43,17 +43,9 @@ HTML element: `<p>` opening tag + `hi` content + `</p>` closing tag
 
 - Only the content inside the `body` tags will be displayed on the page.
 
-- `<h1>` - `<h6>` (Headings) There are six heading levels
-
-- `<p>` (Paragraph) contain a block of plain text
-
 - `<div>` (division): the most popular html element used to divide the page into sections.
 
-- `<span>` contain short pieces of content, used to separate small pieces of content.
-
-- `<em>` emphasizes text (style as _italic_). `<strong>` highlights important text (style as **bold**) - semantic.
-
-- `<br/>` tag creates line breaks. `<hr/>` tag creates a thematic break.
+- `<br/>` creates line breaks. `<hr/>` creates a thematic break ("separator" semantic meaning). `<wbr/>` represents a word break opportunity.
 
 <br>
 
@@ -105,5 +97,18 @@ Each list item must be wrapper in `<li>` (list) tags.
 
 - `<ul>` for unordered lists.
 - `<ol>` for ordered lists.
+
+<br>
+
+# Description Lists
+
+Description list -> description term -> description definition.
+
+```html
+<dl>
+  <dt>hi</dt>
+  <dd>A friendly, informal, casual greeting said when meeting someone.</dd>
+</dl>
+```
 
 <br>
