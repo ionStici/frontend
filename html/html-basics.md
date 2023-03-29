@@ -113,15 +113,10 @@ Description list -> description term -> description definition.
 
 <br>
 
-## Details and Summary
+## Additionally
 
-[web.dev article](https://web.dev/learn/html/details/)
+`<details>` & `<summary>` [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) / [web.dev](https://web.dev/learn/html/details/)
 
-```html
-<details open>
-  <summary>accordion</summary>
-  <p>lorem</p>
-</details>
-```
+`<dialog>` [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) / [web.dev](https://web.dev/learn/html/dialog/)
 
 <br>
