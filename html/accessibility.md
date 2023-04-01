@@ -1,15 +1,5 @@
 # Digital Accessibility
 
-https://web.dev/learn/accessibility/focus/
-
-SEMANTIC ELEMENTS
-
-`<title></title>`
-
-`<html lang="en" />`
-
-Section language `<div lang="ro"></div>`
-
 - [CSS and JavaScript accessibility best practices by MDN](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
 - [The a11y Project Checklist](https://www.a11yproject.com/checklist/)
 
