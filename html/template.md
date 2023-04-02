@@ -100,3 +100,28 @@ We append a clone of the template contents to the document body each time we use
 Note: Being part of a shadow DOM rather than the standard DOM, styles scoped to the document does not apply. We have to create encapsulated styles to style our encapsulated Shadow DOM content.
 
 <br>
+
+## Shadow DOM
+
+The Shadow DOM scopes CSS styles to each shadow tree, isolating it from the rest of the document.
+
+This means external CSS doesn't apply to your component, and component styles have no effect on the rest of the document, unless we intentionally direct them to.
+
+We can include a `<style>` element providing encapsulated CSS to the custom element.
+
+```html
+<template>
+  <style>
+    .label {
+      color: red;
+    }
+  </style>
+  <form></form>
+</template>
+```
+
+While web components are encapsulated with in `<template>` markup and CSS styles are scoped to the shadow DOM and hidden from everything outside of the components, the slot content which gets rendered, the `<anyElement slot="slot-id">` portion of the component, is not encapsulated.
+
+[Styling outside of the current scope](https://web.dev/learn/html/template/#styling-outside-of-the-current-scope)
+
+<br>
