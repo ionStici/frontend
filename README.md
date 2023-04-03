@@ -2,8 +2,6 @@
 
 Summarizing frontend knowledge while studying for future reference.
 
-Repository for
-
 <br>
 
 ## Table of Content

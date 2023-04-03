@@ -7,14 +7,13 @@
 <div></div>
 
 - [HTML Basics](./html-basics.md)
+- [HTML document](./html-document.md)
+- [Metadata](./metadata.md)
+- [Semantic HTML](./semantic-html.md)
 
 <br>
 
 <!--
-- [HTML document](./html-document.md)
-- [Metadata](./metadata.md)
-- [Semantic HTML](./semantic-html.md)
-- [Attributes](./attributes.md)
 - [Forms](./forms.md)
 - [Images](./images.md)
 - [Audio and Video](./audio-video.md) -->

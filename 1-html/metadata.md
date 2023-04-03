@@ -2,10 +2,7 @@
 
 # Metadata
 
-_Two types of meta tags:_
-
-- `http-equiv` praga directives
-- `name` named meta types
+Two types of meta tags: (1) **`http-equiv`** praga directives, (2) **`name`** named meta types
 
 Both must include the `content` attribute which defines the content for the type of metadata listed.
 
@@ -35,11 +32,13 @@ Define the author of the page (who wrote the page).
 
 ## Robots
 
+By default, search engines will index the site.
+
 ```html
-<meta name="robots" content="index, follow" />
+<meta name="robots" content="noindex, nofollow" />
 ```
 
-This meta tag tells the seach engine bots to not index the site and not to follow any links.
+This meta tag tells the seach engine bots to not index the site and not follow any links.
 
 <br>
 
@@ -48,17 +47,16 @@ This meta tag tells the seach engine bots to not index the site and not to follo
 `theme-color` define a color to customize the browser interface. This will provide a suggested color for the user agents that support coloring the title bar, tab bar, or other chrome components.
 
 ```html
-<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#226DAA" />
 ```
 
 <br>
 
 ## Open Graph
 
-Open graph meta tags: Generate a link preview card for the document.
+Open graph meta tags: Generate a link preview card for the document. Facebook media card:
 
 ```HTML
-<!-- Facebook media card: -->
 <meta property="og:title" content="Page title" />
 <meta property="og:description" content="Page description" />
 <meta property="og:image" content="./image.jpg" />

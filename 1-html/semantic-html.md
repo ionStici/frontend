@@ -2,7 +2,9 @@
 
 # Semantic HTML
 
-**Semantic elements** provide additional meaning about the content it renders.
+**Semantic elements** = elements with a meaning.
+
+**Non-semantic** elements: `<div>` and `<span>` - tells nothing about its content.
 
 _Why Semantic elements?_ Accessibility + SEO + Easy to read the source code.
 
@@ -20,14 +22,14 @@ _Why Semantic elements?_ Accessibility + SEO + Easy to read the source code.
 
 - **`<nav>`** identifies content as navigation.
 
-  - If `nav` is nested in the site heading, it is the main navigation.
+  - If `nav` is nested in the site header, it is the main navigation.
   - If `nav` is nested within an `<article>` or `<section>`, it will be the internal navigation for that section only.
 
 <br>
 
 - **`<main>`** for the main content of the document.
 
-  - There should be only one `<main>` per page.
+  - There should be only one `<main>` per page (landmark).
 
 <br>
 
@@ -68,15 +70,17 @@ _Why Semantic elements?_ Accessibility + SEO + Easy to read the source code.
 
 The **`role`** attribute provide semantic meaning to elements and their content.
 
-The role informs the screen reader user how to interact with an interactive element once it has focus.
+It informs the screen reader user how to interact with an interactive element once it has focus.
 
 Interactive elements, such as buttons, links, and checkboxes, all have implicit roles.
 
 With `role='button'` we can turn any element semantically into a button.
 
-We should not use the `role` attribute on semantic elements such as `<button>`. For semantic purposes, we should instead use elements with the default implicit role.
+We should not use the `role` attribute on semantic elements such as `<button>`
 
 Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
+
+<br>
 
 ### Role Img
 
@@ -84,7 +88,8 @@ Using too many landmark roles can create "noise" in screen readers, making it di
 <div role="img" aria-label="Img description"></div>
 ```
 
-- In case we use an element as an image using the CSS `background-image` property, we should define `role="img"` on that element.
-- Then, using the `aria-label` attribute, we define a short description of the image, just like the `alt` attribute does.
+In case we use an element as an image using the CSS `background-image` property, we should define `role="img"` on that element.
+
+Then, using the `aria-label` attribute, we define a short description of the image, just like the `alt` attribute does.
 
 <br>
