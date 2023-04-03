@@ -1,3 +1,5 @@
+[&larr; Back](./README.md)
+
 # Text Elements
 
 ## Basics
@@ -6,7 +8,9 @@
 - `<p>` (paragraph) contains a block of plain text.
 - `<span>` used to separate small pieces of content (no semantic).
 
-## More text elements
+<br>
+
+## Text elements
 
 - `<code>` documenting code examples (displayed in monospace font).
 - `<pre>` renders text exactly as written in the source code.
@@ -15,7 +19,7 @@
 - `<samp>` for sample output from a computer program.
 - `<kbd>` mimics text as keyboard input.
 - `<var>` can be used for math expressions or programming variables.
-- `<sup>` superscript. `<sub>` subscript.
+- `<sup>` superscript and `<sub>` subscript.
 - `<del>` to indicate text that has been removed (optionally including `cite` and `datetime`).
 - `<s>` renders text with a line through it (for text that is no longer relevant).
 - `<ins>` used to indicate text that has been added (apposite of `<del>`).
@@ -36,7 +40,7 @@ Elements used to emphasize text based on a semantic reason.
 - `<strong>` identifies text as having strong importance.
 - `<cite>` used to mark the titles of books, articles, or other creative work.
 
-<br>
+<div></div>
 
 Little to no semantic value:
 

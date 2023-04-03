@@ -1,11 +1,17 @@
+[&larr; Back](./README.md)
+
 # Images
-
-<br>
-
-## Note
 
 - Decorative images that are presentational should be applied with CSS.
 - But when an image adds context to a document, it is content and should be embedded with HTML.
+
+<br>
+
+## Table of Content
+
+- [Img](#img)
+- [Figure](#figure)
+- [picture and source](#picture-and-source)
 
 <br>
 
@@ -17,19 +23,12 @@
 
 The `src` attribute is used to reference an image resource.
 
-<br>
-
 ### alt
 
 - The `alt` attribute (alternative text) brings meaning to images. Define a short and concise description of the image.
-
 - If the image is of SVG file type, include `role="img"`, which is necessary due to VoiceOver bugs.
-
-- When using images for iconography, convey the meaning of the icon. For example, the magnifying glass icon's alt attribute is _search_.
-
-- If the image provides no additional information or is purely decorative, the attribute should still be there, just as an empty string.
-
-- The magazine, being purely decorative, has an empty alt attribute, and a role of none as the image is a purely presentational SVG.
+- When using images for iconography, convey the meaning of the icon. E.g. the magnifying glass icon's `alt` attribute is _search_.
+- If the image doesn't provide additional information and is purely decorative, the `alt` attribute should be an empty string and the `role` equal to `none`.
 
 <br>
 
@@ -54,7 +53,7 @@ The `<picture>` element is a container for multiple image options listed in an u
 
 The `<source>` attributes include: `srcset`, `sizes`, `media`, `width` and `height`.
 
-`<source>` supports image formats defined in the type attribute.
+`<source>` supports image formats defined in the `type` attribute.
 
 The browser will consider each child `<source>` element and choose the best match among them. If no matches are found, the URL of the `<img>` element's `src` attribute is selected. The accessible name comes from the `alt` attribute of the nested `<img>`.
 
@@ -88,10 +87,8 @@ The included unitless `height` and `width` values will be overridden with CSS.
 
 The purpose of including these attributes is to reserve the space at the right aspect ratio, improving performance by reducing layout shift.
 
-https://developer.mozilla.org/en-US/docs/Web/CSS/attr
-
-https://web.dev/learn/html/images/#aspect-ratio
-
-https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/
+- [MDN: `attr()` CSS function](https://developer.mozilla.org/en-US/docs/Web/CSS/attr)
+- [web.dev: Aspect Radio](https://web.dev/learn/html/images/#aspect-ratio)
+- [Height and Width on Images](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)
 
 <br>

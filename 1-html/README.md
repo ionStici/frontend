@@ -10,10 +10,7 @@
 - [HTML document](./html-document.md)
 - [Metadata](./metadata.md)
 - [Semantic HTML](./semantic-html.md)
+- [Text Elements](./text.md)
+- [Images](./images.md)
 
 <br>
-
-<!--
-- [Forms](./forms.md)
-- [Images](./images.md)
-- [Audio and Video](./audio-video.md) -->
