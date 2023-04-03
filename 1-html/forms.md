@@ -116,3 +116,5 @@
 `user-valid`
 
 <br>
+
+- **`readonly`** will make a field input unavailable for editing.
