@@ -9,6 +9,8 @@ TypeScript allows us to write JavaScript with a set of tools called a type syste
 - TypeScript files extension: `main.ts`
 - We run TypeScript code through the TS transpier, and if the code adheres to TypeScript's standards, it will output a JavaScript version of the file (.js)
 
+The `tsconfig.json` file that is placed in the root of the project, contains the enforced rules for the TypeScript compiler. By including a config file, we can use the `tsc` command without any arguments.
+
 <br>
 
 ## Type Inferences
