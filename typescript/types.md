@@ -54,7 +54,7 @@ Type annotation (type declaration) - explicitly tell TS what type something is o
 We provide a type annotation be appending a variable with a colon `:` and the type (e.g. `string`, `number`, `any`).
 
 ```ts
-let birthYear = 1500 : number;
+let birthYear: number = 1500;
 ```
 
 <br>
