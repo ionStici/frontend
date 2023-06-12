@@ -2,6 +2,15 @@
 
 # Arrays
 
+## Table of Content
+
+- [Array Type Annotations]()
+- [Multi-dimensional Arrays]()
+- [Tuples]()
+- [Array Type Inference]()
+- [Rest Parameters]()
+- [Spread Syntax]()
+
 <br>
 
 ## Array Type Annotations
@@ -45,5 +54,38 @@ When we want tuples, we need to use explicit type annotations. Tuples have fixed
 <br>
 
 ## Array Type Inference
+
+```ts
+let arr = [true, true, false];
+arr[3] = true; // expanding
+```
+
+The type of `arr` is `boolean[]` (and not tuple).
+
+If the type annotation was not defined, then TypeScript infer types from initial values.
+
+<br>
+
+## Rest Parameters
+
+Type annotations for a rest parameter are identical to type annotations for arrays.
+
+```ts
+function merge(str, ...letters: string[]) {
+  // <code>
+}
+```
+
+TypeScript will treat `letters` as an array of strings.
+
+<br>
+
+## Spread Syntax
+
+```ts
+let words: [string, string] = ["Hello", "World"];
+let greet = (...words: string[]) => console.log(...words);
+greet(...words);
+```
 
 <br>
