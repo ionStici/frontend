@@ -4,12 +4,12 @@
 
 ## Table of Content
 
-- [Array Type Annotations]()
-- [Multi-dimensional Arrays]()
-- [Tuples]()
-- [Array Type Inference]()
-- [Rest Parameters]()
-- [Spread Syntax]()
+- [Array Type Annotations](#array-type-annotations)
+- [Multi-dimensional Arrays](#multi-dimensional-arrays)
+- [Tuples](#tuples)
+- [Array Type Inference](#array-type-inference)
+- [Rest Parameters](#rest-parameters)
+- [Spread Syntax](#spread-syntax)
 
 <br>
 
