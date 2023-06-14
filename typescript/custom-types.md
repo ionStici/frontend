@@ -160,7 +160,13 @@ It doesn’t matter what we name the function parameters or the parameters in th
 
 <br>
 
-<!-- ## Generic Types
+## Generic Types
+
+TypeScript's generics - create collections of types that share certain similarities. This collections are parameterized by one or more type variables.
+
+Example of a generic type - `Array<T>` - this is generic because we can substitute any type in the place of `T`.
+
+With generics we can define our own collections of object types.
 
 ```ts
 type Family<T> = {
@@ -176,6 +182,28 @@ let family: Family<string> = {
 };
 ```
 
-TypeScript's generics - to create collections of types that share certain similarities. This collections are parameterized by one or more type variables.
+This code defines a collection of object types. We then substitute `T` with some type of our choosing.
 
-<br> -->
+Writing generic types with type `typeName<T>` allows us to use `T` within the type annotation as a type placeholder. Later, when the generic type is used, `T` is replaced with the provided type.
+
+<br>
+
+## Generic Functions
+
+Code Example: a function that returns arrays filled with a certain value:
+
+```ts
+function getFilledArray<T>(value: T, n: number): T[] {
+  return Array(n).fill(value);
+}
+
+getFilledArray<string>("cheese", 3);
+```
+
+The above code tells TypeScript to make sure that `value` and the returned array have the same type `T`.
+
+When the function is invoked, we provide the `T`'s value.
+
+In general, writing generic functions with function `functionName<T>` allows us to use `T` within the type annotation as a type placeholder. Later, when the function is invoked, `T` is replaced with the provided type.
+
+<br>
