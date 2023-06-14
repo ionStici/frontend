@@ -11,6 +11,8 @@ TypeScript allows us to be flexible with how specific our types are by combining
 - [Defining Unions](#defining-unions)
 - [Type Narrowing](#type-narrowing)
 - [Unions and Arrays](#unions-and-arrays)
+- [Common Key Value Pairs](#common-key-value-pairs)
+- [Unions with Literal Types](#unions-with-literal-types)
 
 <br>
 
@@ -81,3 +83,34 @@ p.s. The parentheses are vitally important to type arrays correctly.
 <br>
 
 ## Common Key Value Pairs
+
+When we put type members in a union, TypeScript will only allow us to use the common methods and properties that all members of the union share.
+
+```ts
+const batteryStatus: boolean | number = false;
+
+batteryStatus.toString(); // No TypeScript error
+batteryStatus.toFixed(2); // TypeScript error
+```
+
+From the above code example, TypeScript will only allow us to call methods that both `number` and `boolean` share, for example the `toString()` method. But, since only `number` has the `toFixed()` method, TS will return an error.
+
+Rule: Any properties or methods that are not shared by all of the union’s members won’t be allowed and will produce a TypeScript error.
+
+<br>
+
+## Unions with Literal Types
+
+Literal type unions are useful when we want to create distinct states within a program.
+
+```ts
+type Color = "green" | "yellow" | "red";
+
+function changeLight(color: Color) {
+  // ...
+}
+```
+
+With the code above, we could ensure that wherever `changeLight()` is called, that it gets passed only allowed stoplight colors. If we tried to call `changeLight('purple')`, TypeScript would return an error.
+
+<br>
