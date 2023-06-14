@@ -6,6 +6,7 @@
 
 - [Enums](#enums)
   - [Enums under the hood](#enums-under-the-hood)
+- [String Enums vs. Numeric Enums](#string-enums-vs-numeric-enums)
 
 <br>
 
@@ -64,5 +65,35 @@ enum Pet {
   Tarantula = 1,
 }
 ```
+
+This type of enums are referred to as _numeric enums_, since they are based on numbers.
+
+<br>
+
+## String Enums vs. Numeric Enums
+
+TypeScript also allows us to use enums based on strings, referred to as _string enums_.
+
+```ts
+enum DirectionNumber {
+  North,
+  South,
+  East,
+  West,
+}
+
+enum DirectionString {
+  North = "NORTH",
+  South = "SOUTH",
+  East = "EAST",
+  West = "WEST",
+}
+```
+
+With numeric enums, the numbers could be assigned automatically, but with string enums we must write the string explicitly.
+
+Technically, any string will work, however, it is much better to use the convention where the string value of the enum variable is just the capitalized form of the variable name.
+
+With numeric enums variables we can assign arbitrary numbers directly without leading to type errors. Because of this, as a general rule, always use string enums because they are much more strict.
 
 <br>
