@@ -97,3 +97,41 @@ Technically, any string will work, however, it is much better to use the convent
 With numeric enums variables we can assign arbitrary numbers directly without leading to type errors. Because of this, as a general rule, always use string enums because they are much more strict.
 
 <br>
+
+## Object Types
+
+Object Type Annotation.
+
+```ts
+let person: { name: string; age: number };
+person = { name: "John", age: 25 };
+```
+
+Trying to assign a value to `person` that doesn't have `name` and `age` properties of the specified types will lead to a type error.
+
+TypeScript places no restrictions on the types of an object’s properties. They can be enums, arrays, and even other object types.
+
+<br>
+
+## Type Aliases
+
+**Type Aliases** - alternative type names that we choose for convenience.
+
+```ts
+type specialString = string;
+let sayHello: specialString = "Hello";
+
+type Person = { name: string; age: number };
+let company = {
+  companyName: string,
+  boss: Person,
+  employees: Person[],
+  employeeOfTheMonth: Person,
+};
+```
+
+Type aliases are truly useful for referring to complicated types that need to be repeated, especially object types and tuple types.
+
+<br>
+
+<!-- ## Function Types -->
