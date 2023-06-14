@@ -5,6 +5,7 @@
 ## Table of Content
 
 - [Enums](#enums)
+  - [Enums under the hood](#enums-under-the-hood)
 
 <br>
 
@@ -42,4 +43,26 @@ const orders: [Pet, number][] = [
 
 <br>
 
-<!-- ### Enums under the hood -->
+### Enums under the hood
+
+Under the hood, enum values are assigned a numerical value according to their listed order, starting with `0`.
+
+```ts
+petOnSale = Pet.Chinchilla;
+petOnSale === 2; // true
+```
+
+Furthermore, we can reassign `petOnSale` to a number value, like `petOnSale = 0`, and it does not raise a type error.
+
+We can change the starting number of the first enum value so the next enums will continue from that number, or even specify all numbers separately.
+
+```ts
+enum Pet {
+  Hamster = 4,
+  Rat = 7,
+  Chinchilla = 3,
+  Tarantula = 1,
+}
+```
+
+<br>
