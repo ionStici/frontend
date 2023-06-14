@@ -1,9 +1,5 @@
 # **Frontend**
 
-Summarizing frontend knowledge while studying for future reference.
-
-<br>
-
 ## Table of Content
 
 - [**HTML**](./1-html/README.md)
@@ -12,11 +8,11 @@ Summarizing frontend knowledge while studying for future reference.
 <div></div>
 
 - [**JavaScript**](./3-js/README.md)
-- [**TypeScript**](./typescript/README.md)
+- [**TypeScript**](./4-ts/README.md)
 
 <div></div>
 
 - [**Libraries**](./libraries/README.md)
-- [**Tools**](.)
+- [**Tools**](./tools/README.md)
 
 <br>

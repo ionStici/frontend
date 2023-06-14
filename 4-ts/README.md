@@ -7,3 +7,4 @@
 - [Arrays](./arrays.md)
 - [Custom Types](./custom-types.md)
 - [Union Types](./union-types.md)
+- [Type Narrowing](./type-narrowing.md)

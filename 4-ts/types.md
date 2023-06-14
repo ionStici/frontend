@@ -11,6 +11,8 @@ TypeScript allows us to write JavaScript with a set of tools called a type syste
 
 The `tsconfig.json` file that is placed in the root of the project, contains the enforced rules for the TypeScript compiler. By including a config file, we can use the `tsc` command without any arguments.
 
+When the compiler notices an error, it will complain when running `tsc` and also by showing a red squiggly line below the code in the editor.
+
 <br>
 
 ## Type Inferences
