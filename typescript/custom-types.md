@@ -11,6 +11,7 @@
 - [Type Aliases](#type-aliases)
 - [Function Types](#function-types)
 - [Generic Types](#generic-types)
+- [Generic Functions](#generic-functions)
 
 <br>
 
