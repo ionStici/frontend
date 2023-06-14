@@ -7,6 +7,10 @@
 - [Enums](#enums)
   - [Enums under the hood](#enums-under-the-hood)
 - [String Enums vs. Numeric Enums](#string-enums-vs-numeric-enums)
+- [Object Types](#object-types)
+- [Type Aliases](#type-aliases)
+- [Function Types](#function-types)
+- [Generic Types](#generic-types)
 
 <br>
 
@@ -134,4 +138,44 @@ Type aliases are truly useful for referring to complicated types that need to be
 
 <br>
 
-<!-- ## Function Types -->
+## Function Types
+
+Node: In JavaScript, functions can be assigned to variable:
+
+```js
+let log = console.log; // lack of parentheses
+log("hello"); // Prints: Hello
+```
+
+In TypeScript, we can precisely control the kinds of functions we assign to a variable, by using **function types** where we specify the argument types and return type of a function.
+
+Type Function Syntax: arrow notation for functions / instead of the return value we put the return type.
+
+```ts
+type funcType = (arg0: string, arg1: string) => number;
+let myFunc: funcType = (ar1, ar2) => ar1.length + ar2.length;
+```
+
+It doesn’t matter what we name the function parameters or the parameters in the type annotation, so long as they have the correct types.
+
+<br>
+
+<!-- ## Generic Types
+
+```ts
+type Family<T> = {
+  parents: [T, T];
+  mate: T;
+  children: T[];
+};
+
+let family: Family<string> = {
+  parents: ["stern string", "nice string"],
+  mate: "string next door",
+  children: ["stringy", "stringo", "stringina", "stringolio"],
+};
+```
+
+TypeScript's generics - to create collections of types that share certain similarities. This collections are parameterized by one or more type variables.
+
+<br> -->
