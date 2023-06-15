@@ -10,6 +10,7 @@
 - [Composed Types](#composed-types)
 - [Extending Interfaces](#extending-interfaces)
 - [Index Signatures](#index-signatures)
+- [Optional Type Members](#optional-type-members)
 
 <br>
 
@@ -148,5 +149,34 @@ In the `SolarEclipse` type, there’s an index signature used for defining a var
 The `[latitude: string]` syntax defines every property name within `SolarEclipse` as a `string` type with a value of type `boolean`.
 
 In the `[latitude: string]` syntax, the `latitude` name is purely for us, the developer, as a human-readable name that will show up in potential error messages later.
+
+<br>
+
+## Optional Type Members
+
+A common scenario in programming is creating a function or class that can take in many arguments, some of which are required, and some that are optional.
+
+```ts
+interface OptionsType {
+  name: string;
+  size?: string;
+}
+
+function listFile(options: OptionsType) {
+  let fileName = options.name;
+
+  if (options.size) {
+    fileName = `${fileName}: ${options.size}`;
+  }
+
+  return fileName;
+}
+
+listFile({ name: "readme.txt" });
+```
+
+`OptionsType` has an optional type member named `size`. We can denote any type member as optional using the `?` operator after the property name and before the colon `size?:`
+
+The optional parameter allows us to call `listFile()` with a parameter that does not include a size property at al.
 
 <br>
