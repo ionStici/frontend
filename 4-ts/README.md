@@ -16,3 +16,6 @@ TypeScript is a strongly typed programming language that builds on JavaScript.
 
 - [Configurations](./configs.md)
 - [Configurations 2](./configs-2.md)
+- [Configurations 3](./configs-3.md)
+
+<br>
