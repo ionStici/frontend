@@ -8,3 +8,4 @@
 - [Custom Types](./custom-types.md)
 - [Union Types](./union-types.md)
 - [Type Narrowing](./type-narrowing.md)
+- [Object Types](./object-types.md)
