@@ -1,5 +1,7 @@
 # TypeScript
 
+TypeScript is a strongly typed programming language that builds on JavaScript.
+
 [**&larr; Back to the Main Page**](./../README.md)
 
 - [Types](./types.md)
