@@ -14,6 +14,45 @@
 
 The **Accessibility Tree** is created by the browser and based on the DOM tree. Its purpose is to make the webpage as accessible as possible by working along with **Assistive Technologies (AT)**. The accessibility tree contains objects representing all the markup elements, attributes, and text nodes.
 
+[View the Accessibility Tree via Chrome DevTools](https://developer.chrome.com/blog/full-accessibility-tree/)
+
+<br>
+
+### ARIA Features
+
+The three main features of ARIA are: roles, properties, states/values.
+
+**Roles** define what an element is or does on the page:
+
+```html
+<div role="button">Click</div>
+```
+
+**Properties** express characteristics or relationships to an object:
+
+```html
+<div role="button" aria-describedby="comment">Click</div>
+<p id="comment">You will be redirected to anothe page!</p>
+```
+
+**States/values** define the current conditions or data values associated with the element:
+
+```html
+<div role="button" aria-pressed="false">Click</div>
+```
+
+<br>
+
+### Five rules of ARIA
+
+1. **Don't use ARIA** - ARIA is required only when an HTML element doesn't have accessibility support.
+2. **Don't add (unnecessary) ARIA to HTML**
+3. **Always support keyboard navigation** - All interactive (not disabled) ARIA controls must be keyboard accessible (`tabindex="0"`)
+4. **Don't hide focusable elements** - Don't add `role="presentation"` or `aria-hidden="true"` to elements that need to have focus.
+5. **Use accessible names for interactive elements** - The purpose of an interactive element needs to be conveyed to a user before they know how to interact with it.
+
+<br>
+
 <br>
 <br>
 <br>

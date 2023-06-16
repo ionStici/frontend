@@ -15,5 +15,7 @@
 
 <br>
 
-- [Focus]()
-- [Accessibility]()
+- [Focus](./focus.md)
+- [Accessibility](./accessibility.md)
+
+<br>
