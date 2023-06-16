@@ -1,3 +1,5 @@
+[&larr; Back](./README.md)
+
 # Focus
 
 - **`tabindex`** global attribute enable an element to receive focus.

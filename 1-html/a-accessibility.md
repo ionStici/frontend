@@ -1,8 +1,28 @@
-# Digital Accessibility
+[&larr; Back](./README.md)
 
-- [CSS and JavaScript accessibility best practices by MDN](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [The a11y Project Checklist](https://www.a11yproject.com/checklist/)
+# Digital Accessibility (a11y)
 
+## Table of Content
+
+- [ARIA and HTML](#aria-and-html)
+
+<br>
+
+## ARIA and HTML
+
+**Accessible Rich Internet Applications (ARIA)** - a set of attributes we can add to HTML elements to increase their accessibility. These attributes communicate role, state, and property to assistive technologies via accessibility APIs found in modern browsers. This communication happens through the **accessibility tree**.
+
+The **Accessibility Tree** is created by the browser and based on the DOM tree. Its purpose is to make the webpage as accessible as possible by working along with **Assistive Technologies (AT)**. The accessibility tree contains objects representing all the markup elements, attributes, and text nodes.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
 ## Digital Accessibility Requirements
@@ -75,3 +95,6 @@ ARIA properties are attributes that provide additional information about element
 The property `aria-label` gives the screen reader additional information to read out loud to the user. [ARIA Techniques](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
 
 <br>
+
+- [CSS and JavaScript accessibility best practices by MDN](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [The a11y Project Checklist](https://www.a11yproject.com/checklist/)
