@@ -5,10 +5,9 @@
 ## Table of Content
 
 - [ARIA and HTML](#aria-and-html)
-
-## External Chapters
-
-- [Focus](./focus.md)
+- [Structure](#structure)
+- [The Document](#the-document)
+- [Focus](#focus)
 
 <br>
 
@@ -19,8 +18,6 @@
 The **Accessibility Tree** is created by the browser and based on the DOM tree. Its purpose is to make the webpage as accessible as possible by working along with **Assistive Technologies (AT)**. The accessibility tree contains objects representing all the markup elements, attributes, and text nodes.
 
 [View the Accessibility Tree via Chrome DevTools](https://developer.chrome.com/blog/full-accessibility-tree/)
-
-<br>
 
 ### ARIA Features
 
@@ -44,8 +41,6 @@ The three main features of ARIA are: roles, properties, states/values.
 ```html
 <div role="button" aria-pressed="false">Click</div>
 ```
-
-<br>
 
 ### Five rules of ARIA
 
@@ -77,8 +72,6 @@ When sectioning off large regions of content, you can use either ARIA landmark r
 |      `<section>`      |       region       |
 |       `<form>`        |        form        |
 
-<br>
-
 ### Headings
 
 Heading level one `<h1>` is used for the page's highest and most important information, moving incrementally to heading level six `<h6>` for the lowest and least important information.
@@ -99,8 +92,6 @@ Descriptive page titles are good for both Users and SEO. The title is the first 
 
 Btw, Search engines typically display only the first 55–60 characters of a page title.
 
-<br>
-
 ### Language
 
 **Page Language**: `<html lang="en">` the default language for the entire page.
@@ -109,6 +100,51 @@ Btw, Search engines typically display only the first 55–60 characters of a pag
 
 <br>
 
+## Focus
+
+[**Focus Lesson**](./focus.md)
+
+- <kbd>tab</kbd> key moves the keyboard focus up the DOM.
+- <kbd>shift + tab</kbd> moves the focus down the DOM.
+
+### Skip Links
+
+**Skip links** (typically the first focusable element) are anchor links that jump to a different section of the same page, using that section's ID.
+
+When a user presses the tab key, and an active skip link is in place, it sends the keyboard focus to the skip link. The user can click the skip link and jump past the header section and main navigation.
+
+```html
+<a href="#content" class="skip">Skip to main content</a>
+```
+
+```css
+.skip {
+  display: none;
+}
+
+.skip:focus {
+  display: block;
+}
+```
+
+### Focus indicator
+
+- Default CSS property for style elements with focus: `outline'.
+- Important: Set an appropriate highlighting style for focusable elements.
+- Recommendation: 3:1 color contrast ratio for all focus indicators.
+
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -120,7 +156,6 @@ Btw, Search engines typically display only the first 55–60 characters of a pag
 <br>
 <br>
 
-<!--
 ## Digital Accessibility Requirements
 
 - Screen readers that parse a website for a user with visual impairments
@@ -175,8 +210,6 @@ Screen readers will read the value of the `alt` attribute out load.
 
 <br>
 
-
-
 ### ARIA Role
 
 ARIA HTML attribute `role`. The value of `role` attribute changes how a screen reader communicates the element.
@@ -193,5 +226,3 @@ ARIA properties are attributes that provide additional information about element
 The property `aria-label` gives the screen reader additional information to read out loud to the user. [ARIA Techniques](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
 
 <br>
-
--->
