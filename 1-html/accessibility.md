@@ -6,6 +6,10 @@
 
 - [ARIA and HTML](#aria-and-html)
 
+## External Chapters
+
+- [Focus](./focus.md)
+
 <br>
 
 ## ARIA and HTML
@@ -80,6 +84,28 @@ When sectioning off large regions of content, you can use either ARIA landmark r
 Heading level one `<h1>` is used for the page's highest and most important information, moving incrementally to heading level six `<h6>` for the lowest and least important information.
 
 The sequence of the heading levels is important, we should not skip heading levels.
+
+<br>
+
+## The Document
+
+### Page Title
+
+Page `<title>` is displayed in the browser tab, it helps users understand which page they are visiting. It should be equivalent to the `<h1>` or main topic of the page.
+
+For SPAs, the page title is updated using `document.title`
+
+Descriptive page titles are good for both Users and SEO. The title is the first thing announced when an AT user visits a page. The title must be accurate, unique, descriptive, concise, but also not too much ketwords.
+
+Btw, Search engines typically display only the first 55–60 characters of a page title.
+
+<br>
+
+### Language
+
+**Page Language**: `<html lang="en">` the default language for the entire page.
+
+**Section Language**: `<section lang="en">` this will override the top-level language setting for a specific section of content.
 
 <br>
 
