@@ -51,6 +51,36 @@ The three main features of ARIA are: roles, properties, states/values.
 4. **Don't hide focusable elements** - Don't add `role="presentation"` or `aria-hidden="true"` to elements that need to have focus.
 5. **Use accessible names for interactive elements** - The purpose of an interactive element needs to be conveyed to a user before they know how to interact with it.
 
+When the browser supports an HTML tag with an implicit role with an ARIA equivalent, there is usually no need to add ARIA to the element. However, ARIA still includes many roles, states, and properties that aren't available in any version of HTML.
+
+<br>
+
+## Structure
+
+### Landmarks
+
+**Landmarks** ensure content is in navigable regions.
+
+When sectioning off large regions of content, you can use either ARIA landmark roles or the newer HTML landmark elements to add structural context to your page.
+
+| HTML Landmark Element | ARIA Landmark Role |
+| :-------------------: | :----------------: |
+|      `<header>`       |       banner       |
+|       `<main>`        |        main        |
+|      `<footer>`       |    contentinfo     |
+|        `<nav>`        |     navigation     |
+|       `<aside>`       |   complementary    |
+|      `<section>`      |       region       |
+|       `<form>`        |        form        |
+
+<br>
+
+### Headings
+
+Heading level one `<h1>` is used for the page's highest and most important information, moving incrementally to heading level six `<h6>` for the lowest and least important information.
+
+The sequence of the heading levels is important, we should not skip heading levels.
+
 <br>
 
 <br>
@@ -64,6 +94,7 @@ The three main features of ARIA are: roles, properties, states/values.
 <br>
 <br>
 
+<!--
 ## Digital Accessibility Requirements
 
 - Screen readers that parse a website for a user with visual impairments
@@ -82,7 +113,7 @@ The three main features of ARIA are: roles, properties, states/values.
 
 <br>
 
-## Accessibility in practice
+## Accessibility in Practice
 
 Visually impaired users use screen readers to access content on the Internet.
 
@@ -118,6 +149,8 @@ Screen readers will read the value of the `alt` attribute out load.
 
 <br>
 
+
+
 ### ARIA Role
 
 ARIA HTML attribute `role`. The value of `role` attribute changes how a screen reader communicates the element.
@@ -135,5 +168,4 @@ The property `aria-label` gives the screen reader additional information to read
 
 <br>
 
-- [CSS and JavaScript accessibility best practices by MDN](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [The a11y Project Checklist](https://www.a11yproject.com/checklist/)
+-->

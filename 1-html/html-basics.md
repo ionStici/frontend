@@ -103,7 +103,7 @@ HTML consists of elements. They define the content and structure of the webpage.
 
 <br>
 
-## Anchor Element
+## Anchor Elements
 
 Links represent a connection between two resources, one of which is the current document.
 
@@ -116,7 +116,7 @@ Links represent a connection between two resources, one of which is the current 
 
 We can link to a web page, a relative path, a file, email address, anything else a URL can address.
 
-`href="#footer"` using IDs as href value we can jump to certain sections when clicking on links.
+`href="#footer"` using IDs as href values we can jump to certain sections when clicking on links.
 
 We can turn nearly any element (like img) into a link by wrapping that element with an anchor element.
 
@@ -142,7 +142,7 @@ Each list item must be wrapper in `<li>` (list) tags.
 
 <br>
 
-# Description Lists
+## Description Lists
 
 Description list -> description term -> description definition.
 

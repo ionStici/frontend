@@ -33,7 +33,7 @@
 
 ## Emphasizing text
 
-Elements used to emphasize text based on a semantic reason.
+Elements used to emphasize text based on a semantic reason:
 
 - `<em>` to emphasize or stress a span of content.
 - `<mark>` to highlight text that is somehow relevant.

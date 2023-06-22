@@ -19,7 +19,7 @@
 1. `<!DOCTYPE html>` Document type declaration, it acts as an instruction for the browser, should be the first line of code in html.
    Tells the browser what type of document to expect and what version of HTML is being used in the document.
 
-2. `<html>` tags, the root element, wrapps all the content, anything between these tags will be interpreted as HTML code.
+2. `<html>` tags, the root element, wraps all the content, anything between these tags will be interpreted as HTML code.
 
 3. `<html lang="en-US" >` the `lang` attribute defines the main language of the document. The value of the `lang` attribute is a two or three-letter ISO language code followed by the region. The region is optional. The `lang` attribute can also be used in other HTML sections that differ from the main document language.
 
