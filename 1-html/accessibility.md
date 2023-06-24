@@ -2,12 +2,17 @@
 
 # Digital Accessibility (a11y)
 
+- [A11y Checklist](https://www.a11yproject.com/checklist/)
+- [MDN CSS and JavaScript accessibility best practices](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
+
 ## Table of Content
 
 - [ARIA and HTML](#aria-and-html)
 - [Structure](#structure)
 - [The Document](#the-document)
 - [Focus](#focus)
+- [JavaScript](#javascript)
+- [Images](#images)
 
 <br>
 
@@ -135,6 +140,72 @@ When a user presses the tab key, and an active skip link is in place, it sends t
 
 <br>
 
+## JavaScript
+
+- **Important:** Besides click events, add appropriate key events (e.g. enter) to focusable elements.
+- When transitioning between pages (or routing), decide where the focus goes.
+- Instead od adding inline styles, better toggle CSS classes.
+
+### State Management
+
+[ARIA states and properties](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes)
+
+**Component level**
+
+- `aria-expanded` attribute tells the user whether a drop-down menu or list is expanded or collapsed.
+- `aria-pressed` can indicate if a button has been pressed.
+
+<br>
+
+## Images
+
+- Decorative images that are presentational should be applied with CSS (no context).
+- When an image adds context to a document, it is content and should be embedded with HTML.
+
+<div></div>
+
+- **What is the image purpose?** Inform / Enrich
+- **What are the next steps?** Message / Action
+- **What is the message?** Simple / Complex / Emotional
+
+<div></div>
+
+### Decorative Images
+
+A _decorative image_ is a visual element that doesn't add information for users to better understand the context.
+
+If an image is decorative, it must be programmatically hidden from ATs, examples:
+
+1. Empty/null text alternative `alt=""`
+
+2. Applying ARIA:
+
+   `role="presentation" role="none"` this removes an element's semantics from exposure to the accessibility tree.
+
+   `aria-hidden="true"` this removes the entire element - and all of its children - from the accessibility API.
+
+3. Add the image as a CSS background.
+
+### Informative Images
+
+<br>
+<br>
+<br>
+
+### Alt Attribute
+
+The `alt` attribute is used to describe an image (use `alt` instead of aria-label for images).
+
+Screen readers will read the value of the `alt` attribute out load.
+
+`alt` attribute conventions:
+
+- The value of alt should concisely describe the image.
+- For images that are also `<a>` elements, the alt attribute should describe the source that the link targets.
+- If an image conveys no information (such as a decorative border), the alt attribute should be empty, but should never be omitted.
+- If an image is described by text near the image, do not duplicate the description in the alt attribute. Use an empty alt attribute instead.
+- The value of an alt attribute should be no more than 150 characters.
+
 <br>
 <br>
 <br>
@@ -193,20 +264,6 @@ For example, the `<header>` element is intended to contain introductory and navi
 [List of all semantic HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
 <br>
-
-### Alt Attribute
-
-The `alt` attribute is used to describe an image (use `alt` instead of aria-label for images).
-
-Screen readers will read the value of the `alt` attribute out load.
-
-`alt` attribute conventions:
-
-- The value of alt should concisely describe the image.
-- For images that are also `<a>` elements, the alt attribute should describe the source that the link targets.
-- If an image conveys no information (such as a decorative border), the alt attribute should be empty, but should never be omitted.
-- If an image is described by text near the image, do not duplicate the description in the alt attribute. Use an empty alt attribute instead.
-- The value of an alt attribute should be no more than 150 characters.
 
 <br>
 
