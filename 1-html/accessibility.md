@@ -3,7 +3,6 @@
 # Digital Accessibility (a11y)
 
 - [A11y Checklist](https://www.a11yproject.com/checklist/)
-- [MDN CSS and JavaScript accessibility best practices](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
 
 ## Table of Content
 
@@ -188,23 +187,40 @@ If an image is decorative, it must be programmatically hidden from ATs, examples
 
 ### Informative Images
 
-<br>
-<br>
-<br>
+An _informative images_ is an image that conveys an idea, emotion, or a simple concept, examples: photos of real-world objects, icons, drawings, images of text.
 
-### Alt Attribute
+If the image is informative, we should include programmatic alternative text describing the purpose of the image `alt` (regardless of the file type).
 
-The `alt` attribute is used to describe an image (use `alt` instead of aria-label for images).
+The `alt` attribute will give to AT users more context about an image and help them better understand an image's message.
 
-Screen readers will read the value of the `alt` attribute out load.
+In case the image is of SVG type, we also should include the `role="img"` attribute, so that ATs will recognize it as an image.
 
-`alt` attribute conventions:
+### Functional Images
 
-- The value of alt should concisely describe the image.
+A _functional image_ is connected to an action. Examples: an logo that links to the home page, a magnifying glass used as a search button, or a social media icon that directs you to a different website or app.
+
+Unlike an informative image, the functional image's `alt` attribute needs to describe the image's action (not the visual aspects). But, it is not a requirement.
+
+### Complex images
+
+_Complex Image_ - infographics, maps, graphs/charts, and complex illustrations.
+
+1. One way to add additional explanation to an image is to link out to a resource or provide a jump link to a longer explanation later on the page.
+
+2. Use `aria-describedby="id"` on the img element, this will link the image to an ID containing a longer description, this will create a strong association between the image and the full description.
+
+3. Use `<figure>` and `<figcaption>` elements to group short alternative descriptions with a longer one.
+
+### Alt Attribute Conventions
+
+- Use proper punctuation, avoid non-alpha characters, use dashes instead of underscores.
+- The value of `alt` should concisely describe the image.
 - For images that are also `<a>` elements, the alt attribute should describe the source that the link targets.
 - If an image conveys no information (such as a decorative border), the alt attribute should be empty, but should never be omitted.
 - If an image is described by text near the image, do not duplicate the description in the alt attribute. Use an empty alt attribute instead.
 - The value of an alt attribute should be no more than 150 characters.
+
+<br>
 
 <br>
 <br>

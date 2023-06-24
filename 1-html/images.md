@@ -2,6 +2,8 @@
 
 # Images
 
+[**Accessibility Images**](./accessibility.md#images)
+
 - Decorative images that are presentational should be applied with CSS.
 - But when an image adds context to a document, it is content and should be embedded with HTML.
 
