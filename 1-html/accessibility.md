@@ -241,6 +241,28 @@ _Complex Image_ - infographics, maps, graphs/charts, and complex illustrations.
 - Add a toggle to turn _on_ or _off_ animations. Consider defaulting the toggler to _off_.
 
 <br>
+
+## Typography
+
+The quickiest way to create an accessible design is to choose a common typeface, ex: Arial, Times New Roman, Calibri, Verdana.
+
+- Avoid using elaborate or handwritten fonts and those with only one character case.
+- Limit the number of typeface variations like color, bold, ALL CAPS, and italics to increase readability.
+- Use markup instead of text on images whenever possible.
+- Base font sizes should be defined with a relative value (%, rem, or em) to allow easy resizing.
+
+An important aspect of accessible layout designs is making critical elements distinct from one another and grouping similar elements together. If the elements are too close, it can be difficult to tell where one element begins and ends, especially if they have similar styling.
+
+Tools: [Good Line-Height](https://www.thegoodlineheight.com/) & [Golden Ratio Calculator](https://grtcalculator.com/)
+
+- Use elements like headings, subheadings, lists, numbers, quote blocks, and other visual groupings to break the page into sections.
+- Use clearly defined paragraphs, sentences, and word spacing.
+- Build columns of copy that do not exceed 80 characters in width (40 characters for logograms).
+- Avoid justified paragraph alignment.
+
+<br>
+
+<br>
 <br>
 <br>
 <br>
