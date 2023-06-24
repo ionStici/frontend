@@ -12,6 +12,7 @@
 - [Focus](#focus)
 - [JavaScript](#javascript)
 - [Images](#images)
+- [Accessible Design](#accessible-design)
 
 <br>
 
@@ -222,6 +223,43 @@ _Complex Image_ - infographics, maps, graphs/charts, and complex illustrations.
 
 <br>
 
+## Accessible Design
+
+- [Toptal](https://www.toptal.com/designers/colorfilter) - design testing tool (colorblind web page filter).
+- Use the right contrast so that text and colors provide good visual cues.
+- Use correct text hierarchy (`<h1>` - `<h6>`) and the right font size so our content is legible.
+- Consider: Easy to distinguish links / input with labels / text with background overlaid on images.
+- Use `@prefers-color-scheme` media query to allow users to choose a light or dark theme version of the website based on their OS settings.
+
+<br>
+
+## Animation and Motion
+
+- Avoid flashes.
+- If the element's animation is not essential, consider not using it then.
+- Use `@prefers-reduced-motion` media query that checks the user's OS settings related to animation.
+- Add a toggle to turn _on_ or _off_ animations. Consider defaulting the toggler to _off_.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -251,13 +289,6 @@ _Complex Image_ - infographics, maps, graphs/charts, and complex illustrations.
 - Websites must be navigable by keyboard for users who may not be able to operate a mouse (i.e., navigating using the “Tab” on a keyboard)
 
 <br>
-
-## Accessible Design
-
-- [Toptal](https://www.toptal.com/designers/colorfilter) - design testing tool (colorblind web page filter).
-- Use the right contrast so that text and colors provide good visual cues.
-- Use correct text hierarchy (`<h1>` - `<h6>`) and the right font size so our content is legible.
-- Consider: Easy to distinguish links / input with labels / text with background overlaid on images.
 
 <br>
 
