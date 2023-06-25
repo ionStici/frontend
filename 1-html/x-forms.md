@@ -56,8 +56,9 @@
 - Then, every individual form control (except buttons) must have a `<label>`.
 - Labels provide form controls with accessible names.
 - `legend` provides a label for a group of form controls, and `label` provides a label for individual inputs.
-- Explicit label: define the `for` attribute with the input id as its value.
+- Explicit label: define the `for` attribute with the input `id` as its value.
 - Implicit labels: include the form control inside a `label` element.
+- Include explicit error messages when fields are not correctly filled.
 
 <br>
 

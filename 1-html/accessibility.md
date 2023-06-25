@@ -6,6 +6,7 @@
 
 ## Table of Content
 
+- [Accessibility in Practice](#accessibility-in-practice)
 - [ARIA and HTML](#aria-and-html)
 - [Structure](#structure)
 - [The Document](#the-document)
@@ -13,6 +14,19 @@
 - [JavaScript](#javascript)
 - [Images](#images)
 - [Accessible Design](#accessible-design)
+- [Animation and Motion](#animation-and-motion)
+- [Typography](#typography)
+- [Forms](#forms)
+
+<br>
+
+## Accessibility in Practice
+
+Visually impaired users use screen readers to access content on the Internet.
+
+**A screen reader** is a piece of software that provides an audio description of a web page’s content. A screen reader not only reads the visual content out loud, it also reads out element names and other attributes that make it easier for visually impaired users to navigate a web page.
+
+**ARIA** stands for Accessible Rich Internet Applications, and refers to guidelines that make web pages accessible.
 
 <br>
 
@@ -57,9 +71,28 @@ The three main features of ARIA are: roles, properties, states/values.
 
 When the browser supports an HTML tag with an implicit role with an ARIA equivalent, there is usually no need to add ARIA to the element. However, ARIA still includes many roles, states, and properties that aren't available in any version of HTML.
 
+### ARIA Role
+
+ARIA HTML attribute `role`. The value of `role` attribute changes how a screen reader communicates the element.
+
+- `role="complementary"` the information from an element with this attribute is complementary (or supporting) to other information.
+- `role="presentation"` will instruct screen readers to skip reading unnecessary elements (like ol, ul, div, etc.).
+
+### ARIA Properties
+
+ARIA properties are attributes that provide additional information about elements that might not be so abvious to users of screen readers.
+
+The property `aria-label` gives the screen reader additional information to read out loud to the user. [ARIA Techniques](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+
 <br>
 
 ## Structure
+
+### Semantic HTML Elements
+
+Native semantics of an element describes the element’s intended purpose.
+
+[List of all semantic HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
 ### Landmarks
 
@@ -259,96 +292,5 @@ Tools: [Good Line-Height](https://www.thegoodlineheight.com/) & [Golden Ratio Ca
 - Use clearly defined paragraphs, sentences, and word spacing.
 - Build columns of copy that do not exceed 80 characters in width (40 characters for logograms).
 - Avoid justified paragraph alignment.
-
-<br>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-## Digital Accessibility Requirements
-
-- Screen readers that parse a website for a user with visual impairments
-- Videos on websites are closed-captioned for individuals with hearing impairments
-- Images include “alt text” for individuals with visual impairments
-- Websites must be navigable by keyboard for users who may not be able to operate a mouse (i.e., navigating using the “Tab” on a keyboard)
-
-<br>
-
-<br>
-
-## Accessibility in Practice
-
-Visually impaired users use screen readers to access content on the Internet.
-
-**A screen reader** is a piece of software that provides an audio description of a web page’s content. A screen reader not only reads the visual content out loud, it also reads out element names and other attributes that make it easier for visually impaired users to navigate a web page.
-
-**ARIA** stands for Accessible Rich Internet Applications, and refers to guidelines that make web pages accessible.
-
-<br>
-
-### Semantic HTML Elements
-
-Use the appropriate tags for a given task. Native semantics of an element describes the element’s intended purpose.
-
-For example, the `<header>` element is intended to contain introductory and navigational elements such as a logo, links, or a search bar.
-
-[List of all semantic HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
-
-<br>
-
-<br>
-
-### ARIA Role
-
-ARIA HTML attribute `role`. The value of `role` attribute changes how a screen reader communicates the element.
-
-- `role="complementary"` the information from an element with this attribute is complementary (or supporting) to other information.
-- `role="presentation"` will instruct screen readers to skip reading unnecessary elements (like ol, ul, div, etc.).
-
-<br>
-
-### ARIA Properties
-
-ARIA properties are attributes that provide additional information about elements that might not be so abvious to users of screen readers.
-
-The property `aria-label` gives the screen reader additional information to read out loud to the user. [ARIA Techniques](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
 
 <br>
