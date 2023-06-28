@@ -2,8 +2,6 @@
 
 # Digital Accessibility (a11y)
 
-- [A11y Checklist](https://www.a11yproject.com/checklist/)
-
 ## Table of Content
 
 - [Accessibility in Practice](#accessibility-in-practice)
@@ -17,6 +15,12 @@
 - [Animation and Motion](#animation-and-motion)
 - [Typography](#typography)
 - [Forms](#forms)
+
+<div></div>
+
+**External Resources:**
+
+- [A11y Checklist](https://www.a11yproject.com/checklist/)
 
 <br>
 
@@ -292,5 +296,31 @@ Tools: [Good Line-Height](https://www.thegoodlineheight.com/) & [Golden Ratio Ca
 - Use clearly defined paragraphs, sentences, and word spacing.
 - Build columns of copy that do not exceed 80 characters in width (40 characters for logograms).
 - Avoid justified paragraph alignment.
+
+<br>
+
+## Automated Accessibility Testing
+
+**Lighthouse** is an open-source, automated tool created to improve the quality of web pages through different types of audits, such as performance, SEO, and accessibility.
+
+<br>
+
+## Manual Accessibility Testing
+
+Focus areas: keyboard functionality, visually-focused reviews, general content checks.
+
+- [Manual a11y checklist (IBM)](https://www.ibm.com/able/toolkit/verify/manual/)
+
+**Commands essential for keyboard testing:**
+
+| Key              | Result                                       |
+| :--------------- | :------------------------------------------- |
+| Tab              | Moves forward one active element to another  |
+| Shift + Tab      | Moves backward one active element to another |
+| Arrows           | Cycle through related controls               |
+| Spacebar         | Toggles states and moves down the page       |
+| Shift + Spacebar | Moves up the page                            |
+| Enter            | Triggers specific controls                   |
+| Escape           | Dismisses dynamically displayed objects      |
 
 <br>
