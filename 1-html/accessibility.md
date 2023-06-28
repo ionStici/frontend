@@ -4,7 +4,6 @@
 
 ## Table of Content
 
-- [Accessibility in Practice](#accessibility-in-practice)
 - [ARIA and HTML](#aria-and-html)
 - [Structure](#structure)
 - [The Document](#the-document)
@@ -21,16 +20,6 @@
 **External Resources:**
 
 - [A11y Checklist](https://www.a11yproject.com/checklist/)
-
-<br>
-
-## Accessibility in Practice
-
-Visually impaired users use screen readers to access content on the Internet.
-
-**A screen reader** is a piece of software that provides an audio description of a web page’s content. A screen reader not only reads the visual content out loud, it also reads out element names and other attributes that make it easier for visually impaired users to navigate a web page.
-
-**ARIA** stands for Accessible Rich Internet Applications, and refers to guidelines that make web pages accessible.
 
 <br>
 
@@ -307,11 +296,11 @@ Tools: [Good Line-Height](https://www.thegoodlineheight.com/) & [Golden Ratio Ca
 
 ## Manual Accessibility Testing
 
+[Manual a11y checklist (IBM)](https://www.ibm.com/able/toolkit/verify/manual/)
+
 Focus areas: keyboard functionality, visually-focused reviews, general content checks.
 
-- [Manual a11y checklist (IBM)](https://www.ibm.com/able/toolkit/verify/manual/)
-
-**Commands essential for keyboard testing:**
+**Essential commands for keyboard testing:**
 
 | Key              | Result                                       |
 | :--------------- | :------------------------------------------- |
@@ -322,5 +311,14 @@ Focus areas: keyboard functionality, visually-focused reviews, general content c
 | Shift + Spacebar | Moves up the page                            |
 | Enter            | Triggers specific controls                   |
 | Escape           | Dismisses dynamically displayed objects      |
+
+<br>
+
+## Assistive Technology testing
+
+**A screen reader** is a piece of software that provides an audio description of a web page’s content. A screen reader not only reads the visual content out loud, it also reads out element names and other attributes that make it easier for visually impaired users to navigate a web page.
+
+- Best Screen Reader for iOS and MacOS devices: _VoiceOver_.
+- [Screen reader testing demo](https://web.dev/learn/accessibility/test-assistive-technology/)
 
 <br>
