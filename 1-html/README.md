@@ -13,9 +13,15 @@
 - [Text Elements](./text.md)
 - [Images](./images.md)
 
-<br>
+<div></div>
 
 - [Focus](./focus.md)
 - [Accessibility](./accessibility.md)
+
+<div></div>
+
+- [SEO](./seo.md)
+
+<div></div>
 
 <br>

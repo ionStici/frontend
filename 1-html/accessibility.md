@@ -13,7 +13,9 @@
 - [Accessible Design](#accessible-design)
 - [Animation and Motion](#animation-and-motion)
 - [Typography](#typography)
-- [Forms](#forms)
+- [Automated Accessibility Testing](#automated-accessibility-testing)
+- [Manual Accessibility Testing](#manual-accessibility-testing)
+- [Assistive Technology testing](#assistive-technology-testing)
 
 <div></div>
 
@@ -119,7 +121,7 @@ Page `<title>` is displayed in the browser tab, it helps users understand which 
 
 For SPAs, the page title is updated using `document.title`
 
-Descriptive page titles are good for both Users and SEO. The title is the first thing announced when an AT user visits a page. The title must be accurate, unique, descriptive, concise, but also not too much ketwords.
+Descriptive page titles are good for both Users and SEO. The title is the first thing announced when an AT user visits a page. The title must be accurate, unique, descriptive, concise, but also not too much keywords.
 
 Btw, Search engines typically display only the first 55–60 characters of a page title.
 
@@ -160,7 +162,7 @@ When a user presses the tab key, and an active skip link is in place, it sends t
 
 ### Focus indicator
 
-- Default CSS property for style elements with focus: `outline'.
+- Default CSS property for style elements with focus: `outline`
 - Important: Set an appropriate highlighting style for focusable elements.
 - Recommendation: 3:1 color contrast ratio for all focus indicators.
 
@@ -170,7 +172,7 @@ When a user presses the tab key, and an active skip link is in place, it sends t
 
 - **Important:** Besides click events, add appropriate key events (e.g. enter) to focusable elements.
 - When transitioning between pages (or routing), decide where the focus goes.
-- Instead od adding inline styles, better toggle CSS classes.
+- Instead of adding inline styles, better toggle CSS classes.
 
 ### State Management
 
