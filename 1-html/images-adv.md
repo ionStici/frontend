@@ -7,6 +7,12 @@
 - [SVG Vector Images](#svg-vector-images)
 - [Raster Images](#raster-images)
 
+<div></div>
+
+- [GIF](#gif)
+- [PNG](#png)
+- [JPEG](#jpeg)
+
 <br>
 
 ## SVG Vector Images
@@ -50,6 +56,25 @@ In practice, the combination of lossless compression and palette quantization me
 <br>
 
 ## PNG
+
+PNG (Portable Network Graphics)
+
+PNG uses _lossless compression_, meaning that the image data will be compressed without any loss of visual fidelity.
+
+- PNG supports “alpha channel” transparency, meaning that each pixel can be set to a level of transparency between 0 (fully transparent) and 255 (fully opaque).
+- GIF treats transparency as a binary proposition — a pixel is either an opaque color, or fully transparent.
+
+PNG will never reduce visual quality, but this results in excessively large file sizes compared to more modern web-friendly encodings, such as WebP (which btw also supports semi-transparency).
+
+In practical terms, PNG is a sound choice for maintaining a manageable-sized “canonical” version of a source image, saved in your local development environment or committed to a project repository in case future versions of that image need to be edited or re-saved in alternate formats. Also, it may be used as a fallback version.
+
+<br>
+
+## JPEG
+
+File extension: `.jpg` or `.jpeg`
+
+JPEG (Joint Photographic Experts Group) - the most common type of image used on the web. JPEG-style encoding is much, much more efficient.
 
 <br>
 <br>
