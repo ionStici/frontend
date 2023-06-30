@@ -248,6 +248,8 @@ _Complex Image_ - infographics, maps, graphs/charts, and complex illustrations.
 - If an image conveys no information (such as a decorative border), the alt attribute should be empty, but should never be omitted.
 - If an image is described by text near the image, do not duplicate the description in the alt attribute. Use an empty alt attribute instead.
 - The value of an alt attribute should be no more than 150 characters.
+- When using images for iconography, convey the meaning of the icon. E.g. the magnifying glass icon's `alt` attribute is _search_.
+- If the image doesn't provide additional information and is purely decorative, the `alt` attribute should be an empty string and the `role` equal to `none`.
 
 <br>
 

@@ -11,7 +11,11 @@
 - [Metadata](./metadata.md)
 - [Semantic HTML](./semantic-html.md)
 - [Text Elements](./text.md)
+
+<div></div>
+
 - [Images](./images.md)
+- [Advanced Images](./images-adv.md)
 
 <div></div>
 

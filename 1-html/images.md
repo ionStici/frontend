@@ -2,22 +2,24 @@
 
 # Images
 
-[**Accessibility Images**](./accessibility.md#images)
+[**Accessibility and Images**](./accessibility.md#images)
 
 - Decorative images that are presentational should be applied with CSS.
-- But when an image adds context to a document, it is content and should be embedded with HTML.
+- When an image adds context to a document, it is content and should be embedded with HTML.
 
 <br>
 
 ## Table of Content
 
-- [Img](#img)
-- [Figure](#figure)
+- [The img element](#the-img-element)
+- [The figure element](#the-figure-element)
 - [picture and source](#picture-and-source)
+- [Lazy Loading](#lazy-loading)
+- [Aspect Ratio](#aspect-ratio)
 
 <br>
 
-## Img
+## The img element
 
 ```html
 <img src="path/filename" alt="descriptive text" />
@@ -25,16 +27,11 @@
 
 The `src` attribute is used to reference an image resource.
 
-### alt
-
-- The `alt` attribute (alternative text) brings meaning to images. Define a short and concise description of the image.
-- If the image is of SVG file type, include `role="img"`, which is necessary due to VoiceOver bugs.
-- When using images for iconography, convey the meaning of the icon. E.g. the magnifying glass icon's `alt` attribute is _search_.
-- If the image doesn't provide additional information and is purely decorative, the `alt` attribute should be an empty string and the `role` equal to `none`.
+The `alt` attribute - a short and concise description of the image.
 
 <br>
 
-## figure
+## The figure element
 
 ```html
 <figure>
@@ -44,8 +41,7 @@ The `src` attribute is used to reference an image resource.
 ```
 
 - `<figure>` is a semantic way of referencing images, code snippets, example text.
-- Then `<figcaption>` will link a caption (associated description) for that content.
-- When including a `<figcaption>` make sure it is the first or last child nested within the `<figure>`.
+- `<figcaption>` will link a caption (associated description) for that content.
 
 <br>
 
