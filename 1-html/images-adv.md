@@ -2,6 +2,55 @@
 
 # Images
 
+## Table of Content
+
+- [SVG Vector Images](#svg-vector-images)
+- [Raster Images](#raster-images)
+
+<br>
+
+## SVG Vector Images
+
+**Vector graphics** are a method of communicating a series of shapes, coordinates, and paths to their rendering context. They are a set of instructions for how an image should be drawn.
+
+**Scalable Vector Graphics (SVG)** is an XML-based markup language developed by the W3C. It is a vector image format designed for the modern web.
+
+We can convert images to SVG. SVG can be styled with CSS, or contain JavaScript that builds behaviors and interactions into the images themselves.
+
+[MDN SVG Tutorial](https://developer.mozilla.org/docs/Web/SVG/Tutorial/Introduction)
+
+<br>
+
+## Raster Images
+
+Common raster image formats: JPEG, GIF, PNG, WebP.
+
+Raster Images - a set of pixel-by-pixel instructions for rendering a two-dimensional grid.
+
+The way different image formats compresses and encodes these instructions differs, resulting in a huge variance between file sizes, where the same end user image has no discernible difference in quality.
+
+For artwork containing real world levels of detail, raster images are the right tool for the job.
+
+Choosing the appropriate type of raster image ultimately comes down to the use case.
+
+A server doesn't send an image over the wire to a browser, but a stream of bytes describing the pixel grid that makes up that image for the client to recompose.
+
+<br>
+
+## GIF
+
+GIF (Graphics Interchange Format)
+
+How GIF supports its flipbook-like animation: a single frame is drawn to the logical screen, then replaced by another, then another.
+
+The GIF's pixel grid is build using color indexing technique.
+
+In practice, the combination of lossless compression and palette quantization means that GIF isn't very useful in modern web development. Lossless compression doesn't do enough to reduce file sizes, and a reduced palette means an obvious reduction in quality.
+
+<br>
+
+## PNG
+
 <br>
 <br>
 <br>

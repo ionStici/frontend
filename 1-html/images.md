@@ -65,6 +65,11 @@ The browser will consider each child `<source>` element and choose the best matc
 
 By setting `loading="lazy"`, the image loading is deferred until it is likely to come into the viewport, based on the distance the image is from the viewport. This is updated as the user scrolls.
 
+_To improve Largest Contentful Paint (LCP) score:_
+
+- Never specify `loading="lazy"` on top images.
+- Use `fetchpriority="high"` to prioritize important images above images elsewhere on the page.
+
 <br>
 
 ## Aspect Ratio
@@ -77,11 +82,11 @@ By setting `loading="lazy"`, the image loading is deferred until it is likely to
 img {
   max-width: 100%;
   height: auto;
-  aspect-ratio: attr(width) / attr(height);
+  /* aspect-ratio: attr(width) / attr(height); */
 }
 ```
 
-The included unitless `height` and `width` values will be overridden with CSS.
+The included unitless `height` and `width` values will be overridden with CSS. These attributes should match the intrinsic size of the image.
 
 The purpose of including these attributes is to reserve the space at the right aspect ratio, improving performance by reducing layout shift.
 
