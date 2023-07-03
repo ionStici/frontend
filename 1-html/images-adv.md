@@ -116,6 +116,18 @@ Squoosh will serve well for encoding WebP.
 
 ## AVIF
 
+AV1 Image File Format (AVIF) is an encoding based on the open source AV1 video codec.
+
+AVIF is even newer than WebP, only supported in Chrome and Opera since 2020, Firefox in 2021, and Safari in 2022.
+
+As with WebP, AVIF aims to address every conceivable use case for raster images on the web: GIF-like animation, PNG-like transparency, and improved perceptual quality at file sizes smaller than JPEG or WebP.
+
+### Browser Support
+
+Support for GIF, PNG, and JPEG is guaranteed across all browsers, and has been for decades. Relative to those legacy image formats, AVIF is brand new, and while support for WebP is excellent across modern browsers, it isn't a given across the entire web.
+
+A browser that doesn't support a given encoding won't be able to parse that image file at all. The browser will request the image data, attempt to parse it, and upon failing, will discard it without rendering anything at all.
+
 <br>
 <br>
 <br>
