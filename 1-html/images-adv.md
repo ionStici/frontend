@@ -13,6 +13,8 @@
 - [GIF](#gif)
 - [PNG](#png)
 - [JPEG](#jpeg)
+- [WebP](#webp)
+- [AVIF](#avif)
 
 <br>
 
@@ -95,6 +97,24 @@ PJPEG can feel faster than a baseline JPEG to the end user.
 Decoding PJPEG is more complex on the client side, which means putting a little more strain on the browser and device's hardware—during rendering.
 
 <br>
+
+## WebP
+
+**WebP** is an unbelievably versatile format, it supports: lossless compression, PNG-like alpha channel transparency, GIF-like animation, JPEG-style lossy compression.
+
+WebP features: block prediction and adaptive block quantization.
+
+- **Block Prediction:** the process through which the contents of each chrominance and luminance block are predicted based on the values of their surrounding blocks.
+
+  The results provided by each prediction mode are then compared to the real image data, and the closest predictive match is selected.
+
+- **Adaptive block quantization** - WebP takes an adaptive approach to quantization: an image is broken into up to four visually similar segments, and compression parameters for those segments are tuned independently.
+
+Squoosh will serve well for encoding WebP.
+
+<br>
+
+## AVIF
 
 <br>
 <br>
