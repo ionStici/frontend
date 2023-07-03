@@ -6,6 +6,7 @@
 
 - [SVG Vector Images](#svg-vector-images)
 - [Raster Images](#raster-images)
+- [Squoosh Tool](#squoosh-tool)
 
 <div></div>
 
@@ -43,6 +44,12 @@ A server doesn't send an image over the wire to a browser, but a stream of bytes
 
 <br>
 
+## Squoosh Tool
+
+[**Squoosh**](https://squoosh.app/) - maintained by the Chrome team - provides a side-by-side comparison between different methods of encoding and configuring image outputs, with configuration options ranging from a 0-100 global "quality" slider, to the ability to fine-tune details of chrominance vs. luminance resampling. The lower the "quality" number, the higher the compression, and the smaller the resulting file will be.
+
+<br>
+
 ## GIF
 
 GIF (Graphics Interchange Format)
@@ -75,6 +82,19 @@ In practical terms, PNG is a sound choice for maintaining a manageable-sized “
 File extension: `.jpg` or `.jpeg`
 
 JPEG (Joint Photographic Experts Group) - the most common type of image used on the web. JPEG-style encoding is much, much more efficient.
+
+### Progressive JPEG
+
+Progressive JPEG (PJPEG) effectively reorders the process of rendering a JPEG.
+
+- "Baseline" JPEGs are rendered from top to bottom as the transfer progresses.
+- Progressive JPEG breaks rendering into a set of full-sized "scans", with each scan increasing the quality of the image. The entire image appears immediately, albeit blurry, and grows clearer as the transfer continues.
+
+PJPEG can feel faster than a baseline JPEG to the end user.
+
+Decoding PJPEG is more complex on the client side, which means putting a little more strain on the browser and device's hardware—during rendering.
+
+<br>
 
 <br>
 <br>
