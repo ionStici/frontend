@@ -14,6 +14,7 @@
 - [Describing density with x](#describing-density-with-x)
   - [The srcset attribute](#the-srcset-attribute)
 - [Describing widths with w](#describing-widths-with-w)
+- [Describing usage with sizes](#describing-usage-with-sizes)
 
 <br>
 
@@ -59,6 +60,34 @@ For browsers without support for `srcset`, the attribute and its contents will b
 <br>
 
 ## Describing widths with w
+
+```html
+<img src="small.jpg" srcset="small.jpg 600w, large.jpg 1200w" />
+```
+
+The `w` syntax describes the inherent width of each candidate source.
+
+<br>
+
+## Describing usage with sizes
+
+Accessible browser-level information: the size of the user's viewport, the pixel density of the user's display, user preferences, and so on.
+
+Even so, we need to provide the browser with information through markup for further requests for the appropriate images.
+
+```html
+<img
+  sizes="80vw"
+  srcset="small.jpg 600w, medium.jpg 1200w, large.jpg 2000w"
+  src="fallback.jpg"
+/>
+```
+
+The `sizes` attribute - "here is the size of the rendered image in the layout." - the way we describe the image is relative to the viewport.
+
+Above, `sizes` value informs the browser that the space in our layout that the `img` occupies has a width of `80vw` = 80% of the viewport. Remember that this is a description of the image's size in the page layout.
+
+As a developer, your job is done. You've accurately described a list of candidate sources in `srcset` and the width of your image in `sizes`, the rest is up to the browser.
 
 <br>
 <br>
