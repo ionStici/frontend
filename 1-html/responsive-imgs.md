@@ -15,6 +15,7 @@
   - [The srcset attribute](#the-srcset-attribute)
 - [Describing widths with w](#describing-widths-with-w)
 - [Describing usage with sizes](#describing-usage-with-sizes)
+- [Walkthrough](#walkthrough)
 
 <br>
 
@@ -88,6 +89,30 @@ The `sizes` attribute - "here is the size of the rendered image in the layout." 
 Above, `sizes` value informs the browser that the space in our layout that the `img` occupies has a width of `80vw` = 80% of the viewport. Remember that this is a description of the image's size in the page layout.
 
 As a developer, your job is done. You've accurately described a list of candidate sources in `srcset` and the width of your image in `sizes`, the rest is up to the browser.
+
+## Walkthrough
+
+We've informed the browser that the image will take up 80% of the available viewport, on a device with a 1000 pixel-wide viewport, the image will occupy 800 pixels. The browser will then take that value and divide each of the image source candidates we specified in `srcset`.
+
+600÷800=**.75** | 1200÷800=**1.5** | 2000÷800=**2.5** these results are DPR options specifically tailored to the user's viewport size. Since the browser also has information on the user's display density at hand, it makes a series of decisions:
+
+On the current 1000px viewport, `small.jpg` is discarded, because a DPR lower than 1 would require upscaling. On a device with a DPR of 1, `medium.jpg` provides the closest match with a DPR of 1.5, a little larger than necessary, but downscaling is a visually seamless process. On a device with a DPR of 2, `large.jpg` is the closest match.
+
+If the same image is rendered on a 600 pixel wide viewport, the result of all that math would be completely different: `80vw` is now `480px`. When we divide our sources' widths against that, we get 1.25, 2.5, and 4.16. At this viewport size, `small.jpg` will be chosen on `1x` devices, and `medium.jpg` will match on `2x` devices.
+
+By using a descriptive syntax rather than a prescriptive one, we don't need to manually set breakpoints and consider future viewports and DPRs — we simply supply the browser with information and allow it to determine the answers for us.
+
+## sizes and calc()
+
+Because our `sizes` value is relative to the viewport and completely independent of the page layout, it adds a layer of complication. It's rare to have an image that only occupies a percentage of the viewport, without any fixed-width margins, padding, or influence from other elements on the page. You'll frequently need to express the width of an image using a combination of units; percentages, em, px, and so on.
+
+```html
+<img sizes="calc(100vw-2em)" />
+```
+
+We can use `calc()`, allowing us to mix-and-match CSS units—for example, an image that occupies the full width of the user's viewport, minus a 1em margin on either side.
+
+<br>
 
 <br>
 <br>
