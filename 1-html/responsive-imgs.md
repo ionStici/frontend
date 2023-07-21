@@ -12,7 +12,8 @@
 
 - [Descriptive Syntaxes](#descriptive-syntaxes)
 - [Describing density with x](#describing-density-with-x)
-- []()
+  - [The srcset attribute](#the-srcset-attribute)
+- [Describing widths with w](#describing-widths-with-w)
 
 <br>
 
@@ -35,7 +36,29 @@ window.devicePixelRatio; // 2 | (2560 x 1600 = 4.096.000) / (1920 x 1080 = 2.073
 
 A DPR of `2` means that the physical resolution of the screen is double the logical resolution.
 
-If you view a 400px-wide image on a display with a DPR of `2`, each logical pixel is being rendered across four of the display's physical pixels: two horizontal and two vertical.
+If you view a 400px-wide image on a display with a DPR of `2`, each logical pixel is being rendered across 4 of the display's physical pixels: two horizontal and two vertical. The image doesn't benefit from the high-density display — it will look the same as it would on a display with a DPR of 1.
+
+In order for images to benefit higher resolutions, we have to provide wider images for such resolutions. For example, a 800px image scaled down to fit a space of 400 logical pixels wide, will make the image look sharper. This 800-pixel image source has double the pixel density, resulting in logical pixels filling more physical pixels.
+
+Besides this, on a low-density display, an image suitable for higher-density displays will look like any other low-density image.
+
+### The srcset attribute
+
+```html
+<img src="low-density.jpg" srcset="double-density.jpg 2x" />
+```
+
+The `srcset` attribute identifies one or more comma-separated candidates for rendering an image. Each candidates is made up of two things: a URL and a syntax that describes that image source. Each candidate is `srcset` is described by its inherent width `w` or intended density `x`
+
+The `x` syntax is a shorthand for "this source is appropriate for a display with this density". A candidate followed by `2x` is appropriate for a display with a DPR of 2.
+
+For browsers without support for `srcset`, the attribute and its contents will be ignored, and the contents of `src` will be requested, as usual.
+
+**Important:** by indicating the density in `srcset`, we don't tell the browser to use that image in case the display's DPR is 2x, instead we just inform the browser with the density the image has from that URL, and then the browser will do the appropriate decision on its own.
+
+<br>
+
+## Describing widths with w
 
 <br>
 <br>
