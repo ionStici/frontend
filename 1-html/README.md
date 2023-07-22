@@ -15,7 +15,7 @@
 <div></div>
 
 - [Images](./images.md)
-- [Advanced Images](./responsive-imgs.md)
+- [Advanced Images](./advanced-imgs.md)
 - [Image Formats](./img-formats.md)
 
 <div></div>
