@@ -1,3 +1,5 @@
+[&larr; back](./README.md)
+
 # Resources
 
-[squoosh](https://squoosh.app/)
+- [squoosh](https://squoosh.app/)
