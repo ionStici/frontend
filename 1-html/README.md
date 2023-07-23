@@ -28,6 +28,7 @@
 <div></div>
 
 - [SEO](./seo.md)
+- [More](./more.md)
 
 <div></div>
 

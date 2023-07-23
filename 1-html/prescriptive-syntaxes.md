@@ -49,3 +49,23 @@ The `type` attribute allows you to use the `<picture>` element's single-request 
 In the `type` attribute, you provide the [Media Type (formerly MIME type)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the image source specified in the `srcset` attribute of each `<source>`. This provides the browser with all the information it needs to immediately determine whether the image candidate provided by that `source` can be decoded without making any external requests—if the media type isn't recognized, the `<source>` and all its candidates are disregarded, and the browser moves on.
 
 <br>
+
+## Automating compression and encoding
+
+When choosing encodings for a directory of photographic images, AVIF is the clear winner for quality and transfer size but has limited support, WebP provides an optimized, modern fallback, and JPEG is the most reliable default.
+
+<br>
+
+## Local development tools and workflows
+
+Task-runners and bundlers like Grunt, Gulp, or Webpack can be used to optimize image assets alongside other common performance-related tasks, such as minification of CSS and JavaScript.
+
+<br>
+
+## Other Resources
+
+- [Responsive image markup in practice](https://web.dev/learn/images/automating/#responsive-image-markup-in-practice)
+- [Site Generators, frameworks, and CMSs](https://web.dev/learn/images/cms/)
+- [Image content delivery networks](https://web.dev/learn/images/cdn/)
+
+<br>
