@@ -4,7 +4,7 @@
 
 [**&larr; Back to the Main Page**](./../README.md)
 
-<div></div>
+### HTML Basics
 
 - [HTML Basics](./html-basics.md)
 - [HTML document](./html-document.md)
@@ -12,13 +12,15 @@
 - [Semantic HTML](./semantic-html.md)
 - [Text Elements](./text.md)
 
-<div></div>
+### Images
 
 - [Images](./images.md)
-- [Advanced Images](./advanced-imgs.md)
+- [Descriptive Syntaxes](./descriptive-syntaxes.md)
+- [Prescriptive Syntaxes](./prescriptive-syntaxes.md)
 - [Image Formats](./img-formats.md)
+- [Legacy: Responsive Images](./responsive-imgs-legacy.md)
 
-<div></div>
+### Heading
 
 - [Focus](./focus.md)
 - [Accessibility](./accessibility.md)
