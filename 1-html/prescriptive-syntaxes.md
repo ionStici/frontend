@@ -37,4 +37,15 @@ Recent addition to the HTML: use `height` and `width` attributes on `<source>` e
 
 ## The type attribute
 
+The `type` attribute allows you to use the `<picture>` element's single-request decision engine to only serve image formats to browsers that support them.
+
+```html
+<picture>
+  <source type="image/webp" srcset="pic.webp" />
+  <img src="pic.jpg" alt="..." />
+</picture>
+```
+
+In the `type` attribute, you provide the [Media Type (formerly MIME type)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the image source specified in the `srcset` attribute of each `<source>`. This provides the browser with all the information it needs to immediately determine whether the image candidate provided by that `source` can be decoded without making any external requests—if the media type isn't recognized, the `<source>` and all its candidates are disregarded, and the browser moves on.
+
 <br>
