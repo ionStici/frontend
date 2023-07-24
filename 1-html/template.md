@@ -2,7 +2,7 @@
 
 # Template
 
-## Resources
+## External Resources
 
 - [Web Components | MDN Guide](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 - [`<template>` | web.dev Guide](https://web.dev/learn/html/template)
@@ -47,7 +47,7 @@ The contents of `<template>` is not rendered to the screen, it is JavaScript tha
 
 The contents of `<template>` are children of a [`DocumentFragment`](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) returned by the [`HTMLTemplateElement.content`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLTemplateElement/content) property.
 
-To be made visible, JavaScript must be used to grab the contents and append those contents to the DOM.
+To be more visible, JavaScript must be used to grab the contents and append those contents to the DOM.
 
 ```js
 document.body.append(document.getElementById("template-form").content);

@@ -11,6 +11,7 @@
 - [Metadata](./metadata.md)
 - [Semantic HTML](./semantic-html.md)
 - [Text Elements](./text.md)
+- [Audio and Video](./audio-video.md)
 
 ### Images
 
