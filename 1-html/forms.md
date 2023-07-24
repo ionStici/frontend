@@ -1,6 +1,15 @@
+[&larr; Back](./README.md)
+
 # Forms
 
-## Form Introduction
+## Table of Content
+
+- [Introduction](#introduction)
+- [Radio / checkboxes / label / fieldset](#radio--checkboxes--label--fieldset)
+- [Accessing the microphone and camera](#accessing-the-microphone-and-camera)
+- [Additional attributes](#additional-attributes)
+
+## Introduction
 
 ```html
 <form action="https://www.url-where-data-send.com/" method="POST">
@@ -88,7 +97,9 @@
 
 <br>
 
-## Additionally
+## Additional attributes
+
+- **`readonly`** will make a field input unavailable for editing.
 
 `required`
 
@@ -101,8 +112,6 @@
 `disabled`
 
 `read-write`
-
-`read-only`
 
 `valid`
 
@@ -117,5 +126,3 @@
 `user-valid`
 
 <br>
-
-- **`readonly`** will make a field input unavailable for editing.
