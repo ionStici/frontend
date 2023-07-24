@@ -20,7 +20,7 @@
 - [Image Formats](./img-formats.md)
 - [Legacy: Responsive Images](./responsive-imgs-legacy.md)
 
-### Heading
+### Other
 
 - [Focus](./focus.md)
 - [Accessibility](./accessibility.md)
@@ -28,6 +28,7 @@
 <div></div>
 
 - [SEO](./seo.md)
+- [HTML APIs](./html-apis.md)
 - [More](./more.md)
 
 <div></div>

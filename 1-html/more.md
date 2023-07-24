@@ -2,6 +2,10 @@
 
 # More
 
+## Table of Content
+
+- [File Paths](#file-paths)
+
 <br>
 
 ## File Paths
