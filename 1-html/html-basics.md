@@ -12,7 +12,6 @@
 - [Anchor Element](#anchor-element)
 - [Lists](#lists)
 - [Description Lists](#description-lists)
-- [Details and Dialog](#details-and-dialog)
 
 <br>
 
@@ -152,13 +151,5 @@ Description list -> description term -> description definition.
   <dd>A friendly, informal, casual greeting said when meeting someone.</dd>
 </dl>
 ```
-
-<br>
-
-## Details and Dialog
-
-- `<details>` [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) [web.dev](https://web.dev/learn/html/details/)
-
-- `<dialog>` [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) [web.dev](https://web.dev/learn/html/dialog/)
 
 <br>

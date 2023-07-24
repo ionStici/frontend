@@ -24,13 +24,17 @@
 
 - [Focus](./focus.md)
 - [Accessibility](./accessibility.md)
+- [SEO](./seo.md)
 
 <div></div>
 
-- [SEO](./seo.md)
 - [HTML APIs](./html-apis.md)
+- [Template](./template.md)
 - [More](./more.md)
 
 <div></div>
+
+- [details MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) [& web.dev](https://web.dev/learn/html/details/)
+- [dialog MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) [& web.dev](https://web.dev/learn/html/dialog/)
 
 <br>

@@ -1,10 +1,26 @@
+[&larr; back](./README.md)
+
 # Template
+
+## Resources
 
 - [Web Components | MDN Guide](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 - [`<template>` | web.dev Guide](https://web.dev/learn/html/template)
 - [Custom Element Best Practices](https://web.dev/custom-elements-best-practices/)
 - [Custom Elements v1](https://web.dev/custom-elements-v1/)
 - [Declarative Shadow DOM](https://developer.chrome.com/articles/declarative-shadow-dom/)
+
+## Table of Content
+
+- [Introduction](#introduction)
+- [The template element](#the-template-element)
+- [The slot element](#the-slot-element)
+- [Custom elements](#custom-elements)
+- [Shadow DOM](#shadow-dom)
+
+<br>
+
+## Introduction
 
 The Web Component standard is made up of three parts: _HTML templates_, _Custom Elements_, and the _Shadow DOM_.
 
