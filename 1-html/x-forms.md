@@ -35,21 +35,6 @@
 
 ## Radio / checkboxes / label / fieldset
 
-```html
-<fieldset>
-  <legend>Select</legend>
-  <!--  -->
-  <label><input type="radio" name="same" value="1" checked />Radio 1</label>
-  <label><input type="radio" name="same" value="2" required />Radio 2</label>
-  <!--  -->
-  <label><input type="checkbox" name="check" value="1" required />1</label>
-  <label><input type="checkbox" name="check" value="2" required />2</label>
-</fieldset>
-```
-
-- Groups of form controls are wrapped inside `<fieldset>`, and then labeled by `<legend>`.
-- `<fieldset>` supports the `name`, `disabled`, `form` attributes. When we disable a fieldset, all nested form controls are disabled. The fieldset itself is not included in submitted data.
-- `legend` provides a label for a group of form controls, and `label` provides a label for individual inputs.
 - Include explicit error messages when fields are not correctly filled.
 
 <br>
