@@ -1,8 +1,16 @@
 [&larr; Back](./README.md)
 
-# Forms Introduction
+# How forms work
 
 The `<form>` HTML element represents a document section containing interactive controls for submitting information.
+
+```html
+<form action="https://www.url-where-data-send.com/" method="POST">
+  <label for="first-name">First Name</label>
+  <input id="first-name" name="first-name" type="text" />
+  <button>Submit Form</button>
+</form>
+```
 
 ## Table of Content
 

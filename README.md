@@ -25,7 +25,8 @@ I wish you all the best on your journey! 🙌
 
 <div></div>
 
-- [**Resources** - developer's toolkit](./resources.md)
+<!-- - [Design UI UX]() -->
+<!-- - [**Resources** - developer's toolkit](./) -->
 
 <hr>
 <br>

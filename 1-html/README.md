@@ -23,8 +23,8 @@
 
 ### Forms
 
-- [Forms](./forms.md)
-- [Forms Introduction](./forms-intro.md)
+- [How forms work](./forms-intro.md)
+- [Forms in practice](./forms.md)
 
 ### Other
 
