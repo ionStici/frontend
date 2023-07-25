@@ -5,12 +5,13 @@
 ## Table of Content
 
 - [Form elements](#form-elements)
+- [List of options](#list-of-options)
 
 <br>
 
 ## Form elements
 
-The `<form>` element is a container for different types of input elements.
+The **`<form>`** document landmark is a container with interactive controls for submitting information.
 
 ```html
 <form>
@@ -35,5 +36,34 @@ The `<form>` element is a container for different types of input elements.
 <br>
 
 - The **`<textarea>`** element will render a text box where we can enter multiple lines of text (label requried).
+
+- **Submitting a Form** - the browser makes a request to the URL specified in the `action` attribute, with all the data from the form controls.
+
+  - The **`<button>`** element can be used to submit a form.
+  - Use `<button type="button">` in case you want to disable the default submit behavior.
+  - `<input type="submit" value="Submit">` can substitute the button element.
+  - A form can also be submitted by using the `Enter` key when a form field has focus.
+
+<br>
+
+## List of options
+
+Using `<select>` and `<option>`, we can create a dropdrown form control.
+
+```html
+<label for="color">Color</label>
+<select id="color" name="color">
+  <option value="orange" selected>Orange</option>
+  <option value="green">Green</option>
+</select>
+```
+
+These elements will submit a name / value pair from the selected option, e.g. "color" associated with "orange".
+
+The `selected` attribute will pre-select one option.
+
+<br>
+
+## Grouping form controls
 
 <br>

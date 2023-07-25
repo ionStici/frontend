@@ -14,7 +14,6 @@
 
 <br>
 
-- **`<form>`** document landmark containing interactive controls for submitting information.
 - `action` and `method` attributes, require the URL where the data should be sent, and the HTTP protocol method.
 - For submitting the form, we can use the `input` or `button` elements.
 
@@ -30,7 +29,6 @@
 - [MDN Input Types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input)
 - On a device with a dynamic keyboard, the input type used determines the type of keyboard displayed.
 - For example, type `tel` will show a keypad optimized for entering numbers.
-- Using `<select>` and `<option>`, we can create a dropdrown form control.
 - `<form novalidate>` or `<button formnovalidate>` prevents validation.
 
 <br>
@@ -68,6 +66,15 @@
 - Only selected checkboxes have their `name` and `value` submitted with the form.
 - A checkbox with the `required` attribute does not impact other checkboxes with the same name.
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
 ## Accessing the microphone and camera
