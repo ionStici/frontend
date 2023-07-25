@@ -1,6 +1,6 @@
 [&larr; Back](./README.md)
 
-# Forms
+# Forms in Practice
 
 ## Table of Content
 
@@ -28,7 +28,7 @@ The **`action`** and **`method`** attributes, require an URL where the data shou
 
 - The data sent is made up of **name / value pairs**.
   - The **name** is the value of the `name` attribute. The **value** is the user input data.
-  - For `input` elements where the user can't edit the value, we should define a `value` attribute.
+  - For `input` elements where the user can't edit the value, we have to define a `value` attribute.
 
 <br>
 
@@ -43,7 +43,7 @@ The **`action`** and **`method`** attributes, require an URL where the data shou
 
   - The `name` attribute acts as an identifier for the user-entered data, in a name / value manner.
   - The `type` attribute defines the [form control type from a big variety.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input)
-  - The **`<textarea>`** element will render a text box where we can enter multiple lines of text (label requried).
+  - The **`<textarea>`** element will render a text box where we can enter multiple lines of text (use label as well).
 
 <br>
 
@@ -117,14 +117,40 @@ The `<datalist>` HTML element contains a set of `<option>` elements that represe
 
 - Include explicit error messages when fields are not correctly filled.
 - `<form novalidate>` or `<button formnovalidate>` prevents validation.
-- The **`required`** attribute makes an input mandatory. The browser also tests if the entered data matches the format of the `type`.
+- The **`required`** attribute makes an input mandatory, and tests if the input matches the format of the `type`.
 
 <div></div>
 
 - Use `minlength` and `maxlength` attributes to set a minimum or maximum number of characters required.
 - For numerical input types use `min` and `max` to achieve the same result.
+- On a device with a dynamic keyboard, the `tel` type will show a keypad optimized for entering numbers.
 
 <div></div>
+
+### Communicate your validation rules
+
+```html
+<input aria-describedby="password-minlength" type="password" />
+<div id="password-minlength">Enter at least eight characters</div>
+```
+
+Use `aria-describedby` attribute to connect a form control with an element that explains the rules.
+
+### Pattern attribute
+
+```html
+<input pattern="[a-z]{2,20}" />
+```
+
+We can define a regular expression as a value for the `pattern` attribute to set constraints.
+
+[JavaScript Constraint Validation API](https://web.dev/learn/forms/validation/#provide-meaningful-error-messages)
+
+### Style form controls based on the validation status
+
+- Style `required` fields using the `input:required` CSS pseudo class.
+- Use `:invalid` or `:valid` pseudo classes to add styles to invalid and valid form controls.
+- The `:user-invalid` behaves like `:invalid`, but styles are only applied after user interaction.
 
 <br>
 

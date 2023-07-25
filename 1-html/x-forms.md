@@ -2,7 +2,7 @@
 
 <br>
 
-- On a device with a dynamic keyboard, the input type used determines the type of keyboard displayed. E.g. type `tel` will show a keypad optimized for entering numbers.
+- On a device with a dynamic keyboard, the input type used determines the type of the keyboard displayed. E.g. the type `tel` will show a keypad optimized for entering numbers.
 
 - `<input type="radio" />` radio button
 - The only-one-can-be-selected effect is created by giving each radio button in a group the same `name`.
