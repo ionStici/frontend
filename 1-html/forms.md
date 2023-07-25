@@ -7,6 +7,8 @@
 - [Form elements](#form-elements)
 - [List of options](#list-of-options)
 - [Grouping Form controls](#grouping-form-controls)
+- [The Datalist element](#the-datalist-element)
+- [Form validation on the frontend](#form-validation-on-the-frontend)
 
 <br>
 
@@ -14,13 +16,21 @@
 
 The **`<form>`** document landmark is a container with interactive controls for submitting information.
 
+The **`action`** and **`method`** attributes, require an URL where the data should be sent, and a HTTP protocol method.
+
 ```html
-<form>
+<form action="https://www.url-where-data-send.com/" method="post">
   <label for="name">Your Name:</label>
   <input type="text" id="name" name="name" />
   <button>Submit</button>
 </form>
 ```
+
+- The data sent is made up of **name / value pairs**.
+  - The **name** is the value of the `name` attribute. The **value** is the user input data.
+  - For `input` elements where the user can't edit the value, we should define a `value` attribute.
+
+<br>
 
 - The **`label`** element is used describe input elements. Labels improve accessibility.
 
@@ -87,3 +97,39 @@ The `legend` element is used to describe the group of form controls, it has to b
 - The `form` attribute in `fieldset` required the `id` value of the `form` container, this indicates to what form the `fieldset` group of elements belongs to.
 
 <br>
+
+## The Datalist element
+
+```html
+<input type="text" list="colors" />
+
+<datalist id="colors">
+  <option value="Orange" />
+  <option value="Green" />
+</datalist>
+```
+
+The `<datalist>` HTML element contains a set of `<option>` elements that represent the permissible or recommended options available to choose from within other controls.
+
+<br>
+
+## Form validation on the frontend
+
+- Include explicit error messages when fields are not correctly filled.
+- `<form novalidate>` or `<button formnovalidate>` prevents validation.
+- The **`required`** attribute makes an input mandatory. The browser also tests if the entered data matches the format of the `type`.
+
+<div></div>
+
+- Use `minlength` and `maxlength` attributes to set a minimum or maximum number of characters required.
+- For numerical input types use `min` and `max` to achieve the same result.
+
+<div></div>
+
+<br>
+
+<!-- ## Attributes
+
+- The [**`autocomplete`**](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) attribute
+
+<br> -->

@@ -1,43 +1,8 @@
-## Introduction to Forms
-
-```html
-<form action="https://www.url-where-data-send.com/" method="POST">
-  <!--  -->
-  <label for="first-name">First Name</label>
-  <input id="first-name" name="first-name" type="text" />
-  <!--  -->
-  <input type="submit" value="Submit Form" />
-  <button type="submit">Submit Form</button>
-  <!--  -->
-</form>
-```
+## Radio / checkboxes
 
 <br>
 
-- `action` and `method` attributes, require the URL where the data should be sent, and the HTTP protocol method.
-- For submitting the form, we can use the `input` or `button` elements.
-
-<br>
-
-- The data sent is made up of _name / value_ pairs.
-- The **name** is the value of the `name` attribute.
-- The **value** is the user input data.
-- For `input` elements where the user can't edit the value, we should define a `value` attribute.
-
-<br>
-
-- [MDN Input Types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input)
-- On a device with a dynamic keyboard, the input type used determines the type of keyboard displayed.
-- For example, type `tel` will show a keypad optimized for entering numbers.
-- `<form novalidate>` or `<button formnovalidate>` prevents validation.
-
-<br>
-
-## Radio / checkboxes / label / fieldset
-
-- Include explicit error messages when fields are not correctly filled.
-
-<br>
+- On a device with a dynamic keyboard, the input type used determines the type of keyboard displayed. E.g. type `tel` will show a keypad optimized for entering numbers.
 
 - `<input type="radio" />` radio button
 - The only-one-can-be-selected effect is created by giving each radio button in a group the same `name`.
@@ -52,24 +17,15 @@
 - A checkbox with the `required` attribute does not impact other checkboxes with the same name.
 
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-## Accessing the microphone and camera
+<!-- ## Accessing the microphone and camera
 
 ```html
 <input type="file" capture="user" accept="image/*" />
 ```
 
 - The `file` input type enables uploading files via forms.
-- [`accept`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept) describes which file types to aloow. It takes as its value a comma-separated list of one or more file types.
+- [`accept`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept) describes which file types to allow. It takes as its value a comma-separated list of one or more file types.
 - `capture` enumerated attribute: a new media file created using the user's camera or microphone.
 
 <br>
@@ -78,7 +34,7 @@
 
 - **`readonly`** will make a field input unavailable for editing.
 
-`required`
+
 
 `optional`
 
@@ -102,4 +58,4 @@
 
 `user-valid`
 
-<br>
+<br> -->
