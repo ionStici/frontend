@@ -4,12 +4,12 @@
 
 ## Table of Content
 
-- [Introduction](#introduction)
+- [Introduction to Forms](#introduction-to-forms)
 - [Radio / checkboxes / label / fieldset](#radio--checkboxes--label--fieldset)
 - [Accessing the microphone and camera](#accessing-the-microphone-and-camera)
 - [Additional attributes](#additional-attributes)
 
-## Introduction
+## Introduction to Forms
 
 ```html
 <form action="https://www.url-where-data-send.com/" method="POST">
@@ -25,8 +25,8 @@
 
 <br>
 
-- **`<form>`** (document landmark containing interactive controls for submitting information.)
-- `action` & `method` form attributes, specify the URL where the data should be sent, and the HTTP protocol method.
+- **`<form>`** document landmark containing interactive controls for submitting information.
+- `action` and `method` attributes, require the URL where the data should be sent, and the HTTP protocol method.
 - For submitting the form, we can use the `input` or `button` elements.
 
 <br>
