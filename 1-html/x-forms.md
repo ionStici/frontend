@@ -34,8 +34,6 @@
 
 - **`readonly`** will make a field input unavailable for editing.
 
-
-
 `optional`
 
 `default`

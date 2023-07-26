@@ -4,11 +4,13 @@
 
 - Intuitive UI
 
+- Every form control must have an associated `<label>` element describing the purpose of the form control.
+
 - **Short labels** are easier to scan, reduce visual clutter, and help users to understand what data is needed faster.
 
-- Don’t Use The Placeholder Attribute, use lavels instead
+- Don’t Use The Placeholder Attribute, use lavels instead.
 
-- Position the label above the form control
+- Position the label above the form control.
 
 - Use the appropriate form controls. E.g. by using `type="tel"`, users on touch devices get a keypad optimized for entering numbers.
 
@@ -18,13 +20,9 @@
 
 - Make your buttons big enough, at least 48px in height.
 
+- Make it clear to users what data to enter and which fields are required.
+
 - Include explicit error messages next to the form control when it is not filled out correctly.
-
-- Make it clear to users what data to enter
-
-- Make it clear to users which fields are required
-
-- Every form control must have an associated `<label>` element describing the purpose of the form control.
 
 - Use `aria-live="assertive"` for error messages.
 
@@ -37,5 +35,9 @@
 - Use the `dir` attribute to define the current writing systems
 
 - To make it quick and easy to enter names, use a single form field for names wherever possible.
+
+<br>
+
+## Security and privacy
 
 <br>

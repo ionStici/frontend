@@ -150,15 +150,15 @@ We can define a regular expression as a value for the `pattern` attribute to set
 
 <br>
 
+## Autofill
+
+The [**`autocomplete`**](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) attribute
+
+<br>
+
 ## More
 
 - [JavaScript Constraint Validation API](https://web.dev/learn/forms/validation/#provide-meaningful-error-messages)
 - [Test your forms](https://web.dev/learn/forms/testing/)
 
 <br>
-
-<!-- ## Attributes
-
-- The [**`autocomplete`**](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) attribute
-
-<br> -->
