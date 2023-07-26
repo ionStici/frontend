@@ -18,9 +18,6 @@
 
 <br>
 
-<hr style="height: 1px">
-<hr>
-
 <!-- ## Accessing the microphone and camera
 
 ```html

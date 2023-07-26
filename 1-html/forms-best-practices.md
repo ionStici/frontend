@@ -24,4 +24,18 @@
 
 - Make it clear to users which fields are required
 
+- Every form control must have an associated `<label>` element describing the purpose of the form control.
+
+- Use `aria-live="assertive"` for error messages.
+
+- In addition to color, use an icon, or prefix your error messages with the error type.
+
+- Use `:focus` CSS pseudo-class to differentiate the currently focused form control
+
+- Don't forget about `<html lang="en-us">`
+
+- Use the `dir` attribute to define the current writing systems
+
+- To make it quick and easy to enter names, use a single form field for names wherever possible.
+
 <br>
