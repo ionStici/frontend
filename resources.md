@@ -8,4 +8,10 @@
 
 - [**Frontend Roadmap** - Developer Roadmaps](https://roadmap.sh/frontend)
 
+- [**web.dev** - helps you to create high quality web experiences](https://web.dev/)
+
+<br>
+
+- [**Frontend Tech Stack** - set of technologies used to develop apps](./tech-stack.md)
+
 <br>

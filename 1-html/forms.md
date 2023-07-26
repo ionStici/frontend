@@ -115,7 +115,6 @@ The `<datalist>` HTML element contains a set of `<option>` elements that represe
 
 ## Form validation on the frontend
 
-- Include explicit error messages when fields are not correctly filled.
 - `<form novalidate>` or `<button formnovalidate>` prevents validation.
 - The **`required`** attribute makes an input mandatory, and tests if the input matches the format of the `type`.
 
@@ -123,7 +122,6 @@ The `<datalist>` HTML element contains a set of `<option>` elements that represe
 
 - Use `minlength` and `maxlength` attributes to set a minimum or maximum number of characters required.
 - For numerical input types use `min` and `max` to achieve the same result.
-- On a device with a dynamic keyboard, the `tel` type will show a keypad optimized for entering numbers.
 
 <div></div>
 
