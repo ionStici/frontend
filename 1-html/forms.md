@@ -144,13 +144,18 @@ Use `aria-describedby` attribute to connect a form control with an element that 
 
 We can define a regular expression as a value for the `pattern` attribute to set constraints.
 
-[JavaScript Constraint Validation API](https://web.dev/learn/forms/validation/#provide-meaningful-error-messages)
-
 ### Style form controls based on the validation status
 
 - Style `required` fields using the `input:required` CSS pseudo class.
 - Use `:invalid` or `:valid` pseudo classes to add styles to invalid and valid form controls.
 - The `:user-invalid` behaves like `:invalid`, but styles are only applied after user interaction.
+
+<br>
+
+## More
+
+- [JavaScript Constraint Validation API](https://web.dev/learn/forms/validation/#provide-meaningful-error-messages)
+- [Test your forms](https://web.dev/learn/forms/testing/)
 
 <br>
 

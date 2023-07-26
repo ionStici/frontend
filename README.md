@@ -21,12 +21,12 @@ I wish you all the best on your journey! 🙌
 <div></div>
 
 - [**Libraries** - frontend related](./5-libraries/README.md)
-- [**Tools** - never too many](./6-tools/README.md)
+- [**Tools** - developer's toolkit](./6-tools/README.md)
 
 <div></div>
 
-- [**Design** - UI / UX]()
-- [**Resources** - developer's toolkit](./)
+- [**Design** - UI / UX](./7-design/README.md)
+- [**Resources** - links you should know](./resources.md)
 
 <hr>
 <br>

@@ -25,6 +25,7 @@
 
 - [How forms work](./forms-intro.md)
 - [Forms in practice](./forms.md)
+- [Forms best practices](./forms-best-practices.md)
 
 ### Other
 
