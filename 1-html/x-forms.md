@@ -3,7 +3,6 @@
 <br>
 
 - On a device with a dynamic keyboard, the input type used determines the type of the keyboard displayed. E.g. the type `tel` will show a keypad optimized for entering numbers.
-
 - `<input type="radio" />` radio button
 - The only-one-can-be-selected effect is created by giving each radio button in a group the same `name`.
 - The `name` and `value` of the selected radio button are submitted with the form.
@@ -18,7 +17,7 @@
 
 <br>
 
-<!-- ## Accessing the microphone and camera
+## Accessing the microphone and camera
 
 ```html
 <input type="file" capture="user" accept="image/*" />
@@ -33,6 +32,8 @@
 ## Additional attributes
 
 - **`readonly`** will make a field input unavailable for editing.
+
+<br>
 
 `optional`
 
@@ -56,4 +57,4 @@
 
 `user-valid`
 
-<br> -->
+<br>

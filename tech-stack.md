@@ -16,4 +16,17 @@ _set of technologies used to develop frontend applications_
 - **Tools:** MacBook + Terminal + Git + GitHub + Markdown
 - VS Code + Extensions + Web Browsers + DevTools + Figma
 
+<div></div>
+
+<!-- - **Other:** -->
+
 <br>
+
+<!-- - React Native
+- Server Side Rendering (SSR)
+- Static Site Generators (SSG)
+- **STRAPI** - Headless CMS
+- GraphQL
+- Web Security
+- PWA
+- Web APIs -->

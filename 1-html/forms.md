@@ -152,7 +152,13 @@ We can define a regular expression as a value for the `pattern` attribute to set
 
 ## Autofill
 
-The [**`autocomplete`**](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) attribute
+Autofill and autocomplete provide accessibility benefits.
+
+The [**`autocomplete`**](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) attribute lets web developers specify what if any permission the user agent has to provide automated assistance in filling out form field values, as well as guidance to the browser as to the type of information expected in the field.
+
+**p.s.** The `:autofill` CSS pseudo-class matches when an `<input>` element has its value autofilled by the browser. The class stops matching if the user edits the field.
+
+For one-time-code fields, turn off the autofill with: `autocomplete="off"`
 
 <br>
 

@@ -40,4 +40,10 @@
 
 ## Security and privacy
 
+- Request as little data as possible. Don't ask for data you don't need.
+
+- Use HTTPS (encrypted data), especially for pages that include a form.
+
+- Use `POST` requests, the data is only visible to the backend script processing it.
+
 <br>
