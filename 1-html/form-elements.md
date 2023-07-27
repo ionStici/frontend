@@ -6,6 +6,7 @@
 
 - [The form element](#the-form-element)
 - [Form Fields](#form-fields)
+- [Form Attributes](#form-attributes)
 
 <br>
 
@@ -55,5 +56,25 @@ If the Submit button has a `formmethod` or `formaction` attribute, it will use t
 - `checkbox` checkbox input
   - Only selected checkboxes have their `name` and `value` submitted with the form.
   - A checkbox with the `required` attribute does not impact other checkboxes with the same name.
+
+<br>
+
+## Form Attributes
+
+- **`readonly`** will make a field input unavailable for editing.
+- The Boolean **`disabled`** attribute, makes the element not mutable, focusable, or submitted with the form. Whent he form is submitted, you may want to disable the Submit button.
+- Use the **`value`** attribute to show values already completed.
+
+### Other
+
+- **`optional`**
+
+- **`default`**
+
+- **`enabled`**
+
+- **`read-write`**
+
+- **`in-range`**
 
 <br>
