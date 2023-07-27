@@ -1,4 +1,4 @@
-[&larr; Back](./README.md)
+[&larr; back](./resources.md)
 
 # Frontend Tech Stack
 
@@ -16,17 +16,16 @@ _set of technologies used to develop frontend applications_
 - **Tools:** MacBook + Terminal + Git + GitHub + Markdown
 - VS Code + Extensions + Web Browsers + DevTools + Figma
 
-<div></div>
-
-<!-- - **Other:** -->
-
 <br>
 
-<!-- - React Native
+<!--
+- **Other:**
+- React Native
 - Server Side Rendering (SSR)
 - Static Site Generators (SSG)
 - **STRAPI** - Headless CMS
 - GraphQL
 - Web Security
 - PWA
-- Web APIs -->
+- Web APIs
+-->

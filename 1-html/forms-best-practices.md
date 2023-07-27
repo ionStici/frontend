@@ -36,6 +36,8 @@
 
 - To make it quick and easy to enter names, use a single form field for names wherever possible.
 
+- Test your form with different devices, browsers, platforms, and different contexts.
+
 <br>
 
 ## Security and privacy

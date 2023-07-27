@@ -9,6 +9,8 @@
 - [Grouping Form controls](#grouping-form-controls)
 - [The Datalist element](#the-datalist-element)
 - [Form validation on the frontend](#form-validation-on-the-frontend)
+- [Autofill](#autofill)
+- [Upload files](#upload-files)
 
 <br>
 
@@ -159,6 +161,24 @@ The [**`autocomplete`**](https://developer.mozilla.org/en-US/docs/Web/HTML/Attri
 **p.s.** The `:autofill` CSS pseudo-class matches when an `<input>` element has its value autofilled by the browser. The class stops matching if the user edits the field.
 
 For one-time-code fields, turn off the autofill with: `autocomplete="off"`
+
+<br>
+
+## Upload files
+
+Use `type="file"` to enable uploading files.
+
+```html
+<input type="file" capture="user" accept="image/*" multiple />
+```
+
+- The `file` input type enables uploading files via forms.
+- Use the `multiple` attribute is users should be able to upload multiple files.
+- [`accept`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept) describes which file types to allow. It takes as its value a comma-separated list of one or more file types.
+- `capture` enumerated attribute: a new media file created using the user's camera or microphone.
+- Set `enctype="multipart/form-data"` on the form element to ensure users can upload files. To make sure files can be submitted, change it to `multipart/form-data`. Without this encoding, files can't be sent with a `POST` request.
+
+[Code Example](https://codepen.io/ionStici/pen/jOvXzJV)
 
 <br>
 
