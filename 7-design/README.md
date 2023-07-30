@@ -5,3 +5,5 @@
 [**&larr; Back to the Main Page**](./../README.md)
 
 - [Planning](./planning.md)
+
+<br>
