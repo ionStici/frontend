@@ -4,7 +4,7 @@
 
 [**&larr; Back to the Main Page**](./../README.md)
 
-<div></div>
+### Basics
 
 - [CSS Basics](./css-basics.md)
 - [CSS Selectors](./selectors.md)

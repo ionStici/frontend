@@ -2,7 +2,7 @@
 
 # Selectors
 
-A selector is used to target specific HTML elements to be styled by the declaration.
+In CSS, a selector is used to target and style specific HTML elements.
 
 ## Table of Content
 
