@@ -2,8 +2,6 @@
 
 # Resources
 
-- [**Frontend Tech Stack** - set of technologies used to develop apps](./tech-stack.md)
-
 - [**GitHub** - code hosting platform for version control and collaboration](https://github.com/)
 
 - [**caniuse** - Browser support tables for modern web technologies](https://caniuse.com/)
@@ -23,6 +21,10 @@
 - [**Udemy** - education online learning platform](https://www.udemy.com/)
 
 - [**Codecademy** - online interactive platform for learning to code](https://www.codecademy.com/)
+
+<br>
+
+## Practice
 
 - [**FrontendMentor** - Improve your front-end skills by building real projects](https://www.frontendmentor.io/)
 

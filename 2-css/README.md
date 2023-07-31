@@ -4,16 +4,19 @@
 
 [**&larr; Back to the Main Page**](./../README.md)
 
-### Basics
+<div></div>
 
-- [CSS Basics](./css-basics.md)
-- [**Selectors**](./selectors.md)
-- [Units in CSS](./units-in-css.md)
+- [**CSS Introduction**](./css-basics.md)
+- [**How CSS works**](./how-css-works.md)
 
 <div></div>
 
-- [Visual Formatting Model](./visual-formatting-model.md)
-- [**Box Model**](./box-model.md)
+- [Selectors](./selectors.md)
+- [Units](./units-in-css.md)
+
+<div></div>
+
+- [Box Model](./box-model.md)
 - [Box Types](./box-types.md)
 - [Position](./position.md)
 - [Float and Clear](./float-clear.md)
