@@ -7,13 +7,13 @@
 ### Basics
 
 - [CSS Basics](./css-basics.md)
-- [CSS Selectors](./selectors.md)
+- [**Selectors**](./selectors.md)
 - [Units in CSS](./units-in-css.md)
 
 <div></div>
 
 - [Visual Formatting Model](./visual-formatting-model.md)
-- [Box Model](./box-model.md)
+- [**Box Model**](./box-model.md)
 - [Box Types](./box-types.md)
 - [Position](./position.md)
 - [Float and Clear](./float-clear.md)

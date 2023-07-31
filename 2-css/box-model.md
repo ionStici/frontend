@@ -2,15 +2,76 @@
 
 # The Box Model
 
-All elements on a web page are interpreted by the browser as "living" inside of a box. Each box can have (optional):
+## Table of Content
 
-1. The _content area_'s size (width and height)
-2. _Padding_ (space between content area and border)
-3. _Border_ (thickness and style surrounding content area and padding)
-4. _Margin_ (space between border and the outside edge of the element)
+- [Box Model Areas](#box-model-areas)
+- [box-sizing](#box-sizing)
+
+<br>
+
+## Box Model Areas
+
+All elements on a web page are interpreted by the browser as "living" inside of a box.
+
+Each box is made up of distinc tbox model areas that all do a specific job.
+
+1. **Content Area** - the area that the content lives in (width and height)
+2. **Padding** - space between content area and border
+3. **Border** - surrounds the padding box
+4. **Margin** - space between border and the outside edge of the element
+
+[**Box Model representation on codepen**](https://codepen.io/web-dot-dev/pen/BaReoEV)
 
 By default, the total dimensions of an element, are the sum of the content size, padding, border and margin.
 
+**p.s.** Properties such as `outline` and `box-shadow` are painted on top, so they don't affect the size of our box.
+
+<br>
+
+## box-sizing
+
+`box-sizing` property tells the box how to calculate its box size.
+
+By default, all elements have this user agent style: `{ box-sizing: content-box; }`
+
+This means that when you set dimensions such as `width` and `height`, they will be applied to the `content area`. If you then set `padding` and `border`, these values will be added to the content box's size.
+
+We can reset this behavior of the box model for all html elements with:
+
+```css
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+```
+
+This CSS rule selects every element in the document and every `::before` and `::after` pseudo element and applies `box-sizing: border-box`. This means that every element will now have this alternative box model.
+
+This alternative box model tells CSS to apply the `width` and `height` to the border box instead of the content box. The border thickness and padding will be included inside of the box.
+
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
 ## Table of Content
@@ -69,6 +130,8 @@ div {
 ```
 
 Padding is often used to expand the background color of the box.
+
+<!-- Because padding is inside the box, the background of the box will be visible in the space that it creates. If our box has overflow rules set, such as overflow: auto or overflow: scroll, the scrollbars will occupy this space too. -->
 
 <br>
 
@@ -183,21 +246,3 @@ _Difference between display and visibility:_
 - `visibility: hidden` the element will not be visible, but the space reserved for it will. The element is rendered, it just isn't seen on the page.
 
 <br>
-
-## box-sizing
-
-`box-sizing` property controls the box model type. Its default value is `content-box`. This means that the actual size of elements is calculated by adding padding, border and width or height of the element. This can lead to unexpected results.
-
-We can reset this behaviour of the box model for all html elements with:
-
-```css
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-```
-
-In this box model, the height and width of the box will remain fixed. The border thickness and padding will be included inside of the box, so that the overall dimensions of the box do not change.
-
-Include this CSS reset along with the previous one with border and padding set to `0`.
