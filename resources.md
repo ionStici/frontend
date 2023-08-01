@@ -22,6 +22,8 @@
 
 - [**Codecademy** - online interactive platform for learning to code](https://www.codecademy.com/)
 
+- [**hackdesign** - all design lessons](https://hackdesign.org/lessons)
+
 <br>
 
 ## Practice
@@ -34,16 +36,14 @@
 
 <br>
 
-## Design
+## Design Tools
 
-- [Color Contract Checker (from coolors)](https://coolors.co/contrast-checker)
+- [**Coolors** - Color Contract Checker](https://coolors.co/contrast-checker)
 
-- [maketintsandshades - tint & shade generator](https://maketintsandshades.com/)
+- [**maketintsandshades** - tint & shade generator](https://maketintsandshades.com/)
 
-- [webframe - beautiful webapp designs](https://webframe.xyz/)
+- [**webframe** - beautiful webapp designs](https://webframe.xyz/)
 
-- [squoosh - image compressor](https://squoosh.app/)
-
-- [**hackdesign** - all design lessons](https://hackdesign.org/lessons)
+- [**squoosh** - image compressor](https://squoosh.app/)
 
 <br>

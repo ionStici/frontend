@@ -137,4 +137,74 @@ When a selector rule is composed of multiple selectors, the specificity of each 
 
 ## Inheritance
 
+**Inheritance** - propagating values from parent elements to their children.
+
+Some CSS properties are inheritable. E.g. typography properties. If we define `color` on the `body` element, all text elements will inherit the `color` property and its value.
+
+Inheritance only cascades downwards.
+
+<details>
+<summary>The entire list of inheritable properties</summary>
+
+<div></div>
+
+- azimuth
+- border-collapse
+- border-spacing
+- caption-side
+- color
+- cursor
+- direction
+- empty-cells
+- font-family
+- font-size
+- font-style
+- font-variant
+- font-weight
+- font
+- letter-spacing
+- line-height
+- list-style-image
+- list-style-position
+- list-style-type
+- list-style
+- orphans
+- quotes
+- text-align
+- text-indent
+- text-transform
+- visibility
+- white-space
+- widows
+- word-spacing
+
+<div></div>
+
+</details>
+
+<br>
+
+Every HTML element has every CSS property defined by default with an initial value. An initial value is a property that's not inherited and shows up as a default if the cascade fails to calculate a value for that element.
+
+Properties that can be inherited cascade downwards, and child elements will get a computed value which represents its parent's value. This means that if a parent has `font-weight` set to `bold` all child elements will be bold, d, unless their `font-weight` is set to a different value.
+
+### inherit keyword
+
+The `inherit` keyword can make any property inherit its parent's computed value.
+
+`button { color: inherit; }` in this example, the `button` element will (explicitly) inherit the `color` property from a parent element.
+
+### initial keyword
+
+Every property has a initial default value. The `initial` keyword sets a property back to that initial default value.
+
+`button { color: initial; }` here, the `color` property will return to its initial value.
+
+### unset keyword
+
+The `unset` property behaves differently depending if a property in inheritable of not.
+
+- If a property is inheritable, then `unset` keyword will be the same as `inherit`
+- If a property is not inheritable, the `unset` keyword is equal to `initial`
+
 <br>
