@@ -8,6 +8,7 @@
 - [The Visual Formatting Model](#the-visual-formatting-model)
 - [The Cascade](#the-cascade)
 - [Specificity](#specificity)
+- [Inheritance](#inheritance)
 
 <br>
 
@@ -116,5 +117,24 @@ Active animation and transition rule types have higher importance than normal ru
 <br>
 
 ## Specificity
+
+Each selector gets a scoring. **Specificity = total score for a selector rule**.
+
+Each selector type earns points. You add all of these points up to calculate a selector's overall specificity.
+
+- `*` universal selector has no specificity / gets 0 points, any rule with 1 or more will override it
+- **Element** or **pseudo-element** selector gets **1 point** of specificity
+- **Class, pseudo-class, attribute** selector gets 10 points of specificity
+- An **ID** selector gets 100 points of specificity
+- CSS applied directly to the `style` attribute of the HTML element, gets a **specificity score of 1000 points**
+- An `!important` at the end of a CSS value gets a specificity score of **10.000 points**
+
+When a selector rule is composed of multiple selectors, the specificity of each individual selector is added to the overall score of the selector rule, e.g. `a.link {}` an element and a class selector will have together 11 points of specificity.
+
+**Best practice rule:** use mostly only classes as selectors and rely on order of appearance.
+
+<br>
+
+## Inheritance
 
 <br>

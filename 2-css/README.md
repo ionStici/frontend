@@ -6,8 +6,10 @@
 
 <div></div>
 
-- [**CSS Introduction**](./css-basics.md)
-- [**How CSS works**](./how-css-works.md)
+### Basics
+
+- [CSS Introduction](./css-basics.md)
+- [How CSS works](./how-css-works.md)
 
 <div></div>
 
@@ -29,16 +31,22 @@
 
 <div></div>
 
+### Layout
+
 - [Flexbox](./flexbox.md)
 - [CSS Grid](./css-grid.md)
 
 <div></div>
+
+### Responsive Design
 
 - [Responsive Design - Media Queries](./media-queries.md)
 - [Media Queries in Sass](./media-queries-sass.md)
 - [Responsive Images](./responsive-images.md)
 
 <div></div>
+
+### Animation
 
 - [Transition](./transition.md)
 - [CSS Animations](./keyframe.md)

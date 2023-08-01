@@ -44,4 +44,6 @@
 
 - [squoosh - image compressor](https://squoosh.app/)
 
+- [**hackdesign** - all design lessons](https://hackdesign.org/lessons)
+
 <br>
