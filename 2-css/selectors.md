@@ -11,14 +11,18 @@ In CSS, a selector is used to target and style specific HTML elements.
 - [3. Class Selector](#3-class-selector)
 - [4. ID Selector](#4-id-selector)
 - [5. Attribute Selector](#5-attribute-selector)
-- [6. Selector list](#6-selector-list)
+- [6. Grouping selectors](#6-grouping-selectors)
 - [7. Chaining](#7-chaining)
 - [8. Descendant Combinator](#8-descendant-combinator)
 
 ### External Subjects
 
 - [Combinators](./selectors-combinators.md)
-- [Pseudo Selectors](./selectors-pseudo.md)
+
+<div></div>
+
+- [Pseudo-classes](./pseudo-classes.md)
+- [Pseudo-elements](./pseudo-elements.md)
 
 <br>
 
@@ -45,7 +49,7 @@ Element / Tag / Type
 p { }
 ```
 
-Selects all elements that have the given tag element.
+A type selector matches a HTML element directly.
 
 <br>
 
@@ -93,7 +97,7 @@ Additional resources: [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Att
 
 <br>
 
-## 6. Selector list
+## 6. Grouping selectors
 
 ```
 p, .class, #id, { }
@@ -105,15 +109,15 @@ The comma acts as a grouping method, it selects all the matching nodes.
 
 <br>
 
-## 7. Chaining
+## 7. Compound selectors
 
-Chaining - combining multiple selectors of the same element.
+Chaining - combining selectors to increase specificity and readability.
 
 ```
 h1.heading-1 { }
 ```
 
-This translates to: the element is selected only when it have both the type `h1` and the class `.heading-1`.
+This translates to: target `h1` elements that have a class of `heading-1`
 
 <br>
 
@@ -123,6 +127,8 @@ This translates to: the element is selected only when it have both the type `h1`
 ul li { }
 ```
 
-This will select all `li` elements within a `ul` element.
+This will select all `li` elements within an `ul` element.
 
 Node: adding more than one tag, class or ID to a CSS selector, it will increase the specificity of that selector.
+
+<br>

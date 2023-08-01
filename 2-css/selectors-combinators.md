@@ -17,7 +17,7 @@
 div p { }
 ```
 
-This will target the `p` element within `div` element.
+This will target the `p` child element within `div` parent element.
 
 <br>
 

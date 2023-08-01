@@ -207,6 +207,8 @@ For vertical or horizontal solutions: `overflow-x` and `overflow-y`.
 
 ## Resetting Defaults
 
+https://andy-bell.co.uk/a-modern-css-reset/
+
 Browsers have a default stylesheet, known as _user agent stylesheets_.
 
 Many properties in CSS have a default value and don’t have to be explicitly set in the stylesheet.
