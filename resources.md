@@ -10,6 +10,13 @@
 
 <br>
 
+## Tools
+
+- [Visual Studio Code]()
+- [Git & GitHub]()
+
+<br>
+
 ## Learn
 
 - [**MDN Web Docs** - Resources for Developers, by Developers](https://developer.mozilla.org/en-US/)
@@ -45,5 +52,11 @@
 - [**webframe** - beautiful webapp designs](https://webframe.xyz/)
 
 - [**squoosh** - image compressor](https://squoosh.app/)
+
+<br>
+
+## Typography
+
+- [Google Fonts]()
 
 <br>

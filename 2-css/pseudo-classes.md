@@ -2,21 +2,16 @@
 
 # Pseudo Classes
 
+Pseudo-classes are a special state of a selector. Single colon `:`
+
 ## Table of Content
 
-- [Pseudo-Classes](#pseudo-classes)
 - [link and visited](#link-and-visited)
 - [hover and active](#hover-and-active)
 - [before and after](#before-and-after)
 - [not()](#not)
 - [focus](#focus)
 - [checked](#checked)
-
-<br>
-
-## Pseudo-Classes
-
-Pseudo-Class is a special state of a selector. Single color `:`
 
 <br>
 
