@@ -10,9 +10,6 @@
 - [Absolute lengths](#absolute-lengths)
 - [Font-size-relative units](#font-size-relative-units)
 - [Viewport-relative units](#viewport-relative-units)
-
-<div></div>
-
 - [em and rem](#em-and-rem)
 - [Px to Rem Workflow](#px-to-rem-workflow)
 
@@ -102,7 +99,7 @@ CSS is used as well to style print content, and so absolute lengths can really c
 
 | unit  | relative to:                                    |
 | ----- | ----------------------------------------------- |
-| `em`  | relative to the font-size of the parent element |
+| `em`  | relative to its own font-size                   |
 | `rem` | font-size of the root element (default is 16px) |
 
 Other units: `ex cap ch ic lh rlh`

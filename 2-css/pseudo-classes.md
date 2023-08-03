@@ -2,38 +2,123 @@
 
 # Pseudo Classes
 
-Pseudo-classes are a special state of a selector. Single colon `:`
+Pseudo-classes lets you apply styles based on element state changes (e.g. mouse hover).
 
 ## Table of Content
 
-- [link and visited](#link-and-visited)
-- [hover and active](#hover-and-active)
-- [before and after](#before-and-after)
-- [not()](#not)
-- [focus](#focus)
-- [checked](#checked)
+- [Interactive states](#interactive-states)
+- [Historic states](#historic-states)
+- [Form states](#form-states)
 
 <br>
 
-### link and visited
+## Interactive states
 
-```
-a, a:link, a:visited { }
-```
+States based on user interaction.
 
-- `link` will target not clicked anchor tags.
-- `visited` will target anchor tags which ahve been clicked.
-
-<br>
-
-### hover and active
+### :hover and :active
 
 ```
 a:hover, a:active { }
 ```
 
-- `hover` will target an element when the user hovers it.
+- `hover` will target an element when the cursor hovers over it.
 - `active` will target an element when the user clicks on it.
+
+### :focus :focus-within :focus-visible
+
+```
+input:focus { }
+label:focus-within { }
+button:focus-visible { }
+```
+
+- `:focus` selects an element that has received focus
+- `:focus-within` will select the element if its parent received focus
+- `:focus-visible` selects an element when it received focus via the keyboard
+
+### :target
+
+```
+#box:target { }
+```
+
+`:target` will select an element that has an `id` matching the URL
+
+<br>
+
+## Historic states
+
+### :link and :visited
+
+```
+a, a:link, a:visited { }
+```
+
+- `:link` will target not visited anchor tags.
+- `:visited` will target "visited" anchor tags.
+
+**LVHA rule:** style links with pseudo-classes in this particular order: `:link`, `:visited`, `:hover`, `:active`
+
+<br>
+
+## Form states
+
+### :disabled and :enabled
+
+```
+button:disabled { }
+button:enabled { }
+```
+
+- `:disabled` for a form element disabled by the browser.
+- `:enabled` the opposite state, though form elements are `:enabled` by default.
+
+### :checked and :indeterminate
+
+```
+input[type=radio]:checked { }
+```
+
+- `:checked` will target radio buttons or checkboxes that has been checked.
+- `:indeterminate` state is when a checkbox is neither checked or unchecked.
+
+### :placeholder-shown
+
+```
+input:placeholder-shown { }
+```
+
+`:placeholder-shown` will select any input or textarea element that is currently displaying placeholder text.
+
+As soon as there is content in the field, this state will no longer apply.
+
+### Validation states
+
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <br>
 
@@ -78,25 +163,5 @@ div:not(:last-child) { }
 ```
 
 The negation pseudo class, selects all elements expect the specified one in parenthesis.
-
-<br>
-
-### focus
-
-```
-input:focus { }
-```
-
-Selects an element that has received focus.
-
-<br>
-
-### checked
-
-```
-input[type=radio]:checked { }
-```
-
-Will target radio buttons or checkboxes that has been checked.
 
 <br>
