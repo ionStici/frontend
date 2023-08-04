@@ -9,6 +9,7 @@ Pseudo-classes lets you apply styles based on element state changes (e.g. mouse 
 - [Interactive states](#interactive-states)
 - [Historic states](#historic-states)
 - [Form states](#form-states)
+- [Selecting elements by their index, order and occurrence](#selecting-elements-by-their-index-order-and-occurrence)
 
 <br>
 
@@ -95,7 +96,26 @@ As soon as there is content in the field, this state will no longer apply.
 
 ### Validation states
 
+```
+input:valid { }
+input:invalid { }
+input:in-range { }
+
+input:required { }
+input:optional { }
+```
+
+- `:valid` and `:invalid` for contexts such as an email field that has a pattern that needs to be matched
+- `:in-range` pseudo-class is available in an input has a `min` and `max`
+
+<div></div>
+
+- `:required` will be available for required fields
+- `:optional` for fields that are not required
+
 <br>
+
+## Selecting elements by their index, order and occurrence
 
 <br>
 <br>
