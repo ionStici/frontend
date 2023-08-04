@@ -2,25 +2,38 @@
 
 # Pseudo Elements
 
-## Table of Content
-
-- [Pseudo-Selectors](#pseudo-elements)
-- [first-line and first-letter](#first-line-and-first-letter)
-- [first-child and last-child](#first-child-and-last-child)
-- [selection](#selection)
-- [nth-child](#nth-child)
-
-<br>
-
-## Pseudo-Elements
-
 Pseudo Elements must be applied to block level elements in order to take effect.
 
-Pseudo Elements style specific parts of an element. Double color `::`
+Pseudo-elements style specific parts of an element, it's like adding an extra element without having to add more HTML.
+
+## Table of Content
+
+- [::before and ::after](#before-and-after)
+- [::first-letter and ::first-line](#first-letter-and-first-line)
+- [::backdrop](#backdrop)
+- [::marker](#marker)
+- [::selection](#selection)
+- [::placeholder](#selection)
+- [::cue](#cue)
 
 <br>
 
-### first-line and first-letter
+## ::before and ::after
+
+```
+div::before, div::after { content: ''; }
+```
+
+- `::before` and `::after` pseudo-elements create a child element inside an element.
+- These child elements will appear on the page only if you define the `content` property.
+- The `content` can be any string, even an empty one. You can also add an image `url()`.
+- An element can have only one `::before` and one `::after`.
+- Single tag elements can't have `::before` and `::after`, exception: `input[type="checkbox"]`
+- Target `::before` and `::after` when hovering the original element: `a:hover::after {}`
+
+<br>
+
+## ::first-letter and ::first-line
 
 ```
 p::first-line { }
@@ -31,18 +44,33 @@ Select the first line or the first letter of an element containing text.
 
 <br>
 
-### first-child and last-child
+## ::backdrop
 
 ```
-div:first-child { }
-div:last-child { }
+video::backdrop { }
 ```
 
-Will select the first child of the last child of the parent element.
+For full screen mode elements such as `<dialog>`, you can style the backdrop (the space between the element and the rest of the page).
+
+The `::backdrop` pseudo-element is supported in all major browsers apart from Safari.
 
 <br>
 
-### selection
+## ::marker
+
+The `::marker` pseudo-element lets you style the bullet or number for a list item or the arrow of a `<summary>` element.
+
+```
+il ::market { }
+```
+
+Supported CSS properties: `color content white-space font animation transition`
+
+You can change the marker symbol using the `content` property.
+
+<br>
+
+## ::selection
 
 ```css
 ::selection {
@@ -51,50 +79,32 @@ Will select the first child of the last child of the parent element.
 }
 ```
 
-Applies styles to the part of a document that has been highlighted by the user (such as selected text).
+The `::selection` pseudo-element allows you to style how selected text looks.
+
+Supported CSS properties: `color background-color` and text properties
 
 <br>
 
-### nth-child
+## ::placeholder
 
 ```
-li:nth-child(3) { }
-li:nth-child(4n) { }
+input::placeholder { }
 ```
 
-Accepts an integer as a parameter, not zero based.
-
-1. Select a specific element in a stack.
-2. Select every fourth list item.
+Style the placeholder text of input elements.
 
 <br>
 
-### before and after
+## ::cue
+
+`::cue` allows you to style WebVTT cues, which are the captions of a `<video>` element.
+
+You can also pass a selector into a `::cue`, which allows you to style specific elements inside a caption.
 
 ```
-div::before, div::after { }
-```
-
-- `before` and `after` pseudo classes will generate like a virtual element around its parent which we can style.
-
-<br>
-
-Pseudo-classes are treated like child of the original element.
-
-<br>
-
-For before or after to appear on the page, we need to define the content property, we can set it to empty string `""`, otherwise it will not appear.
-
-```
-a::before { content: ""; }
-```
-
-<br>
-
-Target after or before when hover the original element:
-
-```
-a:hover::after { }
+video::cue { color: yellow; }
+video::cue(b) { color: red; }
+video::cue(i) { color: lightpink; }
 ```
 
 <br>

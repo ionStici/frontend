@@ -4,9 +4,9 @@
 
 ## Table of Content
 
+- [What you need to know](#what-you-need-to-know)
 - [Numbers](#numbers)
 - [Percentages](#percentages)
-- [Value Processing](#value-processing)
 - [Absolute lengths](#absolute-lengths)
 - [Font-size-relative units](#font-size-relative-units)
 - [Viewport-relative units](#viewport-relative-units)
@@ -15,39 +15,11 @@
 
 <br>
 
-## Numbers
-
-Numbers (unitless integers) are used to define: opacity, line-height, transform, etc.
-
-Numbers have meaning depending on their context.
-
-<br>
-
-## Percentages
-
-- Percentages for width and height are measured relative to the dimensions of their parent element.
-- Percentages for padding and margin, are measured relative only to the width of the parent element.
-
-<br>
-
-## Value Processing
-
-_How values (units) are processed in the CSS parsing phase:_
-
-1. Declared value (author declarations)
-2. Cascaded value (after the cascade)
-3. Specified value (defaulting, if there is no cascaded value)
-4. Computed value (converting relative values to absolute)
-5. Used value (final calculations, based on layout)
-6. Actual value (browser and device restrictions)
-
-<br>
-
-_What you need to know:_
+## What you need to know
 
 - Each property has an initial value, used if nothing is declared (and if there is no inheritance).
 - Browsers specify a `root` `font-size` for each page (usually 16px).
-- Percentages and relative values are always converted to pixels.
+- Percentages and relative values are always converted to pixels after the page is rendered.
 
 <div></div>
 
@@ -68,6 +40,21 @@ _What you need to know:_
 
 <br>
 
+## Numbers
+
+Numbers (unitless integers) are used to define: opacity, line-height, transform, etc.
+
+Numbers have meaning depending on their context.
+
+<br>
+
+## Percentages
+
+- Percentages for width and height are measured relative to the dimensions of their parent element.
+- Percentages for padding and margin, are measured relative only to the width of the parent element.
+
+<br>
+
 ## Absolute lengths
 
 **Absolute Units** are used to size content to _exact dimensions_.
@@ -82,7 +69,7 @@ _What you need to know:_
 | `pt` | Points              | 1pt = 1/72th of 1in |
 | `px` | Pixels              | 1px = 1/96th of 1in |
 
-CSS is used as well to style print content, and so absolute lengths can really come in handy when designing for print.
+Absolute lengths are handy for designing print content.
 
 ### Miscellaneous units
 
@@ -97,23 +84,23 @@ CSS is used as well to style print content, and so absolute lengths can really c
 
 ### Font-size-relative units
 
-| unit  | relative to:                                    |
-| ----- | ----------------------------------------------- |
-| `em`  | relative to its own font-size                   |
-| `rem` | font-size of the root element (default is 16px) |
+| unit  | relative to                                      |
+| ----- | ------------------------------------------------ |
+| `em`  | relative to the font-size of the closest element |
+| `rem` | font-size of the root element (default is 16px)  |
 
 Other units: `ex cap ch ic lh rlh`
 
 ### Viewport-relative units
 
-| unit   | relative to                                     |
-| ------ | ----------------------------------------------- |
-| `em`   | relative to the font-size of the parent element |
-| `rem`  | relative to the root font-size                  |
-| `vw`   | 1% of viewport's width.                         |
-| `vh`   | 1% of viewport's height.                        |
-| `vmin` | 1% of the viewport's smaller dimension.         |
-| `vmax` | 1% of the viewport's larger dimension.          |
+| unit   | relative to                                      |
+| ------ | ------------------------------------------------ |
+| `em`   | relative to the font-size of the closest element |
+| `rem`  | relative to the root font-size                   |
+| `vw`   | 1% of viewport's width.                          |
+| `vh`   | 1% of viewport's height.                         |
+| `vmin` | 1% of the viewport's smaller dimension.          |
+| `vmax` | 1% of the viewport's larger dimension.           |
 
 Other units: `vi vb`
 
@@ -158,7 +145,7 @@ body {
 }
 ```
 
-**Pixels:** with pixels we override the default browser font-size setting, that the user can manually change in the browser settings. With pixels we remove the ability for users to adjust the website based on their own preference, the root font-size will not be affected by that anymore. We should use percentages.
+**Pixels:** with pixels we override the default browser font-size setting, that the user can manually change in the browser settings. With pixels we remove the ability for users to adjust the website based on their own preference, the root font-size will not be affected by that anymore. We should use percentages instead.
 
 **Percentages:** in this case, the user doesn't lose the ability to change the default font-size in the browser, the user can increase or decrease all the measurements on the page based on their change.
 
