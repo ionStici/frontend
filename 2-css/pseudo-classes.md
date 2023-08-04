@@ -1,4 +1,4 @@
-[&larr; Back](./selectors.md)
+[&larr; Back](./README.md)
 
 # Pseudo Classes
 
@@ -10,6 +10,8 @@ Pseudo-classes lets you apply styles based on element state changes (e.g. mouse 
 - [Historic states](#historic-states)
 - [Form states](#form-states)
 - [Selecting elements by their index, order and occurrence](#selecting-elements-by-their-index-order-and-occurrence)
+- [Finding empty elements](#finding-empty-elements)
+- [Finding and excluding multiple elements](#finding-and-excluding-multiple-elements)
 
 <br>
 
@@ -117,71 +119,80 @@ input:optional { }
 
 ## Selecting elements by their index, order and occurrence
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-
-### before and after
+### :first-child and :last-child
 
 ```
-div::before, div::after { }
+div:first-child { }
+div:last-child { }
 ```
 
-- `before` and `after` pseudo classes will generate like a virtual element around its parent which we can style.
+Select the first or last element in a group of sibling elements.
 
-<!-- <details open> -->
-<details>
-<summary>More about before and after</summary>
+### :only-child
+
+```
+div:only-child { }
+```
+
+`:only-child` will select an element that is the only child, no siblings.
+
+### :first-of-type and :last-of-type
+
+```
+div:first-of-type { }
+div:last-of-type { }
+```
+
+These will select the first or last element in a group of sibling elements, that matches the element type.
+
+### :nth-child and :nth-of-type
+
+```
+.box div:nth-child(2) { }
+.box div:nth-of-type(1) { }
+```
+
+Select elements in a group of siblings based on a certain index.
+
+- `:nth-child(even)` will select all even elements.
+- `:nth-child(3n+3)` this selects every third item, starting at item 3. The `n` in this expression is the index, which starts at zero the 3 (`3n`) is how much you multiply that index by.
+
+### :only-of-type
+
+```
+div:only-of-type { }
+```
+
+Select the only element of a certain type in a group of siblings.
+
 <br>
-Pseudo-classes are treated like child of the original element.
+
+## Finding empty elements
+
+### :empty
+
+```
+article :empty { }
+```
+
+If an element has no children (whitespace as well), the `:empty` pseudo-class applies to them.
+
+Useful when you want to hide empty elements.
 
 <br>
 
-For before or after to appear on the page, we need to define the content property, we can set it to empty string `""`, otherwise it will not appear.
+## Finding and excluding multiple elements
 
-```
-a::before { content: ""; }
-```
-
-<br>
-
-Target after or before when hover the original element:
-
-```
-a:hover::after { }
-```
-
-</details>
-
-<br>
-
-### not()
+### :not()
 
 ```
 div:not(:last-child) { }
 ```
 
-The negation pseudo class, selects all elements expect the specified one in parenthesis.
+The negation pseudo-class, selects all elements expect the specified one in parenthesis.
+
+### :is()
+
+[The `:is()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:is)
 
 <br>

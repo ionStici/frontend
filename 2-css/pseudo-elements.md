@@ -1,4 +1,4 @@
-[&larr; Back](./selectors.md)
+[&larr; Back](./README.md)
 
 # Pseudo Elements
 
@@ -66,5 +66,35 @@ Accepts an integer as a parameter, not zero based.
 
 1. Select a specific element in a stack.
 2. Select every fourth list item.
+
+<br>
+
+### before and after
+
+```
+div::before, div::after { }
+```
+
+- `before` and `after` pseudo classes will generate like a virtual element around its parent which we can style.
+
+<br>
+
+Pseudo-classes are treated like child of the original element.
+
+<br>
+
+For before or after to appear on the page, we need to define the content property, we can set it to empty string `""`, otherwise it will not appear.
+
+```
+a::before { content: ""; }
+```
+
+<br>
+
+Target after or before when hover the original element:
+
+```
+a:hover::after { }
+```
 
 <br>
