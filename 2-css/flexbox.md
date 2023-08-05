@@ -2,53 +2,34 @@
 
 # Flexbox
 
+CSS Flexbox is a one-dimensional layout mechanism.
+
 ## Table of Content
 
-- [Flexbox](#flexbox)
-  - [Flexbox Terminology](#flexbox-terminology)
-  - [Flexbox Properties](#flexbox-properties)
+- [Flexbox Terminology](#flexbox-terminology)
+- [Flexbox Properties Overview](#flexbox-properties-overview)
 
 <div></div>
 
 - [Flex Container](#flex-container)
-  - [justify-content and align-items](#justify-content-and-align-items)
-  - [flex-wrap](#flex-wrap)
-  - [align-content](#align-content)
-  - [flex-direction](#flex-direction)
-  - [flex-flow](#flex-flow)
-
-<div></div>
-
-- [Flex Items](#flex-items)
-  - [flex-grow](#flex-grow)
-  - [flex-shrink](#flex-shrink)
-  - [flex-basis](#flex-basis)
-  - [flex](#flex)
-  - [align-self](#align-self)
-  - [order](#order)
+- [flex-direction](#flex-direction)
+- [flex-flow shorthand](#flex-flow-shorthand)
+- [flex-wrap](#flex-wrap)
 
 <br>
 
-## Flexbox
-
-CSS Flexbox is a one-dimensional layout tool.
-
-<br>
-
-### Flexbox Terminology
+## Flexbox Terminology
 
 - The element on which we use `{ display: flex; }` is called the **Flex Container**.
 - All direct children of the flex container are called the **Flex Items**.
 - The direction in which Flex Items are displayed is called the **Main Axis**.
 - The other perpendicular axis is called **Cross Axis**.
 
-_We can change the direction of the Main Axis._
+_We can change the direction of the Main Axis using `flex-direction`._
 
 <br>
 
-### Flexbox Properties
-
-<br>
+## Flexbox Properties Overview
 
 | Container Properties | Item Properties |
 | :------------------: | :-------------: |
@@ -59,11 +40,9 @@ _We can change the direction of the Main Axis._
 |   `align-content`    |  `flex-shrink`  |
 |     `flex-flow`      |  `flex-basis`   |
 
-We use properties on the flex container to position and align the flex items. And then some other properties that we use directly on flex items for individual styles.
+We use properties on the flex container to position and align the flex items. And then some other properties we can directly use on flex items for individual styles.
 
-The flex item can be at the same time a flex container.
-
-_p.s. CSS Grid for overall page layout and Flexbox for small components._
+**p.s.** The flex item can be at the same time a flex container.
 
 <br>
 
@@ -79,10 +58,76 @@ For an element to become a flex container:
 
 This will change the behavior of the flex container's direct child elements.
 
-By default, the flex items will be aligned from left to right on the main axis, and if the flex container's width is less than the total width of the flex items, then flex items will shrink to accommodate the flex container's size.
+By default, the flex items will be aligned from left to right on the main axis (as a row), and if the flex container's width is less than the total width of the flex items, then flex items will shrink to accommodate the flex container's size (not wrapping).
 
 _Note:_ With `gap` property we can insert space between flex items (not on outer edges). But `gap` is not exclusively for flexbox, it also works in grid.
 
+## flex-direction
+
+`flex-direction` is used to switch the axes direction.
+
+```css
+.flex {
+  flex-direction: column;
+}
+```
+
+- Properties for main axis: `justify-content` `flex-wrap` `flex-grow` `flex-shrink`.
+- Properties for cross axis: `align-items` `align-content`
+
+By changing the main axis to column, then properties for main axis will work for vertical alignment.
+
+`flex-direction` values:
+
+- `row` (default) elements will be positioned from left to right across the parent element starting from the top left corner.
+- `column` elements will be positioned from top to bottom of the parent element starting from the top left corner.
+- `row-reverse` and `column-reverse` works the same, but reverse the order of the flex items.
+
+**p.s.** Reversing the content happens only visually, screen readers will only consider the order from the HTML.
+
+## flex-wrap
+
+`flex-wrap` controls if flex items will wrap into new lines in case there is no enough space, or not.
+
+```css
+.flex {
+  flex-wrap: wrap;
+}
+```
+
+- `nowrap` (default value) prevents flex items from wrapping (items will shrink if there is not enough space).
+- `wrap` flex items that don't fit into a row will move down to the next line.
+- `wrap-reverse` works as `wrap`, but the order of rows is reversed.
+
+## flex-flow shorthand
+
+`flex-flow` is a shorthand property for `flex-wrap` and `flex-direction`.
+
+```css
+.flex {
+  flex-flow: column wrap;
+}
+```
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
 ### justify-content and align-items
@@ -111,20 +156,6 @@ Most used values:
 
 <br>
 
-### flex-wrap
-
-`flex-wrap` controls if flex items will wrap into new lines in case there is no enough space, or not.
-
-```css
-.flex {
-  flex-wrap: wrap;
-}
-```
-
-- `nowrap` (default value) prevents flex items from wrapping.
-- `wrap` flex items that don't fit into a row will move down to the next line.
-- `wrap-reverse` works as `wrap`, but the order of rows is reversed.
-
 <br>
 
 ### align-content
@@ -142,40 +173,26 @@ Most used values:
 - `space-between` `space-around` all rows will be spaced from top to bottom as the value name says.
 
 <br>
-
-### flex-direction
-
-`flex-direction` is used to switch axes direction.
-
-```css
-.flex {
-  flex-direction: column;
-}
-```
-
-- Properties for main axis: `justify-content` `flex-wrap` `flex-grow` `flex-shrink`.
-- Properties for cross axis: `align-items` `align-content`
-
-By changing the main axis to column, then properties for main axis will work for vertical alignment.
-
-`flex-direction` values:
-
-- `row` (default) elements will be positioned from left to right across the parent element starting from the top left corner.
-- `column` elements will be positioned from top to bottom of the parent element starting from the top left corner.
-- `row-reverse` and `column-reverse` works the same, but reverse the order of flex items.
-
 <br>
-
-### flex-flow
-
-`flex-flow` is a shorthand property for `flex-wrap` and `flex-direction`.
-
-```css
-.flex {
-  flex-flow: column wrap;
-}
-```
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
 ## Flex Items
@@ -186,7 +203,7 @@ _Note:_ Using `margin-right: auto;` on a flex item, will automatically use all t
 
 <br>
 
-### flex-grow
+## flex-grow
 
 By default, flex items shrink proportionally when the flex container is too small. In case the flex container if bigger, we can use:
 
@@ -203,7 +220,7 @@ As values we use integers that are related to the value of each flex item.
 
 <br>
 
-### flex-shrink
+## flex-shrink
 
 `flex-shrink` property can be used to specify which elements will shrink and in what proportions.
 
@@ -221,7 +238,7 @@ As `flex-grow`, `flex-shrink` works in relation with other integers of this prop
 
 <br>
 
-### flex-basis
+## flex-basis
 
 `flex-basis` is used to specify the width of an item before it stretches or shrinks.
 
@@ -233,7 +250,7 @@ As `flex-grow`, `flex-shrink` works in relation with other integers of this prop
 
 <br>
 
-### flex
+## flex
 
 `flex` is a shorthand property for: `flex-grow` -> `flex-shrink` -> `flex-basis`
 
