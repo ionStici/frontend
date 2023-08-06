@@ -21,7 +21,6 @@
 - [Box Model](./box-model.md)
 - [Box Types](./box-types.md)
 - [Position](./position.md)
-- [Float and Clear](./float-clear.md)
 - [Units in CSS](./units.md)
 
 <div></div>

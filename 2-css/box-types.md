@@ -23,15 +23,10 @@ div {
 }
 ```
 
-Content is distributed in lines.
-
-Occupies tonly the space that its content needs.
-
-No line-breaks.
-
-We cannot use `height` or `width` on inline boxes.
-
-We can only specify horizontal padding and margins for inline elements.
+- Content is distributed in lines. No line-breaks.
+- Occupies only the space that its content needs.
+- We cannot use `height` or `width` on inline boxes.
+- We can only specify horizontal padding and margins for inline elements.
 
 <br>
 
@@ -43,11 +38,9 @@ div {
 }
 ```
 
-100% of parent's width.
-
-Create line breaks after and before it.
-
-Vertically, one after another.
+- 100% of parent's width.
+- Create line breaks after and before it.
+- Vertically, one after another.
 
 <br>
 

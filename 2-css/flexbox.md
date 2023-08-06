@@ -22,6 +22,7 @@ CSS Flexbox is a one-dimensional layout mechanism.
 - [align-content](#align-content)
 - [place-content shorthand](#place-content-shorthand)
 - [align-items](#align-items)
+- [Center an item vertically and horizontally](#center-an-item-vertically-and-horizontally)
 
 <div></div>
 
@@ -32,6 +33,11 @@ CSS Flexbox is a one-dimensional layout mechanism.
 - [flex shorthand](#flex-shorthand)
 - [order](#order)
 - [align-self](#align-self)
+
+<div></div>
+
+- [Layout: legacy notes](#layout-legacy-notes)
+- [Float and Clear](#float-and-clear)
 
 <br>
 
@@ -104,7 +110,7 @@ By changing the main axis to column, then properties for main axis will work for
 
 ## flex-wrap
 
-`flex-wrap` controls if flex items will wrap into new lines in case there is no enough space, or not.
+`flex-wrap` controls if flex items will wrap or not into new lines in case there is not enough space.
 
 ```css
 .flex {
@@ -161,8 +167,6 @@ Shorthand property: if you specify both the first is used for align-content and 
 .flex { place-content: center flex-end; }
 ```
 
-On the main axis, the properties begin with `justify-`. On the cross axis, they begin with `align-`
-
 ## align-items
 
 _Property for alignment_
@@ -178,6 +182,18 @@ _Property for alignment_
 - `stretch` (default value) the items will stretch from top to bottom of the flex container. Items with specified height will not stretch, only items with a minimum height specified or no height at all.
 - `baseline` the bottom of the content of all items will be aligned with each other.
 - **Other Values:** `flex-start`, `flex-end`, `center`,
+
+## Center an item vertically and horizontally
+
+```css
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+On the main axis, the properties begin with `justify-`. On the cross axis, they begin with `align-`
 
 <br>
 
@@ -267,5 +283,45 @@ Flexbox will order flex items according to their `order` number, lowest values f
 ```
 
 Similar to `align-items`, but `align-self` can be declared separately on flex items.
+
+<br>
+
+## Layout: legacy notes
+
+Modern layout mechanisms: **flexbox** and **grid**.
+
+Legacy layout techniques: _HTML tables and CSS floats._
+
+## Float and Clear
+
+The `float` property is commonly used for wrapping text around an image.
+
+```
+div { float: left;  }
+```
+
+- `left` moves elements as fas left as possible.
+- `right` moves elements as far right as possible.
+
+Floated elements must have a width specified, otherwise, the element will assume the full width of its containing element, and changing the float value will not yield any visible results.
+
+### clear
+
+When multiple floated elements have different heights, it can affect their layout on the page.
+
+The `clear` property specifies how elements should behave when they bump into each other on the page. Values: `left` `right` `both` `none`.
+
+```css
+div {
+  width: 500px;
+  float: left;
+}
+
+div.item {
+  clear: left;
+}
+```
+
+Check MDN for documentation.
 
 <br>
