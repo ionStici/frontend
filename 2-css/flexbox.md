@@ -13,8 +13,25 @@ CSS Flexbox is a one-dimensional layout mechanism.
 
 - [Flex Container](#flex-container)
 - [flex-direction](#flex-direction)
-- [flex-flow shorthand](#flex-flow-shorthand)
 - [flex-wrap](#flex-wrap)
+- [flex-flow shorthand](#flex-flow-shorthand)
+
+<div></div>
+
+- [justify-content](#justify-content)
+- [align-content](#align-content)
+- [place-content shorthand](#place-content-shorthand)
+- [align-items](#align-items)
+
+<div></div>
+
+- [Flex Items](#flex-items)
+- [flex-grow](#flex-grow)
+- [flex-shrink](#flex-shrink)
+- [flex-basis](#flex-basis)
+- [flex shorthand](#flex-shorthand)
+- [order](#order)
+- [align-self](#align-self)
 
 <br>
 
@@ -110,89 +127,58 @@ By changing the main axis to column, then properties for main axis will work for
 ```
 
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-### justify-content and align-items
+## justify-content
 
-```CSS
-.flex {
-    justify-content: center;
-    align-items: center;
+_Properties for space distribution_
 
-}
-```
-
-`justify-content` align the flex items from left to right along the Main Axis.
-
-`align-items` align the items vertically along Cross Axis from top to bottom (only for a single row).
-
-Most used values:
-
-- `flex-start`, `flex-end` and `center` will position all flex items on the left or top, right or bottom, and in the center (no space between them).
-
-- **Values only for `justify-content`:** `space-around`, `space-between`, `space-evenly` will position the flex items as the property name says.
-
-- **Values only for `align-items`:**
-  - `baseline` the bottom of the content of all items will be aligned with each other.
-  - `stretch` (default value) the items will stretch from top to bottom of the flex container. Items with specified height will not stretch, only items with a minimum height specified or no height at all.
-
-<br>
-
-<br>
-
-### align-content
-
-`align-content` controls how rows are aligned along the cross axis _(when there is more than one row)_.
+`justify-content` aligns the flex items from left to right along the Main Axis.
 
 ```css
 .flex {
+  justify-content: center;
   align-content: center;
 }
 ```
+
+**Values:** `flex-start`, `flex-end`, `center`, `space-around`, `space-between`, `space-evenly`
+
+**p.s.** If `flex-direction` is changed to `column`, then `justify-content` will work on column alignment.
+
+## align-content
+
+`align-content` controls how rows are aligned along the cross axis _(when there is more than one row)_.
 
 - `stretch` (default value) if a minimum height or no height is specified, the rows of elements will stretch to fill the parent container from top to bottom.
 - `flex-start` `flex-end` `center` all rows of elements will be positioned at the top, bottom, center of the parent container with no extra space between
 - `space-between` `space-around` all rows will be spaced from top to bottom as the value name says.
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+## place-content shorthand
+
+Shorthand property: if you specify both the first is used for align-content and the second for justify-content. A single value will be used for both axes,
+
+```
+.flex { place-content: center flex-end; }
+```
+
+On the main axis, the properties begin with `justify-`. On the cross axis, they begin with `align-`
+
+## align-items
+
+_Property for alignment_
+
+`align-items` align the items vertically along Cross Axis from top to bottom (only for a single row).
+
+```css
+.flex {
+  align-items: center;
+}
+```
+
+- `stretch` (default value) the items will stretch from top to bottom of the flex container. Items with specified height will not stretch, only items with a minimum height specified or no height at all.
+- `baseline` the bottom of the content of all items will be aligned with each other.
+- **Other Values:** `flex-start`, `flex-end`, `center`,
+
 <br>
 
 ## Flex Items
@@ -201,24 +187,20 @@ _Note:_ A flex item can act as flex container at the same time, we can specify d
 
 _Note:_ Using `margin-right: auto;` on a flex item, will automatically use all the available space as margin.
 
-<br>
-
 ## flex-grow
 
-By default, flex items shrink proportionally when the flex container is too small. In case the flex container if bigger, we can use:
-
 `flex-grow` property (declared on flex items) controls how much individual flex items should grow to fill the flex container.
+
+The default value of `flex-grow` is `0`. This will not allow flex items to grow.
+
+In case the flex container has enough space and we want the flex items to grow, we can define bigger values:
 
 ```CSS
 .item-one { flex-grow: 1; }
 .item-two { flex-grow: 2; }
 ```
 
-The default value of `flex-grow` is `0`. This will not allow flex items to grow.
-
-As values we use integers that are related to the value of each flex item.
-
-<br>
+As value we use integers that are related to the total sum of all flex items.
 
 ## flex-shrink
 
@@ -236,8 +218,6 @@ If we set to `0`, then the element is no longer allowed to shrink.
 
 As `flex-grow`, `flex-shrink` works in relation with other integers of this property on the rest flex items.
 
-<br>
-
 ## flex-basis
 
 `flex-basis` is used to specify the width of an item before it stretches or shrinks.
@@ -248,9 +228,7 @@ As `flex-grow`, `flex-shrink` works in relation with other integers of this prop
 }
 ```
 
-<br>
-
-## flex
+## flex shorthand
 
 `flex` is a shorthand property for: `flex-grow` -> `flex-shrink` -> `flex-basis`
 
@@ -260,9 +238,27 @@ As `flex-grow`, `flex-shrink` works in relation with other integers of this prop
 }
 ```
 
-<br>
+- `flex: initial` the default
+- `flex: auto` this allows items to grow based on how big the content it
+- `flex: 1` use this for consistent size and ignore the size of the content
+- `flex: none` for inflexible flex items that do not grow or shrink
 
-### align-self
+## order
+
+Reorder flex items inside its flex container.
+
+```
+.item-1 { order: 2; }
+.item-2 { order: 1; }
+```
+
+The initial value of `order` is `0` for each flex item.
+
+Flexbox will order flex items according to their `order` number, lowest values first.
+
+**p.s.** Can couse a11y issues.
+
+## align-self
 
 ```css
 .item {
@@ -271,25 +267,5 @@ As `flex-grow`, `flex-shrink` works in relation with other integers of this prop
 ```
 
 Similar to `align-items`, but `align-self` can be declared separately on flex items.
-
-<br>
-
-### order
-
-Reorder flex items inside its flex container.
-
-```css
-.item-1 {
-  order: 2;
-}
-
-.item-2 {
-  order: 1;
-}
-```
-
-The initial value of `order` is `0` for each flex item.
-
-Flexbox will order flex items according to their `order` number.
 
 <br>

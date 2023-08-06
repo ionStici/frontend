@@ -6,7 +6,7 @@
 
 <div></div>
 
-### 1
+### Introduction
 
 - [CSS Introduction](./css-basics.md)
 - [How CSS works](./how-css-works.md)
@@ -16,7 +16,7 @@
 
 <div></div>
 
-### 2
+### Box Model and Types
 
 - [Box Model](./box-model.md)
 - [Box Types](./box-types.md)
@@ -26,7 +26,7 @@
 
 <div></div>
 
-### 3
+### Basic Styles
 
 - [Colors](./colors.md)
 - [Typography](./typography.md)
@@ -34,14 +34,14 @@
 
 <div></div>
 
-### 4
+### Layout
 
 - [Flexbox](./flexbox.md)
 - [CSS Grid](./css-grid.md)
 
 <div></div>
 
-### 5
+### Responsive Design
 
 - [Responsive Design - Media Queries](./media-queries.md)
 - [Media Queries in Sass](./media-queries-sass.md)
@@ -49,7 +49,7 @@
 
 <div></div>
 
-### 6
+### Animation
 
 - [Transition](./transition.md)
 - [CSS Animations](./keyframe.md)
