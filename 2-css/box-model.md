@@ -6,6 +6,14 @@
 
 - [Box Model Areas](#box-model-areas)
 - [box-sizing](#box-sizing)
+- [Height and Width](#height-and-width)
+- [Border](#border)
+- [Padding](#padding)
+- [margin](#margin)
+- [Min and Max Height and Width](#min-and-max-height-and-width)
+- [Resetting Default Styles](#resetting-default-styles)
+- [Overflow](#overflow)
+- [Visibility](#visibility)
 
 <br>
 
@@ -52,46 +60,9 @@ This alternative box model tells CSS to apply the `width` and `height` to the bo
 
 <br>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-## Table of Content
-
-- [Height and Width](#height-and-width)
-- [Border](#border)
-- [Padding](#padding)
-- [Margin](#margin)
-- [Vertical Margin Collapse](#vertical-margin-collapse)
-- [Minimum and Maximum Height and Width](#minimum-and-maximum-height-and-width)
-- [Overflow](#overflow)
-- [Resetting Defaults](#resetting-defaults)
-- [Visibility](#visibility)
-- [box-sizing](#box-sizing)
-
-<br>
-
 ## Height and Width
 
-By default, the dimensions of an HTML box are set to hold the content of the box. We can change that with:
+By default, the dimensions of an HTML box are set to hold the content of the box.
 
 ```css
 div {
@@ -100,11 +71,9 @@ div {
 }
 ```
 
-<br>
-
 ## Border
 
-Border is a line that surrounds an element. It can be set with a specific width, style and color:
+Border is a line that surrounds an element. It can be set with a specific width, style and color.
 
 ```CSS
 div {
@@ -114,8 +83,6 @@ div {
 ```
 
 `border-radius` will change the radius of the corners of an element's border box.
-
-<br>
 
 ## Padding
 
@@ -129,11 +96,7 @@ div {
 }
 ```
 
-Padding is often used to expand the background color of the box.
-
-<!-- Because padding is inside the box, the background of the box will be visible in the space that it creates. If our box has overflow rules set, such as overflow: auto or overflow: scroll, the scrollbars will occupy this space too. -->
-
-<br>
+Padding can be used to expand the background color of the box.
 
 ## Margin
 
@@ -141,37 +104,19 @@ The space outside of the box.
 
 ```css
 div {
-  margin: 10px auto;
+  margin: 10px auto -100px auto;
 }
 ```
 
-Using `margin: 0 auto;` we can center elements. `auto` on left and right instructs the browser to adjust margins until the element is centered within its containing element.
+- `margin: 0 auto;` will center block elements. `auto` on left and right instructs the browser to adjust margins until the element is centered within its containing element.
+
+- Negative margin will reduce the outer space, potentiallyoverlapping elements.
+
+- **Vertical Margin Collapse:** between two adjacent elements, both with defined margin, only the larger margin will apply (only block margins collapse).
 
 <br>
 
-## Vertical Margin Collapse
-
-Concept not applied to horizontal margin or to padding in general.
-
-_Top and bottom (vertical) margins collapse._
-
-Between two adjacent elements, both with defined margin, only the larger margin is set.
-
-```css
-.div-1 {
-  margin-bottom: 10px;
-}
-
-.div-2 {
-  margin-top: 20px;
-}
-```
-
-In the example above, as this two margins meet, only the 20px padding of div-2 is applied.
-
-<br>
-
-## Minimum and Maximum Height and Width
+## Min and Max Height and Width
 
 CSS properties that can limit how narrow or how wide an element's box can be sized to.
 
@@ -179,7 +124,6 @@ CSS properties that can limit how narrow or how wide an element's box can be siz
 div {
   max-width: 600px;
   min-width: 300px;
-
   max-height: 500px;
   min-height: 200px;
 }
@@ -187,29 +131,11 @@ div {
 
 <br>
 
-## Overflow
+## Resetting Default Styles
 
-`overflow` property is set on a parent element to instruct the browser how to render child elements. It controls what happens to content that spills or overflows outside its box.
+[**A Modern CSS Reset**](https://andy-bell.co.uk/a-modern-css-reset/)
 
-```css
-div {
-  overflow: visible;
-}
-```
-
-- `visible` (default value) the overflow content will be displayed outside of the containing element.
-- `hidden` any content that overflows will be hidden.
-- `scroll` (a scrollbar will be added) the rest of the content can be viewed by scrolling.
-
-For vertical or horizontal solutions: `overflow-x` and `overflow-y`.
-
-<br>
-
-## Resetting Defaults
-
-https://andy-bell.co.uk/a-modern-css-reset/
-
-Browsers have a default stylesheet, known as _user agent stylesheets_.
+Browsers have a default stylesheet known as _user agent stylesheets_.
 
 Many properties in CSS have a default value and don’t have to be explicitly set in the stylesheet.
 
@@ -227,6 +153,24 @@ Reset margin and padding default values:
 This is often the first CSS rule in an external stylesheet.
 
 When properties are set to `0`, they do not require a unit of measurement.
+
+<br>
+
+## Overflow
+
+`overflow` property is set on a parent element to instruct the browser how to render child elements. It controls what happens to content that overflows outside its box.
+
+```css
+div {
+  overflow: visible;
+}
+```
+
+- `visible` (default value) the overflow content will be displayed outside of the containing element.
+- `hidden` any content that overflows will be hidden.
+- `scroll` (a scrollbar will be added) the rest of the content can be viewed by scrolling.
+
+For vertical or horizontal solutions: `overflow-x` and `overflow-y`.
 
 <br>
 

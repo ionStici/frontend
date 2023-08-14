@@ -18,8 +18,8 @@
 
 ### Box Model and Types
 
-- [Box Model](./box-model.md)
-- [Box Types](./box-types.md)
+- [**Box Model**](./box-model.md)
+- [**Box Types**](./box-types.md)
 - [Position](./position.md)
 - [Units in CSS](./units.md)
 
@@ -27,7 +27,7 @@
 
 ### Basic Styles
 
-- [Colors](./colors.md)
+- [**Colors**](./colors.md)
 - [Typography](./typography.md)
 - [Styling Links](./styling-links.md)
 
@@ -43,7 +43,6 @@
 ### Responsive Design
 
 - [Responsive Design - Media Queries](./media-queries.md)
-- [Media Queries in Sass](./media-queries-sass.md)
 
 <div></div>
 
@@ -55,3 +54,5 @@
 <div></div>
 
 <br>
+
+<!-- - [Logical Properties](https://web.dev/learn/css/logical-properties/) -->
