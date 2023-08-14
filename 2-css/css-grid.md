@@ -4,53 +4,55 @@
 
 ## Table of Content
 
-- [<font size="4">CSS Grid Introduction and Terminology</font>](#css-grid-introduction-and-terminology)
-- [<font size="4">CSS Grid Properties Overview</font>](#css-grid-properties-overview)
-- [<font size="4">Grid Container</font>](#grid-container)
-- [<font size="4">Named Grid Lines</font>](#named-grid-lines)
-  - [<font size="4">Grid Gap</font>](#grid-gap)
-- [<font size="4">Grid Items</font>](#grid-items)
-  - [<font size="4">order property</font>](#order-property)
-- [<font size="4">Grid Template Areas</font>](#grid-template-areas)
-- [<font size="4">Grid Concepts</font>](#grid-concepts)
-  - [<font size="4">Fraction Unit</font>](#fraction-unit)
-  - [<font size="4">min-content / max-content</font>](#min-content--max-content)
-  - [<font size="4">auto-fit / auto-fill</font>](#auto-fit--auto-fill)
-  - [<font size="4">repeat() function</font>](#repeat-function)
-  - [<font size="4">minmax() function</font>](#minmax-function)
-- [<font size="4">Aligning</font>](#aligning)
-  - [<font size="4">Justify Items and Align Items</font>](#justify-items-and-align-items)
-  - [<font size="4">Justify Self and Align Self</font>](#justify-self-and-align-self)
-  - [<font size="4">Justify Content and Align Content</font>](#justify-content-and-align-content)
-- [<font size="4">Explicit Grids vs. Implicit Grids</font>](#explicit-grids-vs-implicit-grids)
-  - [<font size="4">Grid Auto Properties</font>](#grid-auto-properties)
-  - [<font size="4">Grid Auto Flow</font>](#grid-auto-flow)
+- [CSS Grid Introduction and Terminology](#css-grid-introduction-and-terminology)
+- [CSS Grid Properties Overview](#css-grid-properties-overview)
+- [Grid Container](#grid-container)
+- [Grid Items](#grid-items)
+- [Grid Template Areas](#grid-template-areas)
+
+<br>
+
+- [Grid Concepts](#grid-concepts)
+- [Fraction Unit](#fraction-unit)
+- [min-content / max-content / fit-content](#min-content--max-content--fit-content)
+- [repeat() function](#repeat-function)
+- [minmax() function](#minmax-function)
+- [auto-fit / auto-fill](#auto-fit--auto-fill)
+
+<br>
+
+- [Alignment](#alignment)
+- [Justify Items and Align Items](#justify-items-and-align-items)
+- [Justify Self and Align Self](#justify-self-and-align-self)
+- [Justify Content and Align Content](#justify-content-and-align-content)
+
+<br>
+
+- [Explicit vs. Implicit](#explicit-grids-vs-implicit-grids)
+- [Grid Auto Properties](#grid-auto-properties)
+- [Grid Auto Flow](#grid-auto-flow)
+
+<div></div>
+
+### External Resources
+
+- [web.dev | CSS Grid](https://web.dev/learn/css/grid)
+- [A Complete Guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
 <br>
 
 ## CSS Grid Introduction and Terminology
 
 - **CSS Grid Layout** is a two-dimensional grid system.
-
 - Create a **Grid Container** with `{ display: grid; }` and then all the direct children are called **Grid Items**.
-
 - **Row Axis** in the _X direction_ and **Column Axis** in the _Y direction_. Axes are unchangeable in CSS Grids.
-
 - **Grid Line:** the vertical and horizontal lines that divide up the grid items, and separate the columns and the rows.
-
 - **Grid Cell:** the area between 2 adjacent vertical and 2 adjacent horizontal grid lines.
-
 - **Grid Track:** the space between two adjacent grid lines. Think of them as the columns or rows of the grid.
-
 - **Grid Area:** the area surrounded by four or more grid lines.
-
 - **Gutter:** the space between the rows and columns.
 
-<br>
-
 ## CSS Grid Properties Overview
-
-<br>
 
 | Container Properties  | Aligning (Container) |  Grid Gap  |  Implicit Grids   |
 | :-------------------: | :------------------: | :--------: | :---------------: |
@@ -59,9 +61,7 @@
 |  grid-template-areas  |   justify-content    | column-gap |  grid-auto-flows  |
 |     grid-template     |    align-content     |     -      |         -         |
 
-<br>
-
-| Items Properties  | Aligning (Items) |
+|  Item Properties  | Aligning (Items) |
 | :---------------: | :--------------: |
 |  grid-row-start   |   justify-self   |
 |   grid-row-end    |    align-self    |
@@ -70,8 +70,6 @@
 |     grid-row      |        -         |
 |    grid-column    |        -         |
 |     grid-area     |        -         |
-
-<br>
 
 ## Grid Container
 
@@ -98,21 +96,13 @@ To manually set the grid columns and rows, and also their sizes, use:
 }
 ```
 
-These properties defines the number of columns and rows in the grid. So each unit creates a grid track and sets the width or height of each grid track.
+These properties define the number of columns and rows in the grid. So each unit creates a grid track and sets the width or height of each grid track.
 
 `grid-template` is a shorthand property. First the values of each row, then after the slash the size of each column.
 
 Percentages are relative to the entire grid's height in rows, and to the grid's width in columns.
 
-<br>
-
-### Named Grid Lines
-
-Giving names to grid lines.
-
-_❗️ Chapter not completed_
-
-<br>
+`grid-template-rows: auto` can be thought of as being as big as the content. Tracks are auto sized by default.
 
 ### Grid Gap
 
@@ -130,8 +120,6 @@ _❗️ Chapter not completed_
 `gap` is a shorthand property, first rows gap and then columns gap, or we can specify just one value.
 
 This properties: `grid-row-gap grid-column-gap grid-gap` are deprecated.
-
-<br>
 
 ## Grid Items
 
@@ -151,11 +139,11 @@ We can expand grid items on multiple rows or columns by using the properties bel
 }
 ```
 
-We manually define how many rows or column the grid item should take by specifying the grid lines.
+We manually define how many rows or columns the grid item should take by specifying the grid lines.
 
 We can explicitly tell how many rows or columns to span by using the `span` keyword.
 
-_When spanning explicitly, we can have multiple grid items in the same cell iverlapping each other. To set different elements on top of each other, use the `z-index` property to create stacking contexts._
+_When spanning explicitly, we can have multiple grid items in the same cell overlapping each other. To set different elements on top of each other, use the `z-index` property to create stacking contexts._
 
 In case the grid item spans multiple rows or columns, it will also include the gap if any exists.
 
@@ -168,16 +156,6 @@ Grid lines are automatically numbered from 1 to the number of rows or columns pl
 `grid-area` this shorthand property set the starting and ending positions for both the rows and columns of an item in the following order: `row start / column start / row end / column end`.
 
 The code example above translates to: the grid item starts on row 3 and spans 2 rows, then starts on column 1 until the last column line.
-
-<br>
-
-### order property
-
-Similarly to flexbox, CSS Grid can place grid items in any order.
-
-_❗️ Chapter not completed_
-
-<br>
 
 ## Grid Template Areas
 
@@ -213,11 +191,33 @@ We can leave a cell empty by putting a dot `'.'` instead of a name.
 
 After creating the rows and columns, we can name each grid cell with `grid-template-areas` and then place each grid item with `grid-area` by providing the cell name.
 
+### Named Grid Lines
+
+Giving names to grid lines.
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns:
+    [main-start aside-start] 1fr
+    [aside-end content-start] 2fr
+    [content-end main-end];
+}
+
+.sidebar {
+  grid-column: aside-start / aside-end;
+}
+
+footer {
+  grid-column: main-start / main-end;
+}
+```
+
+We name the lines on the grid between square brackets, and then we use them on grid items instead of the numbers.
+
 <br>
 
 ## Grid Concepts
-
-<br>
 
 ### Fraction Unit
 
@@ -233,45 +233,19 @@ The `fr` relative unit (specifically for CSS Grids) defines the size of columns 
 
 If `fr` is used with other units, then each `fr` represents a fraction of the remaining available space. Useful when we need to occupy the remaining space of the grid and not overflowing its borders.
 
-<br>
-
-### min-content / max-content
+### min-content / max-content / fit-content
 
 ```CSS
 .grid {
-    grid-template-rows: max-content min-content 100px;
+    grid-template-rows: max-content min-content fit-content(10em) 100px;
 }
 ```
 
-- `min-content` sizing keyword represents the intrinsic minimum width or height of the content. For text content this means that the content will take all soft-wrapping opportunities, becoming as small as the longest word.
+- `min-content` sizing keyword will make a track as small as it can be without the track content overflowing. For text content this means that the content will take all soft-wrapping opportunities, becoming as small as the longest word.
 
-- `max-content` sizing keyword represents the intrinsic maximum width or height of the content. For text content this means that the content will not wrap at all even if it causes overflows.
+- `max-content` sizing keyword will make a track as wide enough for all of the content to display in one long unbroken string.For text content this means that the content will not wrap at all even if it causes overflows.
 
-<br>
-
-### auto-fit / auto-fill
-
-```CSS
-.grid {
-    width: 1000px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 100px);
-}
-```
-
-- `auto-fill` creates automatically as many tracks with the indicated width as it fits in the container. Above it created 10 tracks with 100px each item (1000 / 100).
-
-```CSS
-.grid {
-    width: 1000px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 100px);
-}
-```
-
-- `auto-fit` same as auto-fill, except that empty tracks are collapsed, giving them a width of zero.
-
-<br>
+- The `fit-content` function acts like max-content, but once the track reaches the size that you pass into the function, the content starts to wrap.
 
 ### repeat function
 
@@ -284,11 +258,9 @@ The repeat function (created specifically for CSS Grids) duplicates the specifie
 }
 ```
 
-This will split the grid into three equal columns.
+This will split the grid into three equal columns. Also, we can repeat sections: `repeat(3, 1fr 2fr)`
 
 _p.s._ We can specify multiple units in the repeat() function and then each group of units will be duplicated the given number of times.
-
-<br>
 
 ### minmax function
 
@@ -296,17 +268,37 @@ Preventing a track from getting too big or too small.
 
 ```CSS
 .grid {
-    grid-template-columns: 100px minmax(100px, 200px) 100px;
+    grid-template-columns: 100px minmax(100px, 1fr) 100px;
 }
 ```
 
-The minmax() function requires 2 values and enables the track to vary between these 2 values as the overall grid resizes. In the code example above, the second column width will always be between 100px and 200px wide.
+The `minmax()` function requires 2 values and enables the track to vary between these 2 values as the overall grid resizes. In the code example above, the second column width will always be between 100px and 1fr wide.
+
+### auto-fit / auto-fill
+
+```CSS
+.grid {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+```
+
+- `auto-fill` creates automatically as many tracks with the indicated width as it fits in the container. Above it created 10 tracks with 100px each item (1000 / 100).
+
+```CSS
+.grid {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+}
+```
+
+- `auto-fit` same as auto-fill, except that empty tracks are collapsed, giving them a width of zero.
 
 <br>
 
-## Aligning
-
-<br>
+## Alignment
 
 ### Justify Items and Align Items
 
@@ -326,8 +318,6 @@ _Most important values for both properties:_
 - `stretch` (by default) stretches all items to fill the grid cell. If an item has the width / height declared, then it will not be stretched.
 - `start`, `end` and `center` will position the items inside their columns. The items will be as wide / tall as their current width / height.
 
-<br>
-
 ### Justify Self and Align Self
 
 ```CSS
@@ -343,9 +333,9 @@ Note that these two will override the `justify-items` and `align-items` properti
 
 `justify-self` and `align-self` positions individual grid items horizontally / vertically.
 
-<br>
-
 ### Justify Content and Align Content
+
+These (grid container) properties will only work if there is additional space to distribute along the container.
 
 ```CSS
 .grid {
@@ -355,15 +345,14 @@ Note that these two will override the `justify-items` and `align-items` properti
 }
 ```
 
-`justify-content` (declared on grid containers) positions the columns inside the grid container horizontally from left to right.
-
-`align-content` (declared on grid containers) positions the rows vertically from top to bottom.
+- `justify-content` positions the columns inside the grid container horizontally from left to right.
+- `align-content` positions the rows vertically from top to bottom.
 
 _Most important values for both properties:_
 
 - `stretch` stretches the grid items until reaches the full width / height of the grid container.
-- `start`, `end`, `center` as the name says.
-- `space-around`, `space-between`, `space-evenly` as the name says.
+- `start`, `end`, `center`
+- `space-around`, `space-between`, `space-evenly`
 
 <br>
 
@@ -376,8 +365,6 @@ Implicit Grids use case: when we don't know from the beginning how many rows or 
 
 The default behavior of implicit grids: new rows will be added for new grid items. The new rows will be tall enough to contain the content within them.
 
-<br>
-
 ### Grid Auto Properties
 
 ```CSS
@@ -389,19 +376,16 @@ The default behavior of implicit grids: new rows will be added for new grid item
 
 Two properties (declared on grid containers) for specifying the size of grid tracks added implicitly:
 
-`grid-auto-rows` specifies the height of implicitly added grid rows.
-
-`grid-auto-columns` specifies the width of implicitly added grid columns.
+- `grid-auto-rows` specifies the height of implicitly added grid rows.
+- `grid-auto-columns` specifies the width of implicitly added grid columns.
 
 These two properties accept units as values.
 
 If we do not specify `grid-auto-rows`, then the rows will be auto-adjusted to the height of the content of the grid items.
 
-<br>
-
 ### Grid Auto Flow
 
-We can specify the order in which rows and columns are rendered.
+We can specify the order in which rows and columns are implicitly rendered.
 
 ```CSS
 .grid {
@@ -412,10 +396,8 @@ We can specify the order in which rows and columns are rendered.
 `grid-auto-flow` specifies whether new elements should be added to rows or columns.
 
 - `row` (default) new elements fill rows from left to right and create new rows when there there are to many grid items.
-
 - `column` new elements fill columns from top to bottom and create new columns when there are too many grid items.
-
-- `dense` keyword fill holes in the grid layout if smaller elements are added.
+- `dense` keyword fill holes in the grid layout with grid cells if smaller elements are added.
 
 We can pair `row` and `column` with `dense`.
 

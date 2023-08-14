@@ -35,8 +35,8 @@
 
 ### Layout
 
-- [Flexbox](./flexbox.md)
-- [CSS Grid](./css-grid.md)
+- [**Flexbox**](./flexbox.md)
+- [**CSS Grid**](./css-grid.md)
 
 <div></div>
 
@@ -44,7 +44,6 @@
 
 - [Responsive Design - Media Queries](./media-queries.md)
 - [Media Queries in Sass](./media-queries-sass.md)
-- [Responsive Images](./responsive-images.md)
 
 <div></div>
 
