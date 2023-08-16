@@ -4,7 +4,7 @@
 
 ## Table of Content
 
-- [What you need to know](#what-you-need-to-know)
+- [Basics](#basics)
 - [Numbers](#numbers)
 - [Percentages](#percentages)
 - [Absolute lengths](#absolute-lengths)
@@ -15,7 +15,7 @@
 
 <br>
 
-## What you need to know
+## Basics
 
 - Each property has an initial value, used if nothing is declared (and if there is no inheritance).
 - Browsers specify a `root` `font-size` for each page (usually 16px).

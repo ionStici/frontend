@@ -8,11 +8,11 @@
 
 ### Introduction
 
-- [CSS Introduction](./css-basics.md)
-- [How CSS works](./how-css-works.md)
-- [Selectors](./selectors.md)
-- [Pseudo-classes](./pseudo-classes.md)
-- [Pseudo-elements](./pseudo-elements.md)
+- [**CSS Introduction**](./css-basics.md)
+- [**How CSS works**](./how-css-works.md)
+- [**Selectors**](./selectors.md)
+- [**Pseudo-classes**](./pseudo-classes.md)
+- [**Pseudo-elements**](./pseudo-elements.md)
 
 <div></div>
 
@@ -20,8 +20,8 @@
 
 - [**Box Model**](./box-model.md)
 - [**Box Types**](./box-types.md)
-- [Position](./position.md)
-- [Units in CSS](./units.md)
+- [**Position and Z-index**](./position.md)
+- [**Units in CSS**](./units.md)
 
 <div></div>
 
@@ -40,6 +40,10 @@
 
 <div></div>
 
+### Properties
+
+- [**Shadows**](./shadows.md)
+
 ### Responsive Design
 
 - [Responsive Design - Media Queries](./media-queries.md)
@@ -53,6 +57,14 @@
 
 <div></div>
 
-<br>
+### CSS Preprocessors
 
-<!-- - [Logical Properties](https://web.dev/learn/css/logical-properties/) -->
+- [SASS](./sass.md)
+
+### External Resources
+
+- [Logical Properties | web.dev](https://web.dev/learn/css/logical-properties/)
+
+<div></div>
+
+<br>

@@ -40,6 +40,8 @@ The hexadecimal number system has 16 digits (from 0 to 15). To represent 10 - 15
 
 We can represent hex colors with 3 characters in case that it contains pairs. For example: `#00FFFF` can be written as `#0FF`.
 
+Colors from _white_ to _black_: `fff -> eee -> ddd -> ccc -> bbb -> aaa -> 999 -> 888 -> … -> 111 -> 000`
+
 <br>
 
 ## RGB Colors

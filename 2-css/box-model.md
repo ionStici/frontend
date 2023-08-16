@@ -8,6 +8,7 @@
 - [box-sizing](#box-sizing)
 - [Height and Width](#height-and-width)
 - [Border](#border)
+- [Outline](#outline)
 - [Padding](#padding)
 - [margin](#margin)
 - [Min and Max Height and Width](#min-and-max-height-and-width)
@@ -73,7 +74,9 @@ div {
 
 ## Border
 
-Border is a line that surrounds an element. It can be set with a specific width, style and color.
+[Border](https://web.dev/learn/css/borders/) is a line that surrounds an element.
+
+It can be set with a specific width, style and color.
 
 ```CSS
 div {
@@ -82,7 +85,23 @@ div {
 }
 ```
 
-`border-radius` will change the radius of the corners of an element's border box.
+`border-radius` will change the radius of the corners of an element's border.
+
+### Outline
+
+**`outline`** property (works as border) is for outside of the element styling, and is not part of the box model.
+
+```css
+.box {
+  outline: solid 1px #999; /* use none to remove outline */
+}
+```
+
+- `outline-offset: 1rem;` sets the amount of space between an outline and the edge or border of an element.
+
+In some _focus_ situations, we should use `box-shadow` instead of `outline`, because outline will insert some visual space, and it doesn’t adapt to rounded corners, it is always square.
+
+_p.s._ Shadows don't show up in Windows High Contrast Mode, so in this situation it's not a good idea to replace outline with shadows for focus use cases.
 
 ## Padding
 

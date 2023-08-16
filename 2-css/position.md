@@ -29,7 +29,7 @@ CSS provides properties that change how a browser _positions_ elements.
 
 ## Positioning in CSS
 
-Three positioning chemes:
+Three positioning schemes:
 
 1. **Normal Flow** - _by defaut_ and `position: relative` - elements are laid out on the page in a natural order, no changes are made to their layout.
 
@@ -43,13 +43,9 @@ Three positioning chemes:
 
 `position` property can change the default position behaviour of elements.
 
-<br>
-
 ### static
 
 `static` (default value) normal flow.
-
-<br>
 
 ### relative
 
@@ -68,8 +64,6 @@ div {
   left: -25px;
 }
 ```
-
-<br>
 
 ### absolute
 
@@ -91,8 +85,6 @@ div {
 
 Position in relation to the nearest non-static element.
 
-<br>
-
 ### fixed
 
 The element is removed from the normal document flow, no space is created for the element in the page layout.
@@ -112,8 +104,6 @@ div {
   left: 50px;
 }
 ```
-
-<br>
 
 ### sticky
 
@@ -138,7 +128,9 @@ div {
 
 Stacking Contexts are like layers that form a stack.
 
-The **Stacking Contexts** is a three-dimensional conceptualization of HTML elements along an imaginary z-axis relative to the user, who is assumed to be facing the viewport or the webpage.
+The **Stacking Context** is a three-dimensional conceptualization of HTML elements along an imaginary z-axis relative to the user, who is assumed to be facing the viewport or the webpage.
+
+A **Stacking Context** is a group of elements that have a common parent and move up and down the z-axis together. The `z-index` of elements inside of a stacking context are always relative to the parent's current order in its own stacking context.
 
 Stacking Context can be created by different CSS properties, not only from `position` and `z-index`.
 
@@ -160,4 +152,12 @@ _Point of View:_ Multiple boxes of different positions overlap with each other..
 
 `z-index` accepts integer values. Depending on their values, the integers instruct the browser on the order in which elements should be layered on the web page.
 
-`z-index` does not work with static `elements`. Use `relative` instead to create stacking context with `z-index`.
+If no `z-index` is set on your elements then the default behaviour is that document source order dictates the Z axis.
+
+To create stacking contexts, set the element's `position` value to anything other than `static`.
+
+_p.s._ In flexbox or grid, you can modify the `z-index` of flex or grid items without the `position` property.
+
+_p.s._ You can also create a stacking context by adding a `filter` and setting `backface-visibility: hidden`.
+
+<br>
