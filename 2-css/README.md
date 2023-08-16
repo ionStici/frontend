@@ -40,9 +40,11 @@
 
 <div></div>
 
-### Properties
+### Other
 
 - [**Shadows**](./shadows.md)
+- [Functions](./functions.md)
+- [**Custom Properties**](./css-variables.md)
 
 ### Responsive Design
 
