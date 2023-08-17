@@ -55,7 +55,7 @@
 ### Animation
 
 - [Transition](./transition.md)
-- [CSS Animations](./keyframe.md)
+- [Animations](./keyframe.md)
 
 <div></div>
 
