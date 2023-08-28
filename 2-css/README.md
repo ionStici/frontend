@@ -25,11 +25,11 @@
 
 <div></div>
 
-### Basic Styles
+### Styles
 
 - [**Colors**](./colors.md)
+- [Gradients](./gradients.md)
 - [Typography](./typography.md)
-- [Styling Links](./styling-links.md)
 
 <div></div>
 
@@ -43,7 +43,7 @@
 ### Other
 
 - [**Shadows**](./shadows.md)
-- [Functions](./functions.md)
+- [**Functions**](./functions.md)
 - [**Custom Properties**](./css-variables.md)
 
 ### Responsive Design
@@ -56,6 +56,7 @@
 
 - [Transition](./transition.md)
 - [Animations](./keyframe.md)
+- [tranform](https://web.dev/learn/css/functions/#transforms)
 
 <div></div>
 
