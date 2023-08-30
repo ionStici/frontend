@@ -4,13 +4,20 @@
 
 ## Talbe of Content
 
+- [A Complete Guide to CSS Gradients | CSS Tricks](https://css-tricks.com/a-complete-guide-to-css-gradients/)
+
+<div></div>
+
 - [Linear gradient](#linear-gradient)
 - [Radial gradient](#radial-gradient)
 - [Conic gradient](#conic-gradient)
 
 <div></div>
 
-- [A Complete Guide to CSS Gradients | CSS Tricks](https://css-tricks.com/a-complete-guide-to-css-gradients/)
+- [Repeating](#repeating)
+- [Mixing](#mixing)
+
+<div></div>
 
 <br>
 
@@ -71,6 +78,8 @@ The `conic-gradient()` function accepts position and angle arguments.
 
 ```css
 .grad {
+  background: conic-gradient(from 10deg at 20% 30%, white, black);
+
   background: conic-gradient(
     gold 20deg,
     lightcoral 20deg 190deg,
@@ -81,6 +90,49 @@ The `conic-gradient()` function accepts position and angle arguments.
 }
 ```
 
-A good use case for this capability, with conic gradients is rendering pie charts with CSS.
+By default, the angle is 0 degrees which starts at the top, in the center.
+
+The position is center by default. Positioning can be keyword-based, or numeric values.
+
+We can add as many color stops as we like.
+
+A good use case for conic gradients is rendering pie charts with CSS.
+
+<br>
+
+## Repeating
+
+Each type of gradient has a repeating type.
+
+`repeating-linear-gradient()` `repeating-radial-gradient()` `repeating-conic-gradient()`
+
+They are similar to the non-repeating functions and take the same arguments. The difference is that if the defined gradient can be repeated to fill the box, based on both of their sizes, it will. This can be achieved by setting color stop lengths.
+
+```css
+.grad {
+  background: repeating-linear-gradient(
+    45deg,
+    red,
+    red 30px,
+    white 30px,
+    white 60px
+  );
+}
+```
+
+<br>
+
+## Mixing
+
+We can mix gradient functions, as well as defining as many gradients as we like.
+
+```css
+.grad {
+  background: linear-gradient(-45deg, blue -30%, transparent 80%),
+    linear-gradient(45deg, darkred 20%, crimson, darkorange 60%, gold, bisque);
+}
+```
+
+Separate the gradient functions with commas.
 
 <br>
