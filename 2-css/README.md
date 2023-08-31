@@ -28,7 +28,7 @@
 ### Styles
 
 - [**Colors**](./colors.md)
-- [Gradients](./gradients.md)
+- [**Gradients**](./gradients.md)
 - [Typography](./typography.md)
 
 <div></div>
@@ -46,17 +46,17 @@
 - [**Functions**](./functions.md)
 - [**Custom Properties**](./css-variables.md)
 
-### Responsive Design
-
-- [Responsive Design - Media Queries](./media-queries.md)
-
-<div></div>
-
 ### Animation
 
 - [Transition](./transition.md)
-- [Animations](./keyframe.md)
+- [**Keyframes**](./keyframe.md)
 - [tranform](https://web.dev/learn/css/functions/#transforms)
+
+<div></div>
+
+### Responsive Design
+
+- [Responsive Design - Media Queries](./media-queries.md)
 
 <div></div>
 
