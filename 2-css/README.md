@@ -33,6 +33,11 @@
 
 <div></div>
 
+- [**Filter**](./filter.md)
+- [Blend Modes]()
+
+<div></div>
+
 ### Layout
 
 - [**Flexbox**](./flexbox.md)
