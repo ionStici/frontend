@@ -34,7 +34,8 @@
 <div></div>
 
 - [**Filter**](./filter.md)
-- [Blend Modes](./blend-modes.md)
+- [**Blend Modes**](./blend-modes.md)
+- [Styling Lists](./lists.md)
 
 <div></div>
 
