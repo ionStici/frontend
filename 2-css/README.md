@@ -35,7 +35,7 @@
 
 - [**Filter**](./filter.md)
 - [**Blend Modes**](./blend-modes.md)
-- [Styling Lists](./lists.md)
+- [**Styling Lists**](./lists.md)
 
 <div></div>
 
@@ -54,7 +54,7 @@
 
 ### Animation
 
-- [Transition](./transition.md)
+- [**Transition**](./transition.md)
 - [**Keyframes**](./keyframe.md)
 - [tranform](https://web.dev/learn/css/functions/#transforms)
 
@@ -62,7 +62,7 @@
 
 ### Responsive Design
 
-- [Responsive Design - Media Queries](./media-queries.md)
+- [Responsive Design](./media-queries.md)
 
 <div></div>
 
@@ -72,7 +72,7 @@
 
 ### External Resources
 
-- [Logical Properties | web.dev](https://web.dev/learn/css/logical-properties/)
+- [_Logical Properties | web.dev_](https://web.dev/learn/css/logical-properties/)
 
 <div></div>
 

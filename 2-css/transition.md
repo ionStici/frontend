@@ -2,121 +2,93 @@
 
 # CSS Transition
 
-**CSS transition** can control the following four aspects of an element's transition:
-
-1. The property
-2. Duration
-3. Delay
-4. How the transition accelerates
-
-<br>
-
 ## Table of Content
 
-- [Transition](#transition)
-- [Timing Function](#timing-function)
-- [Delay](#delay)
-- [Shorthand](#shorthand)
-- [Combinations](#combinations)
+- [transition shorthand](#transition-shorthand)
+- [transition-property](#transition-property)
+- [transition-duration](#transition-duration)
+- [transition-timing-function](#transition-timing-function)
+- [transition-delay](#transition-delay)
 - [all](#all)
+- [What can and can't transition](#what-can-and-cant-transition)
+- [Different transitions for enter or exit](#different-transitions-for-enter-or-exit)
+- [prefers-reduced-motion](#prefers-reduced-motion)
+- [Performance considerations](#performance-considerations)
 - [Notes](#notes)
 
-**Resources:**
-
-- [MDN Using CSS transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
-- [MDN Using CSS transforms](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
-- [CSS Transitions and Transforms for Beginners](https://thoughtbot.com/blog/transitions-and-transforms)
-
 <br>
 
-## Transition
+## transition shorthand
+
+`transition-property` -> `transition-duration` -> `transition-timing-function` -> `transition-delay`
 
 ```css
-a {
-  transition-property: color;
-  transition-duration: 1s;
-}
-
-a:hover {
-  color: red;
+.btn {
+  transition: transform 0.3s ease-in 0s, color 200ms;
 }
 ```
 
-To create a transition, declare the `transition-property` and specify as value the _property name that you want to transition_.
-
-Then, `transition-duration` will set the duration of the transition. Require seconds or milliseconds as value.
-
-This will create a transition for the specified as value property.
-
-[List of Animatable CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)
-
-The default value of duration is `0s`, or instantaneous, as if there is no transition.
-
-<br>
-
-## Timing Function
-
-The timing function describes the pace of the transition. [by MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)
-
-```css
-a {
-  transition-timing-function: ease-out;
-}
-```
-
-- `ease` (default value) starts the transition slowly, speeds up in the middle, and slows down again at the end.
-- `ease-in` — starts slow, accelerates quickly, stops abruptly
-- `ease-out` — begins abruptly, slows down, and ends slowly
-- `ease-in-out` — starts slow, gets fast in the middle, and ends slowly
-- `linear` — constant speed throughout
-
-<br>
-
-## Delay
-
-```css
-a {
-  transition-delay: 1s;
-}
-```
-
-Time to wait before startng the transition. Default value `0s`.
-
-<br>
-
-## Shorthand
-
-```css
-a {
-  transition: color 0.25s ease-in 0.5s;
-}
-```
-
-The properties must be specified in this order:
-
-1. `transition-property`
-2. `transition-duration`
-3. `transition-timing-function`
-4. `transition-delay`
+We can declare multiple transitions in a comma-separated list.
 
 Leaving out one of the properties causes the default value for that property to be applied.
 
-One exception: You must set duration if you want to define delay. Since both are time values, the browser will always interpret the first time value as duration.
+_Exception:_ You must set duration if you want to define delay. Since both are time values, the browser will always interpret the first time value as duration.
 
 <br>
 
-## Combinations
+## transition-property
 
-With the shorthand `transition` property, we can set separate transitions for multiple properties at once.
-
-To add a new transition, add a comma `,` and then just set a second transition, code example:
+Indicate which styles to transition for a particular property.
 
 ```css
-a {
-  transition: color 0.25s ease-ing 0.3s, font-size 0.1s linear 0.3s;
-  transition: all 0.25s;
+.btn {
+  transition-property: all;
 }
 ```
+
+The `transition-property` accepts one or more CSS property names in a comma-separated list.
+
+<br>
+
+## transition-duration
+
+```css
+.btn {
+  transition-duration: 250ms;
+}
+```
+
+Define the length of time that the transition will take to complete.
+
+Here we define time units, either in seconds `s` or milliseconds `ms`. The default is `0s`.
+
+<br>
+
+## transition-timing-function
+
+```css
+.btn {
+  transition-timing-function: linear; /* default */
+}
+```
+
+Customize the speed of a CSS transition over the course of its duration.
+
+Keywords: `linear ease ease-in ease-out ease-in-out`
+
+Also we can use `steps` and `cubic`. We can use DevTools to experiment with different timing functions in real-time.
+
+<br>
+
+## transition-delay
+
+```css
+.btn {
+  transition-delay: 150ms;
+}
+```
+
+Specify the delay time for a transition.
 
 <br>
 
@@ -134,19 +106,54 @@ This will enable the transition for all properties, and every value that changes
 
 <br>
 
+## What can and can't transition
+
+[List of Animatable CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)
+
+In general, it's only possible to transition elements that can have a "middle state" between their start and final states.
+
+Common properties for transition: transform, colors, shadows, filters.
+
+Pseudo-classes and events that can trigger state changes: `:hover :focus :target :active` and `class` change from JS.
+
+<br>
+
+## Different transitions for enter or exit
+
+```css
+.circle {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.circle.active {
+  opacity: 0.75;
+  transition: opacity 0.5;
+}
+```
+
+<br>
+
+## prefers-reduced-motion
+
+`prefers-reduced-motion` CSS media feature can detect if a user has indicated a preference for less motion from their device.
+
+<br>
+
+## Performance considerations
+
+[Guide on high-performance CSS animations](https://web.dev/animations-guide/)
+
+Use `transform` and `opacity` instead of `width` and `height` for transitions.
+
+<br>
+
 ## Notes
 
 - The trick for fading out is using `opacity: 0`
 - The transform property on hover or active will be in relation to the initial state.
 - Transition will not work when `display: none` is applied.
-- Animation and transition has been optimized by CSS for transform property.
-- In several situation, for transition to work properly, you need to declare the initial state of the desired value
+- Animation and transition has been optimized by CSS for `transform` property.
+- Sometimes, for transition to work properly, you need to declare the initial state of the desired value.
 
-<div></div>
-
-```css
-.circle { opacity: 1; }
-.circle.active { transition: all 1s: opacity .5 }
-```
-
-Set the transition on the active state if you only need the transition to work in one direction.
+<br>
