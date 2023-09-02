@@ -2,22 +2,11 @@
 
 # Git
 
-## Git Configuration
+## Table of Content
 
-- [Git Installation](https://git-scm.com/)
-- `git --version ` Check Git Version
-
-<div></div>
-
-**Configuring Git Name & Email** that Git will associate with your work:
-
-```
-git config --global user.name "John"
-git config --global user.email "me@example.com"
-git config user.name // check the configured name
-```
-
-When we get to GitHub, you’ll want your Git email address to match your GitHub account.
+- [Git Introduction](#git-introduction)
+- [Git and GitHub Differences](#git-and-github-differences)
+- [Git Configuration](#git-configuration)
 
 <br>
 
@@ -27,6 +16,8 @@ When we get to GitHub, you’ll want your Git email address to match your GitHub
 - **Version Control System** - a software that tracks and manages changes to files over time.
 
 _Version Control Systems_ allow users to revisit earlier versions of the files, compare changes between versions, undo changes, collaborate and share, combine changes and more.
+
+Thus, **Git** is a software that allows you to keep track of changes made to a project over time. It works by recording and storing changes you make to a project, then allowing you to reference them as needed.
 
 Git is _(primarily)_ a **Terminal Tool**. To use it, we run various git commands in a Unix Shell.
 
@@ -52,5 +43,21 @@ After finishing the Git repository on our local machine, we can upload the histo
 | Git was released in 2005                    | GitHub was launched in 2008                      |
 | focused on version control and code sharing | focused on centralized source code hosting       |
 | Git has no user management feature          | GitHub has a built-in user management feature    |
+
+<br>
+
+## Git Configuration
+
+`git --version ` command to see if git is installed, or [Install Git](https://git-scm.com/)
+
+**Configuring Git Name & Email** that Git will associate with your work:
+
+```
+git config --global user.name "John"
+git config --global user.email "me@example.com"
+git config user.name // check the configured name
+```
+
+When we get to GitHub, you’ll want your Git email address to match your GitHub account.
 
 <br>
