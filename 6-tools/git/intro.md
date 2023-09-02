@@ -1,4 +1,25 @@
+[&larr; Back](./README.md)
+
 # Git
+
+## Git Configuration
+
+- [Git Installation](https://git-scm.com/)
+- `git --version ` Check Git Version
+
+<div></div>
+
+**Configuring Git Name & Email** that Git will associate with your work:
+
+```
+git config --global user.name "John"
+git config --global user.email "me@example.com"
+git config user.name // check the configured name
+```
+
+When we get to GitHub, you’ll want your Git email address to match your GitHub account.
+
+<br>
 
 ## Git Introduction
 
@@ -7,9 +28,13 @@
 
 _Version Control Systems_ allow users to revisit earlier versions of the files, compare changes between versions, undo changes, collaborate and share, combine changes and more.
 
+Git is _(primarily)_ a **Terminal Tool**. To use it, we run various git commands in a Unix Shell.
+
 **Git History:** Linus Torvalds is the creator and main developer behind Linux and Git. The first official Git release came in 2005.
 
 **Who Uses Git:** Engineers and Coders, Tech-Adjacent Roles like Designers (for collaborating reasons), Governments, Scientists, Writiers, Anyone (keeping a dairy, drafting PhD).
+
+<br>
 
 ## Git and GitHub Differences
 
@@ -17,36 +42,15 @@ _Version Control Systems_ allow users to revisit earlier versions of the files, 
 
 **GitHub** is a service that hosts Git repositories in the cloud and makes it easier to collaborate with other people. You do need to sign up for an account to use GitHub. _It's an online place to share work that is done using Git._
 
-<div></div>
+After finishing the Git repository on our local machine, we can upload the history to GitHub to share with others.
 
-- Git is a Software
-- GitHub is a Service
-
-<div></div>
-
-- Git is maintained by Linux
-- GitHub is maintained by Microsoft
-
-<div></div>
-
-- Git can manage source code history
-- GitHub is a hosting service for git repositories
-
-<div></div>
-
-- Git was released in 2005
-- GitHub was launched in 2008
-
-<div></div>
-
-- Git is focused on version control and code sharing
-- GitHub is focused on centralized source code hosting
-
-<div></div>
-
-- Git has no user management feature
-- GitHub has a built-in user management feature
-
-<div></div>
+| Git                                         | GitHub                                           |
+| ------------------------------------------- | ------------------------------------------------ |
+| Git is a Software                           | GitHub is a Service                              |
+| Git is maintained by Linux                  | GitHub is maintained by Microsoft                |
+| Git can manage source code history          | GitHub is a hosting service for git repositories |
+| Git was released in 2005                    | GitHub was launched in 2008                      |
+| focused on version control and code sharing | focused on centralized source code hosting       |
+| Git has no user management feature          | GitHub has a built-in user management feature    |
 
 <br>
