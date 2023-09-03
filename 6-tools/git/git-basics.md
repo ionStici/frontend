@@ -4,7 +4,8 @@
 
 ## Table of Content
 
-- [Git Init]()
+- [Git Init](#git-init)
+- [Git Workflow](#git-workflow)
 
 ### External Resources
 
@@ -21,7 +22,9 @@ Run the following command in a particular project directory to initialize a new 
 git init
 ```
 
-**Git Repository (Repo):** a project directory that uses git to track changes.
+**Git Repository (Repo):** is a project directory that uses git to track changes.
+
+<br>
 
 ## Git Workflow
 
@@ -35,9 +38,9 @@ A Git project can be thought of as having 3 parts:
 
 <br>
 
-##
+### status
 
-**Check the status of changes**
+Check the status of changes
 
 ```
 git status
@@ -48,7 +51,7 @@ git status
 
 <br>
 
-**Add changes to the staging area**
+### add
 
 After we made changes to a project, we **add** them to the staging area.
 
@@ -57,6 +60,54 @@ git add file.txt img.png
 git add .
 ```
 
-Using the dot symbol `.` we add all files from the working directory to the staging area at once.
+Using the dot symbol `.` we add every file from the working directory to the staging area at once.
+
+<br>
+
+### diff
+
+Check the differences of changes between the working directory and the staging area.
+
+```
+git diff file.txt
+```
+
+<br>
+
+### commit
+
+```
+git commit -m "Add Header"
+```
+
+A commit stores changes from the staging area, inside the repository as a new version.
+
+Every commit is identified with a message that we write in quotation marks after the `-m` flag.
+
+Commit messages convention: Write in the present tense, 50 characters or less.
+
+<br>
+
+### log
+
+Commits are stored chronologically in the repository and cab be viewed with:
+
+```
+git log
+git log --oneline
+```
+
+<br>
+
+### Generalizations
+
+Git is the industry-standard version control system for web developers.
+
+- `git init` creates a new Git repository
+- `git status` inspects the contents of the working directory and staging area
+- `git add` adds files from the working directory to the staging area
+- `git diff` shows the difference between the working directory and the staging area in a file
+- `git commit` permanently stores file changes from the staging area in the repository
+- `git log` shows a list of all previous commits
 
 <br>
