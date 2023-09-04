@@ -149,7 +149,7 @@ The default value is `running` and if you set it to `paused`, it will pause the 
 }
 ```
 
-The `animation-fill-mode` property defines which values in your `@keyframes` timeline persist before the animation starts or after it ends. The default value is `none` which means when the animation is complete, the values in your timeline are discarded.
+The [`animation-fill-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode) property defines which values in your `@keyframes` timeline persist before the animation starts or after it ends. The default value is `none` which means when the animation is complete, the values in your timeline are discarded.
 
 - `forwards` The last keyframe will persist, based on the animation direction.
 - `backwards` The first keyframe will persist, based on the animation direction.
