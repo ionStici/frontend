@@ -6,14 +6,16 @@
 
 - [**Introduction**](./intro.md)
 - [**Git Basics**](./git-basics.md)
-- [Git Branching](./git-branching.md)
+- [**Git Branching**](./git-branching.md)
 
 <div></div>
 
-- [Open Source](./open-source.md)
 - [**Markdown**](./markdown.md)
-<!-- - [README Files]() -->
+- [README Files](./readme-files.md)
+- [Open Source](./open-source.md)
 
 <div></div>
 
 <br>
+
+<!-- **HEAD** refers to the currently checked-out branch's latest commit. -->

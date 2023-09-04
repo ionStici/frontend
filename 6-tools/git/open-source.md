@@ -1,9 +1,6 @@
+[&larr; Back](./README.md)
+
 # Open Source
-
-## Table of Content
-
-- [Open Source Overview](#open-source-overview)
-- [Open Source Repository Docs](#open-source-repository-docs)
 
 <br>
 

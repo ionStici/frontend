@@ -43,8 +43,6 @@ A Git project can be thought of as having 3 parts:
 
   Use the dot `.` instead of specific files to stage all changes at once.
 
-- **`git diff file.txt `** check the difference between the working directory and the staging area.
-
 - **`git commit -m "Style Hero" `** A commit saves the changes from the staging area to the repo as a new version.
 
   Every commit is identified with a message that we write in quotation marks after the `-m` flag.
@@ -63,5 +61,23 @@ A Git project can be thought of as having 3 parts:
 - `git diff` shows the difference between the working directory and the staging area in a file
 - `git commit` permanently stores file changes from the staging area in the repository
 - `git log` shows a list of all previous commits
+
+<br>
+
+## git diff
+
+`git diff ` command to view changes between commits, branches, files, our working directory, and more.
+
+- **`git diff `** list all the changes in the working directory that are not staged for the next commit.
+
+- **`git diff HEAD `** list all changes in the working tree since the last commit.
+
+- **`git diff --staged `** list the changes between the staging area and our last commit.
+
+- **`git diff HEAD file.txt `** list changes within a specific file. The `--staged` flag works as well.
+
+- **`git diff branch1..branch2 `** list changes between branches.
+
+- **`git diff commit1..commit2 `** compare 2 commits, provide the commit hashes of the commits.
 
 <br>
