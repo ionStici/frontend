@@ -4,7 +4,15 @@
 
 [**&larr; Back to the Main Page**](./../README.md)
 
-- [Introduction](./intro.md)
-- [Git Basics](./git-basics.md)
+- [**Introduction**](./intro.md)
+- [**Git Basics**](./git-basics.md)
+
+<div></div>
+
+- [Open Source](./open-source.md)
+- [**Markdown**](./markdown.md)
+<!-- - [README Files]() -->
+
+<div></div>
 
 <br>
