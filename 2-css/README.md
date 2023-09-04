@@ -30,14 +30,15 @@
 
 - [**Colors**](./colors.md)
 - [**Gradients**](./gradients.md)
-- [Typography](./typography.md)
-
-<div></div>
-
 - [**Filter**](./filter.md)
 - [**Blend Modes**](./blend-modes.md)
 - [**Styling Lists**](./lists.md)
-- [Backgrounds](./bg.md)
+- [**Backgrounds**](./bg.md)
+- [**Shadows**](./shadows.md)
+- [**Functions**](./functions.md)
+- [**Custom Properties**](./css-variables.md)
+- [Typography](./typography.md)
+- [tranform](https://web.dev/learn/css/functions/#transforms)
 
 <div></div>
 
@@ -48,17 +49,10 @@
 
 <div></div>
 
-### Other
-
-- [**Shadows**](./shadows.md)
-- [**Functions**](./functions.md)
-- [**Custom Properties**](./css-variables.md)
-
 ### Animation
 
 - [**Transition**](./transition.md)
 - [**Keyframes**](./keyframe.md)
-- [tranform](https://web.dev/learn/css/functions/#transforms)
 
 <div></div>
 
