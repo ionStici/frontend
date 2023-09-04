@@ -6,6 +6,7 @@
 
 - [**Introduction**](./intro.md)
 - [**Git Basics**](./git-basics.md)
+- [Git Branching](./git-branching.md)
 
 <div></div>
 
