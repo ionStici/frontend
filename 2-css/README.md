@@ -57,7 +57,7 @@
 
 - [**Transition**](./transition.md)
 - [**Keyframes**](./keyframe.md)
-- [**tranform**](./transform.md)
+- [**transform**](./transform.md)
 
 <div></div>
 
