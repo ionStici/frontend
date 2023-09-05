@@ -7,8 +7,8 @@
 - [**Introduction**](./git-intro.md)
 - [**Git Basics**](./git-basics.md)
 - [**Git Branching**](./git-branching.md)
-- [Git Backtracking](./git-backtracking.md)
-- [The .gitignore file](./git-ignore.md)
+- [**Git Backtracking**](./git-backtracking.md)
+- [**The .gitignore file**](./git-ignore.md)
 
 <div></div>
 
