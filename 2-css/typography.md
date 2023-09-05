@@ -6,7 +6,7 @@
 
 - **`font-family`** set the text typeface. Accepts a comma-separated list of font families.
 
-  Use [_safe fallbacks_](https://www.cssfontstack.com/) that corresponds to the same font stack.
+  Use [safe fallbacks](https://www.cssfontstack.com/) that corresponds to the same font stack.
 
 - **`font-size`** change the size of text elements. Accepts: keywords, length units and percentages
 
@@ -20,7 +20,7 @@
 
 - **`word-spacing`** space between words in a text (length values)
 
-- **`{ font: 400 16px / 1.5 oblique serif }`** shorthand property.
+- **`{ font: 400 16px / 1.5 oblique serif; }`** shorthand property.
 
 - **`text-transform`** transform text to `uppercase`, `lowercase` or `capitalize`
 
@@ -42,7 +42,7 @@
 
 - [**`writing-mode`**](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) change the way text flows and is arranged. Default is `horizontal-tb`
 
-- **`text-orientation`** orientation of characters, keywords: `mixed` and `upright`.
+- **`text-orientation`** orientation of characters. Keywords `mixed` and `upright`.
 
   `text-orientation` works only when `writing-mode` ≠ `horizontal-tb`
 

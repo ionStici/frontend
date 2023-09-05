@@ -26,19 +26,23 @@
 
 <div></div>
 
-### Styles
+### Basic Styles
 
 - [**Colors**](./colors.md)
 - [**Gradients**](./gradients.md)
+- [**Backgrounds**](./bg.md)
 - [**Filter**](./filter.md)
 - [**Blend Modes**](./blend-modes.md)
-- [**Styling Lists**](./lists.md)
-- [**Backgrounds**](./bg.md)
+
+### Other
+
+<div></div>
+
 - [**Shadows**](./shadows.md)
+- [**Typography**](./typography.md)
+- [**Styling Lists**](./lists.md)
 - [**Functions**](./functions.md)
-- [**Custom Properties**](./css-variables.md)
-- [Typography](./typography.md)
-- [tranform](https://web.dev/learn/css/functions/#transforms)
+- [**CSS Variables**](./css-variables.md)
 
 <div></div>
 
@@ -53,6 +57,7 @@
 
 - [**Transition**](./transition.md)
 - [**Keyframes**](./keyframe.md)
+- [**tranform**](./transform.md)
 
 <div></div>
 
