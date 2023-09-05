@@ -4,9 +4,11 @@
 
 [**&larr; Back to the Main Page**](./../README.md)
 
-- [**Introduction**](./intro.md)
+- [**Introduction**](./git-intro.md)
 - [**Git Basics**](./git-basics.md)
 - [**Git Branching**](./git-branching.md)
+- [Git Backtracking](./git-backtracking.md)
+- [.gitignore](./git-ignore.md)
 
 <div></div>
 
@@ -17,5 +19,3 @@
 <div></div>
 
 <br>
-
-<!-- **HEAD** refers to the currently checked-out branch's latest commit. -->

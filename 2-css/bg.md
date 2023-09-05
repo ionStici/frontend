@@ -33,7 +33,9 @@ By default, background images repeat horizontally and vertically to fill the ent
 
 The **`background-repeat`** property can change this behavior. Values: `repeat ` `round ` `space ` `no-repeat `
 
-If 2 values are used: first = horizontal and second = vertical. [background-repeat on mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat)
+If 2 values are used, first = horizontal axis, second = vertical axis.
+
+[background-repeat on mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat)
 
 <br>
 
@@ -41,7 +43,7 @@ If 2 values are used: first = horizontal and second = vertical. [background-repe
 
 The [`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position) property allows you to change the position of the image.
 
-The initial position of background images is: ` top left`
+The initial position of background images is ` top left`
 
 _p.s._ The first value represents the horizontal axis and the second the vertical axis.
 
@@ -79,7 +81,7 @@ The property accepts up to 2 parameters corresponding to width and height.
 
 - `scroll` default
 
-- `fixed` the background is fixed relative to the viewport [DEMO](https://codepen.io/web-dot-dev/pen/MWoozvN)
+- `fixed` the background is fixed relative to the viewport. See [DEMO](https://codepen.io/web-dot-dev/pen/MWoozvN)
 
 - `local` The background is fixed relative to the element's contents. If the element has a scrolling mechanism, the background scrolls along with the element's contents.
 
@@ -89,7 +91,7 @@ The property accepts up to 2 parameters corresponding to width and height.
 
 [`background-origin`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin)
 
-- [DEMO](https://codepen.io/web-dot-dev/pen/ExvyXeZ)
+- See [DEMO](https://codepen.io/web-dot-dev/pen/ExvyXeZ)
 - Keywords the property accepts `border-box padding-box content-box`
 
 <br>
@@ -98,7 +100,7 @@ The property accepts up to 2 parameters corresponding to width and height.
 
 [`background-clip`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip)
 
-- [DEMO](https://codepen.io/web-dot-dev/pen/vYJKZba)
+- See [DEMO](https://codepen.io/web-dot-dev/pen/vYJKZba)
 - Keywords the property accepts `border-box padding-box content-box`
 
 <br>
