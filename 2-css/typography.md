@@ -2,27 +2,6 @@
 
 # Typography
 
-Properties related to font are usually inherited. We use the font properties on the parent or root element (like `body` or `html`) and in the end all the siblings inherit them.
-
-<br>
-
-## Table of Content
-
-- [font-family](#font-family)
-- [Font Size](#font-size)
-- [font-weight](#font-weight)
-- [font-style](#font-style)
-- [font](#font)
-- [text-transform](#text-transform)
-- [Text Layout Properties](#text-layout-properties)
-- [Text Decoration](#text-decoration)
-- [Vertical Align](#vertical-align)
-- [Web Fonts](#web-fonts)
-  - [Web Fonts using `<link>`](#web-fonts-using-link)
-  - [Web Fonts using `@font-face`](#web-fonts-using-font-face)
-
-<br>
-
 ## font-family
 
 Property that changes the typeface of the text.
@@ -33,113 +12,39 @@ h1 {
 }
 ```
 
-- `font-family` accepts a comma-separated list of strings representing font families
+- Accepts a comma-separated list of strings representing font families
 - For multiple words typefaces, use quotation marks `""`
 - Use similar _[Web safe fonts](https://www.cssfontstack.com/)_ for fallbacks in case the font is not available
 - Above `serif` is the fallback. A group of similar looking fonts: _a font stack_
 
 <br>
 
-## Font Size
+Font properties are inherited. So, declare your font styles on a parent container like `body`
 
-```css
-p {
-  font-size: 16px;
-}
-```
+- **`font-size`** change the size of text elements. Accepts: keywords, length units and percentages
+- **`font-weight`** set the boldness of text. Numeric values: `100` to `900`
+- **`font-style`** set whether a font should be styled with a `normal`, `italic`, or `oblique` face
 
-<br>
+<div></div>
 
-## font-weight
+- **`line-height`** space between text lines (unitless values)
+- **`letter-spacing`** horizontal space between characters (length values)
+- **`word-spacing`** space between words in a text (length values)
 
-How bold or think the text appears. Accepts keywords or numerical values.
+<div></div>
 
-```css
-h1 {
-  font-weight: 400;
-}
-```
+- **`{ font: 400 16px / 1.5 oblique serif }`** shorthand property.
 
-Keywords: `bold`, `normal`, `lighter`, `bolder`
+<div></div>
 
-Numerical values can range from `1` (lightest) to `1000` (boldest).
+- **`text-transform`** transform text to `uppercase`, `lowercase` or `capitalize`
+- [**`text-decoration`**](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration) shorthand property sets the appearance of decorative lines on text
 
-- `400` is equal to the keyword value `normal`
-- `700` equal to `bold`. There is also `lighter` and `bolder`
+<div></div>
 
-_Note:_ not all font weights work for all fonts. Look up the font you are using to see which font-weight values are available.
+- **`text-indent`** add indent to blocks of text (length values)
 
-<br>
-
-## font-style
-
-```css
-h1 {
-  font-style: italic;
-}
-```
-
-Values: `normal`, `italic`, `oblique`
-
-<br>
-
-## Font
-
-```css
-p {
-  font: 400 16px / 1.5 italic serif;
-}
-```
-
-`font` is a shorthand property.
-
-`font-family` and `font-size` and mandatory to add, the rest are all optional.
-
-`line-height` must come after font-size separated by slash ( / ).
-
-<br>
-
-## text-transform
-
-```css
-h1 {
-  text-transform: uppercase;
-}
-```
-
-Transform text to `uppercase`, `lowercase` or `capitalize`.
-
-<br>
-
-## Text Layout Properties
-
-```css
-h1 {
-  letter-spacing: 1px;
-  word-spacing: 2px;
-  line-height: 1.5;
-  text-align: center; /* left right center justify */
-  text-indent: 25px;
-}
-```
-
-- `letter-spacing: units` horizontal space between letters.
-- `word-spacing: units` space between words.
-- `line-height` space between text lines. Unitless values are recommended as they will respond to the current font size.
 - `text-align` align text to its parent element.
-- `text-indent` indentation
-
-<br>
-
-## Text Decoration
-
-```css
-p {
-  text-decoration: none; /* no styles */
-}
-```
-
-[text-decoration](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration) shorthand property sets the appearance of decorative lines on text.
 
 <br>
 
@@ -156,6 +61,8 @@ Sets vertical alignment of an inline, inline-block or table-cell text.
 Check [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) for more options.
 
 <br>
+
+<!--
 
 ## Web Fonts
 
@@ -217,3 +124,7 @@ h1 {
   font-family: "Roboto Font";
 }
 ```
+
+<br>
+
+-->
