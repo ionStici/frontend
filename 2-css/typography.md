@@ -25,15 +25,18 @@ Properties related to font are usually inherited. We use the font properties on 
 
 ## font-family
 
+Property that changes the typeface of the text.
+
 ```css
 h1 {
   font-family: "Times New Roman", serif;
 }
 ```
 
-- For multiple words typefaces, use quotation marks `""`;
-- Use _[Web safe fonts](https://www.cssfontstack.com/)_ for fallbacks in case the font is not available.
-- Above, `serif` is the fallback. A group of similar looking fonts: _a font stack_.
+- `font-family` accepts a comma-separated list of strings representing font families
+- For multiple words typefaces, use quotation marks `""`
+- Use similar _[Web safe fonts](https://www.cssfontstack.com/)_ for fallbacks in case the font is not available
+- Above `serif` is the fallback. A group of similar looking fonts: _a font stack_
 
 <br>
 
