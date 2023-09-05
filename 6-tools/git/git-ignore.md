@@ -1,3 +1,3 @@
 [&larr; Back](./README.md)
 
-# head
+# The .gitignore file

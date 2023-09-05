@@ -8,7 +8,7 @@
 - [**Git Basics**](./git-basics.md)
 - [**Git Branching**](./git-branching.md)
 - [Git Backtracking](./git-backtracking.md)
-- [.gitignore](./git-ignore.md)
+- [The .gitignore file](./git-ignore.md)
 
 <div></div>
 

@@ -5,6 +5,10 @@
 ## Table of Content
 
 - [HEAD and Checkout](#head-and-checkout)
+- [Restore](#restore)
+- [Reset](#reset)
+- [Revert](#revert)
+- [Overview](#overview)
 
 <br>
 
@@ -49,15 +53,21 @@ Restore a file in your working directory to look exactly as it did right after t
 
 ## Restore
 
+Alternative to some of the uses for `checkout`.
+
 - `git restore file.txt ` restore a file to the contents in the HEAD. This restores using HEAD as the default source.
 
 - `git restore --source HEAD~1 file.txt ` restore the contents of a file to its state from the commit prior to HEAD.
 
+  We can also use a particular commit hash as the source.
+
+- `git restore --staged file.txt ` remove a file from the staging area.
+
 <br>
 
-## Backtracking
+## Reset
 
-- `git show HEAD ` logs information about the most recent commit in the currently checked-out brach.
+Undo commits: Reset the repository back to a specific commit. The commits are gone.
 
 - `git reset HEAD file.txt ` this removes the file from the staging area.
 
@@ -65,7 +75,20 @@ Restore a file in your working directory to look exactly as it did right after t
 
   As input we use the first 7 SHA characters of a previous commit.
 
-  The commit that came after the one you reset to are gone, this changes the project's repository history.
+  The commits that came after the one you reset to are gone, this changes the project's repository history.
+
+- `git reset --hard 5d69206 ` undo the commits AND the actual changes in your files.
+
+<br>
+
+## Revert
+
+- `git reset ` moves the branch pointer backwards, eliminating commits.
+- `git revert 5d69206 ` creates a brand new commit which reverses the changes from a commit. Requries new commit message.
+
+If you want to reverse some commits that other people already have on their machines - **use revert**.
+
+If you want to reverse commits that you haven't shared with others - **use reset** and no one will know.
 
 <br>
 
@@ -74,5 +97,6 @@ Restore a file in your working directory to look exactly as it did right after t
 - `git checkout HEAD file.txt ` discard changes in the working directory
 - `git reset HEAD file.txt ` unstage file changes
 - `git reset commit_SHA ` resets to a previous commit in your commit history.
+- `git show HEAD ` logs details about the most recent commit from the current branch.
 
 <br>
