@@ -1,64 +1,56 @@
 [&larr; Back](./README.md)
 
-# Typography
+# Text and Typography Properties
 
-## font-family
+- Declare your font styles on the `body`, because font properties are inherited from the parent.
 
-Property that changes the typeface of the text.
+- **`font-family`** set the text typeface. Accepts a comma-separated list of font families.
 
-```css
-h1 {
-  font-family: "Times New Roman", serif;
-}
-```
-
-- Accepts a comma-separated list of strings representing font families
-- For multiple words typefaces, use quotation marks `""`
-- Use similar _[Web safe fonts](https://www.cssfontstack.com/)_ for fallbacks in case the font is not available
-- Above `serif` is the fallback. A group of similar looking fonts: _a font stack_
-
-<br>
-
-Font properties are inherited. So, declare your font styles on a parent container like `body`
+  Use [_safe fallbacks_](https://www.cssfontstack.com/) that corresponds to the same font stack.
 
 - **`font-size`** change the size of text elements. Accepts: keywords, length units and percentages
+
 - **`font-weight`** set the boldness of text. Numeric values: `100` to `900`
+
 - **`font-style`** set whether a font should be styled with a `normal`, `italic`, or `oblique` face
 
-<div></div>
-
 - **`line-height`** space between text lines (unitless values)
-- **`letter-spacing`** horizontal space between characters (length values)
-- **`word-spacing`** space between words in a text (length values)
 
-<div></div>
+- **`letter-spacing`** horizontal space between characters (length values)
+
+- **`word-spacing`** space between words in a text (length values)
 
 - **`{ font: 400 16px / 1.5 oblique serif }`** shorthand property.
 
-<div></div>
-
 - **`text-transform`** transform text to `uppercase`, `lowercase` or `capitalize`
-- [**`text-decoration`**](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration) shorthand property sets the appearance of decorative lines on text
 
-<div></div>
+- [**`text-decoration`**](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration) shorthand property sets the appearance of decorative lines on text
 
 - **`text-indent`** add indent to blocks of text (length values)
 
-- `text-align` align text to its parent element.
+- **`text-align`** align text horizontally in a block. Keywords `left right center justify`
 
-<br>
+- [**`white-space`**](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space) how white space inside an element is handled.
 
-## Vertical Align
+- **`word-break`** how words break when they would overflow the line.
 
-```css
-span {
-  vertical-align: top;
-}
-```
+- [**`vertical-align`**](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) sets vertical alignment of inline text.
 
-Sets vertical alignment of an inline, inline-block or table-cell text.
+- **`direction`** set the direction of text. `ltr` for left to right, and `rtl` for right to left.
 
-Check [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) for more options.
+  [Use the HTML attribute `dir` instead of the CSS `direction` property.](https://stackoverflow.com/questions/5375799/direction-ltr-rtl-whats-the-difference-between-the-css-direction-and-html-di/5375907#5375907)
+
+- [**`writing-mode`**](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) change the way text flows and is arranged. Default is `horizontal-tb`
+
+- **`text-orientation`** orientation of characters, keywords: `mixed` and `upright`.
+
+  `text-orientation` works only when `writing-mode` ≠ `horizontal-tb`
+
+- **`text-shadow`** add shadow to text.
+
+- [Introduction to variable fonts on the web](https://web.dev/variable-fonts/)
+
+- [**`font-variant`**](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant) set font variants like `small-caps` and `slashed-zero`
 
 <br>
 
