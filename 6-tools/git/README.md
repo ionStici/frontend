@@ -1,8 +1,12 @@
+[&larr; Back](./README.md)
+
 # Git and GitHub
 
 ## Table of Content
 
 [**&larr; Back to the Main Page**](./../README.md)
+
+<div></div>
 
 - [**Introduction**](./git-intro.md)
 - [**Git Basics**](./git-basics.md)
@@ -10,6 +14,10 @@
 - [**Git Backtracking**](./git-backtracking.md)
 - [**The .gitignore file**](./git-ignore.md)
 - [**Git Stashing**](./git-stashing.md)
+
+<div></div>
+
+- [**CLI Introduction**](./command-line-interface.md)
 
 <div></div>
 
