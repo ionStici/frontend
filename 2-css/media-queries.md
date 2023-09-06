@@ -1,5 +1,7 @@
 [&larr; back](./README.md)
 
+Label **Legacy**
+
 # Responsive Design - Media Queries
 
 ## Table of Content

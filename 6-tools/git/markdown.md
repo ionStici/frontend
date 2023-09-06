@@ -12,11 +12,13 @@
 
 Markdown can do things like: format text, add links, display images, incorporate html elements, etc.
 
+Markdown become the standard formatter.
+
+Use cases: Software and Technical documentations, GitHub, Emails, etc.
+
 Markdown file extensions: `.md` or `.markdown`
 
 Markdown files can be converted to HTML, PDF, EPUB, MOBI, etc.
-
-Markdown become the standard formatter. Use cases: Software and Technical documentations, GitHub, Emails, etc.
 
 A Markdown Processor (Parser) is an application capable of processing Markdown files and then converting these files into printable HTML code.
 

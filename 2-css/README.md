@@ -63,13 +63,14 @@
 
 ### Responsive Design
 
-- [Responsive Design](./media-queries.md)
+- [**Legacy: Responsive Design**](./media-queries.md)
 
 <div></div>
 
 ### CSS Preprocessors
 
 - [SASS](./sass.md)
+- [**SASS: Media Queries**](./sass-media-queries.md)
 
 ### External Resources
 
