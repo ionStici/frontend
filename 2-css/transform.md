@@ -4,7 +4,7 @@
 
 The [**`transform`**](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) CSS property lets you visually transform an element.
 
-`transform ` accepts the following functions that can be combined in the same property declaration.
+It accepts the following functions that can be combined in the same property declaration.
 
 |                                                               |                                                         |                                                                 |                                                             |                                                                     |
 | ------------------------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------- |

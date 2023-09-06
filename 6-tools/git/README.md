@@ -9,7 +9,7 @@
 - [**Git Branching**](./git-branching.md)
 - [**Git Backtracking**](./git-backtracking.md)
 - [**The .gitignore file**](./git-ignore.md)
-- [Git Stashing](./git-stashing.md)
+- [**Git Stashing**](./git-stashing.md)
 
 <div></div>
 

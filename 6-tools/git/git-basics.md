@@ -35,21 +35,21 @@ A Git project can be thought of as having 3 parts:
 
 ## Git Basic Commands
 
-- **`git status `** check the status of current changes
+- **`git status`** check the status of current changes
 
   This command will show us files that contain changes but are not yet tracked, as well as files added to the staging area.
 
-- **`git add file.txt `** after making changes to the project, we add them to the staging area.
+- **`git add file.txt`** after making changes to the project, we add them to the staging area.
 
   Use the dot `.` instead of specific files to stage all changes at once.
 
-- **`git commit -m "Style Hero" `** A commit saves the changes from the staging area to the repo as a new version.
+- **`git commit -m "Style Hero"`** A commit saves the changes from the staging area to the repo as a new version.
 
   Every commit is identified with a message that we write in quotation marks after the `-m` flag.
 
   _Messages:_ Atomic Commits, Write in the present tense, Meaningful and Concise messages.
 
-- **`git log `** view a repository's commits. Use `--oneline` flag for concise details.
+- **`git log`** view a repository's commits. Use `--oneline` flag for concise details.
 
 <br>
 
@@ -66,18 +66,18 @@ A Git project can be thought of as having 3 parts:
 
 ## git diff
 
-`git diff ` command to view changes between commits, branches, files, our working directory, and more.
+`git diff` command to view changes between commits, branches, files, our working directory, and more.
 
-- **`git diff `** list all the changes in the working directory that are not staged for the next commit.
+- **`git diff`** list all the changes in the working directory that are not staged for the next commit.
 
-- **`git diff HEAD `** list all changes in the working tree since the last commit.
+- **`git diff HEAD`** list all changes in the working tree since the last commit.
 
-- **`git diff --staged `** list the changes between the staging area and our last commit.
+- **`git diff --staged`** list the changes between the staging area and our last commit.
 
-- **`git diff HEAD file.txt `** list changes within a specific file. The `--staged` flag works as well.
+- **`git diff HEAD file.txt`** list changes within a specific file. The `--staged` flag works as well.
 
-- **`git diff branch1..branch2 `** list changes between branches.
+- **`git diff branch1..branch2`** list changes between branches.
 
-- **`git diff commit1..commit2 `** compare 2 commits, provide the commit hashes of the commits.
+- **`git diff commit1..commit2`** compare 2 commits, provide the commit hashes of the commits.
 
 <br>

@@ -43,7 +43,7 @@ The file names inside can be written relative to the its location.
 
 [**gitignore patterns**](https://git-scm.com/docs/gitignore#_pattern_format)
 
-- `*.html ` ignore all files ending with the `.html` extension.
+- `*.html` ignore all files ending with the `.html` extension.
 
 - `secret*` would match any file starting with `secret` such as `secret_data.txt`
 

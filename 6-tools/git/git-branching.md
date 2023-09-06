@@ -4,31 +4,31 @@
 
 Create **branches** to experiment with versions of a project. We can work with a branch only, and not affecting the **master** default branch until we decide to merge our changes. Initially, the git repo has only the **master** or **main** branch.
 
-- `git branch -v ` will show in which branch we are - `* master ` the asterisk is showing the current branch.
+- `git branch -v` will show in which branch we are - `* master` the asterisk is showing the current branch.
 
-- `git branch branch_name ` create and name a new branch.
+- `git branch branch_name` create and name a new branch.
 
   Initially, both branches **master** and **branch_name** are identical, they share the same commit history.
 
-- `git checkout branch_name ` (old) switch between branches. Future commits belong to the active branch.
+- `git checkout branch_name` (old) switch between branches. Future commits belong to the active branch.
 
-- `git swtich -c branch_name ` (new) switch between branches. The `-c` flag creates a branch at once.
+- `git swtich -c branch_name` (new) switch between branches. The `-c` flag creates a branch at once.
 
-- `git merge branch_name ` merge a branch into the **master** branch.
+- `git merge branch_name` merge a branch into the **master** branch.
 
-  But first switch `git switch master ` because we always merge to the current HEAD branch.
+  But first switch `git switch master` because we always merge to the current HEAD branch.
 
-- `git branch -d branch_name ` delete a branch that has merged. Use `-D` if the branch never merged into _master_.
+- `git branch -d branch_name` delete a branch that has merged. Use `-D` if the branch never merged into _master_.
 
 <br>
 
 ## Overview
 
-- `git branch ` list all branches
-- `git branch branch_name ` create a new branch
-- `git checkout branch_name ` switch from one branch to another
-- `git merge branch_name ` merge changes from a branch to master
-- `git branch -d branch_name ` delete a branch
+- `git branch` list all branches
+- `git branch branch_name` create a new branch
+- `git checkout branch_name` switch from one branch to another
+- `git merge branch_name` merge changes from a branch to master
+- `git branch -d branch_name` delete a branch
 
 <br>
 
