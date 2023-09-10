@@ -69,7 +69,7 @@
 
 ### CSS Preprocessors
 
-- [SASS](./sass.md)
+- [SASS Introduction](./sass.md)
 - [**SASS: Media Queries**](./sass-media-queries.md)
 
 ### External Resources

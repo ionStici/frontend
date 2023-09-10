@@ -15,6 +15,10 @@
 
 <div></div>
 
+- [GitHub Introduction](./github-intro.md)
+
+<div></div>
+
 - [**CLI Introduction**](./command-line-interface.md)
 
 <div></div>
