@@ -49,7 +49,26 @@ A Git project can be thought of as having 3 parts:
 
   _Messages:_ Atomic Commits, Write in the present tense, Meaningful and Concise messages.
 
-- **`git log`** view a repository's commits. Use `--oneline` flag for concise details.
+- **`git log`** view the commit history of a branch.
+
+  `git log --oneline` lists the commit history in one line format.
+
+  `git log -S "keyword"` displays the commits that contain the keyword in the message.
+
+  <!-- `git log --oneline --graph` displays a visual representation of how the branches and commits were created in order to help you make sense of your repository history -->
+
+<br>
+
+## Git Amend
+
+```
+git add script.js
+git commit --amend --no-edit
+```
+
+If you forgot to do a small change that belongs to the previous commit, use `--amend` option.
+
+With this command, git replaces the whole previous commit with the current one. So, it asks you to update your commit message. To keep the same commit message, you can add the `--no-edit` flag.
 
 <br>
 
