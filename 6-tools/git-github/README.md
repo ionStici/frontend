@@ -13,6 +13,7 @@
 - [**The .gitignore file**](./git-ignore.md)
 - [**Git Stashing**](./git-stashing.md)
 - [**Git Rebase**](./git-rebase.md)
+- [**Git Aliases**](./git-aliases.md)
 
 ### GitHub
 
