@@ -15,7 +15,8 @@
 
 ### GitHub
 
-- [**GitHub Introduction**](./github-intro.md)
+- [**GitHub Intro**](./github-intro.md)
+- [**GitHub Pages**](./github-pages.md)
 
 ### Terminal
 

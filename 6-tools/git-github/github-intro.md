@@ -101,3 +101,19 @@ We can clone any public repositories, we don't need any kind of permission.
 _p.s._ `git clone` is a standard git command, it can be used to clone repositories that are hosted anywhere, not just on GitHub.
 
 <br>
+
+## GitHub Flow
+
+Following a specific workflow allows the project to more in more orderly way.
+
+_Basic workflow used with GitHub:_
+
+1. Create a branch
+2. Commit changes
+3. Create a pull request
+4. Review pull request
+5. Merge and delete branch
+
+By sticking to this workflow, team members are able to isolate their work and avoid any conflicting code from being merged.
+
+<br>
