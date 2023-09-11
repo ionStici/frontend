@@ -8,12 +8,23 @@
 
 - [**Introduction**](./git-intro.md)
 - [**Git Basics**](./git-basics.md)
+
+<div></div>
+
 - [**Git Branching**](./git-branching.md)
 - [**Git Backtracking**](./git-backtracking.md)
-- [**The .gitignore file**](./git-ignore.md)
+
+<div></div>
+
 - [**Git Stashing**](./git-stashing.md)
 - [**Git Rebase**](./git-rebase.md)
+
+<div></div>
+
+- [**The .gitignore file**](./git-ignore.md)
 - [**Git Aliases**](./git-aliases.md)
+
+<div></div>
 
 ### GitHub
 
@@ -27,7 +38,7 @@
 ### Other
 
 - [**Markdown**](./markdown.md)
-- [README Files](./readme-files.md)
+- [**README Files**](./readme-files.md)
 - [Open Source](./open-source.md)
 
 <div></div>

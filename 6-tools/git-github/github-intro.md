@@ -92,7 +92,7 @@ We need to specify the remote we want to push up to AND the specific local branc
 
 We can clone a remote repository hosted on GitHub, all we need is the repo URL.
 
-`git clone <url>` clone a repo.
+`git clone <url> clone_name` clone a repository.
 
 Git will retrieve all the files associated with the repository and will copy them to your local machine. In addition, Git initializes a new repository on your machine, giving you access to the full Git history of the cloned project.
 
