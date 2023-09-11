@@ -4,7 +4,7 @@
 
 [**&larr; Back to the Main Page**](./../README.md)
 
-<div></div>
+### Git
 
 - [**Introduction**](./git-intro.md)
 - [**Git Basics**](./git-basics.md)
@@ -13,15 +13,15 @@
 - [**The .gitignore file**](./git-ignore.md)
 - [**Git Stashing**](./git-stashing.md)
 
-<div></div>
+### GitHub
 
-- [GitHub Introduction](./github-intro.md)
+- [**GitHub Introduction**](./github-intro.md)
 
-<div></div>
+### Terminal
 
 - [**CLI Introduction**](./command-line-interface.md)
 
-<div></div>
+### Other
 
 - [**Markdown**](./markdown.md)
 - [README Files](./readme-files.md)
