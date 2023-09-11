@@ -2,8 +2,6 @@
 
 # Open Source
 
-<br>
-
 ## Open Source Overview
 
 **Open Source Software** is software whose code is free to view, modify, and distribute. Developers can view the code, suggest changes, point out issues that need to be fixed. It is usually created and maintained by a community of volunteer software developers who collaborate on websites like GitHub.
@@ -120,8 +118,3 @@ If you’ve found an issue you want to work on but don’t know where to start, 
 - **Look at other contributions.** Read through other issues or pull requests, especially the ones that have already been accepted, and use them as guidance while crafting your own contributions.
 
 <br>
-
-<br>
-
-- [Codecademy Docs: Contribution Guide](https://github.com/Codecademy/docs/blob/main/.github/CONTRIBUTING.md)
-- [How to Contribute to Codecademy Docs](https://dev.to/codecademy/how-to-contribute-to-codecademy-docs-1a77)
