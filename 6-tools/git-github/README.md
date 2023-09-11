@@ -12,6 +12,7 @@
 - [**Git Backtracking**](./git-backtracking.md)
 - [**The .gitignore file**](./git-ignore.md)
 - [**Git Stashing**](./git-stashing.md)
+- [**Git Rebase**](./git-rebase.md)
 
 ### GitHub
 
