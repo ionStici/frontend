@@ -22,6 +22,7 @@
 <div></div>
 
 - [**Remote and Push**](./git-remote-push.md)
+- [**Fetch and Pull**](./git-fetch-pull.md)
 
 <div></div>
 
@@ -40,6 +41,7 @@
 ### Terminal
 
 - [**CLI Introduction**](./command-line-interface.md)
+- [CLI Navigation](./cli-navigation.md)
 
 ### Other
 

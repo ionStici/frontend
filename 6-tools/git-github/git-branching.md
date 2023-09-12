@@ -20,6 +20,8 @@ Create **branches** to experiment with versions of a project. We can work with a
 
 - `git branch -d branch_name` delete a branch that has merged. Use `-D` if the branch never merged into _master_.
 
+- `git branch -r` to view remote branches our repo knows about.
+
 <br>
 
 ## Overview
