@@ -33,7 +33,7 @@ Again, this command will not merge changes from the remote into your local repo,
 
 `git pull = git fetch + git merge` Unlike fetch, pull updates our HEAD branch with whatever changes are retrieved from the remote.
 
-`git pull <remote> <branch>` specify a particular remote and branch we want to ull.
+`git pull <remote> <branch>` specify a particular remote and branch we want to pull.
 
 `git pull origin master` would fetch the latest information from the origin's master branch and merge those changes into our current branch.
 
@@ -61,7 +61,7 @@ They follow this pattern `<remote>/<branch>`
 
 `git branch -r` to view the remote branches our local repo knows about.
 
-We can make local commits and the `master` branch referebce will update, but `origin/master` remote reference will stay the same.
+We can make local commits and the `master` branch reference will update, but `origin/master` remote reference will stay the same.
 
 ### Remote Branches
 
@@ -73,7 +73,7 @@ By default, the `master` branch is already tracking `origin/master`.
 
 If we want to work on `bigfix` remote branch, run `git switch bugfix` to create a new local branch from the remote branch of the same name. This will create a local `bugfix` branch and set it up to track the remote branch `origin/bugfix`.
 
-`git checkout origin/bugfix` would result in detached HEAD.
+Don't use `git checkout origin/bugfix` - would result in detached HEAD.
 
 <br>
 

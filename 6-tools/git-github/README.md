@@ -37,11 +37,12 @@
 - [**GitHub Pages**](./github-pages.md)
 - [**GitHub Repos**](./github-repos.md)
 - [**Forking a Repo**](./forking.md)
+- [Pull Requests](./pull-requests.md)
 
 ### Terminal
 
 - [**CLI Introduction**](./command-line-interface.md)
-- [CLI Navigation](./cli-navigation.md)
+- [**CLI Navigation**](./cli-navigation.md)
 
 ### Other
 

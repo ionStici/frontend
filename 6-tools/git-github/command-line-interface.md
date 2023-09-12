@@ -4,7 +4,7 @@
 
 The **command line** is a text interface for your computer. It is a program that takes in commands and passes them on to the computer's operating system to run.
 
-From the Command Line you can navigate through files and folders on your computer - just like you do with Mac Finder App - the difference is that the command line is fully text-based.
+From the Command Line you can navigate through files and folders on your computer, just like you do with Mac Finder App, the difference is that the command line is fully text-based.
 
 The advantage of using the command line is in its power. You can run programs, write scripts to automate common tasks, and combine simple commands to handle difficult tasks. All of these traits come together to make it an important programming tool.
 
@@ -12,13 +12,23 @@ The fundamental aspect of the command line is that you're always in a folder. Wh
 
 You can use the command line to traverse and edit your computer’s filesystem, create new files, edit the content of those files, delete files, and more.
 
-We use commands to move inside the folder structure, to create files, to move files, to create folders and more.
-
 - Unix-based system: Linux and Mac OS X.
 - For windows, you can download [Git Bash](https://gitforwindows.org/) to use the same commands.
 
-_A Command_ is a _directive_ to the computer to perform a specific task.
+**A Command** is a _directive_ to the computer to perform a specific task.
 
 In the terminal, the first things you see is `$` or `%`. This is called a _shell prompt_. It appears when the terminal is ready to accept a command.
+
+MacOSX is a Unix OS and its command line is 99.9% the same as any Linux distribution. **bash** is your default shell and you can compile all of the same programs and utilities.
+
+## Filesystem
+
+When we use the command line, we refer to folders as **directories**.
+
+Files and directories on your computer are organized into a **filesystem**.
+
+**A Filesystem** organizes a computer's files and directories into a tree structure.
+
+The first directory in the filesystem is the root directory, it is the parent of all other directories and files in the file system.
 
 <br>
