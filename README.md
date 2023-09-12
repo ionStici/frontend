@@ -34,10 +34,38 @@ I wish you all the best on your journey! 🙌
 
 ## Subjects
 
-|       |             |              |            |
-| ----- | ----------- | ------------ | ---------- |
-| HTML  | CSS         | JavaScript   | TypeScript |
-| React | Redux       | R. Router    |            |
-| SCSS  | CSS Modules | Styled Comp. |            |
+**A tech stack** - _set of technologies used to develop applications._
+
+<div></div>
+
+- HTML + CSS + JavaScript + TypeScript
+- CLI + Git + GitHub
+
+<div></div>
+
+- VS Code + Extensions + GitHub Copilot
+- npm + npm scripts + vite + prettier + ESLint
+
+<div></div>
+
+- React + Redux + React Router
+- SCSS + CSS Modules + Styled Components
+
+<div></div>
+
+- Browsers + DevTools
+- Design UI UX + Project Management
+
+<div></div>
+
+- Server Side Rendering (SSR) - Next.js
+- Static Site Generators (SSG) - ?
+
+<div></div>
+
+- Progressive Web Apps (PWA)
+- GraphQL - ?
+
+<div></div>
 
 <br>
