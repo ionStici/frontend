@@ -42,7 +42,9 @@
 ### Terminal
 
 - [**CLI Introduction**](./command-line-interface.md)
+- [**The ls command**](./cli-ls.md)
 - [**CLI Navigation**](./cli-navigation.md)
+- [CLI Manipulation](./cli-manipulation.md)
 
 ### Other
 
