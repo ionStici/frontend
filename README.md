@@ -8,6 +8,8 @@ Frontend Fundamentals covers a broad array of topics including but not limited t
 
 I wish you all the best on your journey! 🙌
 
+<br>
+
 ## Table of Content
 
 - [**HTML** - HyperText Markup Language](./1-html/README.md)
@@ -26,7 +28,16 @@ I wish you all the best on your journey! 🙌
 <div></div>
 
 - [**Design** - UI / UX](./7-design/README.md)
-- [**Resources** - links you should know](./resources.md)
+- [**Resources** - you should know](./resources.md)
 
-<hr>
+<br>
+
+## Subjects
+
+|       |             |              |            |
+| ----- | ----------- | ------------ | ---------- |
+| HTML  | CSS         | JavaScript   | TypeScript |
+| React | Redux       | R. Router    |            |
+| SCSS  | CSS Modules | Styled Comp. |            |
+
 <br>
