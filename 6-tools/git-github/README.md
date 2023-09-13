@@ -31,6 +31,10 @@
 
 <div></div>
 
+- [Git Tags](./git-tags.md)
+
+<div></div>
+
 ### GitHub
 
 - [**GitHub Intro**](./github-intro.md)
