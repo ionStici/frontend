@@ -31,7 +31,8 @@
 
 <div></div>
 
-- [Git Tags](./git-tags.md)
+- [**Git Tags**](./git-tags.md)
+- [**About Git**](./about-git.md)
 
 <div></div>
 
