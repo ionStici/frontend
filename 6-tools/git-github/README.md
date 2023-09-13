@@ -40,13 +40,13 @@
 
 - [**GitHub Intro**](./github-intro.md)
 - [**GitHub Pages**](./github-pages.md)
-- [**GitHub Repos**](./github-repos.md)
-- [**Forking a Repo**](./forking.md)
 
 <div></div>
 
-- [Git Workflows](./git-workflows.md)
-- [Pull Requests](./pull-requests.md)
+- [**Pull Requests**](./pull-requests.md)
+- [**Forking a Repo**](./forking.md)
+
+<div></div>
 
 ### Terminal
 

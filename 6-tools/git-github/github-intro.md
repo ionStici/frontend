@@ -75,3 +75,17 @@ _Basic workflow used with GitHub:_
 By sticking to this workflow, team members are able to isolate their work and avoid any conflicting code from being merged.
 
 <br>
+
+## GitHub Repos
+
+- **Public Repos** - are accessible to everyone on the internet.
+
+- **Private Repos** - are only accessible to the owner and people who have been granted access.
+
+- **README** files are used to communicate important information about a repository.
+
+- **GitHub Gists** - are a simple way to share code snippets and useful fragmets with others.
+
+- **GitHub Pages** - are public (static) webpages that are hosted and published via GitHub.
+
+<br>
