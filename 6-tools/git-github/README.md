@@ -34,8 +34,6 @@
 - [**Git Tags**](./git-tags.md)
 - [**About Git**](./about-git.md)
 
-<div></div>
-
 ### GitHub
 
 - [**GitHub Intro**](./github-intro.md)
@@ -48,20 +46,28 @@
 
 <div></div>
 
+- [**Issues & Projects**](./github-issues-projects.md)
+- [**GitHub CLI**](./github-cli.md)
+
+<div></div>
+
+- [**GitHug Actions**](./github-actions.md)
+
 ### Terminal
 
 - [**CLI Introduction**](./command-line-interface.md)
 - [**The ls command**](./cli-ls.md)
 - [**CLI Navigation**](./cli-navigation.md)
-- [CLI Manipulation](./cli-manipulation.md)
+- [**CLI Manipulation**](./cli-manipulation.md)
+- [**Redirecting Input / Output**](./cli-redirect.md)
+- [CL Env Configuration](./cl-env-config.md)
+- [Helper Commands](./cli-helper-commands.md)
 
 ### Other
 
 - [**Markdown**](./markdown.md)
 - [**README Files**](./readme-files.md)
-- [Open Source](./open-source.md)
-
-<div></div>
+- [**Open Source**](./open-source.md)
 
 <br>
 

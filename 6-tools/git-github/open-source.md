@@ -20,7 +20,7 @@ Git repositories, or code bases, are often hosted online using services such as 
 
 On GitHub, we can configure which groups of people may view or make changes to the source code of our public repositories.
 
-- **README.md** is the standard file for basic repository documentation: Title, summary, code snippet example.
+- **README.md** is the standard file for basic repository documentation: Title, summary, code snippet examples.
 
 - **LIECENSE.md** File is used to describe the licensing terms for the repository: restrictions for what circumstances it is allowed to be used.
 
@@ -29,8 +29,6 @@ On GitHub, we can configure which groups of people may view or make changes to t
 - **CODE_OF_CONDUCT.md** files contain policies regarding what behavior is acceptable or not.
 
   Standard code of conduct: [Contributor Covenant](https://www.contributor-covenant.org/)
-
-<br>
 
 ### README.md Files in Open Source Projects
 
@@ -43,8 +41,6 @@ Standard practice: write a project overview inside a README.md file, which conta
 <br>
 
 ## Contributing to an Open Source Project
-
-<br>
 
 ### Contributing Issues
 
