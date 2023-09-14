@@ -58,6 +58,8 @@ I wish you all the best on your journey! 🙌
 
 <div></div>
 
+### Subjects currently not covered in this Repository
+
 - Server Side Rendering (SSR) - Next.js
 - Static Site Generators (SSG) - ?
 

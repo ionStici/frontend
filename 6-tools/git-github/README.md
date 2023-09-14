@@ -57,10 +57,16 @@
 
 - [**CLI Introduction**](./command-line-interface.md)
 - [**The ls command**](./cli-ls.md)
+
+<div></div>
+
 - [**CLI Navigation**](./cli-navigation.md)
 - [**CLI Manipulation**](./cli-manipulation.md)
 - [**Redirecting Input / Output**](./cli-redirect.md)
-- [CL Env Configuration](./cl-env-config.md)
+
+<div></div>
+
+- [**CL Env Configuration**](./cl-env-config.md)
 - [Helper Commands](./cli-helper-commands.md)
 
 ### Other
