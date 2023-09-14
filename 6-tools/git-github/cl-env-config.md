@@ -18,6 +18,8 @@ Each time we launch the terminal app, it creates a new session. The session imme
 - [env](#env)
 - [Review](#review)
 
+<br>
+
 ## Nano
 
 [**nano**](https://www.nano-editor.org/) is a command line text editor. It works the same way as a desktop text editor like TextEdit or Notepad, except that it is accessible from the command line and only accepts keyboard input.
@@ -31,6 +33,8 @@ The `nano` command will open a new text file in the nano text editor. Here we ca
 - `^o` save the file.
 - `^x` exit nano.
 - `^g` open help menu.
+
+<br>
 
 ## Bash Profile
 
@@ -54,6 +58,8 @@ To immediately activate the changes made to `~/.bash_profile` for the current se
 ```
 source ~/.bash_profile
 ```
+
+<br>
 
 ## Aliases
 
@@ -91,6 +97,8 @@ After the environment variable was set and we ran `source` with our bash profile
 
 The `$` symbol must be used when returning a variable value.
 
+<br>
+
 ## PS1 Environment Variable
 
 `PS1` is an environment variable that defines the makeup and style of the command prompt.
@@ -101,6 +109,8 @@ export PS1=">>"
 
 `PS1` will change the default command prompt from `%` to `>>`
 
+<br>
+
 ## HOME Environment Variable
 
 ```
@@ -108,6 +118,8 @@ echo $HOME
 ```
 
 The `$HOME` variable is an environment variable that displays the path of the home directory.
+
+<br>
 
 ## PATH Environment Variable
 
@@ -123,6 +135,8 @@ For example, many commands we've learned are scripts stored in the `/bin` direct
 If we would run `/bin/pwd` and `/bin/ls` instead of `pwd` and `ls` then the output should be the same.
 
 In advanced cases, you can customize the PATH variable and adding scripts of your own.
+
+<br>
 
 ## env
 
@@ -141,6 +155,8 @@ env | grep PATH
 ```
 
 This displays the value of the `PATH` environment variable. Here the standard output of `env` is "piped" to `grep` which searches for the value of the variable `PATH` and outputs it to the terminal. The same as `echo $PATH`
+
+<br>
 
 ## Review
 

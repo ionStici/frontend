@@ -22,6 +22,8 @@ _Copy, move, remove files and directories using the command line._
 
   `cp w*.txt folder` select all files that start with "w' (prefix) and end with ".txt" (suffix), and copy to "folder"
 
+  `cp file.txt ..` copy the file to the directorty above.
+
 - **`mv`** moves files (similar to `cp` in usage)
 
   `mv hello.txt folder` moves "hello.txt" within "folder"
@@ -36,7 +38,7 @@ _Copy, move, remove files and directories using the command line._
 
   `rm folder/*` delete all files from "folder", but not the "folder" itself.
 
-  `rm` deletes files and directories permanently.
+  `rm` deletes files and directories permanently, you can't get them back.
 
 <br>
 

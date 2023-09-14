@@ -67,7 +67,7 @@
 <div></div>
 
 - [**CL Env Configuration**](./cl-env-config.md)
-- [Helper Commands](./cli-helper-commands.md)
+- [**Helper Commands**](./cli-helper-commands.md)
 
 ### Other
 
