@@ -63,7 +63,11 @@
 
 ### Responsive Design
 
-- [**Legacy: Responsive Design**](./media-queries.md)
+- [Media Queries Introduction](./media-queries-intro.md)
+
+<div></div>
+
+- [**Legacy: Responsive Design**](./media-queries-legacy.md)
 
 <div></div>
 

@@ -25,6 +25,21 @@ Label **Legacy**
 
 <br>
 
+## Viewport Meta element
+
+Meta element that enables responsive design.
+
+```html
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+```
+
+- `width=device-width` tells the browser to assume the width of the website is the same as the width of the device.
+- `initial-scale=1` tells the browser how much or how little scaling to do, with RD you don't want the browser to do any scaling at all.
+
+<br>
+
 ## Responsive Design Overview
 
 **Responsive Design** is a design technique to make a webpage adjust its layout and visual styles to any possible screen sizes, so that we can use the website on all devices.

@@ -39,7 +39,7 @@ I wish you all the best on your journey! 🙌
 <div></div>
 
 - HTML + CSS + JavaScript + TypeScript
-- CLI + Git + GitHub
+- <p style="font-weight: bold;"><span style="color: #03C804;">CLI</span> + <span style="color: #03C804;">Git</span> + <span style="color: #03C804;">GitHub</span></p>
 
 <div></div>
 
@@ -65,8 +65,8 @@ I wish you all the best on your journey! 🙌
 
 <div></div>
 
-- Progressive Web Apps (PWA)
 - GraphQL - ?
+- Progressive Web Apps (PWA)
 
 <div></div>
 

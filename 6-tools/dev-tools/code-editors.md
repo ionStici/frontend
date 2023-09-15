@@ -1,6 +1,6 @@
 [&larr; Back](./README.md)
 
-# **Code Editors**
+# Code Editors
 
 Code editors (or text editors), are applications used by developers to write code. Advantages:
 
