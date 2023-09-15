@@ -25,7 +25,7 @@ Label **Legacy**
 
 <br>
 
-## Viewport Meta element
+<!-- ## Viewport Meta element
 
 Meta element that enables responsive design.
 
@@ -38,7 +38,7 @@ Meta element that enables responsive design.
 - `width=device-width` tells the browser to assume the width of the website is the same as the width of the device.
 - `initial-scale=1` tells the browser how much or how little scaling to do, with RD you don't want the browser to do any scaling at all.
 
-<br>
+<br> -->
 
 ## Responsive Design Overview
 

@@ -68,4 +68,9 @@ Task-runners and bundlers like Grunt, Gulp, or Webpack can be used to optimize i
 - [Site Generators, frameworks, and CMSs](https://web.dev/learn/images/cms/)
 - [Image content delivery networks](https://web.dev/learn/images/cdn/)
 
+<div></div>
+
+- [Web.dev : Responsive Images](https://web.dev/learn/design/responsive-images/)
+- [Web.dev : The picture element](https://web.dev/learn/design/picture-element/)
+
 <br>

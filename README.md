@@ -38,8 +38,8 @@ I wish you all the best on your journey! 🙌
 
 <div></div>
 
-- HTML + CSS + JavaScript + TypeScript
-- <p style="font-weight: bold;"><span style="color: #03C804;">CLI</span> + <span style="color: #03C804;">Git</span> + <span style="color: #03C804;">GitHub</span></p>
+- <span style="font-weight: bold;"><span style="color: #03C804;">HTML</span> + <span style="color: ;">CSS</span> + <span style="color: ;">JavaScript</span> + <span style="color: ;">TypeScript</span></span>
+- <span style="font-weight: bold;"><span style="color: #03C804;">CLI</span> + <span style="color: #03C804;">Git</span> + <span style="color: #03C804;">GitHub</span></span>
 
 <div></div>
 
@@ -49,11 +49,11 @@ I wish you all the best on your journey! 🙌
 <div></div>
 
 - React + Redux + React Router
-- SCSS + CSS Modules + Styled Components
+- SCSS + CSS Modules + Styled Comp.
 
 <div></div>
 
-- Browsers + DevTools
+- Browsers + DevTools + Figma
 - Design UI UX + Project Management
 
 <div></div>
@@ -61,11 +61,11 @@ I wish you all the best on your journey! 🙌
 ### Subjects currently not covered in this Repository
 
 - Server Side Rendering (SSR) - Next.js
-- Static Site Generators (SSG) - ?
+- Static Site Generators (SSG) - Astro
 
 <div></div>
 
-- GraphQL - ?
+- GraphQL - Apollo
 - Progressive Web Apps (PWA)
 
 <div></div>

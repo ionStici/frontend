@@ -63,7 +63,8 @@
 
 ### Responsive Design
 
-- [Media Queries Introduction](./media-queries-intro.md)
+- [**Media Queries Introduction**](./media-queries-intro.md)
+- [**Theming**](./theming.md)
 
 <div></div>
 
