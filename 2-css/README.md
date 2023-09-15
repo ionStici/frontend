@@ -65,6 +65,7 @@
 
 - [**Media Queries Introduction**](./media-queries-intro.md)
 - [**Theming**](./theming.md)
+- [Media Queries Details](./media-queries-more.md)
 
 <div></div>
 
