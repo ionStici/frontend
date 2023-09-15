@@ -78,7 +78,11 @@
 - [**SASS Introduction**](./sass.md)
 - [**SASS Features**](./sass-features.md)
 - [**SASS: Media Queries**](./sass-media-queries.md)
-- [Architecting: Organizing Files](./scss-architecting.md)
+- [**Architecting: Organizing Files**](./scss-architecting.md)
+
+### Practical
+
+- [BEM Methodology](./bem.md)
 
 ### External Resources
 
