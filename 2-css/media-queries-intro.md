@@ -1,6 +1,6 @@
 [&larr; back](./README.md)
 
-# Media queries Introduction
+# Media Queries Introduction
 
 Media queries are initiated with the `@media` keyword (a CSS at-rule), and can be used for a variety of use cases.
 
@@ -11,6 +11,8 @@ Media queries are initiated with the `@media` keyword (a CSS at-rule), and can b
   `print` will target prints only. We also have `screen` type only for screens.
 
   If you don'y specify any media type for your CSS, it will automatically have a media type value of `all`
+
+  Four Media Types: `all`, `screen`, `print`, `speech`
 
 <br>
 

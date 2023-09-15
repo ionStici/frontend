@@ -64,8 +64,8 @@
 ### Responsive Design
 
 - [**Media Queries Introduction**](./media-queries-intro.md)
+- [**Motion, Resolution, Hover**](./media-queries-more.md)
 - [**Theming**](./theming.md)
-- [Media Queries Details](./media-queries-more.md)
 
 <div></div>
 

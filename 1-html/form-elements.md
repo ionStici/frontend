@@ -77,4 +77,6 @@ If the Submit button has a `formmethod` or `formaction` attribute, it will use t
 
 - **`in-range`**
 
+- [**`inputmode`**](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode)
+
 <br>
