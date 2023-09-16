@@ -1,5 +1,7 @@
 [&larr; back](./README.md)
 
+[**Design Tools and Resources**](./7-design/design-resources.md)
+
 # Resources
 
 - [**GitHub** - code hosting platform for version control and collaboration](https://github.com/)
@@ -40,23 +42,5 @@
 - [**CodeWars** - programming challenges](https://www.codewars.com/)
 
 - [**LeetCode** - prepare for technical interviews](https://leetcode.com/)
-
-<br>
-
-## Design Tools
-
-- [**Coolors** - Color Contract Checker](https://coolors.co/contrast-checker)
-
-- [**maketintsandshades** - tint & shade generator](https://maketintsandshades.com/)
-
-- [**webframe** - beautiful webapp designs](https://webframe.xyz/)
-
-- [**squoosh** - image compressor](https://squoosh.app/)
-
-<br>
-
-## Typography
-
-- [Google Fonts]()
 
 <br>

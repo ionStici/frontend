@@ -4,6 +4,10 @@
 
 [**&larr; Back to the Main Page**](./../README.md)
 
+- [**Design Tools and Resources**](./design-resources.md)
+
+<div></div>
+
 - [**Planning**](./planning.md)
 - [**Sketching, Wireframing, Prototyping**](./swp.md)
 - [**Website Personalities**](./website-personalities.md)
@@ -11,7 +15,7 @@
 <div></div>
 
 - [**#1. Typography**](./typography.md)
-<!-- - [#2. Colors]() -->
+- [**#2. Colors**](./colors.md)
 
 <div></div>
 
