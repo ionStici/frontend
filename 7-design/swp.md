@@ -1,4 +1,4 @@
-[&larr; Back](./swp.md)
+[&larr; Back](./README.md)
 
 # Sketching, Wireframing, Prototyping
 

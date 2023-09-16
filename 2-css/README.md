@@ -34,9 +34,9 @@
 - [**Filter**](./filter.md)
 - [**Blend Modes**](./blend-modes.md)
 
-### Other
-
 <div></div>
+
+### Other
 
 - [**Shadows**](./shadows.md)
 - [**Typography**](./typography.md)
@@ -58,6 +58,7 @@
 - [**Transition**](./transition.md)
 - [**Keyframes**](./keyframe.md)
 - [**transform**](./transform.md)
+- [backface-visibility](./backface-visibility.md)
 
 <div></div>
 
@@ -69,7 +70,21 @@
 
 <div></div>
 
+- [Container Query](./container-query.md)
+
+<div></div>
+
 - [**Legacy: Responsive Design**](./media-queries-legacy.md)
+
+<div></div>
+
+### Practical
+
+- [Shimmer Effect](./shimmer-effect.md)
+- [Scroll Snap](./scroll-snap.md)
+- [**BEM Methodology**](./bem.md)
+- [**Tricks and Tips**](./tips.md)
+- [**@supports**](./supports.md)
 
 <div></div>
 
@@ -80,11 +95,7 @@
 - [**SASS: Media Queries**](./sass-media-queries.md)
 - [**Architecting: Organizing Files**](./scss-architecting.md)
 
-### Practical
-
-- [**BEM Methodology**](./bem.md)
-- [**Tricks and Tips**](./tips.md)
-- [**@supports**](./supports.md)
+<div></div>
 
 ### External Resources
 
