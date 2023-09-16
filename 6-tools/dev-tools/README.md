@@ -26,3 +26,12 @@
 - [Continuous Integration](./cont-integration.md)
 
 <br>
+
+<!-- ## Testing and Optimization Tools
+
+- [**The Front-End Checklist**](https://frontendchecklist.io/)
+- [**Website Speed Optimization Guide**](https://kinsta.com/learn/page-speed/)
+- [**Woorank**](https://www.woorank.com/)
+- [**Google Analytics**](http://www.google.com/analytics)
+
+<br> -->

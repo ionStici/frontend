@@ -8,8 +8,6 @@
 
 - [**caniuse** - Browser support tables for modern web technologies](https://caniuse.com/)
 
-- [**Jonas' Resources** - for hand-crafting performant websites](https://codingheroes.io/resources/)
-
 <br>
 
 ## Tools
