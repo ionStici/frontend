@@ -82,7 +82,9 @@
 
 ### Practical
 
-- [BEM Methodology](./bem.md)
+- [**BEM Methodology**](./bem.md)
+- [**Tricks and Tips**](./tips.md)
+- [**@supports**](./supports.md)
 
 ### External Resources
 

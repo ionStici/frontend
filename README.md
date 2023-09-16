@@ -38,8 +38,8 @@ I wish you all the best on your journey! 🙌
 
 <div></div>
 
-- <span style="font-weight: bold;"><span style="color: #03C804;">HTML</span> + <span style="color: ;">CSS</span> + <span style="color: ;">JavaScript</span> + <span style="color: ;">TypeScript</span></span>
-- <span style="font-weight: bold;"><span style="color: #03C804;">CLI</span> + <span style="color: #03C804;">Git</span> + <span style="color: #03C804;">GitHub</span></span>
+- **HTML** + CSS + JavaScript + TypeScript
+- **CLI + Git + GitHub**
 
 <div></div>
 
