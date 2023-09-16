@@ -1,5 +1,5 @@
 [&larr; Back](./README.md)
 
-# User Experience Rules
+# User Experience (UX) Rules
 
 <br>

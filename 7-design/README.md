@@ -23,8 +23,8 @@
 <div></div>
 
 - [**#6. Border Radius**](./border-radius.md)
-- [#7. Whitespace](./whitespace.md)
-- [#8. Visual Hierarchy](./visual-hierarchy.md)
+- [**#7. Whitespace**](./whitespace.md)
+- [**#8. Visual Hierarchy**](./visual-hierarchy.md)
 - [#9. User Experience](./ux.md)
 
 <div></div>
