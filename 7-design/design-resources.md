@@ -14,16 +14,6 @@
 
 <br>
 
-## Colors
-
-- [**Open Color** - open-source color scheme](https://yeun.github.io/open-color/)
-- [**Tailwind Colors** - color palettes](https://tailwindcss.com/docs/customizing-colors)
-- [**Flat UI Colors** - palletes](https://flatuicolors.com/)
-- [**maketintsandshades** - tint & shade generator](https://maketintsandshades.com/)
-- [**Coolors** - Colors Contract Checker](https://coolors.co/contrast-checker)
-
-<br>
-
 ## Typography
 
 - [**Google Fonts**](https://fonts.google.com/)
@@ -34,5 +24,24 @@
 ## Images
 
 - [**squoosh** - image compressor](https://squoosh.app/)
+
+<br>
+
+## Colors
+
+- [**Open Color** - open-source color scheme](https://yeun.github.io/open-color/)
+- [**Tailwind Colors** - color palettes](https://tailwindcss.com/docs/customizing-colors)
+- [**Flat UI Colors** - palletes](https://flatuicolors.com/)
+- [**maketintsandshades** - tint & shade generator](https://maketintsandshades.com/)
+- [**Coolors** - Colors Contract Checker](https://coolors.co/contrast-checker)
+
+<div></div>
+
+- [**Material Palette** - set of colors](https://www.materialpalette.com/)
+- [**Colorhunt** - color palettes](https://www.colorhunt.co/)
+- [**LOL Colors** - color palettes](https://www.webdesignrankings.com/resources/lolcolors/)
+- [**UI Gradients** - color gradients](https://uigradients.com/#Purpink)
+- [**Paletton** - create color combinations](http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF)
+- [**0to255** - variations of colors](https://0to255.com/)
 
 <br>
