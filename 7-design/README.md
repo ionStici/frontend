@@ -17,7 +17,7 @@
 - [**#1. Typography**](./typography.md)
 - [**#2. Colors**](./colors.md)
 - [**#3. Images and Illustrations**](./imgs.md)
-- [#4: Icons](./icons.md)
+- [**#4: Icons**](./icons.md)
 
 <div></div>
 
