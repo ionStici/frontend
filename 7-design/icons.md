@@ -1,6 +1,6 @@
 [&larr; Back](./README.md)
 
-# Icons
+# Icon Rules
 
 - **01.** Use a good icon pack, there are tons of free and paid icon packs
 - **02.** Use only one icon pack. Don't mix icons from different packs

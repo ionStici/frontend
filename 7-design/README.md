@@ -18,6 +18,7 @@
 - [**#2. Colors**](./colors.md)
 - [**#3. Images and Illustrations**](./imgs.md)
 - [**#4: Icons**](./icons.md)
+- [**#5. Shadows**](./shadows.md)
 
 <div></div>
 
