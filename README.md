@@ -49,11 +49,11 @@ I wish you all the best on your journey! 🙌
 <div></div>
 
 - React + Redux + React Router
-- SCSS + CSS Modules + Styled Comp.
+- **SCSS** + CSS Modules + Styled Comp.
 
 <div></div>
 
-- Browsers + DevTools + Figma
+- **Browsers + DevTools + Figma**
 - Design UI UX + Project Management
 
 <div></div>
