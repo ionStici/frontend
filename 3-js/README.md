@@ -15,14 +15,14 @@ The programming language of the Web.
 
 <div></div>
 
-- [**JavaScript In-depth Concepts**](./in-depth/README.md)
+- [JavaScript In-depth Concepts](./in-depth/README.md)
 
-- [**JavaScript Native Modules**](./folder/modules.md)
+- [JavaScript Native Modules](./folder/modules.md)
 
-- [**Object-Oriented Programming (OOP)**](./oop/README.md)
+- [Object-Oriented Programming (OOP)](./oop/README.md)
 
-- [**Asynchronous JavaScript**](./async/README.md)
+- [Asynchronous JavaScript](./async/README.md)
 
-- [**Document Object Model (DOM)**](./dom/README.md)
+- [Document Object Model (DOM)](./dom/README.md)
 
 <br>

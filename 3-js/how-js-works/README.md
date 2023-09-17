@@ -6,7 +6,7 @@
 
 <div></div>
 
-- [JavaScript Engine](./js-engine.md)
+- [**JavaScript Engine**](./js-engine.md)
 - [Execution Contexts and the Call Stack](./call-stack.md)
 - [Scope and the Scope Chain](./scope.md)
 - [JavaScript Runtime Overview](./js-runtime-overview.md)

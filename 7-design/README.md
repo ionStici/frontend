@@ -26,10 +26,8 @@
 - [**#7. Whitespace**](./whitespace.md)
 - [**#8. Visual Hierarchy**](./visual-hierarchy.md)
 - [**#9. User Experience**](./ux.md)
+- [**Patterns**](./components.md)
 
 <div></div>
-
-- [Elements and Components](./components.md)
-- [Layout Patterns](./layout-patterns.md)
 
 <br>
