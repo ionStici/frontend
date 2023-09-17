@@ -2,30 +2,23 @@
 
 # Design Tools and Resources
 
-- [**Hack Design** - design lessons](https://hackdesign.org/lessons)
+## Inspiration
 
-## Design Inspiration
+| 1                                       | 2                                                   | 3                                                  | 4                                        | 5                                     | 6                                                 | 7                                     | 8                                            |
+| --------------------------------------- | --------------------------------------------------- | -------------------------------------------------- | ---------------------------------------- | ------------------------------------- | ------------------------------------------------- | ------------------------------------- | -------------------------------------------- |
+| [**Land Book**](https://land-book.com/) | [**One Page**](https://onepagelove.com/inspiration) | [**Awwwards**](https://www.awwwards.com/websites/) | [**Screelane**](https://screenlane.com/) | [**Dribbble**](https://dribbble.com/) | [**Hack Design**](https://hackdesign.org/lessons) | [**webframe**](https://webframe.xyz/) | [**UI Designs**](https://uidesigndaily.com/) |
 
-- [**Land Book**](https://land-book.com/)
-- [**One Page Love**](https://onepagelove.com/inspiration)
+## Animations
 
-<div></div>
-
-- [**Awwwards**](https://www.awwwards.com/websites/)
-- [**Screelane**](https://screenlane.com/)
-- [**Dribbble**](https://dribbble.com/)
-
-<div></div>
-
-- [**webframe**](https://webframe.xyz/)
-- [**UI Design Daily**](https://uidesigndaily.com/)
-
-<br>
+| 1                                     | 2                                            | 3                                       | 4                                              |
+| ------------------------------------- | -------------------------------------------- | --------------------------------------- | ---------------------------------------------- |
+| [**Animista**](https://animista.net/) | [**Easing Functions**](https://easings.net/) | [**Keyframes**](https://keyframes.app/) | [**Clippy**](https://bennettfeely.com/clippy/) |
 
 ## Typography
 
-- [**Google Fonts**](https://fonts.google.com/)
-- [**Typeface** - font-size system](https://typescale.com/)
+| 1                                             | 2                                              |
+| --------------------------------------------- | ---------------------------------------------- |
+| [**Google Fonts**](https://fonts.google.com/) | [**Typescale System**](https://typescale.com/) |
 
 <br>
 
