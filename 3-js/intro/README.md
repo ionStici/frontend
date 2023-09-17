@@ -12,7 +12,7 @@
 <div></div>
 
 - [**Values and Variables**](./variables.md)
-- [JavaScript Basics](./js-basics.md)
+- [**JavaScript Basics**](./js-basics.md)
 
 <div></div>
 

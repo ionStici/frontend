@@ -78,6 +78,8 @@ Usually when we receive input from the user, it get it as a string, to process i
 
 If we're trying to convert something to a number that is impossible to convert, an actual string for example, we will get the value of `NaN` which stands for _Not a Number_. JavaScript returns `NaN` whenever an operation that involves numbers fails to produce a new number, referring to _invalid number_. In case we check, we see that `typeof NaN` is `number`, a number but an invalid one.
 
+_Note:_ `-1` is a standard in programming, a number that shows us clearly that this has no meaning.
+
 JavaScript only converts to 3 types: number, string, boolean. However, in practice we rarely have to do it manually, because JavaScript does type coercion automatically for us in many situations.
 
 ### Type Coercion
@@ -101,6 +103,10 @@ _Type Coercion:_
 ```
 
 If JS would not have automatic type coercion, like many other languages don't, then we would have to manually do this.
+
+## Dynamic Typing
+
+When we create a new variable, we do not have to manually define the data type that it contains, JavaScript automatically determines the data type of the value from that variable. Later in our code, we can reassign a new value with a different data type to the same variable, which also happens automatically by JS.
 
 <br>
 
