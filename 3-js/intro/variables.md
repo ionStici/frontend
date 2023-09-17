@@ -5,6 +5,7 @@
 ## Table of Content
 
 - [Values and Variables](#values-and-variables)
+- [Type Conversion and Type Coercion](#type-conversion-and-type-coercion)
 - [let, const, var](#let-const-var)
 - [Mathematical Assignment Operators](#mathematical-assignment-operators)
 - [The Increment and Decrement Assignment Operator](#the-increment-and-decrement-assignment-operators)
@@ -56,6 +57,50 @@ let firstName = "John"; // declaring a variable
 _Other conventions:_ First letter in uppercase: OOP. All letters in uppercase: for constants.
 
 **Note:** Variables are not the same as values. Variables contain values and represent them with a name.
+
+<br>
+
+## Type Conversion and Type Coercion
+
+_Converting between types_
+
+### Type Conversion
+
+**Type Conversion** is when we manually convert from one type to another. Functions:
+
+```js
+Number("1922"); // 1922 | converting strings to numbers
+String(1922); // "1922" | converting numbers to strings
+Boolean("Hi"); // true |
+```
+
+Usually when we receive input from the user, it get it as a string, to process it, we can use type conversion in case we need.
+
+If we're trying to convert something to a number that is impossible to convert, an actual string for example, we will get the value of `NaN` which stands for _Not a Number_. JavaScript returns `NaN` whenever an operation that involves numbers fails to produce a new number, referring to _invalid number_. In case we check, we see that `typeof NaN` is `number`, a number but an invalid one.
+
+JavaScript only converts to 3 types: number, string, boolean. However, in practice we rarely have to do it manually, because JavaScript does type coercion automatically for us in many situations.
+
+### Type Coercion
+
+**Type Coercion** is when JS automatically converts types behind the scenes for us.
+
+Type coercion happens whenever an operator is dealing with two values that have different types. In this case, JS will convert one of the values to match the other value, so in the end the operation can be executed.
+
+_Type Coercion:_
+
+- **`+`** converts to _Strings_
+- **`-`** converts to _Numbers_
+- **`*`** converts to _Numbers_
+- **`/`** converts to _Numbers_
+- **`>`** converts to _Numbers_
+
+```js
+"23" > "18"; // true | strings were converted to numbers then the comparison was made
+"23" + 47; // 2347 | string concatenation, 47 was converted into string
+"5" * 3; // 15 | "5" string was converted into number
+```
+
+If JS would not have automatic type coercion, like many other languages don't, then we would have to manually do this.
 
 <br>
 
