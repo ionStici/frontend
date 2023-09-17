@@ -18,7 +18,7 @@
 
 ## Console
 
-The **console** is a panel that displays important messages for developers.
+The **console** is a panel that can be used to display messages from the source code.
 
 When we have an error in our code, usually we get a notification in the browser's console, along with the line where the error is.
 
@@ -131,21 +131,19 @@ This appends the right string to the left string.
 
 ## Properties
 
-Data in JS are saved as an instance of its data type. Data types have access to specific properties.
+A **property** is a piece of information about and stored in a particular data type.
 
-For example, every string instance has a property called `length` that stores the number of characters in that string.
-
-We can retrieve property information by appending the string with a period and the property name:
+For example, each string instance has a `.length` property that holds the number of characters the string has, example:
 
 ```js
 "hello".length; // 5
 ```
 
-Here, the value saved to the `length` property was retrieved from the instance of its string.
+Here, we append the `length` property to a string using the dot `.` operator.
 
-The program prints `5`, because the string above has 5 characters.
+The `.length` property will return 5 in this case, which is the number of characters the string has.
 
-The dot `.` is another operator called the `dot operator`.
+_Note:_ Depending on the data type, we have access to specific properties.
 
 <br>
 
@@ -153,18 +151,14 @@ The dot `.` is another operator called the `dot operator`.
 
 Methods are like actions we can perform.
 
-Data types have access to specific methods that allow us to handle instances of that data type. JavaScript provides a number of string methods.
+Data types have access to specific methods that allow us to handle instances of that data type.
 
-We **call** a method by appending an instance with:
-
-- a period (the dot operator)
-- the name of the method
-- opening and closing parentheses
+We **call** a method by appending an instance with: the dot `.` operator -> the method name -> opening and closing parentheses.
 
 Example: `'string'.methodName()`
 
 ```js
-"hello".toUpperCase(); // HELLO | returns a string in all capital letters
+"hello".toUpperCase(); // HELLO | returns the string in all capital letters
 ```
 
 [List of built-in string methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
@@ -173,7 +167,7 @@ Example: `'string'.methodName()`
 
 ## Built-in Objects
 
-Built-in object, like `Math`, contains a collection of methods and properties that JS provides.
+Built-in objects - e.g. `Math` - contain a collection of methods and properties that JS provides.
 
 For complex mathematical operations, JS has the built-in `Math` object.
 

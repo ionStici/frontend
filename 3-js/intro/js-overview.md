@@ -55,7 +55,7 @@ JavaScript is a programming language with the following characteristics:
 
 - **High-Level**
 
-  Every program that runs on a computers needs some hardware resources to do its work, such as memory and the CPU.
+  Every program that runs on a computer needs some hardware resources to do its work, such as memory and the CPU.
 
   There are low-level languages, such as C, where you have to manually manage these resources, for example asking the computer for memory to create a new variable.
 
@@ -163,7 +163,7 @@ JavaScript is a programming language with the following characteristics:
 
 - **2011** ES5.1 was released.
 
-- **2013** React.js library and Electron.js framework was released.
+- **2013** React.js library and Electron.js framework were released.
 
 - **2014** Vue.js framework was released.
 

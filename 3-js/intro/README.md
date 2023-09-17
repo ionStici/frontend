@@ -6,8 +6,8 @@
 
 <div></div>
 
-- [JavaScript Overview](./js-overview.md)
-- [Introductory Aspects](./introductory-aspects.md)
+- [**JavaScript Overview**](./js-overview.md)
+- [**Introductory Aspects**](./introductory-aspects.md)
 
 <div></div>
 
@@ -23,3 +23,5 @@
 - [Objects](./objects.md)
 
 <div></div>
+
+<br>
