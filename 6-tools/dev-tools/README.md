@@ -18,6 +18,11 @@
 
 <div></div>
 
+- [Build Tools](./build-tools.md)
+- [Vite](./vite.md)
+
+<div></div>
+
 - [Browsers](https://caniuse.com/)
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
 - [Lighthouse Testing Tool](https://developer.chrome.com/docs/lighthouse/overview/)
@@ -44,7 +49,3 @@ https://reactjs.org/docs/optimizing-performance.html
 https://web.dev/fast/
 
 https://developer.chrome.com/docs/lighthouse/overview/ -->
-
-<!-- [Build Tools](./build-tools.md) -->
-
-<!-- [Vite](./vite.md) -->
