@@ -53,7 +53,7 @@ If the stopping condition isn't met, then this will create an _infinite loop_.
 ## Looping through Arrays
 
 ```js
-const arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 
 for (let i = 0; i < arr.length; i++) {
   console.log(arr[i]); // a b c
@@ -67,7 +67,7 @@ for (let i = 0; i < arr.length; i++) {
 ### Looping Arrays Backwards
 
 ```js
-const arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 
 for (let i = arr.length - 1; i >= 0; i--) {
   console.log(arr[i]); // c b a
@@ -126,7 +126,7 @@ Infinite loops can take up all of your computer's processing power potentially f
 The **do...while** will run at least once whether or not the condition evaluates to `true.`
 
 ```js
-let str = 'Hello';
+let str = "Hello";
 let i = 0;
 
 do {
@@ -160,7 +160,7 @@ for (let i = 0; i < 5; i++) {
 The **for..of** loop (ES6). Primary use case: iterating through the items of an array.
 
 ```js
-const letters = ['a', 'b', 'c'];
+const letters = ["a", "b", "c"];
 for (const letter of letters) console.log(letter); // a b c
 ```
 
@@ -177,3 +177,5 @@ for (const item of arr.entries()) console.log(item);
 for (const [i, item] of arr.entries()) console.log(i, item);
 console.log(...arr.entries()); // (2) [0, 'i'], (2) [1, 'love'], (2) [2, 'you']
 ```
+
+<br>

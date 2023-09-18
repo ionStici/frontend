@@ -283,3 +283,5 @@ const greet = (str) => "Hello " + str;
 7.  When calling the function, the function name will be replaced with the returned value. We can use a variable to store the returned value that was outputted from the function.
 
     The variable storing the function are calling the functiona at the same time.
+
+<br>

@@ -23,7 +23,7 @@
 Creating an array using an array literal syntax:
 
 ```js
-[true, 'JavaScript', 25];
+[true, "JavaScript", 25];
 const arr = [1, 2, 3];
 ```
 
@@ -48,7 +48,7 @@ We can access individual items using their index. The first element is at index 
 Arrays in JavaScript are zero-based (zero-indexed), meaning the positions start counting from `0`.
 
 ```js
-const arr = [true, 'js', 25];
+const arr = [true, "js", 25];
 arr[0]; // true
 const x = arr[2]; // access and store an array element
 ```
@@ -126,8 +126,8 @@ Built-in JavaScript Array methods. [Codecademy Array Resource](https://www.codec
 Add an element to the end of an array.
 
 ```js
-const arr = ['js'];
-let newLength = arr.push('html', 'css'); // ['js', 'html', 'css']
+const arr = ["js"];
+let newLength = arr.push("html", "css"); // ['js', 'html', 'css']
 ```
 
 - We access the `push` method using dot notation.
@@ -140,8 +140,6 @@ let newLength = arr.push('html', 'css'); // ['js', 'html', 'css']
 
 - Since `push` is a function, it will return the new length of the new array.
 - To capture that value, we can store the whole statement in a variable.
-
-  _Note:_ This actually executes the push function at the same time.
 
 <br>
 
@@ -165,7 +163,7 @@ let val = arr.pop(); // 'css'
 `unshift()` adds elements to the beginning of an array. It works like push, returns the new length.
 
 ```js
-arr.unshift('The First');
+arr.unshift("The First");
 ```
 
 `shift()` removes the first element from an array. No arguments required, returns the removed element.
@@ -179,14 +177,14 @@ arr.shift();
 ## Arrays and Functions
 
 ```js
-const webTech = ['css'];
+const webTech = ["css"];
 
 const mutate = function (arr, data) {
   arr.push(data);
   console.log(webTech);
 };
 
-mutate(webTech, 'JS'); // ['css', 'JS']
+mutate(webTech, "JS"); // ['css', 'JS']
 ```
 
 If we pass an array into a function as an argument, and if the array is mutated inside the function, that change will also be reflected outside the function, mutating the original array.

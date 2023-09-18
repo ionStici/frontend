@@ -1,4 +1,4 @@
-[&larr; Back](./README.md)
+£[&larr; Back](./README.md)
 
 # Objects
 
@@ -38,7 +38,7 @@ const myObj = {
 };
 ```
 
-- First the key's name followed by a collon and then the value.
+- First the key's name followed by a colon and then the value.
 - We separate properties with a comma.
 
 Keys are strings, but when we have a key that does not have any special characters in it, JavaScript allows us to omit the quotation marks.
@@ -48,6 +48,8 @@ Objects contain unordered data, the order of properties does not matter, we refe
 If we log the object we see that the properties are ordered alphabetically.
 
 Arrays for ordered data. Objects for unstructured and named data.
+
+**Note:** the curly braces from an object is not a code block, it does not create its scope. Instead, it's just a way that we define objects (object literals). So all the code from curly braces from the object is in the global scope.
 
 <br>
 
@@ -178,7 +180,7 @@ So, first `myObj.nestedObj` returns the value it contains and only then the next
 
 ## Pass By Reference
 
-Objects are _passed by reference_. This means: when we pass an object into a function as an argument, the JavaScript interprets the parameter name as pointing to the space in memory holding that object. As a result, functions which change object properties actually mutate the object permanently.
+Objects are _passed by reference_. This means: when we pass an object into a function as an argument, JavaScript interprets the parameter name as pointing to the space in memory holding that object. As a result, functions which change object properties actually mutate the object permanently.
 
 However, reassigning an object inside a function body passed as an argument would not work. Even though the object was declared with let and even though we can reassign the object outside of the function body. The reassignment kind of worked inside the function, because if we log the object right after reassignment, we see the new object, but if we log the object outside the function then the object still contains the previous properties.
 

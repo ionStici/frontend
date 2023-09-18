@@ -16,11 +16,11 @@
 
 <div></div>
 
-- [Conditionals](./conditionals.md)
-- [Functions](./functions.md)
-- [Arrays](./arrays.md)
-- [Loops](./loops.md)
-- [Objects](./objects.md)
+- [**Conditionals**](./conditionals.md)
+- [**Functions**](./functions.md)
+- [**Arrays**](./arrays.md)
+- [**Loops**](./loops.md)
+- [**Objects**](./objects.md)
 
 <div></div>
 

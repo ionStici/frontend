@@ -2,13 +2,6 @@
 
 # JavaScript Testing
 
-<!-- ## Table of Content
-
-- [Introduction](#introduction)
-- [Tests with Mocha](#tests-with-mocha)
-
-<br> -->
-
 ## Introduction
 
 - **Software testing** is the process of assessing the completeness and quality of computer software.
