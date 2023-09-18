@@ -2,8 +2,6 @@
 
 # The Call Stack
 
-<br>
-
 ## Table of Content
 
 - [Call Stack](#call-stack)
@@ -22,7 +20,7 @@ When we close the browser tag, the program is really finished, the global execut
 
 ## Execution Contexts
 
-The code finished compiling, now ready to be executed.. How JavaScript code is executed?
+The code finished compiling, now ready to be executed. How JavaScript code is executed?
 
 1. A **Global execution context** is created for the _top-level code_.
 

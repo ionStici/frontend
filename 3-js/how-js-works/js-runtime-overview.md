@@ -15,7 +15,7 @@ In each of these environments, different data values and functions are available
 
 ## The Browser Runtime Environment
 
-Applications executed in the browser are known as fronend applications.
+Applications executed in the browser are known as frontend applications.
 
 For a long time, JS code could only be executed in a browser and was used exclusively for creating frontend applications.
 

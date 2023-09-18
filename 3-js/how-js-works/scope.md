@@ -2,27 +2,23 @@
 
 # Scope
 
-**Scope** defines from where variables can be accessed.
-
-<br>
-
 ## Table of Content
 
-- [Scope Concepts]()
-- [Blocks and Scope]()
-- [Three types of scope in JS]()
-- [Global Scope]()
-- [Block Scope]()
-- [Scope Pollution and Best practices]()
-- [The Scope Chain]()
-- [Scoping in practice]()
-- [Summary]()
+- [Scope Concepts](#scope-concepts)
+- [Blocks and Scope](#blocks-and-scope)
+- [Three types of scope in JS](#three-types-of-scope-in-js)
+- [Global Scope](#global-scope)
+- [Block Scope](#block-scope)
+- [Scope Pollution and Best practices](#scope-pollution-and-best-practices)
+- [The Scope Chain](#the-scope-chain)
+- [Scoping in practice](#scoping-in-practice)
+- [Summary](#summary)
 
 <br>
 
 ## Scope Concepts
 
-- **Scoping** controls how our program'svariables are organized and accessed;
+- **Scoping** controls how our program's variables are organized and accessed;
 - **Lexical Scoping:** (for JS) Scoping is controlled by the placement of functions and blocks in the code;
 - **Scope:** Space or environment in which a certain variable is declared. We have: _global scope_, _function scope_ and _block scope_.
 - **Scope of a variable:** Region of our code where a certain variable can be accessed.
@@ -41,7 +37,7 @@ Like the function body or an `if` statement.
 
 1. **The Global Scope** is for top-level code. For variables that are declared outside of any function or block. These variables will be accessible everywhere in our program, in all functions and all blocks.
 
-2. **Function Scope:** Every function create a scope, also called _local scope_. Variables declared inside a function scope, are only accessible inside that function and from other inner functions, but not outside of it.
+2. **Function Scope:** Every function creates a scope, also called _local scope_. Variables declared inside a function scope, are only accessible inside that function and from other inner functions, but not outside of it.
 
 3. **Block Scope:** _(starting with ES6)_ With block we mean everything that is between curly braces. This works just like function scopes. The difference is that block scopes only apply to variables declared with `let` or `const`. `var` variables are scoped to the parent scope in case of block scopes. All functions are also block scoped, but only in strict mode.
 
@@ -86,7 +82,7 @@ If a variable does not need to exist outside a block — it shouldn’t!
 
 ## The Scope Chain
 
-**Variable Loopup:** Every scope always has access to all the variables from all its outer scopes (from parent scopes). This also includes arguments. But, this does not work the other way around or sideways. a certain scope can't access variables from inner scopes.
+**Variable Lookup:** Every scope always has access to all the variables from all its outer scopes (from parent scopes). This also includes arguments. But, this does not work the other way around or sideways. A certain scope can't access variables from inner scopes.
 
 - The scope chain is all about the order in which functions are written in the code. The order of function calls is not relevant to the scope chain at all.
 - A function scope is equal to its variable environment. We can say that the scope chain in a certain scope is equal to adding together all the variable environments of all the parent scopes.
