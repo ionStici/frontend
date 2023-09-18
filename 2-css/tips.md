@@ -12,6 +12,22 @@
 
 - **Vendor prefixes** - are a way for your browser to support new CSS features before they become fully supported in all browsers.
 
+- `touch-action` CSS property sets how an element's region can be manipulated by a touchscreen user (e.g. zooming features built into the browser)
+
+<br>
+
+## Disable Text Selection
+
+You can use the `user-select` property to disable text selection of an element.
+
+```css
+.noselect {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+```
+
 <br>
 
 ## Mobile Navigation

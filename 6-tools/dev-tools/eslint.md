@@ -1,3 +1,5 @@
+[&larr; Back](./README.md)
+
 # Linting
 
 A **linter** is a tool that scans source code for potential issues, including syntax errors, faulty code structures, stylistic inconsistencies, and security.
@@ -12,3 +14,13 @@ Linters provides a number of automated checks that help streamline software deve
 - **Problematic Code Structures:** Linters can also flag potentially problematic code structures, or “code smells”. These are weak points in your application design, such as unnecessarily long methods and duplicated code, that could result in future bugs and impaired app performance.
 - **Stylistic Code Conventions:** Linters also push developers to adhere to a consistent set of stylistic code standards, improving code readability and maintainability. Sticking to a consistent coding style saves time by enabling developers to focus on the application’s architecture and core logic rather than code aesthetics.
 - **Security:** Some linters, such as ESLint, can detect potential security vulnerabilities in your code to help you ensure that the application is secure and well-protected.
+
+<br>
+
+## ESLint
+
+<br>
+
+```
+npx eslint --init
+```

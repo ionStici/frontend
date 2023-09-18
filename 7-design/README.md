@@ -8,6 +8,11 @@
 
 <div></div>
 
+- [**Material 3 Design**](https://m3.material.io/)
+- [**Hack Design**](https://hackdesign.org/lessons)
+
+<div></div>
+
 - [**Planning**](./planning.md)
 - [**Sketching, Wireframing, Prototyping**](./swp.md)
 - [**Website Personalities**](./website-personalities.md)

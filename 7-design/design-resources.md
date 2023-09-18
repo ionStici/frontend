@@ -4,9 +4,9 @@
 
 ## Inspiration
 
-| 1                                       | 2                                                   | 3                                                  | 4                                        | 5                                     | 6                                                 | 7                                     | 8                                            |
-| --------------------------------------- | --------------------------------------------------- | -------------------------------------------------- | ---------------------------------------- | ------------------------------------- | ------------------------------------------------- | ------------------------------------- | -------------------------------------------- |
-| [**Land Book**](https://land-book.com/) | [**One Page**](https://onepagelove.com/inspiration) | [**Awwwards**](https://www.awwwards.com/websites/) | [**Screelane**](https://screenlane.com/) | [**Dribbble**](https://dribbble.com/) | [**Hack Design**](https://hackdesign.org/lessons) | [**webframe**](https://webframe.xyz/) | [**UI Designs**](https://uidesigndaily.com/) |
+| 1                                       | 2                                                   | 3                                                  | 4                                        | 5                                     | 6                                     | 7                                            |
+| --------------------------------------- | --------------------------------------------------- | -------------------------------------------------- | ---------------------------------------- | ------------------------------------- | ------------------------------------- | -------------------------------------------- |
+| [**Land Book**](https://land-book.com/) | [**One Page**](https://onepagelove.com/inspiration) | [**Awwwards**](https://www.awwwards.com/websites/) | [**Screelane**](https://screenlane.com/) | [**Dribbble**](https://dribbble.com/) | [**webframe**](https://webframe.xyz/) | [**UI Designs**](https://uidesigndaily.com/) |
 
 ## Animations
 

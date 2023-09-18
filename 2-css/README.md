@@ -58,7 +58,7 @@
 - [**Transition**](./transition.md)
 - [**Keyframes**](./keyframe.md)
 - [**transform**](./transform.md)
-- [backface-visibility](./backface-visibility.md)
+- [**backface-visibility**](./backface-visibility.md)
 
 <div></div>
 
@@ -70,7 +70,7 @@
 
 <div></div>
 
-- [Container Query](./container-query.md)
+- [**Container Query**](./container-query.md)
 
 <div></div>
 
@@ -80,8 +80,8 @@
 
 ### Practical
 
-- [Shimmer Effect](./shimmer-effect.md)
-- [Scroll Snap](./scroll-snap.md)
+- [**Shimmer Effect**](./shimmer-effect.md)
+- [**Scroll Snap**](./scroll-snap.md)
 - [**BEM Methodology**](./bem.md)
 - [**Tricks and Tips**](./tips.md)
 - [**@supports**](./supports.md)
