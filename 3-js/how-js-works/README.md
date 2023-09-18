@@ -8,7 +8,7 @@
 
 - [**JavaScript Runtime Overview**](./js-runtime-overview.md)
 - [**JavaScript Engine**](./js-engine.md)
-- [Primitive and Reference Data Types](./primitives-objects.md)
+- [**Primitive and Reference Data Types**](./primitives-objects.md)
 
 <div></div>
 
