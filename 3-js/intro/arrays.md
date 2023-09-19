@@ -2,6 +2,8 @@
 
 # Arrays
 
+**Arrays** - unordered data structure.
+
 ## Table of Content
 
 - [Creating an Array](#creating-an-array)

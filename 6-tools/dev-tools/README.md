@@ -15,37 +15,22 @@
 
 - [npm](./npm.md)
 - [live-server](./live-server.md)
-
-<div></div>
-
-- [Build Tools](./build-tools.md)
-- [Vite](./vite.md)
+- [Vite and Build Tools](./build-tools.md)
 
 <div></div>
 
 - [Browsers](https://caniuse.com/)
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
-- [Lighthouse Testing Tool](https://developer.chrome.com/docs/lighthouse/overview/)
+- [Continuous Integration](./cont-integration.md)
 
 <div></div>
 
-- [Continuous Integration](./cont-integration.md)
+### Testing and Optimization Tools
+
+- [The Front-End Checklist](https://frontendchecklist.io/)
+- [Website Speed Optimization Guide](https://kinsta.com/learn/page-speed/)
+- [Woorank](https://www.woorank.com/)
+- [Lighthouse Testing Tool](https://developer.chrome.com/docs/lighthouse/overview/)
+- [Google Analytics](http://www.google.com/analytics)
 
 <br>
-
-<!-- ## Testing and Optimization Tools
-
-- [**The Front-End Checklist**](https://frontendchecklist.io/)
-- [**Website Speed Optimization Guide**](https://kinsta.com/learn/page-speed/)
-- [**Woorank**](https://www.woorank.com/)
-- [**Google Analytics**](http://www.google.com/analytics)
-
-<br> -->
-
-<!-- # Optimizing
-
-https://reactjs.org/docs/optimizing-performance.html
-
-https://web.dev/fast/
-
-https://developer.chrome.com/docs/lighthouse/overview/ -->

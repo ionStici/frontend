@@ -1,10 +1,18 @@
 # Build Tools
 
+## [**Vite**](https://vitejs.dev/) Frontend Tooling
+
+```
+npm create vite@latest folder-name
+```
+
+<br>
+
 ## What are Build Tools?
 
 Types of build tools:
 
-- **Package Managers (npm)** are used to isntall and manage Node.js packages.
+- **Package Managers (npm)** are used to install and manage Node.js packages.
 - **Bundlers** are used to efficiently bundle assets such as JavaScript files, images, and fonts.
 - **Task runners** are used to automate the process of running repetitive workflows.
 
@@ -14,6 +22,8 @@ Build tools can assit you with:
 - Minifying files for improved performance.
 - Running unit tests with one command.
 - Automatically previewing changes to your application.
+
+**A Build Process** is a sequence of tasks we perform automatically after we finish developing a project, or a certain feature of the project. The result of the build process is the final files ready for deployment.
 
 ## The Web Development Ecosystem
 
@@ -47,3 +57,5 @@ To reduce the size of downloads, build tools utilize processes such as:
 - **Minification** is a process that removes comments, whitespace, and other unneeded data from your code. References in the code can also be renamed so that the resulting bundle is smaller.
 - **Dead-code elimination** aims to remove any code not actually used by the finished application.
 - **Tree-shaking** is a type of dead-code elimination that searches included modules for files and functions that are not used.
+
+<br>

@@ -2,8 +2,8 @@
 
 # Resources
 
-- [**Design Tools and Resources**](./../7-design/design-resources.md)
-- [**CanIuse** - Browser support tables for modern web technologies](https://caniuse.com/)
+- [**Design**](./../7-design/design-resources.md)
+- [**CanIuse**](https://caniuse.com/)
 
 <hr>
 
@@ -32,13 +32,15 @@
 
 <div></div>
 
-<!-- - [**CSS Tricks**](https://css-tricks.com/)
+<!--
+- [**CSS Tricks**](https://css-tricks.com/)
 - [**Smashing Magazine**](https://www.smashingmagazine.com/)
 - [**Codrops**](https://tympanus.net/codrops/)
 - [**HeyDesigner**](https://heydesigner.com/)
 - [**FrontendFront**](https://frontendfront.com/)
 - [**dev.to**](https://dev.to/)
-- [**daily.dev**](https://daily.dev/) -->
+- [**daily.dev**](https://daily.dev/)
+-->
 
 <hr>
 
