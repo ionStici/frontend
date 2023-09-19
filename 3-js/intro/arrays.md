@@ -2,7 +2,7 @@
 
 # Arrays
 
-**Arrays** - unordered data structure.
+**Arrays** - ordered data structure.
 
 ## Table of Content
 

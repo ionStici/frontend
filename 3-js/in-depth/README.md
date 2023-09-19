@@ -4,7 +4,12 @@
 
 [**&larr; Back to the Main Page**](./../README.md)
 
+<div></div>
+
 - [Array Methods](./array-methods.md)
+- [**Methods: Mutating Arrays**](./mutating-array-methods.md)
+- [**Methods: Return new array**](./return-array-methods.md)
+<!-- - [Methods: find index or element]() -->
 
 <div></div>
 
