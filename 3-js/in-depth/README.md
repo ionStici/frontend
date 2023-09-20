@@ -6,12 +6,28 @@
 
 <div></div>
 
-- [Array Methods](./array-methods.md)
-- [**Methods: Mutating Arrays**](./mutating-array-methods.md)
-- [**Methods: Return new array**](./return-array-methods.md)
-<!-- - [Methods: find index or element]() -->
+### Arrays
+
+- [**Array Methods**](./array-methods.md)
+- [**Methods: Mutating Arrays**](./methods-mutate-array.md)
+- [**Methods: Return new array**](./methods-return-array.md)
+- [**Methods: find index or element**](./methods-find-array.md)
+- [**Methods: check if it includes**](./methods-check-if-includes.md)
 
 <div></div>
+
+### Objects
+
+- [**Objects: Advanced**](./advanced-objects.md)
+- [**Destructuring**](./destructuring.md)
+
+### Functions
+
+- [Higher Order Functions](./higher-order-functions.md)
+
+<div></div>
+
+### Other
 
 - [Error Handling](./error-handling.md)
 
