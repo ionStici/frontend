@@ -16,16 +16,19 @@
 
 ## Runtime Errors
 
-Errors contain useful messages that thell us why our program isn't working or why the error was _thrown_. When an error is thrown, our program stops running and the console displays the error message in red text.
+When an error is _thrown_, our program stops running and the console displays details about the arror, such as: the error location, the error type, and a message describing it.
 
 **Runtime Error:** an error thrown after the code execution.
 
-In JavaScript, we have built-in error objects that have a `name` and `message` properties which tell us what went wrong. Examples of built-in runtime errors:
+In JavaScript, we have built-in error objects that have `name` and `message` properties which tell us what went wrong. Examples of built-in runtime errors:
 
 - `ReferenceError` : when a variable or function cannot be found.
+- `SyntaxError` : syntax related error.
 - `TypeError` : when a value is not a valid type.
 
 The code that is written after a thrown runtime error will not be evaluated.
+
+There are 7 types of built-in JavaScript errors, [consult MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) for more information.
 
 <br>
 

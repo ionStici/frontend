@@ -12,62 +12,22 @@ I wish you all the best on your journey! 🙌
 
 ## Table of Content
 
+<!-- - [**Internet** - the global network](./README.md) -->
+
 - [**HTML** - HyperText Markup Language](./1-html/README.md)
+
 - [**CSS** - Cascading Style Sheets](./2-css/README.md)
 
-<div></div>
-
 - [**JavaScript** - the programming language of the web](./3-js/README.md)
+
 - [**TypeScript** - strongly typed programming language](./4-ts/README.md)
 
-<div></div>
-
 - [**Libraries** - frontend related](./5-libraries/README.md)
+
 - [**Tools** - developer's toolkit](./6-tools/README.md)
 
-<div></div>
-
 - [**Design** - UI / UX](./7-design/README.md)
+
 - [**Resources** - you should know](./6-tools/resources.md)
-
-<br>
-
-## Subjects
-
-**A tech stack** - _set of technologies used to develop applications._
-
-<div></div>
-
-- HTML + CSS + JavaScript + TypeScript
-- CLI + Git + GitHub
-
-<div></div>
-
-- VS Code + Extensions + GitHub Copilot
-- npm + npm scripts + vite + prettier + ESLint
-
-<div></div>
-
-- React + Redux + React Router
-- SCSS + CSS Modules + Styled Comp.
-
-<div></div>
-
-- Browsers + DevTools + Figma
-- Design UI UX + Project Management
-
-<div></div>
-
-### Subjects currently not covered in this Repository
-
-- Server Side Rendering (SSR) - Next.js
-- Static Site Generators (SSG) - Astro
-
-<div></div>
-
-- GraphQL - Apollo
-- Progressive Web Apps (PWA)
-
-<div></div>
 
 <br>

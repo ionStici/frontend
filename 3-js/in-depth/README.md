@@ -23,13 +23,14 @@
 
 ### Functions
 
-- [Higher Order Functions](./higher-order-functions.md)
+- [**Higher Order Functions**](./higher-order-functions.md)
+- [**How argument passing works**](./passing-arguments.md)
 
 <div></div>
 
 ### Other
 
-- [Error Handling](./error-handling.md)
+- [**Error Handling**](./error-handling.md)
 
 <div></div>
 

@@ -2,14 +2,9 @@
 
 # Array Methods
 
-[**Array Methods | MDN**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods)
-
-<div></div>
-
-- [**Methods: Mutating Arrays**](./methods-mutate-array.md)
-- [**Methods: Return new array**](./methods-return-array.md)
-- [**Methods: find index or element**](./methods-find-array.md)
-- [**Methods: check if it includes**](./methods-check-if-includes.md)
+|            1            |           2           |         3         |            4             |
+| :---------------------: | :-------------------: | :---------------: | :----------------------: |
+| [`forEach()`](#foreach) | [`reduce()`](#reduce) | [`join()`](#join) | [`at()`](#the-at-method) |
 
 ## forEach
 
@@ -50,7 +45,7 @@ Between each value it will place the separator we pass in as argument.
 
 ## The `at` method
 
-Retrieve array element according to its index.
+Retrieve array elements according to its index.
 
 ```js
 arr.at[0];

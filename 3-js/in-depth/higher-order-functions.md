@@ -2,19 +2,13 @@
 
 # Higher Order Functions
 
-How to use _abstractions_ by writing functions.
-
-Functions help us make clear, readable programs and reuse code.
-
 Higher-order functions are functions that accept other functions as arguments and/or return functions as output. This enables us to build abstractions on other abstractions.
-
-Using abstraction allows us to write more modular code, which is easier to read and debug.
-
-<br>
 
 ## Table of Content
 
-- []()
+- [Functions as Data](#functions-as-data)
+- [Functions as Parameters](#functions-as-parameters)
+- [Review](#review)
 
 <br>
 
@@ -41,7 +35,7 @@ We assigned the `sayHello` function without parentheses as the value to the `hel
 
 In JavaScript, functions are _first class objects_. This means that, like other objects you’ve encountered, JavaScript functions can have properties and methods.
 
-Since functions are a type of object, they have properties such as `length` and `name`, and methods such as `toString()`.
+Since functions are a type of object, they have properties such as `length` and `name`, and methods such as `toString()`
 
 [More about the methods and properties of functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
 
@@ -81,3 +75,5 @@ We can even pass in as argument anonymous functions.
 - JavaScript functions are first-class objects, so they have properties and methods like any other object.
 - Functions can be passed into other functions as parameters.
 - A higher-order function is a function that either accepts functions as parameters, returns a function, or both.
+
+<br>
