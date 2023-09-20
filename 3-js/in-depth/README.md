@@ -25,6 +25,8 @@
 
 - [**Higher Order Functions**](./higher-order-functions.md)
 - [**How argument passing works**](./passing-arguments.md)
+- [**First-class and Higher-order**](./first-class-higher-order.md)
+- [IIFE](./iife.md)
 
 <div></div>
 
