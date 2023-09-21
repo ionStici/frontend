@@ -27,6 +27,7 @@
 - [**How argument passing works**](./passing-arguments.md)
 - [**First-class and Higher-order**](./first-class-higher-order.md)
 - [**IIFE**](./iife.md)
+- [**call apply bind**](./call-apply-bind.md)
 
 <div></div>
 
