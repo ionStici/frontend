@@ -2,6 +2,8 @@
 
 # Scope
 
+**Lexical Scoping** is the process used to define the scope of a variable by its position in the source code.
+
 ## Table of Content
 
 - [Scope Concepts](#scope-concepts)

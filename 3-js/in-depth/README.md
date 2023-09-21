@@ -28,6 +28,7 @@
 - [**First-class and Higher-order**](./first-class-higher-order.md)
 - [**IIFE**](./iife.md)
 - [**call apply bind**](./call-apply-bind.md)
+- [**Closures**](./closures.md)
 
 <div></div>
 
