@@ -16,9 +16,12 @@
 
 <div></div>
 
-### Objects
+### More data structures
 
 - [**More about Objects**](./advanced-objects.md)
+- [Sets: Data Structure](./)
+- [Maps: Data Structure](./)
+- [Iterating Sets / Maps](./)
 
 ### Functions
 
@@ -35,6 +38,8 @@
 
 - [**Destructuring**](./destructuring.md)
 - [**Spread and Rest Operators**](./spread-rest.md)
+- [**More Operators**](./operators.md)
+- [Working with Strings](./)
 - [**Error Handling**](./error-handling.md)
 
 <div></div>
