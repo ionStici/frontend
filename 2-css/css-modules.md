@@ -2,6 +2,8 @@
 
 # CSS Modules
 
+<!-- CSS Modules are not a standalone technology that you install like a package or library; instead, they are typically used in conjunction with build tools and JavaScript frameworks or libraries. -->
+
 [**CSS Modules**](https://github.com/css-modules/css-modules) are CSS files in which all class names and animation names are scoped locally by default.
 
 CSS Modules is not an official implementation in the browser, but rather a process in the build step that changes class names and selectors to be scoped. Using CSS modules requires a module bundler like webpack.

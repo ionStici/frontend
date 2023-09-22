@@ -85,6 +85,7 @@
 - [**BEM Methodology**](./bem.md)
 - [**Tricks and Tips**](./tips.md)
 - [**@supports**](./supports.md)
+- [**CSS Modules**](./css-modules.md)
 
 <div></div>
 

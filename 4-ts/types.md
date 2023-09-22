@@ -9,7 +9,7 @@ TypeScript allows us to write JavaScript with a set of tools called a type syste
 - TypeScript files extension: `main.ts`
 - We run TypeScript code through the TS transpier, and if the code adheres to TypeScript's standards, it will output a JavaScript version of the file (.js)
 
-The `tsconfig.json` file that is placed in the root of the project, contains the enforced rules for the TypeScript compiler. By including a config file, we can use the `tsc` command without any arguments.
+The `tsconfig.json` file that is placed in the root of the project, contains the enforced rules for the TypeScript compiler.
 
 When the compiler notices an error, it will complain when running `tsc` and also by showing a red squiggly line below the code in the editor.
 
@@ -53,7 +53,7 @@ Variables of type `any` can be assigned to any value and TypeScript won’t give
 
 Type annotation (type declaration) - explicitly tell TS what type something is or will be.
 
-We provide a type annotation be appending a variable with a colon `:` and the type (e.g. `string`, `number`, `any`).
+We provide a type annotation by appending a variable with a colon `:` and the type (e.g. `string`, `number`, `any`).
 
 ```ts
 let birthYear: number = 1500;
