@@ -4,17 +4,32 @@
 
 ## Table of Content
 
-- []()
+- [Introduction](#introduction)
 - [Functions](#functions)
-- []()
 
 <br>
 
-##
+## Introduction
+
+- TypeScript files extension: `main.ts`
+
+- `tsc` command - transpile TypeScript code to JavaScript code.
+
+- `tsconfig.json` file specifies the transpier options required to compile TypeScript.
+
+- **Type Inferences:** when the type is not explicitly declared by the user, TypeScript will infer the type on its own.
+
+- **Type Shapes:** an object's shape describes what properties and methods it does or doesn't contain.
+
+- **Any:** When TS isn't able to infer a type, it will consider the variable of type `any`
+
+  Variables of type `any` can be reassigned to any value later on.
 
 ```ts
 const my_name: string = "John";
 ```
+
+- **Variable Type Annotations (declaration):** explicitly tell TS what type a variable is.
 
 <br>
 
