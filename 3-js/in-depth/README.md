@@ -6,7 +6,7 @@
 
 <div></div>
 
-### Arrays
+### Array Methods
 
 - [**Array Methods**](./array-methods.md)
 - [**Methods: Mutating Arrays**](./methods-mutate-array.md)
@@ -18,22 +18,23 @@
 
 ### Objects
 
-- [**Objects: Advanced**](./advanced-objects.md)
-- [**Destructuring**](./destructuring.md)
+- [**More about Objects**](./advanced-objects.md)
 
 ### Functions
 
 - [**Higher Order Functions**](./higher-order-functions.md)
 - [**How argument passing works**](./passing-arguments.md)
 - [**First-class and Higher-order**](./first-class-higher-order.md)
-- [**IIFE**](./iife.md)
-- [**call apply bind**](./call-apply-bind.md)
+- [**IIFE - immediately invoked**](./iife.md)
+- [**call(), apply() and bind() method**](./call-apply-bind.md)
 - [**Closures**](./closures.md)
 
 <div></div>
 
 ### Other
 
+- [**Destructuring**](./destructuring.md)
+- [**Spread and Rest Operators**](./spread-rest.md)
 - [**Error Handling**](./error-handling.md)
 
 <div></div>

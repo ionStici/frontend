@@ -6,6 +6,7 @@
 
 - [Introduction](#introduction)
 - [Functions](#functions)
+- [Arrays](#arrays)
 
 <br>
 
@@ -66,5 +67,9 @@ greet(my_name); // Hello, John!
 - **Void Return Type:** `() : void => {}`
 
   Recommended practice: when no returned value, use `void`
+
+<br>
+
+## Arrays
 
 <br>
