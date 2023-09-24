@@ -2,29 +2,62 @@
 
 # Event Propagation
 
-<details>
-<summary>Theory</summary>
+**DOM Event Propagation** occurs in 2 phases: _capturing phase_ and _bubbling phase_.
+
+1. **Event Targeting:** a click event occurred on a button -> the event starts at the target element where it occurred.
+
+2. **Capturing Phase:** (irrelevant) the event travels from the root of the DOM tree down to the target element.
+
+3. **Target Phase:** the event reaches the target element -> any event handlers attached to that element are executed.
+
+4. **Bubbling Phase:** After the target phase, the event starts bubbling up the DOM tree from the target element back to the root. During this phase, if the target element has any parent elements with event listeners for the same event type, those event handlers are also executed in order from the closest parent to the root of the document (not through siblings).
+
+**Note:** If the target element does not have a click event, the bubbling phase is still valid, event handlers attached to parent elements will still run (if the event type coincide).
+
+Note: Not all event types have capturing and bubbling phases, some of them are created right on the target element.
+
+```html
+<header onclick="console.log(`header`)">
+  <nav onclick="console.log(`nav`)">
+    <a onclick="console.log(`link`)"> Click! </a>
+  </nav>
+</header>
+
+<!-- a click event occurs on the anchor tag -->
+<!-- Logs: (1) link > (2) nav > (3) header  -->
+```
+
+Event bubbling is useful for performance optimization - it allows us to use a single `addEventListener` method for handling events on multiple elements.
+
+For each event, the event handler will receive an event object with information about the actual event that occurred.
+
+```js
+link.addEventListener("click", function (event) {
+  console.log(event); // event object
+});
+```
+
+- We named the event object: `event`
+- `event.target` the element where the event occurred.
+- `event.currentTarget` the element on which the event handler is attached.
+- `event.stopPropagation()` stop event propagation (not good idea).
 
 <br>
 
-When the DOM generates a click event, the event is generated from the root of the DOM tree. From there, the **capturing phase** begins, where the event travels all the way down from the document root to the target element where the event happened. As the event travels down the tree, it will pass through every single parent element of the target element. When the event reaches the target, the target phase begins, where events can be handled right at the target (usually with `addEventListener`)
+## Practical Example
 
-<div></div>
+We attach an event handler to a `div` element that contains link elements. When the user clicks on a link, all the logic is handled in the same event handler.
 
-After reaching the target, the event then travels all the way up to the document root again in the **bubbling phase**. Just like in the capturing phase, the event passes through all its parent elements only (no through any siblings).
+```js
+// smooth scrolling to sections according to ids
+div.addEventListener("click", function (e) {
+  e.preventDefault();
 
-<div></div>
-
-In the bubbling phase, the event acts like it also happened in each of the parent elements of the target element.
-
-<div></div>
-
-Not all types of events do have a capturing and bubbling phase, some of them are created right on the target element.
-
-<div></div>
-
-By default, events can only be handled in the target and in the bubbling phase. However, we can set up event listeners in a way that they listen to events in the capturing phase instead.
-
-</details>
+  if (e.target.classList.contains("nav-links")) {
+    const ids = e.target.getAttribute("href");
+    document.querySelector(ids).scrollIntoView({ behavior: "smooth" });
+  }
+});
+```
 
 <br>
