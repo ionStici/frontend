@@ -12,7 +12,9 @@ I wish you all the best on your journey! 🙌
 
 ## Table of Content
 
-<!-- - [**Internet** - the global network](./README.md) -->
+- [**Tech Stack** - frontend technologies](./tech-stack.md)
+
+- [**Internet** - the global network](./README.md)
 
 - [**HTML** - HyperText Markup Language](./1-html/README.md)
 

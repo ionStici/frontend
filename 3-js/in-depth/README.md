@@ -19,8 +19,8 @@
 ### More data structures
 
 - [**More about Objects**](./advanced-objects.md)
-- [Sets: Data Structure](./)
-- [Maps: Data Structure](./)
+- [**Sets: Data Structure**](./sets.md)
+- [**Maps: Data Structure**](./maps.md)
 - [Iterating Sets / Maps](./)
 
 ### Functions
