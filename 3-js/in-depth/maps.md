@@ -79,4 +79,16 @@ for (const [key, value] of map2) console.log(`${key}: ${value}`);
 
 Here, we directly destructure each item of the map into `[key, value]`.
 
+### forEach and Maps
+
+Iterate over each key/value pair.
+
+```js
+map1.forEach((value, key, map) => {
+  console.log(`${key}: ${value}`);
+});
+```
+
+Parameter order: value -> key -> entire map.
+
 <br>

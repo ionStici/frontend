@@ -21,7 +21,7 @@
 - [**More about Objects**](./advanced-objects.md)
 - [**Sets: Data Structure**](./sets.md)
 - [**Maps: Data Structure**](./maps.md)
-- [Iterating Sets / Maps](./)
+- [**Sets / Maps: Summary**](./sets-maps-summary.md)
 
 ### Functions
 

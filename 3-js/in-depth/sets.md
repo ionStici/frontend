@@ -12,7 +12,9 @@ console.log(uniqueNumbers); // Set(3) {1, 2, 3}
 console.log(new Set("Hello")); // Set(4) {'H', 'e', 'l', 'o'}
 ```
 
-After filling the set, it will remove the duplicates.
+After filling the set, it will remove all the duplicates.
+
+Keep sets in mind when you need to work with unique values, but besides that just continue using arrays.
 
 <br>
 
@@ -64,5 +66,17 @@ Sets are iterables.
 ```js
 for (const item of mySet) console.log(item);
 ```
+
+### forEach and Sets
+
+```js
+uniqueValues.forEach((value, key, set) => {
+  console.log(value);
+});
+```
+
+A set doesn't have keys or indexes, so the `key` and `value` parameters are the same.
+
+<br>
 
 <br>
