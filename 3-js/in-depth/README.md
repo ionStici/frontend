@@ -39,7 +39,7 @@
 - [**Destructuring**](./destructuring.md)
 - [**Spread and Rest Operators**](./spread-rest.md)
 - [**More Operators**](./operators.md)
-- [Working with Strings](./strings.md)
+- [**Working with Strings**](./strings.md)
 - [**Error Handling**](./error-handling.md)
 
 <div></div>
