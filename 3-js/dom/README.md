@@ -20,3 +20,15 @@
 - [DOM: Event Propagation](./event-propagation.md)
 
 <div></div>
+
+- [DOM: Traversing](./dom-traversing.md)
+- [Different Concepts & More](./more.md)
+
+<div></div>
+
+- [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+- [unobserve() method](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/unobserve)
+
+<div></div>
+
+<br>

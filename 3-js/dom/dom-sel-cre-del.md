@@ -35,7 +35,7 @@
   - [hidden property](#hidden-property)
 
 <br>
-
+ 
 ## The document object
 
 The `document` object in JavaScript is the door to the DOM structure. It allows you to access the root node of the DOM tree.
@@ -76,7 +76,8 @@ It will return the first element that matches the selector.
 ### querySelectorAll method
 
 ```js
-document.querySelectorAll("div"); // .forEach();
+const divs = document.querySelectorAll("div"); // .forEach();
+[...divs]; // convert the nodeList into an array of html elements.
 ```
 
 `querySelectorAll()` method will return a nodeList (similar to an array) with all the elements that have the given selector. Even though nodeList is not an array, we can still call the `forEach` loop on a nodeList.

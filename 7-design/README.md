@@ -4,6 +4,8 @@
 
 [**&larr; Back to the Main Page**](./../README.md)
 
+Design: Ui / UX Design + Figma + Design System + Project Management
+
 - [**Design Tools and Resources**](./design-resources.md)
 
 <div></div>

@@ -54,4 +54,15 @@ arr.at[-1]; // last element
 
 _Use cases:_ retrieve last element. To chain methods.
 
+## Chaining methods
+
+If a methods returns an array, we can chain another method which will further process that array.
+
+```js
+array.filter().map().reduce();
+```
+
+- We should over overuse chaining, try to optimize the logic.
+- For better practice: Don't chain methods that mutate the original array.
+
 <br>

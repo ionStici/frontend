@@ -4,52 +4,42 @@
 
 **A tech stack** - _set of technologies used to develop applications._
 
-- **Internet**
-- **HTML**
-- **CSS**
-- **UI / UX Design**
-
 <div></div>
 
-- **JavaScript**
-- **TypeScript**
+- Internet + Design
+- HTML + CSS
+- JavaScript + TypeScript
 
 <div></div>
 
 - CLI + Git + GitHub
 - VS Code + Extensions
-- npm + npm scripts + Vite
+- npm + npm scripts + vite
 
 <div></div>
 
 - Scss + BEM + CSS Modules
-- React + Router + Redux
 - Tailwind + Styled Components
 
 <div></div>
 
-<br>
-
----
-
-- Project Management
-- Browsers + DevTools
-
----
-
+- React + Redux + React Router
 - Next.js - SSR / SSG
 - GraphQL
 
----
+<div></div>
 
-- Progressive Web Apps
-- React Native
-- Electron
+<div></div>
 
----
+- Progressive Web Apps (PWA)
+- React native + Electron
+
+<div></div>
 
 - Frontend Web Security
 - Authentication
 - App Testing
 
----
+<div></div>
+
+<br>

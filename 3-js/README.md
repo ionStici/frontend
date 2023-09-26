@@ -25,7 +25,7 @@ The programming language of the Web.
 
 <div></div>
 
-- [Working with Numbers](./)
-- [Document Object Model (DOM)](./dom/README.md)
+- [Working with Numbers](./numbers/README.md)
+- [**Document Object Model (DOM)**](./dom/README.md)
 
 <br>
