@@ -28,4 +28,11 @@ The programming language of the Web.
 - [Working with Numbers](./numbers/README.md)
 - [**Document Object Model (DOM)**](./dom/README.md)
 
+<div></div>
+
+- [Application Programming Interface](./)
+- [Different Concepts & More](./)
+
+<div></div>
+
 <br>
