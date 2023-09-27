@@ -19,8 +19,12 @@
 
 <div></div>
 
-<!-- - [Dates]() -->
-<!-- - [Internationalizing Dates]() -->
+- [**Creating Dates**](./creating-dates.md)
+- [Working with Dates](./working-with-dates.md)
+
+<div></div>
+
+<!-- - [Internationalizing Dates](./intl.md) -->
 
 <div></div>
 
