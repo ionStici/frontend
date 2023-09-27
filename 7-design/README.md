@@ -1,23 +1,15 @@
-# Desing UI / UX
+# Desing
 
-## Table of Content
+**Project: Planning + UI/UX Designing + Management + Figma**
 
 [**&larr; Back to the Main Page**](./../README.md)
-
-Design: Ui / UX Design + Figma + Design System + Project Management
-
-- [**Design Tools and Resources**](./design-resources.md)
-
-<div></div>
-
-- [**Material 3 Design**](https://m3.material.io/)
-- [**Hack Design**](https://hackdesign.org/lessons)
 
 <div></div>
 
 - [**Planning**](./planning.md)
 - [**Sketching, Wireframing, Prototyping**](./swp.md)
 - [**Website Personalities**](./website-personalities.md)
+- [**Design Tools and Resources**](./design-resources.md)
 
 <div></div>
 

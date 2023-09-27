@@ -4,6 +4,8 @@
 
 [**&larr; Back to the Main Page**](./../README.md)
 
+<!-- **Animations** - [**Animista**](https://animista.net/), [**Easing Functions**](https://easings.net/), [**Keyframes**](https://keyframes.app/), [**Clippy**](https://bennettfeely.com/clippy/) -->
+
 <div></div>
 
 ### Introduction

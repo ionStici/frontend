@@ -12,10 +12,6 @@ I wish you all the best on your journey! 🙌
 
 ## Table of Content
 
-- [**Tech Stack** - frontend technologies](./tech-stack.md)
-
-- [**Internet** - the global network](./README.md)
-
 - [**HTML** - HyperText Markup Language](./1-html/README.md)
 
 - [**CSS** - Cascading Style Sheets](./2-css/README.md)
@@ -23,13 +19,5 @@ I wish you all the best on your journey! 🙌
 - [**JavaScript** - the programming language of the web](./3-js/README.md)
 
 - [**TypeScript** - strongly typed programming language](./4-ts/README.md)
-
-- [**Libraries** - frontend related](./5-libraries/README.md)
-
-- [**Tools** - developer's toolkit](./6-tools/README.md)
-
-- [**Design** - UI / UX](./7-design/README.md)
-
-- [**Resources** - you should know](./6-tools/resources.md)
 
 <br>

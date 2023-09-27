@@ -2,34 +2,23 @@
 
 # Design Tools and Resources
 
-## Inspiration
+### Inspiration
 
-| 1                                       | 2                                                   | 3                                                  | 4                                        | 5                                     | 6                                     | 7                                            |
-| --------------------------------------- | --------------------------------------------------- | -------------------------------------------------- | ---------------------------------------- | ------------------------------------- | ------------------------------------- | -------------------------------------------- |
-| [**Land Book**](https://land-book.com/) | [**One Page**](https://onepagelove.com/inspiration) | [**Awwwards**](https://www.awwwards.com/websites/) | [**Screelane**](https://screenlane.com/) | [**Dribbble**](https://dribbble.com/) | [**webframe**](https://webframe.xyz/) | [**UI Designs**](https://uidesigndaily.com/) |
+- [**Land Book**](https://land-book.com/), [**One Page**](https://onepagelove.com/inspiration), [**Awwwards**](https://www.awwwards.com/websites/), [**Screelane**](https://screenlane.com/), [**Dribbble**](https://dribbble.com/), [**webframe**](https://webframe.xyz/), [**UI Designs**](https://uidesigndaily.com/)
 
-## Animations
+### Typography
 
-| 1                                     | 2                                            | 3                                       | 4                                              |
-| ------------------------------------- | -------------------------------------------- | --------------------------------------- | ---------------------------------------------- |
-| [**Animista**](https://animista.net/) | [**Easing Functions**](https://easings.net/) | [**Keyframes**](https://keyframes.app/) | [**Clippy**](https://bennettfeely.com/clippy/) |
-
-## Typography
-
-| 1                                             | 2                                              |
-| --------------------------------------------- | ---------------------------------------------- |
-| [**Google Fonts**](https://fonts.google.com/) | [**Typescale System**](https://typescale.com/) |
+- [**Google Fonts**](https://fonts.google.com/), [**Typescale System**](https://typescale.com/)
 
 <br>
 
-## Images, Videos, Icons, Tools
+## Tools, Images, Videos, Icons
 
-- [**squoosh** - image compressor](https://squoosh.app/)
-- [**fav generator** - create favs from an image](https://realfavicongenerator.net/)
+- [**Squoosh**](https://squoosh.app/), [**Fav Generator**](https://realfavicongenerator.net/)
 
 <div></div>
 
-- [**Unsplash** - free high-resolution photos](https://unsplash.com/)
+- [**Unsplash**](https://unsplash.com/)
 - [**Pexels** - free stock photos and videos](https://www.pexels.com/)
 - [**ISO Republic** - free & premium stock photos](https://isorepublic.com/)
 
@@ -47,9 +36,7 @@
 
 <div></div>
 
-- [**Ionicons**](https://ionic.io/ionicons)
-- [**Hero Icons**](https://heroicons.com/)
-- [**Phosphor Icons**](https://phosphoricons.com/)
+- [**Ionicons**](https://ionic.io/ionicons), [**Hero Icons**](https://heroicons.com/), [**Phosphor Icons**](https://phosphoricons.com/)
 
 <br>
 
