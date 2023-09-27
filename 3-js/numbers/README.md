@@ -15,7 +15,7 @@
 <div></div>
 
 - [**Numeric Separators**](./numeric-separators.md)
-- [Working with BigInt](./bigint.md)
+- [**Working with BigInt**](./bigint.md)
 
 <div></div>
 
