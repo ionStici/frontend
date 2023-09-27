@@ -6,6 +6,8 @@
 
 <br>
 
+<!-- - Emmet / Prettier / ES Lint / tool-specific extensions / etc. -->
+
 ### VS Code Settings (suggestions)
 
 - _Format On Save:_ **ON**

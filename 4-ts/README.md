@@ -7,6 +7,8 @@ TypeScript is a strongly typed programming language that builds on JavaScript.
 - [TypeScript Code](./ts-code.md)
 - [TypeScript Configuration](./)
 
+<!-- Difference between TypeScript and JavaScript -->
+
 <div></div>
 
 - [The TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)

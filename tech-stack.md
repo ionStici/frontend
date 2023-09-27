@@ -1,45 +1,81 @@
 [&larr; Back](./README.md)
 
-# Frontend Tech Stack
+# Web Dev Tech Stack
 
-**A tech stack** - _set of technologies used to develop applications._
-
-<div></div>
-
-- Internet + Design
-- HTML + CSS
-- JavaScript + TypeScript
+**A tech stack** _is a set of technologies used to develop applications._
 
 <div></div>
 
-- CLI + Git + GitHub
-- VS Code + Extensions
-- npm + npm scripts + vite
+- MacOS + Terminal
+
+- Internet + Browsers + DevTools
+
+- VS Code & Extensions
+
+- HTML + CSS + JavaScript + TypeScript
+
+- Project: Planning + UI/UX Designing + Management
 
 <div></div>
 
-- Scss + BEM + CSS Modules
-- Tailwind + Styled Components
+- Figma
+
+- Sass + BEM
+
+- CSS Modules
+
+- Post CSS
+
+- Tailwind
+
+- Styled Components
 
 <div></div>
 
-- React + Redux + React Router
+- Git + GitHub
+
+- Markdown
+
+- npm + npm scripts
+
+- Module bundler: Vite
+
+- GitHub Copilot + ChatGPT
+
+<div></div>
+
+- React
+
+- Redux
+
+- React Router
+
 - Next.js - SSR / SSG
+
+<div></div>
+
+- HTTP Clients - tools for HTTP requests (examples: Axios, Postman, CURL, etc.)
+
 - GraphQL
 
 <div></div>
 
-<div></div>
-
 - Progressive Web Apps (PWA)
+
 - React native + Electron
 
 <div></div>
 
-- Frontend Web Security
+- Web Security
+
 - Authentication
+
 - App Testing
 
 <div></div>
+
+- Frontend Deployment: Netlify + Vercel + GitHub Pages
+
+- Data Structures + Algorithms + Problem Solver + Coding Challenges
 
 <br>
