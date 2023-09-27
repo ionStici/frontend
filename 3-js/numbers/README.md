@@ -20,11 +20,12 @@
 <div></div>
 
 - [**Creating Dates**](./creating-dates.md)
-- [**Working with Dates**](./working-with-dates.md)
+- [**Date Methods**](./date-methods.md)
 
 <div></div>
 
-<!-- - [Internationalizing Dates](./intl.md) -->
+- [**Working with Dates**](./working-with-dates.md)
+- [Internationalizing Dates](./intl.md)
 
 <div></div>
 
