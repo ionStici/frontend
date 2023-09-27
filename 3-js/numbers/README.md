@@ -14,6 +14,14 @@
 
 <div></div>
 
+- [**Numeric Separators**](./numeric-separators.md)
+- [Working with BigInt](./bigint.md)
+
+<div></div>
+
+<!-- - [Dates]() -->
+<!-- - [Internationalizing Dates]() -->
+
 <div></div>
 
 <br>
