@@ -4,6 +4,8 @@
 
 _Four ways of creating dates in JavaScript - using the `new Date()` contructor function._
 
+Note: These methods perform autocorrection.
+
 ### 1. new Date
 
 _No argumen. Get the current date and time:_
