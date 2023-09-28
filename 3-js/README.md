@@ -25,12 +25,12 @@ The programming language of the Web.
 
 <div></div>
 
-- [Working with Numbers](./numbers/README.md)
+- [**Working with Numbers**](./numbers/README.md)
 - [**Document Object Model (DOM)**](./dom/README.md)
 
 <div></div>
 
-- [Web APIs](./apis/README.md)
+- [**Web APIs**](./apis/README.md)
 - [Different Concepts & More](./more/README.md)
 
 <div></div>

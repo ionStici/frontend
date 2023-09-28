@@ -25,7 +25,7 @@
 <div></div>
 
 - [**Working with Dates**](./working-with-dates.md)
-- [Internationalizing Dates](./intl.md)
+- [**Internationalizing Dates**](./intl.md)
 
 <div></div>
 
