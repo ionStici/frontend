@@ -1,10 +1,6 @@
 # JavaScript
 
-The programming language of the Web.
-
-<br>
-
-## Table of Content
+_The programming language of the Web_
 
 [**&larr; Back to the Main Page**](./../README.md)
 

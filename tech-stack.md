@@ -4,64 +4,75 @@
 
 **A tech stack** _is a set of technologies used to develop applications._
 
-<div></div>
-
 | Internet | Browsers | DevTools |
 | -------- | -------- | -------- |
 
-| MacOS Setup | VS Code & Extensions |
-| ----------- | -------------------- |
+| MacOS Setup | Terminal | VS Code & Extensions |
+| ----------- | -------- | -------------------- |
 
 | HTML | CSS | JavaScript | TypeScript |
 | ---- | --- | ---------- | ---------- |
 
-| Project: | Planning | UI/UX Design | Management | Figma |
-| -------- | -------- | ------------ | ---------- | ----- |
+| Planning | Management | UI/UX Design | Figma |
+| -------- | ---------- | ------------ | ----- |
+
+| Git | GitHub | Markdown | npm | npm scripts | Vite |
+| --- | ------ | -------- | --- | ----------- | ---- |
 
 | Sass | BEM | CSS Modules | Tailwind | Styled Comp. |
 | ---- | --- | ----------- | -------- | ------------ |
 
+| Motion UI | Framer | Three.js |
+| --------- | ------ | -------- |
+
 | React | Next.js (SSR / SSG) | Redux | React Router |
 | ----- | ------------------- | ----- | ------------ |
 
-<br>
+| Strapi | REST API | GraphQL |
+| ------ | -------- | ------- |
 
-<div></div>
+| Web APIs | HTTP | Consuming APIs | HTTP Requests Tools |
+| -------- | ---- | -------------- | ------------------- |
 
-- CLI + Git + GitHub + Markdown
+| Web Security | App Testing | Authentication | Web Assembly |
+| ------------ | ----------- | -------------- | ------------ |
 
-- npm + npm scripts + Vite
+| GitHub Copilot | ChatGPT | Midjourney | Tabnine |
+| -------------- | ------- | ---------- | ------- |
 
-- GitHub Copilot + ChatGPT
+| Progressive Web App (PWA) | React Native | Electron |
+| ------------------------- | ------------ | -------- |
 
-<div></div>
+| Frontend Deployment: | Netlify | Vercel | GitHub Pages |
+| -------------------- | ------- | ------ | ------------ |
 
-- HTTP Clients - tools for HTTP requests (examples: Axios, Postman, CURL, etc.)
+| JavaScript | TypeScript | Python | Java | C/C++ | C#  |
+| ---------- | ---------- | ------ | ---- | ----- | --- |
 
-- GraphQL (Apollo or Relay Modern)
+| Data Structures | Algorithms | Coding Challenges | MVC |
+| --------------- | ---------- | ----------------- | --- |
 
-<div></div>
-
-- PWA + React Native + Electron
-
-- Web APIs: Canvas API, GeoLocation, Speech API, Audio & Video API, Web RTC, localStorage, etc.
-
-<div></div>
-
-- Web Security
-
-- Authentication
-
-- App Testing: Vitest / Jest
-
-- Frontend Deployment: Netlify + Vercel + GitHub Pages
-
-<div></div>
-
-- Data Structures + Algorithms + Problem Solver + Coding Challenges
-
-- Frontend Technical Interview Questions
-
-<!-- Books -->
+| Frontend Technical Interview Questions | Problem Solving |
+| -------------------------------------- | --------------- |
 
 <br>
+
+<!--
+
+## Backend Technologies
+
+| Node.js | Express.js |
+| ------- | ---------- |
+
+| Databases | Relational: PostgreSQL | NoSQL: MongoDB | Serverless: MongoDB Atlas | ORM: Mongoose | File-Based: SQLite |
+| --------- | ---------------------- | -------------- | ------------------------- | ------------- | ------------------ |
+
+| Backend Deployment | Render | Heroku | Linode | AWS |
+| ------------------ | ------ | ------ | ------ | --- |
+
+| Authentification | Authorization | Linux Commands | Web Servers |
+| ---------------- | ------------- | -------------- | ----------- |
+
+<br>
+
+-->

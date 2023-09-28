@@ -12,6 +12,10 @@ I wish you all the best on your journey! 🙌
 
 ## Table of Content
 
+- [**Teck Stack** - frontend technologies](./tech-stack.md)
+
+- [**Internet** - the global network](./)
+
 - [**HTML** - HyperText Markup Language](./1-html/README.md)
 
 - [**CSS** - Cascading Style Sheets](./2-css/README.md)

@@ -1,8 +1,22 @@
 # Desing
 
-**Project: Planning + UI/UX Designing + Management + Figma**
-
 [**&larr; Back to the Main Page**](./../README.md)
+
+<!--
+
+Project:
+
+Planning
+
+Management
+
+Architecture
+
+UI/UX Design
+
+Figma
+
+-->
 
 <div></div>
 
