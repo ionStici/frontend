@@ -13,8 +13,6 @@ How to design a product that drives the result that the client wants
 
 Plan -> Design -> Development -> Deployment -> Monitoring
 
-### 1. Sketching
-
 ### 2. Inspiration
 
 - Constantly stimulate your creativity.

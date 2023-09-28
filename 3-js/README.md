@@ -30,8 +30,8 @@ The programming language of the Web.
 
 <div></div>
 
-- [Application Programming Interface](./)
-- [Different Concepts & More](./)
+- [Web APIs](./apis/README.md)
+- [Different Concepts & More](./more/README.md)
 
 <div></div>
 

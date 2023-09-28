@@ -1,68 +1,50 @@
 [&larr; Back](./README.md)
 
-# Web Dev Tech Stack
+# Frontend Tech Stack
 
 **A tech stack** _is a set of technologies used to develop applications._
 
 <div></div>
 
-- MacOS + Terminal
+| Internet | Browsers | DevTools |
+| -------- | -------- | -------- |
 
-- Internet + Browsers + DevTools
+| MacOS Setup | VS Code & Extensions |
+| ----------- | -------------------- |
 
-- VS Code & Extensions
+| HTML | CSS | JavaScript | TypeScript |
+| ---- | --- | ---------- | ---------- |
 
-- HTML + CSS + JavaScript + TypeScript
+| Project: | Planning | UI/UX Design | Management | Figma |
+| -------- | -------- | ------------ | ---------- | ----- |
 
-- Project: Planning + UI/UX Designing + Management
+| Sass | BEM | CSS Modules | Tailwind | Styled Comp. |
+| ---- | --- | ----------- | -------- | ------------ |
 
-<div></div>
+| React | Next.js (SSR / SSG) | Redux | React Router |
+| ----- | ------------------- | ----- | ------------ |
 
-- Figma
-
-- Sass + BEM
-
-- CSS Modules
-
-- Post CSS
-
-- Tailwind
-
-- Styled Components
+<br>
 
 <div></div>
 
-- Git + GitHub
+- CLI + Git + GitHub + Markdown
 
-- Markdown
-
-- npm + npm scripts
-
-- Module bundler: Vite
+- npm + npm scripts + Vite
 
 - GitHub Copilot + ChatGPT
 
 <div></div>
 
-- React
-
-- Redux
-
-- React Router
-
-- Next.js - SSR / SSG
-
-<div></div>
-
 - HTTP Clients - tools for HTTP requests (examples: Axios, Postman, CURL, etc.)
 
-- GraphQL
+- GraphQL (Apollo or Relay Modern)
 
 <div></div>
 
-- Progressive Web Apps (PWA)
+- PWA + React Native + Electron
 
-- React native + Electron
+- Web APIs: Canvas API, GeoLocation, Speech API, Audio & Video API, Web RTC, localStorage, etc.
 
 <div></div>
 
@@ -70,12 +52,16 @@
 
 - Authentication
 
-- App Testing
-
-<div></div>
+- App Testing: Vitest / Jest
 
 - Frontend Deployment: Netlify + Vercel + GitHub Pages
 
+<div></div>
+
 - Data Structures + Algorithms + Problem Solver + Coding Challenges
+
+- Frontend Technical Interview Questions
+
+<!-- Books -->
 
 <br>
