@@ -28,9 +28,10 @@
 - [**Higher Order Functions**](./higher-order-functions.md)
 - [**How argument passing works**](./passing-arguments.md)
 - [**First-class and Higher-order**](./first-class-higher-order.md)
-- [**IIFE - immediately invoked**](./iife.md)
 - [**call(), apply() and bind() method**](./call-apply-bind.md)
 - [**Closures**](./closures.md)
+- [**IIFE - immediately invoked**](./iife.md)
+- [**The Module Pattern**](./the-module-pattern.md)
 
 <div></div>
 
