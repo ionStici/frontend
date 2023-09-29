@@ -3,10 +3,11 @@
 [**&larr; Back to the Main Page**](./../README.md)
 
 - [`window`](./window.md)
+- [`location`](./location-property.md)
 
 <div></div>
 
-- [Overview of Modern JavaScript Development](./modern-js-dev-overview.md)
+- [JavaScript Build Process: Overview](./js-build-overview.md)
 
 <div></div>
 
