@@ -12,9 +12,9 @@ I wish you all the best on your journey! 🙌
 
 ## Table of Content
 
-- [**Teck Stack** - frontend technologies](./tech-stack.md)
+- [**Teck Stack** - Frontend Technologies](./tech-stack.md)
 
-- [**Internet** - the global network](./)
+- [**Internet** - The Global Network](./)
 
 - [**HTML** - HyperText Markup Language](./1-html/README.md)
 
@@ -23,5 +23,7 @@ I wish you all the best on your journey! 🙌
 - [**JavaScript** - the programming language of the web](./3-js/README.md)
 
 - [**TypeScript** - strongly typed programming language](./4-ts/README.md)
+
+- [**Git & GitHub** - Version Control System & Repo Hosting](./git-github/README.md)
 
 <br>

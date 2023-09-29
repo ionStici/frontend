@@ -22,7 +22,7 @@ In the terminal, the first things you see is `$` or `%`. This is called a _shell
 MacOSX is a Unix OS and its command line is 99.9% the same as any Linux distribution. **bash** is your default shell and you can compile all of the same programs and utilities.
 
 <br>
-
+ 
 ## Filesystem
 
 When we use the command line, we refer to folders as **directories**.
@@ -62,3 +62,11 @@ Because of the strenght of the open source community and the tools they provide,
 For windows we should install **git bash** instead.
 
 <br>
+
+<!-- The terminal provides direct access to the computer's underlying file system and low-level features, it is incredibly useful for performing complex tasks rapidly.
+
+### Side note: what's the difference between a command line and a terminal?
+
+Generally, you'll find these two terms used interchangeably. Technically, a terminal is a software that starts and connects to a shell. A shell is your session and session environment (where things like the prompt and shortcuts might be customized). The command line is the literal line where you enter commands and the cursor blinks.
+
+[Command line crash course](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) -->

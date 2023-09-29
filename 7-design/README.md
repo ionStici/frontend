@@ -16,6 +16,14 @@ UI/UX Design
 
 Figma
 
+Printable Sketching Templates:
+
+https://sneakpeekit.com/
+
+https://www.sketchize.com/
+
+https://sketchsheets.com/
+
 -->
 
 <div></div>

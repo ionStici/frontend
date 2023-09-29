@@ -16,6 +16,8 @@
 
 - [6. Working with Async / Await](./async-await-fetch.md)
 
+- [7. Top-Level await (ES2022)](./top-level-await.md)
+
 <br>
 
 ## Secondary
