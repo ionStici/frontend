@@ -7,7 +7,8 @@
 
 <div></div>
 
-- [JavaScript Build Process: Overview](./js-build-overview.md)
+- [**Modern and Clean JavaScript Code**](./modern-js-code.md)
+- [**JavaScript Build Process: Overview**](./js-build-overview.md)
 
 <div></div>
 
