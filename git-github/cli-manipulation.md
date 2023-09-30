@@ -40,6 +40,12 @@ _Copy, move, remove files and directories using the command line._
 
   `rm` deletes files and directories permanently, you can't get them back.
 
+- **Asterisk `*` as wildcard character** - means _"any sequence of characters"_.
+
+  `rm draft-*.md` would delete all files that start with `draft-` and end with `.md`
+
+  This allows you to run an operation against a potentially large number of files at once, all of which match the specified pattern.
+
 <br>
 
 ## Review

@@ -4,11 +4,11 @@
 
 **A tech stack** _is a set of technologies used to develop applications._
 
-| Internet | Browsers | DevTools |
-| -------- | -------- | -------- |
-
-| MacOS Setup | Terminal | VS Code & Extensions |
+| MacOS Setup | Terminal | VS Code / Extensions |
 | ----------- | -------- | -------------------- |
+
+| About Internet | Browsers | DevTools |
+| -------------- | -------- | -------- |
 
 | HTML | CSS | JavaScript | TypeScript |
 | ---- | --- | ---------- | ---------- |
@@ -46,14 +46,16 @@
 | Frontend Deployment: | Netlify | Vercel | GitHub Pages |
 | -------------------- | ------- | ------ | ------------ |
 
-| JavaScript | TypeScript | Python | Java | C/C++ | C#  |
-| ---------- | ---------- | ------ | ---- | ----- | --- |
-
 | Data Structures | Algorithms | Coding Challenges | MVC |
 | --------------- | ---------- | ----------------- | --- |
 
 | Frontend Technical Interview Questions | Problem Solving |
 | -------------------------------------- | --------------- |
+
+<!--
+| JavaScript | TypeScript | Python | Java | C/C++ | C#  |
+| ---------- | ---------- | ------ | ---- | ----- | --- |
+-->
 
 <br>
 

@@ -1,6 +1,12 @@
 # Command Line Interface
 
+[Command line crash course | MDN](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
+
 ## Introduction
+
+**Terminal and Command Line** - terms used interchangeably. Technically, a _terminal_ is a software that starts and connects to a shell. The _command line_ is the literal line where you enter commands and the cursor blinks.
+
+The **terminal** provides direct access to the computer's underlying file system and low-level features, it is incredibly useful for performing complex tasks rapidly.
 
 The **command line** is a text interface for your computer. It is a program that takes in commands and passes them on to the computer's operating system to run.
 
@@ -63,10 +69,6 @@ For windows we should install **git bash** instead.
 
 <br>
 
-<!-- The terminal provides direct access to the computer's underlying file system and low-level features, it is incredibly useful for performing complex tasks rapidly.
+Many terminal commands allow you to use **asterisks as "wild card" characters**, meaning "any sequence of characters". This allows you to run an operation against a potentially large number of files at once, all of which match the specified pattern.
 
-### Side note: what's the difference between a command line and a terminal?
-
-Generally, you'll find these two terms used interchangeably. Technically, a terminal is a software that starts and connects to a shell. A shell is your session and session environment (where things like the prompt and shortcuts might be customized). The command line is the literal line where you enter commands and the cursor blinks.
-
-[Command line crash course](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) -->
+`rm draft-*.md` would delete all files that start with `draft-` and end with `.md`

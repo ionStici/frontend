@@ -7,7 +7,10 @@
 Before using **npm**, you need to install [**Node.js**](https://nodejs.org/en).
 
 - Check if node is installed with `node -v`
-- CHeck if npm is installed with `npm -v`
+- Check if npm is installed with `npm -v`
+
+<!-- leaflet -->
+<!-- lodash -->
 
 <br>
 
@@ -38,7 +41,7 @@ Why do we need to care about `dependencies` and `devDependencies` fields from th
 For example, in case we need to send our project to someone else, we should omit the "node_modules" folder which is too big. Using the "package.json" file and the data it contains we can reproduce the exact development workflow from "node_modules" by running `npm init` which will install the project's dependencies and devDependencies.
 
 <br>
-
+ 
 ## npm scripts
 
 **A npm script** is a command defined in the project's `package.json` file that can be executed using the `npm run` command. npm scripts are used for automating common development tasks, such as running tests, building code, starting servers, or other custom workflows.

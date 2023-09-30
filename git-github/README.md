@@ -54,10 +54,6 @@
 - [**Code Reviews**](https://google.github.io/eng-practices/)
 - [**GitHug Actions**](./github-actions.md)
 
-<div></div>
-
-- [Project Documentation](./)
-
 ### Terminal
 
 - [**CLI Introduction**](./command-line-interface.md)

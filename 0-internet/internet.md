@@ -15,10 +15,9 @@
 - [How browsers work - web.dev](https://web.dev/howbrowserswork/)
 - [Rendering Engine in Browsers - BrowserStack](https://www.browserstack.com/guide/browser-rendering-engine)
 - [How browsers work - MDN](https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work)
-- [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+
+<br>
 
 <!-- The Web -->
 
 <!-- Web Hosting -->
-
-<br>

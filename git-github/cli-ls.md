@@ -21,6 +21,8 @@
 
 ## The `-l` option
 
+**`man ls`** find out what options each command has available.
+
 `ls -l` this option lists files and directories in a table format, seven columns containing details about the file or directory, separated by spaces. What each column means:
 
 1. **Access rights** - this indicate the read / write / execute permissions on the file or directory allowed to the owner / the group / all users.
