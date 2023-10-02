@@ -2,19 +2,20 @@
 
 [**&larr; Back to the Main Page**](./../README.md)
 
+### General Characteristics
+
 - [`window`](./window.md)
 - [`location`](./location-property.md)
 
-<div></div>
+### Architecture
 
 - [**The MVC Architecture**](./mvc.md)
+- [**Publisher-Subscriber Pattern**](./psp.md)
 
-<div></div>
+### Modern JavaScript
 
 - [**Modern and Clean JavaScript Code**](./modern-js-code.md)
 - [**JavaScript Build Process: Overview**](./js-build-overview.md)
-
-<div></div>
 
 ### External Resources
 

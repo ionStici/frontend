@@ -4,11 +4,29 @@
 
 **A tech stack** _is a set of technologies used to develop applications._
 
+<!--
+
+SEO
+
+Performance
+
+Interact with REST APIs
+
+HTTP Requests
+
+Freelancing:
+
+Marketing - Learn to sell yourself
+
+Communication - work with clients and manage projects
+
+-->
+
 | MacOS Setup | Terminal | VS Code / Extensions |
 | ----------- | -------- | -------------------- |
 
-| About Internet | Browsers | DevTools |
-| -------------- | -------- | -------- |
+| How the Internet works | Browsers | DevTools |
+| ---------------------- | -------- | -------- |
 
 | HTML | CSS | JavaScript | TypeScript |
 | ---- | --- | ---------- | ---------- |

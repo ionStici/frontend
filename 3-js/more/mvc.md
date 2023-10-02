@@ -2,6 +2,14 @@
 
 # The MVC Architecture
 
+## Table of Content
+
+- [Why Software Architecture?](#why-software-architecture)
+- [Components of any Architecture](#components-of-any-architecture)
+- [The Model-View-Controller (MVC) Architecture](#the-model-view-controller-mvc-architecture)
+
+<br>
+
 ## Why Software Architecture?
 
 - Architecture gives the project **Structure** on which we can then write code. In software, structure refers to how we organize and divide the code different modules, classes and functions.
