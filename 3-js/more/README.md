@@ -11,6 +11,7 @@
 
 - [**The MVC Architecture**](./mvc.md)
 - [**Publisher-Subscriber Pattern**](./psp.md)
+- [**Helpers and Configuration Files**](./helpers-config.md)
 
 ### Modern JavaScript
 
