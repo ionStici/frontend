@@ -4,8 +4,7 @@
 
 ### General Characteristics
 
-- [`window`](./window.md)
-- [`location`](./location-property.md)
+- [**window Global Object**](./window.md)
 
 ### Architecture
 
