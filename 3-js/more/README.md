@@ -30,11 +30,3 @@
 <!--
 [&larr; Back](./README.md)
 -->
-
-<!--
-We can use a loop inside a template literal - `String ${arr.map(t => t).join('')}` - like this we can easily create html elements using data from arrays. Use `join('')` to group the array elements into one string.
- -->
-
-<!--
-Note: Emojis count as 2 characters.
- -->

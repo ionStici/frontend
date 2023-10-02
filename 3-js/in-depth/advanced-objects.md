@@ -11,6 +11,7 @@
 - [Built-in Object Methods](#built-in-object-methods)
 - [Enhanced Object Literals](#enhanced-object-literals)
 - [Looping Objects: Keys, Values, Entries](#looping-objects-keys-values-entries)
+- [Object.freeze](#objectfreeze)
 
 <br>
 
@@ -224,5 +225,23 @@ With `Object.entries()` we get an array with arrays for each key / value pair.
 ```js
 for (const [key, value] of entries)
 ```
+
+<br>
+
+## Object.freeze
+
+Declare immutable objects and arrays using the `Object.freeze` method.
+
+Works best in `"strict mode"`, otherwise we don't receive the error in the console.
+
+```js
+const obj = Object.freeze({ birthYear: 1998 });
+const arr = Object.freeze(["Hello", { name: "" }]);
+
+obj.birthYear += 1; // Error
+arr[1].name = "John"; // John
+```
+
+`Object.freeze` freezes only the first level of the object, it doesn't implement deep freeze.
 
 <br>

@@ -3,7 +3,6 @@
 # window
 
 <!--
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions
 
 https://developer.mozilla.org/en-US/docs/Web/API/Window
 
@@ -18,9 +17,7 @@ Window: location property - Web APIs | MDN
 Document: location property - Web APIs | MDN
 
 Location - Web APIs | MDN
--->
 
-<!--
 // console.log(location);
 // location.reload() - reload the page programmatically.
 // location is a big object that contains a lot of methods and properties in the browser.

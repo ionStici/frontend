@@ -42,6 +42,7 @@
 - [**More Operators**](./operators.md)
 - [**Working with Strings**](./strings.md)
 - [**Error Handling**](./error-handling.md)
+- [**Regular expressions**](./regular-expressions.md)
 
 <div></div>
 

@@ -65,4 +65,8 @@ array.filter().map().reduce();
 - We should over overuse chaining, try to optimize the logic.
 - For better practice: Don't chain methods that mutate the original array.
 
+## Notes
+
+**Consider:** We can use a loop inside a template literal - `${arr.map(t => t).join('')}` - like this we can easily create html elements using data from arrays. Use `join('')` to group the array elements into one string.
+
 <br>
