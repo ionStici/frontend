@@ -21,6 +21,10 @@
 
 <div></div>
 
+- [laod and hashchange events](./load-hashchange.md)
+
+<div></div>
+
 - [DOM: Traversing](./dom-traversing.md)
 - [Different Concepts & More](./more.md)
 
