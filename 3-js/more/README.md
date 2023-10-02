@@ -19,6 +19,7 @@
 - [**Modern and Clean JavaScript Code**](./modern-js-code.md)
 - [**JavaScript Build Process: Overview**](./js-build-overview.md)
 - [**Declarative and Functional JavaScript**](./declarative-functional.md)
+- [**JSDoc - Write Code Documentation**](./jsdoc.md)
 
 ### External Resources
 
@@ -29,3 +30,11 @@
 <!--
 [&larr; Back](./README.md)
 -->
+
+<!--
+We can use a loop inside a template literal - `String ${arr.map(t => t).join('')}` - like this we can easily create html elements using data from arrays. Use `join('')` to group the array elements into one string.
+ -->
+
+<!--
+Note: Emojis count as 2 characters.
+ -->

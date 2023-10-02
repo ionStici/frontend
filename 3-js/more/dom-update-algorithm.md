@@ -55,6 +55,8 @@ This will update the DOM only in places where it has changed.
 
 ## The update() function
 
+[Forkify View Code Example](https://github.com/jonasschmedtmann/complete-javascript-course/blob/master/18-forkify/final/src/js/views/View.js)
+
 ```js
 update(data) {
     this._data = data;
