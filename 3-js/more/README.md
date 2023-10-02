@@ -17,9 +17,14 @@
 
 - [**Modern and Clean JavaScript Code**](./modern-js-code.md)
 - [**JavaScript Build Process: Overview**](./js-build-overview.md)
+- [**Declarative and Functional JavaScript**](./declarative-functional.md)
 
 ### External Resources
 
 - [&#10697; Leaflet library for Interactive Maps](https://leafletjs.com/)
 
 <br>
+
+<!--
+[&larr; Back](./README.md)
+-->
