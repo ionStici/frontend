@@ -15,6 +15,8 @@
 - [Generic Types](#generic-types)
 - [Generic Functions](#generic-functions)
 - [Union Types](#union-types)
+- [OOP with Interface](#oop-with-interface)
+- [Type Narrowing](./type-narrowing.md)
 
 <br>
 
@@ -263,6 +265,89 @@ Unions can be used anywhere a type value is defined, including function paramete
 
 ```ts
 function getMargin(margin: string | number) {}
+```
+
+### Unions for Arrays
+
+```ts
+const seven: (string | number)[] = [7, "7"];
+```
+
+### Unions with Literal Types
+
+**Literal Type Unions** - specific (literal) values that a variable or parameter can take.
+
+Literal type unions provide precise type definition, make our intentions explicit, less errors.
+
+```ts
+type Color = "Green" | "Yellow" | "Red";
+function changeLight(color: Color) {}
+```
+
+Here, the `color` parameter can only take one of the 3 specified string literals.
+
+<br>
+
+## OOP with Interface
+
+**`interface`** technically works like `type`
+
+**`implements`** keyword to apply interfaces
+
+Notes: TypeScript allows to infinitely nest objects
+
+```ts
+interface Person {
+  name: string;
+  data: { birthYear: number };
+  greet: (keyword: string) => void;
+}
+
+class User implements Person {}
+```
+
+### Composed Types
+
+```ts
+interface Version {
+  versionNumber: number;
+}
+
+interface General {
+  name: string;
+  id: number;
+  version: Version;
+}
+
+interface About {
+  general: General;
+}
+
+const myAboutInfo: About = {
+  general: {
+    id: 1,
+    name: "My Thing",
+    version: {
+      versionNumber: 1.0,
+    },
+  },
+};
+```
+
+### Extending Interfaces
+
+Copy type members from one interface to another interface using `extends` keyword.
+
+```ts
+interface Person {
+  name: string;
+}
+
+interface User extends Person {
+  age: number;
+}
+
+const mike: User = { name: "Mike", age: 27 };
 ```
 
 <br>

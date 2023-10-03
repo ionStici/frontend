@@ -9,8 +9,7 @@ TypeScript is a strongly typed programming language that builds on JavaScript.
 <div></div>
 
 <!--
-- [Union Types](./union-types.md)
-- [Type Narrowing](./type-narrowing.md)
+- difference
 - [Object Types](./object-types.md)
 -->
 
