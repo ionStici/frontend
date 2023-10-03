@@ -1,6 +1,6 @@
 [&larr; Back](./README.md)
 
-# TypScript Code
+# TypScript Cheetsheet
 
 ## Table of Content
 
@@ -14,6 +14,7 @@
 - [Type Aliases](#type-aliases)
 - [Generic Types](#generic-types)
 - [Generic Functions](#generic-functions)
+- [Union Types](#union-types)
 
 <br>
 
@@ -242,5 +243,26 @@ multiply("cheese", 3); // (3) ['cheese', 'cheese', 'cheese']
 ```
 
 The `value` argument and the returned array will have the same type `T`
+
+<br>
+
+## Union Types
+
+**Union** - define multiple types that a value can take.
+
+```ts
+let id: string | number = 1;
+id = "001";
+```
+
+`string | number` is a union that allows `id` to be a `string` or a `number`.
+
+Unions make the code more flexible, but at the same time more specific than the `any` type.
+
+Unions can be used anywhere a type value is defined, including function parameters:
+
+```ts
+function getMargin(margin: string | number) {}
+```
 
 <br>

@@ -42,7 +42,7 @@ npm run tsc
 ```
 
 <br>
-
+ 
 ## Running tsc automatically
 
 ```

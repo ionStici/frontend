@@ -4,15 +4,23 @@ TypeScript is a strongly typed programming language that builds on JavaScript.
 
 [**&larr; Back to the Main Page**](./../README.md)
 
-- [TypeScript Code](./ts-code.md)
-- [TypeScript Configuration](./)
-
-<!-- Difference between TypeScript and JavaScript -->
+- [TypeScript vs. JavaScript](./ts-js-diff.md)
 
 <div></div>
 
-- [The TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
-- [TypeScript Official Website](https://www.typescriptlang.org/)
+<!--
+- [Union Types](./union-types.md)
+- [Type Narrowing](./type-narrowing.md)
+- [Object Types](./object-types.md)
+-->
+
+- [TypeScript Cheatsheet](./ts-cheetsheet.md)
+- [TypeScript Configuration](./config.md)
+
+<div></div>
+
+- [&#10697; The TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [&#10697; TypeScript Official Website](https://www.typescriptlang.org/)
 
 <br>
 
@@ -24,9 +32,9 @@ TypeScript is a strongly typed programming language that builds on JavaScript.
 - [Type Narrowing](./type-narrowing.md)
 - [Object Types](./object-types.md)
 
-<br>
+<div></div>
 
-- [Configurations](./configs.md)
+- [Configurations 1](./configs-1.md)
 - [Configurations 2](./configs-2.md)
 - [Configurations 3](./configs-3.md)
 
