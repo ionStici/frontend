@@ -5,6 +5,7 @@
 ## Table of Content
 
 - [Introduction](#introduction)
+- [Built-in Types](#built-in-types)
 - [Functions](#functions)
 - [Arrays](#arrays)
 - [Objects](#object-type-annotationtypes)
@@ -36,7 +37,46 @@
 const my_name: string = "John";
 ```
 
-- **Variable Type Annotations (declaration):** explicitly tell TS what type a variable is.
+- **Variable Type Annotation (declaration):** explicitly tell TS what type a variable is.
+
+<br>
+
+## TypeScript Built-in Types
+
+### Primitive Types
+
+_Basic JavaScript Data Types._
+
+1. `number`: for numeric values
+2. `string`: sequence of characters
+3. `boolean`: true or false
+4. `symbol`: represents a unique value
+5. `BigInt`: for large integer values.
+
+### Composite Types
+
+_Types made up of other types._
+
+1. **Object**: collection of key/value pairs
+2. **Array**: collection of values of the same type
+3. **Tuple**: collection of values of different types
+4. **Enum**: represents a set of named constant values
+5. **Union**: a value that can be of one of several types
+6. **Intersection**: a type that combines two or more types
+7. **Type Alias**: a custom type name
+8. **Generic Type**: parameterized collections of types
+9. Other: Function and Class
+
+### Special Types
+
+_Types with special meanings for TypeScript._
+
+1. `any` - represents any type, for dynamic typing
+2. `void` - represents a value that has no type
+3. `never` - represents a value that never occurs
+4. `unknown` - similar to `any`, but more restrictive
+5. `null` - represents the absence of a value
+6. `undefined` - represents a value that has not been assigned
 
 <br>
 
@@ -195,9 +235,9 @@ const John: Person<string, number> = {
 ## Generic Functions
 
 ```ts
-const multiply = <T>function (value: T, n: number): T[] {
+function multiply<T>(value: T, n: number): T[] {
   return Array(n).fill(value);
-};
+}
 multiply("cheese", 3); // (3) ['cheese', 'cheese', 'cheese']
 ```
 
