@@ -20,6 +20,8 @@ Marketing - Learn to sell yourself
 
 Communication - work with clients and manage projects
 
+Planning - Optimization - Monitoring
+
 -->
 
 | MacOS Setup | Terminal | VS Code / Extensions |

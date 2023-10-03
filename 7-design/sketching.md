@@ -2,13 +2,14 @@
 
 # Sketching
 
-The Overall Design Process: **(1) Sketching** -> (2) Wireframing -> (3) Prototyping -> (4) Coding
-
-Pen and Paper
-
-draw everything in one continuous stroke
+**Sketching** - the first step of the design process.
 
 Brainstorming
+
+## Tips and Tricks
+
+- Use Pen and Paper for sketching.
+- Draw everything in one continuous stroke
 
 keep it quick and keep it dirty.
 
@@ -28,7 +29,7 @@ The main purpose of sketches is to visualize quickly the core idea
 - Resketch winner idea in more detail
 
 <br>
-
+ 
 Focus on the idea visualization – this is the main goal of the sketch.
 
 <br>
@@ -70,15 +71,56 @@ _Sketching is a Two-Step Process:_
 
 Start with the frames -> Add the biggest elements -> Add relevant but simple details -> Use notes -> Sketch alternatives -> Pick the best solutions -> Add shadows and bevel -> Take a photo, include it the project repo -> After a break, review the sketches and add more notes.
 
-## Clarifying Sketches
+## Clarifying Sketches with Additional Elements
 
 Find or draw a proper sketch, then add the following details:
 
-- At the top of the sketch add: title, description, date.
-- Annotations: names placed close to an element to explain its content or other attributes.
-- Number the elements of your sketch, of the sketches themselves.
-- Arrows: for screen transitions, connect different parts of sketches, etc. Add a description of what the arrow is meant to signify.
+1. **Title / Description / Date** (at the top of the sketch)
 
-[Example](https://uploads.toptal.io/blog/image/121195/toptal-blog-image-1474538721087-70346acafa1accafd4332e733179d551.JPG)
+2. **Annotations:** notes placed close to an element to explain its content or other attributes.
+
+3. **Numbers:** ordered by interaction flow.
+
+4. **Arrows:** for screen transitions, connect different parts of sketches, to indicate a sequence of actions. Above the arrow, add a description of what the arrow is meant to signify.
+
+5. **Notes:** placed at the top of bottom of the page, they describe elements that are not included in the design, questions you may have, general explanations, unsketched ideas, etc.
+
+6. **Gestures:** for touch device designs.
+
+7. **Feedback** from you or others.
+
+Try to use different colors (but be consistent). Black for drawings, blue for links, dark green for notes, red for titles and feedback.
+
+<br>
+
+## Tips and Tricks
+
+- Don't worry about the quality.
+
+- **Practice!** Open a web or mobile app and try sketch the screen. Practice drawing basic building blocks of your designs.
+
+- Buy a folder. Keep your skecthes safe.
+
+- Bring tools with you wherever you go (pen and notepad). Capture ideas on paper any time.
+
+- Share with others. Get feedback.
+
+- Experiment and customize, try new things, try new templates.
+
+- Use templates.
+
+## Wireflow
+
+- **High-level flow** - draw the general journey of your product usage.
+
+- **Screen flow** - this focuses on a specific functional flow through the system.
+
+- **Navigation** - information that shows the options a user can choose, the directions user have, and various app parts.
+
+- **Screen states** - draw the states for different elements.
+
+- Save. Make a digital copy of the sketch.
+
+- Share. Share the sketch. Include them it in the project repo.
 
 <br>

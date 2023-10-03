@@ -27,7 +27,7 @@ _The programming language of the Web_
 <div></div>
 
 - [**Web APIs**](./apis/README.md)
-- [Different Concepts & More](./more/README.md)
+- [**Different Concepts & More**](./more/README.md)
 
 <div></div>
 
