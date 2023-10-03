@@ -141,7 +141,7 @@ Type aliases are truly useful for referring to complicated types that need to be
 
 ## Function Types
 
-Node: In JavaScript, functions can be assigned to variable:
+Note: In JavaScript, functions can be assigned to variable:
 
 ```js
 let log = console.log; // lack of parentheses
