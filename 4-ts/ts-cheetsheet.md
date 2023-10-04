@@ -350,4 +350,29 @@ interface User extends Person {
 const mike: User = { name: "Mike", age: 27 };
 ```
 
+### Index Signatures
+
+**Index Signatures** - define types for objects where you don't know all the property names in advance but know their types.
+
+```ts
+interface Obj {
+  [key: string]: number;
+}
+```
+
+The `[key: string]` syntax within `Obj` defines the keys type as `string` with a value of type `boolean`.
+
+The `key` name is purely for us the developer, it will show up in potential error messages.
+
+### Optional Type Members
+
+```ts
+interface User {
+  name: string;
+  age?: number;
+}
+```
+
+We can denote any type member as optional using the `?` operator.
+
 <br>

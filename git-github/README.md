@@ -54,7 +54,9 @@
 - [**Code Reviews**](https://google.github.io/eng-practices/)
 - [**GitHug Actions**](./github-actions.md)
 
-### Terminal
+<!-- Project Documentation -->
+
+<!-- ### Terminal
 
 - [**CLI Introduction**](./command-line-interface.md)
 - [**The ls command**](./cli-ls.md)
@@ -68,7 +70,7 @@
 <div></div>
 
 - [**CL Env Configuration**](./cl-env-config.md)
-- [**Helper Commands**](./cli-helper-commands.md)
+- [**Helper Commands**](./cli-helper-commands.md) -->
 
 ### Other
 
