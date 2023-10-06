@@ -20,7 +20,7 @@ Because of this, now we will use "Pages Router". Later we will check out "App Ro
 
 <br>
 
-## Analyzing The Created Project
+## Analyzing a NextJS App Directory
 
 `pages` most important, file based routing, define the different pages that will make up the app.
 
@@ -37,7 +37,5 @@ Execute: `npm run dev`
 What we see on the page after live hosting, is the result of the `index.js` file from `pages` directory. This file contains a regular react component, but this component is actually now pre-rendered. In DevTools, we can see that all the html markup is in place, not just the `div` element with the `app` id.
 
 NextJS key feature: Build in page pre-rendering.
-
-<br>
 
 <br>

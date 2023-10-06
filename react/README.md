@@ -21,8 +21,6 @@
 
 <div></div>
 
-<div></div>
-
 10. [React Forms](./react-forms.md)
 11. [Practical aspects in React](./practical-aspects.md)
 12. [Separating Components](./separating-components.md)
@@ -32,3 +30,5 @@
 13. [Function Components](./function-components.md)
 14. [useState Hook](./use-state.md) <!-- review  -->
 15. [useEffect Hook](./use-effect.md) <!-- review  -->
+
+<br>
