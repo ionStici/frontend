@@ -20,6 +20,4 @@ I wish you all the best on your journey! 🙌
 
 - [**TypeScript** - strongly typed programming language](./4-ts/README.md)
 
-- [**Git & GitHub** - Version Control System & Repo Hosting](./git-github/README.md)
-
 <br>
