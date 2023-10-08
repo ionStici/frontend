@@ -1,4 +1,4 @@
-# ReactJS
+# React Refresher
 
 [ReactJS](https://react.dev/) is a declarative, component-based, client-side JavaScript library used for building reactive user interfaces. Using React we can build Single-Page-Applications (SPA).
 
@@ -41,5 +41,27 @@ In JavaScript, functions are first-class objects, we can pass them around as val
 `props` for building re-usable components.
 
 `useState` for changing what we see on the screen dynamically.
+
+"Wrapper" Components - `props.children` is a special which every component receives by default. And `children` always holds the content which is passed between the opening and closing component tags.
+
+`useRef` - access DOM elements.
+
+### Router
+
+A Router is tool that watches changes in the url and prevents de default browser behavior of sending a request in case the url updates, then it enables React to update the UI based on the new url string.
+
+<br>
+
+## Forms
+
+With React and SPAs, you typically need a backend API to which you send requests. So a backend which does not send back html, but which instead expects and returns data.
+
+Because fo security reasons, we need a backend api server to which we can send requests and then it's that server which connects to a database and stores data.
+
+Firebase (from google) is a service which contains a databse and an API to which we can consent requests, which will then ensure that the data is saved in that database.
+
+<br>
+
+<!-- firebase -->
 
 <br>

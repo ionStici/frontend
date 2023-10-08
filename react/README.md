@@ -31,4 +31,16 @@
 14. [useState Hook](./use-state.md) <!-- review  -->
 15. [useEffect Hook](./use-effect.md) <!-- review  -->
 
+<div>
+
+16. [React Refresher](./react-refresher.md)
+
 <br>
+
+<!-- Styled Components
+
+Styled JSX
+
+Framer
+
+Sass and CSS Modules -->

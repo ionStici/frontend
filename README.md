@@ -12,6 +12,8 @@ I wish you all the best on your journey! 🙌
 
 ## Table of Content
 
+<!-- - [**Internet** - ](.) -->
+
 - [**HTML** - HyperText Markup Language](./1-html/README.md)
 
 - [**CSS** - Cascading Style Sheets](./2-css/README.md)
@@ -19,5 +21,17 @@ I wish you all the best on your journey! 🙌
 - [**JavaScript** - the programming language of the web](./3-js/README.md)
 
 - [**TypeScript** - strongly typed programming language](./4-ts/README.md)
+
+<!-- - [**React** - ](.) -->
+
+<!-- - [**Redux** - ](.) -->
+
+<!-- - [**Router** - ](.) -->
+
+<!-- - [**Next.js** - ](.) -->
+
+<!-- ### External Links -->
+
+<!-- - [**Git & GitHub**](.) -->
 
 <br>
