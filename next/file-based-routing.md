@@ -58,3 +58,102 @@ router.query; // {clientid: 'mike', projectid: 'mike_project'}
 ```
 
 <br>
+
+## Catch-All Routes
+
+**three dots** followed by a placeholder name.
+
+Directory structure - `/pages/blog/[...id].js`
+
+URL example - `example.com/blog/2020/10/welcome`
+
+```js
+const router = useRouter();
+router.query; // { id: ['2020', '10', 'welcome'] }
+```
+
+We get an object with a property containing an array with all the url segments.
+
+<br>
+
+## Navigating with the "Link" Component
+
+```js
+import Link from "next/link";
+```
+
+Navigate to a new route, but prevent the default browser behavior of sending a http request.
+
+```js
+<Link href="./about">About</Link>
+```
+
+_Additional `Link` prop examples:_
+
+- The `replace` prop will prevent pushing the new route, but instead it will replace the current page with that new route, this will don't store the routes in the browser history api.
+
+### A Different Way Of Setting Link Hrefs
+
+```js
+<Link href={{ pathname: "/clients/[id]", query: { id: "mike" } }}>Mike</Link>
+```
+
+_The `href` prop receives an object with the following properties:_
+
+- `pathname` for the actual path
+- `query` for the path placeholder
+
+<br>
+
+## Navigating Programmatically
+
+_Imperative Navigation_
+
+```js
+const router = useRouter();
+
+function navigate() {
+  router.push("/clients/mike/a");
+
+  router.push({
+    pathname: "/clients/[client][project]",
+    query: { client: "mike", project: "a" },
+  });
+}
+```
+
+`router.push()` method to programmatically navigate to a different page.
+
+Just like `Link` with `href`s, `push()` accepts an object with routes.
+
+`router.replace()` to replace the current page instead of pushing (we can't go back after navigation).
+
+<br>
+
+## Adding a Custom 404 Page
+
+`/pages/404.js`
+
+Next.js will always load the component returned by `404.js` file when a 404 error arises.
+
+<br>
+
+## Review
+
+**File-based Routing (NextJS):**
+
+- No extra boilerplace code required
+- Intuitive system
+- File + folder structure influences routes
+- Navigation works with `<Link>` component and imperatively
+
+**Code-based Routing (React + react-router):**
+
+- Boilerplace setup in code requried
+- Straightforward but includes new components + concepts
+- File + folder setup does not matter at all
+- Navigation works with `<Link>` component and imperatively
+
+**Conclusion:** NextJS file-based routing is more intuitive and easier to set up
+
+<br>
