@@ -14,4 +14,8 @@
 - [NextJS Key Features](./nextjs-key-features.md)
 - [Creating a NextJS Project](./create-nextjs.md)
 
+<div></div>
+
+- [File-based Routing](./file-based-routing.md)
+
 <br>
