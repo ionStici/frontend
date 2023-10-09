@@ -28,7 +28,7 @@ I wish you all the best on your journey! 🙌
 
 <!-- - [**Router** - ](.) -->
 
-<!-- - [**Next.js** - ](.) -->
+- [**Next.js** - a react framework](./next/README.md)
 
 <!-- ### External Links -->
 
