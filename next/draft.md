@@ -167,3 +167,40 @@ The output of `build` script, so the production ready code is in the `.next` fol
 The `start` script will start the production ready page with a nodejs server.
 
 <br>
+
+## Incremental Static Generation (ISR)
+
+When we say that `getStaticProps()` executes code on the server-side that's partially correct, we can execute server-side code here but in the end this code will not run on the actual server which serves our application, instead it runs on our machine in the build process, when we run the `build` script and next.js does its job.
+
+Now, what to do if we have data that changes frequently? instead of static data with pre-generated pages, like a blog where data doesn't change too often.
+
+What if we need to add some more data after the page was deployed? We need to re-build and re-deploy the page all the time, in case we use `getStaticProps`.
+
+- ONE solution would be: `useEffect` for fetching data from a server.
+
+- A BETTER solution would be:
+
+The `getStaticProps()` function executes when we run the `build` script, but..
+
+Next.js built-in feature: **Incremental Static Generation**, it means that we don't generate our page statically once at build time, but that it's continuously updated even after deployment without you re-deploying it.
+
+So, we pre-generate a page, but then, we tell next.js that a given page should be re-generated again for every incoming request at most every X seconds.
+
+So, we have ongoing pre-rendering on the server for incoming requests. For this, we pass the second key to the returned object of `getStaticProps` by the name `revalidate`, and the value must be a number that represents the time in seconds that NextJS should wait until it should re-generated the page.
+
+```js
+export async function getStaticProps() {
+  //
+
+  return {
+    props: {
+      //
+    },
+    revalidate: 10, //
+  };
+}
+```
+
+BTW, during development, the page will be re-generated for every request, the `revalidate` time matters for production.
+
+<br>
