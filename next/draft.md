@@ -1,0 +1,64 @@
+# Draft
+
+NextJS helps with building fullstack React apps, by pre-rendering pages on the server-side (SSR).
+
+NextJS Data Fetch / blending client-side and server-side code.
+
+Statis vs Server-side page generation.
+
+<br>
+
+## The Problem With Traditional React Apps (and Data Fetching)
+
+In traditional React Apps, initially we get an empty html document with a single `div`, then the JS bundle will render the content and components in that `div`, this may lead to delay in website rendering, especially if first we need to fetch some data that must to be rendered, bad UX.
+
+Besides that, search engines have no way of inspecting the website content, which leads to bad SEO indexing.
+
+<br>
+
+## How NextJS Prepares & Pre-renders Pages
+
+NextJS sends back a pre-rendered page.
+
+When a request is made to a website built with NextJS, it returns a pre-rendered page.
+
+Instead of loading data only after the page was sent back to the client, NextJS pre-renderes the page, so the html document with all the data that might be needed, it loads that in advance and pre-generates the finished html page, so that it's this finished html page that can be sent back to the client. Good for SEO.
+
+But also it will send the JS script, by a process named Hydrating
+
+The JS script will be send as well, NextJS will hydrate with React code once loaded, this will lead to the fact that the JavaScript code will take over the pre-rendered page and let React do its job, by this we still have an interactive app.
+
+It sent back the pre-rendered page so that all the core content was already there right from the start, and so that search engines could see the content.
+
+So, NextJS prepares a page in advance, pre-building all the html content, and by pre-loading all the data that will eventually be needed.
+
+Note: this pre-rendering only affects the initial load. Once we are on a website powered by nextJS and React, and once the page is hydrated which happenes right after this pre-rendering, then we have a single-page-application again, then React takes over and handles everything on the frontend. If we visit another page of our website, then that page is not pre-rendered, but instead created in the client by React, only the initial page visit is pre-rendered, so that we don't get the empty page until React is ready.
+
+_NextJS has 2 forms of pre-rendering which you can choose from:_
+
+1.  Static Generation **(Recommended)**
+2.  Server-side Rendering
+
+_Main difference:_
+
+with static generation all the pages are pre-generated in advance in the build phase. So when you build you app for production before you deploy it, you prepare all those pages.
+
+With server-side rendering, pages are created just in time after deploymen when a request reaches the server.
+
+There are ways of mixing that.
+
+<br>
+
+## Static Generation with "getStaticProps"
+
+**Static Generation:** pre-generate a page during build time. "Pre-generate a page" means that all html code and all data that makes up the content is prepare in advanced, during the build process where you are allowed to execute code that would normally only run on the server-side.
+
+Again, data and pages are prepared during build-time, when you build your app, before you deploy it. Because pages are pre-build during build time, once you deploy them, they can be cached by the server, therefore incoming requests can be served instantly with those pre-build pages.
+
+After the pre-build pages are served, they are still hydrated with the React app. The point is the the pages sent to the client are not empty, but populated with content.
+
+How do we tell NextJS that a certain page should be pre-generated?
+
+ONLY from inside `pages/` folder components (not from React components) we can export the special function: `export async function getStaticProps(context) {}` - in this function we can run any code that would normally run on the server-side only. So in this function we don't run client-side code, and also we don't have access to certain client-specific features like the `window` object, but instead we can run any code we want that would normally run on the server-side. Code that we write in this `getStaticProps` function, will not be included in the code bundle that it is sent to the clients, code from here will never be seen by the clients. For example, if it contains code with database credentials, we can safely include them, because this code will never make to the client-side.
+
+<br>
