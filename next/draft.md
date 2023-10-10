@@ -62,3 +62,50 @@ How do we tell NextJS that a certain page should be pre-generated?
 ONLY from inside `pages/` folder components (not from React components) we can export the special function: `export async function getStaticProps(context) {}` - in this function we can run any code that would normally run on the server-side only. So in this function we don't run client-side code, and also we don't have access to certain client-specific features like the `window` object, but instead we can run any code we want that would normally run on the server-side. Code that we write in this `getStaticProps` function, will not be included in the code bundle that it is sent to the clients, code from here will never be seen by the clients. For example, if it contains code with database credentials, we can safely include them, because this code will never make to the client-side.
 
 <br>
+
+## NextJS Pre-renders By Default!
+
+By default, NextJS pre-renders all pages that have no dynamic data.
+
+<br>
+
+## getStaticProps
+
+`getStaticProps()` function can be added to any page file, and only there, you need to export it so that NextJS will call this function when it pre-generates a page.
+
+This function signals (confirms) to NextJS that this is a page that should be pre-generated.
+
+```js
+// pages/index.js
+function HomePage(props) {
+  const { products } = props;
+  // [ { id: "1", text: "Product 1" } ]
+
+  return null;
+}
+
+export async function getStatisProps() {
+  return {
+    props: {
+      product: [{ id: "1", text: "Product 1" }],
+    },
+  };
+}
+
+export default HomePage;
+```
+
+Pre-fetch data before the component is pre-rendered.
+
+`getStaticProps()` function must return an object with a `props` key.
+
+This function prepares the `props` for its component.
+
+NextJS first executes `getStaticProps`, which prepares the props for the component function, and only then it will execute the component function.
+
+In this `getStaticProps()` function we can run any code we want, code that will never be visible on the client-side, that fetches data, that exposes data, through `props` to the component.
+
+So, the object with the `props` key that `getStaticProps` returns, will get passed to the actual page component through `props`, it does this in advance, so none of this will happen on the client-side, instead this happens during build time.
+
+If we view the page source, we see that the data the component rendered is part of the page that was sent to the client. So fetching that data did not happen on the client, it happened on the server. Again, on the client-side, we would not find the code from `getStaticProps` anywhere, it's not part of the client-side code. This means that the code from `getStaticProps` can do server-side things, for credentials, for code that would not work in the browser.
+<br>
