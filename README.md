@@ -12,7 +12,7 @@ I wish you all the best on your journey! 🙌
 
 ## Table of Content
 
-<!-- - [**Internet** - ](.) -->
+- [**Internet** - The Global Network](./internet.md)
 
 - [**HTML** - HyperText Markup Language](./1-html/README.md)
 
@@ -22,13 +22,13 @@ I wish you all the best on your journey! 🙌
 
 - [**TypeScript** - strongly typed programming language](./4-ts/README.md)
 
-<!-- - [**React** - ](.) -->
+- [**React** - JavaScript library for building user interfaces](./react/README.md)
 
 <!-- - [**Redux** - ](.) -->
 
-<!-- - [**Router** - ](.) -->
+<!-- - [**React Router** - ](.) -->
 
-- [**Next.js** - a react framework](./next/README.md)
+- [**Next.js** - React Framework for Full Stack Web Apps](./next/README.md)
 
 <!-- ### External Links -->
 

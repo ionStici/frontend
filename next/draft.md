@@ -108,4 +108,62 @@ In this `getStaticProps()` function we can run any code we want, code that will 
 So, the object with the `props` key that `getStaticProps` returns, will get passed to the actual page component through `props`, it does this in advance, so none of this will happen on the client-side, instead this happens during build time.
 
 If we view the page source, we see that the data the component rendered is part of the page that was sent to the client. So fetching that data did not happen on the client, it happened on the server. Again, on the client-side, we would not find the code from `getStaticProps` anywhere, it's not part of the client-side code. This means that the code from `getStaticProps` can do server-side things, for credentials, for code that would not work in the browser.
+
+<br>
+
+## Running Server-side Code & Using the Filesystem
+
+Any code inside `getStaticProps` is executed on the server-side, this means that we now can work with the file-system.
+
+Import the `fs` node.js core module. Working with `fs` would fail if we would try to work on the client-side, browser-side JavaScript can't access the file-system.
+
+We can use the `fs` **file-system** module inside the `getStaticProps` function.
+
+NextJS will split the code in a clever way so that imports like `fs` and functions like `getStaticProps` will not make to the final client-side bundle.
+
+We can use `fs` to get access to files from the project directory, using the `fs.readFileSync()` function, which synchronously reads the file and blocks the execution until it's done. `readFile` on the other hand expects a callback.
+
+`import fs from "fs/promises"` this is a special version of `fs` module that uses promises. When we do so, `fs.readFile()` returns a promise. Now we can just specify the file path and `await` for it, for the data.
+
+The `path` nodejs module contains helpful functionalities for building paths.
+
+Using `path.join()`, it will build a path that will be consumed by `fs.readFile()`.
+
+`process.cwd()` nodejs object gives the current working directory, so the root. So using this, we tell `path.join()` to start from the root directory, then the following arguments are the paths to the data we are looking for.
+
+```js
+import path from "path";
+import fs from "fs/promises";
+
+function HomePage(props) {
+  const { products } = props;
+
+  return null;
+}
+
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), "data", "dummy-backend.json");
+  const jsonData = await fs.readFile(filePath);
+  const data = JSON.parse(jsonData);
+
+  return {
+    props: { products: data.products },
+  };
+}
+```
+
+<br>
+
+## A Look Behind The Scenes
+
+The `build` nextjs script will create the optimized production-ready build, it's this step which pre-generates our pages.
+
+In the terminal we get information about the build it created, about the static pages it generated.
+
+The output of `build` script, so the production ready code is in the `.next` folder.
+
+`.next/server/pages/index.html`
+
+The `start` script will start the production ready page with a nodejs server.
+
 <br>
