@@ -306,4 +306,78 @@ Besides the pre-generated html files we also have the json files for pre-loading
 
 Pre-fetching data - in production, if we check the network devtools tab, we see that json files for the dynamic pre-generated page were loaded `p1.json`.. it pre-fetched the props for the dynamic page that would need to be loaded if you click on one of the links that direct to those pages. Again, it pre-fetched this data even before accessing the actual dynamic pages, so on the main page. And now, when we click on a link, we don't send a request to the server and load the pre-rendered html file, instead we stay in this single page app which was loaded and hydrated after the initla request. Instead, JS will render a new page for us just as it would do in a regular app without nextjs, but the data needed for this page is coming from the pre-fetched json file, which it loaded and read under the hood on our behalf, so it doesn't need to fetch the data after we navigated to that page, but so that the data is already there when we do navigate, to show the page faster.
 
+### Fallback Pages
+
+The `fallback` key can help if we have a lot of pages that would need to be pre-generated.
+
+With `fallback: true` We tell next.js that even pages which are not listen in `getStaticPaths`, can be valid, but they are not pre-generated, instead they're pre-generated just in time, when a request reaches the server.
+
+This allows us to pre-generate highlt visited pages by specify the `params` for them, and postpone the generation to less frequented pages to the server, so that they are only pre-generated when they're needed.
+
+BUT, if instead of clicking on a link on our page, but instead directly accessing a url, and sending a new request, then we get an error. Why, because this dynamic pre-generation does not finish instantly.
+
+So, when using this `fallback: true` feature, we should be prepared to return a fallback state in the react component:
+
+```js
+function Page(props) {
+  const { data } = props;
+
+  if (!data) return <p>Loading</p>;
+
+  return <h1>{data.title}</h1>;
+}
+```
+
+With this, the page will be rendered, by first rendering the loading paragraph, and then when the data is done loading next.js will give it to the component and the that component will render with that data.
+
+`fallback: 'blocking'` with this we don't need the fallback check in the component, with this next.js will wait for the page to fully be pre-generated on the server before it serves that - this will take a little bit longer for the visitor of the page to get a respone.
+
+## Loading Paths Dynamically
+
+```js
+function ProductDetailPage(props) {
+  const { loadedProduct } = props;
+
+  return (
+    <Fragment>
+      <h1>{loadedProduct.title}</h1>
+      <p>{loadedProduct.description}</p>
+    </Fragment>
+  );
+}
+
+async function getData() {
+  const filePath = path.join(process.cwd(), "data", "dummy-backend.json");
+  const jsonData = await fs.readFile(filePath);
+  const data = JSON.parse(jsonData);
+  return data;
+}
+
+export async function getStaticProps(context) {
+  const { params } = context;
+  const productId = params.pid;
+
+  const data = await getData();
+  const product = data.products.find((product) => product.id === productId);
+
+  return {
+    props: {
+      loadedProduct: product,
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  const data = await getData();
+
+  const ids = data.products.map((product) => product.id);
+  const pathsWithParams = ids.map((id) => ({ params: { pid: id } }));
+
+  return {
+    paths: pathsWithParams,
+    fallback: false,
+  };
+}
+```
+
 <br>
