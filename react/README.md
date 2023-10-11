@@ -37,10 +37,14 @@
 
 <br>
 
-<!-- Styled Components
+<!--
+
+Sass / CSS Modules
+
+Styled Components
 
 Styled JSX
 
 Framer
 
-Sass and CSS Modules -->
+-->

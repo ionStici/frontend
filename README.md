@@ -24,14 +24,10 @@ I wish you all the best on your journey! 🙌
 
 - [**React** - JavaScript library for building user interfaces](./react/README.md)
 
-<!-- - [**Redux** - ](.) -->
+- [**Redux** - a predictable state container for JS Apps](.)
 
-<!-- - [**React Router** - ](.) -->
+- [**React Router** - dynamic routing for React Apps](.)
 
 - [**Next.js** - React Framework for Full Stack Web Apps](./next/README.md)
-
-<!-- ### External Links -->
-
-<!-- - [**Git & GitHub**](.) -->
 
 <br>
