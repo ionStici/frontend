@@ -418,6 +418,68 @@ export async function getServerSideProps() {}
 
 NextJS will execute this function whenever a request for this page is made.
 
-Therefore, you should ONLY use either `getStaticProps()` or `getServerSideProps`, because they kind of clash. They fulfill the same purpose, they get props for the component so that nextjs is then able to render that component, but they run at different points of time.
+Therefore, you should ONLY use either `getStaticProps()` or `getServerSideProps`, because they kind of clash. They fulfill the same purpose, they get props for the component so that nextjs is then able to render that component, but they run at different points of time .
+
+### getServerSideProps
+
+```js
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      username: "Max",
+    },
+    notFound: false,
+    redirect: false,
+  };
+}
+```
+
+It accepts the same keys as `getStaticProps` except the `revalidate` key, because `getServerSideProps` per definition runs for every incoming request, so there's no need to revalidate after a certain amount of seconds because it will always run again.
+
+The props of `getServerSideProps` will then be made available to the component function, but it will not be called in advanced whenw e `build` the project, but really for every incoming request.
+
+Important: this `getServerSideProps` only executes on the server after deployment (also on our development server), but it's not statically pre-generated.
+
+### context
+
+The `context` object of `getServerSideProps` function - here we get access to request and response objects, and still to the `params` as well.
+
+```js
+export async function getServerSideProps(context) {
+  const { params, req, res } = context;
+}
+```
+
+These are default nodejs objects for incoming [messages](https://nodejs.org/api/http.html#http_class_http_serverresponse) and for [responses](https://nodejs.org/api/http.html#http_class_http_incomingmessage).
+
+Getting access to this kind of data can be useful for example when we need a special header or cookie data.
+
+`getServerSideProps()` is good if we want to ensure that this function runs for every incoming request, so that it's never statically pre-generated, for situations when we have highly dynamic data that can get outdated fast. And we can still write server-side code here or reach out to json files from the project directory, and it still returns props for the component function, the only key difference is the kind of data we get access to in the `context` object and the timing of this function.
+
+### Dynamic Pages & "getServerSideProps"
+
+When we use dynamic routes with `getStaticProps`, we need `getStaticPaths` to tell nextjs explicitly the routes. With `getServerSideProps` everything works well without `getStaticPaths`, why? Because `getServerSideProps` runs on the server anyways, so nextjs does not pre-generate any pages at all anyway.
+
+```js
+// [uid].js
+
+function UserIdPage(props) {
+  return <h1>{props.id}</h1>;
+}
+
+export default UserIdPage;
+
+export async function getServerSideProps(context) {
+  const { params } = context;
+
+  const userId = params.uid;
+
+  return {
+    props: {
+      id: "userid-" + userId,
+    },
+  };
+}
+```
 
 <br>
