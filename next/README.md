@@ -15,7 +15,7 @@
 - [File-based Routing](./file-based-routing.md)
 - [Working with File-based Routing](./file-based-routing-code.md)
 
-### Section 5
+### Section 5 & 6
 
 - [Page Pre-Rendering & Data Fetching](./draft.md)
 

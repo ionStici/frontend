@@ -380,4 +380,44 @@ export async function getStaticPaths() {
 }
 ```
 
+## Fallback Pages & "Not Found" Pages
+
+Trying to request a page that doesn't exist, but also: `fallback: true` if an ID value is not found, we still want to render a page. Use `notFound`:
+
+```js
+export async function getStaticProps(context) {
+  const product = undefined;
+
+  if (!product) {
+    return { notFound: true };
+  }
+
+  return {
+    props: {
+      loadedProduct: product,
+    },
+  };
+}
+```
+
+<br>
+
+## "getServerSideProps" for Server-side Rendering (SSR)
+
+Static Generation AND **Server-side Rendering**.
+
+Inside getStaticProps and getStaticPaths we don't have access to the actual incoming request - instead, these are generally called when the project is `build`, except with incremental static generation.
+
+Server-side rendering means that you do need to pre-render a page for every incoming request. So not at most every second, but really for every incoming request, and/or you need access to the concrete request object that is reaching the server, because for example you need to extract cookies.
+
+Next.js supports: run "real server-side code" - next.js gives you a function which is executed whenever a request for this page reaches the server. So that's then no pre-generated in advance during build time or every couple of seconds but it's really code that runs on the server only, only after you deployed it, and which is then re-executed for every incoming request. This function needs to be exported and needs to be added to a page component file.
+
+```js
+export async function getServerSideProps() {}
+```
+
+NextJS will execute this function whenever a request for this page is made.
+
+Therefore, you should ONLY use either `getStaticProps()` or `getServerSideProps`, because they kind of clash. They fulfill the same purpose, they get props for the component so that nextjs is then able to render that component, but they run at different points of time.
+
 <br>
