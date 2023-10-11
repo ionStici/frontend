@@ -560,11 +560,73 @@ SO, we still have pre-rendering BUT without the data, because we're fetching the
 
 The above pattern is such a common pattern that we can use a custom hook for this job, `SWR` hook.
 
+swr - stale-while-revalidate
+
 https://swr.vercel.app/
 
 This is a react hook developed by the next.js team, but we can use it in non-next.js projects as well.
 
-This is a hook that under the hood, still will send a http request, by default using the fetch api,
+This is a hook that under the hood, still will send a http request, by default using the fetch api. It gives us nice built-in features like caching and automatic revalidation, less code.
+
+`npm install swr`
+
+```js
+import { useState } from "react";
+import useSWR from "swr";
+
+function Comp() {
+  const [sales, setSales] = useState();
+
+  const { data, errors } = useSWR(
+    "https://nextjs-tst-49974-default-rtdb.firebaseio.com/sales.json"
+  );
+
+  useEffect(() => {
+    if (data) {
+      const transformedSales = [];
+
+      for (const key in data) {
+        transformedSales.push({
+          id: key,
+          username: data[key].username,
+          volume: data[key].volume,
+        });
+      }
+      setSales(transformedSales);
+    }
+  }, [data]);
+
+  if (error) {
+    return <p>Failed to load.</p>;
+  }
+
+  if (!data || !sales) {
+    return <p>Loading...</p>;
+  }
+
+  return (
+    <ul>
+      <li>
+        {sales.map((sale) => (
+          <li key={sale.id}>
+            {sale.username} - ${sale.volume}
+          </li>
+        ))}
+      </li>
+    </ul>
+  );
+}
+```
+
+We can use `useSWR` directly in a component. `useSWR` wants at least one argument, which is an identifier for the request it should send, typically the URL of that request. It is also called an identifier because this hook will bundle multiple requests to the same URL, which are sent in a certain timeframe into one request to avoid sending dozens of small requests.
+
+The second argument is a fethcer function that describes how the reqeust should be sent. By default it will use the `fetch` api.
+
+So, when the component is loaded, the url request will be made. The data returned by this hook will be an object which contains the fetched data and potential error information.
+
+We then use `useEffect` hook to format the data we get from firebase.
+
+This `useSWR` is convinient but not mandatory.
 
 <hr/>
 
@@ -573,5 +635,9 @@ Note: You must now add a default "fetcher" when working with `useSWR`:
 ```js
 useSWR(<request-url>, (url) => fetch(url).then(res => res.json()))
 ```
+
+<br>
+
+## Combining Pre-Fetching With Client-Side Fetching
 
 <br>
