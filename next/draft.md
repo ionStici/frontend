@@ -482,4 +482,96 @@ export async function getServerSideProps(context) {
 }
 ```
 
+### "getServerSideProps": Behind The Scenes
+
+Note that details about the build we get in the terminal where we run the script.
+
+Pages that use `getServerSideProps` are not pre-generated, fact denoted by the **lambda** λ symbol, instead will be pre-rendered on the server only.
+
+Why we use these function - `getStaticProps getStaticPaths getServerSideProps` - Prepare data for our components ahread of time OR on the server so that we ca serve a finished page to the client, that can offer a better user experience to our users, since they get the finished page and all the content is there right from the start, but it also help us with search engines, with SEO, because search engines also see the finished page.
+
+<br>
+
+## Implementing Client-Side Data Fetching
+
+**Client-Side Data Fetching with Next.js**
+
+**Firebase** is a service offered by Google which gives you an entire backend with a lot of features, one of te features is a database with an attached API.
+
+We will use `realtime` database.
+
+_Standard react way ot sending a request:_
+
+```js
+import { useEffect, useState } from "react";
+
+function LastSalesPage() {
+  const [sales, setSales] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+
+    fetch("https://nextjs-tst-default-rtdb.firebaseio.com/sales.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const transformedSales = [];
+
+        for (const key in data) {
+          transformedSales.push({
+            id: key,
+            username: data[key].username,
+            volume: data[key].volume,
+          });
+        }
+
+        setSales(transformedSales);
+        setIsLoading(false);
+      });
+  }, []);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (!sales) {
+    return <p>No data yet</p>;
+  }
+
+  return (
+    <ul>
+      {sales.map((sale) => (
+        <li key={sale.id}>
+          {sale.username} - ${sale.volume}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+export default LastSalesPage;
+```
+
+If we inspect the source we see the paragraph `No data yet`, why? when next.js pre-renders the page, it will not execute `useEffect`, it will just return and pre-render the very basic first version of waht the component returns, and that is the paragraph `No data yet`.
+
+SO, we still have pre-rendering BUT without the data, because we're fetching the data on the client side now, with the above approach.
+
+## useSWR
+
+The above pattern is such a common pattern that we can use a custom hook for this job, `SWR` hook.
+
+https://swr.vercel.app/
+
+This is a react hook developed by the next.js team, but we can use it in non-next.js projects as well.
+
+This is a hook that under the hood, still will send a http request, by default using the fetch api,
+
+<hr/>
+
+Note: You must now add a default "fetcher" when working with `useSWR`:
+
+```js
+useSWR(<request-url>, (url) => fetch(url).then(res => res.json()))
+```
+
 <br>
