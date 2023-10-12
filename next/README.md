@@ -17,6 +17,10 @@
 
 ### Section 5 & 6
 
-- [Page Pre-Rendering & Data Fetching](./draft.md)
+- [Page Pre-Rendering & Data Fetching](./pre-rendering.md)
+
+### Section 7
+
+- [Optimizing NextJS Apps](./draft.md)
 
 <br>
