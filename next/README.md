@@ -21,6 +21,10 @@
 
 ### Section 7
 
-- [Optimizing NextJS Apps](./draft.md)
+- [Head and Image Next.js Components](./head-image.md)
+
+### Section 8
+
+- [API Routes](./draft.md)
 
 <br>

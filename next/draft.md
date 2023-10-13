@@ -1,175 +1,45 @@
-# Optimizing NextJS Apps
+# API Routes
 
-## Configuring the "head" Content
+## What are API Routes?
 
-Add `<head>` metadata using `Head` next.js component.
+- API - Application Programming Interface
 
-We can add this `Head` special component anywhere in our JSX code for a given component.
+- REST API = Representational State Transfer (a specific structure of web APIs)
 
-Next.js will inject the content of the `Head` component into the `<head>` section of the page.
+API: We have a web server that exposes certain URLs (APIs) that can accept data and then send back a response (json is the most common format of data exchange).
 
-```js
-import Head from "next/jead";
+API routes - special kind of URLs which we can add to a next.js app - which are about getting data, using data, maybe storing data in some database, and sending back data in any form of your choice.
 
-function HomePage() {
-  return (
-    <div>
-      <Head>
-        <meta name="description" content={event.description} />
-        <title>Hello World!</title>
-      </Head>
-      <main></main>
-    </div>
-  );
-}
-```
+API routes (next.js feature) is a feature that allows us to build a REST API as part of our next.js app. It also allows us to support URLs / paths after our domain, then also accepting different kind of request methods, then depending on which http method was used for which path, different actions could be triggered. For example, for a POST request we might expect some data to be sent along with that incoming request, then when that request hits the API, we extract that data from the request and store it in a database. If a GET request reaches the URL, we might want tof etch data from a database (as raw data in JSON format).
 
-We can inject dynamic content inside `Head` as usual.
+These requests are sent and triggered by JavaScript code (Ajax).
 
-## Reusing Logic Inside A Component
+## Writing a API Route
 
-In case a component has multiple checks using the `return` statement..
+API Routes (next.js feature).
 
-```jsx
-function HomePage() {
-  const pageHeadData = (
-    <Head>
-      <title>Hello World!</title>
-    </Head>
-  );
+Add API endpoints to next.js app directory: `pages/api`
 
-  if (!firstCheck) {
-    return (
-      <>
-        {pageHeadData}
-        <div></div>
-      </>
-    );
-  }
+`api` - special folder (it has to be called like this) that is recognized by next.js, any file within this `api` folder will be treated in a special way.
 
-  if (true) {
-    return (
-      <>
-        {pageHeadData}
-        <div>content</div>
-      </>
-    );
-  }
-}
-```
+In this `api` folder, we can add pages just as we can add them anywhere else in the `pages` folder.
 
-Standard React way of re-using logic.
+`pages/api/feedback.js` - this will create a path we can send requests to.
 
-## Working with the `"_app.js"` File (and Why)
+Inside of any file from the `api` folder, we don't export a react component, instead we create and export a `handler` function that will receive 2 parameters: a request object `req` and a response object `res`.
 
-Head settings that are the same across all page components.
+In this `handler` function we can execute server-side code - any code we write here will not end up in any client-side bundle, code from here will not be exposed to visitors of our webpage, just as code from `getStaticProps` and `getServerSideProps`.
 
-`_app.js` is the root app component, which in the end is rendered for every page that is deing displayed.
+This function is executed by next.js for incoming requests sent to `/api/feedback`. In can write node.js code here.
 
-This component `<Component {...pageProps} />` which is received through `props` in `MyApp` component, is the actual page component that should be rendered.
-
-Again, the `MyApp` component is automatically rendered by Next.js, then the `Component` prop is automatically set by Next.js, so you don't need to do anything for that.
-
-We can use this `_app.js` file such that we wrap the page component is a wrapper component, to give all pages the same layout, for example the same navigation bar.
+We can send back a resonse with help of the `res` object that contains special methods for sending back response and to configure that response.
 
 ```js
-// _app.js
-
-function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Head>
-        <meta name="viewport" content="initial-scale=1.0, width-device-width" />
-      </Head>
-      <Component {...pageProps} />
-    </>
-  );
+export default function handler(req, res) {
+  res.status(200).json({ message: "This works!" });
 }
 ```
 
-As well, we can use `Head` component here to apply some generic setting that applies to all our page components.
+This line of code from the `handler` function from `/pages/api/feedback.js` will be executed by next.js when we send a request to `/api/feedback`, and this code will then send back a response.
 
-## Merging "head" Content
-
-Next.js automatically merges multiple `Head` elements.
-
-If we have conflicts, then next.js will simply take the latest `Head` setting in case we have it multiple times.
-
-If we have a general `<title>` in the `_app.js` file, it will be overwritten in situations where we navigate to page components that have their own `<title>` set.
-
-## The `_document.js` File
-
-`_document.js` file must be added in the root `pages` folder.
-
-It's not here by default, but if we add it then next.js will take it in account.
-
-We can imagine `_app.js` as the root component inside of the body section of your html document.
-
-But, `_document.js` allows you to customize the entire html document, all the elements that make up an html document.
-
-_Here, we add a special `class` component:_
-
-```js
-import Document, { Html, Head, Main, NextScript } from "next/document";
-
-class MyDocument extends Document {
-  render() {
-    return (
-      <Html lang="en">
-        <Head />
-        <body>
-          <div id="overlays" />
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
-}
-
-export default MyDocument;
-```
-
-It must be a `class` component because it must extends other component provided by next.js
-
-The `Head` component we import here is not the same as the one we import in other page components.
-
-This is a default structure that we should add.
-
-We can use this component in case we want to override the default document structre, for example if we want to add the `lang` attribute to the `html` element.
-
-The `div` we added here, this allows us to add html content outside of our application component tree, for example for using those elements with react portals, we could select this `div` with a react portal to portal our modals.
-
-## Optimizing Images with the "Next Image" Component & Feature
-
-Huge images & jpeg format - not good for production.
-
-[Opi](https://nextjs.org/docs/pages/building-your-application/optimizing/images) / [next/image](https://nextjs.org/docs/pages/api-reference/components/image)
-
-**Optimizing Images with Next.js**
-
-import the next.js `Image` component. With this component, next.js will create multiple versions of our image on the fly when requests are coming in, optimized for the operating systems and device sizes that are making the request, and then those generated images will be cached for future reqeusts from similar devices.
-
-```js
-import Image from "next/image";
-
-function Comp() {
-  return (
-    <>
-      <div>
-        <Image src={data.image} alt={data.title} width={250} height={160} />
-      </div>
-    </>
-  );
-}
-```
-
-We need to include the `width` and `height` attributes to inform next.js about the width and height of the image, not the original image, but the image width and height which we need to be rendered.
-
-With `Image` component, in Network DevTools tab we see that instead of 3mb, next.js delivers a image with only 10kb, and instead of a jpeg image now its a webp format.
-
-We can see the generated images in the `.next/cache/images` folder - here we have encrypted folders that contains the images as they are generated by next.js - optimized and generated when needed, not in advanced, only when a request reaches the page, but then they are stored so that future requests from similar devices immediately get that already generated image.
-
-Another benefit - when we increase the screen size, a new request is made. By default, images are lazy laoded (if not visible, next.js will not download them).
-
-`next/image` allows us to ship production-ready images
+If we make a request to `/api/feedback` by directly accessing the url in the browser, then we get on the page: `{"message":"This World!"}` - but this is not how we do this requests - we can check more about this in the network tab of devtools, for example the reponse itself. In Headers tab of network, the Content-Type is set to application/json. So this is a special kind of page, files from `pages/api/file.js` allows us to run our own server side code, and to add our own app focused API, we can add features like newsletter, user feedback submission, etc.
