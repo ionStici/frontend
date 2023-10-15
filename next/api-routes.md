@@ -43,3 +43,77 @@ export default function handler(req, res) {
 This line of code from the `handler` function from `/pages/api/feedback.js` will be executed by next.js when we send a request to `/api/feedback`, and this code will then send back a response.
 
 If we make a request to `/api/feedback` by directly accessing the url in the browser, then we get on the page: `{"message":"This World!"}` - but this is not how we do this requests - we can check more about this in the network tab of devtools, for example the reponse itself. In Headers tab of network, the Content-Type is set to application/json. So this is a special kind of page, files from `pages/api/file.js` allows us to run our own server side code, and to add our own app focused API, we can add features like newsletter, user feedback submission, etc.
+
+## Forms
+
+Submitting a form suppose to send some data to a database.
+
+After form submit, we send request to an API route, then in that api route we can connect to a database - security reasons - in api routes we can safely talk to a database because it is not exposed to the frontend.
+
+**Any code that "talks" to a database belongs onto a server.** The frontend only sends HTTP requests to that server by exposing a REST API on that server.
+
+Alternatives to REST APIs: SDKs - Firebase or MongoDB Stitch. This alternatives suppose to talk to a web API which then in turn runs the databse queries.
+
+## Parsing The Incoming Request & Executing Server-side Code
+
+Inside the `handler` function from the `api` folder, first we have to find which type of request is triggering the API route, and we do this using the `req` object parameter that we get automatically by next.js
+
+The `req` object contains information about the incoming request.
+
+`req.method` this method contains the http method used.
+
+`req.body` contains the actual data, this is the already parsed body of the incoming request, next.js will automatically parse the incoming request body for us.
+
+```js
+import fs from "fs";
+import path from "path";
+
+export default function handler(req, res) {
+  if (req.method === "POST") {
+    const email = req.body.email;
+    const feedbackText = req.bodt.text;
+
+    const newFeeback = {
+      id: new Date().toISOString(),
+      email: email,
+      text: feedbackText,
+    };
+
+    // store that in a database or in a file
+    const filePath = path.join(process.cwd(), "data", feedback.json);
+    const fileData = fs.readFileSync(filePath);
+    const data = JSON.parse(fileData);
+    data.push(newFeeback);
+    fs.writeFileSync(filePath, JSON.stringify(data));
+    res.status(201).json({ message: "Success!", feedback: newFeeback });
+  } else {
+    res.status(200).json({ message: "Hello World!" });
+  }
+}
+```
+
+This is how we can extract data for the incoming request if it's a `POST` request, then we can store it in a database using node.js code.
+
+Server-side code added to a API route - connecting frontend code `pages/index.js` to backend code `pages/api/feedback.js` - by sending request from the frontend to the API route.
+
+API Route features: looking into a request, extracting request body data, running server-side code, sending a response.
+
+## Sending Requests To API Routes
+
+```js
+function submitFormHandler(event) {
+  // ...
+
+  fetch("/api/feedback", {
+    method: "POST",
+    body: JSON.stringify(reqBody),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+}
+```
+
+With API routes, we don't have to build a separate api as a separate project, instead we can easily add API routes to the website as part of the project.
