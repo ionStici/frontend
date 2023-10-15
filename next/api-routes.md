@@ -195,3 +195,90 @@ export async function getStaticProps() {
 So we do the server-side logic inthe the `getStaticProps` function by importing from `/pages/api/feedback.js`, instead of usign `fetch` and sending a request to our own api route.
 
 When working with your own api rotues and when requiring them in your regular pages, you should not send the http request to them, but instead leverage the fact that it's all running on the same computer (server).
+
+## Creating & Using Dynamic API Routes
+
+Fetch single peace of data for a specific feedback item `your-page.com/feedback/id`
+
+`/pages/api/[feedbackId].js` dynamic api route (works in the same way)
+
+Dynamic routes work for all request methods, not just GET.
+
+- `req.query` for accessing query parameters
+
+```js
+// pages/api/[feedbackId].js
+import { buildFeebackPath, extractFeedback } from "./feedback";
+
+export default function handler(req, res) {
+  const feedbackId = req.query.feedbackId;
+
+  const filePath = buildFeebackPath();
+  const data = extractFeedback(filePath);
+
+  const selectedFeedback = data.find((feedback) => feedback.id === feedbackId);
+
+  res.status(200).json({ feedback: selectedFeedback });
+}
+```
+
+Send request to the dynamic api route:
+
+```js
+import { buildFeebackPath, extractFeedback } from "../api/feedback";
+import { useState } from "react";
+
+export default function FeedbackPage(props) {
+  const [feedbackData, setFeedbackData] = useState();
+
+  function loadFeedbackHandler(id) {
+    // api/feedback-id
+    fetch(`/api/${id}`)
+      .then((res) => res.json())
+      .then((data) => setFeedbackData(data.feedback));
+  }
+
+  return (
+    <>
+      {feedbackData && <p>{feedbackData.email}</p>}
+      <ul>
+        {props.feedbackItems.map((item) => (
+          <li key={item.id}>
+            {item.text}
+            <button onClick={loadFeedbackHandler.bind(null, item.id)}>
+              Show Details
+            </button>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+export async function getStaticProps() {
+  const filePath = buildFeebackPath();
+  const data = extractFeedback(filePath);
+
+  return {
+    props: {
+      feedbackItems: data,
+    },
+  };
+}
+```
+
+Consider the above example with `bind`
+
+Send requests to dynamic api routes & set up dynamic api routes to execute server side code for dynamic pieces of data encoded in the path.
+
+## Exploring Different Ways Of Structuring API Route Files
+
+- `api/[...feedbackId].js` we can have catch-all dynamic api routes - requests to `/api/some-value/more-segments`
+
+- This `link.com/api/feedback` will trigger `api/feedback.js` instead of `api/[id].js`, so next,js will prioritize `api/feedback.js`
+
+- `api/feedback.js` === `api/feedback/index.js`
+
+- `api/feedback/[id].js` for `/api/feedback/some-value`
+
+This kind of works the same as pages routes.
