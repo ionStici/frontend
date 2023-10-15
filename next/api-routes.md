@@ -117,3 +117,81 @@ function submitFormHandler(event) {
 ```
 
 With API routes, we don't have to build a separate api as a separate project, instead we can easily add API routes to the website as part of the project.
+
+## Using API Routes To Get Data
+
+`"GET"` requests
+
+```js
+// pages/api/feedback.js
+import fs from "fs";
+import path from "path";
+
+function buildFeebackPath() {
+  return path.join(process.cwd(), "data", "feedback.json");
+}
+
+function extractFeedback(filePath) {
+  const fileData = fs.readFileSync(filePath);
+  const data = JSON.parse(fileData);
+  return data;
+}
+
+export default function handler(req, res) {
+  // ...
+
+  if (req.method === "GET") {
+    const filePath = buildFeebackPath();
+    const data = extractFeedback(filePath);
+
+    res.status(200).json({ feedback: data });
+  }
+}
+```
+
+```js
+function loadFeedbackHandler() {
+  fetch("/api/feedback")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data.feedback);
+    });
+}
+```
+
+## Using API Routes For Pre-Rendering Pages
+
+How to go from `your-website.com/api/feedback` to `your-website.com/feedback` but that renders the data from the "GET" request on the page.
+
+We can also use `getStaticProps` with **API routes** if we want to pre-render the page and pre-fetch the data for pre-rendering.
+
+**Note:** `fetch` inside `getStaticProps` is ok with External APIs. You should NOT use `fetch` inside `getStaticProps` or `getServerSideProps` to talk to your own API. Instead, considering that this is all part of one project, therefore all served by one server, write node.js logic directly inside `getStaticProps`, like importing logic from the `feedback.js` api route, instead of fetching. Code from `api/feedback.js` and code from `getStaticProps` functions are both not included in the final client-side bundle.
+
+```js
+import { buildFeebackPath, extractFeedback } from "../api/feedback";
+
+export default function FeedbackPage(props) {
+  return (
+    <ul>
+      {props.feedbackItems.map((item) => (
+        <li key={item.id}>{item.text}</li>
+      ))}
+    </ul>
+  );
+}
+
+export async function getStaticProps() {
+  const filePath = buildFeebackPath();
+  const data = extractFeedback(filePath);
+
+  return {
+    props: {
+      feedbackItems: data,
+    },
+  };
+}
+```
+
+So we do the server-side logic inthe the `getStaticProps` function by importing from `/pages/api/feedback.js`, instead of usign `fetch` and sending a request to our own api route.
+
+When working with your own api rotues and when requiring them in your regular pages, you should not send the http request to them, but instead leverage the fact that it's all running on the same computer (server).
