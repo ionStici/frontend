@@ -95,3 +95,28 @@ Using the `if` statement we check if we are in the development or production ste
 NextJS will run this function and pass in an `phase` object that indicates the phase we are in.
 
 If we make past first `if` check, we are not in the dev phase.
+
+## Running a Test Build & Reducing Code Size
+
+`npm run build`
+
+In the terminal we have information about the build.
+
+## A Full Deployment Example (To Vercel)
+
+The `.next` folder contains the production bundle.
+
+Hosting provider that supports NodeJS.
+
+When deploying a NextJS app -> we push the code to a remote repository like GitHub -> we can connect the remote repository to the Vercel acc and tell vercel that whenever the code from that repo changes, then redeploy.
+
+After importing the project to vercel from github..
+
+It will take and put our api routes into serverless functions which are executed on demand.
+
+## the "export" Feature
+
+1. `next build`
+2. `next export`
+
+After running both commands, we get a `out` folder we our static website.
