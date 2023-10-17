@@ -282,3 +282,15 @@ Send requests to dynamic api routes & set up dynamic api routes to execute serve
 - `api/feedback/[id].js` for `/api/feedback/some-value`
 
 This kind of works the same as pages routes.
+
+## Project
+
+The `api` route is hosted by the same server as the whole project, the same domain, that's why we can use an absolute path in `fetch('/api/feedback)` when fetching data.
+
+a cluster is a server which will then later host your database.
+
+mongoDB driver - connecting and talking to mongoDB
+
+```
+npm install mongodb --save
+```

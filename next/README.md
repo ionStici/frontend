@@ -23,8 +23,12 @@
 
 - [Head and Image Next.js Components](./head-image.md)
 
-### Section 8
+### Section 8 & 9
 
 - [API Routes](./api-routes.md)
+
+### Section 12
+
+- [Deploy Next.js App to Vercel](./draft.md)
 
 <br>
