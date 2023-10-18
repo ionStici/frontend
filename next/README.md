@@ -29,6 +29,10 @@
 
 ### Section 12
 
-- [Deploy Next.js App to Vercel](./draft.md)
+- [Deploy Next.js App to Vercel](./deploy.md)
+
+### Section 13
+
+- [Authentication](./draft.md)
 
 <br>

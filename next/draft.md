@@ -1,122 +1,44 @@
-# Next.js Blog Project Notes
+# Authentication
 
-<!-- Note: markdown metadata & yaml format -->
+## How Does Authentication Work (In React & NextJS Apps)?
 
-NextJS has built-in lazy loading for page routes. Code for different pages is fetched on demand when we visit a page.
+Client (Browser) <---> Server (connected to a database)
 
-## Building NextJS Apps: Options
+After filling the "login" form, we send a request to the server with the user data. On the server we validate that input and we send back a response with yes/no. If the user was successfully authenticated, he can access protected routes, send requests to other protected endpoints to the server. The authentication to be trustworthy we need "proof", and for this we got 2 main mechanisms:
 
-2 different ways of building and deploying next.js app:
+1. **Server-side Sessions** - store unique identifier on the server, and the same identifier to the client that sent us the credentials. The client sends identifier along with requests to protected resources. With SSL the identifier can't be stoled. On the client it is stored on a cookie typically, that cookie can be configured such that it's not accessible through JavaScript, to prevent cross-site-script attacks, so that it's readable only to the server when requests are made. If we protect from cross site scripting (XSS) then the client is pretty secure, only the user and server have access.
 
-1. **Standard build** - `"build": "next build"` - produces & spits an optimized production bundle, AND a server-side app (requires NodeJs server to run it, we can't use run this server-side build using a static host). Why it needs a NodeJS Server: because of the built-in server-side features, pre-rendering pages on the fly on the server, revalidating pages, API routes.
+2. **Authentication Tokens** - no identifiers, instead the server creates and asigns (but not store) "permission" tokens (random strings) on the server, and sends a token to the client. These random strings (tokens) can be unpacked to data packages. The client saves this token and asigns it to ongoing requests to protected resources. The server doesn't store this token anywhere, still the server knows how it signed that token, so the server will be able to verify if the token was created by it or not.
 
-   Pages are pre-rendered, but NodeJS server is required for API routes, server-side pages and page revalidations, dynamic pages for `getStaticPaths`.
+When building SPAs, we typically work with Tokens instead of Sessions. Why? Pages are served directly and populated with logic without hitting the server, we don't send a request for every page you visit, the server doesn't see every request you have send, therefore you load pages without the server being able to directly find out if you are authenticated ot not.
 
-   Re-deply needed if code changes or you don't use revalidations and need page updates.
+Another reason for SPAs + Tokens: Backend APIs which are used for SPAs are typically stateless, they don't care about the individual connected clients, they don't keep track of all the connected clients, instead that API can work pretty much on its own, it just is able ot hand out permissions to clients who authenticated so that they can then later request access to protected resources. The API itself does not store any extra information about any connected clients.
 
-2. **Full Static Build** - `"export": "next export"` - produces an optimizaed production bundle of our app as well, BUT produces 100% static app (HTML, CSS, JS): No NodeJS server required. This means that you can't use certain NextJS features: API routes, server-side pages, page revalidations, static paths with fallbacks set to true or blocking.
+For SPAs, the server is not involved in every request and every action that's happening on our page, because we handled that with frontend JavaScript, and we have that stateless API connected to the SPA.
 
-   Re-deploy needed for code and content changes.
+This results in a "detached" forntend and backend combination, they do talk to each other sometimes, but not for every action that's going on on the page.
 
-## Key Deployment Steps
+- Servers don't save information about authenticated clients.
+- Instead, clients should get that permission which allows them to prove that they are authenticated.
 
-1. Add page metadata, optimize code, remove unnecessary dependencies
+That's why we use tokens (JWT: JSON Web Tokens).
 
-2. Use environment variables for variable data (e.g. database credentials, API keys, etc.)
+### JSON Web Tokens (JWT)
 
-3. Do a test build and test the production-ready app locally or on some test server
+JWT is generated with 3 main building blocks.
 
-4. Deploy
+- Issuer Data (data "metadata" automatically added into a token by the server when that token is generated, preconfigured by 3rd party packages we use for generating tokens).
+- Custom Data (e.g. user data)
+- Secret Signing Key - we set this on the server, the client never gets to see this key.
 
-## 2. The NextJS Config File & Working With Environment Variables
+We generate a token with some third-party package by combining all these pieces together, by creating a long random string that incorporates all that data and is signed by that key.
 
-Environment varialbes - use different values in different parts of our code during development and production. NextJS has built-in support for environment variables.
+Server-side Token Creating + Signing = JSON Web Token.
 
-We can configure nextJS:
+"Signing" does not mean encryption, JWT is not encrypted, you can unpack it and read the data inside of it without knowing that key, that key only proves that a given server created that token, but you can read the content of the token without knowing that key, the key will not be included in the token, you can't read the key even if unpack the token.
 
-```js
-// next.config.js root file
+So it's that token that is stored by the client, which then is attached to requests to protected resources on the server, for example if you want to change the password, we don't just send the old and new password, but we also include that token in the outgoing request.
 
-module.exports = {
-    module.exports = {
-  env: {
-    mongodb_username: 'un',
-    mongodb_password: 'pw',
-    mongodb_clustername: 'cluster0',
-    mongodb_database: 'my-site',
-  },
-};
+That token then is validated by the server, by checking if it could generate that token using the key that only it has. So it can omly generate the token by knowing the key.
 
-};
-```
-
-We can use our environment variables anywhere in our codebase.
-
-We access these variable through the global `process` object exposed by nodeJS, then on this object we can find the `eng` object that contains our variables.
-
-The variables are replaced with their values during the build process.
-
-```js
-process.eng.mongodb_username;
-```
-
-With NextJS, we can define different sets of configurations values for development and production. We can import in the config file different phases modules:
-
-```js
-const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
-
-module.exports = (phase) => {
-  if (phase === PHASE_DEVELOPMENT_SERVER) {
-    return {
-      eng: {
-        env: {
-          mongodb_username: "un",
-          mongodb_password: "pw",
-          mongodb_clustername: "cluster0",
-          mongodb_database: "my-site-dev",
-        },
-      },
-    };
-  }
-
-  return {
-    env: {
-      mongodb_username: "un",
-      mongodb_password: "pw",
-      mongodb_clustername: "cluster0",
-      mongodb_database: "my-site",
-    },
-  };
-};
-```
-
-Using the `if` statement we check if we are in the development or production step.
-
-NextJS will run this function and pass in an `phase` object that indicates the phase we are in.
-
-If we make past first `if` check, we are not in the dev phase.
-
-## Running a Test Build & Reducing Code Size
-
-`npm run build`
-
-In the terminal we have information about the build.
-
-## A Full Deployment Example (To Vercel)
-
-The `.next` folder contains the production bundle.
-
-Hosting provider that supports NodeJS.
-
-When deploying a NextJS app -> we push the code to a remote repository like GitHub -> we can connect the remote repository to the Vercel acc and tell vercel that whenever the code from that repo changes, then redeploy.
-
-After importing the project to vercel from github..
-
-It will take and put our api routes into serverless functions which are executed on demand.
-
-## the "export" Feature
-
-1. `next build`
-2. `next export`
-
-After running both commands, we get a `out` folder we our static website.
+For token creation and validation we can rely on secure third-party packages
