@@ -285,3 +285,34 @@ Note: getServerSideProps is basically a function that runs code on the server si
 This will redirect without even flashing the user interface.
 
 Now, the `user-profile.js` & `UserProfile` component will only render if the `pages/profile.js` page will render accoridng to the result from `getServerSideProps` function logic.
+
+<!--
+## Protecting the "Auth" Page
+
+Redirect after loggin successfuly.
+-->
+
+## Using the "next-auth" Session Provider Component
+
+```js
+// _app.js
+import { SessionProvider } from "next-auth/react";
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <SessionProvider session={pageProps.session}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </SessionProvider>
+  );
+}
+```
+
+By passing `sesstion={pageProps.session}` to `SessionProvider`, which it gets from `getServerSideProps` that was returned, this allows next-auth to skip the extra session check performed by `useSession` if we already have the session from `getServerSideProps` function.
+
+If `pageProps.session` is undefined, so it's not set, then `setSession` will check it manually.
+
+This can save some performance and avoid some redundant HTTP requests.
+
+Using `SessionProvider` wrapper is a recommended next-auth optimization.
