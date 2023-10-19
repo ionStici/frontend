@@ -59,9 +59,3 @@ With React and SPAs, you typically need a backend API to which you send requests
 Because fo security reasons, we need a backend api server to which we can send requests and then it's that server which connects to a database and stores data.
 
 Firebase (from google) is a service which contains a databse and an API to which we can consent requests, which will then ensure that the data is saved in that database.
-
-<br>
-
-<!-- firebase -->
-
-<br>

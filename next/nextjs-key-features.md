@@ -1,6 +1,12 @@
 # NextJS Key Features
 
-Next.js is a React Framework.
+Next.js - the React Framework for Production (fullstack framework).
+
+What is a Framework? (compared to a library) - bigger, more features, it gives clear rules on how you write code.
+
+Next.js enhances React by adding additional core features.
+
+Why production? Because next.js solves common problems related to production.
 
 <br>
 

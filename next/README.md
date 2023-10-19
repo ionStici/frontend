@@ -31,8 +31,8 @@
 
 - [Deploy Next.js App to Vercel](./deploy.md)
 
-### Section 13
+<!-- ### Section 13 -->
 
-- [Authentication](./draft.md)
+<!-- - [Authentication](./next-auth.md) -->
 
 <br>
