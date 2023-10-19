@@ -316,3 +316,87 @@ If `pageProps.session` is undefined, so it's not set, then `setSession` will che
 This can save some performance and avoid some redundant HTTP requests.
 
 Using `SessionProvider` wrapper is a recommended next-auth optimization.
+
+Session = JSON Web Token (in our case), that is managed by next-auth, JWT is stored by next-auth in our browser cookie, next-auth determines whether we have an active session by checking that cookie & that token from that cookie.
+
+## Protecting API Routes
+
+```js
+// pages/api/change-password.js
+import { getSession } from "next-auth/react";
+
+export default async function handler(req, res) {
+  if (req.method !== "PATCH") return;
+
+  const session = await getSession({ req: req });
+  if (!session) return;
+}
+```
+
+This is all the code needed to protect an api route.
+
+HTTP request methods that make sense for changing a password: POST, PUT, PATCH - these methods imply that resources on the server should be created or changed.
+
+Again, on the server-side, we can pass the request object to `getSession({ req: req })` - it needs this request object because it will then look into it, see if a session token cookie is part of the request, if it is it will validate and extract that data from that cookie, then give us the session object.
+
+401 code - authentication is missing
+
+403 - you are authentcated, but you are not authorized (permission) for this operation, in our case because passwords ar enot equal.
+
+422 - user input is not correct.
+
+## Adding the "Change Password" Logic
+
+We encoded the email address in our token.
+
+```js
+import { connectToDatabase } from "../../../lib/db";
+import { getSession } from "next-auth/react";
+import { hashPassword, verifyPassword } from "../../../lib/auth";
+
+export default async function handler(req, res) {
+  if (req.method !== "PATCH") return;
+
+  const session = await getSession({ req: req });
+  if (!session) {
+    res.status(401).json({ message: "Not authenticated!" });
+    return;
+  }
+
+  const userEmail = session.user.email;
+  const oldPassword = req.body.oldPassword;
+  const newPassword = req.body.newPassword;
+
+  const client = await connectToDatabase();
+
+  const usersCollection = client.db.collection("users");
+
+  const user = await usersCollection.findOne({ email: userEmail });
+
+  if (!user) {
+    res.status(404).json({ message: "User not found." });
+    client.close();
+    return;
+  }
+
+  const currentPassword = user.password;
+
+  const passwordAreEqual = await verifyPassword(oldPassword, currentPassword);
+
+  if (!passwordAreEqual) {
+    res.status(403).json({ message: "Invalid password." });
+    client.close();
+    return;
+  }
+
+  const hashedPassword = await hashPassword(newPassword);
+
+  const result = await usersCollection.updateOne(
+    { email: userEmail },
+    { $set: { password: hashedPassword } }
+  );
+
+  client.close();
+  res.status(200).json({ message: "Password updated!" });
+}
+```
