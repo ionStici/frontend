@@ -120,9 +120,15 @@ Because certain features of "App Router" is still in alpha, opt for "Pages Route
 
 - `styles` for CSS.
 
+- `_app.js` is the root component, where all page components are rendered in.
+
 In Next.js we don't get an HTML document, and that's because next.js has built-in pre-rendering, it gives you that single-page-application dynamically pre-rendered when the request reaches the server.
 
 What we see on the page after live hosting, is the result of the `index.js` file from `pages` directory. The component from `pages/index.js` is pre-rendered. In the Page Source we can see that the document is filled with content.
+
+The `public/` folder serves the resources it contains statically, as part of the overall application, this means that we can reference whatever is in this folder from our code.
+
+And because Next.js will server images statically if we place them in the `public/` folder, we can reference them from JSX like `<img src="/img.jpg" />`, so without the need of importing the image.
 
 <br>
 
