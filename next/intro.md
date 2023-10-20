@@ -7,6 +7,8 @@
   - [SSR vs SSG](#ssr-vs-ssg)
 - [2. Feature: File-based Routing](#2-feature-file-based-routing)
 - [3. Feature: Build Fullstack React Apps](#3-feature-build-fullstack-react-apps)
+- [Creating a Next.js Project](#creating-a-nextjs-project)
+- [Serverless and Serverless Functions](#serverless-and-serverless-functions)
 
 <br>
 
@@ -83,61 +85,53 @@ With file-based routing we change what is visible on the screen based on the url
 Next.js provides a special `pages` folder where we can define the routes and paths using files and folders.
 
 <br>
-<br>
-<br>
-<br>
-<br>
 
 ## 3. Feature: Build Fullstack React Apps
 
-Backend Capabilities
+Next.js has backend capabilities for adding standalone backend code. We can easily add backend APIs to a React project using Node.js code.
 
-NextJS makes it easy for us as a developer to add standalone backend code.
+We don't need to build a standalone Rest API project, instead we can work on a single Next.js & React project, then add and combine the backend API code.
 
-With NextJS is's easy to add our own backend SPI into our react project using Node JS code - this allows us to add code for storing data to a database or to files, getting data from these, adding authentification, etc.
+### Next.js backend features:
 
-We don't have to build a standalone Rest API project, instead we can work on one NextJS project with all the react code, and also blend in our backend API code.
+- Server-Side Rendering (SSR)
 
-<br>
+- **API Routes:** build a backend along with the frontend in a single project. Inside the `pages/api` directory, we can create RESTful or GraphQL API Endpoints.
 
-# Creating a NextJS Project
+- **Serverless Functions:** With API routes, Next.js provides serverless functions, which are functions that run on-demand, scaling automatically as needed.
 
-1. must nodejs installed
-
-2. `npx create-next-app@latest`
+- Next.js supports various Authentication strategies. There are many libraries available for setting up authentication in a Next.js application.
 
 <br>
 
-## About the "App Router"
+## Creating a Next.js Project
 
-Using "App Router" is an alternative to using "Pages Router".
+```
+npx create-next-app@latest
+```
 
-App Router uses a different project structure and different features.
+Because certain features of "App Router" is still in alpha, opt for "Pages Router" instead.
 
-For example, in "App Router", server actions feature is still in alpha, feature which handles all non-get requests in a NextJS app.
+### Analyzing a Next.js App Directory
 
-If we want to build a NextJS app where data can change, where users can submit forms, we will need these server actions to handle these changes on the backend. This feature right now is not recommended for production.
+- `pages` here we create files for each application page (file-based routing).
 
-Because of this, now we will use "Pages Router". Later we will check out "App Router" as well.
+- `public` directory for public resources.
+
+- `styles` for CSS.
+
+In Next.js we don't get an HTML document, and that's because next.js has built-in pre-rendering, it gives you that single-page-application dynamically pre-rendered when the request reaches the server.
+
+What we see on the page after live hosting, is the result of the `index.js` file from `pages` directory. The component from `pages/index.js` is pre-rendered. In the Page Source we can see that the document is filled with content.
 
 <br>
 
-## Analyzing a NextJS App Directory
+## Serverless and Serverless Functions
 
-`pages` most important, file based routing, define the different pages that will make up the app.
+The term "Serverless" does not imply that there are no servers involved, but rather that server management and capacity planning are abstracted away from the developer. In a serverless architecture, developers can build and deploy code without worrying about the underlying infrastructure.
 
-`public` public resources
+Serverless architectures are often **event-driven**. Functions are triggered by events like HTTP requests, database operations, or queue messages. Each event triggers a serverless function which processes the event and can interact with other systems.
 
-`styles` for css
-
-In our NextJS app we don't have a html document as we would do in a react app, that's because NextJS has built-in pre-rendering, it gives you that single-page-application dynamically pre-rendered when the request reaches the server.
-
-NextJS allows us to determine WHEN a page should be pre-rendered.
-
-Execute: `npm run dev`
-
-What we see on the page after live hosting, is the result of the `index.js` file from `pages` directory. This file contains a regular react component, but this component is actually now pre-rendered. In DevTools, we can see that all the html markup is in place, not just the `div` element with the `app` id.
-
-NextJS key feature: Build in page pre-rendering.
+**Serverless functions** are the building blocks of a serverless architecture. They are small, single-purpose functions that are executed in response to events.
 
 <br>
