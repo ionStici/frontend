@@ -2,13 +2,14 @@
 
 ### Resources
 
-- [&#10697; Next.js Official Website](https://nextjs.org/) & [&#10697; Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs)
-- [&#10697; Next.js Course by Maximilian Schwarzmüller](https://www.udemy.com/course/nextjs-react-the-complete-guide/)
+| [&#10697; Next.js Website](https://nextjs.org/) | [&#10697; Next.js Learn](https://nextjs.org/learn/foundations/about-nextjs) | [&#10697; Next.js Course ](https://www.udemy.com/course/nextjs-react-the-complete-guide/) |
+| ----------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 
-### Section 1
+<div></div>
 
-- [NextJS Key Features](./nextjs-key-features.md)
-- [Creating a NextJS Project](./create-nextjs.md)
+### Next.js
+
+- [Next.js Introduction](./intro.md)
 
 ### Sections 3 & 4
 
@@ -31,8 +32,12 @@
 
 - [Deploy Next.js App to Vercel](./deploy.md)
 
-<!-- ### Section 13 -->
+<!--
 
-<!-- - [Authentication](./next-auth.md) -->
+### next-auth
+
+- [Authentication](./next-auth.md)
+
+-->
 
 <br>
