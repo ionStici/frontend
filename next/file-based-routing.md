@@ -1,62 +1,77 @@
 # File-based Routing
 
+## Table of Content
+
+- [Introduction](#introduction)
+- [Dynamic paths & routes](#dynamic-paths--routes)
+
+<br>
+
 ## Introduction
 
 **Next.js** infer routes from the folder structure by rendering react components.
 
-`/pages` directory containing file routes.
+`pages/` directory contains the file routes.
 
-`/pages/index.js` special file / main page.
+`pages/index.js` special file / main page.
 
-`/pages/about.js` with this, next.js will infer the route: `example.com/about`
+`pages/about.js` next.js will infer the route: `/about`
 
-Files within `/pages` directory, represent a url route accessible by the name of the file itself.
+Each file in the `pages/` directory represents a URL path accessible by the name of the file.
+
+### Nested paths & routes
+
+`pages/blog/index.js` creates `/blog`
+
+`pages/blog/preview.js` creates `/blog/preview`
 
 <br>
 
-## Nested paths & Routes
+## Dynamic paths & routes
 
-`/pages/portfolio/index.js` === `example.com/portfolio`
+`pages/blog/[id].js` creates `/blog/any`
 
-`/pages/portfolio/list.js` === `example.com/portfolio/list`
+The square brackets turn the file into a dynamic route, any url string becomes valid by triggering this component whenever the url does not have an explicit route.
 
-### Dynamic paths & Routes
+Then, based on the value of the url segment, we can dynamically render different React components.
 
-`pages/portfolio/[id].js` === `example.com/portfolio/anything`
-
-The square brackets turn the file into a dynamic route, any url string becomes valid by triggering this component whenever the url path does not have an explicit route.
-
-The square brackets `[]` tell next.js that it is a placeholder for any kind of value the url receives which we then have access in the component to dynamically load different kinds of data.
-
-### Extracting Dynamic Path Segment
+### useRouter Hook - extract dynamic routes
 
 ```js
-// next.js hook
 import { useRouter } from "next/router";
 
 function Page() {
-  const router = useRouter(); // returns an object
+  const rotuer = useRouter();
 
-  router.pathname; // /portfolio/[id]
-  router.query; // {id: 'anything'}
+  router.pathname; // /blog/[id]
+  router.query; // {id: 'any'}
+  router.query.id; // 'any'
 
-  router.query.id; // anything
-  // send a request to the server to fetch data with an id of router.query.id
+  return null;
 }
 ```
 
-### Building Nested Dynamic Routes & Paths
+### Building Nested Dynamic Paths & Routes
 
-`/pages/clients/[clientid]/[projectid].js` dynamic file within a **dynamic folder**.
+`pages/blog/[topic]/[id].js` dynamic file within a **dynamic folder**.
 
-`example.com/clients/mike/mike_project` this will render the file above.
+`/blog/tech/next` this will trigger the file structure from above.
 
-The url strings `mike` and `mike_project` are processed dynamically by next.js
+The URL strings `tech` and `next` are processed dyamically by next.js
 
 ```js
-router.query; // {clientid: 'mike', projectid: 'mike_project'}
+router.query; // {topic: 'tech', id: 'next'}
 ```
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
 ## Catch-All Routes

@@ -1,15 +1,12 @@
 # Next.js
 
-| Resources | [&#10697; Next.js Website](https://nextjs.org/) | [&#10697; Next.js Learn](https://nextjs.org/learn/foundations/about-nextjs) | [&#10697; Next.js Course ](https://www.udemy.com/course/nextjs-react-the-complete-guide/) |
-| --------- | ----------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| [&#10697; Next.js Website](https://nextjs.org/) | [&#10697; Next.js Learn](https://nextjs.org/learn/foundations/about-nextjs) | [&#10697; Next.js Course ](https://www.udemy.com/course/nextjs-react-the-complete-guide/) |
+| ----------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 
 - [Next.js Introduction](./intro.md)
+- [File-based Routing](./file-based-routing.md)
 
 <br>
-
-### Sections 3 & 4
-
-- [File-based Routing](./file-based-routing.md)
 
 ### Section 5 & 6
 
@@ -27,8 +24,8 @@
 
 - [Deploy Next.js App to Vercel](./deploy.md)
 
-### next-auth
+### Section 13
 
-- [Authentication](./next-auth.md)
+- [next-auth](./next-auth.md)
 
 <br>

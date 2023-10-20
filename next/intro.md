@@ -14,7 +14,7 @@
 
 ## What is Next.js
 
-**React** is a JS library (provides helpful functions) for building interactive **user interfaces**.
+**React** is a declarative JS library (it provides helpful functions) for building interactive **user interfaces**.
 
 **Next.js** is a (_fullstack_) React **framework** that gives you building blocks to create web applications.
 
