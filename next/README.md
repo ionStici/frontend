@@ -5,12 +5,9 @@
 
 - [Next.js Introduction](./intro.md)
 - [File-based Routing](./file-based-routing.md)
+- [Page Pre-Rendering & Data Fetching](./pre-rendering.md)
 
 <br>
-
-### Section 5 & 6
-
-- [Page Pre-Rendering & Data Fetching](./pre-rendering.md)
 
 ### Section 7
 

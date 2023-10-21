@@ -1,52 +1,60 @@
-# Draft
+# Page Pre-Rendering & Data Fetching
 
-NextJS helps with building fullstack React apps, by pre-rendering pages on the server-side (SSR).
+## Table of Content
 
-NextJS Data Fetch / blending client-side and server-side code.
-
-Statis vs Server-side page generation.
-
-<br>
-
-## The Problem With Traditional React Apps (and Data Fetching)
-
-In traditional React Apps, initially we get an empty html document with a single `div`, then the JS bundle will render the content and components in that `div`, this may lead to delay in website rendering, especially if first we need to fetch some data that must to be rendered, bad UX.
-
-Besides that, search engines have no way of inspecting the website content, which leads to bad SEO indexing.
+- [Introduction](#introduction)
+- [Static Side Generation with "getStaticProps"](#static-side-generation-with-getstaticprops)
 
 <br>
 
-## How NextJS Prepares & Pre-renders Pages
+## Introduction
 
-NextJS sends back a pre-rendered page.
+In traditional React applications, the browser initially receives an empty html document with a single `div` tag in which the JavaScript bundle will render all the content and components. This may lead to delay in website rendering and poor SEO indexing.
 
-When a request is made to a website built with NextJS, it returns a pre-rendered page.
+With Next.js, on the other hand, the browser receives a pre-rendered version of the page from the server. Next.js prepares the page in advance by pre-building all the html content and by pre-loading all the data that will eventually be needed.
 
-Instead of loading data only after the page was sent back to the client, NextJS pre-renderes the page, so the html document with all the data that might be needed, it loads that in advance and pre-generates the finished html page, so that it's this finished html page that can be sent back to the client. Good for SEO.
+Even so, the JavaScript bundle is also sent, next.js will hydrate with React code once loaded, so that eventually React takes over the pre-rendered page.
 
-But also it will send the JS script, by a process named Hydrating
+**Consider:** Pre-rendering only affects the initial load, once the page is hydrated, which happenes right after pre-rendering, then we have a traditional single-page-application, React takes over and handles the frontend. If we visit another page of our website, that page is not pre-rendered, instead created on the client by React, only the initial page visit is pre-rendered so that we don't get an empty page until React is ready.
 
-The JS script will be send as well, NextJS will hydrate with React code once loaded, this will lead to the fact that the JavaScript code will take over the pre-rendered page and let React do its job, by this we still have an interactive app.
+<br>
 
-It sent back the pre-rendered page so that all the core content was already there right from the start, and so that search engines could see the content.
+**Page Pre-Rendering** - generating the HTML for a page in advance, instead of having it all done by the client-side JavaScript.
 
-So, NextJS prepares a page in advance, pre-building all the html content, and by pre-loading all the data that will eventually be needed.
+Next.js has two forms of pre-rendering: **Static-site Generation (SSG)** and **Server-side Rendering (SSR)**
 
-Note: this pre-rendering only affects the initial load. Once we are on a website powered by nextJS and React, and once the page is hydrated which happenes right after this pre-rendering, then we have a single-page-application again, then React takes over and handles everything on the frontend. If we visit another page of our website, then that page is not pre-rendered, but instead created in the client by React, only the initial page visit is pre-rendered, so that we don't get the empty page until React is ready.
+- SSG is when the HTML is generated in advance at build time (before deployment) and will be reused (the html) on each request.
 
-_NextJS has 2 forms of pre-rendering which you can choose from:_
+- SSR is when the HTML is generated on each server request (after deployment).
 
-1.  Static Generation **(Recommended)**
-2.  Server-side Rendering
+We can mix SSG and SSR. Pre-rendering ensures that your SPA is indexed properly by search engines, and also it can improve performance.
 
-_Main difference:_
+<br>
 
-with static generation all the pages are pre-generated in advance in the build phase. So when you build you app for production before you deploy it, you prepare all those pages.
+**Data Fetching** - retrieving data from a backend for your page.
 
-With server-side rendering, pages are created just in time after deploymen when a request reaches the server.
+- For SSG, next.js provides the `getStaticProps` function to fetch data at build time.
 
-There are ways of mixing that.
+- For SSR, next.js provides the `getServerSideProps` function to fetch data on each request.
 
+- Next.js also provides the `getStaticPaths` function, used for dynamic routes, which lets you specify which paths you want to pre-render.
+
+These data fetching methods run on the server-side, meaning they do not send any client-side JavaScript to the browser that would affect the SEO of the page.
+
+<br>
+
+Together, these concepts allow you to build _performant, SEO-friendly, data-rich applications_ using Next.js and React.
+
+<br>
+
+## Static Side Generation with "getStaticProps"
+
+`getStaticProps` provides a server-side data fetching mechanism that operates at build time, enabling you to generate static, SEO-friendly, and highly optimized pages that load quickly and provide a great user experience.
+
+<br>
+<br>
+<br>
+<br>
 <br>
 
 ## Static Generation with "getStaticProps"
