@@ -139,5 +139,3 @@ The term "Serverless" does not imply that there are no servers involved, but rat
 Serverless architectures are often **event-driven**. Functions are triggered by events like HTTP requests, database operations, or queue messages. Each event triggers a serverless function which processes the event and can interact with other systems.
 
 **Serverless functions** are the building blocks of a serverless architecture. They are small, single-purpose functions that are executed in response to events.
-
-<br>

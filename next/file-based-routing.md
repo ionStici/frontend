@@ -163,5 +163,3 @@ Just like `Link`, `push()` accepts an object with routes as well.
 Regular React components should not be in the `pages/` folder, this folder should only contain page files, because whatever files we create inside here, it will then generate and automatically lead to routes. Instead, create a `components/` folder for react components, outside `pages/`.
 
 `pages/blog/[post].js` and `pages/blog/[...post].js` paths - the route containing `[post].js` will be triggered when the url will contain only 1 segment, such as `blog/next`, but `[...post].js` file route will be triggered only when the url will contain more than 1 segment, such as `blog/next/welcome`, so these 2 routes will not interfere with each other. The three dots path consumes as unlimited amount of segments
-
-<br>
