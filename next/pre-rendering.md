@@ -5,6 +5,7 @@
 - [Introduction](#introduction)
 - [Static Site Generation with "getStaticProps"](#static-site-generation-with-getstaticprops)
 - ["getStaticProps"](#getstaticprops)
+- [Running Server-side Code & Using the Filesystem](#running-server-side-code--using-the-filesystem)
 
 <br>
  
@@ -125,3 +126,34 @@ The output of `next build` can be found in `.next/server/pages/index.html`
 The `next start` script will start the production ready page with a node.js server.
 
 <br>
+
+## Running Server-side Code & Using the Filesystem
+
+```js
+import path from "path";
+import fs from "fs/promises";
+
+export default function HomePage(props) {
+  const { data } = props;
+
+  return null;
+}
+
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), "data", "todos.json");
+  const jsonData = await fs.readFile(filePath);
+  const data = JSON.parse(jsonData);
+
+  return { props: { data } };
+}
+```
+
+Code inside the `getStaticProps` function is executed on the server-side in a Node.js environment, we can use Node.js core modules in here, this means that we can work with the file-system.
+
+Next.js will split our code in a clever way so that imports like `fs` and functions like `getStaticProps` will not make to the final client-side bundle.
+
+The `fs` module from `"fs/promises"` is a special version of the `fs` module that uses promises. Now, `fs.readFile()` will return a promise, so we have to `await` for the response.
+
+The `path` node.js module contains helpful functionalities for building paths. Using `path.join()` we can build a path that will be consumed by `fs.readFile()`
+
+`process.cwd()` node.js object gives the current working directory, the root. This object will tell `path.join()` to start from the root directory, then the following arguments are the paths to the data we are looking for.
