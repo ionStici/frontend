@@ -4,6 +4,7 @@
 
 - [Introduction](#introduction)
 - [Static Site Generation with "getStaticProps"](#static-site-generation-with-getstaticprops)
+- ["getStaticProps"](#getstaticprops)
 
 <br>
  
@@ -81,4 +82,46 @@ The `getStaticProps` function can be used only in `pages/` files. In this functi
 
 <br>
 
-<!-- ## "getStaticProps" -->
+## "getStaticProps"
+
+`getStaticProps` function can be added to any page file, and only there. You need to export it so that Next.js will call it when it pre-generates the page. This function confirms to Next.js that this page should be pre-generated.
+
+```js
+// pages/index.js
+
+export default function HomePage(props) {
+  const { data } = props;
+
+  return <h1>Hello World!</h1>;
+}
+
+export async function getStaticProps(context) {
+  const response = await fetch("api");
+  const data = response.json();
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
+```
+
+`getStaticProps` must return an object with a `props` key.
+
+1. `getStaticProps` runs at build time on the server-side
+2. It fetches data before the component is pre-rendered
+3. Then passes that data as `props` to the page component
+4. Then the page component will render, accessing that data through props
+
+None of this happens on the client-side, but during the build process, in a node.js environment.
+
+If we view the Page Source, we can see that the HTML document is filled, so fetching the data did not happen on the client, but on the server.
+
+The `next build` script will create the optimized production-ready build, it's this step which pre-generates the pages. In the terminal we get information about the static pages it generated.
+
+The output of `next build` can be found in `.next/server/pages/index.html`
+
+The `next start` script will start the production ready page with a node.js server.
+
+<br>
