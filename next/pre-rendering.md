@@ -157,3 +157,94 @@ The `fs` module from `"fs/promises"` is a special version of the `fs` module tha
 The `path` node.js module contains helpful functionalities for building paths. Using `path.join()` we can build a path that will be consumed by `fs.readFile()`
 
 `process.cwd()` node.js object gives the current working directory, the root. This object will tell `path.join()` to start from the root directory, then the following arguments are the paths to the data we are looking for.
+
+<br>
+
+## Incremental Static Generation (ISR)
+
+Next.js mechanism to provide fresh content with a static-site generation approch.
+
+```js
+export async function getStaticProps() {
+  const data = "...";
+
+  return {
+    props: { data },
+    revalidate: 10, // Re-generate the page every 10 seconds
+  };
+}
+```
+
+Code from `getStaticProps` executes on the server-side, but not on an actual server which serves the application, instead it runs on our machine in the build process when we run `next build`.
+
+What to do if data changes frequently? Re-build & Re-deploy all the time? Or maybe `useEffect`?
+
+Even if `getStaticProps` function executes when we run the `build` script, we can continuously update the page after deployment without re-deploying, using a Next.js built-in feature:
+
+**Incremental Static Generation** allows you to update static pages after they have been generated, on a per-page basis, without needing to rebuild the entire site.
+
+Specify a `revalidate` period in seconds, this tells next.js how often to regenerate a given page.
+
+### Regeneration Process
+
+When a request is made to a page, Next.js will check the revalidation period.
+
+If the page is "stale" (older than the revalidation period), Next.js will server the stale page to the user for a faster response, while triggering a regeneration process on the server.
+
+The regeneration process involves executing `getStaticProps` function again on the server to fetch the latest data and generate a new version of the page.
+
+Once the regeneration process is complete, the newly generated page replaces the old (stale) page in the cache. Subsequent requests from users will receive the update page until it becomes stale again, at which point the process repeats.
+
+Regeneration occurs on the server-side when a stale page is requested, allowing for the page to be update without blocking user requests. The client-side is not involved in the regeneration process, it merely receives the potentially stale page.
+
+<br>
+<br>
+<br>
+
+<!-- ## "getStaticProps" & Configuration Options
+
+`getStaticProps` function when called (by next.js) receives an argument.
+
+```js
+export async function getStaticProps(context) {}
+```
+
+`context` - object with extra information about the page when the function is executed, for example: dynamic params, dynamic path segment values.
+
+### Third key: notFound
+
+```js
+export async function getStaticProps() {
+  //
+
+  return {
+    props: {},
+    revalidate: 10, //
+    notFound: false,
+  };
+}
+```
+
+`notFound` wants a boolean value, if `true` then the page will return a `404` error and therefore will render the `404.html` page, in can use this in our advantage in case the code we fetched in the function body returned an error and then we dynamically return 404.
+
+### redirect key
+
+redirect the user to another page, use case: based on data fetching.
+
+```js
+if (!data) {
+  return {
+    redirect: {
+      destination: "/no-data",
+    },
+  };
+}
+
+return {
+  props: {},
+};
+```
+
+If no `data`, then redirect the page to `no-data` route instead of this current page.
+
+<br> -->
