@@ -3,9 +3,13 @@
 ## Table of Content
 
 - [Introduction](#introduction)
-- [Static Site Generation with "getStaticProps"](#static-site-generation-with-getstaticprops)
+- [Static Site Generation & "getStaticProps"](#static-site-generation-with-getstaticprops)
 - ["getStaticProps"](#getstaticprops)
-- [Running Server-side Code & Using the Filesystem](#running-server-side-code--using-the-filesystem)
+- [Running Server-side Code](#running-server-side-code--using-the-filesystem)
+- [Incremental Static Generation (ISR)](#incremental-static-generation-isr)
+- [The "context" Argument](#the-context-argument)
+- ["notFound" property](#notfound-property)
+- ["redirect" property](#redirect-property)
 
 <br>
  
@@ -198,53 +202,225 @@ Once the regeneration process is complete, the newly generated page replaces the
 Regeneration occurs on the server-side when a stale page is requested, allowing for the page to be update without blocking user requests. The client-side is not involved in the regeneration process, it merely receives the potentially stale page.
 
 <br>
-<br>
-<br>
 
-<!-- ## "getStaticProps" & Configuration Options
+## The "context" Argument
 
-`getStaticProps` function when called (by next.js) receives an argument.
+The `getStaticProps(context)` function when called by Next.js, receives a `context` object argument.
 
 ```js
 export async function getStaticProps(context) {}
 ```
 
-`context` - object with extra information about the page when the function is executed, for example: dynamic params, dynamic path segment values.
+`context` is an object with extra information about the page when the function is executed, it holds dynamic params, dynamic path segment values, and more.
 
-### Third key: notFound
+<br>
+
+## "notFound" property
 
 ```js
 export async function getStaticProps() {
-  //
+  // ... data fetching
+
+  if (!data) {
+    // if data is not found, return 404 error
+    return {
+      notFound: true,
+    };
+  }
 
   return {
-    props: {},
-    revalidate: 10, //
-    notFound: false,
+    // otherwise, return the data as a prop
+    props: { data },
   };
 }
 ```
 
-`notFound` wants a boolean value, if `true` then the page will return a `404` error and therefore will render the `404.html` page, in can use this in our advantage in case the code we fetched in the function body returned an error and then we dynamically return 404.
+The `notFound` key when set to `true`, the page will return a `404` error, therefore `404.html` will render.
 
-### redirect key
+<br>
 
-redirect the user to another page, use case: based on data fetching.
+## "redirect" property
+
+`redirect` the user to another page
 
 ```js
-if (!data) {
+export async function getStaticProps() {
+  // ... data fetching
+
+  if (!data) {
+    // if data is not found, redirect to another page
+    return {
+      redirect: {
+        destination: "/no-data",
+        permanent: false, // This redirection is not permanent
+      },
+    };
+  }
+
+  // otherwise, return data to props
   return {
-    redirect: {
-      destination: "/no-data",
+    props: { data },
+  };
+}
+```
+
+If no `data`, then `redirect` the page to `no-data` route instead of this current page.
+
+- `destination` - the url to redirect to.
+
+- `permanent` - a boolean indicating whether the redirection is permanent `true` or temporary `false`. A permanent redirect will signal search engines to update their indexes with the new URL.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- ## Working with Dynamic Parameters
+
+Extracting `params` in the component function using `useRouter`, we work with params in the browser.
+
+For pre-rendering a page, where we prepare the data for pre-rendering the page, then this happens on the server, for example using `getStaticProps` which runs before the component function runs.
+
+We can use the `context` object that `getStaticProps` receives to work and get access to `params` (to the dynamic path segment) inside this pre-generating function, so that we could prepare the data for the component before it runs. Then we don't need to extract that dynamic segment in the component function.
+
+### "getStaticPaths" For Dynamic Pages
+
+If we have a dynamic page with square brackets `[id].js` then the default behavior is not to pre-generate the page with `getStaticProps`, because technically we will have multiple pages with different data, next.js doesn't know in advance how many pages to generate. Instead, these pages are always generated just in time on the server. Now it doesn't work because we added `getStaticProps`.
+
+When we add `getStaticProps()` functionw to a page component file, then we tell next.js that you want to pre-render the page in advance.
+
+For dynamic routes we need to give next.js more information. We can tell next.js which paths of a dynamic page should be pre-generated. For example we can tell next.hs which ids this route `[id].js` expects, so that it will pre-generate.
+
+So that in the end, multiple pages could be pre-generated by next.js by knowing the pages in the first place.
+
+We can inform next.js about this with another function: `export async function getStaticPaths() {}` , this is also a function that we can add only to `pages` component functions. And also we need to export it to make next.js aware of it.
+
+### getStaticPaths
+
+The goal of `getStaticPaths` function is to tell next.js which instances of this dynamic page `[id].js` should be generated.
+
+```js
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { pid: "p1" } },
+      { params: { pid: "p2" } },
+      { params: { pid: "p3" } },
+    ],
+    fallback: false,
+  };
+}
+```
+
+This tells next.js that the dynamic page that contains the above `getStaticPaths` function, should be pre-generated 3 times with those 3 values `p1 p2 p3`.
+
+THEN, next.js will call `getStaticProps` 3 times for these different ids, and then we can work as usual with `getStaticProps`.
+
+AGAIN, `getStaticPaths` is requried to tell next.js which concrete instances of this dynamic page must be pre-generated.
+
+### "getStaticPaths" & Link Prefetching: Behind The Scenes
+
+Pre-rendering of multiple instances of a dynamic page - after `build`.
+
+It pre-renders: for our dynamic page `[id].js` it generates 3 instances `p1 p2 p3`, 3 html pages. Besies that by default it pre-generates the main `index.html` and `404.html` pages.
+
+Besides the pre-generated html files we also have the json files for pre-loading that data if we would navigate to one of this pages directly through a link, not for the initial page load.
+
+Pre-fetching data - in production, if we check the network devtools tab, we see that json files for the dynamic pre-generated page were loaded `p1.json`.. it pre-fetched the props for the dynamic page that would need to be loaded if you click on one of the links that direct to those pages. Again, it pre-fetched this data even before accessing the actual dynamic pages, so on the main page. And now, when we click on a link, we don't send a request to the server and load the pre-rendered html file, instead we stay in this single page app which was loaded and hydrated after the initla request. Instead, JS will render a new page for us just as it would do in a regular app without nextjs, but the data needed for this page is coming from the pre-fetched json file, which it loaded and read under the hood on our behalf, so it doesn't need to fetch the data after we navigated to that page, but so that the data is already there when we do navigate, to show the page faster.
+
+### Fallback Pages
+
+The `fallback` key can help if we have a lot of pages that would need to be pre-generated.
+
+With `fallback: true` We tell next.js that even pages which are not listen in `getStaticPaths`, can be valid, but they are not pre-generated, instead they're pre-generated just in time, when a request reaches the server.
+
+This allows us to pre-generate highlt visited pages by specify the `params` for them, and postpone the generation to less frequented pages to the server, so that they are only pre-generated when they're needed.
+
+BUT, if instead of clicking on a link on our page, but instead directly accessing a url, and sending a new request, then we get an error. Why, because this dynamic pre-generation does not finish instantly.
+
+So, when using this `fallback: true` feature, we should be prepared to return a fallback state in the react component:
+
+```js
+function Page(props) {
+  const { data } = props;
+
+  if (!data) return <p>Loading</p>;
+
+  return <h1>{data.title}</h1>;
+}
+```
+
+With this, the page will be rendered, by first rendering the loading paragraph, and then when the data is done loading next.js will give it to the component and the that component will render with that data.
+
+`fallback: 'blocking'` with this we don't need the fallback check in the component, with this next.js will wait for the page to fully be pre-generated on the server before it serves that - this will take a little bit longer for the visitor of the page to get a respone.
+
+## Loading Paths Dynamically
+
+```js
+function ProductDetailPage(props) {
+  const { loadedProduct } = props;
+
+  return (
+    <Fragment>
+      <h1>{loadedProduct.title}</h1>
+      <p>{loadedProduct.description}</p>
+    </Fragment>
+  );
+}
+
+async function getData() {
+  const filePath = path.join(process.cwd(), "data", "dummy-backend.json");
+  const jsonData = await fs.readFile(filePath);
+  const data = JSON.parse(jsonData);
+  return data;
+}
+
+export async function getStaticProps(context) {
+  const { params } = context;
+  const productId = params.pid;
+
+  const data = await getData();
+  const product = data.products.find((product) => product.id === productId);
+
+  return {
+    props: {
+      loadedProduct: product,
     },
   };
 }
 
-return {
-  props: {},
-};
+export async function getStaticPaths() {
+  const data = await getData();
+
+  const ids = data.products.map((product) => product.id);
+  const pathsWithParams = ids.map((id) => ({ params: { pid: id } }));
+
+  return {
+    paths: pathsWithParams,
+    fallback: false,
+  };
+}
 ```
 
-If no `data`, then redirect the page to `no-data` route instead of this current page.
+## Fallback Pages & "Not Found" Pages
 
-<br> -->
+Trying to request a page that doesn't exist, but also: `fallback: true` if an ID value is not found, we still want to render a page. Use `notFound`:
+
+```js
+export async function getStaticProps(context) {
+  const product = undefined;
+
+  if (!product) {
+    return { notFound: true };
+  }
+
+  return {
+    props: {
+      loadedProduct: product,
+    },
+  };
+}
+```
+
+ -->
