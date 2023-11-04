@@ -9,25 +9,3 @@ Frontend Fundamentals covers a broad array of topics including but not limited t
 I wish you all the best on your journey! 🙌
 
 <br>
-
-## Table of Content
-
-- [**Internet** - The Global Network](./internet.md)
-
-- [**HTML** - HyperText Markup Language](./1-html/README.md)
-
-- [**CSS** - Cascading Style Sheets](./2-css/README.md)
-
-- [**JavaScript** - the programming language of the web](./3-js/README.md)
-
-- [**TypeScript** - strongly typed programming language](./4-ts/README.md)
-
-- [**React** - JavaScript library for building user interfaces](./react/README.md)
-
-- [**Redux** - a predictable state container for JS Apps](.)
-
-- [**React Router** - dynamic routing for React Apps](.)
-
-- [**Next.js** - React Framework for Full Stack Web Apps](./next/README.md)
-
-<br>

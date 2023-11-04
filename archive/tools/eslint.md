@@ -19,6 +19,8 @@ Linters provides a number of automated checks that help streamline software deve
 
 ## ESLint
 
+Settings > ESLint: Run > onSave
+
 <br>
 
 ```

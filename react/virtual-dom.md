@@ -1,15 +1,15 @@
 [&larr; Back](./README.md)
 
-# **Virtual DOM**
+# Virtual DOM
 
-## **Understanding the DOM manipulation problem**
+## Understanding the DOM manipulation problem
 
 Whenever the browser detects a change to the DOM, it rebuilds the _entire_ DOM only for that change, not considering that most elements were not updated. DOM manipulation is a slower process than most JavaScript operations.
 
 - _The problem:_ multiple inefficient DOM updates affecting the website performance.
 - _The solution:_ Virtual DOM.
 
-## **The Virtual DOM**
+## The Virtual DOM
 
 By using a Virtual DOM, we prevent unnecessary DOM rebuilds, and only affect the elements that were updated, greatly improving the webpage performance and creating amazing user experiences.
 
@@ -21,7 +21,7 @@ Frameworks like Vue or React create their own representation of the DOM as a Jav
 
 Making changes to JavaScript objects and comparing so that only specific parts of the real DOM is updated, is far faster than trying to do the same with common DOM manipulations.
 
-## **How it Works**
+## How it Works
 
 - When a JSX element is rendered, every single virtual DOM object gets updated.
 - Then, React compares the virtual DOM with a virtual DOM snapshot that was taken right before the update.

@@ -9,7 +9,6 @@
 <div></div>
 
 - [Page Pre-rendering & Data Fetching](./pre-rendering.md)
-- [Server-side Rendering (SSR)](./)
 
 <div></div>
 

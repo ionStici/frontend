@@ -1,7 +1,6 @@
 # React
 
 1. [Virtual DOM](./virtual-dom.md)
-2. [create-react-app](./create-react-app.md)
 
 <div></div>
 
@@ -36,15 +35,3 @@
 16. [React Refresher](./react-refresher.md)
 
 <br>
-
-<!--
-
-Sass / CSS Modules
-
-Styled Components
-
-Styled JSX
-
-Framer
-
--->
