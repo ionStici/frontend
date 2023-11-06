@@ -1,13 +1,26 @@
 # React
 
-1. [Virtual DOM](./virtual-dom.md)
+<br>
+
+- [New React Project](./react-project.md)
+
+- [React Essentials](./react-essentials.md)
+
+- [Virtual DOM](./virtual-dom.md)
+
+- [React DevTools](./react-dev-tools.md)
+
+- [Styles in React](./styles-in-react.md)
+
+- [Functional Components](./functional-components.md)
+
+- [Props](./props.md)
 
 <div></div>
 
-3. [React Basics](./react-basics.md)
-4. [React devTools](./react-dev-tools.md)
+<br>
 
-<div></div>
+<!--
 
 5.  [React Class Components](./react-components.md)
 6.  [Props](./props.md)
@@ -27,11 +40,11 @@
 <div></div>
 
 13. [Function Components](./function-components.md)
-14. [useState Hook](./use-state.md) <!-- review  -->
-15. [useEffect Hook](./use-effect.md) <!-- review  -->
+14. [useState Hook](./use-state.md)
+15. [useEffect Hook](./use-effect.md)
 
 <div>
 
 16. [React Refresher](./react-refresher.md)
 
-<br>
+-->

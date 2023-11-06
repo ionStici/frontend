@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Virtual DOM
 
 ## Understanding the DOM manipulation problem

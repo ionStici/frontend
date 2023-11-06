@@ -2,10 +2,6 @@
 
 [ReactJS](https://react.dev/) is a declarative, component-based, client-side JavaScript library used for building reactive user interfaces. Using React we can build Single-Page-Applications (SPA).
 
-<!-- Imperative programming is when we describe step-by-step. -->
-
-[React 18 - Update Guide & What's New?](https://academind.com/tutorials/react-18-update-guide)
-
 <br>
 
 ## Notes from "React Refresher"

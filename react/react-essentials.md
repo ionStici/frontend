@@ -6,34 +6,6 @@ Why React? Fast, modular, scalable, flexible, popular.
 
 <br>
 
-## New React App
-
-```
-npm create vite@latest my-app
-```
-
-### Predefined Scripts
-
-- `npm run dev` starts the development server.
-
-- `npm run build` bundles the app into static files for production.
-
-- `npm run preview` preview the production version of the app.
-
-### Directory Structure
-
-- `public/` for static assets.
-
-- `src/` contains the actual application code.
-
-- `package.json` contains descriptive and functional metadata about a project.
-
-- `package-lock.json` contains the dependency tree installed in node_modules/.
-
-- `node_modules/` contains dependencies and sub-dependencies used by React.
-
-<br>
-
 ## JSX
 
 **JSX** is a syntax extension for JavaScript, it allows developers to declaratively create HTML elements in JavaScript by writing HTML markup code directly inside of JavaScript files.
@@ -90,14 +62,30 @@ JSX rules:
 1. If a JSX expression takes up more than one line, then you must wrap it in parentheses.
 2. Any JSX expression must have exactly one outer (parent) element.
 
+### React Fragment
+
+Use the `<Fragment>` react component (or the short `<>`) as the root element in case you need more outer elements.
+
+```jsx
+import { Fragment } from "react";
+```
+
 <br>
 
-## className
+## className and htmlFor
 
 To set a `class` attribute in JSX, we use the `className` keyword instead.
 
 ```jsx
 <h1 className="heading-1">Hello</h1>
+```
+
+### htmlFor
+
+In JSX, the `for` attribute is written as `htmlFor`.
+
+```jsx
+<label htmlFor="name">Name</label>
 ```
 
 <br>
@@ -123,60 +111,63 @@ const myName = "John";
 const hello = <p>Hello, {myName}</p>;
 ```
 
-<br>
-
-## React Components
-
-React apps are built by creating and combining multiple components.
-
-React components are simply functions that fulfill 2 rules:
-
-1. Must start with an uppercase character
-2. Must return JSX or `null`
-
-```jsx
-function App() {
-  return <h1>Hello, World!</h1>;
-}
-```
-
-Besides returning, we can have any JavaScript logic inside function components.
-
-Separation of concerns: One component per file, which, by using JSX, combines HTML, CSS and JS in one single block of code.
+We can place JS expressions inside JSX curly braces, but not statements.
 
 <br>
 
-## Rendering a Component
+## Event Listeners in JSX
 
 ```jsx
-// index.jsx
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-function App() {
-  const text = "Hello, React!";
-  return <h1>{text}</h1>;
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const handleClick = () => console.log("hi");
+<button onClick={handleClick}>Click</button>;
 ```
 
-- The `React` and `ReactDOM` libraries are imported.
+- Event listeners are defined on JSX elements by special attributes: [Supported Events](https://reactjs.org/docs/events.html#supported-events).
 
-- A functional component named `App` is defined.
+- The name of the event listener attribute: The keyword `on` + the event type (in camelCase).
 
-- `ReactDOM.createRoot()` creates the root DOM node.
+- The value of the event listener attribute would be a predefined function.
 
-- The `render()` method is called on the `root` obhect, which mounts the `App` component to the DOM.
+<br>
 
-- `<React.StrictMode>` is an optional utility component that helps detect potential problems.
+## JSX and Conditionals
 
-_Virtual DOM note:_ `render` only updates DOM elements that have been changed.
+_Conditional rendering_
+
+- JSX inside **`if` statements** (note: we can't inject `if` into JSX)
+
+  ```jsx
+  let myName;
+  if (true) myName = <p>John</p>;
+  ```
+
+- **Ternary Operator** (inside JSX)
+
+  ```jsx
+  const p = <p>{true ? "first" : "second"}</p>;
+  ```
+
+- **`&&`**
+
+  ```jsx
+  const p = {true && <p>Hello</p>};
+  ```
+
+<br>
+
+## `map` in JSX
+
+```jsx
+const arr = ["dog", "note", "cactus"];
+const list = arr.map((item) => <li key={item}>{item}</li>);
+```
+
+Using `map` we can dynamically render JSX.
+
+### The key attribute
+
+`key` is a JSX attribute, its value should be something unique (similar to an `id`).
+
+React uses them internally to keep track of lists rendered using the `map` method.
 
 <br>
