@@ -14,20 +14,18 @@
 
 - [Props](./props.md)
 
-- [State](./state.md)
+- [The useState Hook](./state.md)
 
 <br>
 
 <!--
 
 8. [Stateless / Stateful](./stateless-stateful.md)
-9. [Lifecycle Methods](./lifecycle.md)
 
 10. [React Forms](./react-forms.md)
 11. [Practical aspects in React](./practical-aspects.md)
 12. [Separating Components](./separating-components.md)
 
-13. [Function Components](./function-components.md)
 15. [useEffect Hook](./use-effect.md)
 
 16. [React Refresher](./react-refresher.md)
