@@ -28,6 +28,27 @@ React uses a one-way data flow approach, which means that data can only be passe
 
 ## Event Handler as Props
 
+```jsx
+function Button(props) {
+  return <button onClick={props.onClick}>Click</button>;
+}
+
+function App() {
+  const handleClick = () => console.log("click");
+  return <Button onClick={handleClick} />;
+}
+```
+
+We provide an event function to a child component as a prop.
+
+Through the `props` object, the child component will use the provided prop as an event handler.
+
+- **Naming Convention**
+
+  _Event Functions:_ keyword `handle` + the type of the event `Click`
+
+  _Props:_ keyword `on` + the type of the event `Click`
+
 <br>
 
 ## Destructuring Props
@@ -35,5 +56,23 @@ React uses a one-way data flow approach, which means that data can only be passe
 ```jsx
 function Header({ userData }) {}
 ```
+
+<br>
+
+## props.children
+
+The `props` object has a `children` property which will return everything we pass between a component's opening and closing JSX tags.
+
+```js
+function Layout(props) {
+  return <main>{props.children}</main>;
+}
+
+function App() {
+  return <Layout>Hello</Layout>;
+}
+```
+
+If the component is an self-closing tag, then `children` will be `undefined`.
 
 <br>

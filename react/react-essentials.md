@@ -118,8 +118,10 @@ We can place JS expressions inside JSX curly braces, but not statements.
 ## Event Listeners in JSX
 
 ```jsx
-const handleClick = () => console.log("hi");
-<button onClick={handleClick}>Click</button>;
+function App() {
+  const handleClick = () => console.log("hi");
+  return <button onClick={handleClick}>Click</button>;
+}
 ```
 
 - Event listeners are defined on JSX elements by special attributes: [Supported Events](https://reactjs.org/docs/events.html#supported-events).

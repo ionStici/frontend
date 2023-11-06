@@ -1,104 +1,156 @@
 [&larr; Back](./README.md)
 
-# State
+# The State Hooks
 
 ## Table of Content
 
-- [this.state](#thisstate)
-- [Update state with `this.setState`](#update-state-with-thissetstate)
-- [Access state in the render method](#access-state-in-the-render-method)
-- [Access the previous state](#access-the-previous-state)
+- [The State Hook](#the-state-hook)
+  - [Update Function Component State](#update-function-component-state)
+  - [Initialize State](#initialize-state)
+  - [Set From Previous State](#set-from-previous-state)
+  - [Arrays in State](#arrays-in-state)
+  - [Objects in State](#objects-in-state)
+  - [Separate Hooks for Separate States](#separate-hooks-for-separate-states)
 
 <br>
 
-## **this.state**
+## The State Hook
 
-Two ways for a React Component to access dynamic information: `props` and `state`
+React Hooks are functions that let us manage the internal state of components and handle post-rendering side effects directly form our function components. Hooks don't work inside classes.
 
-Besides `props` and `state`, every value in a component should always stay exactly the same.
+Built-in Hooks: `useState() useEffect() useContext() useReducer() useRef()`. [Full List](https://reactjs.org/docs/hooks-reference.html).
+
+<br>
+
+### Update Function Component State
+
+The _State Hook_ is a named export from the React library, so we import it like this:
 
 ```js
-class Example extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { keyWord: "Click" };
-    this.handleClick = this.handleClick.bind(this);
-  }
+import React, { useState } from "react";
+```
 
-  handleClick() {
-    this.setState({ keyWord: "Clicked!" });
-  }
+`useState()` is a JavaScript function defined in the React library. When we call this function, it returns an array with two values:
 
-  render() {
-    return <button onClick={this.handleClick}>{this.state.keyWord}</button>;
-  }
+- _current state_ - the current value of this state.
+- _state setter_ - a function that we can use to update the value of this state.
+
+Destructuring this array in to local variables:
+
+```js
+const Comp = () => {
+  const [toggle, setToggle] = useState();
+  setToggle(true);
+  return toggle;
+};
+```
+
+We update the value of `toggle` and re-render the component with this new value by calling the `setToggle` function with the next state value as an argument.
+
+No need to worry about binding functions to call instances, working with constructors, dealing with the `this` keyword.
+
+Calling the state setter signals to React that the component needs to re-render, so the whole function defining the component is called again. The magic of useState() is that it allows React to keep track of the current value of state from one render to the next!
+
+<br>
+
+### Initialize State
+
+To initialize our state with any value we want, we simply pass the initial value as an argument to the `useState()` function call.
+
+```js
+const [isLoading, setIsLoading] = useState(true);
+```
+
+- During the first render, the initial state argument is used.
+- When the state setter is called, React ignores the initial state argument and uses the new value.
+- When the component re-renders for any other reason, React continues to use the same value from the previous render.
+
+If we don’t pass an initial value when calling useState(), then the current value of the state during the first render will be undefined.
+
+If we don’t have the value needed during the first render, we should explicitly pass `null` instead of just passively leaving the value as `undefined`.
+
+<br>
+
+### Set From Previous State
+
+```js
+const Comp = () => {
+  const [count, setCount] = useState(0);
+  const increment = () => setCount((prevCount) => prevCount + 1);
+  return <button onClick={increment}>Increment</button>;
+};
+```
+
+- The state setter callback function takes the previous state value as an argument.
+- The value returned by this state setter callback function is used as the next state value.
+
+It is best practice to update state with a callback function.
+
+<br>
+
+### Arrays in State
+
+JavaScript arrays are the best data model for managing and rendering JSX lists.
+
+```js
+const arr = [1, 3, 5, 7];
+
+function Comp() {
+  const [num, setNum] = useState([9, 12]);
+  const handleClick = () => useState((prev) => [...arr, ...prev]);
 }
 ```
 
-For a component to have `state`, we define the property `this.state` inside the `constructor` and set equal to an object.
+We define an `arr` _static data model_ outside of our function component since it doesn't need to be recreated each time our component re-render.
 
-We access properties from the state object as usual: `this.state.property-name`
+Then, the `num` array contains _dynamic data_, meaning that it changes.
 
-<br>
+When updating an array in state, we do not just add new data to the previous array. We replace the previous array with a brand new array. This means that any information that we want to save from the previous array needs to be explicitly copied over to our new array.
 
-## Update state with `this.setState`
-
-We can change the state of a component by calling the `setState()` function.
-
-This `setState` function takes 2 arguments: an object that will update the component's state and a callback (which you basically never need).
-
-_First argument:_ an object with key-value pairs. The keys are your state properties and the values are the updated state data.
-
-By calling this function with an object, it merges that object with the component's current state. If there are properties in the current state that aren’t part of that object, then those properties remain how they were.
-
-You can’t call `this.setState()` from inside of the render function.
-
-React expects you to never modify state directly, instead always use `this.setState()` when state changes occur.
-
-Note: Any time that you call `this.setState()`, this function will automatically call `render()` as soon as the state has changed. This is also why we can not place `setState` inside the render function, it will create an infinite loop.
-
-- A React component should use `props` to store information that can be changed only by another component.
-- On the other hand, `state` is used to store information that the component itself can change.
-
-A React app is basically just a lot of components, setting state and passing props to one another.
-
-When `state` data updates, it triggers a re-render of the components using that data - including child components that received the data as a prop.
-
-React updates the actual DOM only where necessary. This means you don't have to worry about changing the DOM. You simply declare what the UI should look like.
-
-Note: `state` is completely encapsulated to its component (unless you pass `state` data to a child component as `props`).
-
-<br>
-
-## Access state in the render method
-
-In the `render()` method, before the `return` statement, we can write JavaScript directly. For example: we can declare functions, access data from `state` and `props`, performs computations of this data, etc.
+Array methods are very useful when working with data.
 
 ```js
-class Comp extends React.Component {
-  // ...
+// Destructuring the event object directly
+const event = ({ target }) => target;
+```
 
-  render() {
-    const name = this.state.name;
-    return <h1>{name}</h1>;
-  }
+<br>
+
+### Objects in State
+
+```js
+function Comp() {
+  const [pair, setPair] = useState({});
+
+  const handleEvent = (name, value) =>
+    setPair((prev) => ({ ...prev, name: value }));
 }
 ```
 
+We define the initial state as an empty object.
+
+The spread syntax is the same for objects as for arrays.
+
+When updating the object with new data, we first copy the values from the previous object and then set the next value of state, the same technique as when working with arrays.
+
+Inside of our state setter callback function, we wrap our curly brackets in parentheses like so: `setPair((prev) => ({ ...prev }))`. This tells JavaScript that our curly brackets refer to a new object to be returned. We use `...`, the spread operator, to fill in the corresponding fields from our previous state. Finally, we overwrite the appropriate key with its updated value.
+
 <br>
 
-## Access the previous state
+### Separate Hooks for Separate States
 
-We should not rely on the previous value of `this.state` or `this.props` when calculating the next value.
+We can make as many calls to `useState()` as we want.
 
-Instead, we should pass to `setState` a function which can access `state` and `props`.
-
-Using a function with `setState` guarantees we are working with the most current values of state and props.
+It’s best to split state into multiple state variables based on which values tend to change together.
 
 ```js
-this.setState((state, props) => ({ counter: state.counter + 1 }));
+function Comp() {
+  const [num, setNum] = useState();
+  const [name, setName] = useState();
+  const [list, setList] = useState();
+}
 ```
 
-Note: we wrap the object literal in parentheses.
+When using Hooks, follow the pattern for naming the state and setter like: `toggle` & `setToggle`.
 
 <br>
