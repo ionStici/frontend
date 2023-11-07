@@ -20,11 +20,11 @@
 
 <!--
 
-8. [Stateless / Stateful](./stateless-stateful.md)
-
 10. [React Forms](./react-forms.md)
 11. [Practical aspects in React](./practical-aspects.md)
 12. [Separating Components](./separating-components.md)
+
+<div></div>
 
 15. [useEffect Hook](./use-effect.md)
 

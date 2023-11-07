@@ -24,20 +24,22 @@ function App() {
 
 `useState()` is a function that returns an array with 2 values that we destructure.
 
+Follow this naming pattern: `[toggle, setToggle]`
+
 1. _current state_ - the current value of this state.
 2. _state setter_ - a function that we can use to update the value of this state.
 
-As argument to `useState()`, we can pass the _initial value_ of this piece of state, that will be used during the first render.
+As argument to `useState()` we can pass an _initial value_ that will be used during the first render. Use `null` if you don't have an initial value.
 
-If we don't pass an initial value to `useState()` then it will result in `undefined` during the first render, instead we should explicitly pass `null`.
+By updating the state using the state setter, **we trigger a component re-render**.
 
-By updating the value of state using the state setter, we trigger a component re-render.
+- In React, we don't do direct DOM manipulations.
+- A view is updated by re-rendering an entire component responsible for that view.
+- A component is re-rendered when its state is updated.
 
-`useState()` allows react to keep track of the current state from one render to the next.
+**State is preserved throughout re-renders**, until the component is unmounted.
 
-We can make as many calls to `useState()` as we want. It's recommended to split the state into multiple state variables, each responsible for its part of the application.
-
-Follow this pattern for naming the state and setter: `[toggle, setToggle]`
+_p.s._ We can make as many calls to `useState()` as we want. It's recommended to split the state into multiple sections, each responsible for its part of the application.
 
 <br>
 
@@ -54,6 +56,8 @@ function App() {
 
 - The state setter callback function receives the previous state value as an argument.
 - The value returned by this state setter callback will be used as the next state value.
+
+This approach, guarantees that we are working with the most current value of state.
 
 <br>
 
@@ -94,5 +98,23 @@ function App() {
 ```
 
 When updating the object with new data, first we copy the values from the previous object and only then we set more values, the same technique as when working with arrays.
+
+<br>
+
+## Notes
+
+React expects you to never modify the state directly, instead always use the state setter.
+
+A React App is basically just a lot of components, setting state and passing props to one another.
+
+`props` for data that can be changed only by another component. `state` for data that the component itself can change.
+
+When the state updates, it triggers a re-render of the component using the new state data, including child components that receive that data as a prop.
+
+React updates the actual DOM only where necessary. This means you don't have to worry about changing the DOM. **You simply declare what the UI should look like.**
+
+`state` is completely encapsulated to its component (unless you pass `state` data to a child component as `props`).
+
+Use state when you need to change something on the screen that a particular component is responsible for.
 
 <br>
