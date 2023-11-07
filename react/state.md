@@ -57,7 +57,7 @@ function App() {
 - The state setter callback function receives the previous state value as an argument.
 - The value returned by this state setter callback will be used as the next state value.
 
-This approach, guarantees that we are working with the most current value of state.
+This approach guarantees that we are working with the most current value of state.
 
 <br>
 
@@ -116,5 +116,98 @@ React updates the actual DOM only where necessary. This means you don't have to 
 `state` is completely encapsulated to its component (unless you pass `state` data to a child component as `props`).
 
 Use state when you need to change something on the screen that a particular component is responsible for.
+
+<br>
+
+## State vs. Props
+
+### State
+
+- **Internal** data, owned by component
+
+- Component "memory"
+
+- Can be updated by the component itself
+
+- Updating state causes component to re-render
+
+- Used to make components interactive
+
+### Props
+
+- **External** data, owned by parent component
+
+- Similar to function parameters
+
+- Read-only
+
+- **Receiving new props causes component to re-render.** Usually when the parent's state has been updated
+
+- Used by parent to configure child component ("settings")
+
+<br>
+
+## Stateless Components Inherit from Stateful Components
+
+- “Stateful” describes any component that has a state property;
+- “Stateless” describes any component that does not.
+
+A child component can access the state of its parent component through props.
+
+```jsx
+function Parent() {
+  const [name, setName] = useState("John");
+  return <Child name={name} />;
+}
+
+function Child(props) {
+  return <h1>{props.name}</h1>;
+}
+```
+
+- `props` for storing information that can be changed only by a different component.
+- `state` for storing information that the component itself can change.
+
+<br>
+
+## Child Components Update Their Parents' state
+
+```jsx
+function Parent() {
+  const [toggle, setToggle] = useState(true);
+  const changeState = () => setToggle((prev) => !prev);
+
+  return <Child toggle={toggle} onClick={changeState} />;
+}
+
+function Child({ toggle, onClick }) {
+  return <button onClick={onClick}>{toggle + ""}</button>;
+}
+```
+
+<br>
+
+## Child Components Update Sibling Components
+
+A child component updates its parent’s state, and the parent passes that state to a sibling component.
+
+_Concept:_ one stateless component displays information, and a different stateless component offer the ability to change that information.
+
+```jsx
+const ChildOne = (props) => <button onClick={props.onClick}>Click</button>;
+const ChildTwo = (props) => <p>{props.text}</p>;
+
+function Parent() {
+  const [text, setText] = useState("Hello");
+  const changeState = () => setText("Hello World");
+
+  return (
+    <>
+      <ChildOne onClick={changeState} />
+      <childTwo text={text} />
+    </>
+  );
+}
+```
 
 <br>

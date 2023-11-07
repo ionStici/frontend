@@ -16,15 +16,15 @@
 
 - [The useState Hook](./state.md)
 
+- [React Forms](./react-forms.md)
+
 <br>
 
 <!--
 
-10. [React Forms](./react-forms.md)
 11. [Practical aspects in React](./practical-aspects.md)
-12. [Separating Components](./separating-components.md)
 
-<div></div>
+12. [Separating Components](./separating-components.md)
 
 15. [useEffect Hook](./use-effect.md)
 
