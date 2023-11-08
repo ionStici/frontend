@@ -76,3 +76,19 @@ function App() {
 If the component is an self-closing tag, then `children` will be `undefined`.
 
 <br>
+
+## defaultProps
+
+Define default props using the `defaultProps` property.
+
+```jsx
+Comp.defaultProps = {
+  property: "value",
+};
+```
+
+We append the `defaultProps` property on the component name and set equal to an object.
+
+Inside this object, we define default properties for any prop we want.
+
+<br>
