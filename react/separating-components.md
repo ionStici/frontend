@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 ## Presentational Components and Container Components
 
 [Presentational and Container Components by Dan Abramov](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
@@ -25,7 +23,7 @@ _Example:_ `Container.js` will import and render the `Presentational.js`.
 
 ## Sibling to Sibling Communication
 
-How to communicate between a presentational (stateless) component and a container (stateful) component, both siblings, so that it will trigger screen rendering.
+How to communicate between a presentational (stateless) component and a container (stateful) component, so that it will trigger screen rendering.
 
 ```jsx
 function Container() {

@@ -14,17 +14,17 @@
 
 - [Props](./props.md)
 
-- [The useState Hook](./state.md)
+- [State: the useState Hook](./state.md)
+
+- [State Management](./state-management.md)
 
 - [React Forms](./react-forms.md)
+
+- [Separating Components](./separating-components.md)
 
 <br>
 
 <!--
-
-11. [Practical aspects in React](./practical-aspects.md)
-
-12. [Separating Components](./separating-components.md)
 
 15. [useEffect Hook](./use-effect.md)
 

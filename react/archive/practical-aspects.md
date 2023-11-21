@@ -2,8 +2,6 @@
 
 # Practical aspects in React
 
-<br>
-
 ## JavaScript within the Render Method (Conditionals)
 
 We can write JS directly in the `render` method, before `return` statement.
