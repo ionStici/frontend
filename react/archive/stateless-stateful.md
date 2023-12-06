@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # State and Props interacting between Components
 
 ## Table of Content

@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # React Components
 
 React applications are made out of components.

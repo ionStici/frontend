@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Component Lifecycle Methods
 
 ## Table of Content

@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Props
 
 ## Table of Content

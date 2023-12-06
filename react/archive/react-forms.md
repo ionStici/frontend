@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # React Forms
 
 In a React form, the server should know about every new character or deletion, as soon as it happens. That way, your screen will always be in sync with the rest of your application. We want to update the server any time a user enters or deletes any character.
@@ -84,3 +82,5 @@ Though change-by-change validation like this is common enough, in some cases we 
 ## Uncontrolled Components
 
 - [Uncontrolled Components](https://reactjs.org/docs/uncontrolled-components.html)
+
+</br>

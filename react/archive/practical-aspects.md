@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Practical aspects in React
 
 ## JavaScript within the Render Method (Conditionals)
