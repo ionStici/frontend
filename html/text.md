@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Text Elements
 
 ## Basics
@@ -7,8 +5,6 @@
 - Six **heading** levels, from `<h1>` (most important) to `<h6>` (least important).
 - `<p>` (paragraph) contains a block of plain text.
 - `<span>` used to separate small pieces of content (no semantic).
-
-<br>
 
 ## Text elements
 
@@ -29,8 +25,6 @@
 - `<q>` for inline quotations.
 - Use the `lang` attribute to identify the language of a specific area of content.
 
-<br>
-
 ## Emphasizing text
 
 Elements used to emphasize text based on a semantic reason:
@@ -40,12 +34,8 @@ Elements used to emphasize text based on a semantic reason:
 - `<strong>` identifies text as having strong importance.
 - `<cite>` used to mark the titles of books, articles, or other creative work.
 
-<div></div>
-
 Little to no semantic value:
 
 - `<i>` can be used for technical terms, foreigh words, thoughts, or ship names.
 - `<u>` is for content that has non-textual annotation.
 - `<b>` can be used to draw attention to text that is not otherwise important (no semantic).
-
-<br>

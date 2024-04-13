@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Anatomy of an HTML document
 
 ```html
@@ -16,8 +14,7 @@
 </html>
 ```
 
-1. `<!DOCTYPE html>` Document type declaration, it acts as an instruction for the browser, should be the first line of code in html.
-   Tells the browser what type of document to expect and what version of HTML is being used in the document.
+1. `<!DOCTYPE html>` Document type declaration, it acts as an instruction for the browser, should be the first line of code in html. Tells the browser what type of document to expect and what version of HTML is being used in the document.
 
 2. `<html>` tags, the root element, wraps all the content, anything between these tags will be interpreted as HTML code.
 
@@ -33,15 +30,11 @@
 
 8. `<body>` element, it contains all the content displayed on the page.
 
-<br>
-
 <!-- [`<base />`](https://web.dev/learn/html/document-structure/#base) -->
 
 ## The Link element
 
 The `link` element is used to create relationships between the HTML document and external resources. The type of relationship is defined by the value of the `rel` attribute. There are currently 25 available values for the `rel` attribute.
-
-<br>
 
 ### Link CSS and JS
 
@@ -52,8 +45,6 @@ The `link` element is used to create relationships between the HTML document and
 </head>
 ```
 
-<br>
-
 ### Favicon
 
 Define a favicon for your document. There are lots of other icon types to consider.
@@ -63,8 +54,6 @@ Define a favicon for your document. There are lots of other icon types to consid
   <link rel="icon" href="/ico.png" type="image/png" sizes="16x16 32x32 48x48" />
 </head>
 ```
-
-<br>
 
 ### Alternate and Canonical
 
@@ -80,5 +69,3 @@ Define a favicon for your document. There are lots of other icon types to consid
 ```
 
 In case we have several translations of our website, we should use `rel="canonical"` to avoid confusion with search engines. `canonical` will identify the preferred URL for the site. Indicate the preferred URL using this tag on all the translated pages and on the home page as well.
-
-<br>

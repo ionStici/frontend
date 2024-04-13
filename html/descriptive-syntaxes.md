@@ -1,31 +1,12 @@
-[&larr; back](./README.md)
-
 # Responsive Images
 
 - With **Descriptive Syntaxes**, we provide the browser with information about image sources and how they'll be used, but ultimately leaves the decision-making to the browser.
 
-- With **Prescriptive Syntaxes**, we tell the browser what to do—what source to select, based on specific criteria we've defined.
-
-<br>
-
-## Table of Content
-
-- [Descriptive Syntaxes](#descriptive-syntaxes)
-- [Describing density with x](#describing-density-with-x)
-  - [The srcset attribute](#the-srcset-attribute)
-- [Describing widths with w](#describing-widths-with-w)
-- [Describing usage with sizes](#describing-usage-with-sizes)
-- [Walkthrough](#walkthrough)
-- [sizes and calc()](#sizes-and-calc)
-- [Breakpoints](#breakpoints)
-
-<br>
+- With **Prescriptive Syntaxes**, we tell the browser what to do — what source to select, based on specific criteria we've defined.
 
 ## Descriptive Syntaxes
 
 How to give the browser a choice of images so that it can make the best decisions about what to display.
-
-<br>
 
 ## Describing density with x
 
@@ -52,15 +33,13 @@ Besides this, on a low-density display, an image suitable for higher-density dis
 <img src="low-density.jpg" srcset="double-density.jpg 2x" />
 ```
 
-The `srcset` attribute identifies one or more comma-separated candidates for rendering an image. Each candidates is made up of two things: a URL and a syntax that describes that image source. Each candidate is `srcset` is described by its inherent width `w` or intended density `x`
+The `srcset` attribute identifies one or more comma-separated candidates for rendering an image. Each candidates is made up of two things: a URL and a syntax that describes that image source. Each candidate in `srcset` is described by its inherent width `w` or intended density `x`
 
 The `x` syntax is a shorthand for "this source is appropriate for a display with this density". A candidate followed by `2x` is appropriate for a display with a DPR of 2.
 
 For browsers without support for `srcset`, the attribute and its contents will be ignored, and the contents of `src` will be requested, as usual.
 
 **Important:** by indicating the density in `srcset`, we don't tell the browser to use that image in case the display's DPR is 2x, instead we just inform the browser with the density the image has from that URL, and then the browser will do the appropriate decision on its own.
-
-<br>
 
 ## Describing widths with w
 
@@ -69,8 +48,6 @@ For browsers without support for `srcset`, the attribute and its contents will b
 ```
 
 The `w` syntax describes the inherent width of each candidate source.
-
-<br>
 
 ## Describing usage with sizes
 
@@ -92,8 +69,6 @@ Above, `sizes` value informs the browser that the space in our layout that the `
 
 As a developer, your job is done. You've accurately described a list of candidate sources in `srcset` and the width of your image in `sizes`, the rest is up to the browser.
 
-<br>
-
 ## Walkthrough
 
 We've informed the browser that the image will take up 80% of the available viewport, on a device with a 1000 pixel-wide viewport, the image will occupy 800 pixels. The browser will then take that value and divide each of the image source candidates we specified in `srcset`.
@@ -106,8 +81,6 @@ If the same image is rendered on a 600 pixel wide viewport, the result of all th
 
 By using a descriptive syntax rather than a prescriptive one, we don't need to manually set breakpoints and consider future viewports and DPRs — we simply supply the browser with information and allow it to determine the answers for us.
 
-<br>
-
 ## sizes and calc()
 
 Because our `sizes` value is relative to the viewport and completely independent of the page layout, it adds a layer of complication. It's rare to have an image that only occupies a percentage of the viewport, without any fixed-width margins, padding, or influence from other elements on the page. You'll frequently need to express the width of an image using a combination of units; percentages, em, px, and so on.
@@ -117,8 +90,6 @@ Because our `sizes` value is relative to the viewport and completely independent
 ```
 
 We can use `calc()`, allowing us to mix-and-match CSS units—for example, an image that occupies the full width of the user's viewport, minus a 1em margin on either side.
-
-<br>
 
 ## Breakpoints
 

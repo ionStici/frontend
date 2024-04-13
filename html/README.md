@@ -1,11 +1,8 @@
 # HTML
 
-## Table of Content
+### Fundamentals
 
-[**&larr; Back to the Main Page**](./../README.md)
-
-### HTML Basics
-
+- [The Internet](./internet.md)
 - [HTML Basics](./html-basics.md)
 - [HTML document](./html-document.md)
 - [Metadata](./metadata.md)
@@ -13,22 +10,27 @@
 - [Text Elements](./text.md)
 - [Audio and Video](./audio-video.md)
 
-### Images
-
-- [Images](./images.md)
-- [Descriptive Syntaxes](./descriptive-syntaxes.md)
-- [Prescriptive Syntaxes](./prescriptive-syntaxes.md)
-- [Image Formats](./img-formats.md)
-- [Legacy: Responsive Images](./responsive-imgs-legacy.md)
+<!-- ### Images
 
 ### Forms
+
+### Important -->
+
+<!-- <div></div>
+
+- [Images](./images.md)
+- [Image Formats](./img-formats.md)
+- [Descriptive Syntaxes](./descriptive-syntaxes.md)
+- [Prescriptive Syntaxes](./prescriptive-syntaxes.md)
+
+<div></div>
 
 - [How forms work](./forms-intro.md)
 - [Forms in practice](./forms.md)
 - [Forms best practices](./forms-best-practices.md)
 - [Form Elements in Depth](./form-elements.md)
 
-### Other
+<div></div>
 
 - [Focus](./focus.md)
 - [Accessibility](./accessibility.md)
@@ -38,11 +40,20 @@
 
 - [HTML APIs](./html-apis.md)
 - [Template](./template.md)
-- [More](./more.md)
 
-<div></div>
+<div></div> -->
 
-- [details MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) [& web.dev](https://web.dev/learn/html/details/)
-- [dialog MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) [& web.dev](https://web.dev/learn/html/dialog/)
+<!-- `<details>`
 
-<br>
+`<dialog>`
+
+## File Paths
+
+ ```
+/       = Root directory
+.       = This location
+..      = Up a directory
+./      = Current directory
+../     = Parent of current directory
+../../  = Two directories backwards
+```  -->

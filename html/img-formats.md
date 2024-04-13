@@ -1,5 +1,3 @@
-[&larr; back](./README.md)
-
 # Image Formats
 
 ## Table of Content
@@ -7,9 +5,6 @@
 - [SVG Vector Images](#svg-vector-images)
 - [Raster Images](#raster-images)
 - [Squoosh Tool](#squoosh-tool)
-
-<div></div>
-
 - [GIF](#gif)
 - [PNG](#png)
 - [JPEG](#jpeg)
@@ -28,8 +23,6 @@ We can convert images to SVG. SVG can be styled with CSS, or contain JavaScript 
 
 [MDN SVG Tutorial](https://developer.mozilla.org/docs/Web/SVG/Tutorial/Introduction)
 
-<br>
-
 ## Raster Images
 
 Common raster image formats: JPEG, GIF, PNG, WebP.
@@ -44,13 +37,9 @@ Choosing the appropriate type of raster image ultimately comes down to the use c
 
 A server doesn't send an image over the wire to a browser, but a stream of bytes describing the pixel grid that makes up that image for the client to recompose.
 
-<br>
-
 ## Squoosh Tool
 
 [**Squoosh**](https://squoosh.app/) - maintained by the Chrome team - provides a side-by-side comparison between different methods of encoding and configuring image outputs, with configuration options ranging from a 0-100 global "quality" slider, to the ability to fine-tune details of chrominance vs. luminance resampling. The lower the "quality" number, the higher the compression, and the smaller the resulting file will be.
-
-<br>
 
 ## GIF
 
@@ -61,8 +50,6 @@ How GIF supports its flipbook-like animation: a single frame is drawn to the log
 The GIF's pixel grid is build using color indexing technique.
 
 In practice, the combination of lossless compression and palette quantization means that GIF isn't very useful in modern web development. Lossless compression doesn't do enough to reduce file sizes, and a reduced palette means an obvious reduction in quality.
-
-<br>
 
 ## PNG
 
@@ -76,8 +63,6 @@ PNG uses _lossless compression_, meaning that the image data will be compressed 
 PNG will never reduce visual quality, but this results in excessively large file sizes compared to more modern web-friendly encodings, such as WebP (which btw also supports semi-transparency).
 
 In practical terms, PNG is a sound choice for maintaining a manageable-sized “canonical” version of a source image, saved in your local development environment or committed to a project repository in case future versions of that image need to be edited or re-saved in alternate formats. Also, it may be used as a fallback version.
-
-<br>
 
 ## JPEG
 
@@ -96,8 +81,6 @@ PJPEG can feel faster than a baseline JPEG to the end user.
 
 Decoding PJPEG is more complex on the client side, which means putting a little more strain on the browser and device's hardware—during rendering.
 
-<br>
-
 ## WebP
 
 **WebP** is an unbelievably versatile format, it supports: lossless compression, PNG-like alpha channel transparency, GIF-like animation, JPEG-style lossy compression.
@@ -111,8 +94,6 @@ WebP features: block prediction and adaptive block quantization.
 - **Adaptive block quantization** - WebP takes an adaptive approach to quantization: an image is broken into up to four visually similar segments, and compression parameters for those segments are tuned independently.
 
 Squoosh will serve well for encoding WebP.
-
-<br>
 
 ## AVIF
 

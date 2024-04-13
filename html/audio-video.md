@@ -1,20 +1,8 @@
-[&larr; Back](./README.md)
-
 # Audio and Video
 
 - `<video>` and `<audio>` elements, along with the `src` attribute, are used to embed media players.
 - Or can be used as the container element for a series of `<source>` elements, each providing a `src` file suggestion.
 - Fallback content is included between the opening and closing tags for situations when the user agent doesn't support `<video>` or `<audio>`.
-
-<br>
-
-## Table of Content
-
-- [Audio](#audio)
-- [Video](#video)
-- [Video and Sources](#video-and-sources)
-
-<br>
 
 ## Audio
 
@@ -27,8 +15,6 @@
 ```
 
 `controls` attribute automatically displays the audio controls into the browser such as play and mute.
-
-<br>
 
 ## Video
 
@@ -44,13 +30,11 @@ The `<p>` element will only be displayed if the browser is unable to load the vi
 
 - `controls` add video controls.
 - `autoplay` the video automatically playing as soon as the page is loaded.
-- `mute` the video is paused.
+- `muted` the audio of the video is silenced.
 - `loop` the video continuously playing on repeat
 - `poster` attribute provides an image to display while the video is downloading.
 
 Note: `<embed>` tab used to incorporate media content into a page, but it is deprecated.
-
-<br>
 
 ## Video and Sources
 
@@ -74,7 +58,4 @@ Within the `type` attribute, we can include a [codecs](https://developer.mozilla
 Make sure to define the aspect ratio of your video, because when the video loads, a size difference between the poster and the video will cause a reflow and repaint.
 
 - About [tracks](https://web.dev/learn/html/audio-video/#tracks)
-
 - About [custom media controls](https://web.dev/learn/html/audio-video/#custom-media-controls)
-
-<br>

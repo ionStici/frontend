@@ -1,12 +1,4 @@
-[&larr; Back](./../README.md)
-
 # React Router
-
-https://reactrouter.com/en/main/components/nav-link
-
-https://reactrouter.com/en/main/route/error-element
-
-https://reactrouter.com/en/main
 
 ## Table of Content
 

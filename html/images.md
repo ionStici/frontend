@@ -1,21 +1,9 @@
-[&larr; Back](./README.md)
-
 # Images
 
 [**Accessibility and Images**](./accessibility.md#images)
 
 - Decorative images that are presentational should be applied with CSS.
 - When an image adds context to a document, it is content and should be embedded with HTML.
-
-<br>
-
-## Table of Content
-
-- [The img element](#the-img-element)
-- [The figure element](#the-figure-element)
-- [picture and source](#picture-and-source)
-- [Lazy Loading](#lazy-loading)
-- [Aspect Ratio](#aspect-ratio)
 
 <br>
 
@@ -93,5 +81,28 @@ The purpose of including these attributes is to reserve the space at the right a
 - [MDN: `attr()` CSS function](https://developer.mozilla.org/en-US/docs/Web/CSS/attr)
 - [web.dev: Aspect Radio](https://web.dev/learn/html/images/#aspect-ratio)
 - [Height and Width on Images](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)
+
+<br>
+
+## Alternative Solution to Aspect Ration
+
+```html
+<div class="img-container">
+  <img class="img" src="" />
+</div>
+```
+
+```css
+.img-container {
+  width: 250px;
+  height: 300px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+```
 
 <br>
