@@ -27,7 +27,7 @@ In order for images to benefit higher resolutions, we have to provide wider imag
 
 Besides this, on a low-density display, an image suitable for higher-density displays will look like any other low-density image.
 
-### The srcset attribute
+## The srcset attribute
 
 ```html
 <img src="low-density.jpg" srcset="double-density.jpg 2x" />

@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # How CSS works behind the scenes
 
 ## Table of Content
@@ -9,8 +7,6 @@
 - [The Cascade](#the-cascade)
 - [Specificity](#specificity)
 - [Inheritance](#inheritance)
-
-<br>
 
 ## CSS Object Model
 
@@ -29,8 +25,6 @@ In order to render the page, the browser uses an algorithm called the **Visual F
 
 After the Visual Formatting Model has done its works, the website is finally displayed to the screen, and the process is finished.
 
-<br>
-
 ## The Visual Formatting Model
 
 **The Visual Formatting Model** is an algorithm that determines the overall layout by calculating the dimensions of each element in the render tree.
@@ -43,8 +37,6 @@ The algorithm takes in account:
 - External information such as viewport size, intrinsic dimensions of images, etc.
 
 All these concepts together determine how the website will look in the browser.
-
-<br>
 
 ## The Cascade
 
@@ -59,14 +51,14 @@ The cascade algorithm is split into 4 distinct stages:
 
 ### 1. Position and order of appearance
 
-- Two selectors of identical specificity: the last one written in the code is the one that will apply.
+- Two selectors of identical specificity: the last one written in the source code is the one that will apply.
 - The same CSS property declared multiple times in the same selector: the last one declared will apply.
 
 <div></div>
 
 - Multiple CSS files linked via the `<link>` tag: the last `<link>` will have the most specificity.
 - If the `<style>` element is declared before a `<link>`: the linked stylesheet's CSS will have the most specificity.
-- An inline `style` attribute with CSS declared in it will override all other CSS, regardless of its position, unless a delcaration has `!important` defined.
+- An inline `style` attribute with CSS declared in will override all other CSS, regardless of its position, unless a delcaration has `!important` defined.
 
 <div></div>
 
@@ -93,8 +85,6 @@ The CSS that you write isn't the only CSS applied to a page. The cascade takes i
 5. **Local user styles `!important`**. Any `!important` that come from the operating system level, or browser extension level CSS.
 6. **User agent `!important`**. Any `!important` that are defined in the default CSS, provided by the browser.
 
-[Order of Specificity based on Origin](https://web-dev.imgix.net/image/VbAJIREinuYvovrBzzvEyZOpw5w1/zPdaZ6G11oYrgJ78EfF7.svg)
-
 <!-- 1. The most important declarations - are the user declarations marked with the !important keyword;
 2. Second: the author declarations marked with the !important keyword;
 3. Third: the normal author declarations;
@@ -114,8 +104,6 @@ The **order of importance**, from least important, to most important is as follo
 
 Active animation and transition rule types have higher importance than normal rules. In the case of transitions higher importance than `!important` rule types. This is because when an animation or transition becomes active, its expected behaviour is to change visual state.
 
-<br>
-
 ## Specificity
 
 Each selector gets a scoring. **Specificity = total score for a selector rule**.
@@ -133,8 +121,6 @@ When a selector rule is composed of multiple selectors, the specificity of each 
 
 **Best practice rule:** use mostly only classes as selectors and rely on order of appearance.
 
-<br>
-
 ## Inheritance
 
 **Inheritance** - propagating values from parent elements to their children.
@@ -143,50 +129,9 @@ Some CSS properties are inheritable. E.g. typography properties. If we define `c
 
 Inheritance only cascades downwards.
 
-<details>
-<summary>The entire list of inheritable properties</summary>
-
-<div></div>
-
-- azimuth
-- border-collapse
-- border-spacing
-- caption-side
-- color
-- cursor
-- direction
-- empty-cells
-- font-family
-- font-size
-- font-style
-- font-variant
-- font-weight
-- font
-- letter-spacing
-- line-height
-- list-style-image
-- list-style-position
-- list-style-type
-- list-style
-- orphans
-- quotes
-- text-align
-- text-indent
-- text-transform
-- visibility
-- white-space
-- widows
-- word-spacing
-
-<div></div>
-
-</details>
-
-<br>
-
 Every HTML element has every CSS property defined by default with an initial value. An initial value is a property that's not inherited and shows up as a default if the cascade fails to calculate a value for that element.
 
-Properties that can be inherited cascade downwards, and child elements will get a computed value which represents its parent's value. This means that if a parent has `font-weight` set to `bold` all child elements will be bold, d, unless their `font-weight` is set to a different value.
+Properties that can be inherited cascade downwards, and child elements will get a computed value which represents its parent's value. This means that if a parent has `font-weight` set to `bold` all child elements will be bold, unless their `font-weight` is set to a different value.
 
 ### inherit keyword
 
@@ -206,5 +151,3 @@ The `unset` property behaves differently depending if a property in inheritable 
 
 - If a property is inheritable, then `unset` keyword will be the same as `inherit`
 - If a property is not inheritable, the `unset` keyword is equal to `initial`
-
-<br>

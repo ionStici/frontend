@@ -11,8 +11,6 @@
 - [WebP](#webp)
 - [AVIF](#avif)
 
-<br>
-
 ## SVG Vector Images
 
 **Vector graphics** are a method of communicating a series of shapes, coordinates, and paths to their rendering context. They are a set of instructions for how an image should be drawn.
@@ -108,5 +106,3 @@ As with WebP, AVIF aims to address every conceivable use case for raster images 
 Support for GIF, PNG, and JPEG is guaranteed across all browsers, and has been for decades. Relative to those legacy image formats, AVIF is brand new, and while support for WebP is excellent across modern browsers, it isn't a given across the entire web.
 
 A browser that doesn't support a given encoding won't be able to parse that image file at all. The browser will request the image data, attempt to parse it, and upon failing, will discard it without rendering anything at all.
-
-<br>

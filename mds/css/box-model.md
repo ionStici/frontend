@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # The Box Model
 
 ## Table of Content
@@ -16,13 +14,11 @@
 - [Overflow](#overflow)
 - [Visibility](#visibility)
 
-<br>
-
 ## Box Model Areas
 
 All elements on a web page are interpreted by the browser as "living" inside of a box.
 
-Each box is made up of distinc tbox model areas that all do a specific job.
+Each box is made up of distinct box model areas that all do a specific job.
 
 1. **Content Area** - the area that the content lives in (width and height)
 2. **Padding** - space between content area and border
@@ -31,11 +27,9 @@ Each box is made up of distinc tbox model areas that all do a specific job.
 
 [**Box Model representation on codepen**](https://codepen.io/web-dot-dev/pen/BaReoEV)
 
-By default, the total dimensions of an element, are the sum of the content size, padding, border and margin.
+By default, the total dimensions of an element are the sum of the content size, padding, border and margin.
 
 **p.s.** Properties such as `outline` and `box-shadow` are painted on top, so they don't affect the size of our box.
-
-<br>
 
 ## box-sizing
 
@@ -58,8 +52,6 @@ We can reset this behavior of the box model for all html elements with:
 This CSS rule selects every element in the document and every `::before` and `::after` pseudo element and applies `box-sizing: border-box`. This means that every element will now have this alternative box model.
 
 This alternative box model tells CSS to apply the `width` and `height` to the border box instead of the content box. The border thickness and padding will be included inside of the box.
-
-<br>
 
 ## Height and Width
 
@@ -93,7 +85,7 @@ div {
 
 ```css
 .box {
-  outline: solid 1px #999; /* use none to remove outline */
+  outline: solid 1px #999; /* use "none" to remove outline */
 }
 ```
 
@@ -129,11 +121,9 @@ div {
 
 - `margin: 0 auto;` will center block elements. `auto` on left and right instructs the browser to adjust margins until the element is centered within its containing element.
 
-- Negative margin will reduce the outer space, potentiallyoverlapping elements.
+- Negative margin will reduce the outer space, potentially overlapping elements.
 
 - **Vertical Margin Collapse:** between two adjacent elements, both with defined margin, only the larger margin will apply (only block margins collapse).
-
-<br>
 
 ## Min and Max Height and Width
 
@@ -147,8 +137,6 @@ div {
   min-height: 200px;
 }
 ```
-
-<br>
 
 ## Resetting Default Styles
 
@@ -173,8 +161,6 @@ This is often the first CSS rule in an external stylesheet.
 
 When properties are set to `0`, they do not require a unit of measurement.
 
-<br>
-
 ## Overflow
 
 `overflow` property is set on a parent element to instruct the browser how to render child elements. It controls what happens to content that overflows outside its box.
@@ -190,8 +176,6 @@ div {
 - `scroll` (a scrollbar will be added) the rest of the content can be viewed by scrolling.
 
 For vertical or horizontal solutions: `overflow-x` and `overflow-y`.
-
-<br>
 
 ## Visibility
 
@@ -209,5 +193,3 @@ _Difference between display and visibility:_
 
 - `display: none;` will completely remove an element from the document.
 - `visibility: hidden` the element will not be visible, but the space reserved for it will. The element is rendered, it just isn't seen on the page.
-
-<br>

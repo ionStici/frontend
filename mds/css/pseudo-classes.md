@@ -1,8 +1,6 @@
-[&larr; Back](./README.md)
-
 # Pseudo Classes
 
-Pseudo-classes lets you apply styles based on element state changes (e.g. mouse hover).
+Pseudo-classes lets you apply styles based on **element state changes** (e.g. mouse hover).
 
 ## Table of Content
 
@@ -12,8 +10,6 @@ Pseudo-classes lets you apply styles based on element state changes (e.g. mouse 
 - [Selecting elements by their index, order and occurrence](#selecting-elements-by-their-index-order-and-occurrence)
 - [Finding empty elements](#finding-empty-elements)
 - [Finding and excluding multiple elements](#finding-and-excluding-multiple-elements)
-
-<br>
 
 ## Interactive states
 
@@ -48,8 +44,6 @@ button:focus-visible { }
 
 `:target` will select an element that has an `id` matching the URL
 
-<br>
-
 ## Historic states
 
 ### :link and :visited
@@ -62,8 +56,6 @@ a, a:link, a:visited { }
 - `:visited` will target "visited" anchor tags.
 
 **LVHA rule:** style links with pseudo-classes in this particular order: `:link`, `:visited`, `:hover`, `:active`
-
-<br>
 
 ## Form states
 
@@ -108,14 +100,12 @@ input:optional { }
 ```
 
 - `:valid` and `:invalid` for contexts such as an email field that has a pattern that needs to be matched
-- `:in-range` pseudo-class is available in an input has a `min` and `max`
+- `:in-range` pseudo-class is available if an input has a `min` and `max`
 
 <div></div>
 
 - `:required` will be available for required fields
 - `:optional` for fields that are not required
-
-<br>
 
 ## Selecting elements by their index, order and occurrence
 
@@ -165,8 +155,6 @@ div:only-of-type { }
 
 Select the only element of a certain type in a group of siblings.
 
-<br>
-
 ## Finding empty elements
 
 ### :empty
@@ -179,8 +167,6 @@ If an element has no children (whitespace as well), the `:empty` pseudo-class ap
 
 Useful when you want to hide empty elements.
 
-<br>
-
 ## Finding and excluding multiple elements
 
 ### :not()
@@ -189,10 +175,8 @@ Useful when you want to hide empty elements.
 div:not(:last-child) { }
 ```
 
-The negation pseudo-class, selects all elements expect the specified one in parenthesis.
+The negation pseudo-class, selects all elements except the one specified in the parenthesis.
 
 ### :is()
 
 [The `:is()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:is)
-
-<br>

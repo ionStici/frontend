@@ -5,8 +5,6 @@
 - Decorative images that are presentational should be applied with CSS.
 - When an image adds context to a document, it is content and should be embedded with HTML.
 
-<br>
-
 ## The img element
 
 ```html
@@ -16,8 +14,6 @@
 The `src` attribute is used to reference an image resource.
 
 The `alt` attribute - a short and concise description of the image.
-
-<br>
 
 ## The figure element
 
@@ -31,8 +27,6 @@ The `alt` attribute - a short and concise description of the image.
 - `<figure>` is a semantic way of referencing images, code snippets, example text.
 - `<figcaption>` will link a caption (associated description) for that content.
 
-<br>
-
 ## picture and source
 
 The `<picture>` element is a container for multiple image options listed in an unlimited number of `<source>` elements and a single required `<img>` element.
@@ -42,8 +36,6 @@ The `<source>` attributes include: `srcset`, `sizes`, `media`, `width` and `heig
 `<source>` supports image formats defined in the `type` attribute.
 
 The browser will consider each child `<source>` element and choose the best match among them. If no matches are found, the URL of the `<img>` element's `src` attribute is selected. The accessible name comes from the `alt` attribute of the nested `<img>`.
-
-<br>
 
 ## Lazy loading
 
@@ -57,8 +49,6 @@ _To improve Largest Contentful Paint (LCP) score:_
 
 - Never specify `loading="lazy"` on top images.
 - Use `fetchpriority="high"` to prioritize important images above images elsewhere on the page.
-
-<br>
 
 ## Aspect Ratio
 
@@ -82,9 +72,7 @@ The purpose of including these attributes is to reserve the space at the right a
 - [web.dev: Aspect Radio](https://web.dev/learn/html/images/#aspect-ratio)
 - [Height and Width on Images](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)
 
-<br>
-
-## Alternative Solution to Aspect Ration
+## Alternative Solution to Aspect Ratio
 
 ```html
 <div class="img-container">
@@ -104,5 +92,3 @@ The purpose of including these attributes is to reserve the space at the right a
   object-fit: cover;
 }
 ```
-
-<br>

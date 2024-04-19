@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # CSS
 
 **CSS** stands for Cascading Style Sheets. It is a style sheet language used to selectively style web content.
@@ -20,8 +18,6 @@ The whole syntax is called a **CSS ruleset**.
 - `color` Property
 - `red` Value
 - `/*  */` CSS comment syntax
-
-<br>
 
 ## CSS Types
 

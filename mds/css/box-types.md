@@ -1,10 +1,8 @@
-[&larr; Back](./README.md)
-
 # Box Types
 
-Every HTML element has a default `display` value that dictates how the box behaves. If it share horizontal space with other elements, if it fill the entire browser area from left to right, etc.
+Every HTML element has a default `display` value that dictates how the box behaves. If it shares horizontal space with other elements, if it fills the entire browser area from left to right, etc.
 
-We can change this default with the `display` property.
+We can change this default using the `display` property.
 
 ## Table of Content
 
@@ -12,8 +10,6 @@ We can change this default with the `display` property.
 - [Block-level Elements](#block-level-elements)
 - [Inline-Block Elements](#inline-block-elements)
 - [Display: none](#display-none)
-
-<br>
 
 ## Inline Elements
 
@@ -28,8 +24,6 @@ div {
 - We cannot use `height` or `width` on inline boxes.
 - We can only specify horizontal padding and margins for inline elements.
 
-<br>
-
 ## Block-level Elements
 
 ```css
@@ -41,8 +35,6 @@ div {
 - 100% of parent's width.
 - Create line breaks after and before it.
 - Vertically, one after another.
-
-<br>
 
 ## Inline-Block Elements
 
@@ -57,8 +49,6 @@ Inline-block elements are technically also inline elements, but which works as a
 So since they're technically inline elements, they use only the content's space, cause no line breaks, and can appear next to each other.
 
 But since they work as a block-level box in the inside, we can use `width` and `height` properties on them, and also vertical padding and margin.
-
-<br>
 
 ## Display: none
 

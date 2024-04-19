@@ -1,5 +1,3 @@
-[&larr; Back](./selectors.md)
-
 # Combinators
 
 ## Table of Content
@@ -9,17 +7,13 @@
 - [General Sibling Combinator](#general-sibling-combinator)
 - [Adjacent Sibling Combinator](#adjacent-sibling-combinator)
 
-<br>
-
 ## Descendent Combinator
 
 ```
 div p { }
 ```
 
-This will target the `p` child element within `div` parent element.
-
-<br>
+This will target all `p` child elements **within** `div` parent element.
 
 ## Child Combinator
 
@@ -27,9 +21,7 @@ This will target the `p` child element within `div` parent element.
 div > p { }
 ```
 
-This will select all `p` elements that are nested directly inside `div` element.
-
-<br>
+This will select all `p` elements that are **nested directly** inside `div` parent element.
 
 ## General Sibling Combinator
 
@@ -39,14 +31,10 @@ div ~ p { }
 
 This will select all `p` elements as long as they follow a `div` element.
 
-<br>
-
 ## Adjacent Sibling Combinator
 
 ```
 div + p { }
 ```
 
-This will select `p` elements that directly follow a `div` element.
-
-<br>
+This will select the `p` element that **directly follows** a `div` element.
