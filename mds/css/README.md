@@ -11,9 +11,6 @@ _Cascading Style Sheets_
 
 - [Selectors](./selectors.md)
 - [Combinators](./selectors-combinators.md)
-
-<div></div>
-
 - [Pseudo-classes](./pseudo-classes.md)
 - [Pseudo-elements](./pseudo-elements.md)
 
@@ -21,24 +18,15 @@ _Cascading Style Sheets_
 
 - [Box Model](./box-model.md)
 - [Box Types](./box-types.md)
-
-<div></div>
-
 - [Position](./position.md)
 - [Overflow](./overflow.md)
+- [Units](./units.md)
 
 ## Basic Styles
 
-- [**Units**](./units.md)
 - [**Colors**](./colors.md)
-
-<div></div>
-
 - [**Gradients**](./gradients.md)
 - [**Backgrounds**](./bg.md)
-
-<div></div>
-
 - [**Filter**](./filter.md)
 - [**Blend Modes**](./blend-modes.md)
 

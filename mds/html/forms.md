@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Forms in Practice
 
 ## Table of Content
@@ -11,8 +9,6 @@
 - [Form validation on the frontend](#form-validation-on-the-frontend)
 - [Autofill](#autofill)
 - [Upload files](#upload-files)
-
-<br>
 
 ## Form elements
 
@@ -28,18 +24,15 @@ The **`action`** and **`method`** attributes, require an URL where the data shou
 </form>
 ```
 
-- The data sent is made up of **name / value pairs**.
+- The data sent is made up of **name/value** pairs.
+
   - The **name** is the value of the `name` attribute. The **value** is the user input data.
   - For `input` elements where the user can't edit the value, we have to define a `value` attribute.
-
-<br>
 
 - The **`label`** element is used describe input elements. Labels improve accessibility.
 
   - Explicit label: the `for` attribute should match the `id` of the form control.
   - Implicit label: include the form control inside the `label` element.
-
-<br>
 
 - The **`input`** element is used to gather input from users.
 
@@ -47,15 +40,11 @@ The **`action`** and **`method`** attributes, require an URL where the data shou
   - The `type` attribute defines the [form control type from a big variety.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input)
   - The **`<textarea>`** element will render a text box where we can enter multiple lines of text (use label as well).
 
-<br>
-
 - **Submitting a Form** - the browser makes a request to the URL specified in the `action` attribute, with all the data from the form controls.
 
   - The **`<button>`** element can be used to submit a form. Use `<button type="button">` in case you want to disable the default submit behavior.
   - `<input type="submit" value="Submit">` can substitute the button element.
   - A form can also be submitted by using the `Enter` key when a form field has focus.
-
-<br>
 
 ## List of options
 
@@ -72,8 +61,6 @@ Using `<select>` and `<option>`, we can create a dropdrown form control.
 These elements will submit a name / value pair from the selected option, e.g. "color" associated with "orange".
 
 The `selected` attribute will pre-select one option.
-
-<br>
 
 ## Grouping Form controls
 
@@ -96,9 +83,7 @@ The `legend` element is used to describe the group of form controls, it has to b
 `<fieldset>` supports attributes like: `name`, `disabled`, `form`.
 
 - When we disable a fieldset, all nested form controls are disabled. The fieldset itself is not included in submitted data.
-- The `form` attribute in `fieldset` required the `id` value of the `form` container, this indicates to what form the `fieldset` group of elements belongs to.
-
-<br>
+- The `form` attribute in `fieldset` requires the `id` value of the `form` container, this indicates to what form the `fieldset` group of elements belongs to.
 
 ## The Datalist element
 
@@ -113,8 +98,6 @@ The `legend` element is used to describe the group of form controls, it has to b
 
 The `<datalist>` HTML element contains a set of `<option>` elements that represent the permissible or recommended options available to choose from within other controls.
 
-<br>
-
 ## Form validation on the frontend
 
 - `<form novalidate>` or `<button formnovalidate>` prevents validation.
@@ -124,8 +107,6 @@ The `<datalist>` HTML element contains a set of `<option>` elements that represe
 
 - Use `minlength` and `maxlength` attributes to set a minimum or maximum number of characters required.
 - For numerical input types use `min` and `max` to achieve the same result.
-
-<div></div>
 
 ### Communicate your validation rules
 
@@ -150,8 +131,6 @@ We can define a regular expression as a value for the `pattern` attribute to set
 - Use `:invalid` or `:valid` pseudo classes to add styles to invalid and valid form controls.
 - The `:user-invalid` behaves like `:invalid`, but styles are only applied after user interaction.
 
-<br>
-
 ## Autofill
 
 Autofill and autocomplete provide accessibility benefits.
@@ -162,8 +141,6 @@ The [**`autocomplete`**](https://developer.mozilla.org/en-US/docs/Web/HTML/Attri
 
 For one-time-code fields, turn off the autofill with: `autocomplete="off"`
 
-<br>
-
 ## Upload files
 
 Use `type="file"` to enable uploading files.
@@ -173,18 +150,12 @@ Use `type="file"` to enable uploading files.
 ```
 
 - The `file` input type enables uploading files via forms.
-- Use the `multiple` attribute is users should be able to upload multiple files.
+- Use the `multiple` attribute if users should be able to upload multiple files.
 - [`accept`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept) describes which file types to allow. It takes as its value a comma-separated list of one or more file types.
 - `capture` enumerated attribute: a new media file created using the user's camera or microphone.
 - Set `enctype="multipart/form-data"` on the form element to ensure users can upload files. To make sure files can be submitted, change it to `multipart/form-data`. Without this encoding, files can't be sent with a `POST` request.
-
-[Code Example](https://codepen.io/ionStici/pen/jOvXzJV)
-
-<br>
 
 ## More
 
 - [JavaScript Constraint Validation API](https://web.dev/learn/forms/validation/#provide-meaningful-error-messages)
 - [Test your forms](https://web.dev/learn/forms/testing/)
-
-<br>

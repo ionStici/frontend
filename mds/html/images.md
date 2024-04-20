@@ -92,3 +92,14 @@ The purpose of including these attributes is to reserve the space at the right a
   object-fit: cover;
 }
 ```
+
+## File Paths
+
+```
+/       = Root directory
+.       = This location
+..      = Up a directory
+./      = Current directory
+../     = Parent of current directory
+../../  = Two directories backwards
+```

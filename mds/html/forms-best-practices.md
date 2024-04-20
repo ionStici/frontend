@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Forms best practices
 
 - Intuitive UI
@@ -8,7 +6,7 @@
 
 - **Short labels** are easier to scan, reduce visual clutter, and help users to understand what data is needed faster.
 
-- Don’t Use The Placeholder Attribute, use lavels instead.
+- Don’t Use The Placeholder Attribute, use labels instead.
 
 - Position the label above the form control.
 
@@ -38,8 +36,6 @@
 
 - Test your form with different devices, browsers, platforms, and different contexts.
 
-<br>
-
 ## Security and privacy
 
 - Request as little data as possible. Don't ask for data you don't need.
@@ -47,5 +43,3 @@
 - Use HTTPS (encrypted data), especially for pages that include a form.
 
 - Use `POST` requests, the data is only visible to the backend script processing it.
-
-<br>

@@ -1,20 +1,10 @@
-[&larr; back](./README.md)
-
 # Form Elements in Depth
-
-## Table of Content
-
-- [The form element](#the-form-element)
-- [Form Fields](#form-fields)
-- [Form Attributes](#form-attributes)
-
-<br>
 
 ## The form element
 
-The `<form>` is a container for interactive form controls.
+`<form>` is a container for interactive form controls.
 
-When you need to store or process data from users, you should use the `<form>` element.
+Whenever you need to store or process data from users, you should use the `<form>` element.
 
 **Form submission:** when we submit a `<form>`, the browser checks its attributes. The data is processed according to the `method` attribute. If no `method` attribute is present, a `GET` request is made to the URL of the current page.
 
@@ -23,8 +13,6 @@ The submitted data can be handled by JavaScript on the frontend using a `GET` re
 When the form is submitted, the browser makes a request to the URL that is the value of the `action` attribute.
 
 If the Submit button has a `formmethod` or `formaction` attribute, it will use them instead.
-
-<br>
 
 ## Form Fields
 
@@ -57,8 +45,6 @@ If the Submit button has a `formmethod` or `formaction` attribute, it will use t
   - Only selected checkboxes have their `name` and `value` submitted with the form.
   - A checkbox with the `required` attribute does not impact other checkboxes with the same name.
 
-<br>
-
 ## Form Attributes
 
 - **`readonly`** will make a field input unavailable for editing.
@@ -67,16 +53,14 @@ If the Submit button has a `formmethod` or `formaction` attribute, it will use t
 
 ### Other
 
-- **`optional`**
+- **`:optional`** CSS pseudo-class: selects input elements that does not have the `requried` attribute set on.
 
-- **`default`**
+- **`:default`** CSS pseudo-class: selects form elements that are the default in a group of related elements.
 
-- **`enabled`**
+- **`:enabled`** CSS pseudo-class: selects any enabled element (basically any non-disabled element).
 
-- **`read-write`**
+- **`:read-write`** CSS pseudo-class: selects elements that are editable by the user.
 
-- **`in-range`**
+- **`in-range`** CSS pseudo-class: selects input elements whose current value is within the required range.
 
-- [**`inputmode`**](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode)
-
-<br>
+- [**`inputmode`**](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode) is an enumerated attribute that hints at the type of data that might be entered by the user while editing the element or its contents. This allows a browser to display an appropriate virtual keyboard.

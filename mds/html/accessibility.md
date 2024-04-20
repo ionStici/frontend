@@ -1,29 +1,6 @@
-[&larr; Back](./README.md)
-
 # Digital Accessibility (a11y)
 
-## Table of Content
-
-- [ARIA and HTML](#aria-and-html)
-- [Structure](#structure)
-- [The Document](#the-document)
-- [Focus](#focus)
-- [JavaScript](#javascript)
-- [Images](#images)
-- [Accessible Design](#accessible-design)
-- [Animation and Motion](#animation-and-motion)
-- [Typography](#typography)
-- [Automated Accessibility Testing](#automated-accessibility-testing)
-- [Manual Accessibility Testing](#manual-accessibility-testing)
-- [Assistive Technology testing](#assistive-technology-testing)
-
-<div></div>
-
-**External Resources:**
-
 - [A11y Checklist](https://www.a11yproject.com/checklist/)
-
-<br>
 
 ## ARIA and HTML
 
@@ -79,8 +56,6 @@ ARIA properties are attributes that provide additional information about element
 
 The property `aria-label` gives the screen reader additional information to read out loud to the user. [ARIA Techniques](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
 
-<br>
-
 ## Structure
 
 ### Semantic HTML Elements
@@ -111,8 +86,6 @@ Heading level one `<h1>` is used for the page's highest and most important infor
 
 The sequence of the heading levels is important, we should not skip heading levels.
 
-<br>
-
 ## The Document
 
 ### Page Title
@@ -130,8 +103,6 @@ Btw, Search engines typically display only the first 55–60 characters of a pag
 **Page Language**: `<html lang="en">` the default language for the entire page.
 
 **Section Language**: `<section lang="en">` this will override the top-level language setting for a specific section of content.
-
-<br>
 
 ## Focus
 
@@ -166,8 +137,6 @@ When a user presses the tab key, and an active skip link is in place, it sends t
 - Important: Set an appropriate highlighting style for focusable elements.
 - Recommendation: 3:1 color contrast ratio for all focus indicators.
 
-<br>
-
 ## JavaScript
 
 - **Important:** Besides click events, add appropriate key events (e.g. enter) to focusable elements.
@@ -183,8 +152,6 @@ When a user presses the tab key, and an active skip link is in place, it sends t
 - `aria-expanded` attribute tells the user whether a drop-down menu or list is expanded or collapsed.
 - `aria-pressed` can indicate if a button has been pressed.
 
-<br>
-
 ## Images
 
 - Decorative images that are presentational should be applied with CSS (no context).
@@ -195,8 +162,6 @@ When a user presses the tab key, and an active skip link is in place, it sends t
 - **What is the image purpose?** Inform / Enrich
 - **What are the next steps?** Message / Action
 - **What is the message?** Simple / Complex / Emotional
-
-<div></div>
 
 ### Decorative Images
 
@@ -216,7 +181,7 @@ If an image is decorative, it must be programmatically hidden from ATs, examples
 
 ### Informative Images
 
-An _informative images_ is an image that conveys an idea, emotion, or a simple concept, examples: photos of real-world objects, icons, drawings, images of text.
+An _informative image_ is an image that conveys an idea, emotion, or a simple concept, examples: photos of real-world objects, icons, drawings, images of text.
 
 If the image is informative, we should include programmatic alternative text describing the purpose of the image `alt` (regardless of the file type).
 
@@ -251,8 +216,6 @@ _Complex Image_ - infographics, maps, graphs/charts, and complex illustrations.
 - When using images for iconography, convey the meaning of the icon. E.g. the magnifying glass icon's `alt` attribute is _search_.
 - If the image doesn't provide additional information and is purely decorative, the `alt` attribute should be an empty string and the `role` equal to `none`.
 
-<br>
-
 ## Accessible Design
 
 - [Toptal](https://www.toptal.com/designers/colorfilter) - design testing tool (colorblind web page filter).
@@ -261,16 +224,12 @@ _Complex Image_ - infographics, maps, graphs/charts, and complex illustrations.
 - Consider: Easy to distinguish links / input with labels / text with background overlaid on images.
 - Use `@prefers-color-scheme` media query to allow users to choose a light or dark theme version of the website based on their OS settings.
 
-<br>
-
 ## Animation and Motion
 
 - Avoid flashes.
 - If the element's animation is not essential, consider not using it then.
 - Use `@prefers-reduced-motion` media query that checks the user's OS settings related to animation.
 - Add a toggle to turn _on_ or _off_ animations. Consider defaulting the toggler to _off_.
-
-<br>
 
 ## Typography
 
@@ -290,13 +249,9 @@ Tools: [Good Line-Height](https://www.thegoodlineheight.com/) & [Golden Ratio Ca
 - Build columns of copy that do not exceed 80 characters in width (40 characters for logograms).
 - Avoid justified paragraph alignment.
 
-<br>
-
 ## Automated Accessibility Testing
 
 **Lighthouse** is an open-source, automated tool created to improve the quality of web pages through different types of audits, such as performance, SEO, and accessibility.
-
-<br>
 
 ## Manual Accessibility Testing
 
@@ -316,13 +271,9 @@ Focus areas: keyboard functionality, visually-focused reviews, general content c
 | Enter            | Triggers specific controls                   |
 | Escape           | Dismisses dynamically displayed objects      |
 
-<br>
-
 ## Assistive Technology testing
 
 **A screen reader** is a piece of software that provides an audio description of a web page’s content. A screen reader not only reads the visual content out loud, it also reads out element names and other attributes that make it easier for visually impaired users to navigate a web page.
 
 - Best Screen Reader for iOS and MacOS devices: _VoiceOver_.
 - [Screen reader testing demo](https://web.dev/learn/accessibility/test-assistive-technology/)
-
-<br>

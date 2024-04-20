@@ -1,5 +1,3 @@
-[&larr; back](./README.md)
-
 # Template
 
 ## External Resources
@@ -18,8 +16,6 @@
 - [Custom elements](#custom-elements)
 - [Shadow DOM](#shadow-dom)
 
-<br>
-
 ## Introduction
 
 The Web Component standard is made up of three parts: _HTML templates_, _Custom Elements_, and the _Shadow DOM_.
@@ -27,8 +23,6 @@ The Web Component standard is made up of three parts: _HTML templates_, _Custom 
 Combined, they enable building customized, encapsulated, reusable elements that can be seamlessly integrated into existing applications, like all the other HTML elements.
 
 Convention when naming a custom element: use lowercase letters and dashes.
-
-<br>
 
 ## The template element
 
@@ -55,8 +49,6 @@ document.body.append(document.getElementById("template-form").content);
 
 This brief JavaScript did not create a custom element. Rather, this example has appended the contents of the `<template>` into the `<body>`. The content has become part of the visible, styleable DOM.
 
-<br>
-
 ## The slot element
 
 We can customize content within a `<template>` using the `<slot>` element as a placeholder for other elements.
@@ -80,8 +72,6 @@ The `slot` attribute is used to replace the contents of the `<slot>` within a `<
 To assign slots, the `slot` attribute should match the value of the `name` attribute within a named slot.
 
 If the custom element doesn't have a match for a slot, the contents of the `<slot>` will be rendered.
-
-<br>
 
 ## Custom elements
 
@@ -115,8 +105,6 @@ We append a clone of the template contents to the document body each time we use
 
 Note: Being part of a shadow DOM rather than the standard DOM, styles scoped to the document does not apply. We have to create encapsulated styles to style our encapsulated Shadow DOM content.
 
-<br>
-
 ## Shadow DOM
 
 The Shadow DOM scopes CSS styles to each shadow tree, isolating it from the rest of the document.
@@ -139,5 +127,3 @@ We can include a `<style>` element providing encapsulated CSS to the custom elem
 While web components are encapsulated with in `<template>` markup and CSS styles are scoped to the shadow DOM and hidden from everything outside of the components, the slot content which gets rendered, the `<anyElement slot="slot-id">` portion of the component, is not encapsulated.
 
 [Styling outside of the current scope](https://web.dev/learn/html/template/#styling-outside-of-the-current-scope)
-
-<br>

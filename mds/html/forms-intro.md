@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # How forms work
 
 The `<form>` HTML element represents a document section containing interactive controls for submitting information.
@@ -11,14 +9,6 @@ The `<form>` HTML element represents a document section containing interactive c
   <button>Submit Form</button>
 </form>
 ```
-
-## Table of Content
-
-- [Where is the data processed?](#where-is-the-data-processed)
-- [How is the data transferred?](#how-is-the-data-transferred)
-- [What method should you use?](#what-method-should-you-use)
-
-<br>
 
 ## Where is the data processed?
 
@@ -37,5 +27,3 @@ We can instruct the form to use a `POST` request by changing the method attribut
 For forms that process sensitive data use the `POST` method. The data is encrypted (if you use HTTPS) and only accessible by the backend script that processes the request. The data is not visible in the URL. A common example is a sign-in form.
 
 If the data is shareable, you can use the `GET` method. This way the data will be added to your browser history as it is included in the URL. Search forms often use this. This way you can bookmark a search result page.
-
-<br>

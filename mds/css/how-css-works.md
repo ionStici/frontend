@@ -2,152 +2,138 @@
 
 ## Table of Content
 
-- [CSS Object Model](#css-object-model)
-- [The Visual Formatting Model](#the-visual-formatting-model)
-- [The Cascade](#the-cascade)
-- [Specificity](#specificity)
-- [Inheritance](#inheritance)
+- [CSS Object Model Explained](#css-object-model-explained)
+- [Understanding the Visual Formatting Model](#understanding-the-visual-formatting-model)
+- [The Cascade Explained](#the-cascade-explained)
+- [Understanding Specificity in CSS](#understanding-specificity-in-css)
+- [Understanding CSS Inheritance](#understanding-css-inheritance)
 
-## CSS Object Model
+## CSS Object Model Explained
 
-The browser starts to load and parse the HTML file, then decodes the HTML code and builds the Document Object Model (DOM), which describes the entire web document in a tree-like structure.
+When a browser loads a web page, it begins by parsing the HTML file to decode its contents and constructs the Document Object Model (DOM). The DOM represents the entire structure of the web document as a hierarchical tree.
 
-As the browser parses the HTML document, it finds the `link` tag in the HTML head and it starts to load and parse the CSS file as well.
+While processing the HTML, the browser identifies `link` tags within the HTML's head section and subsequently loads and parses associated CSS files. Parsing the CSS involves two primary phases:
 
-During the CSS parsing phase, two main steps take place:
+1. **Resolution of Conflicts:** Conflicting CSS declarations are resolved using a mechanism called the **cascade**.
+2. **Finalization of CSS values:** Processing final CSS values, converting relative units to pixels.
 
-- **Step 1** - Conflicting CSS declarations are resolved through a process known as **cascade**
-- **Step 2** - Processing final CSS values, converting relative units to pixels
+The outcome of CSS parsing is the **CSS Object Model (CSSOM)**, a tree-like structure that maps styles to the corresponding elements in the DOM. The combination of the DOM and CSSOM forms the **Render Tree**, which the browser uses to visually render the page.
 
-The final CSS is also stored in a tree-like structure, called the **CSS Object Model (CSSOM)**. The parsed and stored HTML document and CSS file together form the **Render Tree**, which then renders the page.
+The rendering process employs the **Visual Formatting Model**, an algorithm that calculates layout based on several factors, including the box model, element floats, and positioning. Once this model completes its calculations, the page is displayed on the screen.
 
-In order to render the page, the browser uses an algorithm called the **Visual Formatting Model** that calculates and uses a bunch of stuff like box-model, floats, and positioning.
+## Understanding the Visual Formatting Model
 
-After the Visual Formatting Model has done its works, the website is finally displayed to the screen, and the process is finished.
+The **Visual Formatting Model** is crucial for determining the spatial arrangement of elements within the render tree. It considers several factors:
 
-## The Visual Formatting Model
+1. **Box dimensions and types:** Determined by the `display` property and the box model.
+2. **Positioning schemes:** Includes normal flow, floating elements, and absolute positioning.
+3. **Stacking Contexts:** Determines the layering of elements.
+4. **External factors:** Such as the viewport size and intrinsic dimensions of content like images.
 
-**The Visual Formatting Model** is an algorithm that determines the overall layout by calculating the dimensions of each element in the render tree.
+These factors collectively influence the final appearance of a website in a browser, defining how elements are laid out and interact visually.
 
-The algorithm takes in account:
+## The Cascade Explained
 
-- Box dimensions (the box model) and Box types (set by `display`)
-- Positioning scheme (normal flow, float, absolute positioning)
-- Stacking Contexts and Other elements present in the document tree
-- External information such as viewport size, intrinsic dimensions of images, etc.
+The **cascade** is an essential algorithm in CSS that resolves conflicts when multiple CSS rules target the same HTML element. This process is divided into four key stages:
 
-All these concepts together determine how the website will look in the browser.
+1. **Position and Order or Appearance:** the order of which CSS rules appear.
+2. **Specificity:** algorithm that determines which CSS selector has the strongest match.
+3. **Origin:** where CSS comes from
+4. **Importance:** some CSS declarations are weighted more heavily than others
 
-## The Cascade
+### 1. Position and Order of Appearance
 
-The **cascade** is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element.
+In Situations where CSS selectors have identical specificity, the selector that appears last in the CSS source is applied. This holds true for:
 
-The cascade algorithm is split into 4 distinct stages:
+- Selectors within the same stylesheet: the last written takes precedence.
+- Multiple CSS rules in the same selector: the last declared rule is the one applied.
+- Multiple stylesheets linked in the HTML: the last stylesheet linked overrides earlier ones.
+- Inline styles: these always take precedense over external stylesheets unless overridden by `!important`
 
-1. **Position and order of appearance:** the order of which the CSS rules appear
-2. **Specificity:** an algorithm which determines which CSS selector has the strongest match
-3. **Origin:** the order of when CSS appears and where it comes from
-4. **Importance:** some CSS rules are weighted more heavily than others `!important`
-
-### 1. Position and order of appearance
-
-- Two selectors of identical specificity: the last one written in the source code is the one that will apply.
-- The same CSS property declared multiple times in the same selector: the last one declared will apply.
-
-<div></div>
-
-- Multiple CSS files linked via the `<link>` tag: the last `<link>` will have the most specificity.
-- If the `<style>` element is declared before a `<link>`: the linked stylesheet's CSS will have the most specificity.
-- An inline `style` attribute with CSS declared in will override all other CSS, regardless of its position, unless a delcaration has `!important` defined.
-
-<div></div>
-
-Being able to specify two values for the same property can be a simple way to create fallbacks for browsers that do not support a particular value. This approach of declaring the same property twice works because browsers ignore values they don't understand. Unlike some other programming languages, CSS will not throw an error or break your program when it detects a line it cannot parse—the value it cannot parse is invalid and therefore ignored. The browser then continues to process the rest of the CSS without breaking stuff it already understands.
+Moreover, CSS allows the same property to be declared multiple times within a selector to provide fallbacks for unsupported values. Browsers will ignore unsupported values and apply the next valid declaration.
 
 ### 2. Specificity
 
-**Specificity** is an algorithm which determines which CSS selector is the most specific. Some selectors are more specific than others:
+**Specificity** is a measure used to determine which CSS rules is more precise and therefore should be applied. The specificity hierarchy is as follows:
 
-- Inline styles > IDs > Classes > Elements
+- **Inline Styles:** have the highest specificity.
+- **IDs:** are mote specific than classes.
+- **Classes:** have greater specificity than element selectors.
 
-Inline styles will override IDs, and IDs will override classes, and then classes will override elements, and the reason for this behavior is that each selector type has a different level of specificity.
-
-**Specificity is cumulative:** each type of selector is awarded points which indicate how specific it is, the points for all of the selectors you have used to target an element are added together.
+Specificity is cumulative; it's calculated by adding the points from each type of selector in a rule. This system ensures that the more specific a selector, the higher its priority in the cascade.
 
 ### 3. Origin
 
-The CSS that you write isn't the only CSS applied to a page. The cascade takes into account the origin of the CSS. This origin includes the browser's internal stylesheet, styles added by browser extensions or the operating system, and your authored CSS. The **order of specificity of these origins**, from least specific, to most specific is as follows:
+CSS can originate from various sources, not just the source code. The cascade accounts for these origins in a specific order, considering their specificity:
 
-1. **User agent base styles**. These are the styles that your browser applies to HTML elemnets by default.
-2. **Local user styles**. These can come from the operating system level, such as a base font size, or browser extension level CSS.
-3. **Authored CSS**. The CSS that you (the developer) author.
-4. **Authored `!important`**. Any `!important` that you add to your authored declarations.
-5. **Local user styles `!important`**. Any `!important` that come from the operating system level, or browser extension level CSS.
-6. **User agent `!important`**. Any `!important` that are defined in the default CSS, provided by the browser.
-
-<!-- 1. The most important declarations - are the user declarations marked with the !important keyword;
-2. Second: the author declarations marked with the !important keyword;
-3. Third: the normal author declarations;
-4. Then, normal user declarations;
-5. The least important ones - the browser declarations; -->
+1. **User agent stylesheet:** The default styles applied by the browser.
+2. **User styles:** Styles set by the user's operating system or browser extensions.
+3. **Author styles:** Styles written by the website's developer.
+4. **Author styles with `!important`:** Overrides all other styles except user `!important` declarations.
+5. **User styles with `!important`:** Overrides all other styles, including author `!important`.
+6. **User agent styles with `!important`:** Rarely used but would override all other styles.
 
 ### 4. Importance
 
-The cascade gives the conflicting declarations different importance based on where they are declared (source).
+The cascade assigns different levels of importance to CSS declarations based on their source and type:
 
-The **order of importance**, from least important, to most important is as follows:
+1. **Normal rules:** Standard CSS properties.
+2. **Animations:** Override normal rules due to their dynamic nature.
+3. **`!important` rules:** Typically override all other types unless more specific.
+4. **Transitions:** These have unique behaviors and can override even `!important` rules during their active phase.
 
-1. normal rule type (properties)
-2. `animation` rule type
-3. `!important` rule type (properties)
-4. `transition` rule type
+Animations and transitions are designed to temporarily alter the visual state of elements and are given higher precedence to ensure that their effects are visible and override other static styles when active. This system ensures that dynamic styles function as expected without being blocked by higher-specificity static styles.
 
-Active animation and transition rule types have higher importance than normal rules. In the case of transitions higher importance than `!important` rule types. This is because when an animation or transition becomes active, its expected behaviour is to change visual state.
+## Understanding Specificity in CSS
 
-## Specificity
+Specificity is a CSS mechanism that determines which style rules apply to an element when multiple rules could potentially match. It assigns a numeric score to each selector in a rule based on its type, and these scores are totaled to calculate the rule's overall specificity.
 
-Each selector gets a scoring. **Specificity = total score for a selector rule**.
+### Specificity Scoring System
 
-Each selector type earns points. You add all of these points up to calculate a selector's overall specificity.
+Each type of selector contributes a different amount of points to a rule's total specificity:
 
-- `*` universal selector has no specificity / gets 0 points, any rule with 1 or more will override it
-- **Element** or **pseudo-element** selector gets **1 point** of specificity
-- **Class, pseudo-class, attribute** selector gets 10 points of specificity
-- An **ID** selector gets 100 points of specificity
-- CSS applied directly to the `style` attribute of the HTML element, gets a **specificity score of 1000 points**
-- An `!important` at the end of a CSS value gets a specificity score of **10.000 points**
+- **Universal selector `*`** carries **0 points**; it has the lowest specificity.
+- **Element selectors** and **pseudo-element selectors** each add **1 point**.
+- **Class selectors**, **pseudo-class selectors**, and **attribute selectors** each contribute **10 points**.
+- **ID selectors** provide a substantial **100 points**.
+- Styles defined in the **inline `style` attribute** of an HTML element have a very high specificity of **1,000 points**.
+- Declaring a style as **`!important`** in a CSS rule escalates its specificity dramatically to **10,000 points**.
 
-When a selector rule is composed of multiple selectors, the specificity of each individual selector is added to the overall score of the selector rule, e.g. `a.link {}` an element and a class selector will have together 11 points of specificity.
+### Calculating Specificity
 
-**Best practice rule:** use mostly only classes as selectors and rely on order of appearance.
+When a selector is composed of multiple types, the points from each are added together to determine its total specificity. For example, the selector `a.link {}` combines an element selector (`a`) and a class selector (`.link`), resulting in a specificity score of 11 points (1 point for the element + 10 points for the class).
 
-## Inheritance
+### Practical Tips on Specificity
 
-**Inheritance** - propagating values from parent elements to their children.
+- **Best Practices:** Generally, it's advisable to use class selectors for styling due to their moderate specificity, which makes styles easier to manage and override if necessary.
+- **Avoid Over-Specificity:** Relying heavily on ID selectors or inline styles can make your CSS difficult to maintain, as these styles are harder to override due to their high specificity.
+- **Use of `!important`:** This should be reserved for exceptional cases where a style must override all others. Frequent use can lead to a specificity war within your stylesheets, making them chaotic and hard to debug.
 
-Some CSS properties are inheritable. E.g. typography properties. If we define `color` on the `body` element, all text elements will inherit the `color` property and its value.
+By understanding and wisely managing specificity, developers can create more flexible, maintainable, and scalable CSS architectures, avoiding common pitfalls that lead to overly complex stylesheets.
 
-Inheritance only cascades downwards.
+## Understanding CSS Inheritance
 
-Every HTML element has every CSS property defined by default with an initial value. An initial value is a property that's not inherited and shows up as a default if the cascade fails to calculate a value for that element.
+**Inheritance** in CSS refers to the process by which certain CSS property values set on parent elements are passed down to their child elements. This mechanism is crucial for maintaining consistency across visual elements without having to explicitly define styles for every element.
 
-Properties that can be inherited cascade downwards, and child elements will get a computed value which represents its parent's value. This means that if a parent has `font-weight` set to `bold` all child elements will be bold, unless their `font-weight` is set to a different value.
+### How Inheritance Works
 
-### inherit keyword
+Not all CSS properties are inheritable, but those that typically relate to text formatting, such as `color`, `font-family`, `font-size`, and others, often are. For instance, if the `color` property is defined on the `body` element, it naturally cascades to all text elements within the `body`, unless a more specific rule overrides it.
 
-The `inherit` keyword can make any property inherit its parent's computed value.
+Inheritance operates strictly in a top-down manner from parent to child. Each HTML element also possesses default values for every CSS property, known as the initial value. These initial values come into play when no specific, inherited, or default browser styles are applicable.
 
-`button { color: inherit; }` in this example, the `button` element will (explicitly) inherit the `color` property from a parent element.
+### Effects of Inheritance
 
-### initial keyword
+Inheritable properties ensure that child elements can automatically adopt the computed values of their parents. For example, setting `font-weight: bold` on a parent element will cause all its child elements to display bold text unless they explicitly have a different `font-weight` set.
 
-Every property has a initial default value. The `initial` keyword sets a property back to that initial default value.
+### Utilizing Inheritance Keywords
 
-`button { color: initial; }` here, the `color` property will return to its initial value.
+CSS provides several keywords to manage inheritance behaviors explicitly:
 
-### unset keyword
+- **`inherit`:** This keyword forces a property to take the same computed value as its parent. For example, `button { color: inherit; }` ensures that the button's text color is the same as its parent element's color.
+- **`initial`:** Using this keyword resets a property to its initial value as defined in CSS specifications. For example, `button { color: initial; }` would reset the button's color to the default color typically black or browser-defined, depending on the user agent.
+- **`unset`:** This keyword acts differently based on whether the property is inheritable:
 
-The `unset` property behaves differently depending if a property in inheritable of not.
+  - For inheritable properties, `unset` behaves like `inherit`, meaning it will take the parent's computed value.
+  - For non-inheritable properties, `unset` acts like `initial`, resetting the property to its default value.
 
-- If a property is inheritable, then `unset` keyword will be the same as `inherit`
-- If a property is not inheritable, the `unset` keyword is equal to `initial`
+Understanding and properly using these keywords can significantly enhance CSS management by providing more control over how styles are applied and inherited across a website, making it easier to maintain a consistent look and feel while minimizing the need for redundant code.

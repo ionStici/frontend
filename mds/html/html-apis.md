@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # HTML APIs
 
 - The DOM (Document Object Model) is an API for accessing and manipulating documents.
@@ -9,8 +7,6 @@
 
 - The AOM (Accessibility Object Model) is based off the DOM.
 - Similarly, the AOM tree contains objects representing all the markup elements, attributes, and text nodes.
-
-<br>
 
 Every node in the document tree is an object that can be manipulated with JavaScript.
 
@@ -55,5 +51,3 @@ Several APIs are available based on features surfaced through the document inter
 The Window interface includes globally available items beyond the DOM that can be used to manipulate the DOM. Window provides functions, namespaces, objects, and constructors documented in MDN's [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) and [DOM References](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).
 
 The Window interface is the API for the object containing the document. The global window object is the window in which the script is running. Every browser tab contains its own Window object. The Window interface can query the contents of the tab as well as the overall window and device.
-
-<br>
