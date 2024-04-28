@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Flexbox
 
 CSS Flexbox is a one-dimensional layout mechanism.
@@ -39,8 +37,6 @@ CSS Flexbox is a one-dimensional layout mechanism.
 - [Layout: legacy notes](#layout-legacy-notes)
 - [Float and Clear](#float-and-clear)
 
-<br>
-
 ## Flexbox Terminology
 
 - The element on which we use `{ display: flex; }` is called the **Flex Container**.
@@ -49,8 +45,6 @@ CSS Flexbox is a one-dimensional layout mechanism.
 - The other perpendicular axis is called **Cross Axis**.
 
 _We can change the direction of the Main Axis using `flex-direction`._
-
-<br>
 
 ## Flexbox Properties Overview
 
@@ -66,8 +60,6 @@ _We can change the direction of the Main Axis using `flex-direction`._
 We use properties on the flex container to position and align the flex items. And then some other properties we can directly use on flex items for individual styles.
 
 **p.s.** The flex item can be at the same time a flex container.
-
-<br>
 
 ## Flex Container
 
@@ -132,8 +124,6 @@ By changing the main axis to column, then properties for main axis will work for
 }
 ```
 
-<br>
-
 ## justify-content
 
 _Properties for space distribution_
@@ -195,11 +185,9 @@ _Property for alignment_
 
 On the main axis, the properties begin with `justify-`. On the cross axis, they begin with `align-`
 
-<br>
-
 ## Flex Items
 
-_Note:_ A flex item can act as flex container at the same time, we can specify display to flex on flex items too.
+_Note:_ A flex item can act as flex container at the same time, we can specify `display: flex` on flex items too.
 
 _Note:_ Using `margin-right: auto;` on a flex item, will automatically use all the available space as margin.
 
@@ -284,8 +272,6 @@ Flexbox will order flex items according to their `order` number, lowest values f
 
 Similar to `align-items`, but `align-self` can be declared separately on flex items.
 
-<br>
-
 ## Layout: legacy notes
 
 Modern layout mechanisms: **flexbox** and **grid**.
@@ -323,5 +309,3 @@ div.item {
 ```
 
 Check MDN for documentation.
-
-<br>

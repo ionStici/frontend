@@ -2,8 +2,6 @@
 
 _The programming language of the Web_
 
-[**&larr; Back to the Main Page**](./../README.md)
-
 <div></div>
 
 - [**JavaScript Fundamentals**](./intro/README.md)
@@ -30,5 +28,3 @@ _The programming language of the Web_
 - [**Different Concepts & More**](./more/README.md)
 
 <div></div>
-
-<br>

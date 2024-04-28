@@ -1,5 +1,3 @@
-[&larr; back](./README.md)
-
 # Sass Introduction
 
 **Sass** is a CSS pre-processor, an extension of CSS that adds new features and tools.
@@ -30,5 +28,3 @@ These two syntaxes works in the same way, just look different.
 - **Functions:** similar to mixins, with the difference that they produce a value that can than be used;
 - **Extends:** make different selectors inherit declarations that are common to all of them;
 - **Control directives:** for writing complex code using conditionals and loops.
-
-<br>

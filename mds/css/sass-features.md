@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Sass Features
 
 ## Table of Content
@@ -11,8 +9,6 @@
 - [Extends](#extends)
 - [Imports](#imports)
 
-<br>
-
 ## Sass Variables
 
 Defining and Using a Sass variable:
@@ -21,8 +17,6 @@ Defining and Using a Sass variable:
 $color-text: #333;
 p { color: $color-text; }
 ```
-
-<br>
 
 ## Sass Nesting
 
@@ -61,8 +55,6 @@ Other useful way of using nesting, is by combining it with the BEM methodology:
 
 Here, `&` replaces the `header` word and targets the `header__logo` class, allowing us to create self-contained code blocks.
 
-<br>
-
 ## Sass Mixins
 
 _Defining and Using a mixin:_
@@ -82,8 +74,6 @@ A **mixin** is a reusable piece of code. We write some code inside a mixin, and 
 To use the mixin, we call it by the name right after the `@include` keyword.
 
 Whenever we call the mixin in a selector block, the code it contains is used in that location.
-
-<br>
 
 ## Functions
 
@@ -109,8 +99,6 @@ div {
 The function returns a value that replaces its name where it was called.
 
 _Note:_ In case we need specific units, the best practice in Sass is to multiply it by `1px`.
-
-<br>
 
 ## Extends
 
@@ -146,17 +134,13 @@ Here, the declaration block of the extend was not copied to the selectors, inste
 
 In case of mixins, all the code from a mixin body is copied into the selector.
 
-<br>
-
 ## Imports
 
 ```scss
-@import "base/utilities";
-@import "variables";
+@import 'base/utilities';
+@import 'variables';
 ```
 
 Using the `@import` statement, we can import all the code from a Sass file to another Sass file.
 
 There's no need to use the underscore or the `.scss` extension, the Sass compiler will understand the path.
-
-<br>

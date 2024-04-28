@@ -1,5 +1,3 @@
-[&larr; back](./README.md)
-
 # **CSS Grid**
 
 ## Table of Content
@@ -39,8 +37,6 @@
 - [web.dev | CSS Grid](https://web.dev/learn/css/grid)
 - [A Complete Guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
-<br>
-
 ## CSS Grid Introduction and Terminology
 
 - **CSS Grid Layout** is a two-dimensional grid system.
@@ -75,7 +71,7 @@
 
 _Use Mozilla Firefox when working with CSS Grids, as it has the best developer tools to visualize the CSS Grid layouts._
 
-To set ap a grid, declare the next property to the parent element:
+To set up a grid, declare the next property to the parent element:
 
 ```CSS
 .grid {
@@ -215,8 +211,6 @@ footer {
 
 We name the lines on the grid between square brackets, and then we use them on grid items instead of the numbers.
 
-<br>
-
 ## Grid Concepts
 
 ### Fraction Unit
@@ -296,8 +290,6 @@ The `minmax()` function requires 2 values and enables the track to vary between 
 
 - `auto-fit` same as auto-fill, except that empty tracks are collapsed, giving them a width of zero.
 
-<br>
-
 ## Alignment
 
 ### Justify Items and Align Items
@@ -354,8 +346,6 @@ _Most important values for both properties:_
 - `start`, `end`, `center`
 - `space-around`, `space-between`, `space-evenly`
 
-<br>
-
 ## Explicit Grids vs. Implicit Grids
 
 **Explicit Grid** - the grid that we define.
@@ -400,5 +390,3 @@ We can specify the order in which rows and columns are implicitly rendered.
 - `dense` keyword fill holes in the grid layout with grid cells if smaller elements are added.
 
 We can pair `row` and `column` with `dense`.
-
-<br>

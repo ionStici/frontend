@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # BEM Methodology
 
 **BEM:** Consistent strategy and structure for naming our classes.
@@ -31,5 +29,3 @@
 ```
 
 We use only classes as selectors, which have low-specificity.
-
-<br>

@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Media Queries
 
 ## prefers-reduced-motion
@@ -39,5 +37,3 @@ The `hover` media feature - test whether the user's primary input mechanism can 
 - `(hover: hover)` the primary input mechanism can hover over elements (cursor).
 
 - `(hover: none)` no primary pointing input mechanism (e.g., many mobile devices emulate hovering when the user performs an inconvenient long tap).
-
-<br>

@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Units
 
 ## Table of Content
@@ -13,12 +11,10 @@
 - [em and rem](#em-and-rem)
 - [Px to Rem Workflow](#px-to-rem-workflow)
 
-<br>
-
 ## Basics
 
 - Each property has an initial value, used if nothing is declared (and if there is no inheritance).
-- Browsers specify a `root` `font-size` for each page (usually 16px).
+- Browsers specify a default `root` `font-size` for each page (usually 16px).
 - Percentages and relative values are always converted to pixels after the page is rendered.
 
 <div></div>
@@ -36,24 +32,16 @@
 - `rem` are always measured relative to the **document's root** `font-size`
 - `vh` and `vw` are percentage measurements of the viewport's `height` and `width`
 
-<div></div>
-
-<br>
-
 ## Numbers
 
 Numbers (unitless integers) are used to define: opacity, line-height, transform, etc.
 
 Numbers have meaning depending on their context.
 
-<br>
-
 ## Percentages
 
 - Percentages for width and height are measured relative to the dimensions of their parent element.
 - Percentages for padding and margin, are measured relative only to the width of the parent element.
-
-<br>
 
 ## Absolute lengths
 
@@ -75,8 +63,6 @@ Absolute lengths are handy for designing print content.
 
 - Angle units `60deg`
 - Resolution units `192dpi`
-
-<br>
 
 ## Relative lengths
 
@@ -104,8 +90,6 @@ Other units: `ex cap ch ic lh rlh`
 
 Other units: `vi vb`
 
-<br>
-
 ## em and rem
 
 - `rem` sizing elements consistently across the entire website.
@@ -121,11 +105,9 @@ Other units: `vi vb`
 
 `rem` stands for _root em_. `rem` is measured relative to the root font-size.
 
-The default root `<html>` font-size is 16px, so by default `rem` is relative to 16px.
+The default root `<html>` font-size is 16px, so by default `1rem` equals 16px.
 
 But we can change the root font-size, and so `rem` can be adjusted based on one single setting.
-
-<br>
 
 ## Px to Rem Workflow
 
@@ -151,5 +133,3 @@ body {
 
 - In font-size, 100% is 16px. To get 10px from percentages: `100 / 16 * 10 = 62.5%`
 - 0.625 multiplied by 18px (user changes) = 11.25px (the new root font-size)
-
-<br>

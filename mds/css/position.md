@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Positioning
 
 ## Table of Content
@@ -14,8 +12,6 @@
   - [sticky](#sticky)
 - [Stacking Contexts and z-index](#stacking-contexts-and-z-index)
 
-<br>
-
 ## Flow of HTML
 
 A browser will render the elements of an HTML document that has no CSS from left to right, top to bottom, in the same order as they exist in the document. This is called the _flow of elements in HTML_.
@@ -24,8 +20,6 @@ CSS provides properties that change how a browser _positions_ elements.
 
 | `position` | `display` | `z-index` | `float` | `clear` |
 | ---------- | --------- | --------- | ------- | ------- |
-
-<br>
 
 ## Positioning in CSS
 
@@ -36,8 +30,6 @@ Three positioning schemes:
 2. **Floats** - the `float` property causes an element to be completely taken out of the normal flow and shifted to the left or right as far as possible, until it touches the edge of its containing box, or another floated element. When this happens, text and inline elements will wrap around the floated element. Also, when an element is floated, its container will not adjust his height to the element, which sometimes can be problematic - the usual solutions for this is the use of "clear fix".
 
 3. **Absolute Positioning** - `position: absolute` or `fixed` - the element is taken out of the normal flow, it has no impact on surrounding content or elements at all, it can overlap them.
-
-<br>
 
 ## Position
 
@@ -83,7 +75,7 @@ div {
 }
 ```
 
-Position in relation to the nearest non-static element.
+Initial Containing Block : the visible part of the web page in the browser window.
 
 ### fixed
 
@@ -122,8 +114,6 @@ div {
 }
 ```
 
-<br>
-
 ## Stacking Contexts and z-index
 
 Stacking Contexts are like layers that form a stack.
@@ -156,8 +146,6 @@ If no `z-index` is set on your elements then the default behaviour is that docum
 
 To create stacking contexts, set the element's `position` value to anything other than `static`.
 
-_p.s._ In flexbox or grid, you can modify the `z-index` of flex or grid items without the `position` property.
+_p.s._ In flexbox or grid, you can modify the `z-index` of flex and grid items without the `position` property.
 
 _p.s._ You can also create a stacking context by adding a `filter` and setting `backface-visibility: hidden`.
-
-<br>

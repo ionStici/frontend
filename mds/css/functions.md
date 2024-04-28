@@ -1,5 +1,3 @@
-[&larr; back](./README.md)
-
 # Functions
 
 A **function** is a named, self-contained piece of code that completes a specific task.
@@ -27,5 +25,3 @@ Other examples of CSS functions: `var()` `minmax()` `fit-content()` `rgb()` `cla
 - Shapes properties: `clip-path` `offset-path` `shape-outside`. Shape functions: `circle()` `ellipse()` `inset()` `polygon()`
 
 - Other functions: `transform` functions, animate, gradients, filters.
-
-<br>

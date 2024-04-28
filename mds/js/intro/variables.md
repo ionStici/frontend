@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Variables
 
 ## Table of Content
@@ -21,7 +19,7 @@ Variables are used to label and store data (values) in the computer's memory.
 After creating a variable, we can: store or update data, reference for data.
 
 ```js
-let firstName = "John"; // declaring a variable
+let firstName = 'John'; // declaring a variable
 ```
 
 1. To create or declare a new variable, we use one of the keywords: `let` `const` `var`
@@ -69,9 +67,9 @@ _Converting between types_
 **Type Conversion** is when we manually convert from one type to another. Functions:
 
 ```js
-Number("1922"); // 1922 | converting strings to numbers
+Number('1922'); // 1922 | converting strings to numbers
 String(1922); // "1922" | converting numbers to strings
-Boolean("Hi"); // true |
+Boolean('Hi'); // true |
 ```
 
 Usually when we receive input from the user, it get it as a string, to process it, we can use type conversion in case we need.
@@ -97,9 +95,9 @@ _Type Coercion:_
 - **`>`** converts to _Numbers_
 
 ```js
-"23" > "18"; // true | strings were converted to numbers then the comparison was made
-"23" + 47; // 2347 | string concatenation, 47 was converted into string
-"5" * 3; // 15 | "5" string was converted into number
+'23' > '18'; // true | strings were converted to numbers then the comparison was made
+'23' + 47; // 2347 | string concatenation, 47 was converted into string
+'5' * 3; // 15 | "5" string was converted into number
 ```
 
 If JS would not have automatic type coercion, like many other languages don't, then we would have to manually do this.
@@ -119,10 +117,10 @@ Use `const` by default, and `let` only when you need to update the variable.
 `let` keyword is used to declare variables that can be reassigned later.
 
 ```js
-let myName = "John";
+let myName = 'John';
 
 let age;
-age = "25";
+age = '25';
 let x, y, z;
 ```
 

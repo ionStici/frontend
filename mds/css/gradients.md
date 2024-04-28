@@ -1,25 +1,13 @@
-[&larr; Back](./README.md)
-
 # Gradients
 
-## Talbe of Content
+## Table of Content
 
 - [A Complete Guide to CSS Gradients | CSS Tricks](https://css-tricks.com/a-complete-guide-to-css-gradients/)
-
-<div></div>
-
 - [Linear gradient](#linear-gradient)
 - [Radial gradient](#radial-gradient)
 - [Conic gradient](#conic-gradient)
-
-<div></div>
-
 - [Repeating](#repeating)
 - [Mixing](#mixing)
-
-<div></div>
-
-<br>
 
 ## Linear gradient
 
@@ -38,8 +26,6 @@ We can add as many colors and color stops as we like.
 The percentage next the color argument represents the size of the gradient where the color changes.
 
 Also, we can layer gradients on top of each other by separating each gradient with a comma.
-
-<br>
 
 ## Radial gradient
 
@@ -67,8 +53,6 @@ The size of the radial gradient determines the size of the gradient's ending sha
 - `closest-corner` will meet the closest corner to the center of the gradient.
 - `closest-side` will meet the side of the box closest to the center of the gradient.
 - `farthest-side` will do the opposite to closest-side.
-
-<br>
 
 ## Conic gradient
 
@@ -98,8 +82,6 @@ We can add as many color stops as we like.
 
 A good use case for conic gradients is rendering pie charts with CSS.
 
-<br>
-
 ## Repeating
 
 Each type of gradient has a repeating type.
@@ -120,8 +102,6 @@ They are similar to the non-repeating functions and take the same arguments. The
 }
 ```
 
-<br>
-
 ## Mixing
 
 We can mix gradient functions, as well as defining as many gradients as we like.
@@ -134,5 +114,3 @@ We can mix gradient functions, as well as defining as many gradients as we like.
 ```
 
 Separate the gradient functions with commas.
-
-<br>

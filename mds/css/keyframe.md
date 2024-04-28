@@ -1,25 +1,4 @@
-[&larr; Back](./README.md)
-
 # Animations
-
-## Table of Content
-
-- [Animation Guide | Web.Dev](https://web.dev/animations/)
-
-<div></div>
-
-- [Keyframe](#keyframe)
-- [Animation Duration](#animation-duration)
-- [animation-timing-function](#animation-timing-function)
-- [animation-iteration-count](#animation-iteration-count)
-- [animation-direction](#animation-direction)
-- [animation-delay](#animation-delay)
-- [animation-play-state](#animation-play-state)
-- [animation-fill-mode](#animation-fill-mode)
-- [The animation shorthand](#the-animation-shorthand)
-- [prefers-reduced-motion](#prefers-reduced-motion)
-
-<br>
 
 ## Keyframe
 
@@ -52,8 +31,6 @@ When we want to use the animation, we assign the keyframe identifier to the `ani
 
 _p.s._ We can assign multiple keyframes at-rules.
 
-<br>
-
 ### Animation Duration
 
 ```scss
@@ -63,8 +40,6 @@ _p.s._ We can assign multiple keyframes at-rules.
 ```
 
 How long the keyframe timeline should be.
-
-<br>
 
 ### animation-timing-function
 
@@ -82,8 +57,6 @@ We can use timing functions that calculate the speed of an animation at each poi
 
 - **`steps()`** easing function - break the timeline into defined, equal intervals. The _first argument_ is how many steps. The _second argument_ is the direction.
 
-<br>
-
 ### animation-iteration-count
 
 ```css
@@ -95,8 +68,6 @@ We can use timing functions that calculate the speed of an animation at each poi
 The `animation-iteration-count` property defines how many times the animation will run.
 
 The `infinite` keyword value will loop the animation indefinitely.
-
-<br>
 
 ### animation-direction
 
@@ -113,8 +84,6 @@ Set which direction the timeline runs over your keyframes. Values:
 - `alternate` for each animation iteration, the timeline will run forwards or backwards in sequence.
 - `alternate-reverse` the reverse of `alternate`.
 
-<br>
-
 ### animation-delay
 
 ```css
@@ -124,8 +93,6 @@ Set which direction the timeline runs over your keyframes. Values:
 ```
 
 The `animation-delay` property defines how long to wait before starting the animation.
-
-<br>
 
 ### animation-play-state
 
@@ -138,8 +105,6 @@ The `animation-delay` property defines how long to wait before starting the anim
 The `animation-play-state` property allows you to play and pause the animation.
 
 The default value is `running` and if you set it to `paused`, it will pause the animation.
-
-<br>
 
 ### animation-fill-mode
 
@@ -154,8 +119,6 @@ The [`animation-fill-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/ani
 - `forwards` The last keyframe will persist, based on the animation direction.
 - `backwards` The first keyframe will persist, based on the animation direction.
 - `both` follows the rules for both `forwards` and `backwards`.
-
-<br>
 
 ### The animation shorthand
 
@@ -176,8 +139,6 @@ Animation properties order:
 7. `animation-fill-mode`
 8. `animation-play-state`
 
-<br>
-
 ### prefers-reduced-motion
 
 Users can define in their operating system that they prefer to reduce motion experienced when they interact with applications and websites. This preference can be detected using the `prefers-reduced-motion` media query.
@@ -189,5 +150,3 @@ Users can define in their operating system that they prefer to reduce motion exp
   }
 }
 ```
-
-<br>

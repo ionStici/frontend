@@ -1,5 +1,3 @@
-[&larr; back](./README.md)
-
 # Theming
 
 ## Customize the browser interface
@@ -13,8 +11,6 @@ The browser's interface adapts to your suggested color.
 - You can change this setting using JavaScript.
 
 Also, you can specify a theme color in a [web app manifest file](https://developer.mozilla.org/en-US/docs/Web/Manifest) linked to your HTML document. Read: [Add a web app manifest](https://web.dev/add-manifest/).
-
-<br>
 
 ## prefers-color-scheme
 
@@ -30,8 +26,6 @@ Example for `theme-color` meta tag:
 ```html
 <meta name="theme-color" content="#" media="(prefers-color-scheme: dark)" />
 ```
-
-<br>
 
 ## Theming with custom properties
 
@@ -49,9 +43,7 @@ html {
 }
 ```
 
-[Building a color scheme](https://web.dev/building-a-color-scheme/) for more advanced examples of themeing with custom properties.
-
-<br>
+[Building a color scheme](https://web.dev/building-a-color-scheme/) for more advanced examples of theming with custom properties.
 
 ## prefers-color-scheme in the picture element
 
@@ -61,8 +53,6 @@ html {
   <img src="lightimage.png" alt="A description of the image." />
 </picture>
 ```
-
-<br>
 
 ## Default Form Styles
 
@@ -82,5 +72,3 @@ html {
 ```html
 <meta name="supported-color-schemes" content="light dark" />
 ```
-
-<br>

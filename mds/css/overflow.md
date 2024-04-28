@@ -1,11 +1,7 @@
-[&larr; back](./README.md)
-
 # Overflow
 
 - `overflow` control overflow in the box model.
 - `text-overflow` clipping individual lines of text.
-
-<br>
 
 ## text-overflow
 
@@ -13,15 +9,18 @@
 
 It specifies how the text appears when it doesn't fit in the available space of the element.
 
+Display text with ellipsis:
+
 ```css
 p {
   text-overflow: ellipsis;
+  width: 500px;
   overflow: hidden;
   white-space: nowrap;
 }
 ```
 
-<br>
+_p.s._ All of the above properties must be defined for the ellipse effect to work.
 
 ## Overflow
 
@@ -40,14 +39,10 @@ We use overflow properties on a parent element to control what happens when its 
 - `clip` content is clipped. Clip forbids all scrolling.
 - `auto` gives responsibility for scrolling to the user and browser.
 
-<br>
-
 ## Scroll properties
 
 - [`scroll-behavior`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior) sets the behavior for a scrolling box. Use along with `prefers-reduced-motion`
 - [`overscroll-behavior`](https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior) sets what a browser does when reaching the boundary of a scrolling area.
-
-<br>
 
 ## Hide Scrollbar But Keep Functionality
 
@@ -64,8 +59,6 @@ We use overflow properties on a parent element to control what happens when its 
 }
 ```
 
-<br>
-
 ## Scrolling and accessibility
 
 Scrollable areas must accept focus so that keyboard users can tab to the box, and then use arrow keys to scroll.
@@ -78,5 +71,3 @@ Scrollable areas must accept focus so that keyboard users can tab to the box, an
 [role][aria-labelledby][tabindex] { overflow: auto; }
 [role][aria-labelledby][tabindex]:focus { outline: 0.1em solid blue; }
 ```
-
-<br>

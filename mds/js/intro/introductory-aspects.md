@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Introductory Aspects
 
 ## Table of Content
@@ -13,8 +11,6 @@
 - [Properties](#properties)
 - [Methods](#methods)
 - [Built-in Objects](#built-in-objects)
-
-<br>
 
 ## Console
 
@@ -31,14 +27,12 @@ Keywords are words that are built into the JS language, so the computer recogniz
 One action that is built into the `console` object is the `.log()` method, which will print to the console what we type inside the parentheses.
 
 ```js
-console.log("hello"); // hello
+console.log('hello'); // hello
 console.log(console); // to see what methods the console object contains
-console.error("An Error"); // Will display the result in red as an error
+console.error('An Error'); // Will display the result in red as an error
 ```
 
 The semicolon denotes the end of the statement.
-
-<br>
 
 ## Comments in JavaScript
 
@@ -46,8 +40,6 @@ The semicolon denotes the end of the statement.
 Single-line: // code
 Multi-line:  /* code */
 ```
-
-<br>
 
 ## Data Types
 
@@ -82,8 +74,6 @@ The first 7 data types can be referred as **primitive data types** or just **pri
 
 **Objects** or **Reference types** are more complex.
 
-<br>
-
 ## typeof operator
 
 We can check the type of a value using the `typeof` operator:
@@ -94,8 +84,6 @@ typeof null; // object
 ```
 
 JS says that the type of `null` is an object, which is not correct, `typeof null` should return `null`. This is regarded as an error in js, but it is never corrected for legacy reasons.
-
-<br>
 
 ## Arithmetic Operators
 
@@ -114,20 +102,16 @@ An operator is a character that performs a task and transforms values or combine
 
 The remainder operator `%` returns the number that _remains_ after the right-hand number divides into the left-hand number as many times as it **evenly** can.
 
-<br>
-
 ## String Concatenation
 
 We can use the plus operator to join (**concatenate**) strings:
 
 ```js
-"hello" + " " + "world"; // hello world
-greeting + " " + myName; // Hello John | String Concatenation with Variables
+'hello' + ' ' + 'world'; // hello world
+greeting + ' ' + myName; // Hello John | String Concatenation with Variables
 ```
 
 This appends the right string to the left string.
-
-<br>
 
 ## Properties
 
@@ -136,7 +120,7 @@ A **property** is a piece of information about and stored in a particular data t
 For example, each string instance has a `.length` property that holds the number of characters the string has, example:
 
 ```js
-"hello".length; // 5
+'hello'.length; // 5
 ```
 
 Here, we append the `length` property to a string using the dot `.` operator.
@@ -144,8 +128,6 @@ Here, we append the `length` property to a string using the dot `.` operator.
 The `.length` property will return 5 in this case, which is the number of characters the string has.
 
 _Note:_ Depending on the data type, we have access to specific properties.
-
-<br>
 
 ## Methods
 
@@ -158,12 +140,10 @@ We **call** a method by appending an instance with: the dot `.` operator -> the 
 Example: `'string'.methodName()`
 
 ```js
-"hello".toUpperCase(); // HELLO | returns the string in all capital letters
+'hello'.toUpperCase(); // HELLO | returns the string in all capital letters
 ```
 
 [List of built-in string methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
-
-<br>
 
 ## Built-in Objects
 
@@ -176,5 +156,3 @@ Math.random(); // returns a random number between 0 and 1
 ```
 
 Here, we called `.random()` method on the `Math` built-in object.
-
-<br>

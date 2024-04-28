@@ -1,5 +1,3 @@
-[&larr; back](./README.md)
-
 # Custom Properties
 
 CSS Custom Properties (CSS Variables)
@@ -20,13 +18,9 @@ CSS Custom Properties (CSS Variables)
 - It must be defined in a declaration block, and it is scoped to that block.
 - To make CSS variables available everywhere, declare them inside `:root`
 
-<br>
-
 ## Edit CSS Variables in JavaScript:
 
 ```js
 const root = document.documentElement;
-root.style.setProperty("--color-1", "#ddd");
+root.style.setProperty('--color-1', '#ddd');
 ```
-
-<br>

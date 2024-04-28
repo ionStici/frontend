@@ -1,5 +1,3 @@
-[&larr; back](./README.md)
-
 # Architecting: Organizing Files
 
 **The 7-1 Pattern** - create **7 folders** for partial Sass files, and 1 main Sass file where we will import all of our partial files, and then compile everything in one final CSS style sheet. Not mandatory to use all of these folders, it depends on the project's size and scope.
@@ -14,13 +12,11 @@ Create a `sass/` folder containing the following 7 folders:
 - `themes/` - if you want to implement different visual themes
 - `vendors/` - for third party CSS
 
-<br>
-
 ## 7-1 pattern in details
 
 - **`main.scss`** - file that serves for imports
 
-<br>
+<div></div>
 
 - **`base/`** - for basic definitions.
 
@@ -29,7 +25,7 @@ Create a `sass/` folder containing the following 7 folders:
   - `_typography.scss` all the styles related to typograph.
   - `_utilities.scss` for CSS utility classes
 
-<br>
+<div></div>
 
 - **`abstracts/`** - for code that will not output any CSS, e.g. variables, mixins, etc.
 
@@ -37,13 +33,13 @@ Create a `sass/` folder containing the following 7 folders:
   - `_mixins.scss`
   - `_functions.scss`
 
-<br>
+<div></div>
 
 - **`components/`** - here we create one file for each particular component.
 
   - `_button.scss`
 
-<br>
+<div></div>
 
 - **`layout/`** - a file for each piece of global layout of the entire project, e.g. global header, global footer.
 
@@ -51,17 +47,13 @@ Create a `sass/` folder containing the following 7 folders:
   - `_header.scss`
   - `_footer.scss`
 
-<br>
+<div></div>
 
 - **`pages/`** - specific styles for a specific page, like the homepage.
 
   - `_home.scss`
 
-<br>
-
 Our Sass files are partials, that's why we name them with an underscore.
-
-<br>
 
 ## Guidance
 
@@ -73,8 +65,6 @@ Our Sass files are partials, that's why we name them with an underscore.
 The **components** are the building blocks which are independent and reusable everywhere across our website, and the **layout** is what holds all of these components together.
 
 This architecture is designed to handle complex projects (useful for maintaining the code over time). For simple landing pages we should use something simpler.
-
-<br>
 
 ## Another Sass files structure
 
@@ -94,5 +84,3 @@ sass/
 	_typography.scss
 	main.scss
 ```
-
-<br>

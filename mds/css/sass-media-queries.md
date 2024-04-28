@@ -1,5 +1,3 @@
-[&larr; back](./README.md)
-
 # Media Queries and Sass
 
 ```scss
@@ -15,8 +13,6 @@
 In Sass, we can nest media queries into CSS declaration blocks resulting in more modular code blocks.
 
 This will then be compiled as the traditional way of using media queries in CSS.
-
-<br>
 
 ## Media queries and Mixins
 
@@ -42,8 +38,6 @@ We can write a mixin which will insert the media query syntax for us.
 
 The code we pass into the mixin will be replaced instead of `@content`.
 
-<br>
-
 ## Mixins with Arguments
 
 ```
@@ -57,8 +51,6 @@ html { @include width(600) { font-size: 9px; } }
 
 - If `@breakpoint` argument is `600`, then use this media query `(min-width: 37.5em)`.
 - `@if` sass directive makes a test, and if the result if true then something happens.
-
-<br>
 
 ## Media queries with Sass Variables
 
@@ -75,5 +67,3 @@ Then use the Sass variable in your media query:
   @media only screen and (min-width: $bp-1200);
 }
 ```
-
-<br>

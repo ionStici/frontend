@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Tricks and Tips
 
 - **Utility Classes** `.u-margin-right-sm { margin-right: 1.6rem !important; }`
@@ -14,8 +12,6 @@
 
 - `touch-action` CSS property sets how an element's region can be manipulated by a touchscreen user (e.g. zooming features built into the browser)
 
-<br>
-
 ## Disable Text Selection
 
 You can use the `user-select` property to disable text selection of an element.
@@ -27,8 +23,6 @@ You can use the `user-select` property to disable text selection of an element.
   user-select: none; /* Standard syntax */
 }
 ```
-
-<br>
 
 ## Mobile Navigation
 
@@ -67,8 +61,6 @@ body {
 
 All the elements that overflow the viewport in the X axis (horizontally), will be hidden.
 
-<br>
-
 ## Test and Optimize
 
 - Make sure website works well in all major browsers
@@ -77,5 +69,3 @@ All the elements that overflow the viewport in the X axis (horizontally), will b
 - Fix simple accessibility problems (e.g. color contrast issues)
 - Run the Lighthouse performance test in Chrome DevTools and try to fix reported issues
 - Think about Search Engine Optimization (SEO)
-
-<br>

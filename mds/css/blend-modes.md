@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Blend Modes
 
 **Blend Modes** - compositional effects by mixing colors from two or more layers.
@@ -9,8 +7,6 @@
 - [`background-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode) applies blending to the background of an element.
 
 Blend modes fall into two categories: **separable** and **non-separable**. A separable blend mode considers each color component, such as RGB, individually. A non-separable blend mode considers all color components equally.
-
-<br>
 
 ## Separable blend modes
 
@@ -43,8 +39,6 @@ Blend modes fall into two categories: **separable** and **non-separable**. A sep
 
 - `exclusion` similar to `difference`, but it will return 50% gray, resulting in a softer output with less contrast.
 
-<br>
-
 ## Non-separable blend modes
 
 You can think of these blend modes like HSL color components. Each takes a specific component value from the active layer and mixes it with other component values.
@@ -56,8 +50,6 @@ You can think of these blend modes like HSL color components. Each takes a speci
 - `color` will create a color from the hue and saturation of the source color and the luminosity of the backdrop color.
 
 - `luminosity` the inverse of `color`.
-
-<br>
 
 ## The isolation property
 
@@ -74,5 +66,3 @@ This will create a new stacking context, which will prevent it from blending wit
 The parent-level blend modes will no longer apply, but elements inside of an element with `{ isolation: isolate }` set can still blend.
 
 _p.s._ This doesn't work with `background-blend-mode`
-
-<br>

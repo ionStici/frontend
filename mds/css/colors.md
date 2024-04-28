@@ -1,12 +1,8 @@
-[&larr; Back](./README.md)
-
 # Colors
 
 Four types of colors in CSS: Named / Hex / RGB / HSL.
 
 We should choose one and be consistent throughout our CSS.
-
-<br>
 
 ## Table of Content
 
@@ -17,8 +13,6 @@ We should choose one and be consistent throughout our CSS.
 - [HSL](#hsl)
 - [Opacity and Alpha](#opacity-and-alpha)
 
-<br>
-
 ## Foreground and Background in CSS
 
 ```css
@@ -27,8 +21,6 @@ h1 {
   background-color: red; /* background color */
 }
 ```
-
-<br>
 
 ## Hexadecimal
 
@@ -41,8 +33,6 @@ The hexadecimal number system has 16 digits (from 0 to 15). To represent 10 - 15
 We can represent hex colors with 3 characters in case that it contains pairs. For example: `#00FFFF` can be written as `#0FF`.
 
 Colors from _white_ to _black_: `fff -> eee -> ddd -> ccc -> bbb -> aaa -> 999 -> 888 -> … -> 111 -> 000`
-
-<br>
 
 ## RGB Colors
 
@@ -64,15 +54,11 @@ These colors are exactly the same as hex, but with a different syntax and a diff
 
 RGB color system is convenient because it's very close to how computers represent colors internally.
 
-<br>
-
 ## Hex and RGB
 
 Hex and RGB syntaxes, each have 3 values, one for each color. Each can be one of 256 values.
 
 Specifically, `256 * 256 * 256 = 16.777.216` this is the amount of colors we can represent.
-
-<br>
 
 ## HSL
 
@@ -92,8 +78,6 @@ _Hue_ refers to an angle on a [color wheel](https://web-dev.imgix.net/image/VbAJ
 _Saturation_ refers to the intensity of the color.
 
 _Lightness_ refers to how light or dark the color is. `50%` is normal lightness.
-
-<br>
 
 ## Opacity and Alpha
 
@@ -138,5 +122,3 @@ h1 {
 We can change the opacity of a hex color by adding a two-digit hexadecimal value to the end of the hex color (or a one-digit pair value).
 
 Hex opacity ranges from 00 (transparent) to FF (opaque).
-
-<br>

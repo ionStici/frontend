@@ -1,14 +1,4 @@
-[&larr; Back](./README.md)
-
 # Shadows
-
-## Table of Content
-
-- [Box Shadow](#box-shadow)
-- [Text Shadow](#text-shadow)
-- [Drop Shadow](#drop-shadow)
-
-<br>
 
 ## Box Shadow
 
@@ -32,8 +22,6 @@ Order of values for `box-shadow`:
 
 **Multiple Shadows:** you can add as many shadows as you like in one `box-shadow` property, just add a comma separated collection of values.
 
-<br>
-
 ## Text Shadow
 
 **`text-shadow`** property - add shadow on text nodes.
@@ -45,8 +33,6 @@ The values for `text-shadow` are the same as `box-shadow` and in the same order.
   text-shadow: 3px 3px 3px hotpink;
 }
 ```
-
-<br>
 
 ## Drop Shadow
 
@@ -61,5 +47,3 @@ The values for `text-shadow` are the same as `box-shadow` and in the same order.
 The `drop-shadow` filter has the same values as `box-shadow`, but the `inset` keyword and `spread` value are not allowed.
 
 You can add as many shadows as you like, by adding multiple instances of `drop-shadow` values to the `filter` property. Each shadow will use the last shadow as a positioning reference point.
-
-<br>

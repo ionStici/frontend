@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Filter
 
 ## The filter property
@@ -35,12 +33,8 @@
 
 - `url(#pink-filter)` apply an SVG filter from a linked SVG element or file.
 
-<br>
-
 ## Backdrop filter
 
 The [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter) property accepts all of the same filter function values as `filter.`
 
 The difference between `backdrop-filter` and `filter` is that the `backdrop-filter` property only applies the filters to the background, where the `filter` property applies it to the whole element.
-
-<br>

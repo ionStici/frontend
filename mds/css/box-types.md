@@ -2,7 +2,7 @@
 
 Every HTML element has a default `display` value that dictates how the box behaves. If it shares horizontal space with other elements, if it fills the entire browser area from left to right, etc.
 
-We can change this default using the `display` property.
+We can change this default behavior using the `display` property.
 
 ## Table of Content
 
@@ -22,7 +22,7 @@ div {
 - Content is distributed in lines. No line-breaks.
 - Occupies only the space that its content needs.
 - We cannot use `height` or `width` on inline boxes.
-- We can only specify horizontal padding and margins for inline elements.
+- We can specify only horizontal padding and margin for inline elements.
 
 ## Block-level Elements
 

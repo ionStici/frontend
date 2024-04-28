@@ -1,5 +1,3 @@
-[&larr; back](./README.md)
-
 Label **Legacy**
 
 # Responsive Design - Media Queries
@@ -23,8 +21,6 @@ Label **Legacy**
 - [Dots Per Inch (DPI)](#dots-per-inch-dpi)
 - [hover media feature](#hover-media-feature)
 
-<br>
-
 <!-- ## Viewport Meta element
 
 Meta element that enables responsive design.
@@ -38,7 +34,7 @@ Meta element that enables responsive design.
 - `width=device-width` tells the browser to assume the width of the website is the same as the width of the device.
 - `initial-scale=1` tells the browser how much or how little scaling to do, with RD you don't want the browser to do any scaling at all.
 
-<br> -->
+-->
 
 ## Responsive Design Overview
 
@@ -50,8 +46,6 @@ Meta element that enables responsive design.
 2. **Responsive Images:** ensure that images adapt correctly to the current viewport (use `%`).
 3. **Media Queries:** allow us to create different version of our website for different widths by changing CSS styles on certain viewport widths (breakpoints).
 4. **Responsive Units:** with the `rem` unit we can scale the entire layout automatically.
-
-<br>
 
 ## Viewport Meta Tag
 
@@ -71,8 +65,6 @@ This tag will make the page match the screen size. As written in the attribute v
 - `content` defines the values for the `<meta>` tag, including `width` and `initial-scale`
 - `width=device-width` key-value pair: controls the size of the viewport in which it sets the width of the viewport to equal the width of the device
 - `initial-scale=` key-value pair: sets the initial zoom level
-
-<br>
 
 ## How to Select Breakpoints
 
@@ -115,8 +107,6 @@ We start at the main screen size, then start decreasing or increasing the screen
 - We should ensure that our webpage looks good on big screens too `1920px`.
 
 </details>
-
-<br>
 
 ## Mobile-First vs. Desktop-First
 
@@ -162,8 +152,6 @@ Do your users even use the mobile internet? What’s the purpose of your website
 
 </details>
 
-<br>
-
 ## How Media Queries Work
 
 ```css
@@ -198,10 +186,6 @@ Media Queries can detect the size of the current screen and apply different CSS 
 - `(min-width)` and `(min-height)` are used to set the minimum width and minimum height.
 - `(max-width)` and `(max-height)` set the maximum width and maximum height.
 
-<br>
-
-<br>
-
 ## `and` Operator and Comma Separated List
 
 ```css
@@ -217,8 +201,6 @@ The Comma Separated List will apply the media query rule if at least one meadia 
 
 The `orientation` media feature detects if the page has more width than height: `landscape` if the page is wider; `portrait` if the page is taller;
 
-<br>
-
 ## Range
 
 ```css
@@ -230,8 +212,6 @@ The `orientation` media feature detects if the page has more width than height: 
 By using multiple widths and heights, we can define a media query for a specific range.
 
 In the example above, CSS rules would apply when the screen size is between 320px and 480px.
-
-<br>
 
 ## Units in Media Queries
 
@@ -246,8 +226,6 @@ Instead, use `em` (safer). To convert pixels to em, divide pixels by 16px:
 
 `1em` in media queries rule will always be equal to the font-size coming from the browser, which is the default 16px. And if the user changes it to 20px, therefore our units will correspond.
 
-<br>
-
 ### Pixels as root font-size
 
 [Stack Overflow](https://stackoverflow.com/questions/13237782/safari-doesnt-calculate-rem-units-correct-when-scaling-with-media-width-heigh)
@@ -258,8 +236,6 @@ Solution: convert root font-size from percentages to pixels:
 
 - `0.625 * 16 = 10px`
 - `0.20 * 16 = 8px`
-
-<br>
 
 ## Dots Per Inch (DPI)
 
@@ -281,8 +257,6 @@ To target by resolution, we can use the `min-resolution` and `max-resolution` me
 
 The media query in the example above targets high resolution screens by making sure the screen resolution is at least 300 dots per inch. If the screen resolution query is met, then we can use CSS to display high resolution images and other media.
 
-<br>
-
 ## hover media feature
 
 ```css
@@ -292,5 +266,3 @@ The media query in the example above targets high resolution screens by making s
 ```
 
 `hover` media features can identify if the user can hover over elements or not, we kind of identify touch devices or mouse.
-
-<br>

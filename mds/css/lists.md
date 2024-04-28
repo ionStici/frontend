@@ -1,10 +1,6 @@
-[&larr; Back](./README.md)
-
 # Lists
 
 All `<li>` elements have `{ display: list-item; }` set, and the browser renders a `::marker` by default.
-
-<br>
 
 ## List Styles
 
@@ -16,16 +12,12 @@ All `<li>` elements have `{ display: list-item; }` set, and the browser renders 
 
 - `list-style` shorthand, any order.
 
-<br>
-
 ## ::marker pseudo-element
 
 Every `<li>` element has a `::marker` pseudo-element with some browser default styles.
 
 If we declare `{ display: list-item; }` to any type of element, it will get a `::marker` pseudo-element that we can then style.
 
-The marker box is ther container that contains the bullet or number. We can style this marker box using the `::marker` selector.
+The marker box is their container that contains the bullet or number. We can style this marker box using the `::marker` selector.
 
 `::marker` styling properties available: `animation-* transition-* color direction font-* content unicode-bidi white-space`
-
-<br>

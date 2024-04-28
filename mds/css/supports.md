@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # @supports
 
 **Graceful degradation**
@@ -19,5 +17,3 @@ div {
 ```
 
 As parameters to `@supports` we pass the property that we want to test if the browser supports. And if it is supported, then the code block will wpply.
-
-<br>

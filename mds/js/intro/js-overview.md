@@ -1,14 +1,4 @@
-[&larr; Back](./README.md)
-
 # JavaScript Overview
-
-## Table of Content
-
-- [JavaScript Introduction](#javascript-introduction)
-- [JavaScript Definition](#javascript-definition)
-- [JavaScript Over Time](#javascript-over-time)
-
-<br>
 
 ## JavaScript Introduction
 
@@ -25,8 +15,6 @@ _JavaScript frameworks_ - defines how a developer design an application.
 
 All these frameworks and libraries are 100% based on JavaScript, so you have to become really good at JS before learning and using any of these tools.
 
-<br>
-
 ### Server-side JavaScript
 
 JavaScript can be used in both the frontend and backend of web development.
@@ -34,8 +22,6 @@ JavaScript can be used in both the frontend and backend of web development.
 It can be integrated with other languages to communicate and interact with databases.
 
 Using Node.js we can build Server-side JavaScript. With node we can execute JavaScript outside the browser, for example on a web server, this enables us to create backend scalable web apps, messaging platforms, multiplayer games,
-
-<br>
 
 ### Beyond the web
 
@@ -45,13 +31,9 @@ With modern tools like React Native, we can develop native mobile apps with JS, 
 
 In addition, JavaScript has the potential of expanding into other innovative technologies such as virtual reality and gaming.
 
-<br>
-
 ## JavaScript Definition
 
 JavaScript is a programming language with the following characteristics:
-
-<br>
 
 - **High-Level**
 
@@ -63,13 +45,13 @@ JavaScript is a programming language with the following characteristics:
 
   This makes the languages easier to learn and to use, but the downside is that the programs will never be as fast or as optimised as for example C programs.
 
-<br>
+<div></div>
 
 - **Garbage-Collected**
 
   Takes memory management away from us developers. This refers to an algorithm inside the JavaScript engine, which automatically removes old and unused objects from the computer memory, in order not to clog it up with unnecessary stuff.
 
-<br>
+<div></div>
 
 - **Interpreted or just-in-time compiled**
 
@@ -83,7 +65,7 @@ JavaScript is a programming language with the following characteristics:
 
   In the case of JavaScript, this happens inside the JavaScript engine.
 
-<br>
+<div></div>
 
 - **Multi-Paradigm**
 
@@ -95,13 +77,13 @@ JavaScript is a programming language with the following characteristics:
 
   Many languages follow only one paradigm, but JavaScript can do all of them.
 
-<br>
+<div></div>
 
 - **Prototype-based, Object-oriented**
 
   The object-oriented nature of JavaScript is a prototype-based object-oriented approach.
 
-<br>
+<div></div>
 
 - **First-class functions**
 
@@ -109,7 +91,7 @@ JavaScript is a programming language with the following characteristics:
 
   This makes possible the functional-programming paradigm.
 
-<br>
+<div></div>
 
 - **Dynamically typed**
 
@@ -121,7 +103,7 @@ JavaScript is a programming language with the following characteristics:
 
   If we want JavaScript with Types, we can try TypeScript.
 
-<br>
+<div></div>
 
 - **Single-threaded, non-blocking event loop concurrency model**
 
@@ -135,8 +117,6 @@ JavaScript is a programming language with the following characteristics:
 
   The event loop take long-running tasks, executes them in the background, and then puts them back in the main thread once they are finished.
 
-<br>
-
 ## JavaScript Over Time
 
 - **1994** The NetScape web browser was launched.
@@ -147,7 +127,7 @@ JavaScript is a programming language with the following characteristics:
 
   Microsoft copied JavaScript from Netscape and called it JScript. Netscape submitted JavaScript to a standards developing organization called Ecma International.
 
-- **1997:** Ecma International released ECMA-262 which sets standards for the first version of the scripting language called ECMAScript 1, shortened ES1. This is the first official standard for JavsScript (ECMAScript is the standard, JavaScript is the language in practice).
+- **1997:** Ecma International released ECMA-262 which sets standards for the first version of the scripting language called ECMAScript 1, shortened ES1. This is the first official standard for JavaScript (ECMAScript is the standard, JavaScript is the language in practice).
 
   The new ECMAScript standard provided rules for the architecture of JavaScript new features, creating consistency between new and old JS versions.
 
@@ -173,8 +153,6 @@ JavaScript is a programming language with the following characteristics:
 
 - **2016 - present** Releases of ES2016, ES2017, ES2018, ES2019, etc.
 
-<br>
-
 ### JavaScript is backward compatible up to ES1
 
 - JavaScript engine that is in our browsers today is able to understand old code written 25 years ago, without having to repy on version numbers.
@@ -183,8 +161,6 @@ JavaScript is a programming language with the following characteristics:
 - This comes with old bugs and weird things in the language, because as we know the very first version of JavaScript was made in just 10 days, and no one back then could even imagine what JavaScript would be used for one day. The initial goal of JS was just to add some simple dynamics to pages, not to write whole web applications in browsers like we do today.
 - Anyway, we can go around many of this weird stuff by simply using the modern JavaScript that matters today and just ignore most of the old weird stuff.
 - JavaScript is not forward compatible, current browsers do not understand code from the future.
-
-<br>
 
 ### How we use modern JavaScript today
 
@@ -198,7 +174,3 @@ ES5 is safe to be used as a target for transpiling, as it is supported in all br
 Generally, newer releases are well supported in all modern browsers. Information about what features are currently supported and in which browsers: [ES6 Compatibility Table](https://kangax.github.io/compat-table/es6/). Future releases, all together are called ESNext.
 
 Most browsers start implementing new features even before they enter the official ECMAScript specification. As new features are proposed, they have to go through four stages. Starting with stage one where the feature first is admitted, all the way to stage four at which point the feature enter the language officially. But when a feature is at stage three, browsers can be pretty sure it will eventually pass to stage four, and so they're gonna start implementing that feature while still in stage three.
-
-<br>
-<br>
-<br>

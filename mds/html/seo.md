@@ -16,8 +16,17 @@ Implementing best practice can produce immediate results, but long-term performa
 
 **Resources:**
 
+- [About robots.txt](https://www.robotstxt.org/robotstxt.html)
 - [Chrome SEO Checklist](https://developer.chrome.com/docs/lighthouse/seo/)
 - [Google SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide#:~:text=SEO%20%2D%20Search%20engine%20optimization%3A%20the,our%20presence%20on%20the%20web.)
 - [Google Search documentation](https://developers.google.com/search/docs)
 - [SEO Guide - Repo](https://github.com/seo/guide)
 - [Learning SEO](https://learningseo.io/)
+
+**Allow all robots complete access:**
+
+```txt
+# robots.txt
+User-agent: *
+Disallow:
+```

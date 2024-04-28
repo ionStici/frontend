@@ -1,4 +1,4 @@
-# The Box Model
+# CSS Box Model
 
 ## Table of Content
 
@@ -25,7 +25,7 @@ Each box is made up of distinct box model areas that all do a specific job.
 3. **Border** - surrounds the padding box
 4. **Margin** - space between border and the outside edge of the element
 
-[**Box Model representation on codepen**](https://codepen.io/web-dot-dev/pen/BaReoEV)
+[**Illustration of the Box Model**](https://codepen.io/web-dot-dev/pen/BaReoEV)
 
 By default, the total dimensions of an element are the sum of the content size, padding, border and margin.
 
@@ -51,7 +51,7 @@ We can reset this behavior of the box model for all html elements with:
 
 This CSS rule selects every element in the document and every `::before` and `::after` pseudo element and applies `box-sizing: border-box`. This means that every element will now have this alternative box model.
 
-This alternative box model tells CSS to apply the `width` and `height` to the border box instead of the content box. The border thickness and padding will be included inside of the box.
+This alternative box model tells CSS to apply the `width` and `height` to the border box instead of the content box, which means that the border thickness and padding will be included inside of the box.
 
 ## Height and Width
 
@@ -142,13 +142,7 @@ div {
 
 [**A Modern CSS Reset**](https://andy-bell.co.uk/a-modern-css-reset/)
 
-Browsers have a default stylesheet known as _user agent stylesheets_.
-
-Many properties in CSS have a default value and don’t have to be explicitly set in the stylesheet.
-
-User agent stylesheets usually have default CSS rules that set default values for padding and margin.
-
-Reset margin and padding default values:
+Web browsers apply default styles to elements via user agent stylesheets, which can lead to inconsistencies across different browsers. To standardize styling and ease cross-browser design, developers often use a CSS reset:
 
 ```css
 * {
@@ -157,7 +151,7 @@ Reset margin and padding default values:
 }
 ```
 
-This is often the first CSS rule in an external stylesheet.
+This reset removes default padding and margin, setting a consistent starting point for styling.
 
 When properties are set to `0`, they do not require a unit of measurement.
 

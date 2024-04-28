@@ -2,8 +2,6 @@
 
 TypeScript is a strongly typed programming language that builds on JavaScript.
 
-[**&larr; Back to the Main Page**](./../README.md)
-
 - [TypeScript vs. JavaScript](./ts-js-diff.md)
 
 <div></div>
@@ -31,5 +29,3 @@ TypeScript is a strongly typed programming language that builds on JavaScript.
 - [Configurations 1](./configs-1.md)
 - [Configurations 2](./configs-2.md)
 - [Configurations 3](./configs-3.md)
-
-<br>

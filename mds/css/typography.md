@@ -1,5 +1,3 @@
-[&larr; Back](./README.md)
-
 # Text and Typography Properties
 
 - Declare your font styles on the `body`, because font properties are inherited from the parent.
@@ -52,19 +50,11 @@
 
 - [**`font-variant`**](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant) set font variants like `small-caps` and `slashed-zero`
 
-<br>
-
-<!--
-
 ## Web Fonts
-
-Web Fonts - a lot of different fonts found on the web.
 
 Free font services: [Google Fonts](https://fonts.google.com/) and [Adobe Fonts](https://fonts.adobe.com/) - they host fonts which we can link to from our HTML.
 
 Paid font distributor: [fonts.com](https://www.fonts.com/) - download the font and include it in our website directory and then link to it using `@font-face` ruleset.
-
-<br>
 
 ### Web Fonts using `<link>`
 
@@ -73,8 +63,6 @@ Paid font distributor: [fonts.com](https://www.fonts.com/) - download the font a
 3. Copy the automatically generated `<link>` element
 4. Paste it in the `<head>` tag (before our CSS `<link>`).
 5. Use the font
-
-<br>
 
 ### Web Fonts using `@font-face`
 
@@ -113,10 +101,6 @@ Once the `@font-face` is defined, you can use the font in your stylesheet with t
 
 ```css
 h1 {
-  font-family: "Roboto Font";
+  font-family: 'Roboto Font';
 }
 ```
-
-<br>
-
--->
