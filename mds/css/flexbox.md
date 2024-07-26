@@ -2,7 +2,7 @@
 
 CSS Flexbox is a one-dimensional layout mechanism.
 
-## Table of Content
+## Table of Contents
 
 - [Flexbox Terminology](#flexbox-terminology)
 - [Flexbox Properties Overview](#flexbox-properties-overview)

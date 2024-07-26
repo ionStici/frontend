@@ -6,7 +6,7 @@ How is the information accessed on the web? Through HTTP requests. The four most
 
 <br>
 
-## Table of Content
+## Table of Contents
 
 - [Intro to GET Requests using Fetch](#intro-to-get-requests-using-fetch)
 - [Intro to POST Requests using Fetch](#intro-to-post-requests-using-fetch)

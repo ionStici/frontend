@@ -1,6 +1,6 @@
 # Gradients
 
-## Table of Content
+## Table of Contents
 
 - [A Complete Guide to CSS Gradients | CSS Tricks](https://css-tricks.com/a-complete-guide-to-css-gradients/)
 - [Linear gradient](#linear-gradient)

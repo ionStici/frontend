@@ -2,7 +2,7 @@
 
 # Set `this` manually
 
-## Table of Content
+## Table of Contents
 
 - [The call() method](#the-call-method)
 - [The apply() method](#the-apply-method)

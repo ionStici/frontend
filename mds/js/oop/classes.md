@@ -31,7 +31,7 @@ A class acts like any other regular constructor function, the only difference is
 
 <br>
 
-## Table of Content
+## Table of Contents
 
 - [ES6 Classes](#es6-classes)
 - [Defining a Class](#defining-a-class)

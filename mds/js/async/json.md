@@ -8,7 +8,7 @@ JSON is used to facilitate data transfer in web applications between a client an
 
 Example: when we complete a web form, the data is converted from HTML to JavaScript objects to JSON objects and sent to a remote server for processing.
 
-## Table of Content
+## Table of Contents
 
 - [JSON Syntax Rules](#json-syntax-rules)
 - [JSON Data Types](#json-data-types)

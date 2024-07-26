@@ -1,6 +1,6 @@
 # Backgrounds
 
-## Table of Content
+## Table of Contents
 
 - [Background Images](#background-images)
 - [background-repeat](#background-repeat)

@@ -4,7 +4,7 @@
 
 The following methods work in a similar way as string methods. Numbers are primitives, and primitives don't have methods, so behind the scenes JS will do **boxing** - transform a number value to a number object, then call the method from that object. When the operation is finished, it will convert the number back to a primitive.
 
-## Table of Content
+## Table of Contents
 
 - [Square Root](#square-root)
 - [Minimum and Maximum Value](#minimum-and-maximum-value)

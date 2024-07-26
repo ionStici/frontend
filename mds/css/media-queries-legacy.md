@@ -2,7 +2,7 @@ Label **Legacy**
 
 # Responsive Design - Media Queries
 
-## Table of Content
+## Table of Contents
 
 - [Responsive Design Overview](#responsive-design-overview)
   - [Resposnive Design Practical Principles](#resposnive-design-practical-principles)

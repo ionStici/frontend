@@ -4,7 +4,7 @@
 
 Multiple `await` statements in an `async` function will run one after another in sequence. We can check how data is loaded in devTools at Network tab. How to load multiple promises in parallel?
 
-## Table of Content
+## Table of Contents
 
 - [Promise.all()](#promiseall)
 - [Promise.race()](#promiserace)

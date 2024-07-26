@@ -2,7 +2,7 @@
 
 Pseudo-classes lets you apply styles based on **element state changes** (e.g. mouse hover).
 
-## Table of Content
+## Table of Contents
 
 - [Interactive states](#interactive-states)
 - [Historic states](#historic-states)

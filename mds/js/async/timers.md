@@ -4,7 +4,7 @@
 
 <!-- `setTimeout()` is a Node API that schedule callbacks to be executed after a delay. -->
 
-## Table of Content
+## Table of Contents
 
 - [setTimeout](#settimeout)
 - [setInterval](#setinterval)

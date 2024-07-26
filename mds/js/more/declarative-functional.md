@@ -4,7 +4,7 @@
 
 _Two fundamentally different ways (paradigms) of writing code in programming._
 
-## Table of Content
+## Table of Contents
 
 - [Imperative Programming](#imperative-programming)
 - [Declarative Programming](#declarative-programming)

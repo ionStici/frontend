@@ -2,7 +2,7 @@
 
 # Advanced Objects
 
-## Table of Content
+## Table of Contents
 
 - [The `this` keyword](#the-this-keyword)
 - [Privacy](#privacy)

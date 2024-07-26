@@ -1,6 +1,6 @@
 # Positioning
 
-## Table of Content
+## Table of Contents
 
 - [Flow of HTML](#flow-of-html)
 - [Positioning in CSS](#positioning-in-css)

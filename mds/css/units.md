@@ -1,6 +1,6 @@
 # Units
 
-## Table of Content
+## Table of Contents
 
 - [Basics](#basics)
 - [Numbers](#numbers)

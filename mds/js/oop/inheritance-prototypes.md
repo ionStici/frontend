@@ -2,7 +2,7 @@
 
 # Inheritance
 
-## Table of Content
+## Table of Contents
 
 - [Inheritance: Constructor Functions](#inheritance-constructor-functions)
 - [Inheritance: Object.create()](#inheritance-objectcreate)

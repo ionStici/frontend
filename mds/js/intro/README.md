@@ -1,7 +1,9 @@
 # JavaScript Introduction
 
-- [JavaScript Overview](./js-overview.md)
-- [Introductory Aspects](./introductory-aspects.md)
+[**&larr; Back to the Main Page**](./../README.md)
+
+- [**JavaScript Overview**](./js-overview.md)
+- [**Introductory Aspects**](./introductory-aspects.md)
 - [**Values and Variables**](./variables.md)
 - [**JavaScript Basics**](./js-basics.md)
 - [**Conditionals**](./conditionals.md)

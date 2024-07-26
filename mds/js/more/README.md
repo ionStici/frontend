@@ -25,7 +25,3 @@
 - [&#10697; Leaflet library for Interactive Maps](https://leafletjs.com/)
 
 <br>
-
-<!--
-[&larr; Back](./README.md)
--->

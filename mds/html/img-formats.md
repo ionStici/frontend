@@ -1,6 +1,6 @@
 # Image Formats
 
-## Table of Content
+## Table of Contents
 
 - [SVG Vector Images](#svg-vector-images)
 - [Raster Images](#raster-images)

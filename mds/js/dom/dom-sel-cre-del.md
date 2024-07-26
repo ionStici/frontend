@@ -2,7 +2,7 @@
 
 # DOM: Select, Create, Delete
 
-## Table of Content
+## Table of Contents
 
 - [The document object](#the-document-object)
 

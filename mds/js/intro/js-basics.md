@@ -2,7 +2,7 @@
 
 # JavaScript Basics
 
-## Table of Content
+## Table of Contents
 
 - [Strict Mode](#strict-mode)
 - [Equality Operators](#equality-operators)

@@ -1,6 +1,6 @@
 # **CSS Grid**
 
-## Table of Content
+## Table of Contents
 
 - [CSS Grid Introduction and Terminology](#css-grid-introduction-and-terminology)
 - [CSS Grid Properties Overview](#css-grid-properties-overview)

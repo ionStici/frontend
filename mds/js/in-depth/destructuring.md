@@ -4,7 +4,7 @@
 
 **Destructuring** (ES6) is a JS feature - to extract data from arrays or objects.
 
-## Table of Content
+## Table of Contents
 
 - [Destructuring Arrays](#destructuring-arrays)
 - [Destructuring Objects](#destructuring-objects)

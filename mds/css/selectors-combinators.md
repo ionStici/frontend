@@ -1,6 +1,6 @@
 # Combinators
 
-## Table of Content
+## Table of Contents
 
 - [Descendent Combinator](#descendent-combinator)
 - [Child Combinator](#child-combinator)

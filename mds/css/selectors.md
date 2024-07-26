@@ -2,7 +2,7 @@
 
 In CSS, a selector is used to target and style specific HTML elements.
 
-## Table of Content
+## Table of Contents
 
 - [1. Universal Selector](#1-universal-selector)
 - [2. Type Selector](#2-type-selector)

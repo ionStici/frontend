@@ -1,8 +1,8 @@
-£[&larr; Back](./README.md)
+[&larr; Back](./README.md)
 
 # Objects
 
-## Table of Content
+## Table of Contents
 
 - [Object Literals](#object-literals)
 - [Accessing Properties](#accessing-properties)

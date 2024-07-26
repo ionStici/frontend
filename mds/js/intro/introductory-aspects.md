@@ -1,6 +1,8 @@
+[&larr; Back](./README.md)
+
 # Introductory Aspects
 
-## Table of Content
+## Table of Contents
 
 - [Console](#console)
 - [Comments in JavaScript](#comments-in-javascript)
@@ -27,9 +29,9 @@ Keywords are words that are built into the JS language, so the computer recogniz
 One action that is built into the `console` object is the `.log()` method, which will print to the console what we type inside the parentheses.
 
 ```js
-console.log('hello'); // hello
+console.log("hello"); // hello
 console.log(console); // to see what methods the console object contains
-console.error('An Error'); // Will display the result in red as an error
+console.error("An Error"); // Will display the result in red as an error
 ```
 
 The semicolon denotes the end of the statement.
@@ -107,8 +109,8 @@ The remainder operator `%` returns the number that _remains_ after the right-han
 We can use the plus operator to join (**concatenate**) strings:
 
 ```js
-'hello' + ' ' + 'world'; // hello world
-greeting + ' ' + myName; // Hello John | String Concatenation with Variables
+"hello" + " " + "world"; // hello world
+greeting + " " + myName; // Hello John | String Concatenation with Variables
 ```
 
 This appends the right string to the left string.
@@ -120,7 +122,7 @@ A **property** is a piece of information about and stored in a particular data t
 For example, each string instance has a `.length` property that holds the number of characters the string has, example:
 
 ```js
-'hello'.length; // 5
+"hello".length; // 5
 ```
 
 Here, we append the `length` property to a string using the dot `.` operator.
@@ -140,7 +142,7 @@ We **call** a method by appending an instance with: the dot `.` operator -> the 
 Example: `'string'.methodName()`
 
 ```js
-'hello'.toUpperCase(); // HELLO | returns the string in all capital letters
+"hello".toUpperCase(); // HELLO | returns the string in all capital letters
 ```
 
 [List of built-in string methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)

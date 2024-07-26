@@ -2,7 +2,7 @@
 
 # The MVC Architecture
 
-## Table of Content
+## Table of Contents
 
 - [Why Software Architecture?](#why-software-architecture)
 - [Components of any Architecture](#components-of-any-architecture)

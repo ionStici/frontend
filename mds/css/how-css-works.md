@@ -1,6 +1,6 @@
 # How CSS works behind the scenes
 
-## Table of Content
+## Table of Contents
 
 - [CSS Object Model Explained](#css-object-model-explained)
 - [Understanding the Visual Formatting Model](#understanding-the-visual-formatting-model)

@@ -2,7 +2,7 @@
 
 # DOM Events with JavaScript
 
-## Table of Content
+## Table of Contents
 
 - [addEventListener](#addeventlistener)
   - [Named function as Event Handler](#named-function-as-event-handler)

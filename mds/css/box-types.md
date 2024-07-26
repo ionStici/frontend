@@ -4,7 +4,7 @@ Every HTML element has a default `display` value that dictates how the box behav
 
 We can change this default behavior using the `display` property.
 
-## Table of Content
+## Table of Contents
 
 - [Inline Elements](#inline-elements)
 - [Block-level Elements](#block-level-elements)

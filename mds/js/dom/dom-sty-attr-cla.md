@@ -2,7 +2,7 @@
 
 # DOM: Styles, Attributes, Classes
 
-## Table of Content
+## Table of Contents
 
 - [The style property in JavaScript](#the-style-property-in-javascript)
   - [getComputedStyle() method](#getcomputedstyle-method)

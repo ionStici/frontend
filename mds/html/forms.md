@@ -1,6 +1,6 @@
 # Forms in Practice
 
-## Table of Content
+## Table of Contents
 
 - [Form elements](#form-elements)
 - [List of options](#list-of-options)
@@ -136,6 +136,8 @@ We can define a regular expression as a value for the `pattern` attribute to set
 Autofill and autocomplete provide accessibility benefits.
 
 The [**`autocomplete`**](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) attribute lets web developers specify what if any permission the user agent has to provide automated assistance in filling out form field values, as well as guidance to the browser as to the type of information expected in the field.
+
+`autocomplete="username"` : Suggests to the browser that the field requires a username or account name.
 
 **p.s.** The `:autofill` CSS pseudo-class matches when an `<input>` element has its value autofilled by the browser. The class stops matching if the user edits the field.
 

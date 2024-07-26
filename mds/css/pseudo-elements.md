@@ -4,7 +4,7 @@
 
 Pseudo-elements style specific parts of an element, it's like adding an extra element without having to add more HTML.
 
-## Table of Content
+## Table of Contents
 
 - [::before and ::after](#before-and-after)
 - [::first-letter and ::first-line](#first-letter-and-first-line)

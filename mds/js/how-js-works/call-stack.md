@@ -2,7 +2,7 @@
 
 # The Call Stack
 
-## Table of Content
+## Table of Contents
 
 - [Call Stack](#call-stack)
 - [Execution Contexts](#execution-contexts)

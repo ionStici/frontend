@@ -7,7 +7,7 @@
 
 <br>
 
-## Table of Content
+## Table of Contents
 
 - [Introduction](#introduction)
 - [Importing a Module](#importing-a-module)

@@ -2,7 +2,7 @@
 
 # Operators
 
-## Table of Content
+## Table of Contents
 
 - [Short Circuiting](#short-circuiting)
 - [The nullish coalescing operator](#the-nullish-coalescing-operator)

@@ -1,6 +1,6 @@
 # CSS Box Model
 
-## Table of Content
+## Table of Contents
 
 - [Box Model Areas](#box-model-areas)
 - [box-sizing](#box-sizing)

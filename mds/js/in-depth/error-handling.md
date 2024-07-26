@@ -4,7 +4,7 @@
 
 **Error Handling** is the process of programmatically anticipating and addressing errors.
 
-## Table of Content
+## Table of Contents
 
 - [Runtime Errors](#runtime-errors)
 - [Constructing an Error](#constructing-an-error)

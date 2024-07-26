@@ -2,7 +2,7 @@
 
 # Promises
 
-## Table of Content
+## Table of Contents
 
 - [Promises Introduction](#promises-introduction)
 - [Constructing a Promise](#constructing-a-promise)

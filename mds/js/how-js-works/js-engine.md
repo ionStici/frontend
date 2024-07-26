@@ -13,7 +13,7 @@ JavaScript engine components:
 
 <br>
 
-## Table of Content
+## Table of Contents
 
 - [How JavaScript Code is Compiled to Machine Code?](#how-javascript-code-is-compiled-to-machine-code)
 - [The Modern Just-In-Time Compilation of JavaScript](#the-modern-just-in-time-compilation-of-javascript)

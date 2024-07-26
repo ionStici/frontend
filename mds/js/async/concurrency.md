@@ -2,7 +2,7 @@
 
 # Concurrency Model and the Event Loop in JavaScript
 
-## Table of Content
+## Table of Contents
 
 - [Why do we need an Event Loop?](#why-do-we-need-an-event-loop)
 - [Concurrency in JavaScript](#concurrency-in-javascript)

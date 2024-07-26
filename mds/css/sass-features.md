@@ -1,6 +1,6 @@
 # Sass Features
 
-## Table of Content
+## Table of Contents
 
 - [Sass Variables](#sass-variables)
 - [Sass Nesting](#sass-nesting)
@@ -137,8 +137,8 @@ In case of mixins, all the code from a mixin body is copied into the selector.
 ## Imports
 
 ```scss
-@import 'base/utilities';
-@import 'variables';
+@import "base/utilities";
+@import "variables";
 ```
 
 Using the `@import` statement, we can import all the code from a Sass file to another Sass file.

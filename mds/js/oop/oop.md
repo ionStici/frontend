@@ -4,7 +4,7 @@
 
 In modern JavaScript, there are two major paradigms: **Object-oriented Programming** and **Functional Programming**.
 
-## Table of Content
+## Table of Contents
 
 - [What is Object-Oriented Programming](#what-is-object-oriented-programming)
 - [The 4 fundamental OOP principles](#the-4-fundamental-oop-principles)

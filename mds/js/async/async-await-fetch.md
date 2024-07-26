@@ -2,7 +2,7 @@
 
 # Async / Await
 
-## Table of Content
+## Table of Contents
 
 - [Consuming Promises with Async / Await](#consuming-promises-with-async--await)
 - [Recreating the Geolocation + Country API example](#recreating-the-geolocation--country-api-example)

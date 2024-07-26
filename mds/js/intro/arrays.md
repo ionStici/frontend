@@ -4,7 +4,7 @@
 
 **Arrays** - ordered data structure.
 
-## Table of Content
+## Table of Contents
 
 - [Creating an Array](#creating-an-array)
 - [Accessing Elements](#accessing-elements)

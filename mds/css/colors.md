@@ -4,7 +4,7 @@ Four types of colors in CSS: Named / Hex / RGB / HSL.
 
 We should choose one and be consistent throughout our CSS.
 
-## Table of Content
+## Table of Contents
 
 - [Foreground and Background in CSS](#foreground-and-background-in-css)
 - [Hexadecimal](#hexadecimal)

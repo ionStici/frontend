@@ -2,7 +2,7 @@
 
 # Async / Await
 
-## Table of Content
+## Table of Contents
 
 - [Introduction](#introduction)
 - [async...await](#async--await)

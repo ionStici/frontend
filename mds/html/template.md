@@ -8,7 +8,7 @@
 - [Custom Elements v1](https://web.dev/custom-elements-v1/)
 - [Declarative Shadow DOM](https://developer.chrome.com/articles/declarative-shadow-dom/)
 
-## Table of Content
+## Table of Contents
 
 - [Introduction](#introduction)
 - [The template element](#the-template-element)

@@ -2,7 +2,7 @@
 
 # APIs and HTTP Requests
 
-## Table of Content
+## Table of Contents
 
 - [HTTP Requests](#http-requests)
 - [Web APIs](#web-apis)

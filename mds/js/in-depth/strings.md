@@ -5,7 +5,7 @@
 - String methods always return a new string.
 - All string methods are case sensitive.
 
-## Table of Content
+## Table of Contents
 
 - [Introduction](#introduction)
 - [Extracting using slice](#extracting-using-slice)

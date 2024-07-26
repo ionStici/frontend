@@ -10,7 +10,7 @@ Loops allow us to create efficient code that automates repetitive tasks, to make
 
 <br>
 
-## Table of Content
+## Table of Contents
 
 - [The For Loop](#the-for-loop)
 - [Looping through Arrays](#looping-through-arrays)

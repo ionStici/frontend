@@ -4,7 +4,7 @@
 
 A conditional statement checks a specific condition(s) and performs a task based on the result.
 
-## Table of Content
+## Table of Contents
 
 - [if statement](#if-statement)
 - [Comparison Operators](#comparison-operators)

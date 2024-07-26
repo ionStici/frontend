@@ -2,7 +2,7 @@
 
 # Modules Theory
 
-## Table of Content
+## Table of Contents
 
 - [What are Modules?](#what-are-modules)
 - [JavaScript Modules: Node.js and ES6](#javascript-modules-nodejs-and-es6)

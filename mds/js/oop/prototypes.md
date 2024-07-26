@@ -6,7 +6,7 @@ Learn how JavaScript prototypes work before learning [ES6 Classes](./classes.md)
 
 <br>
 
-## Table of Content
+## Table of Contents
 
 - [Constructor Functions and the `new` operator](#constructor-functions-and-the-new-operator)
 - [Prototypes](#prototypes)

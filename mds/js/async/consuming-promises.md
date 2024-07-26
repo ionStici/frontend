@@ -2,7 +2,7 @@
 
 # Consuming Promises
 
-## Table of Content
+## Table of Contents
 
 - [Consuming Promises](#consuming-promises)
 - [Success and Failure Callback Functions](#success-and-failure-callback-functions)

@@ -2,7 +2,7 @@
 
 # Connecting HTML with JavaScript
 
-## Table of Content
+## Table of Contents
 
 - [The Script Element](#the-script-element)
 - [Link a JavaScript file](#link-a-javascript-file)

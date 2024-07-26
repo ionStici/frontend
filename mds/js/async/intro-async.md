@@ -2,7 +2,7 @@
 
 # Introduction to Asynchronous Code
 
-## Table of Content
+## Table of Contents
 
 - [General Asynchronous Programming Concepts](#general-asynchronous-programming-concepts)
 - [Introduction to Asynchronous JavaScript](#introduction-to-asynchronous-javascript)

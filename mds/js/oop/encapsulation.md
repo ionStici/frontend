@@ -2,7 +2,7 @@
 
 # Encapsulation
 
-## Table of Content
+## Table of Contents
 
 - [Protected Properties and Methods](#protected-properties-and-methods)
   - [Data privacy Convention](#data-privacy-convention)

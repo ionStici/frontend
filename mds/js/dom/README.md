@@ -1,6 +1,6 @@
 # Document Object Model (DOM)
 
-## Table of Content
+## Table of Contents
 
 [**&larr; Back to the Main Page**](./../README.md)
 

@@ -4,7 +4,7 @@
 
 Higher-order functions are functions that accept other functions as arguments and/or return functions as output. This enables us to build abstractions on other abstractions.
 
-## Table of Content
+## Table of Contents
 
 - [Functions as Data](#functions-as-data)
 - [Functions as Parameters](#functions-as-parameters)

@@ -10,10 +10,3 @@ Frontend Fundamentals covers a broad array of topics including but not limited t
 | ---------------------------- | -------------------------- | -------------------------------- |
 
 I wish you all the best on your journey! 🙌
-
-## Resources
-
-- [MDN References](https://developer.mozilla.org/en-US/docs/Web)
-- [_JavaScript.info_](https://javascript.info/)
-- [web.dev - web guidance](https://web.dev/)
-- [caniuse - per-feature support](https://caniuse.com/)

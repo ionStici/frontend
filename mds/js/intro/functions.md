@@ -6,7 +6,7 @@ A **function** is a reusable block of code that groups together a sequence of st
 
 <br>
 
-## Table of Content
+## Table of Contents
 
 - [Function Declaration](#function-declaration)
 - [Parameters and Arguments](#parameters-and-arguments)

@@ -2,7 +2,7 @@
 
 # Parsing Numbers
 
-## Table of Content
+## Table of Contents
 
 - [Converting](#convert-a-string-to-a-number)
 - [parseInt](#parseint)
