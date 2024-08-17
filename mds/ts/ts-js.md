@@ -1,5 +1,15 @@
 # TypeScript and JavaScript
 
+## Table of Contents
+
+- [Differences between JavaScript and TypeScript](#differences-between-javascript-and-typescript)
+- [Advantages of using TS over JS](#advantages-of-using-ts-over-js)
+- [Statically Typed vs. Strongly Typed](#statically-typed-vs-strongly-typed)
+- [How TypeScript Works](#how-typescript-works)
+- [Transpilation vs. Compilation vs. Interpretation](#transpilation-vs-compilation-vs-interpretation)
+
+## Differences between JavaScript and TypeScript
+
 **TypeScript** is a superset of JavaScript. This means that javaScript code is valid TypeScript code, but TypeScript provides additional features that make it more reliable.
 
 JavaScript has a vast and mature ecosystem with numerous libraries and frameworks. TypeScript extends JS's ecosystem, having good compatibility with existing JS code, making TS powerful.

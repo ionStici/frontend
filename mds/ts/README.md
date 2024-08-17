@@ -2,6 +2,10 @@
 
 **TypeScript is JavaScript with syntax for types.**
 
+### Refresher
+
+- [TypeScript Refresher](./ts-cheetsheet.md)
+
 ### Introduction
 
 - [TypeScript and JavaScript](./ts-js.md)
@@ -11,6 +15,26 @@
 
 - [Types](./types.md)
 - [Functions](./functions.md)
+
+<div></div>
+
+- [Arrays](./arrays.md)
+- [Objects](./objects.md)
+
+### Advanced
+
+- [Union Types](./union-types.md)
+- [Type Narrowing](./type-narrowing.md)
+
+<div></div>
+
+- [Type Aliases](./type-aliases.md)
+- [Generic Types](./generic-types.md)
+
+<div></div>
+
+- [Interfaces](./interface.md)
+- [Enums](./enum.md)
 
 <div></div>
 
